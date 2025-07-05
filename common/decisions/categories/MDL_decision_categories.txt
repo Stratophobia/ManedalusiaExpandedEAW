@@ -1,0 +1,52 @@
+MDL_grifo_imperium_decisions_tab = {
+  priority = 201
+  allowed = { original_tag = MDL }
+  visible = { has_country_flag = MDL_imperium_decisions_unlocked }
+  visible_when_empty = no
+  icon = GFX_decision_category_MDL_grifo_imperium
+}
+
+MDL_shield_doctrine_tab = {
+  priority = 201
+  allowed = { original_tag = MDL }
+  visible = { has_country_flag = MDL_shield_doctrine_unlocked }
+  visible_when_empty = no
+  icon = GFX_decision_category_MDL_shield_doctrine
+}
+
+MDL_republican_war_decisions_tab = {
+  priority = 199
+  allowed = { original_tag = MDL }
+  visible = { has_country_flag = MDL_federal_army_unlocked }
+  visible_when_empty = yes
+  icon = GFX_decision_category_MDL_republic_flag
+}
+
+MDL_crusade_decisions_tab = {
+  priority = 199
+  allowed = { original_tag = MDL }
+  visible = { has_country_flag = MDL_crusade_active }
+  visible_when_empty = yes
+}
+
+MDL_fiqh_decisions_tab = {
+  priority = 200
+  allowed = { original_tag = MDL }
+  visible = { has_completed_focus = MDL_fiqh_decisions }
+  icon = GFX_decision_category_MDL_fiqh
+}
+
+MDL_crimson_war_tab = {
+  priority = 199
+  allowed = { original_tag = MDL }
+  visible = { has_country_flag = MDL_crimson_war_decisions_unlocked }
+  icon = GFX_decision_category_MDL_crimson_war
+  visible_when_empty = no
+}
+
+MDL_wingbardy_war_tab = {
+  priority = 201
+  allowed = { original_tag = MDL }
+  visible = { has_country_flag = MDL_war_with_wingbardy }
+  visible_when_empty = yes
+}

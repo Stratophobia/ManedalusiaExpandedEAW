@@ -1,0 +1,12 @@
+arabia_is_unified = {
+  OR = {
+    EMR = { exists = no }
+    AND = {
+      SDS = { exists = no }
+      SDL = { exists = no }
+      SDF = { exists = no }
+      SDC = { exists = no }
+    }
+  }
+}
+

@@ -1,0 +1,14 @@
+units = {
+  fleet = {
+    name = "Salvaged Fleet"
+    naval_base = 12234
+    task_force = {
+			name = "Salvaged Fleet"
+			location = 12234
+ 			ship = { name = "Sacro Império" pride_of_the_fleet = yes definition = battleship equipment = { ship_hull_heavy_1 = { amount = 1 owner = FEA version_name = "Arcturius Class" } } } 
+
+      ship = { name = "Boa Esperança" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = MDL version_name = "Romau Class"} } }
+      ship = { name = "Saudade" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = MDL version_name = "Romau Class"} } }
+		}
+  }
+}

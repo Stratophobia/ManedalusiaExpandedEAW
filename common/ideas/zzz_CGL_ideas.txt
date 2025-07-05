@@ -1,0 +1,10 @@
+ideas = {
+  country = {
+    MDL_MAZ_vassal = {
+      picture = MDL_MAZ_vassal
+      modifier = {
+        conscription_factor = -0.25
+      }
+    }
+  }
+}

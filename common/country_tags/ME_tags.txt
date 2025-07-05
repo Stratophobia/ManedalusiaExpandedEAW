@@ -1,0 +1,3 @@
+CGL = "countries/Samira.txt"
+RIZ = "countries/RizzPuppet.txt"
+BSG = "countries/BatStateGuard.txt"

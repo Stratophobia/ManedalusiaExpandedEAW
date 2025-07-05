@@ -1,0 +1,101 @@
+MDL_alternate_velvet = {
+	name = "The Crimson Sultan"
+	desc = ""
+
+	allowed = {
+		original_tag = MDL
+	}
+
+	enable = {
+
+		OR = {
+      has_country_flag = MDL_AI_CRIMSON_SULTAN
+			has_game_rule = {
+				rule = MDL_ai_behavior
+				option = MDL_CRIMSON_SULTAN
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+    MDL_ash_shahid_chosen
+	}
+
+	research = {
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		
+	}
+
+}
+
+MDL_alternate_senate = {
+	name = "The Federalists"
+	desc = ""
+
+	allowed = {
+		original_tag = MDL
+	}
+
+	enable = {
+
+		OR = {
+      has_country_flag = MDL_AI_SENATE
+			has_game_rule = {
+				rule = MDL_ai_behavior
+				option = MDL_SENATE
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+    MDL_senate_path
+	}
+
+	research = {
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		
+	}
+
+}

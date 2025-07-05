@@ -1,0 +1,1253 @@
+ideas = {
+	materiel_manufacturer = {
+		designer = yes
+
+		MDL_artillery_concern = {
+			picture = MDL_artillery_concern
+			allowed = {
+				original_tag = MDL
+			}
+			traits = { artillery_manufacturer }
+      visible = {
+        NOT = { has_country_flag = MDL_grifo_takeover }
+      }
+			available = {
+        OR = {
+          has_completed_focus = MDL_bigger_cannons
+          has_completed_focus = MDL_unlock_contractors
+        }
+      }
+			research_bonus = {
+				artillery = 0.15
+			}
+			equipment_bonus = {
+				artillery_equipment = {
+					soft_attack = 0.05
+					instant = yes
+				}
+			}
+		}
+		MDL_infantry_concern = {
+			picture = MDL_infantry_concern
+			allowed = {
+				original_tag = MDL
+			}
+			research_bonus = {
+				infantry_weapons = 0.1
+			}
+      visible = {
+        NOT = { has_country_flag = MDL_grifo_takeover }
+      }
+			traits = { infantry_equipment_manufacturer }
+			available = {
+        OR = {
+          has_completed_focus = MDL_go_with_samira
+          has_completed_focus = MDL_unlock_contractors
+        }
+      }
+			equipment_bonus = {
+				infantry_equipment = {
+					breakthrough = 0.03
+					soft_attack = 0.1
+					instant = yes
+				}
+			}
+		}
+    MDL_imperial_arms = {
+      picture = MDL_imperial_arms
+      allowed = { original_tag = MDL }
+      visible = { has_country_flag = MDL_grifo_takeover }
+      available = { has_completed_focus = MDL_colonial_arms_production }
+      research_bonus = { infantry_weapons = 0.1 }
+			traits = { infantry_equipment_manufacturer }
+			equipment_bonus = {
+				infantry_equipment = {
+					soft_attack = 0.05
+          build_cost_ic = -0.05
+					instant = yes
+				}
+			}
+    }
+    MDL_moonstriker_labs = {
+      picture = MDL_moonstriker_labs
+
+      allowed = { original_tag = MDL }
+      traits = { infantry_equipment_manufacturer }
+      available = {
+        OR = {
+          has_completed_focus = MDL_alchemical_investment
+          has_completed_focus = MDL_unlock_contractors
+        }
+      }
+      visible = {
+        NOT = { has_country_flag = MDL_grifo_takeover }
+      }
+      research_bonus = {
+				infantry_weapons = 0.15
+			}
+      equipment_bonus = {
+				magical_equipment = {
+					instant = yes
+					ap_attack = 0.05
+					soft_attack = 0.05
+					hard_attack = 0.05
+					defense = 0.05
+					build_cost_ic = 0.05
+				}
+			}
+    }
+		MDL_motorized_concern = {
+			picture = MDL_motorized_concern
+			allowed = {
+				original_tag = MDL
+			}
+			research_bonus = {
+				motorized_equipment = 0.15
+			}
+      visible = {
+        NOT = { has_country_flag = MDL_grifo_takeover }
+      }
+      traits = { motorized_equipment_manufacturer }
+      available = {
+        OR = {
+          has_completed_focus = MDL_sweet_ass_rides
+          has_completed_focus = MDL_unlock_contractors
+        }
+      }
+      equipment_bonus = {
+        motorized_equipment = {
+          maximum_speed = 0.1
+          instant = yes
+        }
+      }
+    }
+  }
+
+  industrial_concern = {
+    designer = yes
+
+		MDL_imperial_railway = {
+			picture = GFX_idea_MDL_imperial_railway
+
+			allowed = { original_tag = MDL }
+			visible = { has_country_flag = MDL_grifo_takeover }
+			research_bonus = {
+				industry = 0.08
+				train_tech = 0.1
+			}
+			traits = { railway_company }
+		}
+
+    MDL_imperial_construction = {
+      name=MDL_imperial_construction
+      picture = GFX_idea_MDL_imperial_construction
+      allowed = { original_tag = MDL }
+      visible = { has_country_flag = MDL_grifo_takeover }
+      available = { has_completed_focus = MDL_colonial_industry }
+
+      research_bonus = {
+        industry = 0.20
+      }
+			traits = { industrial_concern }
+			modifier = {
+				production_speed_industrial_complex_factor = 0.1
+			}
+		}
+
+		MDL_imperial_agri = {
+		  picture = GFX_idea_MDL_imperial_agri
+      allowed = { original_tag = MDL }
+			visible = { has_country_flag = MDL_grifo_takeover }
+      available = { has_completed_focus = MDL_imperial_agriculture }
+
+			research_bonus = { industry = 0.20 }
+			traits = { agricultural_concern }
+			modifier = {
+			  stability_factor = 0.05
+				political_power_gain = 0.05
+			}
+		}
+
+    MDL_imperial_electrics = {
+      picture = GFX_idea_MDL_imperial_electrics
+      allowed = { original_tag = MDL }
+      visible = { has_country_flag = MDL_grifo_takeover }
+			available = {
+				has_completed_focus = MDL_imperial_electronics
+			}
+
+			research_bonus = {
+				electronics = 0.25
+			}
+      modifier = {
+        consumer_goods_factor = -0.10
+      }
+			traits = { electronics_concern }
+		}
+
+		MDL_industrial_concern_1 = {
+			picture = MDL_industrial_concern_1
+			allowed = { original_tag = MDL }
+			available = {
+        OR = {
+          has_completed_focus = MDL_industrial_union
+          has_completed_focus = MDL_unlock_contractors
+        }
+      }
+			research_bonus = {
+				industry = 0.15
+			}
+      visible = {
+        NOT = { has_country_flag = MDL_grifo_takeover }
+      }
+			traits = { industrial_concern }
+			modifier = {
+				production_speed_buildings_factor = 0.05
+			}
+		}
+
+		MDL_refining_concern = {
+			picture = MDL_refining_concern
+			allowed = { original_tag = MDL }
+			available = {
+        OR = {
+          has_completed_focus = MDL_refining_contractor
+          has_completed_focus = MDL_unlock_contractors
+        }
+      }
+			traits = { refinery_concern }
+			modifier = {
+				production_speed_synthetic_refinery_factor = 0.05
+			}
+      visible = {
+        NOT = { has_country_flag = MDL_grifo_takeover }
+      }
+			research_bonus = {
+				synth_resources = 0.15
+			}
+		}
+
+		MDL_electronics_concern = {
+			picture = MDL_electronics_concern
+			allowed = {
+				original_tag = MDL
+			}
+			research_bonus = {
+				electronics = 0.15
+			}
+      visible = {
+        NOT = { has_country_flag = MDL_grifo_takeover }
+      }
+			traits = { electronics_concern }
+			available = {
+        OR = {
+          has_completed_focus = MDL_go_with_alneighzari
+          has_completed_focus = MDL_unlock_contractors
+        }
+      }
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.05
+			}
+		}
+	}
+
+  aircraft_manufacturer = {
+    designer = yes
+
+    MDL_empyrean = {
+      picture = MDL_empyrean
+      allowed = { original_tag = MDL }
+      research_bonus = {
+        air_equipment = 0.15
+      }
+      visible = {
+        NOT = { has_country_flag = MDL_grifo_takeover }
+      }
+      traits = { naval_aircraft_manufacturer }
+    }
+    MDL_sundrinker_airwings = {
+      picture = MDL_sundrinker_airwings
+      allowed = { original_tag = MDL }
+      visible = {
+        NOT = { has_country_flag = MDL_grifo_takeover }
+      }
+      available = {
+        OR = {
+          has_completed_focus = MDL_air_industry
+          has_completed_focus = MDL_unlock_contractors
+        }
+      }
+      research_bonus = {
+        air_equipment = 0.15
+      }
+      traits = { light_aircraft_manufacturer }
+    }
+    MDL_tailspin_shipping = {
+      picture = MDL_tailspin_shipping
+      allowed = { original_tag = MDL }
+      visible = {
+        NOT = { has_country_flag = MDL_grifo_takeover }
+      }
+      available = {
+        OR = {
+          has_completed_focus = MDL_air_industry
+          has_completed_focus = MDL_unlock_contractors
+        }
+      }
+      research_bonus = {
+        air_equipment = 0.15
+      }
+      traits = { CAS_manufacturer }
+    }
+    MDL_imperial_planes = {
+      picture = MDL_imperial_planes
+      allowed = { original_tag = MDL }
+      visible = { has_country_flag = MDL_grifo_takeover }
+      available = { has_completed_focus = MDL_imperial_plane_tech }
+      research_bonus = { air_equipment = 0.15 }
+      traits = { light_aircraft_manufacturer }
+    }
+  }
+
+  tank_manufacturer = {
+    MDL_black_guard_steelworks = {
+      picture = MDL_black_guard_steelworks
+      allowed = { original_tag = MDL }
+      visible = {
+        NOT = { has_country_flag = MDL_grifo_takeover }
+      }
+      available = {
+        OR = {
+          has_completed_focus = MDL_even_sweeter_rides
+          has_completed_focus = MDL_unlock_contractors
+        }
+      }
+      equipment_bonus = {
+        mechanized_equipment = {
+          build_cost_ic = -0.10
+        }
+      }
+      research_bonus = {
+        armor = 0.15
+      }
+      traits = { heavy_tank_manufacturer }
+    }
+    MDL_imperial_tanks = {
+      picture = MDL_imperial_tanks
+      allowed = { original_tag = MDL }
+      visible = { has_country_flag = MDL_grifo_takeover }
+      available = { has_completed_focus = MDL_imperial_armor }
+      research_bonus = { armor = 0.15 }
+      traits = { heavy_tank_manufacturer }
+    }
+  }
+
+	naval_manufacturer = {
+		designer = yes
+
+		MDL_naval_manufacturer_1 = {
+			picture = MDL_naval_manufacturer_1
+			allowed = { original_tag = MDL }
+      visible = {
+        NOT = { has_country_flag = MDL_grifo_takeover }
+      }
+			available = {
+				any_controlled_state_is_coastal = yes
+        OR = {
+          has_completed_focus = MDL_coltoba_shipyards
+          has_completed_focus = MDL_unlock_contractors
+        }
+			}
+      modifier = {
+        navy_max_range_factor = 0.10
+      }
+			research_bonus = {
+				naval_equipment = 0.08
+			}
+			traits = { naval_manufacturer }
+			equipment_bonus = {
+				ship_hull_carrier = {
+					defense = -0.03
+					build_cost_ic = -0.05
+					instant = yes
+				}
+				capital_ship = {
+					defense = -0.03
+					build_cost_ic = -0.05
+					instant = yes
+				}
+				screen_ship = {
+					defense = -0.03
+					build_cost_ic = -0.05
+					instant = yes
+				}
+				submarine = {
+					defense = -0.03
+					build_cost_ic = -0.05
+					instant = yes
+				}
+			}
+		}
+    MDL_imperial_ships = {
+      picture = MDL_imperial_ships
+      allowed = { original_tag = MDL }
+      visible = { has_country_flag = MDL_grifo_takeover }
+      available = { has_completed_focus = MDL_imperial_shipyards }
+			research_bonus = {
+				naval_equipment = 0.08
+			}
+			traits = { naval_manufacturer }
+    }
+	}
+
+	country = {
+		MDL_humbled_sultanate = {
+			picture = MDL_humbled_sultanate
+			modifier = {
+				political_power_factor = -0.25
+				stability_factor = -0.1
+				army_morale_factor = -0.1
+				army_org_factor = -0.05
+			}
+		}
+	}
+	country = {
+		MDL_madgriff_in_the_harbor = {
+			picture = MDL_madgriff_in_the_harbor
+			modifier = {
+				stability_factor = -0.05
+				fascism_drift = 0.10
+			}
+		}
+	}
+	country = {
+		MDL_holy_zeal_1 = {
+			picture = MDL_holy_zeal
+			modifier = {
+        army_org_factor = 0.05
+				war_support_factor = 0.05
+				conscription_factor = 0.05
+			}
+		}
+	}
+  country = {
+    MDL_holy_zeal_2 = {
+      picture = MDL_holy_zeal
+      modifier = {
+        army_org_factor = 0.05
+        war_support_factor = 0.15
+				conscription_factor = 0.05
+        army_morale_factor = 0.05
+      }
+    }
+  }
+	country = {
+		MDL_manedalusian_industrious_pride = {
+			picture = MDL_industrious_pride
+			equipment_bonus = {
+				artillery_equipment = { build_cost_ic = -0.05 instant = yes }
+				infantry_equipment = { build_cost_ic = -0.1 instant = yes }
+			}
+		}
+	}
+	country = {
+		MDL_place_in_the_sun_idea = {
+			picture = MDL_place_in_the_sun_idea
+			modifier = {
+				stability_factor = 0.10
+				political_power_gain = 0.05
+				drift_defence_factor = 0.30
+			}
+		}
+	}
+	country = {
+		MDL_qadi_away = {
+			picture = MDL_coltoba_city
+			modifier = {
+				stability_factor = -0.10
+				political_power_factor = -0.10
+			}
+		}
+	}
+  country = {
+    MDL_magical_reloading = {
+      picture = MDL_magical_reloading
+      equipment_bonus = {
+        artillery_equipment = {
+          soft_attack = 0.15
+          hard_attack = 0.05
+          build_cost_ic = 0.05
+          instant = yes
+        }
+      }
+    }
+  }
+  country = {
+    MDL_magical_engines = {
+      picture = MDL_magical_engines
+      equipment_bonus = {
+        motorized_equipment = {
+          reliability = 0.25
+          build_cost_ic = -0.05
+          instant = yes
+        }
+        mechanized_equipment = {
+          reliability = 0.2
+          build_cost_ic = -0.05
+          instant = yes
+        }
+      }
+    }
+  }
+  country = {
+    MDL_koltaliba_commissars_idea = {
+      picture = MDL_koltaliba_commissars
+      modifier = {
+        army_morale_factor = 0.10
+        supply_consumption_factor = -0.10
+      }
+    }
+  }
+  country = {
+    MDL_koltaliba_regimentation = {
+      picture = MDL_koltaliba_regimentation
+      modifier = {
+        special_forces_cap = 0.15
+        special_forces_no_supply_grace = 72
+				heat_attrition_factor = -0.15
+        special_forces_out_of_supply_factor = -0.15
+        special_forces_training_time_factor = 0.2
+      }
+    }
+  }
+  country = {
+    MDL_industrial_council = {
+      picture = MDL_industrial_council
+      modifier = {
+        production_speed_buildings_factor = 0.10
+        production_factory_efficiency_gain_factor = 0.05
+        industrial_capacity_factory = 0.05
+      }
+    }
+  }
+  country = {
+    MDL_citizen_guard_idea = {
+      picture = MDL_citizen_guard1
+      modifier = {
+        conscription = 0.01
+        stability_factor = 0.05
+        compliance_growth = 0.10
+      }
+    }
+  }
+  country = {
+    MDL_streamlined_tank_production = {
+      picture = MDL_streamlined_tank_production
+      equipment_bonus = {
+        mechanized_equipment = {
+          maximum_speed = 0.1
+          build_cost_ic = -0.10
+          instant = yes
+        }
+      }
+    }
+  }
+  country = {
+    MDL_manedalusian_rangers_idea = {
+      picture = BAR_fire_and_sword
+      modifier = {
+        special_forces_cap = 0.15
+        special_forces_attack_factor = 0.10
+        special_forces_defence_factor = 0.10
+      }
+    }
+  }
+  country = {
+    MDL_merchant_fleet_idea = {
+      picture = MDL_merchant_fleet
+      equipment_bonus = {
+        convoy = {
+          instant = yes
+          build_cost_ic = -0.35
+        }
+      }
+    }
+  }
+  country = {
+    MDL_coltoba_shipyards_idea = {
+      picture = MDL_coltoba_shipyards1
+      modifier = {
+        refit_speed = 0.20
+        repair_speed_factor = 0.30
+      }
+      equipment_bonus = {
+        ship_hull_light = {
+          build_cost_ic = -0.45
+          instant = yes
+        }
+        ship_hull_cruiser = {
+          build_cost_ic = -0.45
+          instant = yes
+        }
+        ship_hull_submarine = {
+          build_cost_ic = -0.45
+          instant = yes
+        }
+      }
+    }
+  }
+  country = {
+    MDL_grand_zoco_idea = {
+      picture = can_wartime_prices_and_trade_board
+      modifier = {
+        trade_opinion_factor = 0.10
+        research_speed_factor = 0.05
+        production_factory_efficiency_gain_factor = 0.10
+      }
+    }
+  }
+  country = {
+    MDL_golden_coast_idea = {
+      picture = MDL_golden_coast
+      modifier = {
+        political_power_factor = 0.05
+        MONTHLY_POPULATION = 0.20
+        industrial_capacity_factory = 0.05
+        industrial_capacity_dockyard = 0.05
+      }
+    }
+  }
+  country = {
+    MDL_grand_admiralty_idea = {
+      picture = MDL_grand_admiralty
+      modifier = {
+        experience_gain_navy = 0.05
+        naval_doctrine_cost_factor = -0.10
+      }
+    }
+  }
+  country = {
+    MDL_naval_depots_idea = {
+      picture = generic_navy_bonus
+      modifier = {
+        naval_coordination = 0.05
+        navy_max_range_factor = 0.10
+        industrial_capacity_dockyard = 0.05
+        production_speed_dockyard_factor = 0.10
+      }
+    }
+  }
+  country = {
+    MDL_coffee_trade = {
+      picture = MDL_coffee_trade
+      modifier = {
+        navy_max_range_factor = 0.15
+        production_factory_max_efficiency_factor = 0.05
+      }
+    }
+  }
+  country = {
+    MDL_colthage_treaty = {
+      picture = MDL_colthage_treaty1
+      cancel = {
+        OR = {
+          CTH = { exists = no }
+          MDL = { exists = no }
+        }
+      }
+      modifier = {
+        political_power_gain = 0.05
+        consumer_goods_factor = -0.05
+				production_factory_efficiency_gain_factor = 0.05
+      }
+    }
+  }
+  country = {
+    MDL_grand_army = {
+      picture = GRI_hat
+      modifier = {
+				max_command_power = 10
+				command_power_gain = 0.05
+				experience_gain_army = 0.01
+				land_doctrine_cost_factor = -0.10
+			}
+    }
+  }
+  country = {
+    MDL_jizya_idea = {
+      picture = MDL_jizya
+      modifier = {
+        political_power_gain = 0.05
+        conscription_factor = 0.10
+        MONTHLY_POPULATION = -0.20
+      }
+    }
+  }
+  country = {
+    MDL_gunpowder_empire_idea = {
+      picture = MDL_gunpowder_empire1
+      modifier={
+        production_speed_rail_way_factor = 0.25
+        production_speed_supply_node_factor = 0.10
+        compliance_growth = 0.10
+      }
+      equipment_bonus = {
+        train_equipment = { build_cost_ic = -0.50 }
+      }
+    }
+  }
+  country = {
+    MDL_moonstriker_vizier = {
+      picture = MDL_vizier_moonstriker
+      modifier = {
+        stability_factor = 0.05
+        research_speed_factor = 0.05
+      }
+    }
+  }
+  country = {
+    MDL_qadi_vizier = {
+      picture = MDL_vizier_qadi
+      modifier = {
+          stability_factor = 0.05
+          consumer_goods_factor = -0.05
+      }
+    }
+  }
+  country = {
+    MDL_KAR_shahdom = {
+      picture = MDL_KAR_shahdom
+      modifier = {
+        political_power_factor = -0.25
+        conscription_factor = -0.10
+      }
+    }
+  }
+  country = {
+		MDL_bomber_pilots_idea = {
+			picture = FRA_army_of_aggression_focus
+			modifier = {
+				air_strategic_bomber_bombing_factor = 0.15
+				air_accidents_factor = -0.10
+			}
+		}
+	}
+  country = {
+		MDL_unstoppable_pilots_idea = {
+			picture = FRA_army_of_aggression_focus
+			modifier = {
+				air_night_penalty = -0.30
+				air_weather_penalty = -0.30
+			}
+		}
+	}
+  country = {
+    MDL_looting_abyssinia = {
+      picture = generic_purge
+      modifier = {
+        supply_consumption_factor = -0.50
+      }
+    }
+  }
+  country = {
+    MDL_abyssinian_genocide = {
+      picture = generic_purge
+      modifier = {
+        stability_factor = -0.15
+        non_core_manpower = -3.0
+				fascism_drift = 0.03
+      }
+    }
+  }
+  country = {
+    MDL_federal_assembly_1 = {
+      picture = MDL_federal_assembly
+      modifier = {
+        economy_cost_factor = -0.05
+        trade_laws_cost_factor = -0.05
+      }
+    }
+  }
+  country = {
+    MDL_federal_assembly_2 = {
+      picture = MDL_federal_assembly
+      modifier = {
+        economy_cost_factor = -0.10
+        trade_laws_cost_factor = -0.10
+        high_command_cost_factor = -0.10
+      }
+    }
+  }
+  country = {
+    MDL_federal_constitution_idea = {
+      picture = generic_volunteer_expedition_bonus
+      modifier = {
+        political_power_factor = 0.05
+        stability_factor = 0.05
+        war_support_factor = 0.05
+        weekly_manpower = 50
+      }
+    }
+    MDL_federal_constitution_idea_1 = {
+      picture = generic_volunteer_expedition_bonus
+      modifier = {
+        political_power_factor = 0.05
+        stability_factor = 0.05
+        war_support_factor = 0.05
+        weekly_manpower = 150
+      }
+    }
+  }
+  country = {
+    MDL_federation_joint_development = {
+      picture = generic_production_bonus
+      modifier={
+        production_speed_rail_way_factor = 0.25
+        industrial_capacity_factory = 0.05
+      }
+      equipment_bonus = {
+        train_equipment = { build_cost_ic = -0.50 }
+      }
+    }
+  }
+  country = {
+    MDL_federation_member = {
+      picture = MDL_federation_member
+      modifier = {
+        drift_defence_factor = 0.10
+        MONTHLY_POPULATION = 0.10
+        min_export = 0.05
+      }
+    }
+  }
+  country = {
+    MDL_KLG_FED_idea = {
+      picture = FRA_factory_strikes
+      modifier = {
+        production_factory_max_efficiency_factor = 0.10
+				industrial_capacity_factory = 0.10
+				production_speed_buildings_factor = 0.05
+      }
+    }
+  }
+  country = {
+    MDL_qunsul_idea = {
+      picture = HUN_treaty_of_triannon
+      modifier = {
+        stability_factor = 0.05
+        political_power_gain = 0.05
+      }
+    }
+  }
+  country = {
+    MDL_paying_MGY = {
+      picture = HUN_treaty_of_triannon
+      modifier = {
+        political_power_cost = 0.05
+        consumer_goods_factor = 0.25
+      }
+    }
+  }
+  country = {
+    MDL_paying_MGY_1 = {
+      picture = HUN_treaty_of_triannon
+      modifier = {
+        political_power_gain = 0.05
+        consumer_goods_factor = -0.25
+      }
+    }
+  }
+  country = {
+    MDL_aaliyah_monument = {
+			picture = generic_democratic_drift_bonus
+			modifier = {
+				consumer_goods_factor = -0.04
+				production_speed_buildings_factor = 0.05
+			}
+		}
+  }
+  country = {
+    MDL_bulwark_of_harmony_idea = {
+      picture = EQS_harmonic_stagnation2
+      modifier = {
+				war_support_factor = 0.10
+				army_core_attack_factor = 0.15
+				army_core_defence_factor = 0.15
+			}
+    }
+  }
+  country = {
+    MDL_expeditionary_corps_idea = {
+      picture = ast_volunteer_defence_corps
+      modifier = {
+        experience_gain_army = 0.01
+        send_volunteers_tension = -0.8
+				send_volunteer_divisions_required = -0.75
+				send_volunteer_size = 20
+        weekly_manpower = 150
+      }
+    }
+  }
+  country = {
+    MDL_underground_railroad = {
+      picture = EQS_friendly_harmony
+      cancel = {
+        ABY = {
+          OR = {
+            exists = no
+            has_completed_focus = MDL_emancipation_act
+            has_government = communism
+          }
+        }
+      }
+      modifier = {
+        democratic_drift = 0.01
+        MONTHLY_POPULATION = 0.10
+      }
+    }
+  }
+  country = {
+    MDL_post_war_investment = {
+			picture = generic_goods_red_bonus
+      modifier = {
+        political_power_gain = -0.05
+				industry_free_repair_factor = 0.1
+				industry_repair_factor = 0.1
+	  		production_speed_buildings_factor = 0.10
+      }
+      targeted_modifier = {
+				tag = MDL
+				cic_to_target_factor = 0.05
+				extra_trade_to_target_factor = 0.15
+				trade_cost_for_target_factor = -0.1
+			}
+    }
+  }
+  country = {
+    MDL_starry_sea_exercises = {
+      picture = EQS_harmonic_stagnation3
+      modifier = {
+			  experience_gain_navy = 0.03
+			  experience_gain_air = 0.01
+			}
+    }
+  }
+  country = {
+    MDL_celebrating_victory = {
+      picture = ROM_king_carol_ii_hedonist
+      modifier = {
+				industrial_capacity_factory = 0.05
+        democratic_drift = 0.05
+				consumer_goods_factor = 0.1
+			}
+    }
+  }
+  country = {
+    MDL_sunmad_0 = {
+      picture = FRA_scw_intervention_republicans_focus
+      modifier = {
+        political_power_factor = -1.0
+        stability_factor = -0.40
+        army_morale_factor = -0.4
+      }
+    }
+    MDL_sunmad_1 = {
+      picture = FRA_scw_intervention_republicans_focus
+      modifier = {
+        political_power_factor = -0.75
+				stability_factor = -0.30
+        army_morale_factor = -0.3
+      }
+    }
+    MDL_sunmad_2 = {
+      picture = FRA_scw_intervention_republicans_focus
+      modifier = {
+        political_power_factor = -0.50
+				stability_factor = -0.20
+        army_morale_factor = -0.2
+      }
+    }
+    MDL_sunmad_3 = {
+      picture = FRA_scw_intervention_republicans_focus
+      modifier = {
+        political_power_factor = -0.25
+				stability_factor = -0.10
+        army_morale_factor = -0.1
+      }
+    }
+  }
+  country = {
+    MDL_fortress_manedalusia_idea = {
+ 			picture = generic_democratic_drift_bonus
+      modifier = {
+        land_bunker_effectiveness_factor = 0.25
+        production_speed_buildings_factor = 0.1
+      }
+    }
+  }
+  country = {
+    MDL_ash_shuhud_resistance = {
+      picture = MDL_native_resistance
+      modifier = {
+        industrial_capacity_factory = -1
+        stability_factor = -0.2
+      }
+    }
+  }
+  country = {
+		MDL_colonial_troops_idea = {
+			picture = MEX_politicised_army
+      modifier = {
+				non_core_manpower = 0.04
+        weekly_manpower = 250
+        training_time_factor = -0.05
+			}
+		}
+    MDL_southern_griffonian_society = {
+      picture = generic_disjointed_gov
+      modifier = {
+        stability_factor = 0.05
+        fascism_drift = 0.02
+        research_speed_factor = 0.05       
+        drift_defence_factor = 0.25
+      }
+    }
+    MDL_colonial_arms_production_idea = {
+      picture = generic_license_production
+ 			equipment_bonus = {
+				infantry_equipment = { build_cost_ic = -0.20 instant = yes }
+			}
+    }
+    MDL_pony_synthesis_idea = {
+      picture = MDL_pony_synthesis
+      modifier = {
+        conscription = 0.02       
+        fascism_drift = 0.03
+      }
+    }
+    MDL_pony_imperials_idea = {
+			picture = MDL_place_in_the_sun_idea
+      modifier = {
+        political_power_factor = 0.05
+        stability_factor = 0.05
+        war_support_factor = 0.05
+      }
+    }
+    MDL_maxed_dominion = {
+      picture = MDL_dominion_of_ultramar
+      modifier = {
+        political_power_factor = 0.05
+        MONTHLY_POPULATION = 0.20
+        industrial_capacity_factory = 0.10
+        industrial_capacity_dockyard = 0.10
+      }
+    }
+    MDL_veteran_colonial_army = {
+      picture = generic_war_preparation
+      modifier = {
+        experience_loss_factor = -0.10
+        army_defence_factor = 0.05
+        army_speed_factor = 0.05
+      }
+    }
+    MDL_imperial_admiralty_idea = {
+      picture = MDL_grand_admiralty
+      modifier = {
+        experience_gain_navy = 0.05
+        naval_doctrine_cost_factor = -0.10
+      }
+    }
+    MDL_naval_projection_idea = {
+      picture = shipwaves
+      modifier = {
+        navy_max_range_factor = 0.15
+        max_fuel_factor = 0.15
+      }
+    }
+    MDL_imperial_parliament_1 = {
+      picture = triumphant_will
+      modifier = {
+        fascism_drift = 0.01
+        drift_defence_factor = 0.25
+      }
+    }
+    MDL_imperial_parliament_2 = {
+      picture = triumphant_will
+      modifier = {
+        fascism_drift = 0.01
+        drift_defence_factor = 0.25
+        political_power_factor = 0.05
+        stability_factor = 0.05
+        political_advisor_cost_factor = -0.10
+        trade_laws_cost_factor = -0.10
+        mobilization_laws_cost_factor = -0.10
+        economy_cost_factor = -0.10
+      }
+    }
+    MDL_imperial_parliament_3 = {
+      picture = triumphant_will
+      modifier = {
+        fascism_drift = 0.01
+        drift_defence_factor = 0.25
+        political_power_factor = 0.05
+        stability_factor = 0.05
+        political_advisor_cost_factor = -0.10
+        trade_laws_cost_factor = -0.10
+        mobilization_laws_cost_factor = -0.10
+        economy_cost_factor = -0.10
+        army_morale_factor = 0.05
+        army_org_factor = 0.05
+      }
+    }
+    MDL_imperial_soul_1 = {
+      picture = BRF_everyman_a_knight
+      modifier = {
+        army_defence_factor = 0.05
+        conscription_factor = 0.05
+      }
+    }
+    MDL_imperial_soul_2 = {
+      picture = BRF_everyman_a_knight
+      modifier = {
+        army_defence_factor = 0.05
+        army_morale_factor = 0.05
+        conscription_factor = 0.05
+      }
+    }
+    MDL_imperial_soul_3 = {
+      picture = BRF_everyman_a_knight
+      modifier = {
+        army_defence_factor = 0.05
+        army_morale_factor = 0.05
+        conscription_factor = 0.05
+        industrial_capacity_factory = 0.05
+        drift_defence_factor = 0.05
+      }
+    }
+    MDL_grand_imperial_navy = {
+      picture = generic_navy_bonus
+      modifier = {
+        refit_speed = 0.15
+        repair_speed_factor = 0.15
+        naval_coordination = 0.15
+        experience_gain_navy_factor = 0.10
+      }
+    }
+    MDL_karthin_legions_idea = {
+      picture = WNG_B_legion
+      modifier = {
+        army_attack_factor = 0.10
+        max_planning = 0.1
+        coordination_bonus = 0.05
+      }
+    }
+    MDL_imperial_pilots_idea = {
+      picture = strategic_bombing_focus
+      modifier = {
+        air_ace_generation_chance_factor = 0.25
+        ace_effectiveness_factor = 0.25
+        air_accidents_factor = -0.1
+      }
+    }
+    MDL_imperial_diplo_corps_idea = {
+      picture = YUG_federal_defense_council
+      modifier = {
+        trade_opinion_factor = 0.10
+        consumer_goods_factor = -0.05
+      }
+    }
+    MDL_imperial_autarky_idea = {
+      picture = gre_schachtplan
+      modifier = {
+        production_factory_max_efficiency_factor = 0.10
+        production_factory_efficiency_gain_factor = 0.10
+      }
+    }
+    MDL_spec_ops_idea = {
+      picture = MDL_spec_ops
+      modifier = {
+				special_forces_cap = 0.10
+				special_forces_attack_factor = 0.10
+				special_forces_defence_factor = 0.10
+			}
+    }
+    MDL_corporativism_idea = {
+      picture = generic_archonism_idea
+      modifier = {
+        production_speed_buildings_factor = 0.1
+        consumer_goods_factor = -0.1
+      }
+    }
+    MDL_imperial_logistical_corps = {
+			picture = general_staff
+			modifier = {
+			  attrition = -0.05
+				supply_consumption_factor = -0.05
+				out_of_supply_factor = -0.10
+				no_supply_grace = 24
+			}
+		}
+    MDL_imperial_artillery_barrage = {
+      picture = MDL_nonstop_barrage
+      equipment_bonus = {
+        artillery_equipment = {
+          soft_attack = 0.15
+          hard_attack = 0.05
+          instant = yes
+        }
+      }
+    }
+    MDL_imperial_shipyards_idea = {
+      picture = MDL_coltoba_shipyards1
+      modifier = {
+        refit_speed = 0.20
+        repair_speed_factor = 0.30
+      }
+      equipment_bonus = {
+        ship_hull_light = {
+          build_cost_ic = -0.45
+          instant = yes
+        }
+        ship_hull_cruiser = {
+          build_cost_ic = -0.45
+          instant = yes
+        }
+        ship_hull_submarine = {
+          build_cost_ic = -0.45
+          instant = yes
+        }
+      }
+    }
+    MDL_shadowweavers = {
+      picture = CHN_political_divisions
+			modifier = {
+				crypto_strength = 1
+				encryption_factor = 0.15
+			}
+    }
+    MDL_native_affairs_idea = {
+      picture = generic_constitutional_guarantee
+      modifier = {
+        stability_factor = 0.15
+        autonomy_gain = -1
+      }
+    }
+    MDL_MCW_carrier = {
+      picture = shipwaves
+      modifier = {
+        industrial_capacity_dockyard = 0.15
+        navy_max_range_factor = 0.10
+        max_fuel_factor = 0.05
+      }
+    }
+    MDL_southern_griffonian_imperial_company = {
+      picture = can_wartime_prices_and_trade_board
+      modifier = {
+        trade_opinion_factor = 0.10
+        research_speed_factor = 0.05
+        production_factory_efficiency_gain_factor = 0.10
+      }
+    }
+  }
+}
+

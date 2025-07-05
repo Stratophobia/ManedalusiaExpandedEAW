@@ -1,0 +1,10 @@
+spriteTypes = {
+  SpriteType = {
+    name="GFX_trait_MDL_logistical_cantrips_trait"
+    texturefile="gfx/interface/traits/personal/MDL_logistical_cantrips.tga"
+  }
+  SpriteType = {
+    name="GFX_trait_MDL_koltaliba_member_trait"
+    texturefile="gfx/interface/traits/personal/MDL_koltaliba_member.tga"
+  }
+}

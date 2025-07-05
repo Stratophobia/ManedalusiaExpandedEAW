@@ -1,0 +1,15 @@
+music = {
+    name = "coltoba_blues"
+    file = "coltoba_blues.ogg"
+    volume = 0.9
+}
+music = {
+	name = "gerudo_valley"
+	file = "gerudo_valley.ogg"
+	volume = 1.0
+}
+music = {
+  name = "golden_coast"
+  file = "golden_coast.ogg"
+  volume = 1.0
+}

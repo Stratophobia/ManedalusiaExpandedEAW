@@ -1,0 +1,6915 @@
+focus_tree = {
+	id = manedalusia_main
+
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = MDL
+		}
+	}
+	default = no
+	continuous_focus_position = { x = 550 y = 1800 }
+
+	shared_focus = MDL_gather_the_council
+}
+
+focus_tree = {
+	id = manedalusia_sayf
+
+	country = {
+		factor = 0
+		modifier = {
+			and = 10
+			tag = MDL
+		}
+	}
+	default = no
+	continuous_focus_position = { x = 550 y = 1800 }
+
+	shared_focus = MDL_warplan_green
+	shared_focus = MDL_economy_stuff
+	shared_focus = MDL_army_stuff
+  shared_focus = MDL_navy_stuff
+  shared_focus = MDL_air_stuff
+}
+
+focus_tree = {
+	id = manedalusia_sayf_genocide_1
+
+	country = {
+		factor = 0
+		modifier = {
+			and = 10
+			tag = MDL
+		}
+	}
+	default = no
+	continuous_focus_position = { x = 550 y = 1800 }
+}
+
+focus_tree = {
+	id = manedalusia_sayf_genocide_2
+
+	country = {
+		factor = 0
+		modifier = {
+			and = 10
+			tag = MDL
+		}
+	}
+	default = no
+	continuous_focus_position = { x = 550 y = 1800 }
+
+  shared_focus = MDL_kill_them_all
+}
+
+focus_tree = {
+	id = manedalusia_khaldun
+
+	country = {
+		factor = 0
+		modifier = {
+			and = 10
+			tag = MDL
+		}
+}
+	default = no
+	continuous_focus_position = { x = 550 y = 1800 }
+
+	shared_focus = MDL_economy_stuff
+	shared_focus = MDL_army_stuff
+  shared_focus = MDL_navy_stuff
+  shared_focus = MDL_air_stuff
+}
+
+focus_tree = {
+	id = manedalusia_senate
+
+	country = {
+		factor = 0
+		modifier = {
+			and = 10
+			tag = MDL
+		}
+	}
+	default = no
+	continuous_focus_position = { x = 550 y = 1800 }
+
+  shared_focus = MDL_elect_qunsul
+	shared_focus = MDL_economy_stuff
+	shared_focus = MDL_army_stuff
+  shared_focus = MDL_navy_stuff
+  shared_focus = MDL_air_stuff
+}
+
+focus_tree = {
+	id = manedalusia_mirage
+
+	country = {
+		factor = 0
+		modifier = {
+			and = 10
+			tag = MDL
+		}
+	}
+	default = no
+	continuous_focus_position = { x = 550 y = 1800 }
+
+	shared_focus = MDL_economy_stuff
+	shared_focus = MDL_army_stuff
+  shared_focus = MDL_navy_stuff
+  shared_focus = MDL_air_stuff
+}
+
+focus_tree = {
+	id = manedalusia_velvet
+
+	country = {
+		factor = 0
+		modifier = {
+			and = 10
+			tag = MDL
+		}
+	}
+	default = no
+	continuous_focus_position = { x = 550 y = 1800 }
+
+  shared_focus = MDL_a_new_start
+	shared_focus = MDL_economy_stuff
+	shared_focus = MDL_army_stuff
+  shared_focus = MDL_navy_stuff
+  shared_focus = MDL_air_stuff
+}
+
+focus_tree = {
+  id = manedalusia_ultramar_1
+  country = {
+		factor = 0
+		modifier = {
+			and = 10
+			tag = MDL
+		}
+	}
+	default = no
+	continuous_focus_position = { x = 550 y = 1800 }
+
+  shared_focus = MDL_overseas_dominion
+}
+
+focus_tree = {
+  id = manedalusia_ultramar_2
+  country = {
+		factor = 0
+		modifier = {
+			and = 10
+			tag = MDL
+		}
+	}
+	default = no
+	continuous_focus_position = { x = 550 y = 1800 }
+
+  shared_focus = MDL_restoring_the_light
+}
+
+focus_tree = {#UNFINISHED
+  id = manedalusia_crusade
+  country = {
+		factor = 0
+		modifier = {
+			and = 10
+			tag = MDL
+		}
+	}
+	default = no
+	continuous_focus_position = { x = 550 y = 1800 }
+
+  shared_focus = MDL_crusade_path
+}
+
+###STARTING TREE###
+shared_focus = {
+	id = MDL_gather_the_council
+	icon = GFX_MDL_gather_the_council
+	x = 10
+	y = 1
+	cost = 2
+	available = {
+		always = yes
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MDL_gather_the_council"
+		country_event = { id = manedalusia.2 }
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+}
+
+shared_focus = {
+	id = MDL_rally_militias
+	icon = GFX_MDL_rally_militias
+	x = -1
+	y = 1
+	relative_position_id = MDL_gather_the_council
+	cost = 2
+	prerequisite = { focus = MDL_gather_the_council }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MDL_rally_militias"
+		hidden_effect = { load_oob = "MDL_militias" }
+		custom_effect_tooltip = MDL_rally_militias_tt
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+}
+
+shared_focus = {
+	id = MDL_general_staff
+	icon = GFX_MDL_general_staff
+	x = 1
+	y = 1
+	relative_position_id = MDL_gather_the_council
+	cost = 2
+	prerequisite = { focus = MDL_gather_the_council }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MDL_general_staff"
+		country_event = { id = manedalusia.5 }		
+		MDL_armil_khaldun = {
+			add_field_marshal_role = {
+				traits={ pony_race_trait trickster trait_unpredictable inspirational_leader }
+				skill=2
+				attack_skill=1
+				defense_skill=3
+				planning_skill=2
+				logistics_skill=1
+				desc = MDL_armil_khaldun_desc
+			}
+		}
+		custom_effect_tooltip = MDL_khaldun_stats_tt
+		MDL_crimson_sayf = {
+			add_field_marshal_role = {
+				traits = { pony_race_trait harsh_leader infantry_leader }
+				skill=3
+				attack_skill=4
+				defense_skill=2
+				planning_skill=2
+				logistics_skill=2
+				desc = MDL_crimson_sayf_desc
+			}
+		}
+		custom_effect_tooltip = MDL_sayf_stats_tt
+		MDL_moonstriker_laylah={
+			add_corps_commander_role = {
+				traits = { pony_race_trait organizer MDL_logistical_cantrips_trait skilled_staffer }
+				skill=2
+				attack_skill=1
+				defense_skill=3
+				planning_skill=2
+				logistics_skill=5
+				desc= MDL_moonstriker_laylah_desc
+			}
+		}
+		custom_effect_tooltip = MDL_moonstriker_stats_tt
+		MDL_almanezor = {
+			add_corps_commander_role = {
+				traits = { pony_race_trait panzer_leader trait_reckless }
+				skill=3
+				attack_skill=4
+				defense_skill=2
+				planning_skill=5
+				logistics_skill=2
+			}
+		}
+		custom_effect_tooltip = MDL_almanezor_stats_tt
+    MDL_clover_breeze = {
+      add_corps_commander_role = {
+        traits = { pony_race_trait politically_connected air_force_commander }
+        skill=2
+        attack_skill=1
+        defense_skill=2
+        planning_skill=3
+        logistics_skill=1
+        desc = MDL_clover_breeze_desc
+      }
+    }
+    custom_effect_tooltip = MDL_clover_breeze_stats_tt
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+}
+
+shared_focus = {
+	id = MDL_deal_with_the_madgriff
+	icon = GFX_MDL_madgriff_in_the_harbor
+	x = 0
+	y = 2
+	relative_position_id = MDL_gather_the_council
+	cost = 1
+	prerequisite = { focus = MDL_rally_militias }
+	prerequisite = { focus = MDL_general_staff }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MDL_deal_with_the_madgriff"
+		country_event = { id = manedalusia.3 }
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+}
+
+shared_focus = {
+	id = MDL_lean_on_legacy
+	icon = GFX_MDL_manedalusian_sun
+	x = 0
+	y = 1
+	relative_position_id = MDL_deal_with_the_madgriff
+	cost = 1
+	prerequisite = { focus = MDL_deal_with_the_madgriff }
+	mutually_exclusive = { focus = MDL_try_for_harmony focus = MDL_try_for_socialism }
+
+	allow_branch={
+		if = {
+			NOT = {
+				OR = {
+					has_completed_focus = MDL_try_for_harmony
+					has_completed_focus = MDL_try_for_socialism
+				}
+			}
+		}
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MDL_lean_on_legacy"
+		add_political_power = 25
+		add_popularity = { ideology = neutrality popularity = 0.05 }
+		hidden_effect = {#collapse focus tree
+			load_focus_tree={
+				tree = manedalusia_main
+				keep_completed = yes
+			}
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+}
+
+shared_focus = {
+	id = MDL_ash_shahid_chosen
+	icon = GFX_MDL_ash_shahid_chosen
+	x = -4
+	y = 1
+  cost = 1
+	offset = {
+		x = 4
+		y = 0
+		trigger = {
+			has_completed_focus = MDL_ash_shahid_chosen
+		}
+	}
+	relative_position_id = MDL_lean_on_legacy
+	prerequisite = { focus = MDL_lean_on_legacy }
+	mutually_exclusive = { focus = MDL_khaldun_gambit focus = MDL_senate_path }
+
+	allow_branch = {
+		if = {
+			NOT = {
+				OR = {
+					has_completed_focus = MDL_try_for_harmony
+					has_completed_focus = MDL_try_for_socialism
+					has_completed_focus = MDL_khaldun_gambit
+					has_completed_focus = MDL_senate_path
+				}
+			}
+		}
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MDL_ash_shahid_chosen"
+		country_event = { id = manedalusia.6 }
+		hidden_effect = {
+			load_focus_tree={
+				tree=manedalusia_main
+				keep_completed = yes
+			}
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+}
+
+shared_focus = {
+	id = MDL_get_generals_in_line
+	icon = GFX_MDL_get_generals_in_line
+	x = -1
+	y = 1
+	relative_position_id = MDL_ash_shahid_chosen
+	cost = 3
+	prerequisite = { focus = MDL_ash_shahid_chosen }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MDL_get_generals_in_line"
+    add_popularity = { ideology = fascism popularity = 0.05 } 
+		country_event = { id = manedalusia.7 }
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+}
+
+shared_focus = {
+	id = MDL_religious_support
+	icon = GFX_MDL_religious_support
+	x = 1
+	y = 1
+	relative_position_id = MDL_ash_shahid_chosen
+	cost = 3
+	prerequisite = { focus = MDL_ash_shahid_chosen }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MDL_religious_support"
+		add_popularity = { ideology = fascism popularity = 0.05 }
+		country_event = { id = manedalusia.14 }
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+}
+
+shared_focus = {
+	id = MDL_sayf_takeover
+	icon = GFX_MDL_sayf_takeover
+	x = 0
+	y = 2
+	relative_position_id = MDL_ash_shahid_chosen
+  cost = 1
+	prerequisite = { focus = MDL_get_generals_in_line }
+	prerequisite = { focus = MDL_religious_support }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MDL_sayf_takeover"
+		country_event = { id = manedalusia.8 }
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+}
+
+shared_focus = {
+	id = MDL_khaldun_gambit
+	icon = GFX_MDL_khaldun_gambit
+	x = 0
+	y = 1
+	relative_position_id = MDL_lean_on_legacy
+	cost = 1
+	prerequisite = { focus = MDL_lean_on_legacy }
+	mutually_exclusive = { focus = MDL_ash_shahid_chosen focus = MDL_senate_path }
+
+  available = { always = no }
+
+	allow_branch = {
+		if = {
+			NOT = {
+				OR = {
+					has_completed_focus = MDL_try_for_harmony
+					has_completed_focus = MDL_try_for_socialism
+					has_completed_focus = MDL_ash_shahid_chosen
+					has_completed_focus = MDL_senate_path
+				}
+			}
+		}
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MDL_khaldun_gambit"
+    custom_effect_tooltip = MDL_WIP_tt
+		country_event = { id = manedalusia.9 }
+		hidden_effect = {
+			load_focus_tree={
+				tree = manedalusia_main
+				keep_completed = yes
+			}
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+}
+
+shared_focus = {
+	id = MDL_persuade_hardliners
+	icon = GFX_MDL_persuade_hardliners
+	x = -1
+	y = 1
+	relative_position_id = MDL_khaldun_gambit
+	cost = 3
+	prerequisite = { focus = MDL_khaldun_gambit }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MDL_persuade_hardliners"
+		country_event = { id = manedalusia.10 }
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+}
+
+shared_focus = {
+	id = MDL_reach_out_to_populists
+	icon = GFX_MDL_reach_out_to_populists
+	x = 1
+	y = 1
+	relative_position_id = MDL_khaldun_gambit
+	cost = 3
+	prerequisite = { focus = MDL_khaldun_gambit }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MDL_reach_out_to_populists"
+    country_event = { id = manedalusia.11 }
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+}
+
+shared_focus = {
+	id = MDL_khaldun_takeover
+	icon = GFX_MDL_khaldun_takeover
+	x = 0
+	y = 2
+	relative_position_id = MDL_khaldun_gambit
+	cost = 1
+	prerequisite = { focus = MDL_persuade_hardliners }
+	prerequisite = { focus = MDL_reach_out_to_populists }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MDL_khaldun_takeover"
+		country_event = { id = manedalusia.12 }
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+}
+
+shared_focus = {
+	id = MDL_senate_path
+	icon = GFX_MDL_advisory_senate
+	x = 4
+	y = 1
+	offset = {
+		x = -4
+		y = 0
+		trigger = {
+			has_completed_focus = MDL_senate_path
+		}
+	}
+	relative_position_id = MDL_lean_on_legacy
+	cost = 1
+	prerequisite = { focus = MDL_lean_on_legacy }
+	mutually_exclusive = { focus = MDL_ash_shahid_chosen focus = MDL_khaldun_gambit }
+
+	allow_branch = {
+		if = {
+			NOT = {
+				OR = {
+					has_completed_focus = MDL_try_for_harmony
+					has_completed_focus = MDL_try_for_socialism
+					has_completed_focus = MDL_ash_shahid_chosen
+					has_completed_focus = MDL_khaldun_gambit
+				}
+			}
+		}
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MDL_senate_path"
+		country_event = { id = manedalusia.13 }
+		hidden_effect={
+			load_focus_tree = {
+				tree=manedalusia_main
+				keep_completed = yes
+			}
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+}
+
+shared_focus = {
+	id = MDL_grant_rural_autonomy
+	icon = GFX_MDL_grant_rural_autonomy
+	x = -1
+	y = 1
+	relative_position_id = MDL_senate_path
+	cost = 3
+	prerequisite = { focus = MDL_senate_path }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MDL_grant_rural_autonomy"
+		add_political_power = -50
+		add_popularity = { ideology = communism popularity = -0.05 }
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+}
+
+shared_focus = {
+	id = MDL_senate_building
+	icon = GFX_MDL_senate_building
+	x = 1
+	y = 1
+	relative_position_id = MDL_senate_path
+	cost = 3
+	prerequisite = { focus = MDL_senate_path }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MDL_senate_building"
+    add_ideas = MDL_federal_assembly_1
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+}
+
+shared_focus = {
+	id = MDL_senate_assumes_power
+	icon = GFX_MDL_senate_assumes_power
+	x = 0
+	y = 2
+	relative_position_id = MDL_senate_path
+	cost = 1
+	prerequisite = { focus = MDL_grant_rural_autonomy }
+	prerequisite = { focus = MDL_senate_building }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MDL_senate_assumes_power"
+    country_event = { id = manedalusia.50 }
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+}
+
+shared_focus = {
+	id = MDL_try_for_harmony
+	icon = GFX_MDL_try_for_harmony
+	x = 8
+	y = 1
+	offset = {
+		x = -8
+		y = 0
+		trigger = {
+			has_completed_focus = MDL_try_for_harmony
+		}
+	}
+	relative_position_id = MDL_deal_with_the_madgriff
+	cost = 1
+	prerequisite = { focus = MDL_deal_with_the_madgriff }
+	mutually_exclusive = { focus = MDL_lean_on_legacy focus = MDL_try_for_socialism }
+
+	allow_branch={
+		if = {
+			NOT = {
+				OR = {
+					has_completed_focus = MDL_lean_on_legacy
+					has_completed_focus = MDL_try_for_socialism
+				}
+			}
+		}
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MDL_try_for_harmony"
+		add_political_power = -10
+		add_popularity = { ideology = democratic popularity = 0.05 }
+    #country_event = manedalusia.73
+		hidden_effect = {#collapse focus tree
+			load_focus_tree={
+				tree = manedalusia_main
+				keep_completed = yes
+			}
+			mark_focus_tree_layout_dirty = yes
+		}
+    #hidden_effect = {
+    #  set_country_flag = MDL_suleiman_active
+    #}
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+}
+
+shared_focus = {
+	id = MDL_urban_deal
+	icon = GFX_MDL_urban_deal
+	x = 1
+	y = 1
+	relative_position_id = MDL_try_for_harmony
+	cost = 2
+	prerequisite = { focus = MDL_try_for_harmony }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MDL_urban_deal"
+		add_popularity = { ideology = democratic popularity = 0.05 }
+    741 = {
+      add_building_construction = {
+        type = infrastructure
+        level = 1
+        instant_build = yes
+      }
+    }
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+}
+
+shared_focus = {
+	id = MDL_guilds_deal
+	icon = GFX_MDL_guilds_deal
+	x = 0
+	y = 1
+	relative_position_id = MDL_urban_deal
+	cost = 2
+	prerequisite = { focus = MDL_urban_deal }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MDL_guilds_deal"
+    add_political_power = -50
+ 		add_popularity = { ideology = democratic popularity = 0.05 }
+    add_offsite_building = { type = industrial_complex level = 1 }
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+}
+
+shared_focus = {
+	id = MDL_rural_deal
+	icon = GFX_MDL_rural_deal
+	x = -1
+	y = 1
+	relative_position_id = MDL_try_for_harmony
+	cost = 2
+	prerequisite = { focus = MDL_try_for_harmony }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MDL_rural_deal"
+		add_popularity = { ideology = communism popularity = -0.05 }
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+}
+
+shared_focus = {
+	id = MDL_imams_deal
+	icon = GFX_MDL_imams_deal
+	x = 0
+	y = 1
+	relative_position_id = MDL_rural_deal
+	cost = 2
+	prerequisite = { focus = MDL_rural_deal }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MDL_imams_deal"
+    add_stability = 0.05
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+}
+
+shared_focus = {
+	id = MDL_sultana_velvet
+	icon = GFX_MDL_sultana_velvet
+	x = 0
+	y = 3
+	relative_position_id = MDL_try_for_harmony
+	cost = 1
+	prerequisite = { focus = MDL_imams_deal }
+	prerequisite = { focus = MDL_guilds_deal }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MDL_sultana_velvet"
+    country_event = { id = manedalusia.51 }
+    hidden_effect = {
+      set_country_flag = MDL_velvet_path
+    }
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+}
+
+shared_focus = {
+	id = MDL_try_for_socialism
+	icon = GFX_MDL_try_for_socialism
+	x = -8
+	y = 1
+	offset = {
+		x = 8
+		y = 0
+		trigger={
+			has_completed_focus = MDL_try_for_socialism
+		}
+	}
+
+  available = {
+    always = no
+  }
+
+	relative_position_id = MDL_deal_with_the_madgriff
+	cost = 1
+	prerequisite = { focus = MDL_deal_with_the_madgriff }
+	mutually_exclusive = { focus = MDL_lean_on_legacy focus = MDL_try_for_harmony }
+
+	allow_branch={
+		if = {
+			NOT = {
+				OR = {
+					has_completed_focus = MDL_try_for_harmony
+					has_completed_focus = MDL_lean_on_legacy
+				}
+			}
+		}
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MDL_try_for_socialism"
+    custom_effect_tooltip = MDL_WIP_tt
+		hidden_effect = {
+			load_focus_tree={
+				tree = manedalusia_main
+				keep_completed = yes
+			}
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+}
+
+shared_focus = {
+	id = MDL_curtail_the_guilds
+	icon = GFX_MDL_curtail_the_guilds
+	x = 1
+	y = 1
+	relative_position_id = MDL_try_for_socialism
+	cost = 3
+	prerequisite = { focus = MDL_try_for_socialism }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MDL_curtail_the_guilds"
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+}
+
+shared_focus = {
+	id = MDL_rural_charter
+	icon = GFX_MDL_rural_charter
+	x = -1
+	y = 1
+	relative_position_id = MDL_try_for_socialism
+	cost = 3
+	prerequisite = { focus = MDL_try_for_socialism }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MDL_rural_charter"
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+}
+
+shared_focus = {
+	id = MDL_officialize_hisbas
+	icon = GFX_MDL_officialize_hisbas
+	x = 0
+	y = 1
+	relative_position_id = MDL_curtail_the_guilds
+	cost = 3
+	prerequisite = { focus = MDL_curtail_the_guilds }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MDL_officialize_hisbas"
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+}
+
+shared_focus = {
+	id = MDL_asabiyyah
+	icon = GFX_MDL_asabiyyah
+	x = 0
+	y = 1
+	relative_position_id = MDL_rural_charter
+	cost = 3
+	prerequisite = { focus = MDL_rural_charter }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MDL_asabiyyah"
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+}
+
+shared_focus = {
+	id = MDL_vice_and_virtue
+	icon = GFX_MDL_vice_and_virtue
+	x = 0
+	y = 3
+	relative_position_id = MDL_try_for_socialism
+	cost = 1
+	prerequisite = { focus = MDL_officialize_hisbas }
+	prerequisite = { focus = MDL_asabiyyah }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MDL_vice_and_virtue"
+    country_event = { id = manedalusia.52 }
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+}
+
+###SAYF'S TREE###
+shared_focus = {
+	id = MDL_warplan_green
+	icon = GFX_MDL_warplan_green
+	x = 10
+	y = 0
+	cost = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MDL_warplan_green"
+		country_event = { id = manedalusia.15 }	
+	}
+  search_filters = { FOCUS_FILTER_POLITICAL }
+}
+
+shared_focus = {
+	id = MDL_fortify_coltoba
+	icon = GFX_fortify_coltoba
+	x = 1
+	y = 1
+	relative_position_id = MDL_warplan_green
+	cost = 4
+	prerequisite = { focus = MDL_warplan_green }
+	available = {
+		741 = { is_owned_and_controlled_by = ROOT }
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MDL_fortify_coltoba"
+		741 = {
+      add_extra_state_shared_building_slots = 1
+      add_building_construction = {
+        type = arms_factory
+        level = 1
+        instant_build = yes
+      }
+			add_building_construction = {
+				type = coastal_bunker
+				level = 3
+				province = 12234
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 2
+				province = 12234
+				instant_build = yes
+			}
+		}
+	}
+  search_filters = { FOCUS_FILTER_INDUSTRY }
+}
+
+shared_focus = {
+	id = MDL_fortify_desert_pass
+	icon = GFX_MDL_fortify_desert_pass
+	x = 3
+	y = 1
+	relative_position_id = MDL_warplan_green
+	cost = 4
+	prerequisite = { focus = MDL_warplan_green }
+	available = {
+		741 = { is_owned_and_controlled_by = ROOT }
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MDL_fortify_desert_pass"
+		741 = {
+			add_building_construction = {
+				type = bunker
+				level = 3
+				province = 10280
+				instant_build = yes
+			}
+		}
+	}
+  search_filters = { FOCUS_FILTER_INDUSTRY }
+}
+
+
+shared_focus = {
+	id = MDL_warplan_conscription
+	icon = GFX_MDL_warplan_conscription
+	x = -1
+	y = 1
+	relative_position_id = MDL_warplan_green
+  cost = 4
+	prerequisite = { focus = MDL_warplan_green }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MDL_warplan_conscription"
+		add_manpower = 8000
+    MDL_increase_conscription = yes
+
+		add_to_variable = {
+			var = MDL_mobilization_var
+			value = -0.20
+		}
+		add_to_variable = {
+			var = MDL_tradelaw_var
+			value = 0.10
+		}
+	}
+  search_filters = { FOCUS_FILTER_MANPOWER }
+}
+
+shared_focus = {
+	id = MDL_holy_zeal
+	icon = GFX_MDL_holy_zeal
+	x = -3
+	y = 1
+	relative_position_id = MDL_warplan_green
+  cost = 4
+	prerequisite = { focus = MDL_warplan_green }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MDL_holy_zeal"
+		add_ideas = MDL_holy_zeal_1
+
+		add_to_variable = {
+			var = MDL_war_var
+			value = 0.05
+		}
+		add_to_variable = {
+			var = MDL_trade_var
+			value = -0.05
+		}
+	}
+  search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_ARMY_BONUS }
+}
+
+shared_focus = {
+	id = MDL_attack_maregypt
+	icon = GFX_MDL_attack_maregypt
+	x = 0
+	y = 2
+	relative_position_id = MDL_warplan_green
+  cost = 2
+	prerequisite = { focus = MDL_holy_zeal }
+	prerequisite = { focus = MDL_fortify_coltoba }
+	prerequisite = { focus = MDL_fortify_desert_pass }
+	prerequisite = { focus = MDL_warplan_conscription }
+  available = {
+    has_war = no
+  }
+	bypass = {
+		OR = {
+			is_subject = yes
+			MGY = {
+				OR = {
+					exists = no
+					has_war_with = ROOT
+				}
+			}
+		}
+	}
+  will_lead_to_war_with = MGY
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MDL_attack_maregypt"
+    custom_effect_tooltip = MDL_warplan_green_tt
+		declare_war_on = { type = annex_everything target = MGY }
+    hidden_effect = { set_country_flag = MDL_warplan_green_flag }
+	}
+  search_filters = { FOCUS_FILTER_ANNEXATION }
+}
+
+shared_focus = {
+  id = MDL_burn_manephis
+  icon = GFX_goal_generic_political
+  available = {
+    735 = { is_owned_and_controlled_by = ROOT }
+  }
+  x = -2
+  y = 1
+  relative_position_id = MDL_attack_maregypt
+  cost = 2
+  prerequisite = { focus = MDL_attack_maregypt }
+  select_effect = {
+    country_event = { id = manedalusia.40 }
+  }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_burn_manephis"
+    hidden_effect = {
+      if = {
+        limit = { has_country_flag = MDL_warplan_green_flag }
+        clr_country_flag = MDL_warplan_green_flag
+      }
+    }
+    country_event = manedalusia.38
+    735 = { add_manpower = -50000 }
+  }
+  search_filters = { FOCUS_FILTER_POLITICAL }
+}
+
+shared_focus = {
+  id = MDL_restore_grand_vizier
+  icon = GFX_goal_generic_political
+  x = 0
+  y = 1
+  relative_position_id = MDL_attack_maregypt
+  cost = 2
+  prerequisite = { focus = MDL_attack_maregypt }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_restore_grand_vizier"
+    country_event = { id = manedalusia.42 }
+  }
+  search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+}
+
+shared_focus = {
+  id = MDL_righteous_fury
+  icon = GFX_goal_national_populism
+  x = 1
+  y = 1
+  relative_position_id = MDL_burn_manephis
+  prerequisite = { focus = MDL_burn_manephis }
+  prerequisite = { focus = MDL_restore_grand_vizier }
+  cost = 2.90
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_righteous_fury"
+    swap_ideas = {
+      remove_idea = MDL_holy_zeal_1
+      add_idea = MDL_holy_zeal_2
+    }
+  }
+  search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_WAR_SUPPORT }
+}
+
+shared_focus = {
+  id = MDL_annex_maregypt
+  icon = GFX_focus_rom_royal_dictatorship
+  x = -1
+  y = 1
+  relative_position_id = MDL_burn_manephis
+  prerequisite = { focus = MDL_burn_manephis }
+  cost = 10
+  available = {
+    MGY = { exists = no }
+    733 = { is_owned_and_controlled_by = ROOT }
+    735 = { is_owned_and_controlled_by = ROOT }
+  }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_annex_maregypt"
+    MGY = { add_to_ROOT_potential_cores = yes }
+  }
+  search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER }
+}
+
+shared_focus = {
+  id = MDL_neighle_infrastructure
+  icon = MDL_neighle_infrastructure
+  x = 2
+  y = 1
+  relative_position_id = MDL_attack_maregypt
+  available = {
+    735 = { is_owned_and_controlled_by = ROOT }
+  }
+  prerequisite = { focus = MDL_attack_maregypt }
+  cost = 5
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_neighle_infrastructure"
+    759 = {
+      add_building_construction = {
+        type = infrastructure
+        level = 2
+        instant_build = yes
+      }
+    }
+    758 = {
+      add_building_construction = {
+        type = infrastructure
+        level = 2
+        instant_build = yes
+      }
+    }
+    760 = {
+      add_building_construction = {
+        type = infrastructure
+        level = 2
+        instant_build = yes
+      }
+    }
+    761 = {
+      add_building_construction = {
+        type = infrastructure
+        level = 2
+        instant_build = yes
+      }
+    }
+    766 = {
+      add_building_construction = {
+        type = infrastructure
+        level = 2
+        instant_build = yes
+      }
+    }
+  }
+  search_filters = { FOCUS_FILTER_INDUSTRY }
+}
+
+shared_focus = {
+  id = MDL_advisory_senate
+  icon = GFX_MDL_advisory_senate
+  x = -1
+  y = 1
+  cost = 2.90
+  relative_position_id = MDL_neighle_infrastructure
+  prerequisite = { focus = MDL_neighle_infrastructure }
+  prerequisite = { focus = MDL_restore_grand_vizier }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_advisory_senate"
+    add_advisor_role = {
+      character = MDL_senate
+      advisor = {
+        slot = political_advisor
+        idea_token = MDL_senate
+        allowed = { original_tag = MDL }
+        traits = { MDL_subdued_senate }
+      }
+    }
+  }
+  search_filters = { FOCUS_FILTER_POLITICAL }
+}
+
+shared_focus = {
+  id = MDL_annex_ovingoland
+  icon = GFX_MDL_annex_ovingoland
+  x = 1
+  y = 1
+  relative_position_id = MDL_neighle_infrastructure
+  cost = 2,90
+  prerequisite = { focus = MDL_neighle_infrastructure }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_annex_ovingoland"
+    every_owned_state = {
+      limit = { is_core_of = MKS }
+      add_core_of = MDL
+    }
+  }
+  search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER }
+}
+
+shared_focus = {
+  id = MDL_the_crimson_sultanate
+  icon = GFX_MDL_crimson_sultanate
+  x = 0
+  y = 3
+  relative_position_id = MDL_attack_maregypt
+  cost = 2
+  prerequisite = { focus = MDL_righteous_fury }
+  prerequisite = { focus = MDL_annex_maregypt }
+  prerequisite = { focus = MDL_advisory_senate }
+  prerequisite = { focus = MDL_annex_ovingoland }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_crimson_sultanate"
+    country_event = { id = manedalusia.39 }
+  }
+  search_filters = { FOCUS_FILTER_POLITICAL }
+}
+
+shared_focus = {
+  id = MDL_long_road_to_mareakech
+	icon = GFX_MDL_long_road_to_mareakech
+  x = 0
+  y = 1
+  relative_position_id = MDL_the_crimson_sultanate
+  prerequisite = { focus = MDL_the_crimson_sultanate }
+  cost = 4
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_long_road_to_mareakech"
+    build_railway = {
+      level = 1
+      start_province = 7321
+      target_province = 19169
+    }
+    build_railway = {
+      level = 2
+      start_province = 19107
+      target_province = 19120
+    }
+  }
+  search_filters = { FOCUS_FILTER_INDUSTRY }
+}
+
+shared_focus = {
+  id = MDL_enforce_Jizya
+	icon = GFX_DAH_Topke
+  x = 1
+  y = 1
+  relative_position_id = MDL_long_road_to_mareakech
+  cost = 5
+  prerequisite = { focus = MDL_long_road_to_mareakech }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_enforce_Jizya"
+    add_ideas = MDL_jizya_idea
+  }
+  search_filters = { FOCUS_FILTER_POLITICAL }
+}
+
+shared_focus = {
+  id = MDL_gunpowder_empire
+  icon = GFX_MDL_gunpowder_empire
+  x = -1
+  y = 1
+  relative_position_id = MDL_long_road_to_mareakech
+  cost = 5
+  prerequisite = { focus = MDL_long_road_to_mareakech }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_gunpowder_empire"
+    add_ideas = MDL_gunpowder_empire_idea
+  }
+  search_filters = { FOCUS_FILTER_RESISTANCE FOCUS_FILTER_INDUSTRY }
+}
+
+shared_focus = {
+  id = MDL_western_zebrican_hegemony
+  icon = GFX_goal_generic_political
+  x = 0
+  y = 2
+  relative_position_id = MDL_long_road_to_mareakech
+  available = { has_war = no }
+  prerequisite = { focus = MDL_gunpowder_empire }
+  cost = 3
+  prerequisite = { focus = MDL_enforce_Jizya }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_gunpowder_empire"
+    create_faction = MDL_GUARDIANSHIP
+    custom_effect_tooltip = MDL_western_zebrican_hegemony_tt
+    hidden_effect = {
+      set_country_flag = MDL_crimson_war_decisions_unlocked
+    }
+  }
+  search_filters = { FOCUS_FILTER_POLITICAL }
+}
+
+shared_focus = {
+  id = MDL_conquer_yemane
+  icon = GFX_MDL_conquer_yemane
+  x = 2
+  y = 1
+  relative_position_id = MDL_the_crimson_sultanate
+  cost = 3
+  bypass = {
+    YMN = {
+      OR = {
+        has_war_with = ROOT
+        exists = no
+      }
+    }
+  }
+  prerequisite = { focus = MDL_the_crimson_sultanate }
+  will_lead_to_war_with = YMN
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_conquer_yemane"
+    declare_war_on = { type = annex_everything target = YMN }
+  }
+  search_filters = { FOCUS_FILTER_ANNEXATION }
+}
+
+shared_focus = {
+  id = MDL_conquer_donkeys
+  icon = GFX_MDL_conquer_donkeys
+  x = 4
+  y = 1
+  cost = 3
+  bypass = {
+    AND = {
+      ASS = {
+        OR = {
+          has_war_with = ROOT
+          exists = no
+        }
+      }
+      ANS = {
+        OR = {
+          has_war_with = ROOT
+          exists = no
+        }
+      }
+    }
+  }
+  relative_position_id = MDL_the_crimson_sultanate
+  prerequisite = { focus = MDL_the_crimson_sultanate }
+  will_lead_to_war_with = ASS
+  will_lead_to_war_with = ANS
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_conquer_donkeys"
+    if = {
+      limit = { ASS = { exists = yes } }
+      declare_war_on = {#declare war on the owner of Assur
+        type = annex_everything
+        target = 810.owner
+      }
+    }
+    if = {
+      limit = { ANS = { exists = yes } }
+      declare_war_on = {#and the owner of Anseruk
+        type = annex_everything
+        target = 790.owner
+      }
+    }
+  }
+  search_filters = { FOCUS_FILTER_ANNEXATION }
+}
+
+shared_focus = {
+  id = MDL_hold_in_arabian_sea
+	icon = GFX_goal_generic_territory_or_war
+  x = 1
+  y = 1
+  relative_position_id = MDL_conquer_yemane
+  available = {
+    956 = { is_owned_and_controlled_by = ROOT }
+  }
+  prerequisite = { focus = MDL_conquer_yemane }
+  cost = 5
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_hold_in_arabian_sea"
+    add_war_support = 0.10
+    build_railway = {
+      level = 1
+      start_province = 19107
+      target_province = 19120
+    }
+    build_railway = {
+      level = 2
+      start_province = 19120
+      target_province = 19069
+    }
+  }
+  search_filters = { FOCUS_FILTER_INDUSTRY }
+}
+
+shared_focus = {
+  id = MDL_pacify_assur
+	icon = GFX_goal_GEA_guerilla_warfare
+  x = 1
+  y = 1
+  relative_position_id = MDL_conquer_donkeys
+  cost = 3
+  available = {
+    810 = { is_owned_and_controlled_by = ROOT }
+  }
+  prerequisite = { focus = MDL_conquer_donkeys }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_pacify_assur"
+    ASS = { retire_character = ASS_king_assbanipal }
+    810 = {
+      add_manpower = -15000
+      remove_building = {
+        type = infrastructure
+        level = 1
+      }
+    }
+  }
+  search_filters = { FOCUS_FILTER_POLITICAL }
+}
+
+shared_focus = {
+  id = MDL_annex_south
+	icon = GFX_goal_gold_up
+  x = 0
+  y = 2
+  relative_position_id = MDL_conquer_donkeys
+  cost = 6
+  available = {
+    has_war = no
+    956 = { is_owned_and_controlled_by = ROOT }
+    790 = { is_owned_and_controlled_by = ROOT }
+    810 = { is_owned_and_controlled_by = ROOT }
+  }
+  prerequisite = { focus = MDL_pacify_assur }
+  prerequisite = { focus = MDL_hold_in_arabian_sea }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_annex_south"
+    ASS = { add_to_ROOT_potential_cores = yes }
+    ANS = { add_to_ROOT_potential_cores = yes }
+    YMN = { add_to_ROOT_potential_cores = yes }
+  }
+  search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER }
+}
+
+shared_focus = {
+  id = MDL_conquer_abyssinia
+  icon = GFX_MDL_conquer_abyssinia
+  x = -2
+  y = 1
+  relative_position_id = MDL_the_crimson_sultanate
+  cost = 3
+  prerequisite = { focus = MDL_the_crimson_sultanate }
+  available = {
+    ABY = {
+			exists = yes
+			has_civil_war = no
+		}
+  }
+  bypass = {
+    ABY = {
+      AND = {
+        has_civil_war = no
+        OR = {
+          has_war_with = ROOT
+          exists = no
+          is_subject = yes
+        }
+      } 
+    }
+  }
+  will_lead_to_war_with = ABY
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_conquer_abyssinia"
+    declare_war_on = { type = annex_everything target = ABY }
+  }
+  search_filters = { FOCUS_FILTER_ANNEXATION }
+}
+
+shared_focus = {
+  id = MDL_drive_them_back
+  icon = GFX_MDL_drive_them_back
+  x = -1
+  y = 1
+  relative_position_id = MDL_conquer_abyssinia
+  cost = 3
+  available = {
+    WNG = { has_civil_war = no }
+    has_war = no
+  }
+  bypass = {
+    WNG = { NOT = { owns_state = 784 } }
+  }
+  prerequisite = { focus = MDL_conquer_abyssinia }
+  will_lead_to_war_with = WNG
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_drive_them_back"
+    hidden_effect = { set_country_flag = MDL_war_with_wingbardy }
+    custom_effect_tooltip = MDL_war_with_wingbardy_tt
+    declare_war_on = { type = annex_everything target = WNG }
+    if = {
+      limit = {
+        ABY = {
+          exists = yes
+          is_subject = yes
+        }
+      }
+      declare_war_on = { type = annex_everything target = ABY }
+    }
+  }
+  search_filters = { FOCUS_FILTER_ANNEXATION }
+}
+
+shared_focus = {
+  id = MDL_conquer_klugetown
+  icon = GFX_MDL_conquer_klugetown
+  x = -4
+  y = 1
+  relative_position_id = MDL_the_crimson_sultanate
+  cost = 2
+  bypass = {
+    KLG = {
+      OR = {
+        has_war_with = ROOT
+        exists = no
+      }
+    }
+  }
+  prerequisite = { focus = MDL_the_crimson_sultanate }
+  will_lead_to_war_with = KLG 
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_conquer_klugetown"
+    declare_war_on = { type = annex_everything target = KLG }
+  }
+  search_filters = { FOCUS_FILTER_ANNEXATION }
+}
+
+shared_focus = {
+  id = MDL_klugetown_economic_zone
+  icon = GFX_MDL_klugetown_economic_zone
+  x = -1
+  y = 1
+  relative_position_id = MDL_conquer_klugetown
+  cost = 3
+  available = {
+    1208 = { is_owned_and_controlled_by = ROOT }
+  }
+  prerequisite = { focus = MDL_conquer_klugetown }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_klugetown_economic_zone"
+    KLG = { retire_character = KLG_verko }
+    every_owned_state = {
+      limit = { is_core_of = KLG }
+      add_core_of = MDL
+    }
+    1208 = {
+      add_manpower = -5000
+      add_extra_state_shared_building_slots = 2
+      add_building_construction = {
+        type = industrial_complex
+        level = 1
+        instant_build = yes
+      }
+      add_building_construction = {
+        type = arms_factory
+        level = 1
+        instant_build = yes
+      }
+    }
+  }
+  search_filters = { FOCUS_FILTER_INDUSTRY }
+}
+
+shared_focus = {
+  id = MDL_annex_west
+  icon = GFX_goal_generic_major_war
+  x = 1
+  y = 1
+  relative_position_id = MDL_klugetown_economic_zone
+  cost = 6
+  available = {
+    has_war = no
+    ABY = { all_original_cores_owned_by_ROOT = yes }
+  }
+  prerequisite = { focus = MDL_klugetown_economic_zone }
+  prerequisite = { focus = MDL_drive_them_back }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_annex_west"
+    if = {
+      limit = {
+        ABY = {
+          OR = {
+            has_government = democratic
+            has_government = neutrality
+          }
+        }
+      }
+      country_event = { id = manedalusia.53 }
+    }
+    else_if = {
+      limit = {
+        ABY = { has_government = fascism }
+      }
+      country_event = { id = manedalusia.71 }
+    }
+    ABY = { add_to_ROOT_potential_cores = yes }
+    hidden_effect = {
+      if = {
+        limit = { has_country_flag = MDL_war_with_wingbardy }
+        clr_country_flag = MDL_war_with_wingbardy
+      }
+    }
+  }
+  search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_POLITICAL }
+}
+
+shared_focus = {
+  id = MDL_into_arabia
+  icon = GFX_focus_generic_strike_at_democracy1
+  cost = 5
+  x = 0
+  y = 1
+  relative_position_id = MDL_western_zebrican_hegemony
+  prerequisite = { focus = MDL_western_zebrican_hegemony }
+  available = {
+    799 = { is_owned_and_controlled_by = ROOT }
+  }
+  will_lead_to_war_with = EMR
+  will_lead_to_war_with = SDS
+  will_lead_to_war_with = SDF
+  will_lead_to_war_with = SDL
+  will_lead_to_war_with = SDC
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_into_arabia"
+    if = {
+      limit = { EMR = { exists = yes } }
+      declare_war_on = { type = annex_everything target = EMR }
+    }
+    if = {
+      limit = { SDS = { exists = yes } }
+      declare_war_on = { type = annex_everything target = SDS }
+    }
+    if = {
+      limit = { SDF = { exists = yes } }
+      declare_war_on = { type = annex_everything target = SDF }
+    }
+    if = {
+      limit = { SDL = { exists = yes } }
+      declare_war_on = { type = annex_everything target = SDL }
+    }
+    if = {
+      limit = { SDC = { exists = yes } }
+      declare_war_on = { type = annex_everything target = SDC }
+    }
+  }
+  search_filters = { FOCUS_FILTER_ANNEXATION }
+}
+
+shared_focus = {
+  id = MDL_restore_mareakech
+  icon = GFX_COS_Ferrer_Coup
+  x = 0
+  y = 1
+  cost = 5
+  relative_position_id = MDL_into_arabia
+  available = {
+    866 = { is_owned_and_controlled_by = ROOT }
+    868 = { is_owned_and_controlled_by = ROOT }
+  }
+  prerequisite = { focus = MDL_into_arabia }
+  completion_reward = {
+    country_event = { id = manedalusia.54 }
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_restore_mareakech"
+    SDL = { add_to_ROOT_potential_cores = yes }
+  }
+  search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER }
+}
+
+shared_focus = {
+  id = MDL_annex_riseia
+	icon = GFX_goal_crown_and_swords
+  x = 3
+  y = 1
+  relative_position_id = MDL_western_zebrican_hegemony
+  cost = 3
+  prerequisite = { focus = MDL_western_zebrican_hegemony }
+  available = {
+    HMR = { all_original_cores_owned_by_ROOT = yes }
+    OQS = { all_original_cores_owned_by_ROOT = yes }
+    MTA = { all_original_cores_owned_by_ROOT = yes }
+  } 
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_annex_riseia"
+    country_event = manedalusia.93
+  }
+  search_filters = { FOCUS_FILTER_ANNEXATION }
+}
+
+shared_focus = {
+  id = MDL_take_lands_in_lakes
+	icon = GFX_focus_generic_treaty_red
+  x = 0
+  y = 1
+  relative_position_id = MDL_annex_riseia
+  cost = 3
+  available = {
+    902 = { is_owned_and_controlled_by = ROOT }
+    937 = { is_owned_and_controlled_by = ROOT }
+    943 = { is_owned_and_controlled_by = ROOT }
+  }
+  prerequisite = { focus = MDL_annex_riseia }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_take_lands_in_lakes"
+    country_event = { id = manedalusia.45 }
+  }
+  search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_POLITICAL }
+}
+
+shared_focus = {
+  id = MDL_annex_bats
+  icon = GFX_goal_checkmate
+  cost = 3
+  x = -3
+  y = 1
+  relative_position_id = MDL_western_zebrican_hegemony
+  prerequisite = { focus = MDL_western_zebrican_hegemony }
+  available = {
+    BAT = { all_original_cores_owned_by_ROOT = yes }
+    BAT = { exists = no }
+  }
+  bypass = {
+    BAT = {
+      exists = yes
+      OR = {
+        is_in_faction_with = HIP
+        is_in_faction_with = NLR
+        is_in_faction_with = CTH
+      }
+    }
+  }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_into_the_southlands"
+    country_event = manedalusia.94
+  }
+  search_filters = { FOCUS_FILTER_ANNEXATION }
+}
+
+shared_focus = {
+  id = MDL_southern_mercenaries
+  icon = GFX_MDL_southern_mercenaries
+  x = 0
+  y = 1
+  cost = 3
+  relative_position_id = MDL_annex_bats
+  available = {
+    owns_state = 999
+    owns_state = 811
+    owns_state = 1009
+  }
+  prerequisite = { focus = MDL_annex_bats }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_southern_mercenaries"
+    country_event = { id = manedalusia.44 }
+  }
+  search_filters = { FOCUS_FILTER_POLITICAL }
+}
+
+shared_focus = {
+  id = MDL_universal_caliphate
+  icon = GFX_MDL_universal_caliphate
+  x = 0
+  y = 3
+  relative_position_id = MDL_western_zebrican_hegemony
+  cost = 4
+  available = {
+    has_war = no
+  }
+  prerequisite = { focus = MDL_southern_mercenaries }
+  prerequisite = { focus = MDL_restore_mareakech }
+  prerequisite = { focus = MDL_take_lands_in_lakes }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_universal_caliphate"
+    custom_effect_tooltip = MDL_caliphate_tt
+    country_event = { id = manedalusia.47 }
+  }
+  search_filters = { FOCUS_FILTER_POLITICAL }
+}
+
+###AIR TREE###
+shared_focus = {
+  id = MDL_air_stuff
+  icon = MDL_air_stuff
+  x = 41
+  y = 0
+  cost = 5
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_air_stuff"
+    add_political_power = -50	
+    set_technology = { early_fighter = 1 }
+    741 = {
+      add_building_construction = {
+			  type = air_base
+			  level = 1
+			  instant_build = yes
+		  }
+    }
+	}
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+}
+
+shared_focus = {
+  id = MDL_radar
+  icon = GFX_goal_generic_radar
+  x = 1
+  y = 1
+  relative_position_id = MDL_air_stuff
+  cost = 5
+  prerequisite = { focus = MDL_air_stuff }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_radar"
+    air_experience = 10
+    add_tech_bonus = {
+			name = radar_focus
+			bonus = 1.0
+			uses = 2
+			category = radar_tech
+		}
+    add_breakthrough_progress = {
+			specialization = specialization_air
+			value = 1
+		}
+  }
+	search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_AIRFORCE_BONUS }
+}
+
+shared_focus = {
+  id = MDL_air_industry
+  icon = GFX_goal_generic_air_fighter
+  x = -1
+  y = 1
+  relative_position_id = MDL_air_stuff
+  cost = 5
+  prerequisite = { focus = MDL_air_stuff }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_air_industry"
+    add_tech_bonus = {
+			name = MDL_air_industry
+			bonus = 0.5
+			uses = 3
+			category = air_equipment
+		}
+    741 = {
+      add_extra_state_shared_building_slots = 1
+      add_building_construction = {
+        type = arms_factory
+        level = 1
+        instant_build = yes
+      }
+      add_resource = {
+				type = aluminium
+				amount = 10
+			}
+    }
+    custom_effect_tooltip = available_industrial_concern
+    show_ideas_tooltip = MDL_tailspin_shipping
+    show_ideas_tooltip = MDL_sundrinker_airwings
+  }
+	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+}
+
+shared_focus = {
+  id = MDL_death_from_above
+  icon = GFX_goal_poland_goal
+  x = 0
+  y = 2
+  relative_position_id = MDL_air_stuff
+  cost = 5
+  prerequisite = { focus = MDL_air_industry }
+  prerequisite = { focus = MDL_radar }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_death_from_above"
+    add_tech_bonus = {
+			name = MDL_death_from_above
+			bonus = 1.0
+			uses = 2
+			category = tactical_bomber
+		}
+		add_tech_bonus = {
+			name = MDL_death_from_above
+			bonus = 1.0
+			uses = 2
+			category = cas_bomber
+		}
+  }
+	search_filters = { FOCUS_FILTER_RESEARCH }
+}
+
+shared_focus = {
+  id = MDL_an_air_doctrine
+  icon = GFX_goal_generic_air_doctrine
+  x = 0
+  y = 1
+  relative_position_id = MDL_death_from_above
+  cost = 5
+  prerequisite = { focus = MDL_death_from_above }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_an_air_doctrine"
+    add_doctrine_cost_reduction = {
+			name = MDL_air_doc_buff
+			cost_reduction = 0.5
+			uses = 2
+			category = air_doctrine
+		}
+  }
+  search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_AIRFORCE_BONUS }
+}
+
+shared_focus = {
+  id = MDL_unstoppable_pilots
+  icon = GFX_goal_MAF_African_Pilots
+  x = 1
+  y = 1
+  relative_position_id = MDL_an_air_doctrine
+  cost = 5
+  prerequisite = { focus = MDL_an_air_doctrine }
+  mutually_exclusive = { focus = MDL_bomber_pilots }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_unstoppable_pilots"
+    add_ideas = MDL_unstoppable_pilots_idea
+  }
+  search_filters = { FOCUS_FILTER_AIRFORCE_BONUS }
+}
+
+shared_focus = {
+  id = MDL_bomber_pilots
+  icon = GFX_goal_MAF_Napalm
+  x = -1
+  y = 1
+  relative_position_id = MDL_an_air_doctrine
+  cost = 5
+  prerequisite = { focus = MDL_an_air_doctrine }
+  mutually_exclusive = { focus = MDL_unstoppable_pilots }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_bomber_pilots"
+    add_ideas = MDL_bomber_pilots_idea
+  }
+  search_filters = { FOCUS_FILTER_AIRFORCE_BONUS }
+}
+
+shared_focus = {
+  id = MDL_rocket_research
+  icon = GFX_focus_rocketry
+  x = 0
+  y = 2
+  relative_position_id = MDL_an_air_doctrine
+  cost = 5
+  available = {
+    OR = {
+      has_idea = modern_society
+      has_idea = outdated_industry
+    }
+  }
+  prerequisite = { focus = MDL_bomber_pilots focus = MDL_unstoppable_pilots }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_rocket_research"
+    add_tech_bonus = {
+			name = rocketry
+			bonus = 3.0
+			uses = 1
+			category = rocketry
+		}
+  }
+  search_filters = { FOCUS_FILTER_RESEARCH }
+}
+
+shared_focus = {
+  id = MDL_naval_air
+  icon = GFX_goal_generic_air_fighter2
+  x = 1
+  y = 1
+  relative_position_id = MDL_rocket_research
+  prerequisite = { focus = MDL_rocket_research }
+  cost = 5
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_naval_air"
+    set_technology = { naval_bomber1 = 1 }
+		add_tech_bonus = {
+			name = MDL_naval_air
+			bonus = 1.0
+			uses = 2
+			category = naval_bomber
+		}
+  }
+  search_filters = { FOCUS_FILTER_RESEARCH }
+}
+
+shared_focus = {
+  id = MDL_heavy_air
+  icon = GFX_focus_chi_flying_tigers
+  x = -1
+  y = 1
+  relative_position_id = MDL_rocket_research
+  prerequisite = { focus = MDL_rocket_research }
+  cost = 5
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_heavy_air"
+    add_tech_bonus = {
+			name = fighter_bonus
+			bonus = 1.0
+			uses = 2
+			category = cat_heavy_fighter
+		}
+  }
+  search_filters = { FOCUS_FILTER_RESEARCH }
+}
+
+shared_focus = {
+  id = MDL_the_bomb
+  icon = MDL_the_bomb
+  x = 0
+  y = 2
+  relative_position_id = MDL_rocket_research
+  cost = 10.30
+  available = {
+    has_idea = modern_society 
+  }
+  prerequisite = { focus = MDL_naval_air }
+  prerequisite = { focus = MDL_heavy_air }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_the_bomb"
+		add_breakthrough_progress = {
+			specialization = specialization_nuclear
+			value = 1
+		}
+    add_tech_bonus = {
+			name = MDL_bomb
+			bonus = 3.0
+			uses = 1
+			category = nuclear
+		}
+  }
+  search_filters = { FOCUS_FILTER_RESEARCH }
+}
+
+###ECONOMY TREE###
+shared_focus = {
+	id = MDL_economy_stuff
+	icon = GFX_MDL_economy_stuff
+	x = 20
+	y = 0
+  cost = 5
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MDL_economy_stuff"
+		add_tech_bonus = {
+			bonus = 1
+			uses = 2
+			category = industry
+		}
+	}
+  search_filters = { FOCUS_FILTER_RESEARCH }
+}
+
+shared_focus = {
+	id = MDL_kom_marebo_oil
+	icon = GFX_MDL_kom_marebo_oil
+	x = -1
+	y = 1
+	relative_position_id = MDL_economy_stuff
+  cost = 5
+	prerequisite = { focus = MDL_economy_stuff }
+  available = { owns_state = 764 }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MDL_kom_marebo_oil"
+    country_event = { days = 5 id = manedalusia.16 }
+		764 = {
+			add_resource = {
+				type = oil
+				amount = 2
+			}
+		}
+	}
+  search_filters = { FOCUS_FILTER_INDUSTRY }
+}
+
+shared_focus = {
+	id = MDL_refining_contractor
+	icon = GFX_MDL_refining_contractor
+	x = -1
+	y = 1
+	relative_position_id = MDL_kom_marebo_oil
+  cost = 5
+	prerequisite = { focus = MDL_kom_marebo_oil }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MDL_refining_contractor"
+		add_tech_bonus = {
+			name = synth_bonus
+			bonus = 0.5
+			uses = 2
+			category = synth_resources
+		}
+		741 = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = synthetic_refinery
+				level = 1
+				instant_build = yes
+			}
+		}
+    custom_effect_tooltip = available_industrial_concern
+    show_ideas_tooltip = MDL_refining_concern
+	}
+  search_filters = { FOCUS_FILTER_INDUSTRY }
+}
+
+shared_focus = {
+	id = MDL_basic_education
+	icon = GFX_MDL_basic_education
+	x = 0
+	y = 2
+	relative_position_id = MDL_economy_stuff
+  cost = 5
+	prerequisite = { focus = MDL_economy_stuff }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MDL_basic_education"
+		decrease_illiteracy = yes
+	}
+}
+
+shared_focus = {
+	id = MDL_work_with_guilds
+	icon = GFX_MDL_work_with_guilds
+	x = 1
+	y = 1
+  cost = 5
+	relative_position_id = MDL_economy_stuff
+	prerequisite = { focus = MDL_economy_stuff }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MDL_work_with_guilds"
+		add_political_power = -35
+		add_offsite_building = { type = industrial_complex level = 3 }
+	}
+  search_filters = { FOCUS_FILTER_INDUSTRY }
+}
+
+shared_focus = {
+	id = MDL_industrial_union
+	icon = GFX_MDL_industrial_union
+	x = 1
+	y = 1
+  cost = 5
+	relative_position_id = MDL_work_with_guilds
+	prerequisite = { focus = MDL_work_with_guilds }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MDL_industrial_union"
+		add_popularity = { ideology = communism popularity = 0.05 }
+		add_stability = 0.03
+
+    custom_effect_tooltip = available_industrial_concern
+    show_ideas_tooltip = MDL_industrial_concern_1
+	}
+}
+
+shared_focus = {
+	id = MDL_coltoba_university
+	icon = GFX_MDL_coltoba_university
+	x = 0
+	y = 1
+	relative_position_id = MDL_basic_education
+  cost = 8
+	prerequisite = { focus = MDL_basic_education }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MDL_coltoba_university"
+    country_event = { days = 5 id = manedalusia.19 }
+		add_research_slot = 1
+		increase_science_base = yes
+	}
+  search_filters = { FOCUS_FILTER_RESEARCH }
+}
+
+shared_focus = {
+	id = MDL_manedalusia_infrastructure
+	icon = GFX_MDL_manedalusia_infrastructure
+	x = 3
+	y = 1
+  cost = 5
+	relative_position_id = MDL_economy_stuff
+	available = {
+		owns_state = 738
+		owns_state = 740
+	}
+	prerequisite = { focus = MDL_economy_stuff }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MDL_manedalusia_infrastructure"
+    build_railway = {
+      level = 1
+      start_province = 12234
+      target_province = 7512
+    }
+    build_railway = {
+      level = 2
+      start_province = 7512
+      target_province = 4804
+    }
+    741 = {
+      add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+    }
+		738 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
+			}
+		}
+		740 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
+			}
+		}
+	}
+  search_filters = { FOCUS_FILTER_INDUSTRY }
+}
+
+shared_focus = {
+	id = MDL_tungsten_trade
+	icon = GFX_MDL_tungsten_trade
+	x = 1
+	y = 1
+  cost = 2
+	relative_position_id = MDL_manedalusia_infrastructure
+	prerequisite = { focus = MDL_manedalusia_infrastructure }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MDL_tungsten_trade"
+		add_equipment_to_stockpile = { type = convoy amount = -10 }
+		country_event = { id = manedalusia.20 }
+	}
+  search_filters = { FOCUS_FILTER_INDUSTRY }
+}
+
+shared_focus = {
+	id = MDL_manedalusia_industrialism
+	icon = GFX_MDL_manedalusia_industrialism
+	x = -1
+	y = 1
+	relative_position_id = MDL_tungsten_trade
+  cost = 5
+	prerequisite = { focus = MDL_industrial_union }
+	prerequisite = { focus = MDL_tungsten_trade }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MDL_manedalusia_industrialism"
+		increase_society_development = yes
+    740 = {
+      add_extra_state_shared_building_slots = 1
+      add_building_construction = {
+        type = industrial_complex
+        level = 1
+        instant_build = yes
+      }
+    }
+    738 = {
+      add_extra_state_shared_building_slots = 1
+      add_building_construction = {
+        type = arms_factory
+        level = 1
+        instant_build = yes
+      }
+    }
+	}
+  search_filters = { FOCUS_FILTER_INDUSTRY }
+}
+
+shared_focus = {
+	id = MDL_fiqh_decisions
+	icon = GFX_MDL_fiqh_decisions
+  cost = 5
+	x = -3
+	y = 1
+	available = {
+    741 = { is_owned_and_controlled_by = ROOT }
+	  738 = { is_owned_and_controlled_by = ROOT }
+	  740 = { is_owned_and_controlled_by = ROOT }
+	}
+	relative_position_id = MDL_economy_stuff
+	prerequisite = { focus = MDL_economy_stuff }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MDL_fiqh_decisions"
+		custom_effect_tooltip = MDL_fiqh_decisions_unlocked_tt
+	}
+  search_filters = { FOCUS_FILTER_POLITICAL }
+}
+
+shared_focus = {
+	id = MDL_manedalusian_industriousness
+	icon = GFX_MDL_manedalusian_industriousness
+  cost = 5
+	x = -1
+	y = 1
+	relative_position_id = MDL_fiqh_decisions
+	prerequisite = { focus = MDL_fiqh_decisions }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MDL_manedalusian_industriousness"
+		add_ideas = MDL_manedalusian_industrious_pride
+	}
+  search_filters = { FOCUS_FILTER_INDUSTRY }
+}
+
+shared_focus = {
+	id = MDL_look_to_our_roots
+	icon = GFX_MDL_look_to_our_roots
+  cost = 5
+	x = 1
+	y = 1
+	relative_position_id = MDL_manedalusian_industriousness
+	prerequisite = { focus = MDL_manedalusian_industriousness }
+	prerequisite = { focus = MDL_refining_contractor }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MDL_look_to_our_roots"
+		add_tech_bonus = {
+			bonus = 2.0
+			uses = 3
+			category = race_tech
+		}
+    hidden_effect = {
+			country_event = { days = 10 id = manedalusia.21 }
+		}
+	}
+  search_filters = { FOCUS_FILTER_RESEARCH }
+}
+
+shared_focus = {
+	id = MDL_place_in_the_sun
+	icon = GFX_MDL_place_in_the_sun
+  cost = 3
+	x = 0
+	y = 1
+	relative_position_id = MDL_coltoba_university
+	prerequisite = { focus = MDL_coltoba_university }
+	prerequisite = { focus = MDL_manedalusia_industrialism }
+	prerequisite = { focus = MDL_look_to_our_roots }
+	completion_reward = {
+    country_event = { id = manedalusia.24 }
+		log = "[GetDateText]: [Root.GetName]: Focus MDL_place_in_the_sun"
+		swap_ideas = {
+			remove_idea = MDL_humbled_sultanate
+			add_idea = MDL_place_in_the_sun_idea
+		}
+	}
+  search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_ARMY_BONUS }
+}
+
+###ARMY TREE###
+shared_focus = {
+	id = MDL_army_stuff
+	icon = GFX_MDL_army_stuff
+  cost = 5
+	x = 32
+	y = 0
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MDL_army_stuff"
+    set_technology = { tech_support = 1 }
+		army_experience = 25
+	}
+  search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_RESEARCH }
+}
+
+shared_focus = {
+	id = MDL_go_with_samira
+	icon = GFX_MDL_go_with_samira
+  cost = 5
+	x = -1
+	y = 1
+	relative_position_id = MDL_army_stuff
+	prerequisite = { focus = MDL_army_stuff }
+	mutually_exclusive = { focus = MDL_go_with_alneighzari }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MDL_go_with_samira"
+		country_event = { id = manedalusia.22 }
+		add_doctrine_cost_reduction = {
+			name = MDL_go_with_alneighzari
+			cost_reduction = 0.5
+			uses = 2
+			category = cat_grand_battle_plan
+			category = cat_mass_assault
+		}
+
+    custom_effect_tooltip = available_political_advisor
+    show_ideas_tooltip = MDL_alneighzari
+
+    custom_effect_tooltip = available_designer
+    show_ideas_tooltip = MDL_infantry_concern
+	}
+  search_filters = { FOCUS_FILTER_RESEARCH }
+}
+
+shared_focus = {
+	id = MDL_go_with_alneighzari
+	icon = GFX_MDL_go_with_alneighzari
+  cost = 5
+	x = 1
+	y = 1
+	relative_position_id = MDL_army_stuff
+	prerequisite = { focus = MDL_army_stuff }
+	mutually_exclusive = { focus = MDL_go_with_samira }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MDL_go_with_alneighzari"
+		country_event = { id = manedalusia.23 }
+		add_doctrine_cost_reduction = {
+			name = MDL_go_with_alneighzari
+			cost_reduction = 0.5
+			uses = 2
+			category = cat_mobile_warfare
+			category = cat_superior_firepower
+		}
+
+    custom_effect_tooltip = available_political_advisor
+    show_ideas_tooltip = MDL_grandmistress_samira
+
+    custom_effect_tooltip = available_industrial_concern
+    show_ideas_tooltip = MDL_electronics_concern
+	}
+  search_filters = { FOCUS_FILTER_RESEARCH }
+}
+
+shared_focus = {
+	id = MDL_coltoba_institute_military_science
+	icon = GFX_MDL_coltoba_institute_military_science
+  cost = 10.30
+	x = 0
+	y = 2
+	relative_position_id = MDL_army_stuff
+  available = {
+    has_completed_focus = MDL_coltoba_university
+    owns_state = 738
+    owns_state = 740
+  }
+	prerequisite = { focus = MDL_go_with_alneighzari focus = MDL_go_with_samira }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MDL_coltoba_institute_military_science"
+    country_event = { id = manedalusia.57 }
+		add_research_slot = 1
+		increase_science_base = yes
+
+    custom_effect_tooltip = available_theorist
+    show_ideas_tooltip = MDL_cims
+	}
+  search_filters = { FOCUS_FILTER_RESEARCH }
+}
+
+shared_focus = {
+	id = MDL_bigger_cannons
+	icon = GFX_MDL_bigger_cannons
+  cost = 5
+	x = 2
+	y = 0
+	relative_position_id = MDL_coltoba_institute_military_science
+	prerequisite = { focus = MDL_go_with_alneighzari focus = MDL_go_with_samira }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MDL_bigger_cannons"
+    set_technology = { gw_artillery = 1 }
+		add_tech_bonus = {
+			name = MDL_artillery
+			bonus = 1.0
+			uses = 2
+			category = artillery
+		}
+    custom_effect_tooltip = available_designer
+    show_ideas_tooltip = MDL_artillery_concern
+	}
+  search_filters = { FOCUS_FILTER_RESEARCH }
+}
+
+shared_focus = {
+	id = MDL_sweet_ass_rides
+	icon = GFX_MDL_sweet_ass_rides
+  cost = 5
+	x = 2
+	y = 0
+	relative_position_id = MDL_bigger_cannons
+	prerequisite = { focus = MDL_go_with_alneighzari focus = MDL_go_with_samira }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MDL_sweet_ass_rides"
+		add_tech_bonus = {
+			name = MDL_motorized
+			bonus = 0.5
+      uses = 2
+			category = motorized_equipment
+		}
+    741 = {
+      add_extra_state_shared_building_slots = 1
+      add_building_construction = {
+        type = arms_factory
+				level = 1
+				instant_build = yes
+      }
+    }
+
+    custom_effect_tooltip = available_designer
+    show_ideas_tooltip = MDL_motorized_concern
+	}
+  search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+}
+
+shared_focus = {
+  id = MDL_even_sweeter_rides
+  icon = GFX_MDL_even_sweeter_rides
+  cost = 5
+  x = 1
+  y = 1
+  relative_position_id = MDL_sweet_ass_rides
+  prerequisite = { focus = MDL_sweet_ass_rides }
+  available = {
+    741 = { is_owned_and_controlled_by = ROOT }
+    740 = { is_owned_and_controlled_by = ROOT }
+    738 = { is_owned_and_controlled_by = ROOT }
+  }
+  completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MDL_even_sweeter_rides"
+    add_ideas = MDL_streamlined_tank_production
+    add_tech_bonus = {
+      name = MDL_armor
+      bonus = 1.0
+      uses = 2
+      category = armor
+    }
+    custom_effect_tooltip = available_designer
+    show_ideas_tooltip = MDL_black_guard_steelworks
+  }
+  search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+}
+
+shared_focus = {
+  id = MDL_alchemical_investment
+  icon = GFX_MDL_alchemical_investment
+  cost = 5
+  x = 0
+  y = 1
+  relative_position_id = MDL_even_sweeter_rides
+  prerequisite = { focus = MDL_even_sweeter_rides }
+  completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MDL_alchemical_investment"
+    set_technology = { tech_synthetic_crystal_refinery = 1 }
+    741 = {
+      add_building_construction = {
+        type = synthetic_crystal_refinery
+        level = 1
+        instant_build = yes
+      }
+    }
+    add_tech_bonus = {
+			name = MDL_alchemical_investment
+			bonus = 0.5
+			uses = 1
+			technology = magical_weapons
+			technology = magical_weapons1
+			technology = magical_weapons2
+		}
+    custom_effect_tooltip = available_designer
+    show_ideas_tooltip = MDL_moonstriker_labs
+  }
+  search_filters = { FOCUS_FILTER_INDUSTRY }
+}
+
+shared_focus = {
+  id = MDL_military_industrial_council
+  icon = GFX_MDL_industrial_council
+  cost = 5
+  x = 1
+  y = 1
+  relative_position_id = MDL_bigger_cannons
+  prerequisite = { focus = MDL_bigger_cannons }
+  prerequisite = { focus = MDL_sweet_ass_rides }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_military_industrial_council"
+    add_ideas = MDL_industrial_council
+  }
+  search_filters = { FOCUS_FILTER_INDUSTRY }
+}
+
+shared_focus = {
+	id = MDL_better_gear
+	icon = GFX_MDL_better_gear
+  cost = 5
+	x = -2
+	y = 0
+	relative_position_id = MDL_coltoba_institute_military_science
+	prerequisite = { focus = MDL_go_with_alneighzari focus = MDL_go_with_samira }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MDL_better_gear"
+    add_tech_bonus = {
+			name = infantry_bonus
+			bonus = 1.0
+			uses = 2
+			category = support_tech
+		}
+		add_tech_bonus = {
+			name = MDL_field_medics
+			bonus = 0.5
+			uses = 1
+			category = hospital_tech
+		}
+    add_tech_bonus = {
+			name = MDL_recon_bonus
+			bonus = 0.5
+			uses = 1
+			category = recon_tech
+		}
+	}
+  search_filters = { FOCUS_FILTER_RESEARCH }
+}
+
+shared_focus = {
+  id = MDL_better_guns
+  icon = GFX_MDL_better_guns
+  cost = 5
+  x = -2
+  y = 0
+  relative_position_id = MDL_better_gear
+  prerequisite = { focus = MDL_go_with_alneighzari focus = MDL_go_with_samira }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_better_guns"
+    add_tech_bonus = {
+      name = MDL_better_guns
+      bonus = 1.0
+      uses = 2
+      category = infantry_weapons
+    }
+    741 = {
+      add_extra_state_shared_building_slots = 1
+      add_building_construction = {
+        type = arms_factory
+        level = 1
+        instant_build = yes
+      }
+    }
+	}
+	search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+}
+
+shared_focus = {
+  id = MDL_citizen_guard
+  icon = GFX_MDL_citizen_guard
+  cost = 5
+  x = -1
+  y = 1
+  relative_position_id = MDL_better_gear
+  prerequisite = { focus = MDL_better_gear }
+  prerequisite = { focus = MDL_better_guns }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_citizen_guard"
+    set_technology = { tech_military_police = 1 }
+    add_ideas = MDL_citizen_guard_idea
+  }
+  search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_STABILITY FOCUS_FILTER_MANPOWER}
+}
+
+shared_focus = {
+  id = MDL_manedalusian_rangers
+  icon = GFX_MDL_manedalusian_rangers
+  cost = 5
+  x = -1
+  y = 1
+  relative_position_id = MDL_better_guns
+  prerequisite = { focus = MDL_better_guns }
+  available = {
+    741 = { is_owned_and_controlled_by = ROOT }
+    740 = { is_owned_and_controlled_by = ROOT }
+    738 = { is_owned_and_controlled_by = ROOT }
+  }
+  completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MDL_manedalusian_rangers"
+    add_ideas = MDL_manedalusian_rangers_idea
+    if = {
+			limit = { has_dlc = "Arms Against Tyranny" }
+			add_doctrine_cost_reduction = {
+				name = special_forces_bonus
+				cost_reduction = 0.50
+				uses = 2
+				category = special_forces_doctrine
+			}
+			add_tech_bonus = {
+				name = special_forces_bonus
+				bonus = 0.50
+				uses = 2
+				category = special_forces_tech
+			}
+		}
+		else = {
+			add_tech_bonus = {
+				name = special_forces_bonus
+				bonus = 1.0
+				uses = 2
+				category = special_forces_tech
+			}
+		}
+  }
+  search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_RESEARCH }
+}
+
+shared_focus = {
+  id = MDL_protect_the_skies
+  icon = GFX_MDL_protect_the_skies
+  x = 0
+  y = 1
+  cost = 5
+  relative_position_id = MDL_manedalusian_rangers
+  prerequisite = { focus = MDL_manedalusian_rangers }
+  completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MDL_protect_the_skies"
+    741 = {
+			add_building_construction = {
+				type = anti_air_building
+				level = 1
+				instant_build = yes
+			}
+		}
+		740 = {
+			add_building_construction = {
+				type = anti_air_building
+				level = 1
+				instant_build = yes
+			}
+		}
+    738 = {
+			add_building_construction = {
+				type = anti_air_building
+				level = 1
+				instant_build = yes
+			}
+		}
+  }
+  search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_BONUS }
+}
+
+shared_focus = {
+	id = MDL_samira_as_general
+	icon = GFX_MDL_samira_as_general
+  cost = 5
+	x = -1
+	y = 1
+	relative_position_id = MDL_coltoba_institute_military_science
+  bypass = { has_completed_focus = MDL_take_lands_in_lakes }
+	prerequisite = { focus = MDL_go_with_samira }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MDL_samira_as_general"
+    MDL_grandmistress_samira = {
+      add_corps_commander_role = {
+        traits = { zebra_race_trait ambusher thorough_planner organizer MDL_koltaliba_member_trait }
+        skill=3
+        attack_skill=2
+        defense_skill=2
+        logistics_skill=3
+        planning_skill=3
+        desc=MDL_grandmistress_samira_desc
+      }
+    }
+    custom_effect_tooltip=MDL_samira_stats_tt
+	}
+  search_filters = { FOCUS_FILTER_ARMY_BONUS }
+}
+
+shared_focus = {
+	id = MDL_koltaliba_commissars
+	icon = GFX_MDL_koltaliba_commissars
+  cost = 5
+	x = -2
+	y = 1
+	relative_position_id = MDL_samira_as_general
+	prerequisite = { focus = MDL_samira_as_general }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MDL_koltaliba_commissars"
+    country_event = { id = manedalusia.29 }
+    add_ideas = MDL_koltaliba_commissars_idea
+	}
+  search_filters = { FOCUS_FILTER_ARMY_BONUS }
+}
+
+shared_focus = {
+	id = MDL_special_forces_regimentation
+	icon = GFX_MDL_special_forces_regimentation
+  cost = 5
+	x = 0
+	y = 1
+	relative_position_id = MDL_samira_as_general
+	prerequisite = { focus = MDL_samira_as_general }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MDL_special_forces_regimentation"
+    country_event = { id = manedalusia.28 }
+    add_ideas = MDL_koltaliba_regimentation
+	}
+  search_filters = { FOCUS_FILTER_ARMY_BONUS }
+}
+
+shared_focus = {
+	id = MDL_modern_army_crash_course
+	icon = GFX_modern_army_crash_course
+  cost = 5
+	x = 1
+	y = 1
+	relative_position_id = MDL_coltoba_institute_military_science
+	prerequisite = { focus = MDL_go_with_alneighzari }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MDL_modern_army_crash_course"
+    every_character = {
+      limit = { is_unit_leader = yes }
+      add_planning = 1
+    }
+	}
+  search_filters = { FOCUS_FILTER_ARMY_BONUS }
+}
+
+shared_focus = {
+	id = MDL_desert_drift
+	icon = GFX_MDL_magical_engines
+  cost = 5
+	x = 0
+	y = 1
+	relative_position_id = MDL_modern_army_crash_course
+	prerequisite = { focus = MDL_modern_army_crash_course }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MDL_desert_drift"
+    country_event = { id = manedalusia.25 }
+    add_ideas = MDL_magical_engines
+	}
+  search_filters = { FOCUS_FILTER_ARMY_BONUS }
+}
+
+shared_focus = {
+	id = MDL_fast_shell_reloading
+	icon = GFX_MDL_fast_shell_reloading
+  cost = 5
+	x = 2
+	y = 1
+	relative_position_id = MDL_modern_army_crash_course
+	prerequisite = { focus = MDL_modern_army_crash_course }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MDL_fast_shell_reloading"
+    country_event = { id = manedalusia.26 }
+    add_ideas = MDL_magical_reloading
+	}
+  search_filters = { FOCUS_FILTER_ARMY_BONUS }
+}
+
+shared_focus = {
+  id = MDL_grand_army_of_al_manedalus
+  icon = GFX_MDL_grand_army_of_al_manedalus
+  x = 0
+  y = 3
+  cost = 5
+  relative_position_id = MDL_coltoba_institute_military_science
+  prerequisite = { focus = MDL_koltaliba_commissars focus = MDL_fast_shell_reloading }
+  prerequisite = { focus = MDL_special_forces_regimentation focus = MDL_desert_drift }
+  prerequisite = { focus = MDL_protect_the_skies }
+  prerequisite = { focus = MDL_alchemical_investment }
+  completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MDL_grand_army_of_al_manedalus"
+    add_ideas = MDL_grand_army
+  }
+  search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_BONUS }
+}
+
+###NAVY TREE
+shared_focus = {
+  id = MDL_navy_stuff
+  icon = GFX_MDL_navy_stuff
+  cost = 5
+  x = 25
+  y = 6
+  available = {
+    738 = { is_owned_and_controlled_by = ROOT }
+	  740 = { is_owned_and_controlled_by = ROOT }
+  }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_navy_stuff"
+    navy_experience = 25
+    741 = {
+      add_extra_state_shared_building_slots = 1
+      add_building_construction = {
+        type = dockyard
+        level = 1
+        instant_build = yes
+      }
+    }
+  }
+  search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_NAVY_BONUS }
+}
+
+shared_focus = {
+  id = MDL_expand_markets
+  icon = GFX_MDL_expand_markets
+  cost = 5
+  x = 0
+  y = 1
+  relative_position_id = MDL_navy_stuff
+  prerequisite = { focus = MDL_navy_stuff }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_expand_markets"
+    741 = {
+      add_extra_state_shared_building_slots = 1
+      add_building_construction = {
+        type = industrial_complex
+        level = 1
+        instant_build = yes
+      }
+    }
+    740 = {
+      add_extra_state_shared_building_slots = 1
+      add_building_construction = {
+        type = industrial_complex
+        level = 1
+        instant_build = yes
+      }
+    }
+    738 = {
+      add_extra_state_shared_building_slots = 1
+      add_building_construction = {
+        type = industrial_complex
+        level = 1
+        instant_build = yes
+      }
+    }
+    hidden_effect = {
+      country_event = { days = 10 id = manedalusia.27 }
+    }
+  }
+  search_filters = { FOCUS_FILTER_INDUSTRY }
+}
+
+shared_focus = {
+  id = MDL_expand_harbors
+  icon = GFX_MDL_expand_harbors
+  cost = 5
+  x = 1
+  y = 1
+  relative_position_id = MDL_expand_markets
+  prerequisite = { focus = MDL_expand_markets }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_expand_harbors"
+    741 = {
+      add_extra_state_shared_building_slots = 2
+      add_building_construction = {
+        type = dockyard
+        level = 2
+        instant_build = yes
+      }
+      add_building_construction = {
+				type = naval_base
+				level = 2
+        province = 12234
+				instant_build = yes
+			}
+    }
+    740 = {
+      add_extra_state_shared_building_slots = 1
+      add_building_construction = {
+        type = dockyard
+        level = 1
+        instant_build = yes
+      }
+      add_building_construction = {
+				type = naval_base
+				level = 1
+        province = 10143
+				instant_build = yes
+			}
+    }
+    738 = {
+      add_extra_state_shared_building_slots = 1
+      add_building_construction = {
+        type = dockyard
+        level = 1
+        instant_build = yes
+      }
+      add_building_construction = {
+				type = naval_base
+				level = 1
+        province = 7512
+				instant_build = yes
+			}
+    }
+  }
+  search_filters = { FOCUS_FILTER_INDUSTRY }
+}
+
+shared_focus = {
+  id = MDL_restore_merchant_fleet
+  icon = GFX_MDL_restore_merchant_fleet
+  cost = 5
+  x = -1
+  y = 1
+  relative_position_id = MDL_expand_markets
+  prerequisite = { focus = MDL_expand_markets }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_restore_merchant_fleet"
+    add_political_power = -50
+    add_tech_bonus = {
+      name = MDL_cl
+      bonus = 0.50
+      uses = 2
+      category = cl_tech
+    }
+    add_ideas = MDL_merchant_fleet_idea
+  }
+  search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_NAVY_BONUS }
+}
+
+shared_focus = {
+  id = MDL_coltoba_shipyards
+  icon = GFX_MDL_coltoba_shipyards
+  cost = 6
+  x = -1
+  y = 1
+  relative_position_id = MDL_restore_merchant_fleet
+  prerequisite = { focus = MDL_restore_merchant_fleet }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_coltoba_shipyards"
+    add_ideas = MDL_coltoba_shipyards_idea
+
+    custom_effect_tooltip = available_designer
+    show_ideas_tooltip = MDL_naval_manufacturer_1
+  }
+  search_filters = { FOCUS_FILTER_NAVY_BONUS }
+}
+
+shared_focus = {
+  id = MDL_fleet_tech
+  icon = GFX_goal_generic_navy_cruiser
+  cost = 5
+  x = 1
+  y = 1
+  relative_position_id = MDL_expand_harbors
+  prerequisite = { focus = MDL_expand_harbors }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_fleet_tech"
+    add_tech_bonus = {
+      name = MDL_fleet_tech
+      bonus = 0.75
+      uses = 3
+      category = dd_tech
+      category = ca_tech
+    }
+    add_tech_bonus = {
+			name = MDL_fleet_tech
+			bonus = 0.75
+			uses = 1
+			category = ss_tech
+		}
+  }
+  search_filters = { FOCUS_FILTER_RESEARCH }
+}
+
+shared_focus = {
+  id = MDL_golden_coast
+  icon = GFX_MDL_golden_coast
+  cost = 5
+  x = 0
+  y = 2
+  relative_position_id = MDL_expand_markets
+  prerequisite = { focus = MDL_restore_merchant_fleet }
+  prerequisite = { focus = MDL_expand_harbors }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_golden_coast"
+    decrease_illiteracy = yes
+    add_ideas = MDL_golden_coast_idea
+    741 = {
+      add_extra_state_shared_building_slots = 1
+      add_manpower = 150000
+      add_resource = { type = steel amount = 5 }
+    }
+    738 = {
+      add_extra_state_shared_building_slots = 1
+      add_manpower = 50000
+      add_resource = { type = steel amount = 5 }
+    }
+    740 = {
+      add_extra_state_shared_building_slots = 1
+      add_manpower = 50000
+      add_resource = { type = steel amount = 5 }
+    }
+  }
+  search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MANPOWER FOCUS_FILTER_POLITICAL }
+}
+
+shared_focus = {
+  id = MDL_grand_zoco
+  icon = GFX_goal_GRI_industryzone
+  cost = 5
+  x = 0
+  y = 1
+  relative_position_id = MDL_golden_coast
+  prerequisite = { focus = MDL_fleet_tech }
+  prerequisite = { focus = MDL_coltoba_shipyards }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_grand_zoco"
+    add_ideas = MDL_grand_zoco_idea
+    741 = {
+      add_extra_state_shared_building_slots = 2
+      add_building_construction = {
+        type = industrial_complex
+        level = 2
+        instant_build = yes
+      }
+    }
+  }
+  search_filters = { FOCUS_FILTER_INDUSTRY }
+}
+
+shared_focus = {
+  id = MDL_naval_patrols
+  icon = GFX_goal_generic_political
+  cost = 5
+  x = 5
+  y = 1
+  relative_position_id = MDL_navy_stuff
+  prerequisite = { focus = MDL_navy_stuff }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_naval_patrols"
+    add_doctrine_cost_reduction = {
+      name = MDL_naval_doctrine
+      cost_reduction = 0.5
+      uses = 3
+      category = cat_trade_interdiction
+    }
+  }
+  search_filters = { FOCUS_FILTER_RESEARCH }
+}
+
+shared_focus = {
+  id = MDL_grand_admiralty
+  icon = GFX_MDL_grand_admiralty
+  cost = 5
+  x = -1
+  y = 1
+  relative_position_id = MDL_naval_patrols
+  prerequisite = { focus = MDL_naval_patrols }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_grand_admiralty"
+    add_ideas = MDL_grand_admiralty_idea
+  }
+  search_filters = { FOCUS_FILTER_NAVY_BONUS }
+}
+
+shared_focus = {
+  id = MDL_capital_ships
+  icon = GFX_focus_generic_navy_battleship2
+  cost = 5
+  x = 0
+  y = 1
+  relative_position_id = MDL_grand_admiralty
+  prerequisite = { focus = MDL_grand_admiralty }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_capital_ships"
+    add_tech_bonus = {
+			name = MDL_bb_bonus
+			bonus = 1.5
+			uses = 1
+			category = bb_tech
+		}
+    add_tech_bonus = {
+			name = MDL_cv_bonus
+			bonus = 1.5
+			uses = 1
+			category = cv_tech
+		}
+    741 = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = dockyard
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = naval_base
+				level = 2
+        province = 12234
+				instant_build = yes
+			}
+		}
+  }
+  search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+}
+
+shared_focus = {
+  id = MDL_naval_depot_network
+  icon = GFX_focus_generic_cruiser2
+  cost = 5
+  x = 1
+  y = 1
+  relative_position_id = MDL_naval_patrols
+  prerequisite = { focus = MDL_naval_patrols }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_naval_depot_network"
+    add_ideas = MDL_naval_depots_idea
+  }
+  search_filters = { FOCUS_FILTER_NAVY_BONUS }
+}
+
+shared_focus = {
+  id = MDL_marine_corps
+  icon = GFX_goal_generic_amphibious_assault
+  cost = 5
+  x = 0
+  y = 1
+  relative_position_id = MDL_naval_depot_network
+  prerequisite = { focus = MDL_naval_depot_network }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_marine_corps"
+    add_tech_bonus = {
+			name = MDL_marine_bonus
+			bonus = 2.0
+			uses = 2
+			category = marine_tech
+		}
+  }
+  search_filters = { FOCUS_FILTER_RESEARCH }
+}
+
+shared_focus = {
+  id = MDL_naval_academy
+  icon = GFX_goal_tfv_generic_tech_sharing
+  cost = 10.30
+  x = 0
+  y = 3
+  relative_position_id = MDL_naval_patrols
+  prerequisite = { focus = MDL_marine_corps }
+  prerequisite = { focus = MDL_capital_ships }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_naval_academy"
+    add_research_slot = 1
+    increase_science_base = yes
+  }
+  search_filters = { FOCUS_FILTER_RESEARCH }
+}
+
+shared_focus = {
+  id = MDL_back_in_bussiness
+  icon = GFX_goal_generic_sea_focused_navy
+  cost = 5
+  x = -5
+  y = 1
+  relative_position_id = MDL_navy_stuff
+  prerequisite = { focus = MDL_navy_stuff }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_back_in_bussiness"
+    navy_experience = 10
+    army_experience = 10
+    741 = {
+      add_extra_state_shared_building_slots = 1
+      add_building_construction = {
+        type = arms_factory
+        level = 1
+        instant_build = yes
+      }
+    }
+  }
+  search_filters = { FOCUS_FILTER_INDUSTRY }
+}
+
+shared_focus = {
+  id = MDL_coffee_current
+	icon = GFX_goal_free_market
+  cost = 5
+  x = -1
+  y = 1
+  relative_position_id = MDL_back_in_bussiness
+  prerequisite = { focus = MDL_back_in_bussiness }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_coffee_current"
+    add_ideas = MDL_coffee_trade
+    add_to_variable = {
+      var = MDL_consoom
+      value = 0.05
+    }
+  }
+  search_filters = { FOCUS_FILTER_INDUSTRY }
+}
+
+shared_focus = {
+  id = MDL_colthaginian_deal
+  icon = GFX_goal_the_old_debate
+  cost = 5
+  x = 0
+  y = 1
+  relative_position_id = MDL_coffee_current
+  prerequisite = { focus = MDL_coffee_current }
+  bypass = {
+    CTH = { exists = no }
+  }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_colthaginian_deal"
+    add_political_power = -50
+    CTH = { country_event = { days = 5 id = manedalusia.35 }}
+    custom_effect_tooltip = MDL_colthaginian_deal_tt
+    hidden_effect = { set_country_flag = MDL_cant_prompt_CTH }
+  }
+  search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL }
+}
+
+shared_focus = {
+  id = MDL_reliable_traders
+	icon = GFX_goal_molotov_ribbentrop_pact_pony_griffon
+  cost = 5
+  x = 1
+  y = 1
+  relative_position_id = MDL_back_in_bussiness
+  prerequisite = { focus = MDL_back_in_bussiness }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_reliable_traders"
+    custom_effect_tooltip = MDL_reliable_traders_tt
+    add_to_variable = {
+      var = MDL_trade_var
+      value = 0.45
+    }
+  }
+  search_filters = { FOCUS_FILTER_POLITICAL }
+}
+
+shared_focus = {
+  id = MDL_merchant_outposts
+	icon = GFX_MDL_merchant_outposts
+  cost = 5
+  x = 0
+  y = 1
+  relative_position_id = MDL_reliable_traders
+  prerequisite = { focus = MDL_reliable_traders }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_merchant_outposts"
+    add_offsite_building = { type = industrial_complex level = 5 }
+  }
+  search_filters = { FOCUS_FILTER_INDUSTRY }
+}
+
+shared_focus = {
+  id = MDL_green_bay_masters
+  icon = GFX_goal_generic_political
+  cost = 5
+  x = 0
+  y = 3
+  relative_position_id = MDL_back_in_bussiness
+  prerequisite = { focus = MDL_merchant_outposts }
+  prerequisite = { focus = MDL_colthaginian_deal }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_green_bay_masters"
+    741 = {
+      add_extra_state_shared_building_slots = 3
+      add_building_construction = {
+        type = industrial_complex
+        level = 3
+        instant_build = yes
+      }
+    }
+    increase_society_development = yes
+  }
+  search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL }
+}
+
+#SAYF GENOCIDE PATH
+shared_focus = {
+  id = MDL_kill_them_all
+  icon = GFX_goal_support_fascism
+  x = 10
+  y = 0
+  cost = 1
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_kill_them_all"
+    add_ideas = extensive_conscription
+    add_ideas = closed_economy
+    add_ideas = tot_economic_mobilisation
+  }
+}
+
+shared_focus = {
+  id = MDL_get_the_militias
+  icon = GFX_goal_military_academy
+  x = -1
+  y = 1
+  relative_position_id = MDL_kill_them_all
+  cost = 2
+  prerequisite = { focus = MDL_kill_them_all }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_get_the_militias"
+    hidden_effect = { load_oob = "MDL_militias" }
+		custom_effect_tooltip = MDL_rally_militias_tt
+  }
+}
+
+shared_focus = {
+  id = MDL_emergency_industry
+  icon = GFX_goal_national_artillery
+  x = 1
+  y = 1
+  relative_position_id = MDL_kill_them_all
+  cost = 2
+  prerequisite = { focus = MDL_kill_them_all }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_get_the_militias"
+    add_equipment_to_stockpile = { type = melee_equipment_0 amount = 1500 }
+    741 = {
+      add_extra_state_shared_building_slots = 2
+      add_building_construction = {
+        type = arms_factory
+        level = 2
+        instant_build = yes
+      }
+      add_building_construction = {
+				type = coastal_bunker
+				level = 3
+				province = 12234
+				instant_build = yes
+			}
+    }
+  }
+}
+
+shared_focus = {
+  id = MDL_loot_the_countryside
+  icon = GFX_focus_generic_strike_at_democracy2
+  x = 0
+  y = 2
+  relative_position_id = MDL_kill_them_all
+  prerequisite = { focus = MDL_kill_them_all }
+  available = {
+    771 = { is_controlled_by = MDL }
+    772 = { is_controlled_by = MDL }
+  }
+  prerequisite = { focus = MDL_kill_them_all }
+  cost = 2
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_loot_the_countryside"
+    add_timed_idea = {
+			idea = MDL_looting_abyssinia
+			days = 200
+		}
+    add_equipment_to_stockpile = { type = infantry_equipment amount = 500 producer = ABY }
+  }
+}
+
+shared_focus = {
+  id = MDL_begin_genocide_proper
+  icon = GFX_goal_skull_treaty2
+  x = 0
+  y = 1
+  cost = 2
+  relative_position_id = MDL_loot_the_countryside
+  prerequisite = { focus = MDL_loot_the_countryside }
+  available = {
+    771 = { is_controlled_by = MDL }
+    772 = { is_controlled_by = MDL }
+  }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_begin_genocide_proper"
+    hidden_effect = {
+      news_event = { id = manedalusia_news.1 days = 1 }
+    }
+    add_ideas = MDL_abyssinian_genocide
+    771 = {
+      add_manpower = -350000
+      remove_building = {
+        type = infrastructure
+        level = 2
+      }
+    }
+    772 = {
+      add_manpower = -100000
+      remove_building = {
+        type = infrastructure
+        level = 1
+      }
+    }
+  }
+}
+
+shared_focus = {
+  id = MDL_sack_mountain_temples
+  icon = GFX_goal_purge_opposition 
+  x = 2
+  y = 1
+  cost = 2
+  relative_position_id = MDL_begin_genocide_proper
+  prerequisite = { focus = MDL_begin_genocide_proper }
+  available = {
+    774 = { is_controlled_by = MDL }
+    782 = { is_controlled_by = MDL }
+    783 = { is_controlled_by = MDL }
+  }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_sack_mountain_temples"
+    add_equipment_to_stockpile = { type = support_equipment amount = 150 producer = ABY }
+    774 = {
+      add_manpower = -200000
+      remove_building = {
+        type = infrastructure
+        level = 1
+      }
+    }
+    782 = {
+      add_manpower = -150000
+      remove_building = {
+        type = infrastructure
+        level = 1
+      }
+    }
+    783 = {
+      add_manpower = -200000
+      remove_building = {
+        type = infrastructure
+        level = 1
+      }
+    }
+  }
+}
+
+shared_focus = {
+  id = MDL_get_the_strays
+  icon =  GFX_goal_graveyard
+  x = -2
+  y = 1
+  cost = 2
+  relative_position_id = MDL_begin_genocide_proper
+  prerequisite = { focus = MDL_begin_genocide_proper }
+  available = {
+    773 = { is_controlled_by = MDL }
+    778 = { is_controlled_by = MDL }
+    779 = { is_controlled_by = MDL }
+  }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_sack_mountain_temples"
+    add_equipment_to_stockpile = { type = infantry_equipment amount = 1000 producer = ABY }
+    773 = {
+      add_manpower = -100000
+      remove_building = {
+        type = infrastructure
+        level = 1
+      }
+    }
+    778 = {
+      add_manpower = -200000
+      remove_building = {
+        type = infrastructure
+        level = 1
+      }
+    }
+    779 = {
+      add_manpower = -250000
+      remove_building = {
+        type = infrastructure
+        level = 1
+      }
+    }
+  }
+}
+
+shared_focus = {
+  id = MDL_get_the_king
+  icon = GFX_goal_authority
+  x = 0
+  y = 1
+  relative_position_id = MDL_begin_genocide_proper
+  prerequisite = { focus = MDL_begin_genocide_proper }
+  available = {
+    775 = { is_controlled_by = MDL }
+  }
+  cost = 1
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_get_the_king"
+    if = {
+      limit = {
+        ABY = {
+          OR = {
+            has_government = neutrality
+            has_government = democratic
+          }
+        }
+      }
+      country_event = manedalusia.61
+    }
+    if = {
+      limit = { ABY = { has_government = fascism } }
+      ABY = {
+        retire_character = ABY_catrina_catwe
+      }
+    }
+    775 = {
+      add_manpower = -1000000
+      remove_building = {
+        type = infrastructure
+        level = 3
+      }
+    }
+  }
+}
+
+shared_focus = {
+  id = MDL_it_is_done
+  icon = GFX_focus_ger_reichskommisariats 
+  x = 0
+  y = 1
+  cost = 1
+  relative_position_id = MDL_get_the_king
+  available = {
+    has_war = no
+    owns_state = 775
+  }
+  prerequisite = { focus = MDL_sack_mountain_temples }
+  prerequisite = { focus = MDL_get_the_strays }
+  prerequisite = { focus = MDL_get_the_king }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_it_is_done"
+    country_event = { id = manedalusia.62 }
+    777 = {
+      add_manpower = -350000
+      remove_building = {
+        type = infrastructure
+        level = 1
+      }
+    }
+    785 = {
+      add_manpower = -350000
+      remove_building = {
+        type = infrastructure
+        level = 1
+      }
+    }
+    776 = {
+      add_manpower = -500000
+      remove_building = {
+        type = infrastructure
+        level = 2
+      }
+    }
+    786 = {
+      add_manpower = -200000
+      remove_building = {
+        type = infrastructure
+        level = 1
+      }
+    }
+    785 = {
+      add_manpower = -200000
+      remove_building = {
+        type = infrastructure
+        level = 1
+      }
+    }
+  }
+}
+
+###SENATE PATH###
+shared_focus = {
+  id = MDL_elect_qunsul
+  icon = GFX_PAP_roman_senate
+  x = 10
+  y = 0
+  cost = 1
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_elect_qunsul"
+    add_ideas = MDL_qunsul_idea
+  }
+}
+
+shared_focus = {
+  id = MDL_all_hooves_on_deck
+  icon = GFX_goal_generic_pony_volunteer
+  x = 1
+  y = 1
+  cost = 6
+  relative_position_id = MDL_elect_qunsul
+  prerequisite = { focus = MDL_elect_qunsul }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_all_hooves_on_deck"
+    add_manpower = 5000
+    add_equipment_to_stockpile = { type = infantry_equipment amount = 1000 producer = MDL } 
+  }
+}
+
+shared_focus = {
+  id = MDL_fortification_buildup
+  icon = GFX_goal_generic_construct_infrastructure
+  x = -1
+  y = 1
+  cost = 6
+  relative_position_id = MDL_elect_qunsul
+  prerequisite = { focus = MDL_elect_qunsul }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_fortification_buildup"
+    741 = { 
+			add_building_construction = {
+				type = coastal_bunker
+				level = 2
+				province = 12234
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 1
+				province = 12234
+				instant_build = yes
+			}
+      add_building_construction = {
+				type = bunker
+				level = 2
+				province = 10280
+				instant_build = yes
+			}
+		}
+  }
+}
+
+shared_focus = {
+  id = MDL_reunify_homeland
+  icon = GFX_PAP_legionary_spirit
+  x = 0
+  y = 2
+  cost = 5
+  relative_position_id = MDL_elect_qunsul
+  prerequisite = { focus = MDL_fortification_buildup }
+  prerequisite = { focus = MDL_all_hooves_on_deck }
+  available = {
+    has_war = no
+  }
+  bypass = {
+		OR = {
+			is_subject = yes
+			MGY = {
+				OR = {
+					exists = no
+					has_war_with = ROOT
+				}
+			}
+		}
+	}
+  will_lead_to_war_with = MGY
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_reunify_homeland"
+    custom_effect_tooltip = MDL_warplan_green_tt
+		declare_war_on = { type = annex_everything target = MGY }
+    hidden_effect = { set_country_flag = MDL_reunification_war_senate }
+  }
+}
+
+shared_focus = {
+  id = MDL_senate_reconcile_maregypt
+  icon = GFX_goal_collaborate_local_elites
+  x = 0
+  y = 1
+  cost = 6
+  available = {
+    has_war = no
+    owns_state = 735
+  }
+  relative_position_id = MDL_reunify_homeland
+  prerequisite = { focus = MDL_reunify_homeland }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_senate_reconcile_maregypt"
+    hidden_effect = {
+      if = {
+        limit = { has_country_flag = MDL_reunification_war_senate }
+        clr_country_flag = MDL_reunification_war_senate
+      }
+    }
+    MGY = {
+      remove_state_claim = 741
+      remove_state_claim = 764
+      remove_state_claim = 740
+      remove_state_claim = 738
+      remove_state_claim = 766
+      remove_state_claim = 770
+      remove_state_claim = 763
+    }
+  }
+}
+
+shared_focus = {
+  id = MDL_federal_constitution
+  icon = GFX_focus_generic_treaty
+  x = 2
+  y = 1
+  cost = 6
+  relative_position_id = MDL_reunify_homeland
+  prerequisite = { focus = MDL_reunify_homeland }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_federal_constitution"
+    add_ideas = MDL_federal_constitution_idea
+  }
+}
+
+shared_focus = {
+  id = MDL_federal_assembly
+  icon = GFX_focus_generic_industry_2
+  x = 1
+  y = 1
+  cost = 6
+  relative_position_id = MDL_federal_constitution
+  prerequisite = { focus = MDL_federal_constitution }
+  available = {
+    owns_state = 738
+    owns_state = 740
+  }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_federal_assembly"
+    swap_ideas = {
+      remove_idea = MDL_federal_assembly_1
+      add_idea = MDL_federal_assembly_2
+    }
+  }
+}
+
+shared_focus = {
+  id = MDL_suffrage_and_army
+  icon = GFX_goal_griffon_knights
+  x = -2
+  y = 1
+  cost = 6
+  relative_position_id = MDL_reunify_homeland
+  prerequisite = { focus = MDL_reunify_homeland }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_suffrage_and_army"
+    if = {
+      limit = { NOT = { has_idea = volunteer_only } }
+      add_ideas = volunteer_only
+    }
+    custom_effect_tooltip = MDL_suffrage_and_army_tt
+    add_to_variable = {
+      var = MDL_mobilization_var
+      value = 19.70
+    }
+  }
+}
+
+shared_focus = {
+  id = MDL_elite_army
+  icon = GFX_goal_generic_pony_soldier
+  x = -1
+  y = 1
+  cost = 6
+  relative_position_id = MDL_suffrage_and_army
+  prerequisite = { focus = MDL_suffrage_and_army }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_elite_army"
+    hidden_effect = {
+      set_country_flag = MDL_federal_army_unlocked
+      set_country_flag = MDL_FA_recruit_1
+    }
+    custom_effect_tooltip = MDL_elite_army_tt
+    add_dynamic_modifier = {
+	    modifier = MDL_federal_army_modifier
+    }
+  }
+}
+
+shared_focus = {
+  id = MDL_coltoba_naval_center
+  icon = GFX_goal_generic_positive_trade_relations
+  x = -1
+  y = 1
+  cost = 6
+  relative_position_id = MDL_senate_reconcile_maregypt
+  prerequisite = { focus = MDL_senate_reconcile_maregypt }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_coltoba_naval_center"
+    741 = {
+      add_resource = {
+        type = steel
+        amount = 20
+      }
+      add_resource = {
+        type = chromium
+        amount = 5
+      }
+      add_extra_state_shared_building_slots = 1
+      add_building_construction = {
+        type = dockyard
+        level = 1
+        instant_build = yes
+      }
+    }
+  }
+}
+
+shared_focus = {
+  id = MDL_joint_development
+  icon = GFX_goal_industrial_pony
+  x = 1
+  y = 1
+  cost = 6
+  relative_position_id = MDL_senate_reconcile_maregypt
+  prerequisite = { focus = MDL_senate_reconcile_maregypt }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_joint_development"
+    add_ideas = MDL_federation_joint_development
+  }
+}
+
+shared_focus = {
+  id = MDL_dream_of_a_federation
+  icon = GFX_focus_spr_torchbearers_of_tomorrow
+  x = 0
+  y = 2
+  cost = 5
+  relative_position_id = MDL_senate_reconcile_maregypt
+  prerequisite = { focus = MDL_elite_army }
+  prerequisite = { focus = MDL_coltoba_naval_center }
+  prerequisite = { focus = MDL_joint_development }
+  prerequisite = { focus = MDL_federal_assembly }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_dream_of_a_federation"
+    create_faction = MDL_FEDERATION
+    country_event = { id = manedalusia.56 }
+    hidden_effect = {
+      clr_country_flag = MDL_FA_recruit_1
+      set_country_flag = MDL_FA_recruit_2
+    }
+  }
+}
+
+shared_focus = {
+  id = MDL_liberate_klugetown
+  icon = GFX_MDL_conquer_klugetown
+  x = -1
+  y = 1
+  cost = 5
+  relative_position_id = MDL_dream_of_a_federation
+  prerequisite = { focus = MDL_dream_of_a_federation }
+  bypass = {
+    KLG = {
+      OR = {
+        has_war_with = ROOT
+        exists = no
+      }
+    }
+  }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_liberate_klugetown"
+    declare_war_on = { type = annex_everything target = KLG }   
+  }
+}
+
+shared_focus = {
+  id = MDL_integrate_klugetown
+  icon = GFX_MDL_klugetown_economic_zone
+  x = 0
+  y = 1
+  cost = 5
+  relative_position_id = MDL_liberate_klugetown
+  prerequisite = { focus = MDL_liberate_klugetown }
+  available = {
+    owns_state = 1208
+  }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_integrate_klugetown"
+    country_event = manedalusia.67
+  }
+}
+
+shared_focus = {
+  id = MDL_liberate_abyssinia
+  icon = GFX_goal_generic_liberty_statue
+  x = -3
+  y = 1
+  cost = 5
+  relative_position_id = MDL_dream_of_a_federation
+  prerequisite = { focus = MDL_dream_of_a_federation }
+  available = {
+    OR = {
+      ABY = {
+        exists = yes
+        has_civil_war = no
+      }
+      775 = { is_owned_and_controlled_by = WNG }
+    }
+  }
+  bypass = {
+    ABY = {
+      OR = {
+        has_war_with = ROOT
+      }
+    }
+  }
+  will_lead_to_war_with = ABY
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_liberate_abyssinia"
+    if = {
+      limit = {
+        ABY = {
+          exists = yes
+          NOT = { is_subject_of = WNG }
+        }
+      }
+      declare_war_on = { type = annex_everything target = ABY }
+    }
+    else = {
+      hidden_effect = { set_country_flag = MDL_war_with_wingbardy }
+      custom_effect_tooltip = MDL_war_with_wingbardy_tt
+      declare_war_on = { type = annex_everything target = WNG }
+      if = {
+        limit = {
+          ABY = {
+            exists = yes
+            is_subject = yes
+          }
+        }
+        declare_war_on = { type = annex_everything target = ABY }
+      }
+    }
+  }
+}
+
+shared_focus = {
+  id = MDL_integrate_abyssinia
+  icon = GFX_MDL_integrate_abyssinia
+  x = 0
+  y = 1
+  cost = 6
+  relative_position_id = MDL_liberate_abyssinia
+  prerequisite = { focus = MDL_liberate_abyssinia }
+  available = {
+    775 = { is_owned_and_controlled_by = MDL }
+  }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_liberate_abyssinia"
+    country_event = manedalusia.68
+    custom_effect_tooltip = MDL_integrate_abyssinia_tt
+    ABY = {
+      remove_state_core = 1208
+      remove_state_claim = 1208
+      remove_state_claim = 741
+      remove_state_claim = 764
+      remove_state_claim = 740
+      remove_state_claim = 738
+    }
+    hidden_effect = {
+      clr_country_flag = MDL_FA_recruit_2
+      set_country_flag = MDL_FA_recruit_3
+      set_nationality = {
+        target_country = ABY
+        character = MDL_abyssinia_assembly
+      }
+      release_puppet = ABY
+      ABY = {
+        set_cosmetic_tag = ABY_FEDERATION
+        remove_ideas = {
+          ABY_secret_police_idea_no_lr
+          ABY_weak_clawomonic_resistance
+          ABY_way_less_angry_slaves
+          ABY_angry_slaves
+          ABY_KLG_food_imports
+          ABY_risk_of_famine
+        }
+        load_focus_tree = {
+          tree = generic_zebra_focus
+        }
+        add_ideas = MDL_federation_member
+        MDL_abyssinia_assembly = {
+          add_country_leader_role = {
+            country_leader = {
+              ideology = republicanism
+              expire = "1965.1.1.1"
+			        id=-1
+            }
+            promote_leader = yes
+          }
+        }
+        set_politics = {
+          ruling_party = neutrality
+          allow_elections = no
+        }
+        set_party_name = {
+          ideology = neutrality
+          long_name = MDL_ABY_FED_PARTY_LONG
+          name = MDL_ABY_FED_PARTY
+        }
+      }
+    }
+  }
+}
+
+shared_focus = {
+  id = MDL_liberate_purrsia
+  icon = GFX_goal_generic_territory_or_war
+  x = -1
+  y = 1
+  cost = 5
+  relative_position_id = MDL_integrate_klugetown
+  prerequisite = { focus = MDL_integrate_klugetown }
+  prerequisite = { focus = MDL_integrate_abyssinia }
+  available = {
+    WNG = {
+      exists = yes
+      owns_state = 784
+      has_civil_war = no
+    }
+    ABY = {
+      exists = yes
+      is_in_faction_with = MDL
+    }
+  }
+  bypass = {
+    WNG = { NOT = { owns_state = 784 } }
+  }
+  will_lead_to_war_with = WNG
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_liberate_purrsia"
+    hidden_effect = { set_country_flag = MDL_war_with_wingbardy }
+    custom_effect_tooltip = MDL_war_with_wingbardy_tt
+    declare_war_on = { type = annex_everything target = WNG }
+    ABY = {#to make sure you have fucking land access
+      declare_war_on = { type = annex_everything target = WNG }
+    }
+  }
+}
+
+shared_focus = {
+  id = MDL_karthinia_of_zebrica
+  icon = GFX_MDL_karthinia_of_zebrica
+  x = 0
+  y = 1
+  cost = 6
+  relative_position_id = MDL_liberate_purrsia
+  prerequisite = { focus = MDL_liberate_purrsia }
+  available = {
+    784 = { is_owned_and_controlled_by = ABY }
+    1200 = { is_owned_and_controlled_by = ABY }
+  }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_karthinia_of_zebrica"
+    hidden_effect = {
+      if = {
+        limit = { has_country_flag = MDL_war_with_wingbardy }
+        clr_country_flag = MDL_war_with_wingbardy
+      }
+    }
+    every_other_country = {
+			limit = {
+				OR = {
+				  is_feudal_vassal = no
+          has_government = democratic
+				}
+				NOT = {
+					has_war_with = ROOT
+				}
+			}
+			add_opinion_modifier = { target = ROOT modifier = common_cause }
+			reverse_add_opinion_modifier = { target = ROOT modifier = common_cause }
+		}
+  }
+}
+
+shared_focus = {
+  id = MDL_liberate_yemane
+  icon = GFX_MDL_conquer_yemane
+  x = 1
+  y = 1
+  cost = 5
+  relative_position_id = MDL_dream_of_a_federation
+  prerequisite = { focus = MDL_dream_of_a_federation }
+  available = {
+    YMN = {
+      exists = yes
+    }
+  }
+  bypass = {
+    YMN = {
+      OR = {
+        has_war_with = ROOT
+        exists = no
+      }
+    }
+  }
+  will_lead_to_war_with = YMN
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_liberate_yemane"
+    declare_war_on = { type = annex_everything target = YMN }
+  }
+}
+
+shared_focus = {
+  id = MDL_integrate_yemane
+  icon = GFX_focus_hol_the_foundations_of_defense
+  x = 0
+  y = 1
+  cost = 6
+  relative_position_id = MDL_liberate_yemane
+  prerequisite = { focus = MDL_liberate_yemane }
+  available = {
+    owns_state = 956
+    YMN = { exists = no }
+  }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_integrate_yemane"
+    custom_effect_tooltip = MDL_integrate_yemane_tt
+    hidden_effect = {
+      set_nationality = {
+        target_country = YMN
+        character = MDL_yemani_senate
+      }
+      release_puppet = YMN
+      YMN = {
+        remove_state_claim = 788 
+        load_focus_tree = {
+          tree = generic_zebra_focus
+        }
+        set_cosmetic_tag = YMN_FEDERATION
+        add_ideas = MDL_federation_member
+        add_country_leader_role = {
+          character=MDL_yemani_senate
+          country_leader = {
+            ideology = republicanism
+            expire="1965.1.1.1"
+          }
+          promote_leader = yes
+        }
+        set_politics = {
+          ruling_party = neutrality
+          allow_elections = no
+        }
+        set_party_name = {
+          ideology = neutrality
+          long_name = MDL_YMN_FED_PARTY_LONG
+          name = MDL_YMN_FED_PARTY
+        }
+      }
+    }
+  }
+}
+
+shared_focus = {
+  id = MDL_liberate_donkeys
+  icon = GFX_focus_generic_strike_at_democracy1
+  x = 3
+  y = 1
+  cost = 5
+  relative_position_id = MDL_dream_of_a_federation
+  prerequisite = { focus = MDL_dream_of_a_federation }
+  bypass = {
+    AND = {
+      ANS = {
+        OR = {
+          has_war_with = ROOT
+          exists = no
+        }
+      }
+      ASS = {
+        OR = {
+          has_war_with = ROOT
+          exists = no
+        }
+      }
+    }
+  }
+  will_lead_to_war_with = ASS
+  will_lead_to_war_with = ANS
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_liberate_donkeys"
+    if = {
+      limit = { ASS = { exists = yes } }
+      declare_war_on = { type = annex_everything target = ASS }
+    }
+    if = {
+      limit = { ANS = { exists = yes } }
+      declare_war_on = { type = annex_everything target = ANS }
+    }
+  }
+}
+
+shared_focus = {
+  id = MDL_integrate_donkeys
+  icon = GFX_goal_WNG_hold_new_elections
+  x = 0
+  y = 1
+  cost = 6
+  relative_position_id = MDL_liberate_donkeys
+  prerequisite = { focus = MDL_liberate_donkeys }
+  available = {
+    owns_state = 810
+    ASS = { exists = no }
+    ANS = { exists = no }
+  }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_integrate_donkeys"
+    custom_effect_tooltip = MDL_integrate_donkeys_tt
+    hidden_effect = {
+      release_puppet = ASS
+      release_puppet = ANS
+      set_nationality = {
+        target_country = ASS
+        character = MDL_asstyrian_free_cities
+      }
+      set_nationality = {
+        target_country = ANS
+        character = MDL_anseruk_consortium
+      }
+      ASS = {
+        load_focus_tree = {
+          tree = generic_zebra_focus
+        }
+        set_cosmetic_tag = ASS_FEDERATION
+        add_ideas = MDL_federation_member
+        add_country_leader_role = {
+          character=MDL_asstyrian_free_cities
+          country_leader = {
+            ideology = republicanism
+            expire="1965.1.1.1"
+          }
+          promote_leader = yes
+        }
+        set_politics = {
+          ruling_party = neutrality
+          allow_elections = no
+        }
+        set_party_name = {
+          ideology = neutrality
+          long_name = MDL_ASS_FED_PARTY_LONG
+          name = MDL_ASS_FED_PARTY
+        }
+      }
+      ANS = {
+        load_focus_tree = {
+          tree = generic_zebra_focus
+        }
+        set_cosmetic_tag = ANS_FEDERATION
+        add_ideas = MDL_federation_member
+        add_country_leader_role = {
+          character=MDL_anseruk_consortium
+          country_leader = {
+            ideology = republicanism
+            expire="1965.1.1.1"
+          }
+          promote_leader = yes
+        }
+        set_politics = {
+          ruling_party = neutrality
+          allow_elections = no
+        }
+        set_party_name = {
+          ideology = neutrality
+          long_name = MDL_ANS_FED_PARTY_LONG
+          name = MDL_ANS_FED_PARTY
+        }
+      }
+    }
+  }
+}
+
+shared_focus = {
+  id = MDL_liberate_emirs
+  icon = GFX_goal_authority
+  x = 0
+  y = 1
+  cost = 5
+  relative_position_id = MDL_integrate_donkeys
+  prerequisite = { focus = MDL_integrate_donkeys }
+  prerequisite = { focus = MDL_integrate_yemane }
+  mutually_exclusive = { focus = MDL_our_finest_hour }
+  available = {
+    AND = {
+      EMR = {
+        exists = yes
+        has_war = no
+      }
+      OR = {
+        SDF = { exists = yes }
+        SDS = { exists = yes }
+        SDL = { exists = yes }
+        SDC = { exists = yes }
+      }
+    }
+  }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_liberate_emirs"
+    declare_war_on = { type = annex_everything target = EMR }
+  }
+}
+
+shared_focus = {
+  id = MDL_integrate_emirs
+  icon = GFX_goal_ideology_social_conservative
+  x = 0
+  y = 1
+  cost = 6
+  relative_position_id = MDL_liberate_emirs
+  prerequisite = { focus = MDL_liberate_emirs }
+  available = {
+    EMR = {
+      exists = no
+    }
+    owns_state = 818
+  }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_integrate_emirs"
+    custom_effect_tooltip = MDL_integrate_emirs_tt
+    hidden_effect = {
+      release_puppet = EMR
+      set_nationality = {
+        target_country = EMR
+        character = MDL_elected_princes
+      }
+      EMR = {
+        add_ideas = MDL_federation_member
+        add_country_leader_role = {
+          character = MDL_elected_princes
+          country_leader = {
+            ideology = republicanism
+            expire = "1965.1.1"
+          }
+          promote_leader = yes
+        }
+        set_politics = {
+          ruling_party = neutrality
+          allow_elections = no
+        }
+        set_party_name = {
+          ideology = neutrality
+          long_name = MDL_EMR_FED_PARTY_LONG
+          name = MDL_EMR_FED_PARTY
+        }
+      }
+    }
+  }
+}
+
+shared_focus = {
+  id = MDL_our_finest_hour
+  icon = GFX_goal_national_arsenal
+  x = 0
+  y = 1
+  cost = 5
+  relative_position_id = MDL_integrate_yemane
+  prerequisite = { focus = MDL_integrate_yemane }
+  prerequisite = { focus = MDL_integrate_donkeys }
+  mutually_exclusive = { focus = MDL_liberate_emirs }
+  available = {
+    arabia_is_unified = yes 
+  }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_our_finest_hour"
+    if = {
+      limit = { SDS = { exists = yes } }
+      declare_war_on = { type = annex_everything target = SDS }
+    }
+    if = {
+      limit = { SDL = { exists = yes } }
+      declare_war_on = { type = annex_everything target = SDL }
+    }
+    if = {
+      limit = { SDF = { exists = yes } }
+      declare_war_on = { type = annex_everything target = SDF }
+    }
+    if = {
+      limit = { SDC = { exists = yes } }
+      declare_war_on = { type = annex_everything target = SDC }
+    }
+    if = {
+      limit = { EMR = { exists = yes } }
+      declare_war_on = { type = annex_everything target = EMR }
+    }
+  }
+}
+
+shared_focus = {
+  id = MDL_balkanize_arabia
+  icon = GFX_goal_generic_military_sphere
+  x = 0
+  y = 1
+  cost = 6
+  relative_position_id = MDL_our_finest_hour
+  prerequisite = { focus = MDL_our_finest_hour }
+  available = {
+    owns_state = 868
+  }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_balkanize_arabia"
+    custom_effect_tooltip = MDL_balkanize_arabia_tt
+    hidden_effect = {
+      release_puppet = EMR
+      release_puppet = SDS
+      EMR = {
+        every_owned_state = {
+          limit = { is_core_of = EMR }
+          remove_core_of = SDS
+        }
+      }
+      SDS = {
+        add_ideas = MDL_federation_member
+        set_politics = {
+          ruling_party = democratic
+          allow_elections = no
+        }
+      }
+      set_nationality = {
+        target_country = EMR
+        character = MDL_elected_princes
+      }
+      EMR = {
+        set_cosmetic_tag = EMR_FEDERATION
+        add_ideas = MDL_federation_member
+        add_country_leader_role = {
+          character = MDL_elected_princes
+          country_leader = {
+            ideology = republicanism
+            expire = "1965.1.1"
+          }
+          promote_leader = yes
+        }
+        set_politics = {
+          ruling_party = neutrality
+          allow_elections = no
+        }
+        set_party_name = {
+          ideology = neutrality
+          long_name = MDL_EMR_FED_PARTY_LONG
+          name = MDL_EMR_FED_PARTY
+        }
+      }
+    }
+  }
+}
+
+shared_focus = {
+  id = MDL_triumph_of_the_federation
+  icon = GFX_focus_generic_bastion_of_democracy 
+  x = 0
+  y = 5
+  cost = 3
+  relative_position_id = MDL_dream_of_a_federation
+  prerequisite = { focus = MDL_karthinia_of_zebrica }
+  prerequisite = { focus = MDL_balkanize_arabia focus = MDL_integrate_emirs }
+  available = {
+    has_war = no
+  }
+  completion_reward = {
+     log = "[GetDateText]: [Root.GetName]: Focus MDL_triumph_of_the_federation"
+     country_event = { id = manedalusia.69 }#nice
+  }
+}
+
+###VELVET PATH###
+shared_focus = {
+  id = MDL_a_new_start
+  icon = GFX_goal_ideology_social_conservative
+  x = 10
+  y = 0
+  cost = 1
+  completion_reward = {
+     log = "[GetDateText]: [Root.GetName]: Focus MDL_a_new_start"
+     add_political_power = 50
+  }
+}
+
+shared_focus = {
+  id = MDL_meet_with_crimson
+  icon = GFX_MDL_sayf_takeover
+  x = -1
+  y = 1
+  relative_position_id = MDL_a_new_start
+  cost = 5
+  prerequisite = { focus = MDL_a_new_start }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_meet_with_crimson"
+    country_event = manedalusia.76
+  }
+}
+
+shared_focus = {
+  id = MDL_empower_senate
+  icon = GFX_MDL_advisory_senate
+  x = 1
+  y = 1
+  cost = 5
+  relative_position_id = MDL_a_new_start
+  prerequisite = { focus = MDL_a_new_start }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_empower_senate"
+    add_advisor_role = {
+      character = MDL_senate
+      advisor = {
+        slot = political_advisor
+        idea_token = MDL_senate
+        allowed = { original_tag = MDL }
+        traits = { MDL_empowered_senate }
+      }
+    }
+  }
+}
+
+shared_focus = {
+  id = MDL_purchase_land_maregypt
+  icon = GFX_MDL_purchase_land_maregypt
+  x = 0
+  y = 2
+  cost = 5
+  relative_position_id = MDL_a_new_start
+  prerequisite = { focus = MDL_meet_with_crimson }
+  prerequisite = { focus = MDL_empower_senate }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_purchase_land_maregypt"
+    custom_effect_tooltip = MDL_purchase_land_maregypt_tt
+    MGY = { country_event = { id = manedalusia.77 days = 3 } }
+  }
+}
+
+shared_focus = {
+  id = MDL_look_to_equestria
+  icon = GFX_goal_EQS_TNO_meet_leaders
+  x = 2
+  y = 1
+  cost = 5
+  relative_position_id = MDL_purchase_land_maregypt
+  prerequisite = { focus = MDL_purchase_land_maregypt }
+  available = {
+    is_in_faction = no
+    has_war = no
+    EQS = {
+			exists = yes
+			has_war = no
+			is_faction_leader = yes
+		  has_government = democratic
+		}
+  }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_look_to_equestria"
+    country_event = manedalusia.82
+    hidden_effect = {
+      EQS = { country_event = manedalusia.82 }
+    }
+  }
+}
+
+shared_focus = {
+  id = MDL_formalize_alliance
+  icon = GFX_goal_equestria
+  x = 0
+  y = 2
+  cost = 5
+  relative_position_id = MDL_look_to_equestria
+  prerequisite = { focus = MDL_look_to_equestria }
+  available = {
+    is_in_faction = no
+    has_war = no
+    EQS = {
+			exists = yes
+			is_faction_leader = yes
+      has_civil_war = no
+			has_government = democratic
+		}
+  }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_formalize_alliance"
+    EQS = { add_to_faction = MDL }
+  }
+}
+
+shared_focus = {
+  id = MDL_expeditionary_corps
+  icon = GFX_goal_support_equestria
+  x = -2
+  y = 1
+  cost = 5
+  relative_position_id = MDL_purchase_land_maregypt
+  prerequisite = { focus = MDL_purchase_land_maregypt }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_expeditionary_corps"
+    add_ideas = MDL_expeditionary_corps_idea
+  }
+}
+
+shared_focus = {
+  id = MDL_industrial_development_program
+  icon = GFX_goal_factory_complex
+  x = 0
+  y = 2
+  cost = 5
+  relative_position_id = MDL_expeditionary_corps
+  prerequisite = { focus = MDL_expeditionary_corps }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_industrial_development_program"
+    741 = {
+      add_resource = {
+        type = steel
+        amount = 20
+      }
+      add_resource = {
+        type = chromium
+        amount = 5
+      }
+      add_extra_state_shared_building_slots = 2
+      add_building_construction = {
+        type = industrial_complex
+        level = 1
+        instant_build = yes
+      }
+      add_building_construction = {
+        type = dockyard
+        level = 1
+        instant_build = yes
+      }
+    }
+  }
+}
+
+shared_focus = {
+  id = MDL_springtime_in_manedalusia
+  icon = GFX_goal_generic_liberty_statue
+  x = 0
+  y = 1
+  cost = 5
+  relative_position_id = MDL_purchase_land_maregypt
+  prerequisite = { focus = MDL_purchase_land_maregypt }
+  available = {
+    owns_state = 738
+    owns_state = 740
+  }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_springtime_in_manedalusia"
+    add_popularity = { ideology = democratic popularity = 0.15 }
+  }
+}
+
+shared_focus = {
+  id = MDL_monument_to_aaliyah
+  icon = GFX_focus_generic_support_the_left_right
+  x = 1
+  y = 1
+  cost = 5
+  relative_position_id = MDL_springtime_in_manedalusia
+  prerequisite = { focus = MDL_springtime_in_manedalusia }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_monument_to_aaliyah"
+    add_ideas = MDL_aaliyah_monument
+  }
+}
+
+shared_focus = {
+  id = MDL_bulwark_of_harmony
+  icon = GFX_goal_nested_fortifications
+  x = -1
+  y = 1
+  cost = 5
+  relative_position_id = MDL_springtime_in_manedalusia
+  prerequisite = { focus = MDL_springtime_in_manedalusia }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_bulwark_of_harmony"
+    custom_effect_tooltip = MDL_bulwark_of_harmony_tt
+    hidden_effect = { set_country_flag = MDL_shield_doctrine_unlocked }
+    add_ideas = MDL_bulwark_of_harmony_idea
+    741 = {
+      add_building_construction = {
+				type = coastal_bunker
+				level = 3
+				province = 12234
+				instant_build = yes
+			}
+    }
+  }
+}
+
+shared_focus = {
+  id = MDL_bring_our_ponies_home
+  icon = GFX_goal_pony_passport
+  x = 0
+  y = 2
+  cost = 5
+  relative_position_id = MDL_springtime_in_manedalusia
+  prerequisite = { focus = MDL_monument_to_aaliyah }
+  prerequisite = { focus = MDL_bulwark_of_harmony }
+  mutually_exclusive = { focus = MDL_topple_catwe }
+  available = {
+    NOT = {
+      ABY = {
+        has_war_with = MDL
+      }
+    }
+  }
+  bypass = {
+    ABY = {
+      OR = {
+        exists = no
+        has_government = communism
+        has_completed_focus = ABY_emancipation_act
+      }
+    }
+  }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_bring_our_ponies_home"
+    country_event = manedalusia.81
+  }
+}
+
+shared_focus = {
+  id = MDL_peace_in_our_time
+  icon = GFX_goal_COS_Peace
+  x = 0
+  y = 1
+  cost = 5
+  available = {
+    MDL = { is_in_faction_with = EQS }
+    EQS = {
+      exists = yes
+      has_government = democratic
+    }
+    CHN = {
+      OR = {
+        exists = no
+        has_government = democratic
+        is_subject_of = EQS
+      }
+    }
+  }
+  relative_position_id = MDL_bring_our_ponies_home
+  prerequisite = { focus = MDL_bring_our_ponies_home }
+  prerequisite = { focus = MDL_industrial_development_program }
+  prerequisite = { focus = MDL_formalize_alliance }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_peace_in_our_time"
+    custom_effect_tooltip = MDL_peace_in_our_time_tt
+    add_ideas = free_trade
+    set_variable = { MDL_tradelaw_var = 0 }
+    set_variable = { MDL_economy_var = 0 }
+  }
+}
+
+shared_focus = {
+  id = MDL_equestrian_investment
+  icon = GFX_goal_eqs_canterlot
+  x = -2
+  y = 1
+  cost = 5
+  relative_position_id = MDL_peace_in_our_time
+  prerequisite = { focus = MDL_peace_in_our_time }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_equestrian_investment"
+    add_political_power = -100
+    EQS = { country_event = { id = manedalusia.104 days = 3 } }
+  }
+}
+
+shared_focus = {
+  id = MDL_equestrian_tourism
+  icon = GFX_goal_sunshine
+  x = 0
+  y = 1
+  cost = 5
+  relative_position_id = MDL_equestrian_investment
+  prerequisite = { focus = MDL_equestrian_investment }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_equestrian_tourism"
+    country_event = manedalusia.107
+  }
+}
+
+shared_focus = {
+  id = MDL_invest_in_changeling_reconstruction
+  icon = GFX_goal_ITA_urban
+  x = 0
+  y = 1
+  cost = 5
+  relative_position_id = MDL_peace_in_our_time
+  prerequisite = { focus = MDL_peace_in_our_time }
+
+  bypass = {
+    CHN = {
+      OR = {
+        exists = no
+        NOT = { is_in_faction_with = EQS }
+      }
+    }
+  }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_invest_in_changeling_reconstruction"
+    add_political_power = -100
+    CHN = { country_event = { id = manedalusia.104 days = 3 } }
+  }
+}
+
+shared_focus = {
+  id = MDL_navy_war_games
+  icon = GFX_goal_generic_ponykind
+  x = 0
+  y = 1
+  cost = 5
+  relative_position_id = MDL_invest_in_changeling_reconstruction
+  prerequisite = { focus = MDL_invest_in_changeling_reconstruction }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_navy_war_games"
+    EQS = {
+      add_timed_idea = {
+        idea = MDL_starry_sea_exercises
+        days = 90
+      }
+    }
+    add_timed_idea = {
+      idea = MDL_starry_sea_exercises
+      days = 90
+    }
+  }
+}
+
+shared_focus = {
+  id = MDL_imperial_investment
+  icon = MDL_imperial_investment
+  x = 2
+  y = 1
+  cost = 5
+  relative_position_id = MDL_peace_in_our_time
+  prerequisite = { focus = MDL_peace_in_our_time }  
+  bypass = {
+    GRI = { exists = no }
+  }
+  completion_reward = {
+     log = "[GetDateText]: [Root.GetName]: Focus MDL_imperial_investment"
+     GRI = { country_event = { id = manedalusia.101 days = 3 } }
+  }
+}
+
+shared_focus = {
+  id = MDL_surf_and_rock_and_roll
+  icon = MDL_surf_and_rock_and_roll
+  x = 0
+  y = 1
+  cost = 5
+  relative_position_id = MDL_imperial_investment
+  prerequisite = { focus = MDL_imperial_investment }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_surf_and_rock_and_roll"
+    add_timed_idea = {
+			idea = MDL_celebrating_victory
+			days = 100
+		}
+    hidden_effect = {
+      news_event = { id = manedalusia_news.2 days = 1 }
+    }
+  }
+}
+
+shared_focus = {
+  id = MDL_manedalusian_century
+  icon = GFX_focus_mdl_flag
+  x = 0
+  y = 1
+  cost = 2
+  relative_position_id = MDL_navy_war_games
+  prerequisite = { focus = MDL_equestrian_tourism }
+  prerequisite = { focus = MDL_navy_war_games }
+  prerequisite = { focus = MDL_surf_and_rock_and_roll }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_manedalusian_century"
+    country_event = manedalusia.100
+  }
+}
+
+###HARMONIC CRUSADE PATH###
+shared_focus = {
+  id = MDL_crusade_path
+  icon = GFX_goal_generic_political
+  x = 15
+  y = 0
+  cost = 1
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_crusade_path"
+    country_event = manedalusia.88    
+  }
+}
+
+shared_focus = {
+  id = MDL_discipline_the_army
+  icon = GFX_goal_generic_political
+  x = -2
+  y = 1
+  cost = 3
+  relative_position_id = MDL_crusade_path
+  prerequisite = { focus = MDL_crusade_path }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_discipline_the_army"
+    country_event = manedalusia.86
+  }
+}
+
+shared_focus = {
+  id = MDL_reassure_the_populace
+  icon = GFX_goal_generic_political
+  x = 0
+  y = 1
+  cost = 3
+  relative_position_id = MDL_crusade_path
+  prerequisite = { focus = MDL_crusade_path }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_reassure_the_populace"
+    country_event = manedalusia.87
+  }
+}
+
+shared_focus = {
+  id = MDL_talk_to_the_mufti
+  icon = GFX_goal_generic_political
+  x = 2
+  y = 1
+  cost = 3
+  relative_position_id = MDL_crusade_path
+  prerequisite = { focus = MDL_crusade_path }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_talk_to_the_mufti"
+    country_event = manedalusia.85
+  }
+}
+
+shared_focus = {
+  id = MDL_our_purpose_made_clear
+  icon = GFX_goal_generic_political
+  x = 0
+  y = 2
+  cost = 2
+  relative_position_id = MDL_crusade_path
+  prerequisite = { focus = MDL_discipline_the_army }
+  prerequisite = { focus = MDL_reassure_the_populace }
+  prerequisite = { focus = MDL_talk_to_the_mufti }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_our_purpose_made_clear"
+    country_event = manedalusia.89
+  }
+}
+
+shared_focus = {
+  id = MDL_military_administration
+  icon = GFX_goal_generic_political
+  x = 0
+  y = 1
+  relative_position_id = MDL_our_purpose_made_clear
+  prerequisite = { focus = MDL_our_purpose_made_clear }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_military_administration"
+    custom_effect_tooltip = MDL_military_administration_tt
+    create_faction = MDL_GUARDIANSHIP
+    hidden_effect = { set_country_flag = MDL_milgovs_unlocked }
+  }
+}
+
+shared_focus = {
+  id = MDL_unlock_contractors
+  icon = GFX_goal_generic_political
+  x = -1
+  y = 1
+  relative_position_id = MDL_military_administration
+  prerequisite = { focus = MDL_military_administration }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_unlock_contractors"
+    custom_effect_tooltip = MDL_unlock_contractors_tt
+  }
+}
+
+shared_focus = {
+  id = MDL_rapid_military_buildup
+  icon = GFX_goal_generic_political
+  x = 1
+  y = 1
+  relative_position_id = MDL_military_administration
+  prerequisite = { focus = MDL_military_administration }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_rapid_military_buildup"
+    741 = {
+      add_extra_state_shared_building_slots = 3
+      add_building_construction = {
+        type = arms_factory
+        level = 3
+        instant_build = yes
+      }
+    }
+  }
+}
+
+shared_focus = {
+  id = MDL_first_strike
+  icon = GFX_goal_generic_political
+  x = 0
+  y = 2
+  relative_position_id = MDL_military_administration
+  available = {
+    ABY = {
+      exists = yes
+      has_civil_war = no
+    }
+  }
+  prerequisite = { focus = MDL_unlock_contractors }
+  prerequisite = { focus = MDL_rapid_military_buildup }
+  will_lead_to_war_with = ABY
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_first_strike"
+ 		declare_war_on = { type = annex_everything target = ABY }
+  }
+}
+
+shared_focus = {
+  id = MDL_united_in_purpose
+  icon = GFX_goal_generic_political
+  x = -5
+  y = 1
+  cost = 1
+  relative_position_id = MDL_our_purpose_made_clear
+  prerequisite = { focus = MDL_our_purpose_made_clear }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_united_in_purpose"
+		add_popularity = { ideology = neutrality popularity = 0.35 }
+    add_opinion_modifier = {
+      target = EQS
+      modifier = MDL_djinn_opinion
+    }
+  }
+}
+
+shared_focus = {
+  id = MDL_fortress_manedalusia
+  icon = GFX_goal_generic_political
+  x = -1
+  y = 1
+  relative_position_id = MDL_united_in_purpose
+  prerequisite = { focus = MDL_united_in_purpose }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_fortress_manedalusia"
+    add_ideas = MDL_fortress_manedalusia_idea
+  }
+}
+
+###GRIFO PATH###
+shared_focus = {
+  id = MDL_overseas_dominion
+  icon = GFX_MDL_overseas_dominion
+  x = 10
+  y = 0
+  cost = 2
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_overseas_dominion"
+    country_event = manedalusia.99
+  }
+}
+
+shared_focus = {
+  id = MDL_get_some_gear
+  icon = MDL_get_some_gear
+  x = -1
+  y = 1
+  cost = 3
+  relative_position_id = MDL_overseas_dominion
+  prerequisite = { focus = MDL_overseas_dominion }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_get_some_gear"
+    add_equipment_to_stockpile = { type = infantry_equipment amount = 2000 producer = GRI }
+    add_equipment_to_stockpile = { type = support_equipment amount = 150 producer = GRI }
+    add_tech_bonus = {
+      name = MDL_get_some_gear
+      bonus = 1.0
+      uses = 1
+      category = infantry_weapons
+    }
+  }
+}
+
+shared_focus = {
+  id = MDL_get_some_muscle
+  icon = MDL_get_some_muscle
+  x = 1
+  y = 1
+  cost = 3
+  relative_position_id = MDL_overseas_dominion
+  prerequisite = { focus = MDL_overseas_dominion }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_get_some_muscle"
+    country_event = manedalusia.96
+  }
+}
+
+shared_focus = {
+  id = MDL_crush_the_koltaliba
+  icon = MDL_crush_the_koltaliba
+  x = 0
+  y = 2
+  cost = 3
+  relative_position_id = MDL_overseas_dominion
+  prerequisite = { focus = MDL_get_some_gear }
+  prerequisite = { focus = MDL_get_some_muscle }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_crush_the_koltaliba"
+    country_event = manedalusia.98
+  }
+}
+
+shared_focus = {
+  id = MDL_crack_down_on_coltoba
+  icon = GFX_MDL_grifo_imperium
+  x = 1
+  y = 1
+  cost = 3
+  relative_position_id = MDL_get_some_muscle
+  prerequisite = { focus = MDL_get_some_muscle }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_crack_down_on_coltoba"
+    add_popularity = { ideology = fascism popularity = 0.10 }
+  }
+}
+
+shared_focus = {
+  id = MDL_harbor_fortification
+  icon = GFX_MDL_fort_and_guns
+  x = -1
+  y = 1
+  cost =  3
+  relative_position_id = MDL_get_some_gear
+  prerequisite = { focus = MDL_get_some_gear }
+  available = {
+		741 = { is_owned_and_controlled_by = ROOT }
+	}
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_harbor_fortification"
+    741 = {
+      add_building_construction = {
+				type = anti_air_building
+				level = 1
+				instant_build = yes
+			}
+      add_building_construction = {
+				type = coastal_bunker
+				level = 2
+				province = 12234
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 2
+				province = 12234
+				instant_build = yes
+			}
+    }
+  }
+}
+
+shared_focus = {
+  id = MDL_clean_loose_ends
+  icon = GFX_MDL_gun_and_noose
+  x = -1
+  y = 1
+  cost = 3
+  relative_position_id = MDL_crack_down_on_coltoba
+  prerequisite = { focus = MDL_crush_the_koltaliba }
+  prerequisite = { focus = MDL_crack_down_on_coltoba }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_clean_loose_ends"
+    custom_effect_tooltip = MDL_clean_loose_ends_tt
+    hidden_effect = {
+      retire_character = MDL_alneighzari
+      retire_character = MDL_iron_muhtal
+      retire_character = MDL_ink_al_shieri
+      retire_character = MDL_emerald_bargain
+      retire_character = MDL_admiral_astur
+      retire_character = MDL_mehmet
+      retire_character = MDL_jean_claude_of_aquileia
+      retire_character = MDL_talespin
+    }
+  }
+}
+
+shared_focus = {
+  id = MDL_burn_the_courthouse
+  icon = GFX_MDL_sun_flag_burn
+  x = 1
+  y = 1
+  cost = 3
+  relative_position_id = MDL_harbor_fortification
+  prerequisite = { focus = MDL_crush_the_koltaliba }
+  prerequisite = { focus = MDL_harbor_fortification }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_burn_the_courthouse"
+    retire_character = MDL_qadi_of_coltoba
+    remove_ideas = MDL_ash_shuhud_resistance
+  }
+}
+
+shared_focus = {
+  id = MDL_lord_of_ultramar
+  icon = MDL_lord_of_ultramar
+  x = 0
+  y = 2
+  cost = 2
+  relative_position_id = MDL_crush_the_koltaliba
+  prerequisite = { focus = MDL_burn_the_courthouse }
+  prerequisite = { focus = MDL_clean_loose_ends }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_lord_of_ultramar"
+    country_event = manedalusia.97
+  }
+}
+
+shared_focus = {
+  id = MDL_restoring_the_light
+  icon = GFX_MDL_restoring_the_light
+  x = 15
+  y = 0
+  cost = 10
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_restoring_the_light"
+    country_event = manedalusia.117
+
+    add_country_leader_trait = MDL_grifo_lord_regent_of_overseas
+
+    custom_effect_tooltip = available_political_advisor
+    show_ideas_tooltip = MDL_rosa_branca
+    show_ideas_tooltip = MDL_alexandre_de_aguilar
+    show_ideas_tooltip = MDL_antonio_aviario
+  }
+  search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESISTANCE }
+}
+
+shared_focus = {
+  id = MDL_expand_new_karthin_industrial_base
+  icon = GFX_MDL_expand_new_karthin_industrial_base
+  x = -1
+  y = 1
+  relative_position_id = MDL_restoring_the_light
+  prerequisite = { focus = MDL_restoring_the_light }
+  cost = 10
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_expand_new_karthin_industrial_base"
+    741 = {
+      add_resource = {
+        type = steel
+        amount = 8
+      }
+      add_extra_state_shared_building_slots = 4
+      add_building_construction = {
+        type = industrial_complex
+        level = 2
+        instant_build = yes
+      }
+      add_building_construction = {
+        type = arms_factory
+        level = 2
+        instant_build = yes
+      }
+    }
+  }
+  search_filters = { FOCUS_FILTER_INDUSTRY }
+}
+
+shared_focus = {
+  id = MDL_colonial_arms_production
+  icon = GFX_MDL_colonial_arms_production
+  x = 1
+  y = 1
+  relative_position_id = MDL_restoring_the_light
+  prerequisite = { focus = MDL_restoring_the_light }
+  cost = 10
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_colonial_arms_production"
+    add_ideas = MDL_colonial_arms_production_idea
+    add_tech_bonus = {
+      name = MDL_colonial_arms_production
+      bonus = 1.0
+      uses = 1
+      category = infantry_weapons
+    }
+
+    custom_effect_tooltip = available_designer
+    show_ideas_tooltip = MDL_imperial_arms
+  }
+  search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+}
+
+shared_focus = {
+  id = MDL_colonial_troops
+  icon = GFX_MDL_colonial_troops
+  x = 0
+  y = 2
+  relative_position_id = MDL_restoring_the_light
+  prerequisite = { focus = MDL_expand_new_karthin_industrial_base }
+  prerequisite = { focus = MDL_colonial_arms_production }
+  cost = 10
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_colonial_troops"
+    set_technology = { tech_military_police = 1 }
+    add_manpower = 7500
+    MDL_increase_conscription = yes
+    add_ideas = MDL_colonial_troops_idea
+  }
+  search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_ARMY_BONUS }
+}
+
+shared_focus = {
+  id = MDL_imperial_shipyards
+  icon = GFX_MDL_imperial_shipyards
+  x = 0
+  y = 2
+  relative_position_id = MDL_expand_new_karthin_industrial_base
+  prerequisite = { focus = MDL_expand_new_karthin_industrial_base }
+  cost = 10
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_imperial_shipyards"
+    add_ideas = MDL_imperial_shipyards_idea
+
+    custom_effect_tooltip = available_designer
+    show_ideas_tooltip = MDL_imperial_ships
+  }
+  search_filters = { FOCUS_FILTER_INDUSTRY }
+}
+
+shared_focus = {
+  id = MDL_griffon_tech
+  icon = GFX_MDL_griffon_tech
+  x = 0
+  y = 2
+  relative_position_id = MDL_colonial_arms_production
+  prerequisite = { focus = MDL_colonial_arms_production }
+  cost = 10
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_griffon_tech"
+    set_technology = { tech_knights = 1 }
+    hidden_effect = { load_oob = "MDL_knights" }
+    add_tech_bonus = {
+      name = MDL_griffon_tech
+      bonus = 1.0
+      uses = 1
+      category = infantry_weapons
+    }
+    custom_effect_tooltip = MDL_griffon_tech_tt
+  }
+  search_filters = { FOCUS_FILTER_RESEARCH }
+}
+
+shared_focus = {
+  id = MDL_colonial_university
+  icon = GFX_MDL_colonial_university
+  x = 1
+  y = 1
+  relative_position_id = MDL_colonial_arms_production
+  prerequisite = { focus = MDL_colonial_arms_production }
+  cost = 10
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_colonial_university"
+    add_research_slot = 1
+    increase_science_base = yes
+
+    custom_effect_tooltip = available_theorist
+    show_ideas_tooltip = MDL_imperial_college
+  }
+  search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_BONUS }
+}
+
+shared_focus = {
+  id = MDL_colonial_industry
+  icon = GFX_MDL_colonial_industry
+  x = -1
+  y = 1
+  relative_position_id = MDL_imperial_shipyards
+  prerequisite = { focus = MDL_maregypt_infrastructure_expansion }
+  cost = 10
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_colonial_industry"
+    741 = {
+      add_extra_state_shared_building_slots = 1
+      add_building_construction = {
+        type = arms_factory
+        level = 1
+        instant_build = yes
+      }
+    }
+    734 = {
+      add_extra_state_shared_building_slots = 1
+      add_building_construction = {
+        type = arms_factory
+        level = 1
+        instant_build = yes
+      }
+    }
+    733 = {
+      add_extra_state_shared_building_slots = 1
+      add_building_construction = {
+        type = arms_factory
+        level = 1
+        instant_build = yes
+      }
+    }
+		increase_society_development = yes
+    custom_effect_tooltip = available_industrial_concern
+    show_ideas_tooltip = MDL_imperial_construction
+  }
+  search_filters = { FOCUS_FILTER_INDUSTRY }
+}
+
+shared_focus = {
+  id = MDL_pony_imperials
+  icon = GFX_MDL_pony_imperials
+  x = 0
+  y = 2
+  relative_position_id = MDL_imperial_shipyards
+  prerequisite = { focus = MDL_imperial_shipyards }
+  cost = 10
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_pony_imperials"
+    add_ideas = MDL_pony_imperials_idea
+		add_tech_bonus = {
+			bonus = 1.0
+			uses = 4
+			category = race_tech
+		}
+  }
+  search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH FOCUS_FILTER_STABILITY }
+}
+
+shared_focus = {
+  id = MDL_colonial_administration
+  icon = GFX_MDL_colonial_administration
+  x = -1
+  y = 1
+  relative_position_id = MDL_griffon_tech
+  prerequisite = { focus = MDL_imperial_shipyards }
+  prerequisite = { focus = MDL_colonial_troops }
+  prerequisite = { focus = MDL_griffon_tech }
+  cost = 10
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_colonial_administration"
+    custom_effect_tooltip = MDL_colonial_administration_tt
+  }
+  search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESISTANCE FOCUS_FILTER_ANNEXATION }
+}
+
+shared_focus = {
+  id = MDL_imperial_education
+  icon = GFX_MDL_imperial_education
+  x = 1
+  y = 1
+  relative_position_id = MDL_griffon_tech
+  prerequisite = { focus = MDL_pony_synthesis }
+  cost = 10
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_imperial_education"
+    custom_effect_tooltip = GRI_education_tooltip
+    hidden_effect = {
+      country_event = {
+        id = manedalusia.109
+        days = 120
+      }
+    }
+  }
+}
+
+shared_focus = {
+  id = MDL_imperial_autarky
+  icon = MDL_imperial_autarky
+  x = -1
+  y = 1
+  relative_position_id = MDL_expand_new_karthin_industrial_base
+  prerequisite = { focus = MDL_expand_new_karthin_industrial_base }
+  available = {
+    741 = { is_owned_and_controlled_by = ROOT }
+  }
+  cost = 10
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_imperial_autarky"
+    add_ideas = MDL_imperial_autarky_idea
+    add_ideas = closed_economy
+  }
+  search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL }
+}
+
+shared_focus = {
+  id = MDL_total_war
+  icon = GFX_MDL_total_war
+  x = 0
+  y = 2
+  relative_position_id = MDL_griffon_tech
+  prerequisite = { focus = MDL_griffon_tech }
+  cost = 10
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_total_war"
+    custom_effect_tooltip = GRI_war_economy_tp
+    add_war_support = 0.20
+    add_ideas = war_economy
+    set_country_flag = war_economy_only_flag
+  }
+  search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL }
+}
+
+shared_focus = {
+  id = MDL_grand_colonial_railway
+  icon = GFX_MDL_grand_colonial_railway
+  x = -1
+  y = 1
+  relative_position_id = MDL_colonial_industry
+  prerequisite = { focus = MDL_king_of_arabia }
+  prerequisite = { focus = MDL_colonial_industry }
+  available = {
+    733 = { is_owned_and_controlled_by = ROOT }
+    868 = { is_owned_and_controlled_by = ROOT }
+    MGY = { exists = no }
+    ASS = { exists = no }
+    ANS = { exists = no }
+    SDL = { exists = no }
+    SDF = { exists = no }
+    SDC = { exists = no }
+    SDS = { exists = no }
+    KLG = { exists = no }
+  }
+  cost = 10
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_grand_colonial_railway"
+    build_railway = {
+      level = 3
+      start_province = 7321
+      target_province = 14649
+    }
+    add_stability = 0.05
+    add_popularity = { ideology = fascism popularity = 0.05 }
+  }
+  search_filters = { FOCUS_FILTER_INDUSTRY }
+}
+
+shared_focus = {
+  id = MDL_veteran_army
+  icon = GFX_MDL_veteran_army 
+  x = 1
+  y = 1
+  relative_position_id = MDL_imperial_education
+  prerequisite = { focus = MDL_imperial_education }
+  prerequisite = { focus = MDL_core_klugetown }
+  cost = 10
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_veteran_army"
+    country_event = manedalusia.111
+    add_ideas = MDL_veteran_colonial_army
+    army_experience = 25
+    add_doctrine_cost_reduction = {
+      name = land_doc_bonus
+      cost_reduction = 0.5
+      uses = 1
+      category = land_doctrine
+    }
+  }
+  search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_RESEARCH }
+}
+
+shared_focus = {
+  id = MDL_maregypt_infrastructure_expansion
+  icon = GFX_MDL_maregypt_infrastructure_expansion
+  x = -1
+  y = 1
+  relative_position_id = MDL_imperial_autarky
+  cost = 10
+  prerequisite = { focus = MDL_imperial_autarky }
+  available = {
+    733 = { is_owned_and_controlled_by = ROOT }
+  }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_maregypt_infrastructure_expansion"
+    every_owned_state = {
+      limit = { is_core_of = MGY }
+      add_compliance = 15
+    }
+    build_railway = {
+      level = 2
+      start_province = 5195
+      target_province = 19169
+    }
+    737 = {
+      add_building_construction = {
+        type = infrastructure
+        level = 1
+        instant_build = yes
+      }
+    }
+    734 = {
+      add_building_construction = {
+        type = infrastructure
+        level = 1
+        instant_build = yes
+      }
+    }
+    733 = {
+      add_building_construction = {
+        type = infrastructure
+        level = 1
+        instant_build = yes
+      }
+    }
+    736 = {
+      add_building_construction = {
+        type = infrastructure
+        level = 1
+        instant_build = yes
+      }
+    }
+    735 = {
+      add_building_construction = {
+        type = infrastructure
+        level = 1
+        instant_build = yes
+      }
+    }
+  }
+  search_filters = { FOCUS_FILTER_INDUSTRY }
+}
+
+shared_focus = {
+  id = MDL_pony_synthesis
+  icon = GFX_MDL_pony_synthesis
+  x = 1
+  y = 1
+  relative_position_id = MDL_colonial_university
+  cost = 10
+  prerequisite = { focus = MDL_colonial_university }
+  available = {
+    ABY = { exists = no }
+    775 = { is_owned_and_controlled_by = ROOT }
+  }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_pony_synthesis"
+    country_event = manedalusia.112
+    add_popularity = { ideology = fascism popularity = 0.10 }
+    add_ideas = MDL_pony_synthesis_idea
+    741 = { add_manpower = 100000 }
+  }
+  search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_STABILITY }
+}
+
+shared_focus = {
+  id = MDL_core_klugetown
+  icon = GFX_MDL_core_klugetown
+  x = 1
+  y = 1
+  relative_position_id = MDL_pony_synthesis
+  cost = 10
+  prerequisite = { focus = MDL_pony_synthesis }
+  available = {
+    1208 = { is_owned_and_controlled_by = ROOT }
+    KLG = { exists = no }
+  }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_core_klugetown"
+    add_state_core = 1208
+    1208 = {
+      add_extra_state_shared_building_slots = 5
+      add_building_construction = {
+        type = industrial_complex
+        level = 3
+        instant_build = yes
+      }
+      add_building_construction = {
+        type = arms_factory
+        level = 2
+        instant_build = yes
+      }
+    }
+    search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
+  }
+}
+
+shared_focus = {
+  id = MDL_king_of_arabia
+  icon = GFX_MDL_king_of_arabia
+  x = -1
+  y = 1
+  relative_position_id = MDL_maregypt_infrastructure_expansion
+  cost = 10
+  prerequisite = { focus = MDL_maregypt_infrastructure_expansion }
+  available = {
+    has_completed_focus = MDL_colonial_administration
+    SDL = { all_original_cores_owned_by_ROOT = yes }
+  }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_king_of_arabia"
+    add_ideas = MDL_maxed_dominion
+
+    Custom_effect_tooltip = MDL_king_of_arabia_tt
+    effect_tooltip = {
+      add_compliance = 15
+      add_dynamic_modifier = { modifier = MDL_colonial_admin }     
+    }
+
+    hidden_effect = {
+      every_owned_state = {
+        limit = { is_in_array = { state_original_cores = SDL } }
+        add_compliance = 15
+        add_dynamic_modifier = { modifier = MDL_colonial_admin }
+      }
+    }
+  }
+  search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESISTANCE FOCUS_FILTER_MANPOWER FOCUS_FILTER_STABILITY }
+}
+
+shared_focus = {
+  id = MDL_i_see_maar_fall_like_lightning
+  icon = GFX_MDL_falling_griff
+  x = 0
+  y = 2
+  relative_position_id = MDL_colonial_administration
+  cost = 5
+  prerequisite = { focus = MDL_pony_imperials }
+  prerequisite = { focus = MDL_total_war }
+  available = {
+    WNG = {
+      has_civil_war = no
+    }
+  }
+  bypass = {
+    371 = { is_owned_and_controlled_by = ROOT }
+  }
+  will_lead_to_war_with = WNG
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_i_see_maar_fall_like_lightning"
+    if = {
+      limit = { WNG = { exists = yes } }
+      declare_war_on = { type = annex_everything target = WNG }
+      if = {#just in case the Regno is formed
+        limit = {
+          ABY = {
+            exists = yes
+            is_subject_of = WNG
+          }
+        }
+        declare_war_on = { type = annex_everything target = ABY }
+      }
+    }
+    else = {
+      declare_war_on = {#whoever owns karthin
+        type = annex_everything
+        target = 371.owner
+      }
+    }
+  }
+  search_filters = { FOCUS_FILTER_ANNEXATION }
+}
+
+shared_focus = {
+  id = MDL_imperial_navy
+  icon = GFX_MDL_imperial_navy
+  x = -7
+  y = 1
+  cost = 10
+  relative_position_id = MDL_restoring_the_light
+  prerequisite = { focus = MDL_restoring_the_light }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_imperial_navy"
+    add_doctrine_cost_reduction = {
+      name = naval_doc_bonus
+      cost_reduction = 0.75
+      uses = 1
+      category = naval_doctrine
+    }
+    add_tech_bonus = {
+      name = MDL_cruisers
+      bonus = 0.75
+      uses = 3
+      category = dd_tech
+      category = ca_tech
+    }
+  }
+  search_filters = { FOCUS_FILTER_RESEARCH }
+}
+
+shared_focus = {
+  id = MDL_new_karthin_dockyards
+  icon = GFX_MDL_new_karthin_dockyards
+  cost = 10
+  x = 1
+  y = 1
+  relative_position_id = MDL_imperial_navy
+  prerequisite = { focus = MDL_imperial_navy }
+  available = {
+    740 = { is_owned_and_controlled_by = ROOT }
+    738 = { is_owned_and_controlled_by = ROOT }
+  }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_new_karthin_dockyards"
+    740 = {
+      add_extra_state_shared_building_slots = 2
+      add_building_construction = {
+        type = dockyard
+        level = 2
+        instant_build = yes
+      }
+    }
+    738 = {
+      add_extra_state_shared_building_slots = 2
+      add_building_construction = {
+        type = dockyard
+        level = 2
+        instant_build = yes
+      }
+    }
+  }
+  search_filters = { FOCUS_FILTER_INDUSTRY}
+}
+
+shared_focus = {
+  id = MDL_abyssinian_mines
+  icon = GFX_MDL_abyssinian_mines
+  cost = 10
+  x = 0
+  y = 1
+  relative_position_id = MDL_new_karthin_dockyards
+  prerequisite = { focus = MDL_new_karthin_dockyards }
+  available = {
+    771 = { is_owned_and_controlled_by = ROOT }
+    772 = { is_owned_and_controlled_by = ROOT }
+    774 = { is_owned_and_controlled_by = ROOT }
+  }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_abyssinian_mines"
+    771 = {
+      add_resource = {
+        type = steel
+        amount = 10
+      }
+    }
+    772 = {
+      add_resource = {
+        type = steel
+        amount = 10
+      }
+    }
+    774 = {
+      add_resource = {
+        type = tungsten
+        amount = 8
+      }
+    }
+  }
+  search_filters = { FOCUS_FILTER_INDUSTRY }
+}
+
+shared_focus = {
+  id = MDL_subs_tech
+  icon = GFX_MDL_subs_tech
+  cost = 10
+  x = -1
+  y = 1
+  relative_position_id = MDL_imperial_navy
+  prerequisite = { focus = MDL_imperial_navy }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_subs_tech"
+    add_tech_bonus = {
+      name = MDL_subs_tech
+      bonus = 1.5
+      uses = 3
+      category = ss_tech
+    }
+  }
+  search_filters = { FOCUS_FILTER_RESEARCH }
+}
+
+shared_focus = {
+  id = MDL_imperial_admiralty
+  icon = GFX_MDL_imperial_admiralty
+  cost = 10
+  x = 0
+  y = 1
+  relative_position_id = MDL_subs_tech
+  prerequisite = { focus = MDL_subs_tech }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_imperial_admiralty"
+    navy_experience = 25
+    add_ideas = MDL_imperial_admiralty_idea
+
+    custom_effect_tooltip = available_chief_of_army
+    show_ideas_tooltip = MDL_imperial_admiralty_char
+  }
+  search_filters = { FOCUS_FILTER_NAVY_BONUS }
+}
+
+shared_focus = {
+  id = MDL_core_coast
+  icon = GFX_MDL_core_coast
+  cost = 10
+  x = 1
+  y = 1
+  relative_position_id = MDL_imperial_admiralty
+  prerequisite = { focus = MDL_imperial_admiralty }
+  prerequisite = { focus = MDL_abyssinian_mines }
+  available = {
+    738 = { is_owned_and_controlled_by = ROOT }
+    740 = { is_owned_and_controlled_by = ROOT }
+    771 = { is_owned_and_controlled_by = ROOT }
+    772 = { is_owned_and_controlled_by = ROOT }
+    774 = { is_owned_and_controlled_by = ROOT }
+  }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_core_coast"
+    country_event = manedalusia.116
+    add_stability = 0.05
+    add_state_core = 771
+    add_state_core = 772
+    add_state_core = 774
+    add_state_core = 738
+    add_state_core = 740
+  }
+  search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER FOCUS_FILTER_RESISTANCE }
+}
+
+shared_focus = {
+  id = MDL_imperial_naval_projection
+  icon = GFX_MDL_imperial_naval_projection
+  cost = 10
+  x = 1
+  y = 1
+  relative_position_id = MDL_core_coast
+  prerequisite = { focus = MDL_core_coast }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_imperial_naval_projection"
+    add_ideas = MDL_naval_projection_idea
+  }
+  search_filters = { FOCUS_FILTER_NAVY_BONUS }
+}
+
+shared_focus = {
+  id = MDL_imperial_battleships
+  icon = GFX_MDL_imperial_battleships
+  cost = 10
+  x = -1
+  y = 1
+  relative_position_id = MDL_core_coast
+  prerequisite = { focus = MDL_core_coast }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_imperial_battleships"
+    add_tech_bonus = {
+      name = MDL_imperial_battleships
+      bonus = 1.0
+      uses = 2
+      category = bb_tech
+    }
+    add_tech_bonus = {
+      name = MDL_imperial_battleships
+      bonus = 0.50
+      uses = 2
+      category = dd_tech
+      category = ca_tech
+    }
+  }
+  search_filters = { FOCUS_FILTER_RESEARCH }
+}
+
+shared_focus = {
+  id = MDL_imperial_carriers
+  icon = GFX_MDL_imperial_carriers
+  cost = 10
+  x = 1
+  y = 1
+  relative_position_id = MDL_imperial_naval_projection
+  prerequisite = { focus = MDL_imperial_naval_projection }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_imperial_carriers"
+    add_tech_bonus = {
+      name = cv_bonus
+      bonus = 1.5
+      uses = 2
+      category = cv_tech
+    }
+  }
+  search_filters = { FOCUS_FILTER_RESEARCH }
+}
+
+shared_focus = {
+  id = MDL_mega_based_navy
+  icon = GFX_MDL_mega_based_navy
+  cost = 10
+  x = -1
+  y = 1
+  relative_position_id = MDL_imperial_naval_projection
+  available = {
+    371 = { is_owned_and_controlled_by = ROOT }
+  }
+  prerequisite = { focus = MDL_imperial_battleships }
+  prerequisite = { focus = MDL_imperial_naval_projection }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_mega_based_navy"
+    add_ideas = MDL_grand_imperial_navy
+    navy_experience = 25
+    add_doctrine_cost_reduction = {
+      name = naval_doc_bonus
+      cost_reduction = 0.5
+      uses = 2
+      category = naval_doctrine
+    }
+  }
+  search_filters = { FOCUS_FILTER_NAVY_BONUS }
+}
+
+shared_focus = {
+  id = MDL_imperial_naval_bombers
+  icon = GFX_MDL_imperial_naval_bombers
+  cost = 10
+  x = -1
+  y = 1
+  relative_position_id = MDL_imperial_battleships
+  prerequisite = { focus = MDL_imperial_battleships }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_imperial_naval_bombers"
+    add_tech_bonus = {
+      name = WNG_navel_bombers
+      bonus = 1.0
+      uses = 2
+      category = naval_bomber
+    }
+  }
+  search_filters = { FOCUS_FILTER_RESEARCH }
+}
+
+shared_focus = {
+  id = MDL_imperial_electronics
+  icon = GFX_MDL_imperial_electronics
+  x = 3
+  y = 1
+  cost = 10
+  relative_position_id = MDL_restoring_the_light
+  prerequisite = { focus = MDL_restoring_the_light }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_imperial_electronics"
+    add_tech_bonus = {
+      name = MDL_imperial_electronics
+      bonus = 1.0
+      uses = 2
+      category = electronics
+    }
+    add_research_slot = 1
+    increase_science_base = yes
+    custom_effect_tooltip = available_industrial_concern
+    show_ideas_tooltip = MDL_imperial_electrics
+  }
+  search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+}
+
+shared_focus = {
+  id = MDL_imperial_synthetics
+  icon = GFX_MDL_imperial_synthetics
+  x = 5
+  y = 1
+  cost = 10
+  relative_position_id = MDL_restoring_the_light
+  prerequisite = { focus = MDL_restoring_the_light }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_imperial_synthetics"
+    764 = {
+      add_resource = {
+        type = oil
+        amount = 10
+      }
+    }
+		add_tech_bonus = {
+			name = synth_bonus
+			bonus = 0.5
+			uses = 2
+			category = synth_resources
+		}
+		741 = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = synthetic_refinery
+				level = 1
+				instant_build = yes
+			}
+		}
+  }
+  search_filters = { FOCUS_FILTER_INDUSTRY }
+}
+
+shared_focus = {
+  id = MDL_imperial_magic
+  icon = GFX_MDL_imperial_magic
+  x = 1
+  y = 1
+  cost = 10
+  relative_position_id = MDL_imperial_electronics
+  prerequisite = { focus = MDL_imperial_electronics }
+  prerequisite = { focus = MDL_imperial_synthetics }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_imperial_magic"
+    set_technology = { tech_synthetic_crystal_refinery = 1 }
+    add_tech_bonus = {
+			name = MDL_imperial_magic
+			bonus = 1.0
+			uses = 2
+			technology = magical_weapons
+			technology = magical_weapons1
+			technology = magical_weapons2
+			technology = magical_weapons3
+		}
+  }
+  search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY}
+}
+
+shared_focus = {
+  id = MDL_imperial_agriculture
+  icon = GFX_MDL_imperial_agriculture
+  x = -3
+  y = 1
+  cost = 10
+  relative_position_id = MDL_restoring_the_light
+  prerequisite = { focus = MDL_restoring_the_light }
+  available = {
+    735 = { is_owned_and_controlled_by = ROOT }
+    790 = { is_owned_and_controlled_by = ROOT }
+    810 = { is_owned_and_controlled_by = ROOT }
+  }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_imperial_agriculture"
+
+    custom_effect_tooltip = MDL_imperial_agriculture_tt
+    effect_tooltip = {
+      add_extra_state_shared_building_slots = 1
+      add_manpower = 5000
+    }
+
+    hidden_effect = {
+      every_owned_state = {
+        limit = {
+          OR = {
+            is_core_of = ABY
+            is_core_of = MGY
+            is_core_of = MKS
+            is_core_of = YMN
+            is_core_of = ASS
+            is_core_of = ANS
+          }
+        }
+        add_extra_state_shared_building_slots = 1
+        add_manpower = 5000
+      }
+    }
+
+    custom_effect_tooltip = available_industrial_concern
+    show_ideas_tooltip = MDL_imperial_agri
+  }
+  search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MANPOWER }
+}
+
+shared_focus = {
+  id = MDL_imperial_corporativism
+  icon = GFX_MDL_imperial_corporativism
+  x = -5
+  y = 1
+  cost = 10
+  relative_position_id = MDL_restoring_the_light
+  prerequisite = { focus = MDL_restoring_the_light }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_imperial_corporativism"
+    add_popularity = { ideology = fascism popularity = 0.05 }
+    add_war_support = 0.05
+    add_offsite_building = { type = industrial_complex level = 1 }
+    add_offsite_building = { type = arms_factory level = 1 }
+    add_ideas = MDL_corporativism_idea
+  }
+  search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_WAR_SUPPORT }
+}
+
+shared_focus = {
+  id = MDL_imperial_diplo_corps
+  icon = GFX_MDL_imperial_diplo_corps
+  x = -1
+  y = 1
+  cost = 10
+  relative_position_id = MDL_imperial_agriculture
+  prerequisite = { focus = MDL_imperial_corporativism }
+  prerequisite = { focus = MDL_imperial_agriculture }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_imperial_diplo_corps"
+		add_research_slot = 1
+		increase_science_base = yes
+    add_ideas = MDL_imperial_diplo_corps_idea
+  }
+  search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+}
+
+shared_focus = {
+  id = MDL_imperial_support_tech
+  icon = GFX_MDL_imperial_support_tech
+  x = 7
+  y = 1
+  cost = 10
+  relative_position_id = MDL_restoring_the_light
+  prerequisite = { focus = MDL_restoring_the_light }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_imperial_support_tech"
+    add_tech_bonus = {
+			name = MDL_imperial_support_tech
+			bonus = 1.0
+			uses = 3
+			category = support_tech
+		}
+    add_tech_bonus = {
+			name = MDL_field_medics
+			bonus = 0.75
+			uses = 1
+			category = hospital_tech
+		}
+    add_tech_bonus = {
+			name = MDL_recon_bonus
+			bonus = 0.75
+			uses = 1
+			category = recon_tech
+		}
+    add_ideas = MDL_imperial_logistical_corps
+  }
+  search_filters = { FOCUS_FILTER_RESEARCH }
+}
+
+shared_focus = {
+  id = MDL_imperial_fighters
+  icon = GFX_MDL_imperial_fighters
+  cost = 10
+  x = 1
+  y = 1
+  relative_position_id = MDL_imperial_support_tech
+  prerequisite = { focus = MDL_imperial_support_tech }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_imperial_fighters"
+    add_tech_bonus = {
+      name = MDL_imperial_fighters
+      bonus = 1.5
+      uses = 2
+      category = light_fighter
+    }
+  }
+  search_filters = { FOCUS_FILTER_RESEARCH }
+}
+
+shared_focus = {
+  id = MDL_imperial_plane_tech
+  icon = GFX_MDL_imperial_plane_tech
+  cost = 10
+  x = 0
+  y = 1
+  relative_position_id = MDL_imperial_fighters
+  prerequisite = { focus = MDL_imperial_fighters }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_imperial_plane_tech"
+    add_tech_bonus = {
+			name = MDL_imperial_plane_tech
+			bonus = 1.0
+			uses = 2
+			category = tactical_bomber
+		}
+		add_tech_bonus = {
+			name = MDL_imperial_plane_tech
+			bonus = 1.0
+			uses = 2
+			category = cas_bomber
+		}
+    show_ideas_tooltip = available_designer
+    show_ideas_tooltip = MDL_imperial_planes
+  }
+  search_filters = { FOCUS_FILTER_RESEARCH }
+}
+
+shared_focus = {
+  id = MDL_imperial_spec_ops
+  icon = GFX_MDL_imperial_spec_ops
+  cost = 10
+  x = -1
+  y = 1
+  relative_position_id = MDL_imperial_support_tech
+  prerequisite = { focus = MDL_imperial_support_tech }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_imperial_spec_ops"
+    add_tech_bonus = {
+      name = MDL_imperial_spec_ops
+      bonus = 1.0
+      uses = 2
+      category = special_forces_tech
+    }
+    add_ideas = MDL_spec_ops_idea
+  }
+  search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_BONUS }
+}
+
+shared_focus = {
+  id = MDL_imperial_armor
+  icon = GFX_MDL_imperial_armor
+  cost = 10
+  x = 0
+  y = 1
+  relative_position_id = MDL_imperial_spec_ops
+  prerequisite = { focus = MDL_imperial_spec_ops }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_imperial_armor"
+		add_tech_bonus = {
+			name = MDL_imperial_armor
+			bonus = 1.5
+			uses = 2
+			category = armor
+		}
+
+    custom_effect_tooltip = available_designer
+    show_ideas_tooltip = MDL_imperial_tanks
+  }
+  search_filters = { FOCUS_FILTER_RESEARCH }
+}
+
+shared_focus = {
+  id = MDL_nonstop_barrage
+  icon = GFX_MDL_nonstop_barrage
+  cost = 10
+  x = 1
+  y = 1
+  relative_position_id = MDL_imperial_armor
+  prerequisite = { focus = MDL_imperial_armor }
+  prerequisite = { focus = MDL_imperial_plane_tech }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_nonstop_barrage"
+    add_ideas = MDL_imperial_artillery_barrage
+    add_tech_bonus = {
+      name = MDL_nonstop_barrage
+      bonus = 1.5
+      uses = 2
+      category = artillery
+    }
+  }
+  search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_RESEARCH }
+}
+
+shared_focus = {
+  id = MDL_imperial_heavy_fighters
+  icon = GFX_MDL_imperial_heavy_fighters
+  cost = 10
+  x = 1
+  y = 1
+  relative_position_id = MDL_nonstop_barrage
+  prerequisite = { focus = MDL_nonstop_barrage }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_imperial_heavy_fighters"
+		if = {
+      limit = { has_dlc = "By Blood Alone" }
+			add_tech_bonus = {
+				name = MDL_imperial_heavy_fighters
+				bonus = 1.0
+				uses = 1
+				category = medium_air
+			}
+			add_tech_bonus = {
+				name = MDL_imperial_heavy_fighters
+				bonus = 0.75
+				uses = 1
+				category = cat_air_guns
+			}
+		}
+		else = {
+			add_tech_bonus = {
+				name = MDL_imperial_heavy_fighters
+				bonus = 1.0
+				uses = 2
+				category = cat_heavy_fighter
+			}
+		}
+  }
+  search_filters = { FOCUS_FILTER_RESEARCH }
+}
+
+shared_focus = {
+  id = MDL_imperial_heavy_tanks
+  icon = GFX_MDL_imperial_heavy_tanks
+  cost = 10
+  x = -1
+  y = 1
+  relative_position_id = MDL_nonstop_barrage
+  prerequisite = { focus = MDL_nonstop_barrage }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_imperial_heavy_tanks"
+    add_tech_bonus = {
+			name = MDL_imperial_heavy_tanks
+			bonus = 2.5
+			uses = 2
+			category = cat_heavy_armor
+		}
+  }
+  search_filters = { FOCUS_FILTER_RESEARCH }
+}
+
+shared_focus = {
+  id = MDL_imperial_pilots
+  icon = GFX_MDL_imperial_pilots
+  cost = 10
+  x = 1
+  y = 1
+  relative_position_id = MDL_imperial_heavy_fighters
+  prerequisite = { focus = MDL_imperial_heavy_fighters }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_imperial_pilots"
+    add_ideas = MDL_imperial_pilots_idea
+  }
+  search_filters = { FOCUS_FILTER_AIRFORCE_BONUS }
+}
+
+shared_focus = {
+  id = MDL_project_excelsior
+  icon = GFX_MDL_project_excelsior
+  cost = 10
+  x = -1
+  y = 1
+  relative_position_id = MDL_imperial_heavy_fighters
+  prerequisite = { focus = MDL_imperial_heavy_tanks }
+  prerequisite = { focus = MDL_imperial_heavy_fighters }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_project_excelsior"
+		add_breakthrough_progress = {
+			specialization = specialization_nuclear
+			value = 1
+		}
+    add_tech_bonus = {
+			name = MDL_bomb
+			bonus = 3.0
+			uses = 1
+			category = nuclear
+		}
+  }
+  search_filters = { FOCUS_FILTER_RESEARCH }
+}
+
+shared_focus = {
+  id = MDL_imperial_air_doctrine
+  icon = GFX_MDL_imperial_air_doctrine
+  cost = 10
+  x = -1
+  y = 1
+  relative_position_id = MDL_imperial_heavy_tanks
+  prerequisite = { focus = MDL_imperial_heavy_tanks }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_imperial_air_doctrine"
+    add_doctrine_cost_reduction = {
+			name = MDL_imperial_air_doctrine
+			cost_reduction = 0.5
+			uses = 2
+			category = air_doctrine
+		}
+  }
+  search_filters = { FOCUS_FILTER_RESEARCH }
+}
+
+shared_focus = {
+  id = MDL_integrate_karthin
+  icon = GFX_MDL_integrate_karthin
+  cost = 10
+  x = 0
+  y = 1
+  relative_position_id = MDL_i_see_maar_fall_like_lightning
+  available = {
+    371 = { is_owned_and_controlled_by = ROOT }
+    WNG = { exists = no }
+  }
+  prerequisite = { focus = MDL_i_see_maar_fall_like_lightning }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_integrate_karthin"
+    create_faction = MDL_IMPERIO
+    WNG = { add_to_ROOT_potential_cores = yes }
+    custom_effect_tooltip = MDL_integrate_karthin_tt
+    hidden_effect = { set_country_flag = MDL_imperium_restored }
+  }
+  search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER }
+}
+
+shared_focus = {
+  id = MDL_core_eastern_empire
+  icon = GFX_MDL_core_eastern_empire
+  cost = 10
+  x = 1
+  y = 1
+  relative_position_id = MDL_integrate_karthin
+  prerequisite = { focus = MDL_integrate_karthin }
+  available = {
+    445 = { is_owned_and_controlled_by = ROOT }
+    671 = { is_owned_and_controlled_by = ROOT }
+    389 = { is_owned_and_controlled_by = ROOT }
+    383 = { is_owned_and_controlled_by = ROOT }
+  }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_core_eastern_empire"
+    SIC = { add_to_ROOT_potential_cores = yes }
+    LAK = { add_to_ROOT_potential_cores = yes }
+    CYA = { add_to_ROOT_potential_cores = yes }
+    BOI = { add_to_ROOT_potential_cores = yes }
+  }
+  search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_POLITICAL }
+}
+
+shared_focus = {
+  id = MDL_core_western_empire
+  icon = GFX_MDL_core_western_empire
+  cost = 10
+  x = -1
+  y = 1
+  relative_position_id = MDL_integrate_karthin
+  prerequisite = { focus = MDL_integrate_karthin }
+  available = {
+    515 = { is_owned_and_controlled_by = ROOT }
+    530 = { is_owned_and_controlled_by = ROOT }
+    487 = { is_owned_and_controlled_by = ROOT }
+    366 = { is_owned_and_controlled_by = ROOT }
+  }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_core_western_empire"
+    FAL = { add_to_ROOT_potential_cores = yes }
+    TAL = { add_to_ROOT_potential_cores = yes }
+    FRN = { add_to_ROOT_potential_cores = yes }
+    JES = { add_to_ROOT_potential_cores = yes }
+    ARA = { add_to_ROOT_potential_cores = yes }
+  }
+  search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_POLITICAL }
+}
+
+shared_focus = {
+  id = MDL_industry_of_karthin
+  icon = GFX_MDL_industry_of_karthin
+  x = 0
+  y = 1
+  cost = 10
+  relative_position_id = MDL_core_eastern_empire
+  prerequisite = { focus = MDL_core_eastern_empire }
+  cost = 10
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_industry_of_karthin"
+		increase_society_development = yes
+  }
+  search_filters = { FOCUS_FILTER_INDUSTRY }
+}
+
+shared_focus = {
+  id = MDL_reinstate_south_griffonia_society
+  icon = GFX_MDL_reinstate_south_griffonia_society
+  x = 0
+  y = 1
+  cost = 10
+  relative_position_id = MDL_core_western_empire
+  prerequisite = { focus = MDL_core_western_empire }
+  cost = 10
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_reinstate_south_griffonia_society"
+    add_ideas = MDL_southern_griffonian_society
+  }
+  search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH }
+}
+
+shared_focus = {
+  id = MDL_karthin_legions
+  icon = GFX_MDL_karthin_legions
+  x = 0
+  y = 3
+  cost = 10
+  relative_position_id = MDL_integrate_karthin
+  prerequisite = { focus = MDL_reinstate_south_griffonia_society }
+  prerequisite = { focus = MDL_industry_of_karthin }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_karthin_legions"
+    add_ideas = MDL_karthin_legions_idea
+  }
+  search_filters = { FOCUS_FILTER_ARMY_BONUS }
+}
+
+shared_focus = {
+  id = MDL_integrate_macawia
+  icon = GFX_MDL_integrate_macawia
+  x = 2
+  y = 1
+  relative_position_id = MDL_i_see_maar_fall_like_lightning
+  cost = 10
+  available = {
+    MCW = { is_subject_of = ROOT }
+  }
+  prerequisite = { focus = MDL_i_see_maar_fall_like_lightning }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_integrate_macawia"
+    MCW = { add_ideas = MDL_MCW_carrier }
+  }
+  search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_NAVY_BONUS }
+}
+
+shared_focus = {
+  id = MDL_imperial_trade_network
+  icon = GFX_MDL_imperial_trade_network
+  x = 0
+  y = 3
+  relative_position_id = MDL_integrate_macawia
+  cost = 10
+  prerequisite = { focus = MDL_integrate_macawia }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_imperial_trade_network"
+    add_ideas = MDL_southern_griffonian_imperial_company
+  }
+  search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+}
+
+shared_focus = {
+  id = MDL_integrate_greneclyf
+  icon = GFX_MDL_integrate_greneclyf
+  x = -2
+  y = 1
+  relative_position_id = MDL_i_see_maar_fall_like_lightning
+  cost = 10
+  available = {
+    NCH = { is_subject_of = ROOT }
+  }
+  prerequisite = { focus = MDL_i_see_maar_fall_like_lightning }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_integrate_greneclyf"
+    add_tech_bonus = {
+      name = MDL_integrate_greneclyf
+      bonus = 1.0
+      uses = 1
+      category = electronics
+    }
+    add_ideas = MDL_shadowweavers
+  }
+  search_filters = { FOCUS_FILTER_RESEARCH }
+}
+
+shared_focus = {
+  id = MDL_native_affairs
+  icon = GFX_MDL_native_affairs
+  x = 0
+  y = 3
+  relative_position_id = MDL_integrate_greneclyf
+  cost = 10
+  prerequisite = { focus = MDL_integrate_greneclyf }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_native_affairs"
+    custom_effect_tooltip = MDL_native_affairs_tt
+    effect_tooltip = { add_ideas = MDL_native_affairs_idea }
+
+    hidden_effect = {
+      every_country = {
+        limit = { is_subject_of = ROOT }
+        add_ideas = MDL_native_affairs_idea
+      }
+    }
+  }
+  search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
+}
+
+shared_focus = {
+  id = MDL_integrate_new_mareland
+  icon = GFX_MDL_integrate_new_mareland
+  x = -4
+  y = 2
+  cost = 10
+  available = {
+    EQC = { is_subject_of = ROOT }
+  }
+  relative_position_id = MDL_i_see_maar_fall_like_lightning
+  prerequisite = { focus = MDL_i_see_maar_fall_like_lightning }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_integrate_new_mareland"
+    add_ideas = MDL_imperial_parliament_1
+  }
+  search_filters = { FOCUS_FILTER_POLITICAL }
+}
+
+shared_focus = {
+  id = MDL_integrate_aquileia
+  icon = GFX_MDL_integrate_aquileia
+  x = 1
+  y = 1
+  cost = 10
+  available = {
+    JER = { is_subject_of = ROOT }
+  }
+  relative_position_id = MDL_integrate_new_mareland
+  prerequisite = { focus = MDL_integrate_new_mareland }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_integrate_aquileia"
+    swap_ideas = {
+      remove_idea = MDL_imperial_parliament_1
+      add_idea = MDL_imperial_parliament_2
+    }
+  }
+  search_filters = { FOCUS_FILTER_POLITICAL }
+}
+
+shared_focus = {
+  id = MDL_integrate_empire
+  icon = GFX_MDL_integrate_empire
+  x = -1
+  y = 1
+  cost = 10
+  available = {
+    GRI = { is_subject_of = ROOT }
+  }
+  relative_position_id = MDL_integrate_new_mareland
+  prerequisite = { focus = MDL_integrate_new_mareland }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_integrate_empire"
+    country_event = manedalusia.113
+  }
+  search_filters = { FOCUS_FILTER_POLITICAL }
+}
+
+shared_focus = {
+  id = MDL_integrate_north
+  icon = GFX_MDL_integrate_north
+  x = -1
+  y = 1
+  cost = 10
+  available = {
+    FAT = { is_subject_of = ROOT }
+  }
+  relative_position_id = MDL_integrate_aquileia
+  prerequisite = { focus = MDL_integrate_empire }
+  prerequisite = { focus = MDL_integrate_aquileia }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_integrate_north"
+    swap_ideas = {
+      remove_idea = MDL_imperial_parliament_2
+      add_idea = MDL_imperial_parliament_3
+    }
+  }
+  search_filters = { FOCUS_FILTER_POLITICAL }
+}
+
+shared_focus = {
+  id = MDL_integrate_asterion
+  icon = GFX_MDL_integrate_asterion
+  x = 4
+  y = 2
+  relative_position_id = MDL_i_see_maar_fall_like_lightning
+  prerequisite = { focus = MDL_i_see_maar_fall_like_lightning }
+  available = {
+    MIT = { is_subject_of = ROOT }
+  }
+  cost = 10
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_integrate_asterion"
+    add_ideas = MDL_imperial_soul_1
+  }
+  search_filters = { FOCUS_FILTER_POLITICAL }
+}
+
+shared_focus = {
+  id = MDL_integrate_southeast
+  icon = GFX_MDL_integrate_southeast
+  x = 1
+  y = 1
+  cost = 10
+  available = {
+    GRU = { is_subject_of = ROOT }
+  }
+  relative_position_id = MDL_integrate_asterion
+  prerequisite = { focus = MDL_integrate_asterion }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_integrate_southeast"
+    swap_ideas = {
+      remove_idea = MDL_imperial_soul_1
+      add_idea = MDL_imperial_soul_2
+    }
+  }
+  search_filters = { FOCUS_FILTER_POLITICAL }
+}
+
+shared_focus = {
+  id = MDL_integrate_riverpones
+  icon = GFX_MDL_integrate_riverpones
+  x = -1
+  y = 1
+  cost = 10
+  available = {
+    RIV = { is_subject_of = ROOT }
+  }
+  relative_position_id = MDL_integrate_asterion
+  prerequisite = { focus = MDL_integrate_asterion }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_integrate_riverpones"
+    add_stability = 0.10
+    add_popularity = { ideology = fascism popularity = 0.15 }
+  }
+  search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+}
+
+shared_focus = {
+  id = MDL_integrate_hillpones
+  icon = GFX_MDL_integrate_hillpones
+  x = 1
+  y = 1
+  cost = 10
+  available = {
+    FIR = { is_subject_of = ROOT }
+  }
+  relative_position_id = MDL_integrate_riverpones
+  prerequisite = { focus = MDL_integrate_riverpones }
+  prerequisite = { focus = MDL_integrate_southeast }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_integrate_riverpones"
+    swap_ideas = {
+      remove_idea = MDL_imperial_soul_2
+      add_idea = MDL_imperial_soul_3
+    }
+  }
+  search_filters = { FOCUS_FILTER_POLITICAL }
+}
+
+shared_focus = {
+  id = MDL_pax_in_excelsior
+  icon = GFX_MDL_pax_in_excelsior
+  x = 0
+  y = 1
+  cost = 4
+  relative_position_id = MDL_karthin_legions
+  available = {
+    date > 1021.01.01
+  }
+  prerequisite = { focus = MDL_integrate_north }
+  prerequisite = { focus = MDL_native_affairs }
+  prerequisite = { focus = MDL_karthin_legions }
+  prerequisite = { focus = MDL_imperial_trade_network }
+  prerequisite = { focus = MDL_integrate_hillpones }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_pax_in_excelsior"
+    country_event = manedalusia.114
+  }
+  search_filters = { FOCUS_FILTER_POLITICAL }
+}

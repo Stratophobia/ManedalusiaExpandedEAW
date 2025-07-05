@@ -1,0 +1,33 @@
+MDL_ai_behavior = {
+	name = "MDL_AI_BEHAVIOR"
+	group = "RULE_GROUP_AI_BEHAVIOR"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_DEFAULT_AI_DESC"
+	}
+  option = {
+		name = MDL_VELVET
+		text = "RULE_OPTION_VELVET"
+		desc = "RULE_OPTION_VELVET_MDL_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = MDL_CRIMSON_SULTAN
+		text = "RULE_OPTION_CRIMSON_SULTAN"
+		desc = "RULE_OPTION_CRIMSON_SULTAN_MDL_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = MDL_SENATE
+		text = "RULE_OPTION_SENATE"
+		desc = "RULE_OPTION_SENATE_MDL_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = RANDOM
+		text = "RULE_OPTION_RANDOM"
+		desc = "RULE_OPTION_RANDOM_AI_DESC"
+		allow_achievements = yes
+	}
+}

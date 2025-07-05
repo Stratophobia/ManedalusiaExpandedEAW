@@ -1,0 +1,28 @@
+leader_traits = {
+  MDL_logistical_cantrips_trait = {
+    type = land
+    trait_type = personality_trait
+
+    allowed = { original_tag = MDL }
+
+    modifier = { supply_consumption_factor = -0.10 }
+    enable_ability = extra_suplies
+
+    new_commander_weight = { factor = 0 }
+
+    logistics_skill_factor = 1
+  }
+  MDL_koltaliba_member_trait = {
+    type = land
+    trait_type = personality_trait
+
+    allowed = { original_tag = MDL }
+
+    modifier = {
+      special_forces_attack_factor = 0.05
+      attrition = -0.1
+    }
+
+    new_commander_weight = { factor = 0 }
+  }
+}

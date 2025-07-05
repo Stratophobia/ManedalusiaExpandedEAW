@@ -1,0 +1,11 @@
+spriteTypes = {
+  SpriteType = {
+    name="GFX_event_MDL_the_eye"
+    texturefile="gfx/event_pictures/MDL/event_the_eye.tga"
+  }
+  SpriteType = {
+    name="GFX_event_MDL_the_gang"
+    texturefile="gfx/event_pictures/MDL/event_the_gang.tga"
+  }
+}
+

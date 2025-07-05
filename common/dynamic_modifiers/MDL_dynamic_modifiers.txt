@@ -1,0 +1,74 @@
+MDL_colonial_admin = {
+	icon = GFX_modifiers_changeling_settlement_icon
+	enable = { always = yes }
+	remove_trigger = {
+		owner = {
+		  NOT = { original_tag = MDL }
+	  }
+	}
+	compliance_growth = 0.25
+	resistance_growth = -0.25
+	resistance_target = -0.25
+	resistance_decay = 0.25
+	state_resources_factor = 0.2
+	local_factories = 0.4
+}
+
+MDL_military_governorate = {
+	icon = GFX_modifiers_changeling_settlement_icon
+	enable = { always = yes }
+	remove_trigger = {
+		owner = {
+		  NOT = { original_tag = MDL }
+	  }
+	}
+	compliance_growth = 0.2
+	resistance_growth = -0.2
+	resistance_target = -0.2
+	resistance_decay = 0.2
+	state_resources_factor = 0.2
+	local_factories = 0.2
+	local_building_slots_factor	= 0.2
+	local_non_core_manpower = 0.2
+}
+
+MDL_asabiyyah_modifier = {
+	icon = GFX_idea_MDL_asabiyyah
+	enable = { always = yes }
+
+	remove_trigger = {
+		NOT = { has_country_flag = MDL_asabiyyah_unlocked }
+	}
+
+	trade_opinion_factor = MDL_trade_var
+	production_factory_max_efficiency_factor = MDL_production_var
+	research_speed_factor = MDL_research_var
+	army_org_factor = MDL_org_var
+	army_morale_factor = MDL_morale_var
+	surrender_limit = MDL_surrender_var
+	consumer_goods_factor = MDL_consoom_var
+	political_power_gain = MDL_pp_var
+	economy_cost_factor = MDL_economy_var
+	trade_laws_cost_factor = MDL_tradelaw_var
+	mobilization_laws_cost_factor = MDL_mobilization_var
+	stability_factor = MDL_stability_var
+	war_support_factor = MDL_war_var
+}
+
+MDL_federal_army_modifier = {
+  icon = GFX_idea_MDL_federal_army
+  enable = { always = yes }
+
+  remove_trigger = {
+    NOT = { has_country_flag = MDL_federal_army_unlocked }
+  }
+
+  special_forces_cap = MDL_FA_special_forces_var
+  army_attack_factor = MDL_FA_attack_var
+  army_defence_factor = MDL_FA_defence_var
+  air_superiority_bonus_in_combat = MDL_FA_air_var
+  army_speed_factor = MDL_FA_speed_var
+  naval_invasion_prep_speed = MDL_FA_nav_var 
+  breakthrough_factor = MDL_FA_smash_var
+  dont_lose_dig_in_on_attack = MDL_FA_dig_in_var
+}

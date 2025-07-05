@@ -1,0 +1,53 @@
+MDL_historical = {
+	name = "The People's Sultana"
+	desc = ""
+
+	allowed = {
+		original_tag = MDL
+	}
+
+	enable = {
+
+		OR = {
+			AND = {
+				is_historical_focus_on = yes
+			}
+      has_country_flag = MDL_AI_VELVET
+			has_game_rule = {
+				rule = MDL_ai_behavior
+				option = MDL_VELVET
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+    MDL_sultana_velvet
+	}
+
+	research = {
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		
+	}
+
+}

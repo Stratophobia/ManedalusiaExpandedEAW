@@ -1,0 +1,7 @@
+spriteTypes = {
+    spriteType = {
+      name = "GFX_radio_station_cover_ColtobaRadio"
+      textureFile = "gfx/interface/topbar/musicplayer/ColtobaRadio.dds"
+      noOfFrames = 2
+    }
+}

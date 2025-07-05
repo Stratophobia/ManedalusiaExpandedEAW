@@ -1,0 +1,24 @@
+division_template = {
+  name = "Freecorps"
+
+  regiments = {
+		knights = { x = 0 y = 0 }
+		knights = { x = 1 y = 0 }
+		knights = { x = 0 y = 1 }
+		knights = { x = 1 y = 1 }
+		knights = { x = 0 y = 2 }
+		knights = { x = 1 y = 2 }
+	}
+
+  priority = 1
+}
+
+units = {
+  division = {
+    name = "Freecorps of Purrsia"
+		location = 12234
+		division_template = "Freecorps"
+		start_experience_factor = 1.0
+		start_equipment_factor = 1.0
+  }
+}

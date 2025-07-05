@@ -1,0 +1,839 @@
+characters={
+	MDL_transitional_military_council={
+		name=MDL_transitional_military_council
+		portraits={
+			civilian={
+				large="gfx/leaders/MDL/council.tga"
+			}
+		}
+		country_leader={
+			desc=MDL_transitional_military_council_desc
+			ideology=khakistocracy
+			traits = { MDL_council_unstable_trait }
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	MDL_velvet_qamar={
+		name=MDL_velvet_qamar
+		portraits={
+			civilian={
+				large="gfx/leaders/MDL/velvet_qamar.tga"
+				small="gfx/interface/ideas/Advisors/MDL/MDL_velvet_qamar.tga"
+			}
+		}
+		gender=female
+		country_leader={
+			desc=MDL_velvet_qamar_desc
+			ideology=socialism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	MDL_sunset_mirage={
+		name=MDL_sunset_mirage
+		portraits={
+			civilian={
+				large="gfx/leaders/MDL/sunset_mirage.tga"
+			}
+		}
+		gender=female
+		country_leader={
+			desc=MDL_sunset_mirage_desc
+			ideology=religious_socialism
+			traits = { MDL_sunset_fundamentalist }
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	MDL_fernao_grifo={
+		name=MDL_fernao_grifo
+		portraits={
+			civilian={
+				large="gfx/leaders/MDL/fernao_grifo.tga"
+        small="gfx/interface/ideas/Advisors/MDL/MDL_fernao_grifo.tga"
+			}
+      army={
+				large="gfx/leaders/MDL/fernao_grifo.tga"
+      }
+		}
+		gender=male
+		country_leader={
+			desc=MDL_fernao_grifo_desc
+			ideology=esotericism
+			expire="1965.1.1.1"
+			id=-1
+		}
+		gender=male
+	}
+	MDL_armil_khaldun={
+		name=MDL_armil_khaldun
+		portraits={
+			civilian={
+				large="gfx/leaders/MDL/armil_khaldun.tga"
+        small="gfx/interface/ideas/Advisors/MDL/MDL_armil_khaldun.tga"
+			}
+			army={
+				large="gfx/leaders/MDL/armil_khaldun.tga"
+			}
+		}
+		gender=male
+	}
+	MDL_crimson_sayf={
+		name=MDL_crimson_sayf
+		portraits={
+			civilian={
+				large="gfx/leaders/MDL/crimson_sayf.tga"
+        small="gfx/interface/ideas/Advisors/MDL/MDL_crimson_sayf.tga"
+			}
+			army={
+				large="gfx/leaders/MDL/crimson_sayf.tga"
+			}
+		}
+		gender=male
+	}
+	MDL_canterto_maneossa = {
+		name=MDL_canterto_maneossa
+		portraits={
+      civilian={
+				large="gfx/leaders/MDL/kang.tga"
+        small="gfx/interface/ideas/Advisors/MDL/MDL_kang.tga"
+      }
+			army={
+				large="gfx/leaders/MDL/kang.tga"
+			}
+		}
+		corps_commander={
+			traits={ zebra_race_trait media_personality desert_fox ambusher trait_visitor }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=1
+		}
+    advisor={
+      slot=army_chief
+      cost = 100
+      idea_token=MDL_canterto_maneossa
+      allowed = { original_tag = MDL }
+      traits = { alt_army_regrouping_2 }
+      available = { always = yes }
+    }
+	}
+	MDL_moonstriker_laylah = {
+		name=MDL_moonstriker_laylah
+    gender=female
+		portraits={
+      civilian={
+				large="gfx/leaders/MDL/moonstriker.tga"
+        small="gfx/interface/ideas/Advisors/MDL/MDL_moonstriker_laylah.tga"
+      }
+			army={
+				large="gfx/leaders/MDL/moonstriker.tga"
+			}
+		}
+    advisor={
+      slot = high_command
+      cost = 150
+      idea_token = MDL_moonstriker_laylah
+      allowed = {original_tag = MDL }
+      traits = { army_logistics_3 }
+      available = { always = yes }
+    }
+    scientist = {
+			traits = { scientist_trait_fast_learner }
+			skills = { specialization_magical = 2 }
+    }
+	}
+	MDL_almanezor = {
+		name=MDL_almanezor
+		portraits = {
+      civilian = {
+				large="gfx/leaders/MDL/almanezor.tga"
+        small="gfx/interface/ideas/Advisors/MDL/MDL_almanezor.tga"
+      }
+			army={
+				large="gfx/leaders/MDL/almanezor.tga"
+			}
+		}
+    advisor={
+      slot=army_chief
+      idea_token=MDL_almanezor
+      allowed = { original_tag = MDL }
+      cost = 100
+      traits = { army_chief_offensive_1 }
+      available = { always = yes }
+    }
+	}
+	MDL_grandmistress_samira = {
+		name=MDL_grandmistress_samira
+    gender=female
+		portraits = {
+			civilian = {
+				large="gfx/leaders/MDL/grandmistress_samira.tga"
+				small="gfx/interface/ideas/Advisors/MDL/MDL_grandmistress_samira.tga"
+			}
+			army = {
+				large="gfx/leaders/MDL/grandmistress_samira.tga"
+			}
+		}
+		advisor = {
+			slot = high_command
+      cost = 100
+			idea_token = MDL_grandmistress_samira
+			allowed = { original_tag = MDL }
+			traits = { army_infantry_1 army_commando_2 }
+      visible = { NOT = { has_country_flag = MDL_samira_country_leader } }
+			available = { has_completed_focus = MDL_go_with_alneighzari }
+		}
+	}
+	MDL_alneighzari = {
+		name=MDL_alneighzari
+		portraits = {
+			civilian = {
+				large="gfx/leaders/MDL/alneighzari.tga"
+				small="gfx/interface/ideas/Advisors/MDL/MDL_alneighzari.tga"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = MDL_alneighzari
+			allowed = { original_tag = MDL }
+			traits = { unhindered_s }
+			available = { has_completed_focus = MDL_go_with_samira }
+		}
+    scientist = {
+      available = { always = yes }
+			traits = { scientist_trait_electronics_specialist scientist_trait_bright }
+			skills = { specialization_land = 2 }
+		}
+	}
+  MDL_mehmet = {
+    name = MDL_mehmet
+    portraits = {
+      civilian={
+        large="gfx/leaders/MDL/mehmet.tga"
+        small="gfx/interface/ideas/Advisors/MDL/MDL_mehmet.tga"
+      }
+      army = {
+        large="gfx/leaders/MDL/mehmet.tga"
+      }
+    }
+    advisor = {
+      slot = high_command
+      idea_token = MDL_mehmet
+      allowed = { original_tag = MDL }
+      traits = { army_artillery_1 }
+      available = { always = yes }
+    }
+  }
+  MDL_admiral_astur = {
+    name=MDL_admiral_astur
+    portraits = {
+      civilian={
+        large="gfx/leaders/MDL/admiral_astur.tga"
+        small="gfx/interface/ideas/Advisors/MDL/MDL_admiral_astur.tga"
+      }
+      army={
+        large="gfx/leaders/MDL/admiral_astur.tga"
+      }
+    }
+    advisor={
+      slot = navy_chief
+      idea_token = MDL_admiral_astur
+      cost = 100
+      allowed = { original_tag = MDL }
+      traits = { navy_chief_commerce_raiding_2 }
+      available = { always = yes }
+    }
+    navy_leader = {
+      traits = { pony_race_trait gentlemanly spotter superior_tactician }
+      skill=3
+      attack_skill=3
+      defense_skill=3
+      maneuvering_skill=2
+      coordination_skill=2
+      desc = MDL_admiral_astur_desc
+    }
+  }
+  MDL_jean_claude_of_aquileia = {
+    name=MDL_jean_claude_of_aquileia
+    portraits={
+      civilian={
+        large="gfx/leaders/MDL/jean_claude_of_aquileia.tga"
+        small="gfx/interface/ideas/Advisors/MDL/MDL_jean_claude_of_aquileia.tga"
+      }
+      army={
+        large="gfx/leaders/MDL/jean_claude_of_aquileia.tga"        
+      }
+    }
+    advisor={
+      slot=high_command
+      idea_token=MDL_jean_claude
+      cost = 100
+      allowed = { original_tag = MDL }
+      traits = { navy_fleet_logistics_2 }
+      available = { always = yes }
+    }
+    navy_leader = {
+      traits = { griffon_race_trait bold seawolf lancer }
+      skill=3
+      attack_skill=2
+      defense_skill=1
+      maneuvering_skill=3
+      coordination_skill=2
+      desc = MDL_jean_claude_desc
+    }
+  }
+  MDL_senate = {
+    name = MDL_senate
+    portraits = {
+      civilian = {
+        large="gfx/leaders/MDL/senate.tga"
+        small="gfx/interface/ideas/Advisors/MDL/MDL_senate.tga"
+      }
+    }
+  }
+  MDL_qadi_of_coltoba = {
+    name = MDL_qadi_of_coltoba
+    portraits={
+      civilian={
+        small="gfx/interface/ideas/Advisors/MDL/MDL_qadi.tga"
+      }
+    }
+    advisor={
+      slot=political_advisor
+      idea_token=MDL_qadi_of_coltoba
+      available = { always = yes }
+      traits = { popular_figurehead }
+    }
+  }
+  MDL_emerald_bargain = {
+    name = MDL_emerald_bargain
+    portraits = {
+      civilian = {
+        small="gfx/interface/ideas/Advisors/MDL/MDL_emerald_bargain.tga"
+      }
+    }
+    advisor = {
+      slot=political_advisor
+      idea_token=MDL_emerald_bargain
+      available = { has_completed_focus = MDL_work_with_guilds }
+      traits = { smooth_talking_charmer }
+    }
+  }
+  MDL_ink_al_shieri = {
+    name = MDL_ink_al_shieri
+    portraits = {
+      civilian = {
+        small="gfx/interface/ideas/Advisors/MDL/MDL_ink_al_shieri.tga"
+      }
+    }
+    advisor = {
+      slot=political_advisor
+      idea_token=MDL_ink_al_shieri
+      available = {
+        OR = {
+          has_government = neutrality
+          has_government = democratic
+        }
+      }
+      traits = { ideological_crusader }
+    }
+  }
+  MDL_stratophobia = {
+    name=MDL_stratophobia
+    portraits={
+      civilian = {
+        small="gfx/interface/ideas/Advisors/MDL/MDL_stratophobia.tga"
+      }
+    }
+    advisor = {
+      slot=political_advisor
+      idea_token=MDL_stratophobia
+      available = { always = yes }
+      traits = { silent_workhorse }
+    }
+  }
+  MDL_talespin = {
+	  name=MDL_talespin
+		portraits={
+			civilian={
+				small="gfx/interface/ideas/Advisors/MDL/MDL_talespin.tga"
+			}
+		}
+		advisor = {
+			cost = 100
+			slot = air_chief
+			idea_token = MDL_talespin
+			allowed = { original_tag = MDL }	
+			traits = { air_chief_ground_support_2 }
+		}
+	}
+  MDL_clover_breeze = {
+		name = MDL_clover_breeze
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ideas/Advisors/MDL/MDL_clover_breeze.tga"
+			}
+      army = {
+        large = "gfx/leaders/MDL/clover_breeze.tga"
+      }
+		}
+		advisor = {
+			slot = air_chief
+			idea_token = MDL_clover_breeze
+			cost = 100
+			allowed = { original_tag = MDL }
+			traits = { air_chief_naval_aviation_2 }
+		}
+	}
+  MDL_pacific_sunset = {
+    name = MDL_pacific_sunset
+    portraits = {
+      civilian = {
+        small = "gfx/interface/ideas/Advisors/MDL/MDL_pacific_sunset.tga"
+      }
+    }
+    advisor = {
+      slot = political_advisor
+      idea_token=MDL_pacific_sunset
+      cost = 150
+      allowed = { always = yes }
+      traits = { prince_of_terror }
+    }
+  }
+  MDL_iron_muhtal = {
+    name = MDL_iron_muhtal
+    portraits = {
+      civilian = {
+        small = "gfx/interface/ideas/Advisors/MDL/MDL_iron_muhtal.tga"
+      }
+    }
+    advisor = {
+      slot = political_advisor
+      idea_token=MDL_iron_muhtal
+      cost = 150
+      allowed = { always = yes }
+      traits = { quartermaster_general }
+    }
+  }
+  MDL_cims = {
+		name=MDL_cims
+		portraits={
+			civilian={
+				small="gfx/interface/ideas/Advisors/MDL/MDL_cims.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = theorist
+			ledger = army
+			idea_token = MDL_cims
+			allowed = { original_tag = MDL }
+      available = { has_completed_focus = MDL_coltoba_institute_military_science }
+			traits = { MDL_military_academy }
+		}
+	}
+###GRIFO EXCLUSIVES###
+  MDL_antonio_aviario = {
+    name=MDL_antonio_aviario
+    portraits={
+      civilian={
+        large="gfx/leaders/MDL/antonio_aviario.tga"
+        small="gfx/interface/ideas/Advisors/MDL/MDL_antonio_aviario.tga"
+      }
+      army={
+        large="gfx/leaders/MDL/antonio_aviario.tga"
+      }
+    }
+    advisor={
+      slot=army_chief
+      idea_token=MDL_antonio_aviario
+      allowed = { original_tag = MDL }
+      visible = { has_completed_focus = MDL_restoring_the_light }
+      cost = 100
+      traits = { army_chief_offensive_1 }
+      available = { always = yes }
+    }
+  }
+  MDL_alexandre_de_aguilar = {
+    name=MDL_alexandre_de_aguilar
+    portraits={
+      civilian={
+        large="gfx/leaders/MDL/alexandre_de_aguilar.tga"
+        small="gfx/interface/ideas/Advisors/MDL/MDL_alexandre_de_aguilar.tga"
+      }
+      army={
+        large="gfx/leaders/MDL/alexandre_de_aguilar.tga"
+      }
+    }
+    advisor = {
+      slot = air_chief
+      visible = { has_completed_focus = MDL_restoring_the_light }
+      idea_token = MDL_alexandre_de_aguilar
+      cost = 100
+      allowed = { original_tag = MDL }
+      traits = { air_chief_ground_support_1 }
+    }
+  }
+  MDL_rosa_branca = {
+    name=MDL_rosa_branca
+    gender=female
+    portraits={
+      civilian={
+        large="gfx/leaders/MDL/rosa_branca.tga"
+        small="gfx/interface/ideas/Advisors/MDL/MDL_rosa_branca.tga"
+      }
+      army={
+        large="gfx/leaders/MDL/rosa_branca.tga"
+      }
+    }
+    advisor = {
+      slot=political_advisor
+      idea_token=MDL_rosa_branca
+      visible = { has_completed_focus = MDL_restoring_the_light }
+      traits = { smooth_talking_charmer }
+    }
+  }
+  MDL_imperial_admiralty_char = {
+    name=MDL_imperial_admiralty_char
+    portraits = {
+      civilian = {
+        small="gfx/interface/ideas/Advisors/MDL/MDL_imperial_admiralty.tga"
+      }
+    }
+    advisor={
+      slot = navy_chief
+      idea_token = MDL_imperial_admiralty_char
+      cost = 150
+      allowed = { original_tag = MDL }
+      traits = { navy_chief_decisive_battle_1 navy_chief_commerce_raiding_1 }
+      visible = { has_country_flag = MDL_grifo_takeover }
+      available = { has_completed_focus = MDL_imperial_admiralty }
+    }
+  }
+  MDL_imperial_office_artillery = {
+    name=MDL_imperial_office_artillery
+    portraits = {
+      civilian = {
+        small="gfx/interface/ideas/Advisors/MDL/MDL_imperial_office_artillery.tga"
+      }
+    }
+    advisor={
+      slot = high_command
+      cost = 150
+      idea_token = MDL_imperial_office_artillery
+      allowed = {original_tag = MDL }
+      traits = { army_artillery_1 }
+      visible = { has_completed_focus = MDL_restoring_the_light }
+    }
+  }
+  MDL_imperial_office_support = {
+    name=MDL_imperial_office_support
+    portraits = {
+      civilian = {
+        small="gfx/interface/ideas/Advisors/MDL/MDL_imperial_office_support.tga"
+      }
+    }
+    advisor={
+      slot = high_command
+      cost = 150
+      idea_token = MDL_imperial_office_support
+      allowed = {original_tag = MDL }
+      traits = { army_logistics_1 }
+      visible = { has_completed_focus = MDL_restoring_the_light }
+    }
+  }
+  MDL_imperial_office_infantry = {
+    name=MDL_imperial_office_infantry
+    portraits = {
+      civilian = {
+        small="gfx/interface/ideas/Advisors/MDL/MDL_imperial_office_infantry.tga"
+      }
+    }
+    advisor={
+      slot = high_command
+      cost = 150
+      idea_token = MDL_imperial_office_infantry
+      allowed = {original_tag = MDL }
+      traits = { army_infantry_1 }
+      visible = { has_completed_focus = MDL_restoring_the_light }
+    }
+  }
+  MDL_imperial_office_commando = {
+    name=MDL_imperial_office_commando
+    portraits = {
+      civilian = {
+        small="gfx/interface/ideas/Advisors/MDL/MDL_imperial_office_commando.tga"
+      }
+    }
+    advisor={
+      slot = high_command
+      cost = 150
+      idea_token = MDL_imperial_office_commando
+      allowed = {original_tag = MDL }
+      traits = { army_commando_2 }
+      visible = { has_completed_focus = MDL_restoring_the_light }
+    }
+  }
+  MDL_imperial_college = {
+		name=MDL_imperial_college
+		portraits={
+			civilian={
+				small="gfx/interface/ideas/Advisors/MDL/MDL_imperial_college.tga"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = theorist
+			ledger = army
+			idea_token = MDL_imperial_college
+			allowed = { original_tag = MDL }
+      visible = { has_country_flag = MDL_grifo_takeover }
+      available = { has_completed_focus = MDL_colonial_university }
+			traits = { MDL_military_academy }
+		}
+	}
+  MDL_grifo_modernist={
+		name=MDL_grifo_modernist
+		portraits={
+			civilian={
+				small="gfx/interface/ideas/Advisors/MDL/MDL_grifo_modernist.tga"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = MDL_grifo_modernist
+			allowed = { original_tag = MDL }
+			traits = { MDL_unfeathered_modernist }
+			visible = { has_country_flag = MDL_grifo_modernist }
+			available = {
+				hidden_trigger = { has_country_flag = MDL_grifo_modernist }
+      }
+			can_be_fired = no
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+  MDL_grifo_romanticist={
+		name=MDL_grifo_romanticist
+		portraits={
+			civilian={
+				small="gfx/interface/ideas/Advisors/MDL/MDL_grifo_romanticist.tga"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = MDL_grifo_romanticist
+			allowed = { original_tag = MDL }
+			traits = { MDL_nostalgic_romanticist }
+			visible = { has_country_flag = MDL_grifo_romanticist }
+			available = {
+				hidden_trigger = { has_country_flag = MDL_grifo_romanticist }
+      }
+			can_be_fired = no
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+  MDL_grifo_socialite={
+		name=MDL_grifo_socialite
+		portraits={
+			civilian={
+				small="gfx/interface/ideas/Advisors/MDL/MDL_grifo_socialite.tga"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = MDL_grifo_socialite
+			allowed = { original_tag = MDL }
+			traits = { MDL_unrepenting_socialite }
+			visible = { has_country_flag = MDL_grifo_socialite }
+			available = {
+				hidden_trigger = { has_country_flag = MDL_grifo_socialite }
+      }
+			can_be_fired = no
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+  MDL_grifo_naturalist={
+		name=MDL_grifo_naturalist
+		portraits={
+			civilian={
+				small="gfx/interface/ideas/Advisors/MDL/MDL_grifo_naturalist.tga"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = MDL_grifo_naturalist
+			allowed = { original_tag = MDL }
+			traits = { MDL_soft_hearted_naturalist }
+			visible = { has_country_flag = MDL_grifo_naturalist }
+			available = {
+				hidden_trigger = { has_country_flag = MDL_grifo_naturalist }
+      }
+			can_be_fired = no
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+  MDL_emperor = {
+    name=MDL_emperor
+    portraits = {
+      civilian = {
+        large="gfx/leaders/MDL/MDL_emperor.tga"
+      }
+    }
+  }
+###GRIFO PUPPETS###
+  EQC_rosa_branca = {#for EQC puppet
+    name=MDL_rosa_branca
+    gender=female
+    portraits = {
+      civilian={
+        large="gfx/leaders/MDL/rosa_branca.tga"
+        small="gfx/interface/ideas/Advisors/MDL/MDL_rosa_branca.tga"
+      }
+      army={
+        large="gfx/leaders/MDL/rosa_branca.tga"
+      }
+    }
+  }
+  MCW_antonio_aviario = {#for MCW puppet
+    name=MDL_antonio_aviario
+    gender=male
+    portraits={
+      civilian={
+        large="gfx/leaders/MDL/antonio_aviario.tga"
+        small="gfx/interface/ideas/Advisors/MDL/MDL_antonio_aviario.tga"
+      }
+      army={
+        large="gfx/leaders/MDL/antonio_aviario.tga"
+      }
+    }
+  }
+  MIT_alexandre_de_aguilar = {#for MIT puppet
+    name=MDL_alexandre_de_aguilar
+    gender=male
+    portraits={
+      civilian={
+        large="gfx/leaders/MDL/alexandre_de_aguilar.tga"
+        small="gfx/interface/ideas/Advisors/MDL/MDL_alexandre_de_aguilar.tga"
+      }
+      army={
+        large="gfx/leaders/MDL/alexandre_de_aguilar.tga"
+      }
+    }
+  }
+  MDL_imperial_council_JER = {
+    name=MDL_imperial_council_JER
+    portraits = {
+      civilian = {
+        large="gfx/leaders/MDL/imperial_council.tga"
+      }
+    }
+  }
+  MDL_imperial_council_FAT = {
+    name=MDL_imperial_council_FAT
+    portraits = {
+      civilian = {
+        large="gfx/leaders/MDL/imperial_council.tga"
+      }
+    }
+  }
+  MDL_imperial_council_GRU = {
+    name=MDL_imperial_council_GRU
+    portraits = {
+      civilian = {
+        large="gfx/leaders/MDL/imperial_council.tga"
+      }
+    }
+  }
+  MDL_imperial_council_GRI = {
+    name=MDL_imperial_council_GRI
+    portraits = {
+      civilian = {
+        large="gfx/leaders/MDL/imperial_council.tga"
+      }
+    }
+  }
+  MDL_imperial_council_FIR = {
+    name=MDL_imperial_council_FIR
+    portraits = {
+      civilian = {
+        large="gfx/leaders/MDL/imperial_council.tga"
+      }
+    }
+  }
+  MDL_imperial_council_RIV = {
+    name=MDL_imperial_council_RIV
+    portraits = {
+      civilian = {
+        large="gfx/leaders/MDL/imperial_council.tga"
+      }
+    }
+  }
+###FEDERATION LEADER CHARACTERS###
+  MDL_nomarchical_council = {
+    name=MDL_nomarchical_council
+    portraits={
+      civilian={
+        large="gfx/leaders/MDL/nomarchy_council.tga"
+      }
+    }
+  }
+  MDL_ovingo_assembly = {
+    name=MDL_ovingo_assembly
+    portraits={
+      civilian = {
+        large="gfx/leaders/MDL/ovingo_assembly.tga"
+      }
+    }
+  }
+  MDL_abyssinia_assembly = {
+    name=MDL_abyssinia_assembly
+    portraits = {
+      civilian = {
+        large="gfx/leaders/MDL/abyssinia_assembly.tga"
+      }
+    }
+  }
+  MDL_yemani_senate = {
+    name=MDL_yemani_senate
+    portraits = {
+      civilian = {
+        large="gfx/leaders/MDL/yemani_senate.tga"
+      }
+    }
+  }
+  MDL_asstyrian_free_cities = {
+    name=MDL_asstyrian_free_cities
+    portraits = {
+      civilian = {
+        large="gfx/leaders/MDL/asstyrian_free_cities.tga"
+      }
+    }
+  }
+  MDL_anseruk_consortium = {
+    name=MDL_anseruk_consortium
+    portraits = {
+      civilian = {
+        large="gfx/leaders/MDL/anseruk_consortium.tga"
+      }
+    }
+  }
+  MDL_elected_princes = {
+    name=MDL_elected_princes
+    portraits = {
+      civilian = {
+        large="gfx/leaders/MDL/elected_princes.tga"
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+characters = {
+  RIZ_moonstriker_laylah = {
+		name=MDL_moonstriker_laylah
+    gender=female
+		portraits={
+      civilian={
+        small="gfx/interface/ideas/Advisors/MDL/MDL_moonstriker_laylah_sunglasses.tga"
+      }
+			army={
+				large="gfx/leaders/MDL/moonstriker_sunglasses.tga"
+			}
+		}
+    country_leader={
+			ideology=magocracy
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+}

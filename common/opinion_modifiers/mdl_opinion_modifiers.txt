@@ -1,0 +1,16 @@
+
+# OPINION MODIFIERS
+##########################################################################
+# value
+# min_trust
+# max_trust
+# decay
+# months/years/days = timer
+# trade = yes/no
+
+opinion_modifiers = {
+  MDL_GENOCIDE_OPINION_MOD = { value = -200 trade = no}
+  MDL_djinn_opinion = { value = -200 trade = no }
+  MDL_BAT_savages_opinion = { value = -75 }
+  MDL_consulate = { value = 50 }
+}

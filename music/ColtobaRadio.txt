@@ -1,0 +1,31 @@
+music_station = "ColtobaRadio"
+music = {
+    	song = "coltoba_blues"
+    	chance = {
+		factor = 1
+		modifier = {
+			tag = MDL
+			factor = 4
+		}
+	}
+}
+music = {
+	song = "gerudo_valley"
+	chance = {
+		factor = 1
+		modifier = {
+			tag = MDL
+			factor = 4
+		}
+	}
+}
+music = {
+  song = "golden_coast"
+  chance = {
+    factor = 1
+    modifier = {
+      tag = MDL
+      factor = 4
+    }
+  }
+}

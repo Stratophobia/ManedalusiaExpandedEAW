@@ -1,0 +1,2944 @@
+  add_namespace = manedalusia
+  add_namespace = manedalusia_news
+
+###NEWS###
+  news_event = {#army of divine retribution
+    id = manedalusia_news.1
+    title = manedalusia_news.1.t
+    desc = manedalusia_news.1.d
+    picture = GFX_news_pony_griffon_war
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+      trigger = { tag = MDL }
+      name = manedalusia_news.1.a 
+    }
+    option = {
+      trigger = {
+        has_government = democratic
+      }
+      name = manedalusia_news.1.b
+      add_opinion_modifier = {
+        target = FROM
+        modifier = MDL_GENOCIDE_OPINION_MOD
+      }
+    }
+    option = {
+      name = manedalusia_news.1.c
+      trigger = {
+        OR = {
+          has_government = communism
+          has_government = neutrality
+          AND = {
+            has_government = fascism
+            NOT = { tag = MDL }
+          }
+        }
+      }
+    }
+  }
+
+  news_event = {#surf festival
+    id = manedalusia_news.2
+    title = manedalusia_news.2.t
+    desc = manedalusia_news.2.d
+	  picture = GFX_news_event_friendship_games
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+      trigger = { tag = MDL }
+      name = manedalusia_news.2.a 
+    }
+    option = {
+      trigger = {
+        NOT = { original_tag = MDL }
+        is_in_faction_with = MDL
+      }
+      name = manedalusia_news.2.b 
+    }
+    option = {
+      trigger = {
+        NOT = { original_tag = MDL }
+        NOT = { is_in_faction_with = MDL }
+      }
+      name = manedalusia_news.2.c
+    }
+  }
+
+###COUNTRY EVENTS###
+  country_event = {# The Manedalusia Coup
+    id = manedalusia.1
+    title = manedalusia.1.t
+    desc = manedalusia.1.d
+    fire_only_once = yes
+    picture = GFX_event_MDL_the_gang
+    is_triggered_only = yes
+
+    immediate = {
+      hidden_effect = {
+        MDL = {
+          load_focus_tree = {
+            tree = manedalusia_main
+          }
+        }
+      }
+    }
+
+    option = {#army comes in, order restored
+      name = manedalusia.1.a
+      ai_chance = { factor = 70 }
+      country_event = { id = manedalusia.65 }
+    }
+
+    option = {#Bingus Gamer Moment
+      name = manedalusia.1.b
+      ai_chance = { factor = 5 }
+      country_event = { id = manedalusia.58 }
+    }
+
+    option = {#independent Manedalusia
+      name = manedalusia.1.c
+      custom_effect_tooltip = ABY_disable_bingus
+      set_variable = { ABY_noble_loyalties^15 = 0 }
+      ai_chance = { factor = 25 }
+      release = MDL
+      hidden_effect = {
+        MDL = {
+          load_focus_tree = {
+            tree = manedalusia_main
+          }
+          MDL_remove_ABY_templates = yes
+          load_oob = "MDL_1007"
+        }
+      }
+    }
+
+    option = {#play as Manedalusia
+      name = manedalusia.1.dd
+      trigger = { is_ai = no }
+      custom_effect_tooltip = ABY_disable_bingus
+      set_variable = { ABY_noble_loyalties^15 = 0 }
+      release = MDL
+      MDL = { change_tag_from = ROOT }
+      hidden_effect = {
+        MDL = {
+          load_focus_tree = {
+            tree = manedalusia_main
+          }
+          MDL_remove_ABY_templates = yes
+          load_oob = "MDL_1007"
+        }
+      }
+    }
+  }
+
+  country_event = {#The Council Gathers
+    id = manedalusia.2
+    title = manedalusia.2.t
+    desc = manedalusia.2.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.2.a
+      add_political_power = 125
+    }
+  }
+
+  country_event = {#The Madgriff in the Harbor
+    id = manedalusia.3
+    title = manedalusia.3.t
+    desc = manedalusia.3.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.3.a
+      ai_chance = { factor = 95 }
+      add_political_power = -50
+      hidden_effect = {
+        country_event = { id = manedalusia.4 }
+      }
+    }
+    option = {
+      name = manedalusia.3.b
+      ai_chance = { factor = 5 }
+      hidden_effect = {
+        country_event = manedalusia.90
+      }
+    }
+  }
+
+  country_event = {#Grifo's Fleet is Ambushed
+    id = manedalusia.4
+    title = manedalusia.4.t
+    desc = manedalusia.4.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.4.a
+      add_manpower = -40
+      remove_ideas = MDL_madgriff_in_the_harbor
+      retire_character = MDL_fernao_grifo
+      hidden_effect = {
+        retire_character = MDL_rosa_branca
+        retire_character = MDL_alexandre_de_aguilar
+        retire_character = MDL_antonio_aviario
+      }
+      custom_effect_tooltip = MDL_grifo_fleet_taken_tt
+      set_party_name = {
+        ideology = fascism
+        long_name = MDL_SAYF_PARTY_1_LONG
+        name = MDL_SAYF_PARTY_1
+      }
+      hidden_effect = {
+        if = {
+          limit = { NOT = { has_dlc = "Man the Guns" } }
+          load_oob = "MDL_grifo_fleet_legacy"
+        }
+        if = {
+          limit = { has_dlc = "Man the Guns" }
+          load_oob = "MDL_grifo_fleet"
+        }
+      }
+      hidden_effect = {
+        add_country_leader_role = {
+          character = MDL_crimson_sayf
+          country_leader = {
+            desc = MDL_crimson_sayf_desc
+            expire = "1965.1.1"
+            ideology = stratocracy
+          }
+          promote_leader = yes
+        }
+      }
+      set_party_leader = { ideology = fascism leader = MDL_crimson_sayf }
+      add_popularity = { ideology = fascism popularity = 0.1 }
+    }
+  }
+
+  country_event = {#The Weight of Legacy
+    id = manedalusia.5
+    title = manedalusia.5.t
+    desc = manedalusia.5.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.5.a
+      army_experience = 15
+    }
+  }
+
+  country_event = {#The Revelation
+    id = manedalusia.6
+    title = manedalusia.6.t
+    desc = manedalusia.6.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.6.a
+    }
+  }
+
+  country_event = {#Swaying the Council
+    id = manedalusia.7
+    title = manedalusia.7.t
+    desc = manedalusia.7.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.7.a
+      add_political_power = 50
+    }
+  }
+
+  country_event = {#Sayfs Speech
+    id = manedalusia.8
+    title = manedalusia.8.t
+    desc = manedalusia.8.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.8.a
+      set_politics = {
+        ruling_party = fascism
+        allow_elections = no
+      }
+      set_party_name = {
+        ideology = neutrality
+        long_name = MDL_NA_SAYF_LONG
+        name = MDL_NA_SAYF
+      }
+      hidden_effect = {
+        add_country_leader_role = {
+          character = MDL_armil_khaldun
+          country_leader = {
+            desc = MDL_armil_khaldun_desc
+            expire = "1965.1.1"
+            ideology = despotism
+          }
+          promote_leader = yes
+        }
+      }
+      set_party_leader = { ideology = neutrality leader = MDL_armil_khaldun }
+      retire_character = MDL_transitional_military_council
+      add_country_leader_trait = MDL_sayf_pretender
+      custom_effect_tooltip = MDL_sayf_tree_loaded_tt
+      hidden_effect = {
+        load_focus_tree = {
+          tree = manedalusia_sayf
+        }
+      }
+    }
+  }
+
+  country_event = {#Khaldun's Gambit
+    id = manedalusia.9
+    title = manedalusia.9.t
+    desc = manedalusia.9.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.9.a
+      MDL_armil_khaldun = {
+        add_planning = 1
+        add_logistics = 1
+      }
+    }
+  }
+
+  country_event = {#The Autocrat's Hubris
+    id = manedalusia.10
+    title = manedalusia.10.t
+    desc = manedalusia.10.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.10.a
+      add_popularity = { ideology = fascism popularity = -0.05 }
+    }
+  }
+
+  country_event = {#The Populist Mares
+    id = manedalusia.11
+    title = manedalusia.11.t
+    desc = manedalusia.11.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.11.a
+      add_popularity = { ideology = democratic  popularity = 0.03 }
+      add_popularity = { ideology = communism popularity = 0.03 }
+    }
+  }
+
+  country_event = {#A New Sultanate For A New Millenium
+    id = manedalusia.12
+    title = manedalusia.12.t
+    desc = manedalusia.12.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.12.a
+      hidden_effect = {
+        add_country_leader_role = {
+          character = MDL_armil_khaldun
+          country_leader = {
+            desc = MDL_armil_khaldun_desc
+            expire = "1965.1.1"
+            ideology = despotism
+          }
+          promote_leader = yes
+        }
+      }
+      retire_character = MDL_transitional_military_council
+      set_party_leader = { ideology = neutrality leader = MDL_armil_khaldun }
+      set_party_name = {
+        ideology = neutrality
+        long_name = MDL_KHALDUN_PARTY_1_LONG
+        name = MDL_KHALDUN_PARTY_1
+      }
+      custom_effect_tooltip = MDL_khaldun_tree_loaded
+      hidden_effect = {
+        load_focus_tree = { tree = manedalusia_khaldun }
+      }
+    }
+  }
+
+  country_event = {#A Manedalusian Senate
+    id = manedalusia.13
+    title = manedalusia.13.t
+    desc = manedalusia.13.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.13.a
+    }
+  }
+
+  country_event = {#The Chosen
+    id = manedalusia.14
+    title = manedalusia.14.t
+    desc = manedalusia.14.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.14.a
+    }
+  }
+
+  country_event = {#Warplan Green
+    id = manedalusia.15
+    title = manedalusia.15.t
+    desc = manedalusia.15.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.15.a
+      741 = {
+        add_building_construction = {
+          type = coastal_bunker
+          level = 1
+          province = 10338
+          instant_build = yes
+        }
+        add_building_construction = {
+          type = coastal_bunker
+          level = 1
+          province = 10302
+          instant_build = yes
+        }
+        add_building_construction = {
+          type = coastal_bunker
+          level = 1
+          province = 12273
+          instant_build = yes
+        }
+        add_building_construction = {
+          type = coastal_bunker
+          level = 1
+          province = 12245
+          instant_build = yes
+        }
+        add_building_construction = {
+          type = coastal_bunker
+          level = 1
+          province = 12279
+          instant_build = yes
+        }
+      }
+
+    }
+  }
+
+  country_event = {#Striking Black Gold
+    id = manedalusia.16
+    title = manedalusia.16.t
+    desc = manedalusia.16.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.16.a
+      custom_effect_tooltip = MDL_asabiyyah_alteration_tt
+      add_political_power = -10
+      764 = {
+        add_resource = {
+          type = oil
+          amount = 22
+        }
+      }
+      add_to_variable = {
+        var = MDL_trade_var
+        value = -0.05
+      }
+      hidden_effect = {
+        country_event = { days = 50 id = manedalusia.17 }
+      }
+    }
+    option = {
+      name = manedalusia.16.b
+      custom_effect_tooltip = MDL_asabiyyah_alteration_tt
+      add_political_power = -120
+      764 = {
+        add_resource = {
+          type = oil
+          amount = 6
+        }
+      }
+      hidden_effect = {
+        country_event = { days = 50 id = manedalusia.18 }
+      }
+    }
+  }
+
+  country_event = {#Displaced villagers become beggars in Coltoba
+    id = manedalusia.17
+    title = manedalusia.17.t
+    desc = manedalusia.17.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.17.a
+      custom_effect_tooltip = MDL_asabiyyah_alteration_tt
+      add_to_variable = {
+        var = MDL_stability_var
+        value = -0.05
+      }
+    }
+  }
+
+  country_event = {#Kom Marebo development
+    id = manedalusia.18
+    title = manedalusia.18.t
+    desc = manedalusia.18.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.18.a
+      custom_effect_tooltip = MDL_asabiyyah_alteration_tt
+      764 = { add_manpower = 6500 }
+      add_to_variable = {
+        var = MDL_production_var
+        value = 0.01
+      }
+    }
+  }
+
+  country_event = {#Matters of Higher Learning
+    id = manedalusia.19
+    title = manedalusia.19.t
+    desc = manedalusia.19.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.19.a
+      custom_effect_tooltip = MDL_asabiyyah_alteration_tt
+      add_to_variable = {
+        var = MDL_research_var
+        value = 0.05
+      }
+      add_to_variable = {
+        var = MDL_consoom_var
+        value = 0.05
+      }
+    }
+    option = {
+      name = manedalusia.19.b
+    }
+  }
+
+  country_event = {#A Deals A Deal
+    id = manedalusia.20
+    title = manedalusia.20.t
+    desc = manedalusia.20.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.20.a
+      custom_effect_tooltip = MDL_asabiyyah_alteration_tt
+      add_political_power = -50
+      740 = {
+        add_resource = {
+          type = tungsten
+          amount = 5
+        }
+      }
+      add_to_variable = {
+        var = MDL_trade_var
+        value = 0.15
+      }
+    }
+    option = {
+      name = manedalusia.20.b
+      custom_effect_tooltip = MDL_asabiyyah_alteration_tt
+      add_political_power = -25
+      740 = {
+        add_resource = {
+          type = tungsten
+          amount = 10
+        }
+      }
+      add_to_variable = {
+        var = MDL_trade_var
+        value = -0.15
+      }
+    }
+  }
+
+  country_event = {#racism against zebras
+    id = manedalusia.21
+    title = manedalusia.21.t
+    desc = manedalusia.21.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.21.a
+      custom_effect_tooltip = MDL_asabiyyah_alteration_tt
+      add_political_power = -20
+      add_timed_idea = {
+        idea = MDL_qadi_away
+        days = 100
+      }
+    }
+    option = {
+      name = manedalusia.21.b
+      custom_effect_tooltip = MDL_asabiyyah_alteration_tt
+      add_to_variable = {
+        var = MDL_stability_var
+        value = -0.05
+      }
+    }
+  }
+
+  country_event = {#The Grandmistress
+    id = manedalusia.22
+    title = manedalusia.22.t
+    desc = manedalusia.22.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.22.a
+    }
+  }
+
+  country_event = {#The Engineer
+    id = manedalusia.23
+    title = manedalusia.23.t
+    desc = manedalusia.23.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.23.a
+    }
+  }
+
+  country_event = {#Coltoba Light Restored
+    id = manedalusia.24
+    title = manedalusia.24.t
+    desc = manedalusia.24.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.24.a
+      custom_effect_tooltip = MDL_light_restored_tt
+      add_to_variable = {
+        var = MDL_stability_var
+        value = 0.05
+      }
+      add_to_variable = {
+        var = MDL_consoom_var
+        value = 0.05
+      }
+      add_to_variable = {
+        var = MDL_trade_var
+        value = 0.05
+      }
+      add_to_variable = {
+        var = MDL_research_var
+        value = 0.05
+      }
+      add_to_variable = {
+        var = MDL_tradelaw_var
+        value = -0.10
+      }
+      add_to_variable = {
+        var = MDL_war_var
+        value = 0.05
+      }
+      add_to_variable = {
+        var = MDL_morale_var
+        value = 0.05
+      }
+    }
+  }
+
+  country_event = {#Al-Neighzari takes Samira on a desert joy ride
+    id = manedalusia.25
+    title = manedalusia.25.t
+    desc = manedalusia.25.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.25.a
+    }
+  }
+
+  country_event = {#Fast Shell Reloading
+    id = manedalusia.26
+    title = manedalusia.26.t
+    desc = manedalusia.26.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.26.a
+    }
+  }
+
+  country_event = {#temple eye
+    id = manedalusia.27
+    title = manedalusia.27.t
+    desc = manedalusia.27.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.27.a
+      add_to_variable = {
+        var = MDL_trade_var
+        value = 0.10
+      }
+      add_to_variable = {
+        var = MDL_stability_var
+        value = -0.05
+      }
+    }
+    option = {
+      name = manedalusia.27.b
+      add_to_variable = {
+        var = MDL_trade_var
+        value = -0.10
+      }
+      add_to_variable = {
+        var = MDL_consoom_var
+        value = -0.05
+      }
+      add_to_variable = {
+        var = MDL_org_var
+        value = 0.03
+      }
+    }
+  }
+
+  country_event = {#lessons on the folly of pride
+    id = manedalusia.28
+    title = manedalusia.28.t
+    desc = manedalusia.28.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.28.a
+    }
+  }
+
+  country_event = {#no such thing as an easy job
+    id = manedalusia.29
+    title = manedalusia.29.t
+    desc = manedalusia.29.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.29.a
+    }
+  }
+
+  country_event = {#fiqh1 natural causality
+    id = manedalusia.30
+    title = manedalusia.30.t
+    desc = manedalusia.30.d
+    is_triggered_only = yes
+
+    option = {#ashari
+      name = manedalusia.30.a
+      custom_effect_tooltip = MDL_asabiyyah_alteration_tt
+
+      add_to_variable = {
+        var = MDL_org_var
+        value = 0.04
+      }
+    }
+    option = {#Mutazalites
+      name = manedalusia.30.b
+      custom_effect_tooltip = MDL_asabiyyah_alteration_tt
+
+      add_to_variable = {
+        var = MDL_research_var
+        value = 0.05
+      }
+      add_to_variable = {
+        var = MDL_org_var
+        value = -0.04
+      }
+    }
+    option = {#Sineighis
+      name = manedalusia.30.c
+      custom_effect_tooltip = MDL_asabiyyah_alteration_tt
+
+      add_to_variable = {
+        var = MDL_research_var
+        value = 0.10
+      }
+      add_to_variable = {
+        var = MDL_morale_var
+        value = -0.10
+      }
+      add_to_variable = {
+        var = MDL_org_var
+        value = -0.10
+      }
+    }
+  }
+
+  country_event = {fiqh2 princesses
+    id = manedalusia.31
+    title = manedalusia.31.t
+    desc = manedalusia.31.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.31.a
+      trigger = {
+        NOT = { has_government = democratic }
+      }
+      custom_effect_tooltip = MDL_asabiyyah_alteration_tt
+      add_to_variable = {
+        var = MDL_stability_var
+        value = 0.10
+      }
+      add_to_variable = {
+        var = MDL_trade_var
+        value -0.05
+      }
+    }
+    option = {
+      name = manedalusia.31.b
+      custom_effect_tooltip = MDL_asabiyyah_alteration_tt
+      add_to_variable = {
+        var = MDL_trade_var
+        value = 0.10
+      }
+      add_to_variable = {
+        var = MDL_war_var
+        value = -0.05
+      }
+      add_to_variable = {
+        var = MDL_pp_var
+        value = 0.05
+      }
+    }
+    option = {
+      name = manedalusia.31.c
+      custom_effect_tooltip = MDL_asabiyyah_alteration_tt
+      add_opinion_modifier = {
+        target = BAT
+        modifier = MDL_BAT_savages_opinion
+      }
+      hidden_effect = {
+        add_opinion_modifier = {
+          target = NLR
+          modifier = MDL_djinn_opinion
+        }
+      }
+      add_to_variable = {
+        var = MDL_war_var
+        value = 0.10
+      }
+      add_to_variable = {
+        var = MDL_trade_var
+        value = -0.05
+      }
+      add_to_variable = {
+        var = MDL_stability_var
+        value = -0.05
+      }
+    }
+  }
+
+  country_event = {#fiqh3 qadis
+    id = manedalusia.32
+    title = manedalusia.32.t
+    desc = manedalusia.32.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.32.a
+      custom_effect_tooltip = MDL_asabiyyah_alteration_tt
+      add_to_variable = {
+        var = MDL_pp_var
+        value = 0.10
+      }
+      add_to_variable = {
+        var = MDL_stability_var
+        value = -0.05
+      }
+    }
+    option = {
+      name = manedalusia.32.b
+      custom_effect_tooltip = MDL_asabiyyah_alteration_tt
+      add_to_variable = {
+        var = MDL_stability_var
+        value = -0.05
+      }
+      add_to_variable = {
+        var = MDL_production_var
+        value = 0.02
+      }
+    }
+  }
+
+  country_event = {#fiqh4 kalam
+    id = manedalusia.33
+    title = manedalusia.33.t
+    desc = manedalusia.33.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.33.a
+      custom_effect_tooltip = MDL_asabiyyah_alteration_tt
+      add_to_variable = {
+        var = MDL_org_var
+        value = 0.02
+      }
+    }
+    option = {
+      name = manedalusia.33.b
+      custom_effect_tooltip = MDL_asabiyyah_alteration_tt
+      add_to_variable = {
+        var = MDL_morale_var
+        value = 0.02
+      }
+    }
+    option = {
+      name = manedalusia.33.c
+      custom_effect_tooltip = MDL_asabiyyah_alteration_tt
+      add_to_variable = {
+        var = MDL_research_var
+        value = 0.05
+      }
+    }
+  }
+
+  country_event = {#fiqh5 free will
+    id = manedalusia.34
+    title = manedalusia.34.t
+    desc = manedalusia.34.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.34.a
+      custom_effect_tooltip = MDL_asabiyyah_alteration_tt
+    }
+    option = {
+      name = manedalusia.34.b
+      custom_effect_tooltip = MDL_asabiyyah_alteration_tt
+    }
+    option = {
+      name = manedalusia.34.c
+      custom_effect_tooltip = MDL_asabiyyah_alteration_tt
+    }
+  }
+
+  country_event = {#colthage deal
+    id = manedalusia.35
+    title = manedalusia.35.t
+    desc = manedalusia.35.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.35.a
+      ai_chance = { factor = 100 }
+      add_ideas = MDL_colthage_treaty
+      hidden_effect = {
+        MDL = {
+          country_event = { id = manedalusia.36 }
+        }
+      }
+    }
+
+    option = {
+      name = manedalusia.35.b
+      ai_chance = { factor = 0 }
+      hidden_effect = {
+        MDL = {
+          country_event = { id = manedalusia.37 }
+        }
+      }
+    }
+  }
+
+  country_event = {#colthage accepts
+    id = manedalusia.36
+    title = manedalusia.36.t
+    desc = manedalusia.36.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.36.a
+      add_ideas = MDL_colthage_treaty
+      hidden_effect = { clr_country_flag = MDL_cant_prompt_CTH }
+    }
+  }
+
+  country_event = {#colthage refuses
+    id = manedalusia.37
+    title = manedalusia.37.t
+    desc = manedalusia.37.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.37.a
+    }
+  }
+
+  country_event = {#sayf kills the pharaoh
+    id = manedalusia.38
+    title = manedalusia.38.t
+    desc = manedalusia.38.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.38.a
+      MGY = { retire_character = MGY_shepser_of_manephis }
+      remove_country_leader_trait = MDL_sayf_pretender 
+    }
+  }
+
+  country_event = {#sayf's coronation
+    id = manedalusia.39
+    title = manedalusia.39.t
+    desc = manedalusia.39.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.39.a
+      add_political_power = 150
+      add_popularity = { ideology = fascism popularity = 0.20 }
+      add_country_leader_trait = MDL_sayf_sword_of_ash_shahid
+      custom_effect_tooltip = MDL_crimson_sultanate_tt
+      set_party_name = {
+        ideology = fascism
+        long_name = MDL_SAYF_PARTY_2_LONG
+        name = MDL_SAYF_PARTY_2
+      }
+      hidden_effect = {
+        set_cosmetic_tag = MDL_crimson_sultanate
+        MDL_crimson_sayf = {
+          set_character_name = MDL_crimson_sayf_sultan_name
+          set_portraits = {
+            army = {
+              large="gfx/leaders/MDL/crimson_sayf_sultan.tga"
+            }
+            civilian={
+              large="gfx/leaders/MDL/crimson_sayf_sultan.tga"
+            }
+          }
+        }
+      }
+      hidden_effect = {
+        MDL_crimson_sayf = {
+          set_leader_description = MDL_crimson_sayf_sultan_desc
+        }
+      }
+      hidden_effect = {
+        set_country_leader_ideology = nazism
+        set_country_leader_description = {
+          ideology = fascism
+          desc = MDL_crimson_sayf_sultan_desc
+        }
+      }
+    }
+  }
+
+  country_event = {#khaldun confronts sayf 1
+    id = manedalusia.40
+    title = manedalusia.40.t
+    desc = manedalusia.40.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.40.a
+      country_event = { days = 3 id = manedalusia.41 }
+    }
+  }
+
+  country_event = {#khaldun confronts sayf 2
+    id = manedalusia.41
+    title = manedalusia.41.t
+    desc = manedalusia.41.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.41.a
+      retire_character = MDL_armil_khaldun
+      hidden_effect = {
+        add_country_leader_role = {
+          character = MDL_senate
+          country_leader = {
+            expire = "1965.1.1"
+            ideology = despotism
+          }
+          promote_leader = yes
+        }
+      }
+    }
+  }
+
+  country_event = {#Sayf chooses a grand vizier
+    id = manedalusia.42
+    title = manedalusia.42.t
+    desc = manedalusia.42.d
+    is_triggered_only = yes
+
+    option = {#qadi
+      name = manedalusia.42.a
+      add_ideas = MDL_qadi_vizier
+    }
+    option = {#moonstriker
+      name = manedalusia.42.b
+      add_ideas = MDL_moonstriker_vizier
+    }
+  }
+
+  country_event = {#Wingbardy War White Peace Event
+    id = manedalusia.43
+    title = manedalusia.43.t
+    desc = manedalusia.43.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.43.a
+      custom_effect_tooltip = MDL_war_with_wingbardy_won
+      hidden_effect = {
+        clr_country_flag = MDL_war_with_wingbardy
+        MDL_WNG_transfer_colonies = yes
+      }
+      white_peace = WNG
+    }
+  }
+
+  country_event = {#sayf cucks the Shahanshah
+    id = manedalusia.44
+    title = manedalusia.44.t
+    desc = manedalusia.44.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.44.a
+      hidden_effect = { KAR = { set_cosmetic_tag = KAR_VASSAL } }
+      custom_effect_tooltip = MDL_shahanshah_cucked_tt
+      hidden_effect = {
+        KAR = {
+          add_country_leader_role = {
+            character = KAR_kurstanbek_khan
+            country_leader = {
+              expire = "1965.1.1"
+              ideology = nazism
+            }
+            promote_leader = yes 
+          }
+          set_capital = {
+            state = 999
+            remember_old_capital = no
+          }
+        }
+      }
+      hidden_effect = {
+        every_owned_state = {
+          limit = {
+            OR = {
+              is_core_of = MTO
+              is_core_of = AES
+            }
+          }
+          add_core_of = KAR
+        }
+        release_puppet = KAR
+      }
+      KAR = {
+        if = {
+          limit = { has_idea = zebrica_legacy_of_storm2 }
+          remove_ideas = zebrica_legacy_of_storm2
+        }
+        add_ideas = MDL_KAR_shahdom
+      }
+    }
+  }
+
+  country_event = {#establish great lakes dominion
+    id = manedalusia.45
+    title = manedalusia.45.t
+    desc = manedalusia.45.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.45.a
+      set_nationality = {
+        target_country = CGL
+        character = MDL_grandmistress_samira
+      }
+      CGL = {
+        add_country_leader_role = {
+          character = MDL_grandmistress_samira
+          country_leader = {
+            expire = "1965.1.1"
+            ideology = holy_order_f
+            desc = MDL_grandmistress_samira_desc
+          }
+          promote_leader = yes 
+        }
+        set_party_name = {
+          ideology = fascism
+          long_name = MDL_SAMIRA_PARTY_NAME_LONG
+          name = MDL_SAMIRA_PARTY_NAME
+        }
+      }
+      hidden_effect = {
+        every_owned_state = {
+          limit = {
+            OR = {
+              is_core_of = MAZ
+              is_core_of = MSS
+              is_core_of = SON
+              is_core_of = MSH
+              is_core_of = ZWA
+              is_core_of = ZUG
+              is_core_of = ZEL
+              is_core_of = HAY
+              is_core_of = REE
+            }
+          }
+          add_core_of = CGL
+        }
+      }
+      hidden_effect = {
+        CGL = {
+          load_focus_tree = {
+            tree = generic_zebra_focus
+          }
+        }
+        MDL = { CGL = { transfer_technology = yes } }
+      }
+      release_puppet = CGL
+      CGL = {
+        add_ideas = MDL_MAZ_vassal
+      }
+    } 
+  }
+
+  country_event = {#Sayf dreams of Grogar
+    id = manedalusia.46
+    title = manedalusia.46.t
+    desc = manedalusia.46.d
+    is_triggered_only = yes
+
+    picture = GFX_event_the_sphere
+
+    option = {
+      name = manedalusia.46.a
+      if = {
+        limit = { ZAI = { exists = yes } }
+        declare_war_on = { type = annex_everything target = ZAI }
+      }
+      if = {
+        limit = { ZAI = { exists = no } }
+        declare_war_on = {
+          type = annex_everything
+          target = 891.owner
+        }
+      }
+      if = {
+        limit = { CZR = { exists = yes } }
+        declare_war_on = { type = annex_everything target = CZR }
+      }
+      hidden_effect = { set_country_flag = MDL_azir_war }
+    }
+  }
+
+  country_event = {#Armil wonders what couldve been
+    id = manedalusia.47
+    title = manedalusia.47.t
+    desc = manedalusia.47.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.47.a
+      custom_effect_tooltip = MDL_game_end_tt
+      hidden_effect = { set_cosmetic_tag = MDL_caliphate }
+      MDL_crimson_sayf = { set_character_name = MDL_crimson_sayf_caliph }
+      set_party_name = {
+        ideology = fascism
+        long_name = MDL_SAYF_PARTY_3_LONG
+        name = MDL_SAYF_PARTY_3
+      }
+      hidden_effect = { set_country_leader_ideology = falangism }
+      hidden_effect = { country_event = { days = 25 id = manedalusia.46 } }
+    }
+  }
+
+  country_event = {#sayf blows shit up
+    id = manedalusia.48
+    title = manedalusia.48.t
+    desc = manedalusia.48.d
+    is_triggered_only = yes
+
+    picture = GFX_event_the_sphere
+
+    option = {
+      name = manedalusia.48.a
+      hidden_effect = { ZAI = { set_cosmetic_tag = ZAI_VASSAL } }
+      hidden_effect = { clr_country_flag = MDL_azir_war }
+      hidden_effect = {
+        ZAI = {
+          add_country_leader_role = {
+            character = ZAI_tin_zinan
+            country_leader = {
+              expire = "1965.1.1"
+              ideology = kratokracy
+            }
+            promote_leader = yes
+          }
+        }
+        every_owned_state = {
+          limit = { is_core_of = CZR }
+          add_core_of = ZAI
+        }
+        release_puppet = ZAI
+      }
+    }
+  }
+
+  country_event = {# cap Maregypt event - sayf
+    id = manedalusia.49
+    title = manedalusia.49.t
+    desc = manedalusia.49.d
+    is_triggered_only = yes#on_action 
+
+    option = {
+      name = manedalusia.49.a
+      hidden_effect = {
+        white_peace = MGY
+        MGY = {
+          every_owned_state = {
+            MDL = { transfer_state = PREV }
+          }
+        }
+      }
+      hidden_effect = { clr_country_flag = MDL_warplan_green_flag }
+    }
+  }
+
+  country_event = {#senate takes power
+    id = manedalusia.50
+    title = manedalusia.50.t
+    desc = manedalusia.50.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.50.a
+      hidden_effect = {
+        add_country_leader_role = {
+          character = MDL_senate
+          country_leader = {
+            desc = MDL_senate_desc
+            expire = "1965.1.1"
+            ideology = republicanism
+          }
+          promote_leader = yes
+        }
+      }
+      retire_character = MDL_transitional_military_council
+      set_party_leader = { ideology = neutrality leader = MDL_senate }
+      set_party_name = {
+        ideology = neutrality
+        long_name = MDL_SENATE_NAME_LONG
+        name = MDL_SENATE_NAME
+      }
+      custom_effect_tooltip = MDL_senate_tree_loaded_tt
+      hidden_effect = {
+        load_focus_tree = { tree = manedalusia_senate }
+        country_event = { id = manedalusia.66 days = 3 }
+      }
+    }
+  }
+
+  country_event = {#sultana velvet
+    id = manedalusia.51
+    title = manedalusia.51.t
+    desc = manedalusia.51.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.51.a
+      hidden_effect = {
+        add_country_leader_role = {
+          character = MDL_armil_khaldun
+          country_leader = {
+            desc = MDL_armil_khaldun_desc
+            expire = "1965.1.1"
+            ideology = despotism
+          }
+          promote_leader = yes
+        }
+      }
+      retire_character = MDL_transitional_military_council
+      set_politics = {
+        ruling_party = democratic
+        allow_elections = no
+      }
+      set_party_name = {
+        ideology = neutrality
+        long_name = MDL_NA_VELVET_MIRAGE_LONG
+        name = MDL_NA_VELVET_MIRAGE
+      }
+      custom_effect_tooltip = MDL_velvet_tree_loaded_tt
+      hidden_effect = {
+        load_focus_tree = { tree = manedalusia_velvet }
+      }
+    }
+  }
+
+  country_event = {#socialist takeover
+    id = manedalusia.52
+    title = manedalusia.52.t
+    desc = manedalusia.52.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.52.a
+      hidden_effect = {
+        add_country_leader_role = {
+          character = MDL_armil_khaldun
+          country_leader = {
+            desc = MDL_armil_khaldun_desc
+            expire = "1965.1.1"
+            ideology = despotism
+          }
+          promote_leader = yes
+        }
+      }
+      retire_character = MDL_transitional_military_council
+      set_politics = {
+        ruling_party = communism
+        allow_elections = no
+      }
+      set_party_name = {
+        ideology = neutrality
+        long_name = MDL_NA_VELVET_MIRAGE_LONG
+        name = MDL_NA_VELVET_MIRAGE
+      }
+      custom_effect_tooltip = MDL_commie_tree_loaded_tt
+      hidden_effect = {
+        load_focus_tree = { tree = manedalusia_mirage }
+      }
+    }
+  }
+
+  country_event = {#sayf tortures Gomez
+    id = manedalusia.53
+    title = manedalusia.53.t
+    desc = manedalusia.53.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.53.a
+      ABY = { retire_character = ABY_taile_sehissie_clawomonid }
+    }
+  }
+
+  country_event = {#the duel
+    id = manedalusia.54
+    title = manedalusia.54.t
+    desc = manedalusia.54.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.54.a
+      SDL = { retire_character = SDL_grand_prince_faisal_ibn_saddle }
+    }
+  }
+
+  country_event = {# cap Maregypt event - senate
+    id = manedalusia.55
+    title = manedalusia.55.t
+    desc = manedalusia.55.d
+    is_triggered_only = yes#on_action
+
+    option = {
+      name = manedalusia.55.a
+      hidden_effect = {
+        white_peace = MGY
+        MGY = {
+          every_owned_state = {
+            MDL = { transfer_state = PREV }
+          }
+        }
+      }
+      hidden_effect = { clr_country_flag = MDL_reunification_war_senate }
+    }
+  }
+
+  country_event = {#Republic/WZF declaration
+    id = manedalusia.56
+    title = manedalusia.56.t
+    desc = manedalusia.56.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.56.a
+      set_cosmetic_tag = MDL_federal_republic
+      add_ideas = MDL_federation_member
+      hidden_effect = {
+        set_nationality = {
+          target_country = MGY
+          character = MDL_nomarchical_council
+        }
+        set_nationality = {
+          target_country = MKS
+          character = MDL_ovingo_assembly
+        }
+      }
+      hidden_effect = {
+        release_puppet = MGY
+        release_puppet = MKS
+        MGY = {
+          set_cosmetic_tag = MGY_FEDERATION
+          add_ideas = MDL_federation_member
+          MDL_nomarchical_council = {
+            add_country_leader_role = {
+              country_leader = {
+                ideology = republicanism
+                expire = "1965.1.1.1"
+                id=-1
+              }
+              promote_leader = yes
+            }
+          }
+          set_politics = {
+            ruling_party = neutrality
+            allow_elections = no
+          }
+          set_party_name = {
+            ideology = neutrality
+            long_name = MDL_MGY_FED_PARTY_LONG
+            name = MDL_MGY_FED_PARTY 
+          }
+        }
+        MKS = {
+          set_cosmetic_tag = MKS_FEDERATION
+          add_ideas = MDL_federation_member
+          MDL_ovingo_assembly = {
+            add_country_leader_role = {
+              country_leader = {
+                ideology = republicanism
+                expire = "1965.1.1.1"
+                id = -1
+              }
+              promote_leader = yes
+            }
+          }
+          set_politics = {
+            ruling_party = neutrality
+            allow_elections = no
+          }
+          set_party_name = {
+            ideology = neutrality
+            long_name = MDL_MKS_FED_PARTY_LONG
+            name = MDL_MKS_FED_PARTY
+          }
+        }
+      }
+    }
+  }
+
+  country_event = {#Mehmet level-up
+    id = manedalusia.57
+    title = manedalusia.57.t
+    desc = manedalusia.57.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.57.a
+      MDL_mehmet = {
+        set_character_name = MDL_mehmet_major
+        add_corps_commander_role = {
+          traits = { pony_race_trait artillery_officer }
+          skill=2
+          attack_skill=3
+          defense_skill=1
+          logistics_skill=2
+          planning_skill=1
+        }
+      }
+      custom_effect_tooltip = MDL_mehmet_stats_tt
+    }
+  }
+
+  country_event = {#Coup fails, Sayf flees, everyone dies
+    id = manedalusia.58
+    title = manedalusia.58.t
+    desc = manedalusia.58.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.58.a
+      hidden_effect = {
+        MDL = {
+          clr_country_flag = MDL_asabiyyah_unlocked
+          set_country_flag = MDL_genocide
+        }
+      }
+      741 = {
+        add_manpower = -2500
+        remove_building = {
+          type = infrastructure
+          level = 1
+        }
+      }
+      MDL = {
+        retire_character = MDL_qadi_of_coltoba
+        retire_character = MDL_grandmistress_samira
+        retire_character = MDL_armil_khaldun
+        retire_character = MDL_moonstriker_laylah
+        retire_character = MDL_almanezor
+        retire_character = MDL_talespin
+        retire_character = MDL_clover_breeze
+        retire_character = MDL_transitional_military_council
+        retire_character = MDL_velvet_qamar
+        retire_character = MDL_sunset_mirage
+        retire_character = MDL_mehmet
+        retire_character = MDL_admiral_astur
+        retire_character = MDL_jean_claude_of_aquileia
+        retire_character = MDL_ink_al_shieri
+        retire_character = MDL_alneighzari
+        retire_character = MDL_iron_muhtal
+        retire_character = MDL_pacific_sunset
+        retire_character = MDL_emerald_bargain
+      }
+      hidden_effect = {
+        MDL = {
+          retire_character = MDL_canterto_maneossa
+          retire_character = MDL_fernao_grifo
+          remove_ideas = MDL_madgriff_in_the_harbor
+        }
+      }
+    }
+  }
+
+  country_event = {#spirit of vengeance
+    id = manedalusia.59
+    title = manedalusia.59.t
+    desc = manedalusia.59.d
+    is_triggered_only = yes
+
+    immediate = {
+      hidden_effect = {
+        MDL = {
+          set_party_name = {
+            ideology = fascism
+            long_name = MDL_SAYF_GENOCIDE_PARTY_1_LONG
+            name = MDL_SAYF_GENOCIDE_PARTY_1 
+          }
+        }
+      }
+    }
+
+    option = {
+      name = manedalusia.59.a
+      ai_chance = { factor = 100 }
+      add_stability = -0.05
+      add_manpower = -3000
+      add_war_support = 0.10
+      add_political_power = -50
+      if = {
+        limit = { MDL = { exists = no } }
+        release = MDL
+      }
+      else_if = {
+        limit = { MDL = { is_subject_of = ROOT } }
+        end_puppet = MDL
+      }
+      if = {
+        limit = { MDL = { is_in_faction_with = ROOT } }
+        MDL = { leave_faction = yes }
+      }
+      MDL = {
+        MDL_crimson_sayf = {
+          add_country_leader_role = {
+            country_leader = {
+              desc = MDL_crimson_sayf_genocide_desc
+              expire = "1965.1.1"
+              ideology = stratocracy
+            }
+            promote_leader = yes
+          }
+        }
+      }
+      hidden_effect = {
+        MDL = {
+          MDL_remove_ABY_templates = yes
+          load_focus_tree = {
+            tree = manedalusia_sayf_genocide_1
+          }
+          ABY = { MDL = { transfer_technology = yes } }
+          load_oob = "MDL_army"
+          set_politics = {
+            ruling_party = fascism
+            allow_elections = no
+          }
+          country_event = { id = manedalusia.60 days = 1 }
+        }
+      } 
+    }
+
+    option = {
+      name = manedalusia.59.b
+      trigger = { is_ai = no }
+      add_stability = -0.05
+      add_manpower = -3000
+      add_war_support = 0.10
+      add_political_power = -50
+      if = {
+        limit = { MDL = { exists = no } }
+        release = MDL
+      }
+      else_if = {
+        limit = { MDL = { is_subject_of = ROOT } }
+        end_puppet = MDL
+      }
+      if = {
+        limit = { MDL = { is_in_faction_with = ROOT } }
+        MDL = { leave_faction = yes }
+      }
+      MDL = {
+        MDL_crimson_sayf = {
+          add_country_leader_role = {
+            country_leader = {
+              desc = MDL_crimson_sayf_genocide_desc
+              expire = "1965.1.1"
+              ideology = stratocracy
+            }
+            promote_leader = yes
+          }
+        }
+      }
+      hidden_effect = {
+        MDL = {
+          delete_unit_template_and_units = { division_template = "Local Levy" }
+          delete_unit_template_and_units = { division_template = "Clawa Regiment" }
+          delete_unit_template_and_units = { division_template = "Crown Guard" }
+          delete_unit_template_and_units = { division_template = "Highlander Regiment" }
+          load_focus_tree = {
+            tree = manedalusia_sayf_genocide_1
+          }
+          ABY = { MDL = { transfer_technology = yes } }
+          load_oob = "MDL_army"
+          set_politics = {
+            ruling_party = fascism
+            allow_elections = no
+          }
+          country_event = { id = manedalusia.60 days = 1 }
+        }
+      }
+      MDL = { change_tag_from = ROOT }
+    }
+  }
+
+  country_event = {#start sayf genocide run
+    id = manedalusia.60
+    title = manedalusia.60.t
+    desc = manedalusia.60.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.60.a
+      add_popularity = { ideology = fascism popularity = 0.75 }
+      add_war_support = 0.75
+      remove_ideas = MDL_humbled_sultanate
+      add_country_leader_trait = MDL_sayf_spirit_of_vengeance
+      MDL_crimson_sayf = {
+        add_field_marshal_role = {
+          traits = { pony_race_trait harsh_leader infantry_leader }
+          skill=5
+          attack_skill=7
+          defense_skill=2
+          planning_skill=5
+          logistics_skill=5
+          desc = MDL_crimson_sayf_genocide_desc
+        }
+      } 
+      custom_effect_tooltip = MDL_sayf_genocide_stats_tt
+      custom_effect_tooltip = MDL_batshit_insane_tree_loaded_tt
+      hidden_effect = {
+        set_cosmetic_tag = MDL_GENOCIDE
+        load_focus_tree = {
+          tree = manedalusia_sayf_genocide_2
+        }
+      }
+      declare_war_on = {
+        type = annex_everything
+        target = ABY
+      }
+    }
+  }
+
+  country_event = {#sayf and the king
+    id = manedalusia.61
+    title = manedalusia.61.t
+    desc = manedalusia.61.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.61.a
+      ABY = {
+        retire_character = ABY_queen_morticia
+        retire_character = ABY_taile_sehissie_clawomonid
+      } 
+    }
+  }
+
+  country_event = {#kill all the cat leaders
+    id = manedalusia.62
+    title = manedalusia.62.t
+    desc = manedalusia.62.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.62.a
+      country_event = { id = manedalusia.63 days = 1 }
+      ABY = {
+        retire_character = ABY_catrina_catwe
+        retire_character = ABY_sourpuss_dejen
+        retire_character = ABY_ras_thurston
+        retire_character = ABY_meow_skulls
+      }
+    }
+  }
+
+  country_event = {#old friends word
+    id = manedalusia.63
+    title = manedalusia.63.t
+    desc = manedalusia.63.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.63.a
+      remove_country_leader_trait = MDL_sayf_spirit_of_vengeance
+      add_country_leader_trait = MDL_sayf_completely_numb
+      custom_effect_tooltip = MDL_sayf_genocide_end_tt
+      hidden_effect = {
+        MDL_crimson_sayf = {
+          set_leader_description = MDL_crimson_sayf_genocide_coping_desc
+        }
+        set_country_leader_description = {
+          ideology = fascism
+          desc = MDL_crimson_sayf_genocide_coping_desc
+        }
+      }
+    }
+  }
+
+  country_event = {#ash-shuhud info event
+    id = manedalusia.64
+    title = manedalusia.64.t
+    desc = manedalusia.64.d
+    picture = GFX_event_MDL_the_eye
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.64.a
+    }
+  }
+
+  country_event = {#the gang escapes
+    id = manedalusia.65
+    title = manedalusia.65.t
+    desc = manedalusia.65.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.65.a
+    }
+  }
+
+  country_event = {#sayf leaves senate path
+    id = manedalusia.66
+    title = manedalusia.66.t
+    desc = manedalusia.66.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.66.a
+      retire_character = MDL_crimson_sayf
+      add_country_leader_role = {
+        character = MDL_almanezor
+        country_leader = {
+          expire = "1965.1.1"
+          ideology = stratocracy
+        }
+        promote_leader = yes
+      }
+    }
+  }
+
+  country_event = {#republic and klugetown cat
+    id = manedalusia.67
+    title = manedalusia.67.t
+    desc = manedalusia.67.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.67.a
+      hidden_effect = {
+        release_puppet = KLG
+        MGY = {
+          remove_state_claim = 1208
+        }
+        KLG = {
+          load_focus_tree = {
+            tree = generic_zebra_focus
+          }
+          set_cosmetic_tag = KLG_FEDERATION
+          remove_ideas = {
+            KLG_mafia_rule
+            KLG_black_market
+          }
+          add_ideas = MDL_KLG_FED_idea
+          add_country_leader_role = {
+            character=KLG_capper
+            country_leader={
+              desc="POLITICS_CAPPER_DESC"
+              ideology=republicanism
+              traits={ welfare_reformer }
+              expire="1965.1.1.1"
+            }
+            promote_leader = yes
+          }
+          set_politics = {
+            ruling_party = neutrality
+            allow_elections = no       
+          }
+          set_party_name = {
+            ideology = neutrality
+            long_name = MDL_KLG_FED_PARTY_LONG
+            name = MDL_KLG_FED_PARTY
+          }
+        }
+      }
+    }
+  }
+
+  country_event = {#senate - abyssinian slave repatriation
+    id = manedalusia.68
+    title = manedalusia.68.t
+    desc = manedalusia.68.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.68.a
+      ABY = {
+        add_ideas = civilian_economy
+      }
+      swap_ideas = {
+        remove_idea = MDL_federal_constitution_idea
+        add_idea = MDL_federal_constitution_idea_1
+      }
+    }
+  }
+
+  country_event = {#prodigal son of al-manedalus
+    id = manedalusia.69
+    title = manedalusia.69.t
+    desc = manedalusia.69.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.69.a
+      custom_effect_tooltip = MDL_game_end_tt
+    }
+  }
+
+  country_event = {#FREE
+    id = manedalusia.70
+    title = manedalusia.70.t
+    desc = manedalusia.70.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.70.a
+    }
+  }
+
+  country_event = {#Sayf takes all of catrinas shit
+    id = manedalusia.71
+    title = manedalusia.71.t
+    desc = manedalusia.71.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.71.a
+      ABY = { retire_character = ABY_catrina_catwe }
+      741 = { add_manpower = 1 }
+    }
+  }
+
+  country_event = {#Katren test event
+    id = manedalusia.72
+    title = manedalusia.72.t
+    desc = manedalusia.72.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.72.a
+      KTR = {
+        transfer_state = 1200
+      }
+    }
+  }
+
+  country_event = {#Suleiman swears revenge
+    id = manedalusia.73
+    title = manedalusia.73.t
+    desc = manedalusia.73.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.73.a
+    }
+  }
+
+  country_event = {#Katren Legation - ABY
+    id = manedalusia.74
+    title = manedalusia.74.t
+    desc = manedalusia.74.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.74.a
+    }
+    option = {
+      name = manedalusia.74.b
+      trigger = { is_ai = no }
+      KTR = { change_tag_from = ROOT }
+    }
+  }
+
+  country_event = {#Katren legation - MDL
+    id = manedalusia.75
+    title = manedalusia.75.t
+    desc = manedalusia.75.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.75.a
+    }
+    option = {
+      name = manedalusia.75.b
+      trigger = { is_ai = no }
+      KTR = { change_tag_from = ROOT }
+    }
+  }
+
+  country_event = {#tea with Sayf
+    id = manedalusia.76
+    title = manedalusia.76.t
+    desc = manedalusia.76.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.76.a
+      add_popularity = { ideology = fascism popularity = -0.1 }
+    }
+  }
+
+  country_event = {#MGY gib land plz
+    id = manedalusia.77
+    title = manedalusia.77.t
+    desc = manedalusia.77.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.77.a
+      ai_chance = {
+        base = 50
+        modifier = {
+          base = 100
+          has_government = democratic
+        }
+        modifier = {
+          base = 0
+          OR = {
+            has_government = fascism
+            has_government = communism
+          }
+        }
+      }
+      add_timed_idea = {
+        idea = MDL_paying_MGY_1
+        days = 180
+      }
+      effect_tooltip = {
+        MDL = {
+          transfer_state = 738
+          transfer_state = 740
+        }
+      }
+      remove_state_claim = 764
+      remove_state_claim = 738
+      remove_state_claim = 740
+      remove_state_claim = 741
+      MDL = { country_event = { id = manedalusia.78 days = 3 } }
+    }
+    option = {
+      ai_chance = {
+        base = 50
+        modifier = {
+          base = 100
+          OR = {
+            has_government = fascism
+            has_government = communism
+          }
+        }
+        modifier = {
+          base = 0
+          has_government = democratic
+        }
+      }
+      name = manedalusia.77.b
+      ai_chance = { factor = 0 }
+      MDL = { country_event = { id = manedalusia.79 days = 3 } }
+    }
+  }
+
+  country_event = {#MGY gives land back
+    id = manedalusia.78
+    title = manedalusia.78.t
+    desc = manedalusia.78.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.78.a
+      MDL = {
+        add_timed_idea = {
+          idea = MDL_paying_MGY
+          days = 180
+        }
+        add_ideas = MDL_paying_MGY
+        transfer_state = 738
+        transfer_state = 740
+      }
+    }
+  }
+
+  country_event = {#war it is then sphinxfuckers
+    id = manedalusia.79
+    title = manedalusia.79.t
+    desc = manedalusia.79.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.79.a
+      custom_effect_tooltip = MDL_velvet_war_MGY_tt
+      hidden_effect = { set_country_flag = MDL_velvet_war_MGY }
+      declare_war_on = { type = annex_everything target = MGY }
+    }
+  }
+
+  country_event = {#Velvet girlbosses Maregypt
+    id = manedalusia.80
+    title = manedalusia.80.t
+    desc = manedalusia.80.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.80.a
+      white_peace = MGY
+      MGY = {
+        remove_state_claim = 738
+        remove_state_claim = 740
+        remove_state_claim = 741
+        remove_state_claim = 764
+      }
+      MDL = {
+        transfer_state = 738
+        transfer_state = 740
+        hidden_effect = {
+          clr_country_flag = MDL_velvet_war_MGY
+        }
+      }
+    }
+  }
+
+  country_event = {#Begin slave rescue operations
+    id = manedalusia.81
+    title = manedalusia.81.t
+    desc = manedalusia.81.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.81.a
+      add_ideas = MDL_underground_railroad
+    }
+  }
+
+  country_event = {#Twilight visits Coltoba
+    id = manedalusia.82
+    title = manedalusia.82.t
+    desc = {
+      text = manedalusia.82.d
+      trigger = { original_tag = MDL }
+    }
+    desc = {
+      text = manedalusia.82.d_EQS
+      trigger = { original_tag = EQS }
+    }
+    is_triggered_only = yes
+    option = {
+      name = manedalusia.82.a
+      trigger = {
+        original_tag = MDL
+      }
+      add_opinion_modifier = { target = EQS modifier = made_friends }
+    }
+    option = {
+      name = manedalusia.82.a_EQS
+      trigger = {
+        original_tag = EQS
+      }
+      add_opinion_modifier = { target = MDL modifier = made_friends }
+    }
+  }
+
+  country_event = {#day of black sun
+    id = manedalusia.83
+    title = manedalusia.83.t
+    desc = manedalusia.83.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.83.a
+      if = {
+        limit = { is_in_faction_with = EQS }
+        leave_faction = yes
+      }
+      swap_ideas = {
+        remove_idea = MDL_humbled_sultanate
+        add_idea = MDL_sunmad_0
+      }
+      country_event = { id = manedalusia.84 days = 3 }
+    }
+  }
+
+  country_event = {#koltaliba restore order
+    id = manedalusia.84
+    title = manedalusia.84.t
+    desc = manedalusia.84.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.84.a
+      hidden_effect = { set_country_flag = MDL_samira_country_leader }
+      add_country_leader_role = {
+        character = MDL_grandmistress_samira
+        country_leader = {
+          desc = MDL_grandmistress_samira_desc
+          expire = "1965.1.1"
+          ideology = holy_order_h
+        }
+        promote_leader = yes
+      }
+      set_party_name = {
+        ideology = democratic
+        long_name = MDL_SAMIRA_PARTY_NAME_LONG
+        name = MDL_SAMIRA_PARTY_NAME
+      }
+      custom_effect_tooltip = MDL_crusade_tree_loaded_tt
+      hidden_effect = {
+        load_focus_tree = {
+          tree = manedalusia_crusade
+        }
+      }
+    }
+  }
+
+  country_event = {#laylah meets the mufti
+    id = manedalusia.85
+    title = manedalusia.85.t
+    desc = manedalusia.85.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.85.a
+      MDL_reduce_sun_madness = yes
+    }
+  }
+
+  country_event = {#crimson keeps shit together in army
+    id = manedalusia.86
+    title = manedalusia.86.t
+    desc = manedalusia.86.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.86.a
+      MDL_reduce_sun_madness = yes
+    }
+  }
+
+  country_event = {#khaldun assures the public
+    id = manedalusia.87
+    title = manedalusia.87.t
+    desc = manedalusia.87.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.87.a
+      MDL_reduce_sun_madness = yes
+    }
+  }
+
+  country_event = {#gather the council again
+    id = manedalusia.88
+    title = manedalusia.88.t
+    desc = manedalusia.88.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.88.a
+    }
+  }
+
+  country_event = {#ASH SHAHID WILLS IT
+    id = manedalusia.89
+    title = manedalusia.89.t
+    desc = manedalusia.89.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.89.a
+      add_ideas = MDL_holy_zeal_2
+      hidden_effect = {
+        set_country_flag = MDL_crusade_active
+        set_cosmetic_tag = MDL_crusader
+      }
+    }
+  }
+
+  country_event = {#Grifo takes over
+    id = manedalusia.90
+    title = manedalusia.90.t
+    desc = manedalusia.90.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.90.a
+      add_political_power = -300
+      retire_character = MDL_armil_khaldun
+      retire_character = MDL_crimson_sayf
+      retire_character = MDL_moonstriker_laylah
+      retire_character = MDL_almanezor
+      retire_character = MDL_clover_breeze
+      hidden_effect = {
+        retire_character = MDL_cims
+      }
+      set_politics = {
+        ruling_party = fascism
+        allow_elections = no
+      }
+      remove_ideas = MDL_madgriff_in_the_harbor
+      remove_ideas = MDL_humbled_sultanate
+      add_ideas = MDL_ash_shuhud_resistance
+      custom_effect_tooltip = MDL_batshit_insane_tree_loaded_tt
+      custom_effect_tooltip = MDL_grifo_tree_loaded_tt
+      hidden_effect = {
+        set_country_flag = MDL_grifo_takeover
+        if = {
+          limit = { NOT = { has_dlc = "Man the Guns" } }
+          load_oob = "MDL_grifo_fleet_legacy"
+        }
+        if = {
+          limit = { has_dlc = "Man the Guns" }
+          load_oob = "MDL_grifo_fleet"
+        }
+      }
+      hidden_effect = {
+        clr_country_flag = MDL_asabiyyah_unlocked
+        set_party_name = {
+          ideology = neutrality
+          long_name = MDL_NA_VELVET_MIRAGE_LONG
+          name = MDL_NA_VELVET_MIRAGE
+        }
+        load_focus_tree = {
+          tree = manedalusia_ultramar_1
+        }
+      }
+    }
+  }
+
+  country_event = {#FREE
+    id = manedalusia.91
+    title = manedalusia.91.t
+    desc = manedalusia.91.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.91.a
+    }
+  }
+
+  country_event = {#Samira Kills Grifo
+    id = manedalusia.92
+    title = manedalusia.92.t
+    desc = manedalusia.92.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.92.a
+
+      retire_character = MDL_fernao_grifo
+      retire_character = MDL_rosa_branca
+      retire_character = MDL_alexandre_de_aguilar
+      retire_character = MDL_antonio_aviario
+      remove_ideas = MDL_ash_shuhud_resistance
+
+      hidden_effect = { clr_country_flag = MDL_grifo_takeover }
+
+      add_country_leader_role = {
+        character = MDL_grandmistress_samira
+        country_leader = {
+          desc = MDL_grandmistress_samira_desc
+          expire = "1965.1.1"
+          ideology = holy_order_n
+        }
+        promote_leader = yes
+      }
+      set_politics = {
+        ruling_party = neutrality
+        allow_elections = no
+      }
+      set_party_name = {
+        ideology = neutrality
+        long_name = MDL_SAMIRA_PARTY_NAME_LONG
+        name = MDL_SAMIRA_PARTY_NAME
+      }
+      set_party_name = {
+        ideology = fascism
+        long_name = MDL_SAYF_PARTY_1_LONG
+        name = MDL_SAYF_PARTY_1
+      }
+      hidden_effect = {
+        load_focus_tree = {
+          tree = generic_zebra_focus
+        }
+      }
+    }
+  }
+
+  country_event = {#Laylah takes over in Riseia
+    id = manedalusia.93
+    title = manedalusia.93.t
+    desc = manedalusia.93.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.93.a
+      custom_effect_tooltip = MDL_shahanshah_cucked_tt
+      RIZ = {
+        set_party_name = {
+          ideology = fascism
+          long_name = RIZ_LAYLAH_PARTY_NAME_LONG
+          name = RIZ_LAYLAH_PARTY_NAME
+        }
+      }
+      hidden_effect = {
+        MDL_moonstriker_laylah = {
+          set_portraits = {
+            army = {
+              large="gfx/leaders/MDL/moonstriker_sunglasses.tga"
+            }
+            civilian={
+              large="gfx/leaders/MDL/moonstriker_sunglasses.tga"
+              small="gfx/interface/ideas/Advisors/MDL/MDL_moonstriker_laylah_sunglasses.tga"
+            }
+          }
+        }
+        RIZ_moonstriker_laylah = {
+          set_portraits = {
+            army = {
+              large="gfx/leaders/MDL/moonstriker_sunglasses.tga"
+            }
+            civilian={
+              large="gfx/leaders/MDL/moonstriker_sunglasses.tga"
+              small="gfx/interface/ideas/Advisors/MDL/MDL_moonstriker_laylah_sunglasses.tga"
+            }
+          }
+        }
+        every_owned_state = {
+          limit = {
+            OR = {
+              is_in_array = { state_original_cores = MTA }
+              is_in_array = { state_original_cores = OSQ }
+              is_in_array = { state_original_cores = HMR }
+            }
+          }
+          add_core_of = RIZ
+        }
+      }
+      hidden_effect = {
+        RIZ = {
+          load_focus_tree = {
+            tree = generic_zebra_focus
+          }
+        }
+        MDL = { RIZ = { transfer_technology = yes } }
+      }
+      release_puppet = RIZ
+      RIZ = {
+        add_ideas = RIZ_council_adaptation
+      }
+    }
+  }
+
+  country_event = {#establish bat puppet state
+    id = manedalusia.94
+    title = manedalusia.94.t
+    desc = manedalusia.94.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.94.a
+      custom_effect_tooltip = MDL_shahanshah_cucked_tt
+      BSG = {
+        set_party_name = {
+          ideology = fascism
+          long_name = BAT_VASSAL_NAME_LONG
+          name = BAT_VASSAL_NAME
+        }
+      }
+      hidden_effect = {
+        every_owned_state = {
+          limit = {
+            OR = {
+              is_in_array = { state_original_cores = BAT }
+              is_in_array = { state_original_cores = WAR }
+              is_in_array = { state_original_cores = TBK }
+            }
+          }
+          add_core_of = BSG
+        }
+      }
+      hidden_effect = {
+        BSG = {
+          load_focus_tree = {
+            tree = generic_zebra_focus
+          }
+        }
+        MDL = { BSG = { transfer_technology = yes } }
+      }
+      release_puppet = BSG
+    }
+  }
+
+  country_event = {#Grifo Kills Samira
+    id = manedalusia.95
+    title = manedalusia.95.t
+    desc = manedalusia.95.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.95.a
+      retire_character = MDL_grandmistress_samira
+    }
+  }
+
+  country_event = {#Grifo gets generals
+    id = manedalusia.96
+    title = manedalusia.96.t
+    desc = manedalusia.96.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.96.a
+      MDL_rosa_branca = {
+        add_corps_commander_role = {
+			    traits={ pony_race_trait harsh_leader }
+			    skill=2
+		      attack_skill=1
+		      defense_skill=3
+		      planning_skill=2
+		      logistics_skill=1
+	      }
+      }
+      custom_effect_tooltip = MDL_rosa_branca_stats_tt
+      MDL_alexandre_de_aguilar = {
+        add_corps_commander_role = {
+			    traits={ minotaur_race_trait engineer_officer air_force_commander }
+			    skill=1
+		      attack_skill=1
+		      defense_skill=1
+		      planning_skill=1
+		      logistics_skill=1
+	      }
+      }
+      custom_effect_tooltip = MDL_alexandre_de_aguilar_stats_tt
+      MDL_antonio_aviario = {
+        add_corps_commander_role = {
+			    traits={ harpy_race_trait trait_reckless inspirational_leader }
+			    skill=2
+		      attack_skill=2
+		      defense_skill=2
+		      planning_skill=1
+		      logistics_skill=2
+	      }
+      }
+      custom_effect_tooltip = MDL_antonio_aviario_stats_tt
+    }
+  }
+
+  country_event = {#Lord Regent of the Overseas
+    id = manedalusia.97
+    title = manedalusia.97.t
+    desc = manedalusia.97.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.97.a
+			741 = { set_state_name = "MDL_state_new_karthin" }
+      remove_state_core = 738
+      remove_state_core = 740
+      set_cosmetic_tag = MDL_ultramar
+      set_party_name = {
+        ideology = fascism
+        long_name = MDL_GRIFO_PARTY_NAME_LONG
+        name = MDL_GRIFO_PARTY_NAME
+      }
+      custom_effect_tooltip = MDL_imperium_decisions_unlocked_tt
+      hidden_effect = {
+        set_country_flag = MDL_imperium_decisions_unlocked
+        set_province_name = { id = 12234 name = "MDL_state_new_karthin"}
+        load_focus_tree = {
+          tree = manedalusia_ultramar_2
+        }
+      }
+    }
+  }
+
+  country_event = {#Grifo confronts the Koltaliba
+    id = manedalusia.98
+    title = manedalusia.98.t
+    desc = manedalusia.98.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.98.a
+      ai_chance = { factor = 50 }
+      country_event = manedalusia.95
+    }
+    option = {
+      name = manedalusia.98.b
+      ai_chance = { factor = 50 }
+      country_event = manedalusia.92
+    }
+  }
+
+  country_event = {#Grifo as field marshal
+    id = manedalusia.99
+    title = manedalusia.99.t
+    desc = manedalusia.99.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.99.a
+      MDL_fernao_grifo = {
+        add_field_marshal_role = {
+          traits = { griffon_race_trait substance_abuser armchair_general promising_general }
+          skill=1
+          attack_skill=1
+          defense_skill=1
+          planning_skill=1
+          logistics_skill=1
+          desc = MDL_fernao_grifo_desc
+        }
+      }
+      custom_effect_tooltip = MDL_grifo_stats_tt
+    }
+  }
+
+  country_event = {#beach party ending
+    id = manedalusia.100
+    title = manedalusia.100.t
+    desc = manedalusia.100.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.100.a
+      custom_effect_tooltip = MDL_game_end_tt
+    }
+  }
+
+  country_event = {#consulate in the empire
+    id = manedalusia.101
+    title = manedalusia.101.t
+    desc = manedalusia.101.d
+    is_triggered_only = yes
+
+    option = {
+      ai_chance = { factor = 90 }
+      name = manedalusia.101.a
+      add_opinion_modifier = { target = MDL modifier = MDL_consulate }
+      MDL = { country_event = { id = manedalusia.102 } }
+    }
+    option = {
+      ai_chance = { factor = 10 }
+      name = manedalusia.101.b
+      MDL = { country_event = { id = manedalusia.103 } }
+    }
+  }
+
+  country_event = {#empire says yes
+    id = manedalusia.102
+    title = manedalusia.102.t
+    desc = manedalusia.102.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.102.a
+      add_opinion_modifier = { target = GRI modifier = MDL_consulate }
+    }
+  }
+
+  country_event = {#empire says no
+    id = manedalusia.103
+    title = manedalusia.103.t
+    desc = manedalusia.103.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.103.a
+    }
+  }
+
+  country_event = {#post war loan
+    id = manedalusia.104
+    title = manedalusia.104.t
+    desc = manedalusia.104.d
+    is_triggered_only = yes
+
+    option = {
+      ai_chance = { factor = 100 }
+      name = manedalusia.104.a
+      add_timed_idea = {
+        idea = MDL_post_war_investment
+        days = 300
+      }
+      hidden_effect = { MDL = { country_event = { id = manedalusia.105 days = 3 } } }
+    }
+    option = {
+      ai_chance = { factor = 0 }
+      name = manedalusia.104.b
+      hidden_effect = { MDL = { country_event = { id = manedalusia.106 days = 3 } } }
+    }
+  }
+
+  country_event = {#they say yes to loan
+    id = manedalusia.105
+    title = manedalusia.105.t
+    desc = manedalusia.105.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.105.a
+      add_offsite_building = { type = industrial_complex level = 1 }
+    }
+  }
+
+  country_event = {#they say no to loan
+    id = manedalusia.106
+    title = manedalusia.106.t
+    desc = manedalusia.106.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.106.a
+      add_political_power = 100
+    }
+  }
+
+  country_event = {#laylah rizzes a tourist
+    id = manedalusia.107
+    title = manedalusia.107.t
+    desc = manedalusia.107.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.107.a
+      741 = { add_manpower = 15000 }
+      740 = { add_manpower = 15000 }
+      738 = { add_manpower = 15000 }
+    }
+  }
+
+  country_event = {#restore capital to karthin/holy empire declaration
+    id = manedalusia.108
+    title = manedalusia.108.t
+    desc = manedalusia.108.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.108.a
+			371 = { set_state_name = "MDL_state_karthin" }
+      set_cosmetic_tag = MDL_sacro_imperio
+      hidden_effect = {
+        set_province_name = { id = 3144 name = "MDL_state_karthin"}
+      }
+      remove_country_leader_trait = MDL_grifo_lord_regent_of_overseas
+      add_country_leader_trait = MDL_grifo_imperial_regent
+    }
+  }
+
+  country_event = {#Manedalusians get woke on Tritheism 1
+    id = manedalusia.109
+    title = manedalusia.109.t
+    desc = manedalusia.109.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.109.a
+		  decrease_illiteracy = yes
+		  hidden_effect = {
+			  country_event = {
+				  id = manedalusia.110
+				  days = 120
+			  }
+	    }
+    }
+  }
+
+  country_event = {#Manedalusians get woke on Tritheism 2
+    id = manedalusia.110
+    title = manedalusia.110.t
+    desc = manedalusia.110.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.110.a
+      decrease_illiteracy = yes
+    }
+  }
+
+  country_event = {#battle hardened Grifo
+    id = manedalusia.111
+    title = manedalusia.111.t
+    desc = manedalusia.111.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.111.a
+      MDL_fernao_grifo = {
+        remove_unit_leader_trait = substance_abuser
+        add_attack = 1
+        add_defense = 1
+        add_planning = 1
+        add_logistics = 1
+      }
+    }
+  }
+
+  country_event = {#antonio gives a speech in coltoba
+    id = manedalusia.112
+    title = manedalusia.112.t
+    desc = manedalusia.112.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.112.a
+      add_stability = 0.05
+      add_war_support = 0.05
+    }
+  }
+
+  country_event = {#grover brought over
+    id = manedalusia.113
+    title = manedalusia.113.t
+    desc = {
+      text = manedalusia.113.d
+      trigger = { NOT = { has_global_flag = GRI_grover_vi_dead } }
+    }
+    desc = {
+      text = manedalusia.113.d_dead
+      trigger = { has_country_flag = GRI_grover_vi_dead }
+    }
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.113.a
+    }
+  }
+
+  country_event = {#pax in excelsior
+    id = manedalusia.114
+    title = manedalusia.114.t
+    desc = manedalusia.114.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.114.a
+      country_event = { id = manedalusia.115 days = 3 }
+      add_country_leader_role = {
+        character = MDL_emperor
+        country_leader = {
+          expire = "1965.1.1"
+          ideology = esotericism
+        }
+        promote_leader = yes
+      }
+    }
+  }
+
+  country_event = {#grifo's ending
+    id = manedalusia.115
+    title = manedalusia.115.t
+    desc = manedalusia.115.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.115.a
+      custom_effect_tooltip = MDL_game_end_tt
+    }
+  }
+
+  country_event = {#settlers from Griffonia
+    id = manedalusia.116
+    title = manedalusia.116.t
+    desc = manedalusia.116.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.116.a
+      771 = { add_manpower = 250000 }
+      772 = { add_manpower = 250000 }
+      774 = { add_manpower = 250000 }
+    }
+  }
+
+
+  country_event = {#the many faces of fernao grifo
+    id = manedalusia.117
+    title = manedalusia.117.t
+    desc = manedalusia.117.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.117.a
+      custom_effect_tooltip = MDL_heteronyms_tt
+      MDL_grifo_setup_heteronym = yes
+
+      hidden_effect = {
+        set_country_flag = MDL_heteronyms_active
+        country_event = { id = manedalusia.118 days = 200 }
+      }
+    }
+  }
+
+  country_event = {#heteronym shuffle
+    id = manedalusia.118
+    title = manedalusia.118.t
+    desc = manedalusia.118.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.118.a
+      MDL_shuffle_grifo_heteronym = yes
+      if = {
+        limit = { has_country_flag = MDL_heteronyms_active }
+        hidden_effect = { country_event = { id = manedalusia.118 days = 200 } }
+      }
+    }
+  }

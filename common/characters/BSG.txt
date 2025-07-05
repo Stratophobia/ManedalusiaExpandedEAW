@@ -1,0 +1,15 @@
+characters = {
+  BSG_purification_committee = {
+    name = BSG_purification_committee
+    portraits={
+			civilian={
+				large="gfx/leaders/BSG/BSG_purification_committee.tga"
+			}
+		}
+    country_leader={
+			ideology=ultranationalism
+			expire="1965.1.1.1"
+			id=-1
+		}
+  }
+}

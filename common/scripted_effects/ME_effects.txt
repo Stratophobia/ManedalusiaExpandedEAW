@@ -1,0 +1,228 @@
+MDL_remove_ABY_templates = {
+  delete_unit_template_and_units = { division_template = "Local Levy" }
+  delete_unit_template_and_units = { division_template = "Clawa Regiment" }
+  delete_unit_template_and_units = { division_template = "Crown Guard" }
+  delete_unit_template_and_units = { division_template = "Highlander Regiment" }
+}
+
+#For Harmonic Crusade Path. Gradually remove Sun Madness effect
+MDL_reduce_sun_madness = {
+  if = {
+    limit = { has_idea = MDL_sunmad_0 }
+    swap_ideas = {
+      remove_idea = MDL_sunmad_0
+      add_idea = MDL_sunmad_1
+    }
+  }
+  else_if = {
+    limit = { has_idea = MDL_sunmad_1 }
+    swap_ideas = {
+      remove_idea = MDL_sunmad_1
+      add_idea = MDL_sunmad_2
+    }
+  }
+  else_if = {
+    limit = { has_idea = MDL_sunmad_2 }
+    swap_ideas = {
+      remove_idea = MDL_sunmad_2
+      add_idea = MDL_sunmad_3
+    }
+  }
+  else_if = {
+    limit = { has_idea = MDL_sunmad_3 }
+    remove_ideas = MDL_sunmad_3
+  }
+}
+
+#For Wingbardy War (All Main Paths)
+MDL_WNG_transfer_colonies = {
+  WNG = {
+    remove_state_claim = 1200
+    remove_state_claim = 784
+  }
+  if = {
+    limit = {
+      ABY = {
+        exists = yes
+        is_in_faction_with = MDL
+      }
+    }
+    WNG = {
+      every_owned_state = {
+        limit = { is_core_of = ABY }
+        ABY = { transfer_state = PREV }
+      }
+    }
+    ABY = {
+      if = {
+        limit = { has_idea = ABY_wingbardian_concessions }
+        remove_ideas = ABY_wingbardian_concessions
+      }
+    }
+  }
+  else = {
+    WNG = {
+      every_owned_state = {
+        limit = { is_core_of = ABY }
+        MDL = { transfer_state = PREV}
+      }
+    }
+    ABY = {
+      every_owned_state = {
+        limit = { is_core_of = ABY }
+        MDL = { transfer_state = PREV}
+      }
+    }
+  }
+}
+
+MDL_increase_conscription = {
+	if = {
+		limit = { has_idea = disarmed_nation }
+		add_ideas = limited_conscription
+	}
+	else_if = {
+		limit = { has_idea = volunteer_only }
+		add_ideas = limited_conscription
+	}
+	else_if = {
+		limit = { has_idea = limited_conscription }
+		add_ideas = extensive_conscription
+	}
+	else_if = {
+		limit = { has_idea = extensive_conscription }
+		add_ideas = service_by_requirement
+	}
+	else_if = {
+    limit = { has_idea = service_by_requirement }
+		add_ideas = all_adults_serve
+	}
+	else = {
+		limit = { has_idea = all_adults_serve }
+		add_manpower = 10000
+	}
+}
+
+#Grifo path only. heteronym setup
+MDL_grifo_setup_heteronym = {
+  random_list = {
+    1 = {
+      set_country_flag = MDL_grifo_modernist
+      add_ideas = MDL_grifo_modernist
+    }
+    1 = {
+      set_country_flag = MDL_grifo_socialite
+      add_ideas = MDL_grifo_socialite
+    }
+    1 = {
+      set_country_flag = MDL_grifo_naturalist
+      add_ideas = MDL_grifo_naturalist
+    }
+    1 = {
+      set_country_flag = MDL_grifo_romanticist
+      add_ideas = MDL_grifo_romanticist
+    }
+  }
+}
+
+MDL_grifo_dismiss_heteronyms = {
+  clr_country_flag = MDL_heteronyms_active
+  if = {
+    limit = { has_country_flag = MDL_grifo_modernist }
+    clr_country_flag = MDL_grifo_modernist
+    remove_ideas = MDL_grifo_modernist
+  }
+  else_if = {
+    limit = { has_country_flag = MDL_grifo_socialite }
+    clr_country_flag = MDL_grifo_socialite
+    remove_ideas = MDL_grifo_socialite
+  }
+  else_if = {
+    limit = { has_country_flag = MDL_grifo_naturalist }
+    clr_country_flag = MDL_grifo_naturalist
+    remove_ideas = MDL_grifo_naturalist
+  }
+  else = {
+    clr_country_flag = MDL_grifo_romanticist
+    remove_ideas = MDL_grifo_romanticist
+  }
+}
+
+#Grifo path only. shuffle heteronym
+MDL_shuffle_grifo_heteronym = {
+  if = {
+    limit = { has_country_flag = MDL_grifo_modernist }
+    clr_country_flag = MDL_grifo_modernist
+    hidden_effect = { remove_ideas = MDL_grifo_modernist }
+    random_list = {
+      1 = {
+        set_country_flag = MDL_grifo_romanticist
+        add_ideas = MDL_grifo_romanticist
+      }
+      1 = {
+        set_country_flag = MDL_grifo_socialite
+        add_ideas = MDL_grifo_socialite
+      }
+      1 = {
+        set_country_flag = MDL_grifo_naturalist
+        add_ideas = MDL_grifo_naturalist
+      }
+    }
+  }
+  else_if = {
+    limit = { has_country_flag = MDL_grifo_romanticist }
+    clr_country_flag = MDL_grifo_romanticist
+    hidden_effect = { remove_ideas = MDL_grifo_romanticist }
+    random_list = {
+      1 = {
+        set_country_flag = MDL_grifo_modernist
+        add_ideas = MDL_grifo_modernist
+      }
+      1 = {
+        set_country_flag = MDL_grifo_socialite
+        add_ideas = MDL_grifo_socialite
+      }
+      1 = {
+        set_country_flag = MDL_grifo_naturalist
+        add_ideas = MDL_grifo_naturalist
+      }
+    }
+  }
+  else_if = {
+    limit = { has_country_flag = MDL_grifo_naturalist }
+    clr_country_flag = MDL_grifo_naturalist
+    hidden_effect = { remove_ideas = MDL_grifo_naturalist }
+    random_list = {
+      1 = {
+        set_country_flag = MDL_grifo_modernist
+        add_ideas = MDL_grifo_modernist
+      }
+      1 = {
+        set_country_flag = MDL_grifo_socialite
+        add_ideas = MDL_grifo_socialite
+      }
+      1 = {
+        set_country_flag = MDL_grifo_romanticist
+        add_ideas = MDL_grifo_romanticist
+      }
+    }
+  }
+  else = {
+    clr_country_flag = MDL_grifo_socialite
+    hidden_effect = { remove_ideas = MDL_grifo_socialite }
+    random_list = {
+      1 = {
+        set_country_flag = MDL_grifo_romanticist
+        add_ideas = MDL_grifo_romanticist
+      }
+      1 = {
+        set_country_flag = MDL_grifo_naturalist
+        add_ideas = MDL_grifo_naturalist
+      }
+      1 = {
+        set_country_flag = MDL_grifo_naturalist
+          add_ideas = MDL_grifo_naturalist
+      }
+    }
+  }
+}
