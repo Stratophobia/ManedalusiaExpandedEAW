@@ -154,7 +154,19 @@
 
     option = {
       name = manedalusia.3.a
-      ai_chance = { factor = 95 }
+      ai_chance = {
+        base = 95
+        modifier = {
+          factor = 0
+          OR = {
+            has_country_flag = MDL_AI_ULTRAMAR
+            has_game_rule = {
+				      rule = MDL_ai_behavior
+				      option = MDL_ULTRAMAR
+			      }
+          }
+        }
+      }
       add_political_power = -50
       hidden_effect = {
         country_event = { id = manedalusia.4 }
@@ -162,7 +174,19 @@
     }
     option = {
       name = manedalusia.3.b
-      ai_chance = { factor = 5 }
+      ai_chance = {
+        base = 5
+        modifier = {
+          base = 100
+          OR = {
+            has_country_flag = MDL_AI_ULTRAMAR
+            has_game_rule = {
+				      rule = MDL_ai_behavior
+				      option = MDL_ULTRAMAR
+			      }
+          }
+        }
+      }
       hidden_effect = {
         country_event = manedalusia.90
       }
@@ -2618,12 +2642,36 @@
 
     option = {
       name = manedalusia.98.a
-      ai_chance = { factor = 50 }
+      ai_chance = {
+        base = 10
+        modifier = {
+          base = 100
+          OR = {
+            has_country_flag = MDL_AI_ULTRAMAR
+            has_game_rule = {
+				      rule = MDL_ai_behavior
+				      option = MDL_ULTRAMAR
+			      }
+          }
+        }
+      }
       country_event = manedalusia.95
     }
     option = {
       name = manedalusia.98.b
-      ai_chance = { factor = 50 }
+      ai_chance = {
+        base = 90
+        modifier = {
+          factor = 0
+          OR = {
+            has_country_flag = MDL_AI_ULTRAMAR
+            has_game_rule = {
+				      rule = MDL_ai_behavior
+				      option = MDL_ULTRAMAR
+			      }
+          }
+        }
+      }
       country_event = manedalusia.92
     }
   }
