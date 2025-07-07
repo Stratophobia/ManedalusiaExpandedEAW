@@ -20,7 +20,7 @@ focus_tree = {
 	country = {
 		factor = 0
 		modifier = {
-			and = 10
+			add = 10
 			tag = MDL
 		}
 	}
@@ -40,7 +40,7 @@ focus_tree = {
 	country = {
 		factor = 0
 		modifier = {
-			and = 10
+			add = 10
 			tag = MDL
 		}
 	}
@@ -54,7 +54,7 @@ focus_tree = {
 	country = {
 		factor = 0
 		modifier = {
-			and = 10
+			add = 10
 			tag = MDL
 		}
 	}
@@ -70,7 +70,7 @@ focus_tree = {
 	country = {
 		factor = 0
 		modifier = {
-			and = 10
+			add = 10
 			tag = MDL
 		}
 }
@@ -89,7 +89,7 @@ focus_tree = {
 	country = {
 		factor = 0
 		modifier = {
-			and = 10
+			add = 10
 			tag = MDL
 		}
 	}
@@ -109,7 +109,7 @@ focus_tree = {
 	country = {
 		factor = 0
 		modifier = {
-			and = 10
+			add = 10
 			tag = MDL
 		}
 	}
@@ -128,7 +128,7 @@ focus_tree = {
 	country = {
 		factor = 0
 		modifier = {
-			and = 10
+			add = 10
 			tag = MDL
 		}
 	}
@@ -147,7 +147,7 @@ focus_tree = {
   country = {
 		factor = 0
 		modifier = {
-			and = 10
+			add = 10
 			tag = MDL
 		}
 	}
@@ -162,7 +162,7 @@ focus_tree = {
   country = {
 		factor = 0
 		modifier = {
-			and = 10
+			add = 10
 			tag = MDL
 		}
 	}
@@ -177,7 +177,7 @@ focus_tree = {#UNFINISHED
   country = {
 		factor = 0
 		modifier = {
-			and = 10
+			add = 10
 			tag = MDL
 		}
 	}
