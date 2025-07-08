@@ -3056,7 +3056,7 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_fleet_tech
-  icon = GFX_goal_generic_navy_cruiser
+  icon = GFX_MDL_fleet_tech
   cost = 5
   x = 1
   y = 1
@@ -3115,7 +3115,7 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_grand_zoco
-  icon = GFX_goal_GRI_industryzone
+  icon = GFX_MDL_grand_zoco
   cost = 5
   x = 0
   y = 1
@@ -3139,7 +3139,7 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_naval_patrols
-  icon = GFX_goal_generic_political
+  icon = GFX_MDL_naval_patrols
   cost = 5
   x = 5
   y = 1
@@ -3174,7 +3174,7 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_capital_ships
-  icon = GFX_focus_generic_navy_battleship2
+  icon = GFX_MDL_capital_ships
   cost = 5
   x = 0
   y = 1
@@ -3214,7 +3214,7 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_naval_depot_network
-  icon = GFX_focus_generic_cruiser2
+  icon = GFX_MDL_naval_depot_network
   cost = 5
   x = 1
   y = 1
@@ -3229,7 +3229,7 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_marine_corps
-  icon = GFX_goal_generic_amphibious_assault
+  icon = GFX_MDL_marine_corps
   cost = 5
   x = 0
   y = 1
@@ -3249,7 +3249,7 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_naval_academy
-  icon = GFX_goal_tfv_generic_tech_sharing
+  icon = GFX_MDL_naval_academy
   cost = 10.30
   x = 0
   y = 3
@@ -3266,7 +3266,7 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_back_in_bussiness
-  icon = GFX_goal_generic_sea_focused_navy
+  icon = GFX_MDL_back_in_bussiness
   cost = 5
   x = -5
   y = 1
@@ -3309,7 +3309,7 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_colthaginian_deal
-  icon = GFX_goal_the_old_debate
+  icon = GFX_MDL_colthaginian_deal
   cost = 5
   x = 0
   y = 1
@@ -3330,7 +3330,7 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_reliable_traders
-	icon = GFX_goal_molotov_ribbentrop_pact_pony_griffon
+	icon = GFX_MDL_reliable_traders
   cost = 5
   x = 1
   y = 1
@@ -3364,7 +3364,7 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_green_bay_masters
-  icon = GFX_goal_generic_political
+  icon = GFX_MDL_green_bay_masters
   cost = 5
   x = 0
   y = 3

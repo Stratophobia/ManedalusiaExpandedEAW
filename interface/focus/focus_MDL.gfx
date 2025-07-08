@@ -1,5 +1,41 @@
 spriteTypes = {
   SpriteType = {
+    name = "GFX_MDL_back_in_bussiness"
+    texturefile = "gfx/interface/goals/MDL/MDL_back_in_bussiness.tga"
+  }
+  SpriteType = {
+    name = "GFX_MDL_capital_ships"
+    texturefile = "gfx/interface/goals/MDL/MDL_capital_ships.tga"
+  }
+  SpriteType = {
+    name = "GFX_MDL_colthaginian_deal"
+    texturefile = "gfx/interface/goals/MDL/MDL_colthaginian_deal.tga"
+  }
+  SpriteType = {
+    name = "GFX_MDL_fleet_tech"
+    texturefile = "gfx/interface/goals/MDL/MDL_fleet_tech.tga"
+  }
+  SpriteType = {
+    name = "GFX_MDL_grand_zoco"
+    texturefile = "gfx/interface/goals/MDL/MDL_grand_zoco.tga"
+  }
+  SpriteType = {
+    name = "GFX_MDL_marine_corps"
+    texturefile = "gfx/interface/goals/MDL/MDL_marine_corps.tga"
+  }
+  SpriteType = {
+    name = "GFX_MDL_naval_academy"
+    texturefile = "gfx/interface/goals/MDL/MDL_naval_academy.tga"
+  }
+  SpriteType = {
+    name = "GFX_MDL_naval_depot_network"
+    texturefile = "gfx/interface/goals/MDL/MDL_naval_depot_network.tga"
+  }
+  SpriteType = {
+    name = "GFX_MDL_reliable_traders"
+    texturefile = "gfx/interface/goals/MDL/MDL_reliable_traders.tga"
+  }
+  SpriteType = {
     name = "GFX_MDL_place_in_the_sun"
     texturefile = "gfx/interface/goals/MDL/MDL_place_in_the_sun.tga"
   }
