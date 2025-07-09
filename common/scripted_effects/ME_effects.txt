@@ -5,6 +5,17 @@ MDL_remove_ABY_templates = {
   delete_unit_template_and_units = { division_template = "Highlander Regiment" }
 }
 
+MDL_elevate_virianthrax = {
+  add_country_leader_role = {
+    character = MDL_virianthrax
+    country_leader = {
+      expire = "1965.1.1"
+      ideology = stratocracy
+    }
+    promote_leader = yes
+  }
+}
+
 #For Harmonic Crusade Path. Gradually remove Sun Madness effect
 MDL_reduce_sun_madness = {
   if = {

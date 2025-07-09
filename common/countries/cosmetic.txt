@@ -1,3 +1,7 @@
+MDL_CHN = {
+	color = rgb { 60 64 86 }
+	color_ui = rgb { 60 64 86 }
+}
 MGY_MDL_admin = {
   color = rgb {5 143 5 }
   color_ui = rgb {5 143 5 }

@@ -426,6 +426,7 @@
   MDL_vice_and_virtue:0 "Of Vice and Virtue"
   MDL_vice_and_virtue_desc:0 "The modern industrial world is a breeding ground of sodomy, apostasy and degeneracy, and our people can ill afford to be taken in by vice in our time of strife. Our industrialization is needed for our survival, but it must be both swift in its implementation and restrained in its reach."
 ###DECISIONS###
+  CHN_manedalusia_protectorate:0 "Form the Manedalusian Protectorate"
   MDL_colthage_treaty_decision:0 "Restore Our Partnership With Colthage"
   MDL_grifo_imperium_decisions_tab:0 "O Sacro Império"
   MDL_restore_eternal_city:0 "Restaurar A Cidade Eterna"
@@ -1170,6 +1171,8 @@
   MDL_SAMIRA_PARTY_NAME:0 "Hashm Koltāliba"
   MDL_GRIFO_PARTY_NAME_LONG:0 "União de Restauração Imperial"
   MDL_GRIFO_PARTY_NAME:0 "UdRI"
+  MDL_CHN_PARTY_NAME_LONG:0 "Changeling Administration"
+  MDL_CHN_PARTY_NAME:0 "Changeling Administration"
 ###POLITICAL PARTIES - GRIFO###
   EQC_GRIFO_PARTY_NAME_LONG:0 "Cooperativa Iluminada da Nova Égualândia"
   EQC_GRIFO_PARTY_NAME:0 "Cooperativa"
@@ -1239,6 +1242,7 @@
   MDL_iron_muhtal:0 "Iron Muhtal"
   MDL_clover_breeze:0 "Clover Breeze"
   MDL_clover_breeze_desc:0 "Clover Breeze is an unusual face in Manedalusia, as she is a pure-blooded Equestrian mare. Born and raised in Sunny Shoals, her lifelong goal for a very long time was to become a Wonderbolt. Unfortunately for her, she would repeatedly fail to pass initiation, until her family eventually ceased to support her ambitions and encouraged her to seek another line of work. Despite her failure, Clover Breeze never lost the love for flight, and she would come to find work in industrial manufacturing in Fillydelphia through her familial connections. It was through her experience working for contractors that she developed an appreciation for airplanes.\n\nHow she came to Manedalusia is something of a mystery, even to herself. A series of bussiness deals and personal connections, each small step leading to another, until she'd eventually land herself a spot in the military council responsible for the small nation's independence. She is somewhat mistrusted by the others, bearing no national ties to Manedalusia and only begrudgingly learning about their religion, but as it stands, Clover Breeze has cut most ties with her homeland and fully put her bets on this young nation."
+  MDL_virianthrax:0 "Virianthrax"
 ###ULTRAMAR CHARACTERS###
   MDL_antonio_aviario:0 "António Aviário"
   MDL_alexandre_de_aguilar:0 "Alexandre de Aguilar"
@@ -1319,6 +1323,8 @@
   MDL_FEDERATION:0 "Western Zebrican Federation"
   MDL_IMPERIO:0 "Esfera Imperial De Kartínia"
 ###SPECIAL TAGS###
+  MDL_CHN:0 "Manedalusian Protectorate"
+  MDL_CHN_DEF:0 "the Manedalusian Protectorate"
   CGL:0 "Siyādat Al-Bihayrāt Al-Kubrā"
   CGL_DEF:0 "the Siyādat Al-Bihayrāt Al-Kubrā"
   CGL_ADJ:0 "Koltāliba"

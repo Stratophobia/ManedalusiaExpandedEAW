@@ -122,6 +122,7 @@ recruit_character = MDL_pacific_sunset
 recruit_character = MDL_clover_breeze
 recruit_character = MDL_iron_muhtal
 recruit_character = MDL_cims
+recruit_character = MDL_virianthrax
 
 ###FEDERATION LEADERS###
 recruit_character = MDL_nomarchical_council

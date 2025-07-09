@@ -435,6 +435,14 @@ characters={
 			traits = { MDL_military_academy }
 		}
 	}
+  MDL_virianthrax = {
+    name=MDL_virianthrax
+    portraits={
+      civilian={
+        large="gfx/leaders/MDL/virianthrax.tga"
+      }
+    }
+  }
 ###GRIFO EXCLUSIVES###
   MDL_antonio_aviario = {
     name=MDL_antonio_aviario
