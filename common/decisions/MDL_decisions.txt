@@ -846,7 +846,9 @@ MDL_grifo_imperium_decisions_tab = {
     complete_effect = {
       hidden_effect = {
         every_owned_state = {
-          limit = { is_in_array = { state_original_cores = NCH } }
+          limit = {
+            NOT = { is_in_array = { state_original_cores = NCH } }
+          }
           remove_core_of = NCH
         }
         NCH = { load_focus_tree = generic_griffon_focus }
@@ -910,7 +912,7 @@ MDL_grifo_imperium_decisions_tab = {
                 is_in_array = { state_original_cores = FAT }
                 is_in_array = { state_original_cores = VED }
                 is_in_array = { state_original_cores = SRS }
-                is _in_array = { state_original_cores = NTR }
+                is_in_array = { state_original_cores = NTR }
                 is_in_array = { state_original_cores = MNC }
                 is_in_array = { state_original_cores = HAU }
               }
