@@ -1,5 +1,57 @@
 spriteTypes = {
   SpriteType = {
+    name = "GFX_MDL_take_lands_in_lakes"
+    texturefile = "gfx/interface/goals/MDL/MDL_take_lands_in_lakes.tga"
+  }
+  SpriteType = {
+    name = "GFX_MDL_annex_bats"
+    texturefile = "gfx/interface/goals/MDL/MDL_annex_bats.tga"
+  }
+  SpriteType = {
+    name = "GFX_MDL_annex_maregypt"
+    texturefile = "gfx/interface/goals/MDL/MDL_annex_maregypt.tga"
+  }
+  SpriteType = {
+    name = "GFX_MDL_annex_riseia"
+    texturefile = "gfx/interface/goals/MDL/MDL_annex_riseia.tga"
+  }
+  SpriteType = {
+    name = "GFX_MDL_annex_south"
+    texturefile = "gfx/interface/goals/MDL/MDL_annex_south.tga"
+  }
+  SpriteType = {
+    name = "GFX_MDL_annex_west"
+    texturefile = "gfx/interface/goals/MDL/MDL_annex_west.tga"
+  }
+  SpriteType = {
+    name = "GFX_MDL_enforce_jizya"
+    texturefile = "gfx/interface/goals/MDL/MDL_enforce_jizya.tga"
+  }
+  SpriteType = {
+    name = "GFX_MDL_hold_in_arabian_sea"
+    texturefile = "gfx/interface/goals/MDL/MDL_hold_in_arabian_sea.tga"
+  }
+  SpriteType = {
+    name = "GFX_MDL_into_arabia"
+    texturefile = "gfx/interface/goals/MDL/MDL_into_arabia.tga"
+  }
+  SpriteType = {
+    name = "GFX_MDL_klugetown_economic_zone"
+    texturefile = "gfx/interface/goals/MDL/MDL_klugetown_economic_zone.tga"
+  }
+  SpriteType = {
+    name = "GFX_MDL_pacify_assur"
+    texturefile = "gfx/interface/goals/MDL/MDL_pacify_assur.tga"
+  }
+  SpriteType = {
+    name = "GFX_MDL_restore_mareakech"
+    texturefile = "gfx/interface/goals/MDL/MDL_restore_mareakech.tga"
+  }
+  SpriteType = {
+    name = "GFX_MDL_righteous_fury"
+    texturefile = "gfx/interface/goals/MDL/MDL_righteous_fury.tga"
+  }
+  SpriteType = {
     name = "GFX_MDL_back_in_bussiness"
     texturefile = "gfx/interface/goals/MDL/MDL_back_in_bussiness.tga"
   }
@@ -450,10 +502,6 @@ spriteTypes = {
   SpriteType = {
     name="GFX_MDL_naval_patrols"
     texturefile="gfx/interface/goals/MDL/MDL_naval_patrols.tga"
-  }
-  SpriteType = {
-    name="GFX_MDL_klugetown_economic_zone"
-    texturefile="gfx/interface/goals/MDL/MDL_klugetown_economic_zone.tga"
   }
   SpriteType = {
     name="GFX_MDL_conquer_klugetown"

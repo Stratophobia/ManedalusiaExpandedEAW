@@ -996,42 +996,45 @@ shared_focus = {
 }
 
 shared_focus = {
-	id = MDL_attack_maregypt
-	icon = GFX_MDL_attack_maregypt
-	x = 0
-	y = 2
-	relative_position_id = MDL_warplan_green
+  id = MDL_attack_maregypt
+  icon = GFX_MDL_attack_maregypt
+  x = 0
+  y = 2
+  relative_position_id = MDL_warplan_green
   cost = 2
-	prerequisite = {
-    focus = MDL_holy_zeal
-    focus = MDL_warplan_conscription
-  }
-	prerequisite = {
-    focus = MDL_fortify_coltoba
-    focus = MDL_fortify_desert_pass
-  }
-	prerequisite = {  }
+  prerequisite = { focus = MDL_holy_zeal }
+  prerequisite = { focus = MDL_warplan_conscription }
+  prerequisite = { focus = MDL_fortify_coltoba }
+  prerequisite = { focus = MDL_fortify_desert_pass }
   available = {
     has_war = no
   }
-	bypass = {
-		OR = {
-			is_subject = yes
-			MGY = {
-				OR = {
-					exists = no
-					has_war_with = ROOT
-				}
-			}
-		}
-	}
+  bypass = {
+    OR = {
+      is_subject = yes
+      MGY = {
+        OR = {
+          exists = no
+          has_war_with = ROOT
+        }
+      }
+    }
+  }
   will_lead_to_war_with = MGY
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus MDL_attack_maregypt"
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_attack_maregypt"
     custom_effect_tooltip = MDL_warplan_green_tt
-		declare_war_on = { type = annex_everything target = MGY }
+    effect_tooltip = {
+      MGY = {
+        add_timed_idea = {
+          idea = MDL_destroyed_army
+          days = 180
+        }
+      }
+    }
+    declare_war_on = { type = annex_everything target = MGY }
     hidden_effect = { set_country_flag = MDL_warplan_green_flag }
-	}
+  }
   search_filters = { FOCUS_FILTER_ANNEXATION }
 }
 
@@ -1080,7 +1083,7 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_righteous_fury
-  icon = GFX_goal_national_populism
+  icon = GFX_MDL_righteous_fury
   x = 1
   y = 1
   relative_position_id = MDL_burn_manephis
@@ -1099,12 +1102,12 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_annex_maregypt
-  icon = GFX_focus_rom_royal_dictatorship
+  icon = GFX_MDL_annex_maregypt
   x = -1
   y = 1
   relative_position_id = MDL_burn_manephis
   prerequisite = { focus = MDL_burn_manephis }
-  cost = 10
+  cost = 8
   available = {
     MGY = { exists = no }
     733 = { is_owned_and_controlled_by = ROOT }
@@ -1203,9 +1206,19 @@ shared_focus = {
   prerequisite = { focus = MDL_neighle_infrastructure }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_annex_ovingoland"
-    every_owned_state = {
-      limit = { is_core_of = MKS }
-      add_core_of = MDL
+
+    effect_tooltip = {
+      every_owned_state = {
+        limit = { is_core_of = MKS }
+        add_core_of = MDL
+      }
+    }
+
+    hidden_effect = {
+      every_owned_state = {
+        limit = { is_core_of = MKS }
+        add_core_of = MDL
+      }
     }
   }
   search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER }
@@ -1255,7 +1268,7 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_enforce_Jizya
-	icon = GFX_DAH_Topke
+	icon = GFX_MDL_enforce_jizya
   x = 1
   y = 1
   relative_position_id = MDL_long_road_to_mareakech
@@ -1376,7 +1389,7 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_hold_in_arabian_sea
-	icon = GFX_goal_generic_territory_or_war
+	icon = GFX_MDL_hold_in_arabian_sea
   x = 1
   y = 1
   relative_position_id = MDL_conquer_yemane
@@ -1404,7 +1417,7 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_pacify_assur
-	icon = GFX_goal_GEA_guerilla_warfare
+	icon = GFX_MDL_pacify_assur
   x = 1
   y = 1
   relative_position_id = MDL_conquer_donkeys
@@ -1429,7 +1442,7 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_annex_south
-	icon = GFX_goal_gold_up
+	icon = GFX_MDL_annex_south
   x = 0
   y = 2
   relative_position_id = MDL_conquer_donkeys
@@ -1581,7 +1594,7 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_annex_west
-  icon = GFX_goal_generic_major_war
+  icon = GFX_MDL_annex_west
   x = 1
   y = 1
   relative_position_id = MDL_klugetown_economic_zone
@@ -1624,7 +1637,7 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_into_arabia
-  icon = GFX_focus_generic_strike_at_democracy1
+  icon = GFX_MDL_into_arabia
   cost = 5
   x = 0
   y = 1
@@ -1666,7 +1679,7 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_restore_mareakech
-  icon = GFX_COS_Ferrer_Coup
+  icon = GFX_MDL_restore_mareakech
   x = 0
   y = 1
   cost = 5
@@ -1686,7 +1699,7 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_annex_riseia
-	icon = GFX_goal_crown_and_swords
+	icon = GFX_MDL_annex_riseia
   x = 3
   y = 1
   relative_position_id = MDL_western_zebrican_hegemony
@@ -1706,7 +1719,7 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_take_lands_in_lakes
-	icon = GFX_focus_generic_treaty_red
+	icon = GFX_MDL_take_lands_in_lakes
   x = 0
   y = 1
   relative_position_id = MDL_annex_riseia
@@ -1726,7 +1739,7 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_annex_bats
-  icon = GFX_goal_checkmate
+  icon = GFX_MDL_annex_bats
   cost = 3
   x = -3
   y = 1
@@ -3764,6 +3777,14 @@ shared_focus = {
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_reunify_homeland"
     custom_effect_tooltip = MDL_warplan_green_tt
+    effect_tooltip = {
+      MGY = {
+        add_timed_idea = {
+          idea = MDL_destroyed_army
+          days = 180
+        }
+      }
+    }
 		declare_war_on = { type = annex_everything target = MGY }
     hidden_effect = { set_country_flag = MDL_reunification_war_senate }
   }

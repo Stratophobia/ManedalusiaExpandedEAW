@@ -1334,12 +1334,10 @@
 
     option = {
       name = manedalusia.49.a
-      hidden_effect = {
-        white_peace = MGY
-        MGY = {
-          every_owned_state = {
-            MDL = { transfer_state = PREV }
-          }
+      MGY = {
+        add_timed_idea = {
+          idea = MDL_destroyed_army
+          days = 180
         }
       }
       hidden_effect = { clr_country_flag = MDL_warplan_green_flag }
@@ -1484,14 +1482,13 @@
 
     option = {
       name = manedalusia.55.a
-      hidden_effect = {
-        white_peace = MGY
-        MGY = {
-          every_owned_state = {
-            MDL = { transfer_state = PREV }
-          }
+      MGY = {
+        add_timed_idea = {
+          idea = MDL_destroyed_army
+          days = 180
         }
       }
+      MGY = { add_ideas = MDL_destroyed_army }
       hidden_effect = { clr_country_flag = MDL_reunification_war_senate }
     }
   }
