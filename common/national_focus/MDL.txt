@@ -1002,10 +1002,15 @@ shared_focus = {
 	y = 2
 	relative_position_id = MDL_warplan_green
   cost = 2
-	prerequisite = { focus = MDL_holy_zeal }
-	prerequisite = { focus = MDL_fortify_coltoba }
-	prerequisite = { focus = MDL_fortify_desert_pass }
-	prerequisite = { focus = MDL_warplan_conscription }
+	prerequisite = {
+    focus = MDL_holy_zeal
+    focus = MDL_warplan_conscription
+  }
+	prerequisite = {
+    focus = MDL_fortify_coltoba
+    focus = MDL_fortify_desert_pass
+  }
+	prerequisite = {  }
   available = {
     has_war = no
   }
@@ -1035,6 +1040,7 @@ shared_focus = {
   icon = GFX_goal_generic_political
   available = {
     735 = { is_owned_and_controlled_by = ROOT }
+    MGY = { exists = no }
   }
   x = -2
   y = 1
@@ -1053,7 +1059,6 @@ shared_focus = {
       }
     }
     country_event = manedalusia.38
-    735 = { add_manpower = -50000 }
   }
   search_filters = { FOCUS_FILTER_POLITICAL }
 }
@@ -1689,7 +1694,7 @@ shared_focus = {
   prerequisite = { focus = MDL_western_zebrican_hegemony }
   available = {
     HMR = { all_original_cores_owned_by_ROOT = yes }
-    OQS = { all_original_cores_owned_by_ROOT = yes }
+    OSQ = { all_original_cores_owned_by_ROOT = yes }
     MTA = { all_original_cores_owned_by_ROOT = yes }
   } 
   completion_reward = {
@@ -1878,8 +1883,7 @@ shared_focus = {
   y = 2
   relative_position_id = MDL_air_stuff
   cost = 5
-  prerequisite = { focus = MDL_air_industry }
-  prerequisite = { focus = MDL_radar }
+  prerequisite = { focus = MDL_air_industry focus = MDL_radar }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_death_from_above"
 		if = {
@@ -2052,8 +2056,7 @@ shared_focus = {
   available = {
     has_idea = modern_society 
   }
-  prerequisite = { focus = MDL_naval_air }
-  prerequisite = { focus = MDL_heavy_air }
+  prerequisite = { focus = MDL_naval_air focus = MDL_heavy_air }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_the_bomb"
 		add_breakthrough_progress = {
@@ -2600,8 +2603,7 @@ shared_focus = {
   x = 1
   y = 1
   relative_position_id = MDL_bigger_cannons
-  prerequisite = { focus = MDL_bigger_cannons }
-  prerequisite = { focus = MDL_sweet_ass_rides }
+  prerequisite = { focus = MDL_bigger_cannons focus = MDL_sweet_ass_rides }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_military_industrial_council"
     add_ideas = MDL_industrial_council
@@ -2676,8 +2678,7 @@ shared_focus = {
   x = -1
   y = 1
   relative_position_id = MDL_better_gear
-  prerequisite = { focus = MDL_better_gear }
-  prerequisite = { focus = MDL_better_guns }
+  prerequisite = { focus = MDL_better_gear focus = MDL_better_guns }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_citizen_guard"
     set_technology = { tech_military_police = 1 }
@@ -2899,6 +2900,7 @@ shared_focus = {
   x = 25
   y = 6
   available = {
+    741 = { is_owned_and_controlled_by = ROOT }
     738 = { is_owned_and_controlled_by = ROOT }
 	  740 = { is_owned_and_controlled_by = ROOT }
   }
@@ -3120,8 +3122,7 @@ shared_focus = {
   x = 0
   y = 1
   relative_position_id = MDL_golden_coast
-  prerequisite = { focus = MDL_fleet_tech }
-  prerequisite = { focus = MDL_coltoba_shipyards }
+  prerequisite = { focus = MDL_fleet_tech focus = MDL_coltoba_shipyards }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_grand_zoco"
     add_ideas = MDL_grand_zoco_idea
@@ -3179,7 +3180,7 @@ shared_focus = {
   x = 0
   y = 1
   relative_position_id = MDL_grand_admiralty
-  prerequisite = { focus = MDL_grand_admiralty }
+  prerequisite = { focus = MDL_grand_admiralty focus = MDL_naval_depot_network }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_capital_ships"
     add_tech_bonus = {
@@ -3234,7 +3235,7 @@ shared_focus = {
   x = 0
   y = 1
   relative_position_id = MDL_naval_depot_network
-  prerequisite = { focus = MDL_naval_depot_network }
+  prerequisite = { focus = MDL_grand_admiralty focus = MDL_naval_depot_network }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_marine_corps"
     add_tech_bonus = {
@@ -3254,8 +3255,7 @@ shared_focus = {
   x = 0
   y = 3
   relative_position_id = MDL_naval_patrols
-  prerequisite = { focus = MDL_marine_corps }
-  prerequisite = { focus = MDL_capital_ships }
+  prerequisite = { focus = MDL_marine_corps focus = MDL_capital_ships }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_naval_academy"
     add_research_slot = 1
@@ -3314,7 +3314,7 @@ shared_focus = {
   x = 0
   y = 1
   relative_position_id = MDL_coffee_current
-  prerequisite = { focus = MDL_coffee_current }
+  prerequisite = { focus = MDL_coffee_current focus = MDL_reliable_traders }
   bypass = {
     CTH = { exists = no }
   }
@@ -3354,7 +3354,7 @@ shared_focus = {
   x = 0
   y = 1
   relative_position_id = MDL_reliable_traders
-  prerequisite = { focus = MDL_reliable_traders }
+  prerequisite = { focus = MDL_reliable_traders focus = MDL_coffee_current }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_merchant_outposts"
     add_offsite_building = { type = industrial_complex level = 5 }
@@ -3365,12 +3365,11 @@ shared_focus = {
 shared_focus = {
   id = MDL_green_bay_masters
   icon = GFX_MDL_green_bay_masters
-  cost = 5
+  cost = 8
   x = 0
   y = 3
   relative_position_id = MDL_back_in_bussiness
-  prerequisite = { focus = MDL_merchant_outposts }
-  prerequisite = { focus = MDL_colthaginian_deal }
+  prerequisite = { focus = MDL_merchant_outposts focus = MDL_colthaginian_deal }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_green_bay_masters"
     741 = {

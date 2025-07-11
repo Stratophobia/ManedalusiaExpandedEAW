@@ -1011,7 +1011,14 @@
     option = {
       name = manedalusia.38.a
       MGY = { retire_character = MGY_shepser_of_manephis }
-      remove_country_leader_trait = MDL_sayf_pretender 
+      735 = {
+        remove_building = {
+          type = infrastructure
+          level = 1
+        }
+        add_manpower = -50000
+      }
+      remove_country_leader_trait = MDL_sayf_pretender
     }
   }
 

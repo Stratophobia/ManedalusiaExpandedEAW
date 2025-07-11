@@ -15,8 +15,8 @@ ABY_FEDERATION = {
 	color_ui = rgb { 0 24 117 }
 }
 MDL_ultramar = {
-  color = rgb { 190 110 0 }
-  color_ui = rgb { 190 110 0 }
+  color = rgb { 40 40 110 }
+  color_ui = rgb { 40 40 110 }
 }
 MDL_sacro_imperio = {
   color =  rgb { 124 0 163 }

@@ -525,6 +525,7 @@ MDL_crimson_war_tab = {
       BAT = {
         exists = yes
         is_subject = no
+        is_in_faction = no
       }
     }
     fire_only_once = yes
