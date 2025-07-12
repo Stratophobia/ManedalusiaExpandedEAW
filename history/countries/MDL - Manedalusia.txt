@@ -138,6 +138,7 @@ recruit_character = MDL_rosa_branca
 recruit_character = EQC_rosa_branca
 recruit_character = MCW_antonio_aviario
 recruit_character = MDL_antonio_aviario
+recruit_character = MDL_diogo_cao
 recruit_character = MDL_imperial_admiralty_char
 recruit_character = MDL_imperial_office_artillery
 recruit_character = MDL_imperial_office_infantry

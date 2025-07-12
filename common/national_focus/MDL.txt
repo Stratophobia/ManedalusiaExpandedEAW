@@ -5944,7 +5944,10 @@ shared_focus = {
   x = 0
   y = 1
   relative_position_id = MDL_new_karthin_dockyards
-  prerequisite = { focus = MDL_new_karthin_dockyards }
+  prerequisite = {
+    focus = MDL_subs_tech
+    focus = MDL_new_karthin_dockyards
+  }
   available = {
     771 = { is_owned_and_controlled_by = ROOT }
     772 = { is_owned_and_controlled_by = ROOT }
@@ -6001,11 +6004,24 @@ shared_focus = {
   x = 0
   y = 1
   relative_position_id = MDL_subs_tech
-  prerequisite = { focus = MDL_subs_tech }
+  prerequisite = {
+    focus = MDL_subs_tech
+    focus = MDL_new_karthin_dockyards
+  }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_imperial_admiralty"
     navy_experience = 25
     add_ideas = MDL_imperial_admiralty_idea
+
+    add_naval_commander_role = {
+      character = MDL_diogo_cao
+      traits = { diamond_dog_race_trait }
+      skill = 5
+      attack_skill = 4
+      defense_skill = 4
+			maneuvering_skill=3
+			coordination_skill=5
+    }
 
     custom_effect_tooltip = available_chief_of_army
     show_ideas_tooltip = MDL_imperial_admiralty_char
@@ -6400,7 +6416,10 @@ shared_focus = {
   x = 0
   y = 1
   relative_position_id = MDL_imperial_fighters
-  prerequisite = { focus = MDL_imperial_fighters }
+  prerequisite = {
+    focus = MDL_imperial_spec_ops
+    focus = MDL_imperial_fighters
+  }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_imperial_plane_tech"
     add_tech_bonus = {
@@ -6449,7 +6468,10 @@ shared_focus = {
   x = 0
   y = 1
   relative_position_id = MDL_imperial_spec_ops
-  prerequisite = { focus = MDL_imperial_spec_ops }
+  prerequisite = {
+    focus = MDL_imperial_spec_ops
+    focus = MDL_imperial_fighters
+  }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_imperial_armor"
 		add_tech_bonus = {

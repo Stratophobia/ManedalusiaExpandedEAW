@@ -227,6 +227,7 @@ characters={
       available = { always = yes }
     }
   }
+
   MDL_admiral_astur = {
     name=MDL_admiral_astur
     portraits = {
@@ -502,6 +503,13 @@ characters={
       idea_token=MDL_rosa_branca
       visible = { has_completed_focus = MDL_restoring_the_light }
       traits = { smooth_talking_charmer }
+    }
+  }
+  MDL_diogo_cao = {
+    portraits = {
+      civilian = {
+        large="gfx/leaders/MDL/diogo_cao.tga"
+      }
     }
   }
   MDL_imperial_admiralty_char = {
