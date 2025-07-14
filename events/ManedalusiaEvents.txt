@@ -382,7 +382,7 @@
         long_name = MDL_KHALDUN_PARTY_1_LONG
         name = MDL_KHALDUN_PARTY_1
       }
-      custom_effect_tooltip = MDL_khaldun_tree_loaded
+      custom_effect_tooltip = MDL_khaldun_tree_loaded_tt
       hidden_effect = {
         load_focus_tree = { tree = manedalusia_khaldun }
       }

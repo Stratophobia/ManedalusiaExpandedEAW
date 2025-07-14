@@ -104,7 +104,7 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ zebra_race_trait media_personality desert_fox ambusher trait_visitor }
+			traits={ zebra_race_trait media_personality desert_fox trait_visitor }
 			skill=2
 			attack_skill=2
 			defense_skill=2

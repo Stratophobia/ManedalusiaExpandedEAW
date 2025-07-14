@@ -3954,8 +3954,6 @@ shared_focus = {
   cost = 5
   relative_position_id = MDL_senate_reconcile_maregypt
   prerequisite = { focus = MDL_elite_army }
-  prerequisite = { focus = MDL_coltoba_naval_center }
-  prerequisite = { focus = MDL_joint_development }
   prerequisite = { focus = MDL_federal_assembly }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_dream_of_a_federation"
@@ -4189,13 +4187,13 @@ shared_focus = {
         AND = {
           OR = {
             has_government = democratic
-            #Is NA Republic
+            has_country_leader_ideology = republicanism
           }
+          NOT = { is_subject_of = ROOT }
           NOT = { has_war_with = ROOT }
         }
       }
       add_opinion_modifier = { target = ROOT modifier = MDL_liberty_beacon }
-      reverse_add_opinion_modifier = { target = ROOT modifier = common_cause }
     }
   }
 }

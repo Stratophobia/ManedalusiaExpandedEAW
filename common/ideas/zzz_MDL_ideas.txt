@@ -414,8 +414,8 @@ ideas = {
     MDL_destroyed_army = {
       picture = unhappy_army_3
       modifier = {
-        army_attack_factor = -0.5
-        army_defence_factor = -0.5
+        army_attack_factor = -0.65
+        army_defence_factor = -0.65
         army_morale_factor = -0.80
       }
     }
@@ -793,7 +793,7 @@ ideas = {
   }
   country = {
     MDL_federal_constitution_idea = {
-      picture = generic_volunteer_expedition_bonus
+      picture = MDL_federal_constitution
       modifier = {
         political_power_factor = 0.05
         stability_factor = 0.05
@@ -845,7 +845,7 @@ ideas = {
   }
   country = {
     MDL_qunsul_idea = {
-      picture = HUN_treaty_of_triannon
+      picture = MDL_qunsul
       modifier = {
         stability_factor = 0.05
         political_power_gain = 0.05
