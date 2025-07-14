@@ -11,6 +11,7 @@
 opinion_modifiers = {
   MDL_GENOCIDE_OPINION_MOD = { value = -200 trade = no}
   MDL_djinn_opinion = { value = -200 trade = no }
-  MDL_BAT_savages_opinion = { value = -75 }
-  MDL_consulate = { value = 50 }
+  MDL_BAT_savages_opinion = { value = -75 trade = no }
+  MDL_liberty_beacon = { value = 50 trade = yes }
+  MDL_consulate = { value = 50 trade = yes }
 }

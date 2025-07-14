@@ -1,5 +1,109 @@
 spriteTypes = {
   SpriteType = {
+    name = "GFX_MDL_senate_reconcile_maregypt"
+    textureFile = "gfx/interface/goals/MDL/MDL_senate_reconcile_maregypt.tga"
+  }
+  SpriteType = {
+    name = "GFX_MDL_all_hooves_on_deck"
+    texturefile = "gfx/interface/goals/MDL/MDL_all_hooves_on_deck.tga"
+  }
+  SpriteType = {
+    name = "GFX_MDL_balkanize_arabia"
+    texturefile = "gfx/interface/goals/MDL/MDL_balkanize_arabia.tga"
+  }
+  SpriteType = {
+    name = "GFX_MDL_coltoba_naval_center"
+    texturefile = "gfx/interface/goals/MDL/MDL_coltoba_naval_center.tga"
+  }
+  SpriteType = {
+    name = "GFX_MDL_dream_of_a_federation"
+    texturefile = "gfx/interface/goals/MDL/MDL_dream_of_a_federation.tga"
+  }
+  SpriteType = {
+    name = "GFX_MDL_elect_qunsul"
+    texturefile = "gfx/interface/goals/MDL/MDL_elect_qunsul.tga"
+  }
+  SpriteType = {
+    name = "GFX_MDL_elite_army"
+    texturefile = "gfx/interface/goals/MDL/MDL_elite_army.tga"
+  }
+  SpriteType = {
+    name = "GFX_MDL_federal_assembly"
+    texturefile = "gfx/interface/goals/MDL/MDL_federal_assembly.tga"
+  }
+  SpriteType = {
+    name = "GFX_MDL_federal_constitution"
+    texturefile = "gfx/interface/goals/MDL/MDL_federal_constitution.tga"
+  }
+  SpriteType = {
+    name = "GFX_MDL_integrate_yemane"
+    texturefile = "gfx/interface/goals/MDL/MDL_integrate_yemane.tga"
+  }
+  SpriteType = {
+    name = "GFX_MDL_fortification_buildup"
+    texturefile = "gfx/interface/goals/MDL/MDL_fortification_buildup.tga"
+  }
+  SpriteType = {
+    name = "GFX_MDL_joint_development"
+    texturefile = "gfx/interface/goals/MDL/MDL_joint_development.tga"
+  }
+  SpriteType = {
+    name = "GFX_MDL_integrate_donkeys"
+    texturefile = "gfx/interface/goals/MDL/MDL_integrate_donkeys.tga"
+  }
+  SpriteType = {
+    name = "GFX_MDL_integrate_emirs"
+    texturefile = "gfx/interface/goals/MDL/MDL_integrate_emirs.tga"
+  }
+  SpriteType = {
+    name = "GFX_MDL_integrate_klugetown"
+    texturefile = "gfx/interface/goals/MDL/MDL_integrate_klugetown.tga"
+  }
+  SpriteType = {
+    name = "GFX_MDL_liberate_emirs"
+    texturefile = "gfx/interface/goals/MDL/MDL_liberate_emirs.tga"
+  }
+  SpriteType = {
+    name = "GFX_MDL_liberate_donkeys"
+    texturefile = "gfx/interface/goals/MDL/MDL_liberate_donkeys.tga"
+  }
+  SpriteType = {
+    name = "GFX_MDL_liberate_klugetown"
+    texturefile = "gfx/interface/goals/MDL/MDL_liberate_klugetown.tga"
+  }
+  SpriteType = {
+    name = "GFX_MDL_liberate_abyssinia"
+    texturefile = "gfx/interface/goals/MDL/MDL_liberate_abyssinia.tga"
+  }
+  SpriteType = {
+    name = "GFX_MDL_liberate_purrsia"
+    texturefile = "gfx/interface/goals/MDL/MDL_liberate_purrsia.tga"
+  }
+  SpriteType = {
+    name = "GFX_MDL_liberate_yemane"
+    texturefile = "gfx/interface/goals/MDL/MDL_liberate_yemane.tga"
+  }
+  SpriteType = {
+    name = "GFX_MDL_our_finest_hour"
+    texturefile = "gfx/interface/goals/MDL/MDL_our_finest_hour.tga"
+  }
+  SpriteType = {
+    name = "GFX_MDL_reunify_homeland"
+    texturefile = "gfx/interface/goals/MDL/MDL_reunify_homeland.tga"
+  }
+  SpriteType = {
+    name = "GFX_MDL_suffrage_and_army"
+    texturefile = "gfx/interface/goals/MDL/MDL_suffrage_and_army.tga"
+  }
+  SpriteType = {
+    name = "GFX_MDL_triumph_of_the_federation"
+    texturefile = "gfx/interface/goals/MDL/MDL_triumph_of_the_federation.tga"
+  }
+  SpriteType = {
+    name = "GFX_MDL_senate_path"
+    texturefile = "gfx/interface/goals/MDL/MDL_senate_path.tga"
+  }
+  SpriteType = {
     name = "GFX_MDL_take_lands_in_lakes"
     texturefile = "gfx/interface/goals/MDL/MDL_take_lands_in_lakes.tga"
   }

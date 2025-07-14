@@ -526,7 +526,7 @@ shared_focus = {
 
 shared_focus = {
 	id = MDL_senate_path
-	icon = GFX_MDL_advisory_senate
+	icon = GFX_MDL_senate_path
 	x = 4
 	y = 1
 	offset = {
@@ -1436,6 +1436,7 @@ shared_focus = {
         level = 1
       }
     }
+    add_popularity = { ideology = fascism popularity = 0.10 }
   }
   search_filters = { FOCUS_FILTER_POLITICAL }
 }
@@ -3692,10 +3693,10 @@ shared_focus = {
 ###SENATE PATH###
 shared_focus = {
   id = MDL_elect_qunsul
-  icon = GFX_PAP_roman_senate
+  icon = GFX_MDL_elect_qunsul
   x = 10
   y = 0
-  cost = 1
+  cost = 2
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_elect_qunsul"
     add_ideas = MDL_qunsul_idea
@@ -3704,10 +3705,10 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_all_hooves_on_deck
-  icon = GFX_goal_generic_pony_volunteer
+  icon = GFX_MDL_all_hooves_on_deck
   x = 1
   y = 1
-  cost = 6
+  cost = 5
   relative_position_id = MDL_elect_qunsul
   prerequisite = { focus = MDL_elect_qunsul }
   completion_reward = {
@@ -3719,10 +3720,10 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_fortification_buildup
-  icon = GFX_goal_generic_construct_infrastructure
+  icon = GFX_MDL_fortification_buildup
   x = -1
   y = 1
-  cost = 6
+  cost = 5
   relative_position_id = MDL_elect_qunsul
   prerequisite = { focus = MDL_elect_qunsul }
   completion_reward = {
@@ -3752,7 +3753,7 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_reunify_homeland
-  icon = GFX_PAP_legionary_spirit
+  icon = GFX_MDL_reunify_homeland
   x = 0
   y = 2
   cost = 5
@@ -3792,10 +3793,10 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_senate_reconcile_maregypt
-  icon = GFX_goal_collaborate_local_elites
+  icon = GFX_MDL_senate_reconcile_maregypt
   x = 0
   y = 1
-  cost = 6
+  cost = 5
   available = {
     has_war = no
     owns_state = 735
@@ -3804,30 +3805,32 @@ shared_focus = {
   prerequisite = { focus = MDL_reunify_homeland }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_senate_reconcile_maregypt"
+    custom_effect_tooltip = MDL_senate_reconcile_maregypt_tt
     hidden_effect = {
       if = {
         limit = { has_country_flag = MDL_reunification_war_senate }
         clr_country_flag = MDL_reunification_war_senate
       }
-    }
-    MGY = {
-      remove_state_claim = 741
-      remove_state_claim = 764
-      remove_state_claim = 740
-      remove_state_claim = 738
-      remove_state_claim = 766
-      remove_state_claim = 770
-      remove_state_claim = 763
+
+      MGY = {
+        remove_state_claim = 741
+        remove_state_claim = 764
+        remove_state_claim = 740
+        remove_state_claim = 738
+        remove_state_claim = 766
+        remove_state_claim = 770
+        remove_state_claim = 763
+      }
     }
   }
 }
 
 shared_focus = {
   id = MDL_federal_constitution
-  icon = GFX_focus_generic_treaty
+  icon = GFX_MDL_federal_constitution
   x = 2
   y = 1
-  cost = 6
+  cost = 5
   relative_position_id = MDL_reunify_homeland
   prerequisite = { focus = MDL_reunify_homeland }
   completion_reward = {
@@ -3838,10 +3841,10 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_federal_assembly
-  icon = GFX_focus_generic_industry_2
+  icon = GFX_MDL_federal_assembly
   x = 1
   y = 1
-  cost = 6
+  cost = 5
   relative_position_id = MDL_federal_constitution
   prerequisite = { focus = MDL_federal_constitution }
   available = {
@@ -3859,10 +3862,10 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_suffrage_and_army
-  icon = GFX_goal_griffon_knights
+  icon = GFX_MDL_suffrage_and_army
   x = -2
   y = 1
-  cost = 6
+  cost = 5
   relative_position_id = MDL_reunify_homeland
   prerequisite = { focus = MDL_reunify_homeland }
   completion_reward = {
@@ -3881,10 +3884,10 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_elite_army
-  icon = GFX_goal_generic_pony_soldier
+  icon = GFX_MDL_elite_army
   x = -1
   y = 1
-  cost = 6
+  cost = 5
   relative_position_id = MDL_suffrage_and_army
   prerequisite = { focus = MDL_suffrage_and_army }
   completion_reward = {
@@ -3902,10 +3905,10 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_coltoba_naval_center
-  icon = GFX_goal_generic_positive_trade_relations
+  icon = GFX_MDL_coltoba_naval_center
   x = -1
   y = 1
-  cost = 6
+  cost = 5
   relative_position_id = MDL_senate_reconcile_maregypt
   prerequisite = { focus = MDL_senate_reconcile_maregypt }
   completion_reward = {
@@ -3931,10 +3934,10 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_joint_development
-  icon = GFX_goal_industrial_pony
+  icon = GFX_MDL_joint_development
   x = 1
   y = 1
-  cost = 6
+  cost = 5
   relative_position_id = MDL_senate_reconcile_maregypt
   prerequisite = { focus = MDL_senate_reconcile_maregypt }
   completion_reward = {
@@ -3945,7 +3948,7 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_dream_of_a_federation
-  icon = GFX_focus_spr_torchbearers_of_tomorrow
+  icon = GFX_MDL_dream_of_a_federation
   x = 0
   y = 2
   cost = 5
@@ -3967,7 +3970,7 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_liberate_klugetown
-  icon = GFX_MDL_conquer_klugetown
+  icon = GFX_MDL_liberate_klugetown
   x = -1
   y = 1
   cost = 5
@@ -3989,7 +3992,7 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_integrate_klugetown
-  icon = GFX_MDL_klugetown_economic_zone
+  icon = GFX_MDL_integrate_klugetown
   x = 0
   y = 1
   cost = 5
@@ -4006,7 +4009,7 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_liberate_abyssinia
-  icon = GFX_goal_generic_liberty_statue
+  icon = GFX_MDL_liberate_abyssinia
   x = -3
   y = 1
   cost = 5
@@ -4062,7 +4065,7 @@ shared_focus = {
   icon = GFX_MDL_integrate_abyssinia
   x = 0
   y = 1
-  cost = 6
+  cost = 5
   relative_position_id = MDL_liberate_abyssinia
   prerequisite = { focus = MDL_liberate_abyssinia }
   available = {
@@ -4072,14 +4075,7 @@ shared_focus = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_liberate_abyssinia"
     country_event = manedalusia.68
     custom_effect_tooltip = MDL_integrate_abyssinia_tt
-    ABY = {
-      remove_state_core = 1208
-      remove_state_claim = 1208
-      remove_state_claim = 741
-      remove_state_claim = 764
-      remove_state_claim = 740
-      remove_state_claim = 738
-    }
+
     hidden_effect = {
       clr_country_flag = MDL_FA_recruit_2
       set_country_flag = MDL_FA_recruit_3
@@ -4089,6 +4085,13 @@ shared_focus = {
       }
       release_puppet = ABY
       ABY = {
+        remove_state_core = 1208
+        remove_state_claim = 1208
+        remove_state_claim = 741
+        remove_state_claim = 764
+        remove_state_claim = 740
+        remove_state_claim = 738
+
         set_cosmetic_tag = ABY_FEDERATION
         remove_ideas = {
           ABY_secret_police_idea_no_lr
@@ -4128,7 +4131,7 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_liberate_purrsia
-  icon = GFX_goal_generic_territory_or_war
+  icon = GFX_MDL_liberate_purrsia
   x = -1
   y = 1
   cost = 5
@@ -4166,7 +4169,7 @@ shared_focus = {
   icon = GFX_MDL_karthinia_of_zebrica
   x = 0
   y = 1
-  cost = 6
+  cost = 5
   relative_position_id = MDL_liberate_purrsia
   prerequisite = { focus = MDL_liberate_purrsia }
   available = {
@@ -4182,24 +4185,24 @@ shared_focus = {
       }
     }
     every_other_country = {
-			limit = {
-				OR = {
-				  is_feudal_vassal = no
-          has_government = democratic
-				}
-				NOT = {
-					has_war_with = ROOT
-				}
-			}
-			add_opinion_modifier = { target = ROOT modifier = common_cause }
-			reverse_add_opinion_modifier = { target = ROOT modifier = common_cause }
-		}
+      limit = {
+        AND = {
+          OR = {
+            has_government = democratic
+            #Is NA Republic
+          }
+          NOT = { has_war_with = ROOT }
+        }
+      }
+      add_opinion_modifier = { target = ROOT modifier = MDL_liberty_beacon }
+      reverse_add_opinion_modifier = { target = ROOT modifier = common_cause }
+    }
   }
 }
 
 shared_focus = {
   id = MDL_liberate_yemane
-  icon = GFX_MDL_conquer_yemane
+  icon = GFX_MDL_liberate_yemane
   x = 1
   y = 1
   cost = 5
@@ -4227,10 +4230,10 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_integrate_yemane
-  icon = GFX_focus_hol_the_foundations_of_defense
+  icon = GFX_MDL_integrate_yemane
   x = 0
   y = 1
-  cost = 6
+  cost = 5
   relative_position_id = MDL_liberate_yemane
   prerequisite = { focus = MDL_liberate_yemane }
   available = {
@@ -4277,7 +4280,7 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_liberate_donkeys
-  icon = GFX_focus_generic_strike_at_democracy1
+  icon = GFX_MDL_liberate_donkeys
   x = 3
   y = 1
   cost = 5
@@ -4316,10 +4319,10 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_integrate_donkeys
-  icon = GFX_goal_WNG_hold_new_elections
+  icon = GFX_MDL_integrate_donkeys
   x = 0
   y = 1
-  cost = 6
+  cost = 5
   relative_position_id = MDL_liberate_donkeys
   prerequisite = { focus = MDL_liberate_donkeys }
   available = {
@@ -4395,7 +4398,7 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_liberate_emirs
-  icon = GFX_goal_authority
+  icon = GFX_MDL_liberate_emirs
   x = 0
   y = 1
   cost = 5
@@ -4425,7 +4428,7 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_integrate_emirs
-  icon = GFX_goal_ideology_social_conservative
+  icon = GFX_MDL_integrate_emirs
   x = 0
   y = 1
   cost = 6
@@ -4472,7 +4475,7 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_our_finest_hour
-  icon = GFX_goal_national_arsenal
+  icon = GFX_MDL_our_finest_hour
   x = 0
   y = 1
   cost = 5
@@ -4510,10 +4513,10 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_balkanize_arabia
-  icon = GFX_goal_generic_military_sphere
+  icon = GFX_MDL_balkanize_arabia
   x = 0
   y = 1
-  cost = 6
+  cost = 5
   relative_position_id = MDL_our_finest_hour
   prerequisite = { focus = MDL_our_finest_hour }
   available = {
@@ -4569,10 +4572,10 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_triumph_of_the_federation
-  icon = GFX_focus_generic_bastion_of_democracy 
+  icon = GFX_MDL_triumph_of_the_federation
   x = 0
   y = 5
-  cost = 3
+  cost = 2
   relative_position_id = MDL_dream_of_a_federation
   prerequisite = { focus = MDL_karthinia_of_zebrica }
   prerequisite = { focus = MDL_balkanize_arabia focus = MDL_integrate_emirs }
