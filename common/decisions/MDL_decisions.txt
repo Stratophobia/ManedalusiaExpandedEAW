@@ -672,25 +672,85 @@ MDL_fiqh_decisions_tab = {
 }
 
 MDL_grifo_imperium_decisions_tab = {
+
+  MDL_ultramar_secure_new_mareland = {
+    icon = griffon_claw
+    fire_only_once = yes
+    targets = { EQC }
+    target_trigger = {
+      FROM = { original_tag = EQC }
+    }
+    visible = {
+      has_country_flag = MDL_imperium_restored
+      has_war_with = EQC
+    }
+    available = {
+      EQC = { has_capitulated = yes }
+      356 = {
+        controller = {
+          OR = {
+            tag = ROOT
+            is_ally_with = ROOT
+          }
+        }
+      }
+      362 = {
+        controller = {
+          OR = {
+            tag = ROOT
+            is_ally_with = ROOT
+          }
+        }
+      }
+    }
+    complete_effect = {
+      if = {
+        limit = {
+          FROM = { is_subject = yes }
+        }
+        FROM = {
+          overlord = {
+            country_event = { id = manedalusia.70 days = 1 }
+          }
+        }
+      }
+      else_if = {
+        limit = {
+          FROM = {
+            is_in_faction = yes
+            is_faction_leader = no
+          }
+        }
+        every_enemy_country = {
+          limit = {
+            is_in_faction_with = FROM
+            is_faction_leader = yes
+          }
+          country_event = { id = manedalusia.70 hours = 2 }
+        }
+      }
+    }
+  }
+
   MDL_restore_eternal_city = {
     visible = { has_country_flag = MDL_imperium_decisions_unlocked }
     available = {
-		  371 = { is_owned_and_controlled_by = ROOT }
-			has_war = no
-		}
+      371 = { is_owned_and_controlled_by = ROOT }
+      has_war = no
+    }
     highlight_states = {
-			highlight_state_targets = { state = 371 }
-		}
-		fire_only_once = yes
-		cost = 25
+      highlight_state_targets = { state = 371 }
+    }
+    fire_only_once = yes
+    cost = 25
     complete_effect = {
       country_event = manedalusia.108
-		  set_capital = {
-			  state = 371
-			  remember_old_capital = no 
-		  }
+      set_capital = {
+        state = 371
+        remember_old_capital = no 
+      }
       add_state_core = 371
-		}
+    }
   }
 
   MDL_puppet_EQC = {
@@ -705,8 +765,8 @@ MDL_grifo_imperium_decisions_tab = {
       EQC = { exists = no }
     }
     highlight_states = {
-			highlight_state_targets = { state = 356 }
-		}
+      highlight_state_targets = { state = 356 }
+    }
     complete_effect = {
       hidden_effect = {
         set_nationality = {
@@ -717,11 +777,11 @@ MDL_grifo_imperium_decisions_tab = {
           load_focus_tree = generic_griffon_focus
           add_country_leader_role = {
             character = EQC_rosa_branca
-          	country_leader={
-			        ideology=esotericism
-		          expire="1965.1.1.1"
-		          id=-1
-		        }
+              country_leader={
+              ideology=esotericism
+              expire="1965.1.1.1"
+              id=-1
+            }
             promote_leader = yes
           }
           set_party_name = {
@@ -748,8 +808,8 @@ MDL_grifo_imperium_decisions_tab = {
       MIT = { exists = no }
     }
     highlight_states = {
-			highlight_state_targets = { state = 386 }
-		}
+      highlight_state_targets = { state = 386 }
+    }
     complete_effect = {
       hidden_effect = {
         MIT_alexandre_de_aguilar = { set_nationality = MIT }
@@ -757,11 +817,11 @@ MDL_grifo_imperium_decisions_tab = {
           load_focus_tree = generic_griffon_focus
           add_country_leader_role = {
             character = MIT_alexandre_de_aguilar
-          	country_leader={
-			        ideology=stratocracy
-		          expire="1965.1.1.1"
-		          id=-1
-		        }
+            country_leader={
+              ideology=stratocracy
+              expire="1965.1.1.1"
+              id=-1
+            }
             promote_leader = yes
           }
           set_party_name = {
@@ -794,8 +854,8 @@ MDL_grifo_imperium_decisions_tab = {
       MCW = { exists = no }
     }
     highlight_states = {
-			highlight_state_targets = { state = 721 }
-		}
+      highlight_state_targets = { state = 721 }
+    }
 
     complete_effect = {
       hidden_effect = {
@@ -841,8 +901,8 @@ MDL_grifo_imperium_decisions_tab = {
       NCH = { exists = no }
     }
     highlight_states = {
-			highlight_state_targets = { state = 670 }
-		}
+      highlight_state_targets = { state = 670 }
+    }
 
     complete_effect = {
       hidden_effect = {

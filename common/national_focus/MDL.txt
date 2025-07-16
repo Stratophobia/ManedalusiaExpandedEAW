@@ -15,41 +15,41 @@ focus_tree = {
 }
 
 focus_tree = {
-	id = manedalusia_sayf
+  id = manedalusia_sayf
 
-	country = {
-		factor = 0
-		modifier = {
-			add = 10
-			tag = MDL
-		}
-	}
-	default = no
-	continuous_focus_position = { x = 550 y = 1800 }
+  country = {
+    factor = 0
+    modifier = {
+      add = 10
+      tag = MDL
+    }
+  }
+  default = no
+  continuous_focus_position = { x = 550 y = 1800 }
 
-	shared_focus = MDL_warplan_green
-	shared_focus = MDL_economy_stuff
-	shared_focus = MDL_army_stuff
+  shared_focus = MDL_warplan_green
+  shared_focus = MDL_economy_stuff
+  shared_focus = MDL_army_stuff
   shared_focus = MDL_navy_stuff
   shared_focus = MDL_air_stuff
 }
 
 focus_tree = {
-	id = manedalusia_sayf_genocide_1
+  id = manedalusia_sayf_genocide_1
 
-	country = {
-		factor = 0
-		modifier = {
-			add = 10
-			tag = MDL
-		}
-	}
-	default = no
-	continuous_focus_position = { x = 550 y = 1800 }
+  country = {
+    factor = 0
+    modifier = {
+      add = 10
+      tag = MDL
+    }
+  }
+  default = no
+  continuous_focus_position = { x = 550 y = 1800 }
 }
 
 focus_tree = {
-	id = manedalusia_sayf_genocide_2
+  id = manedalusia_sayf_genocide_2
 
 	country = {
 		factor = 0
@@ -1207,16 +1207,11 @@ shared_focus = {
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_annex_ovingoland"
 
-    effect_tooltip = {
-      every_owned_state = {
-        limit = { is_core_of = MKS }
-        add_core_of = MDL
-      }
-    }
+    custom_effect_tooltip = MDL_annex_ovingoland_tt
 
     hidden_effect = {
       every_owned_state = {
-        limit = { is_core_of = MKS }
+        limit = { is_in_array = { state_original_cores = MKS } }
         add_core_of = MDL
       }
     }
@@ -6037,8 +6032,10 @@ shared_focus = {
   x = 1
   y = 1
   relative_position_id = MDL_imperial_admiralty
-  prerequisite = { focus = MDL_imperial_admiralty }
-  prerequisite = { focus = MDL_abyssinian_mines }
+  prerequisite = {
+    focus = MDL_imperial_admiralty
+    focus_tree = MDL_abyssinian_mines
+  }
   available = {
     738 = { is_owned_and_controlled_by = ROOT }
     740 = { is_owned_and_controlled_by = ROOT }
@@ -6495,8 +6492,10 @@ shared_focus = {
   x = 1
   y = 1
   relative_position_id = MDL_imperial_armor
-  prerequisite = { focus = MDL_imperial_armor }
-  prerequisite = { focus = MDL_imperial_plane_tech }
+  prerequisite = {
+    focus = MDL_imperial_armor
+    focus = MDL_imperial_plane_tech
+  }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_nonstop_barrage"
     add_ideas = MDL_imperial_artillery_barrage
@@ -6705,7 +6704,10 @@ shared_focus = {
   y = 1
   cost = 10
   relative_position_id = MDL_core_eastern_empire
-  prerequisite = { focus = MDL_core_eastern_empire }
+  prerequisite = {
+    focus = MDL_core_western_empire
+    focus = MDL_core_eastern_empire
+  }
   cost = 10
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_industry_of_karthin"
@@ -6721,7 +6723,10 @@ shared_focus = {
   y = 1
   cost = 10
   relative_position_id = MDL_core_western_empire
-  prerequisite = { focus = MDL_core_western_empire }
+  prerequisite = {
+    focus = MDL_core_western_empire
+    focus = MDL_core_eastern_empire
+  }
   cost = 10
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_reinstate_south_griffonia_society"
@@ -6737,8 +6742,10 @@ shared_focus = {
   y = 3
   cost = 10
   relative_position_id = MDL_integrate_karthin
-  prerequisite = { focus = MDL_reinstate_south_griffonia_society }
-  prerequisite = { focus = MDL_industry_of_karthin }
+  prerequisite = {
+    focus = MDL_reinstate_south_griffonia_society
+    focus = MDL_industry_of_karthin
+  }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_karthin_legions"
     add_ideas = MDL_karthin_legions_idea

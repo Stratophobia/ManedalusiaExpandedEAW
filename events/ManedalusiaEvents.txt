@@ -1337,7 +1337,7 @@
       MGY = {
         add_timed_idea = {
           idea = MDL_destroyed_army
-          days = 180
+          days = 200
         }
       }
       hidden_effect = { clr_country_flag = MDL_warplan_green_flag }
@@ -1485,7 +1485,7 @@
       MGY = {
         add_timed_idea = {
           idea = MDL_destroyed_army
-          days = 180
+          days = 200
         }
       }
       MGY = { add_ideas = MDL_destroyed_army }
@@ -1973,14 +1973,27 @@
     }
   }
 
-  country_event = {#FREE
+  country_event = {#Ultramar-Equestria White Peace Event
     id = manedalusia.70
     title = manedalusia.70.t
     desc = manedalusia.70.d
+    picture = GFX_event_equestria_fail
     is_triggered_only = yes
-
     option = {
       name = manedalusia.70.a
+
+      EQC = {
+        if = {
+          limit = { is_subject = yes }
+          end_puppet_this = yes
+        }
+        if = {
+          limit = { is_in_faction = yes }
+          leave_faction = yes
+        }
+      }
+      white_peace = MDL
+      MDL = { annex = EQC }
     }
   }
 
