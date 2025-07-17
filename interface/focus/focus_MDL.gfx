@@ -1,5 +1,73 @@
 spriteTypes = {
   SpriteType = {
+    name = "GFX_MDL_a_new_start"
+    textureFile = "gfx/interface/goals/MDL/MDL_a_new_start.tga"
+  }
+  SpriteType = {
+    name = "GFX_MDL_bring_our_ponies_home"
+    textureFile = "gfx/interface/goals/MDL/MDL_bring_our_ponies_home.tga"
+  }
+  SpriteType = {
+    name = "GFX_MDL_bulwark_of_harmony"
+    textureFile = "gfx/interface/goals/MDL/MDL_bulwark_of_harmony.tga"
+  }
+  SpriteType = {
+    name = "GFX_MDL_empower_senate"
+    textureFile = "gfx/interface/goals/MDL/MDL_empower_senate.tga"
+  }
+  SpriteType = {
+    name = "GFX_MDL_equestrian_investment"
+    textureFile = "gfx/interface/goals/MDL/MDL_equestrian_investment.tga"
+  }
+  SpriteType = {
+    name = "GFX_MDL_equestrian_tourism"
+    textureFile = "gfx/interface/goals/MDL/MDL_equestrian_tourism.tga"
+  }
+  SpriteType = {
+    name = "GFX_MDL_expeditionary_corps"
+    textureFile = "gfx/interface/goals/MDL/MDL_expeditionary_corps.tga"
+  }
+  SpriteType = {
+    name = "GFX_MDL_springtime_in_manedalusia"
+    textureFile = "gfx/interface/goals/MDL/MDL_springtime_in_manedalusia.tga"
+  }
+  SpriteType = {
+    name = "GFX_MDL_formalize_alliance"
+    textureFile = "gfx/interface/goals/MDL/MDL_formalize_alliance.tga"
+  }
+  SpriteType = {
+    name = "GFX_MDL_industrial_development_program"
+    textureFile = "gfx/interface/goals/MDL/MDL_industrial_development_program.tga"
+  }
+  SpriteType = {
+    name = "GFX_MDL_peace_in_our_time"
+    textureFile = "gfx/interface/goals/MDL/MDL_peace_in_our_time.tga"
+  }
+  SpriteType = {
+    name = "GFX_MDL_invest_in_changeling_reconstruction"
+    textureFile = "gfx/interface/goals/MDL/MDL_invest_in_changeling_reconstruction.tga"
+  }
+  SpriteType = {
+    name = "GFX_MDL_navy_war_games"
+    textureFile = "gfx/interface/goals/MDL/MDL_navy_war_games.tga"
+  }
+  SpriteType = {
+    name = "GFX_MDL_look_to_equestria"
+    textureFile = "gfx/interface/goals/MDL/MDL_look_to_equestria.tga"
+  }
+  SpriteType = {
+    name = "GFX_MDL_manedalusian_century"
+    textureFile = "gfx/interface/goals/MDL/MDL_manedalusian_century.tga"
+  }
+  SpriteType = {
+    name = "GFX_MDL_monument_to_aaliyah"
+    textureFile = "gfx/interface/goals/MDL/MDL_monument_to_aaliyah.tga"
+  }
+  SpriteType = {
+    name = "GFX_MDL_meet_with_crimson"
+    textureFile = "gfx/interface/goals/MDL/MDL_meet_with_crimson.tga"
+  }
+  SpriteType = {
     name = "GFX_MDL_senate_reconcile_maregypt"
     textureFile = "gfx/interface/goals/MDL/MDL_senate_reconcile_maregypt.tga"
   }

@@ -1482,7 +1482,7 @@
   MDL_consulate:0 "Established A Consulate"
   MDL_liberty_beacon:0 "Beacon of Liberty"
   MDL_asabiyyah_alteration_tt:0 "§GThis decision will have an effect on the values of the§! §YAsabiyyah§Y §Gmodifier.§!"
-  MDL_bulwark_of_harmony_tt:0 "Unlocks §GJunnah Doctrine§! £decision_icon_small §Cdecisions§! to establish harmonic administrations in Abyssinia and Maregypt, should they ever invade Manedalusia."
+  MDL_bulwark_of_harmony_tt:0 "Unlocks §GJunnah Doctrine§! £decision_icon_small §Cdecisions§! to establish harmonic administrations in @ABY §rAbyssinia§! and @MGY §YMaregypt§!, should they ever invade Manedalusia."
   decision_cost_CP_20:0 "£command_power  §Y20§!"
   decision_cost_CP_20_blocked:0 "£command_power  §R20§!"
   decision_cost_CP_20_tooltip:0 "It costs [This.GetDecisionCostCP20] to take the decision"

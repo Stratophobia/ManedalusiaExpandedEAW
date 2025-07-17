@@ -874,7 +874,7 @@ ideas = {
     MDL_aaliyah_monument = {
 			picture = generic_democratic_drift_bonus
 			modifier = {
-				consumer_goods_factor = -0.04
+				consumer_goods_factor = -0.05
 				production_speed_buildings_factor = 0.05
 			}
 		}

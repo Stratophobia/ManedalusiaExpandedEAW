@@ -4774,6 +4774,13 @@ shared_focus = {
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_monument_to_aaliyah"
     add_ideas = MDL_aaliyah_monument
+    741 = {
+      add_building_construction = {
+        type = infrastructure
+        level = 1
+        instant_build = yes
+      }
+    }
   }
 }
 
