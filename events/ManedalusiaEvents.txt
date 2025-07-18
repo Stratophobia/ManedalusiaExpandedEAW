@@ -706,6 +706,7 @@
 
     option = {
       name = manedalusia.27.a
+      custom_effect_tooltip = MDL_asabiyyah_alteration_tt
       add_to_variable = {
         var = MDL_trade_var
         value = 0.10
@@ -717,6 +718,7 @@
     }
     option = {
       name = manedalusia.27.b
+      custom_effect_tooltip = MDL_asabiyyah_alteration_tt
       add_to_variable = {
         var = MDL_trade_var
         value = -0.10
@@ -2253,6 +2255,7 @@
         remove_idea = MDL_humbled_sultanate
         add_idea = MDL_sunmad_0
       }
+      custom_effect_tooltip = MDL_batshit_insane_tree_loaded_tt
       country_event = { id = manedalusia.84 days = 3 }
     }
   }
@@ -2280,11 +2283,9 @@
         long_name = MDL_SAMIRA_PARTY_NAME_LONG
         name = MDL_SAMIRA_PARTY_NAME
       }
-      custom_effect_tooltip = MDL_crusade_tree_loaded_tt
-      hidden_effect = {
-        load_focus_tree = {
-          tree = manedalusia_crusade
-        }
+
+      load_focus_tree = {
+        tree = manedalusia_crusade_1
       }
     }
   }
@@ -2344,8 +2345,12 @@
 
     option = {
       name = manedalusia.89.a
-      add_ideas = MDL_holy_zeal_2
+      custom_effect_tooltip = MDL_crusade_tree_loaded_tt
       hidden_effect = {
+        load_focus_tree = {
+          tree = manedalusia_crusade_2
+          keep_completed = yes
+        }
         set_country_flag = MDL_crusade_active
         set_cosmetic_tag = MDL_crusader
       }

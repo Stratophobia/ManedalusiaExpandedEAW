@@ -990,15 +990,6 @@ ideas = {
     }
   }
   country = {
-    MDL_fortress_manedalusia_idea = {
- 			picture = generic_democratic_drift_bonus
-      modifier = {
-        land_bunker_effectiveness_factor = 0.25
-        production_speed_buildings_factor = 0.1
-      }
-    }
-  }
-  country = {
     MDL_ash_shuhud_resistance = {
       picture = MDL_native_resistance
       modifier = {
