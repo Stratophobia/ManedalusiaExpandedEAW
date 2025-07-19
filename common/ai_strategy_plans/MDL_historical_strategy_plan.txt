@@ -21,11 +21,12 @@ MDL_historical = {
 	}
 	abort = {
 		
-	}
+  }
 
-	ai_national_focuses = {
+  ai_national_focuses = {
     MDL_sultana_velvet
-	}
+    MDL_purchase_land_maregypt
+  }
 
 	research = {
 	}

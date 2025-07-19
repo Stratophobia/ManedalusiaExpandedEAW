@@ -901,24 +901,7 @@ ideas = {
       }
     }
   }
-  country = {
-    MDL_underground_railroad = {
-      picture = EQS_friendly_harmony
-      cancel = {
-        ABY = {
-          OR = {
-            exists = no
-            has_completed_focus = MDL_emancipation_act
-            has_government = communism
-          }
-        }
-      }
-      modifier = {
-        democratic_drift = 0.01
-        MONTHLY_POPULATION = 0.10
-      }
-    }
-  }
+
   country = {
     MDL_post_war_investment = {
 			picture = generic_goods_red_bonus

@@ -2199,7 +2199,7 @@
     }
   }
 
-  country_event = {#Begin slave rescue operations
+  country_event = {#FREE
     id = manedalusia.81
     title = manedalusia.81.t
     desc = manedalusia.81.d
@@ -2207,7 +2207,6 @@
 
     option = {
       name = manedalusia.81.a
-      add_ideas = MDL_underground_railroad
     }
   }
 
@@ -2251,10 +2250,7 @@
         limit = { is_in_faction_with = EQS }
         leave_faction = yes
       }
-      swap_ideas = {
-        remove_idea = MDL_humbled_sultanate
-        add_idea = MDL_sunmad_0
-      }
+      add_idea = MDL_sunmad_0
       custom_effect_tooltip = MDL_batshit_insane_tree_loaded_tt
       country_event = { id = manedalusia.84 days = 3 }
     }
@@ -2268,7 +2264,12 @@
 
     option = {
       name = manedalusia.84.a
-      hidden_effect = { set_country_flag = MDL_samira_country_leader }
+
+      hidden_effect = {
+        complete_national_focus = MDL_army_stuff
+        complete_national_focus = MDL_go_with_samira
+      }
+
       add_country_leader_role = {
         character = MDL_grandmistress_samira
         country_leader = {
@@ -2284,6 +2285,7 @@
         name = MDL_SAMIRA_PARTY_NAME
       }
 
+      country_event = { id = manedalusia.88 days = 5 }
       load_focus_tree = {
         tree = manedalusia_crusade_1
       }
@@ -2299,6 +2301,7 @@
     option = {
       name = manedalusia.85.a
       MDL_reduce_sun_madness = yes
+      country_event = { id = manedalusia.86 days = 5 }
     }
   }
 
@@ -2311,6 +2314,7 @@
     option = {
       name = manedalusia.86.a
       MDL_reduce_sun_madness = yes
+      country_event = { id = manedalusia.87 days = 5 }
     }
   }
 
@@ -2323,6 +2327,7 @@
     option = {
       name = manedalusia.87.a
       MDL_reduce_sun_madness = yes
+      country_event = { id = manedalusia.89 days = 5 }
     }
   }
 
@@ -2334,6 +2339,7 @@
 
     option = {
       name = manedalusia.88.a
+      country_event = { id = manedalusia.85 days = 5 }
     }
   }
 

@@ -136,8 +136,9 @@ focus_tree = {
 	continuous_focus_position = { x = 550 y = 1800 }
 
   shared_focus = MDL_a_new_start
-	shared_focus = MDL_economy_stuff
-	shared_focus = MDL_army_stuff
+  shared_focus = MDL_peace_in_our_time
+  shared_focus = MDL_economy_stuff
+  shared_focus = MDL_army_stuff
   shared_focus = MDL_navy_stuff
   shared_focus = MDL_air_stuff
 }
@@ -145,14 +146,14 @@ focus_tree = {
 focus_tree = {
   id = manedalusia_ultramar_1
   country = {
-		factor = 0
-		modifier = {
-			add = 10
-			tag = MDL
-		}
-	}
-	default = no
-	continuous_focus_position = { x = 550 y = 1800 }
+    factor = 0
+    modifier = {
+      add = 10
+      tag = MDL
+    }
+  }
+  default = no
+  continuous_focus_position = { x = 550 y = 1800 }
 
   shared_focus = MDL_overseas_dominion
 }
@@ -199,7 +200,8 @@ focus_tree = {
 	default = no
 	continuous_focus_position = { x = 550 y = 1800 }
 
-  shared_focus = MDL_unlock_contractors
+  shared_focus = MDL_a_new_start
+  shared_focus = MDL_our_purpose_made_clear
   shared_focus = MDL_economy_stuff
   shared_focus = MDL_army_stuff
   shared_focus = MDL_navy_stuff
@@ -713,9 +715,16 @@ shared_focus = {
 	prerequisite = { focus = MDL_urban_deal }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_guilds_deal"
-    add_political_power = -50
- 		add_popularity = { ideology = democratic popularity = 0.05 }
+    add_popularity = { ideology = democratic popularity = 0.05 }
     add_offsite_building = { type = industrial_complex level = 1 }
+    741 = {
+      add_extra_state_shared_building_slots = 1
+      add_building_construction = {
+        type = dockyard
+        level = 1
+        instant_build = yes
+      }
+    }
 	}
 	search_filters = { FOCUS_FILTER_POLITICAL }
 }
@@ -730,7 +739,7 @@ shared_focus = {
 	prerequisite = { focus = MDL_try_for_harmony }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_rural_deal"
-		add_popularity = { ideology = communism popularity = -0.05 }
+		add_popularity = { ideology = communism popularity = -0.10 }
 	}
 	search_filters = { FOCUS_FILTER_POLITICAL }
 }
@@ -2438,7 +2447,11 @@ shared_focus = {
 	mutually_exclusive = { focus = MDL_go_with_alneighzari }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_go_with_samira"
-		country_event = { id = manedalusia.22 }
+    if = {
+      limit = { NOT = { has_country_flag = MDL_crusade_active } }
+      country_event = { id = manedalusia.22 }
+    }
+
 		add_doctrine_cost_reduction = {
 			name = MDL_go_with_alneighzari
 			cost_reduction = 0.5
@@ -4687,6 +4700,12 @@ shared_focus = {
 		  has_government = democratic
 		}
   }
+  bypass = {
+    EQS = {
+      exists = yes
+      NOT = { has_government = democratic }
+    }
+  }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_look_to_equestria"
     country_event = manedalusia.82
@@ -4763,7 +4782,7 @@ shared_focus = {
       }
       add_extra_state_shared_building_slots = 2
       add_building_construction = {
-        type = industrial_complex
+        type = arms_factory
         level = 1
         instant_build = yes
       }
@@ -4838,6 +4857,18 @@ shared_focus = {
         province = 12234
         instant_build = yes
       }
+      add_building_construction = {
+        type = bunker
+        level = 1
+        province = 12315
+        instant_build = yes
+      }
+      add_building_construction = {
+        type = bunker
+        level = 1
+        province = 12279
+        instant_build = yes
+      }
     }
   }
   search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -4850,14 +4881,15 @@ shared_focus = {
   y = 2
   cost = 5
   relative_position_id = MDL_springtime_in_manedalusia
-  prerequisite = { focus = MDL_monument_to_aaliyah }
-  prerequisite = { focus = MDL_bulwark_of_harmony }
+  prerequisite = {
+    focus = MDL_bulwark_of_harmony
+    focus = MDL_monument_to_aaliyah
+  }
   mutually_exclusive = { focus = MDL_topple_catwe }
   available = {
-    NOT = {
-      ABY = {
-        has_war_with = MDL
-      }
+    ABY = {
+      has_civil_war = no
+      NOT = { has_war_with = MDL }
     }
   }
   bypass = {
@@ -4866,21 +4898,26 @@ shared_focus = {
         exists = no
         has_government = communism
         has_completed_focus = ABY_emancipation_act
+        has_war_with = MDL
       }
     }
   }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_bring_our_ponies_home"
-    country_event = manedalusia.81
+    will_lead_to_war_with = ABY
+    create_wargoal = {
+      type = puppet_wargoal_focus
+      target = ABY
+    }
   }
-  search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER }
+  search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION }
 }
 
 shared_focus = {
   id = MDL_peace_in_our_time
   icon = GFX_goal_COS_Peace
-  x = 0
-  y = 1
+  x = 10
+  y = 6
   cost = 5
   available = {
     MDL = { is_in_faction_with = EQS }
@@ -4896,10 +4933,7 @@ shared_focus = {
       }
     }
   }
-  relative_position_id = MDL_bring_our_ponies_home
-  prerequisite = { focus = MDL_bring_our_ponies_home }
-  prerequisite = { focus = MDL_industrial_development_program }
-  prerequisite = { focus = MDL_formalize_alliance }
+
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_peace_in_our_time"
     custom_effect_tooltip = MDL_peace_in_our_time_tt
@@ -5045,58 +5079,18 @@ shared_focus = {
   search_filters = { FOCUS_FILTER_POLITICAL }
 }
 
-###HARMONIC CRUSADE PATH###
+###HARMONIC HOLY WAR PATH###
 shared_focus = {
   id = MDL_crusade_path
   icon = GFX_goal_generic_political
   x = 15
   y = 0
-  cost = 1
-  completion_reward = {
-    log = "[GetDateText]: [Root.GetName]: Focus MDL_crusade_path"
-    country_event = manedalusia.88    
-  }
-}
 
-shared_focus = {
-  id = MDL_discipline_the_army
-  icon = GFX_goal_generic_political
-  x = -2
-  y = 1
-  cost = 3
-  relative_position_id = MDL_crusade_path
-  prerequisite = { focus = MDL_crusade_path }
-  completion_reward = {
-    log = "[GetDateText]: [Root.GetName]: Focus MDL_discipline_the_army"
-    country_event = manedalusia.86
-  }
-}
+  available = { always = no }
 
-shared_focus = {
-  id = MDL_reassure_the_populace
-  icon = GFX_goal_generic_political
-  x = 0
-  y = 1
-  cost = 3
-  relative_position_id = MDL_crusade_path
-  prerequisite = { focus = MDL_crusade_path }
+  cost = 10
   completion_reward = {
-    log = "[GetDateText]: [Root.GetName]: Focus MDL_reassure_the_populace"
-    country_event = manedalusia.87
-  }
-}
-
-shared_focus = {
-  id = MDL_talk_to_the_mufti
-  icon = GFX_goal_generic_political
-  x = 2
-  y = 1
-  cost = 3
-  relative_position_id = MDL_crusade_path
-  prerequisite = { focus = MDL_crusade_path }
-  completion_reward = {
-    log = "[GetDateText]: [Root.GetName]: Focus MDL_talk_to_the_mufti"
-    country_event = manedalusia.85
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_crusade_path"    
   }
 }
 
@@ -5104,41 +5098,9 @@ shared_focus = {
   id = MDL_our_purpose_made_clear
   icon = GFX_goal_generic_political
   x = 0
-  y = 2
-  cost = 2
-  relative_position_id = MDL_crusade_path
-  prerequisite = { focus = MDL_discipline_the_army }
-  prerequisite = { focus = MDL_reassure_the_populace }
-  prerequisite = { focus = MDL_talk_to_the_mufti }
-  completion_reward = {
-    log = "[GetDateText]: [Root.GetName]: Focus MDL_our_purpose_made_clear"
-    country_event = manedalusia.89
-  }
-}
-
-shared_focus = {
-  id = MDL_military_administration
-  icon = GFX_goal_generic_political
-  x = 0
-  y = 1
-  relative_position_id = MDL_our_purpose_made_clear
-  prerequisite = { focus = MDL_our_purpose_made_clear }
-  completion_reward = {
-    log = "[GetDateText]: [Root.GetName]: Focus MDL_military_administration"
-    custom_effect_tooltip = MDL_military_administration_tt
-    create_faction = MDL_GUARDIANSHIP
-    hidden_effect = { set_country_flag = MDL_milgovs_unlocked }
-  }
-}
-
-shared_focus = {
-  id = MDL_unlock_contractors
-  icon = GFX_goal_generic_political
-  x = 0
   y = 0
   completion_reward = {
-    log = "[GetDateText]: [Root.GetName]: Focus MDL_unlock_contractors"
-    custom_effect_tooltip = MDL_unlock_contractors_tt
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_our_purpose_made_clear"
   }
 }
 

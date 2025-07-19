@@ -1,5 +1,41 @@
 spriteTypes = {
   SpriteType = {
+    name = "GFX_MDL_air_industry"
+    textureFile = "gfx/interface/goals/MDL/MDL_air_industry.tga"
+  }
+  SpriteType = {
+    name = "GFX_MDL_an_air_doctrine"
+    textureFile = "gfx/interface/goals/MDL/MDL_an_air_doctrine.tga"
+  }
+  SpriteType = {
+    name = "GFX_MDL_bomber_pilots"
+    textureFile = "gfx/interface/goals/MDL/MDL_bomber_pilots.tga"
+  }
+  SpriteType = {
+    name = "GFX_MDL_death_from_above"
+    textureFile = "gfx/interface/goals/MDL/MDL_death_from_above.tga"
+  }
+  SpriteType = {
+    name = "GFX_MDL_heavy_air"
+    textureFile = "gfx/interface/goals/MDL/MDL_heavy_air.tga"
+  }
+  SpriteType = {
+    name = "GFX_MDL_naval_air"
+    textureFile = "gfx/interface/goals/MDL/MDL_naval_air.tga"
+  }
+  SpriteType = {
+    name = "GFX_MDL_unstoppable_pilots"
+    textureFile = "gfx/interface/goals/MDL/MDL_unstoppable_pilots.tga"
+  }
+  SpriteType = {
+    name = "GFX_MDL_radar"
+    textureFile = "gfx/interface/goals/MDL/MDL_radar.tga"
+  }
+  SpriteType = {
+    name = "GFX_MDL_rocket_research"
+    textureFile = "gfx/interface/goals/MDL/MDL_rocket_research.tga"
+  }
+  SpriteType = {
     name = "GFX_MDL_a_new_start"
     textureFile = "gfx/interface/goals/MDL/MDL_a_new_start.tga"
   }

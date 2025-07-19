@@ -436,9 +436,6 @@ MDL_crimson_war_tab = {
     fire_only_once = yes
     cost = 25
     days_remove = 30
-    will_lead_to_war_with = HMR  
-    will_lead_to_war_with = MTA
-    will_lead_to_war_with = OSQ
     remove_effect = {
       if = {
         limit = { HMR = { exists = yes } }
@@ -460,17 +457,7 @@ MDL_crimson_war_tab = {
     fire_only_once = yes
     cost = 25
     days_remove = 30
-    will_lead_to_war_with = ALO
-    will_lead_to_war_with = TIM
-    will_lead_to_war_with = REE
-    will_lead_to_war_with = MSH
-    will_lead_to_war_with = SON
-    will_lead_to_war_with = MAZ
-    will_lead_to_war_with = ZWA
-    will_lead_to_war_with = ZUG
-    will_lead_to_war_with = ZEL
-    will_lead_to_war_with = HAY
-    will_lead_to_war_with = MSS
+
     remove_effect = {
       if = {
         limit = { ALO = { exists = yes } }
@@ -531,7 +518,7 @@ MDL_crimson_war_tab = {
     fire_only_once = yes
     cost = 25
     days_remove = 30
-    will_lead_to_war_with = BAT
+
     remove_effect = {
       if = {
         limit = { BAT = { exists = yes } }
