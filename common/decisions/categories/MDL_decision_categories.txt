@@ -22,10 +22,10 @@ MDL_republican_war_decisions_tab = {
   icon = GFX_decision_category_MDL_republic_flag
 }
 
-MDL_crusade_decisions_tab = {
+ MDL_holy_war_tab = {
   priority = 199
   allowed = { original_tag = MDL }
-  visible = { has_country_flag = MDL_crusade_active }
+  visible = { has_country_flag = MDL_holy_war_active }
   visible_when_empty = yes
 }
 

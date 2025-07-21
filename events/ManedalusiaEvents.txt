@@ -80,7 +80,7 @@
       hidden_effect = {
         MDL = {
           load_focus_tree = {
-            tree = manedalusia_main
+            tree = manedalusia_start
           }
         }
       }
@@ -107,7 +107,7 @@
       hidden_effect = {
         MDL = {
           load_focus_tree = {
-            tree = manedalusia_main
+            tree = manedalusia_start
           }
           MDL_remove_ABY_templates = yes
           load_oob = "MDL_1007"
@@ -125,7 +125,7 @@
       hidden_effect = {
         MDL = {
           load_focus_tree = {
-            tree = manedalusia_main
+            tree = manedalusia_start
           }
           MDL_remove_ABY_templates = yes
           load_oob = "MDL_1007"
@@ -310,7 +310,7 @@
       custom_effect_tooltip = MDL_sayf_tree_loaded_tt
       hidden_effect = {
         load_focus_tree = {
-          tree = manedalusia_sayf
+          tree = manedalusia_main
         }
       }
     }
@@ -384,7 +384,7 @@
       }
       custom_effect_tooltip = MDL_khaldun_tree_loaded_tt
       hidden_effect = {
-        load_focus_tree = { tree = manedalusia_khaldun }
+        load_focus_tree = { tree = manedalusia_main }
       }
     }
   }
@@ -1374,7 +1374,7 @@
       }
       custom_effect_tooltip = MDL_senate_tree_loaded_tt
       hidden_effect = {
-        load_focus_tree = { tree = manedalusia_senate }
+        load_focus_tree = { tree = manedalusia_main }
         country_event = { id = manedalusia.66 days = 3 }
       }
     }
@@ -1411,7 +1411,7 @@
       }
       custom_effect_tooltip = MDL_velvet_tree_loaded_tt
       hidden_effect = {
-        load_focus_tree = { tree = manedalusia_velvet }
+        load_focus_tree = { tree = manedalusia_main }
       }
     }
   }
@@ -1447,7 +1447,7 @@
       }
       custom_effect_tooltip = MDL_commie_tree_loaded_tt
       hidden_effect = {
-        load_focus_tree = { tree = manedalusia_mirage }
+        load_focus_tree = { tree = manedalusia_main }
       }
     }
   }
@@ -1695,7 +1695,7 @@
         MDL = {
           MDL_remove_ABY_templates = yes
           load_focus_tree = {
-            tree = manedalusia_sayf_genocide_1
+            tree = manedalusia_sayf_genocide
           }
           ABY = { MDL = { transfer_technology = yes } }
           load_oob = "MDL_army"
@@ -1746,7 +1746,7 @@
           delete_unit_template_and_units = { division_template = "Crown Guard" }
           delete_unit_template_and_units = { division_template = "Highlander Regiment" }
           load_focus_tree = {
-            tree = manedalusia_sayf_genocide_1
+            tree = manedalusia_sayf_genocide
           }
           ABY = { MDL = { transfer_technology = yes } }
           load_oob = "MDL_army"
@@ -1786,10 +1786,11 @@
       } 
       custom_effect_tooltip = MDL_sayf_genocide_stats_tt
       custom_effect_tooltip = MDL_batshit_insane_tree_loaded_tt
+      set_cosmetic_tag = MDL_GENOCIDE
       hidden_effect = {
-        set_cosmetic_tag = MDL_GENOCIDE
+        set_country_flag = MDL_genocide
         load_focus_tree = {
-          tree = manedalusia_sayf_genocide_2
+          tree = manedalusia_sayf_genocide
         }
       }
       declare_war_on = {
@@ -2250,8 +2251,22 @@
         limit = { is_in_faction_with = EQS }
         leave_faction = yes
       }
-      add_idea = MDL_sunmad_0
+      add_ideas = MDL_sunmad_0
       custom_effect_tooltip = MDL_batshit_insane_tree_loaded_tt
+      hidden_effect = {
+        set_country_flag = MDL_sunmad
+        every_other_country = {
+          if = {
+            limit = { has_war_with = MDL }
+            white_peace = MDL
+          }
+        }
+        load_focus_tree = {
+          tree = manedalusia_main
+          keep_completed = yes
+        }
+        mark_focus_tree_layout_dirty = yes
+      }
       country_event = { id = manedalusia.84 days = 3 }
     }
   }
@@ -2265,12 +2280,7 @@
     option = {
       name = manedalusia.84.a
 
-      hidden_effect = {
-        complete_national_focus = MDL_army_stuff
-        complete_national_focus = MDL_go_with_samira
-      }
-
-      add_country_leader_role = {
+    add_country_leader_role = {
         character = MDL_grandmistress_samira
         country_leader = {
           desc = MDL_grandmistress_samira_desc
@@ -2286,9 +2296,6 @@
       }
 
       country_event = { id = manedalusia.88 days = 5 }
-      load_focus_tree = {
-        tree = manedalusia_crusade_1
-      }
     }
   }
 
@@ -2339,6 +2346,7 @@
 
     option = {
       name = manedalusia.88.a
+      MDL_reduce_sun_madness = yes
       country_event = { id = manedalusia.85 days = 5 }
     }
   }
@@ -2347,19 +2355,37 @@
     id = manedalusia.89
     title = manedalusia.89.t
     desc = manedalusia.89.d
+    picture = GFX_event_MDL_the_eye
     is_triggered_only = yes
 
     option = {
       name = manedalusia.89.a
+      add_ideas = MDL_holy_zeal_2
       custom_effect_tooltip = MDL_crusade_tree_loaded_tt
       hidden_effect = {
+        clr_country_flag = MDL_sunmad
+        set_country_flag = MDL_holy_war_active
         load_focus_tree = {
-          tree = manedalusia_crusade_2
+          tree=manedalusia_main
           keep_completed = yes
         }
-        set_country_flag = MDL_crusade_active
-        set_cosmetic_tag = MDL_crusader
+        mark_focus_tree_layout_dirty = yes
+        if = {
+          limit = {
+            NOT = { has_completed_focus = MDL_army_stuff }
+          }
+          complete_national_focus = MDL_army_stuff
+          complete_national_focus = MDL_go_with_samira
+        }
+        if = {
+          limit = {
+            has_completed_focus = MDL_army_stuff
+            NOT = { has_completed_focus = MDL_go_with_samira }
+          }
+          complete_national_focus = MDL_go_with_samira
+        }
       }
+      set_cosmetic_tag = MDL_crusader
     }
   }
 

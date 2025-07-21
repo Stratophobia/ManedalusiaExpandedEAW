@@ -5,7 +5,7 @@ leader_traits = {
 
     allowed = { original_tag = MDL }
 
-    modifier = { supply_consumption_factor = -0.10 }
+    modifier = { supply_consumption_factor = -0.15 }
     enable_ability = extra_suplies
 
     new_commander_weight = { factor = 0 }

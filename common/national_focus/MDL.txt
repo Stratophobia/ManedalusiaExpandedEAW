@@ -1,5 +1,5 @@
 focus_tree = {
-  id = manedalusia_main
+  id = manedalusia_start
 
   country = {
     factor = 0
@@ -8,139 +8,39 @@ focus_tree = {
       tag = MDL
     }
   }
-  default = no
+  default = yes
   continuous_focus_position = { x = 550 y = 1800 }
 
   shared_focus = MDL_gather_the_council
 }
 
 focus_tree = {
-  id = manedalusia_sayf
+  id = manedalusia_main
 
-  country = {
-    factor = 0
-    modifier = {
-      add = 10
-      tag = MDL
-    }
-  }
   default = no
   continuous_focus_position = { x = 550 y = 1800 }
 
+  #PATHS
   shared_focus = MDL_warplan_green
+  shared_focus = MDL_elect_qunsul
+  shared_focus = MDL_a_new_start
+  #SHARED
   shared_focus = MDL_economy_stuff
   shared_focus = MDL_army_stuff
   shared_focus = MDL_navy_stuff
   shared_focus = MDL_air_stuff
+  #SPECIAL
+  shared_focus = MDL_peace_in_our_time
+  shared_focus = MDL_sun_madness
 }
 
 focus_tree = {
-  id = manedalusia_sayf_genocide_1
+  id = manedalusia_sayf_genocide
 
-  country = {
-    factor = 0
-    modifier = {
-      add = 10
-      tag = MDL
-    }
-  }
   default = no
   continuous_focus_position = { x = 550 y = 1800 }
-}
-
-focus_tree = {
-  id = manedalusia_sayf_genocide_2
-
-	country = {
-		factor = 0
-		modifier = {
-			add = 10
-			tag = MDL
-		}
-	}
-	default = no
-	continuous_focus_position = { x = 550 y = 1800 }
 
   shared_focus = MDL_kill_them_all
-}
-
-focus_tree = {
-	id = manedalusia_khaldun
-
-	country = {
-		factor = 0
-		modifier = {
-			add = 10
-			tag = MDL
-		}
-}
-	default = no
-	continuous_focus_position = { x = 550 y = 1800 }
-
-	shared_focus = MDL_economy_stuff
-	shared_focus = MDL_army_stuff
-  shared_focus = MDL_navy_stuff
-  shared_focus = MDL_air_stuff
-}
-
-focus_tree = {
-	id = manedalusia_senate
-
-	country = {
-		factor = 0
-		modifier = {
-			add = 10
-			tag = MDL
-		}
-	}
-	default = no
-	continuous_focus_position = { x = 550 y = 1800 }
-
-  shared_focus = MDL_elect_qunsul
-	shared_focus = MDL_economy_stuff
-	shared_focus = MDL_army_stuff
-  shared_focus = MDL_navy_stuff
-  shared_focus = MDL_air_stuff
-}
-
-focus_tree = {
-	id = manedalusia_mirage
-
-	country = {
-		factor = 0
-		modifier = {
-			add = 10
-			tag = MDL
-		}
-	}
-	default = no
-	continuous_focus_position = { x = 550 y = 1800 }
-
-	shared_focus = MDL_economy_stuff
-	shared_focus = MDL_army_stuff
-  shared_focus = MDL_navy_stuff
-  shared_focus = MDL_air_stuff
-}
-
-focus_tree = {
-	id = manedalusia_velvet
-
-	country = {
-		factor = 0
-		modifier = {
-			add = 10
-			tag = MDL
-		}
-	}
-	default = no
-	continuous_focus_position = { x = 550 y = 1800 }
-
-  shared_focus = MDL_a_new_start
-  shared_focus = MDL_peace_in_our_time
-  shared_focus = MDL_economy_stuff
-  shared_focus = MDL_army_stuff
-  shared_focus = MDL_navy_stuff
-  shared_focus = MDL_air_stuff
 }
 
 focus_tree = {
@@ -171,41 +71,6 @@ focus_tree = {
 	continuous_focus_position = { x = 550 y = 1800 }
 
   shared_focus = MDL_restoring_the_light
-}
-
-focus_tree = {
-  id = manedalusia_crusade_1
-  country = {
-		factor = 0
-		modifier = {
-			add = 10
-			tag = MDL
-		}
-	}
-	default = no
-	continuous_focus_position = { x = 550 y = 1800 }
-
-  shared_focus = MDL_crusade_path
-}
-
-focus_tree = {
-  id = manedalusia_crusade_2
-  country = {
-		factor = 0
-		modifier = {
-			add = 10
-			tag = MDL
-		}
-	}
-	default = no
-	continuous_focus_position = { x = 550 y = 1800 }
-
-  shared_focus = MDL_a_new_start
-  shared_focus = MDL_our_purpose_made_clear
-  shared_focus = MDL_economy_stuff
-  shared_focus = MDL_army_stuff
-  shared_focus = MDL_navy_stuff
-  shared_focus = MDL_air_stuff
 }
 
 ###STARTING TREE###
@@ -296,6 +161,7 @@ shared_focus = {
 				defense_skill=2
 				planning_skill=5
 				logistics_skill=2
+        desc= MDL_almanezor_desc
 			}
 		}
 		custom_effect_tooltip = MDL_almanezor_stats_tt
@@ -358,7 +224,7 @@ shared_focus = {
 		add_popularity = { ideology = neutrality popularity = 0.05 }
 		hidden_effect = {#collapse focus tree
 			load_focus_tree={
-				tree = manedalusia_main
+				tree = manedalusia_start
 				keep_completed = yes
 			}
 			mark_focus_tree_layout_dirty = yes
@@ -402,7 +268,7 @@ shared_focus = {
 		country_event = { id = manedalusia.6 }
 		hidden_effect = {
 			load_focus_tree={
-				tree=manedalusia_main
+				tree=manedalusia_start
 				keep_completed = yes
 			}
 			mark_focus_tree_layout_dirty = yes
@@ -455,6 +321,9 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_sayf_takeover"
 		country_event = { id = manedalusia.8 }
+    hidden_effect = {
+      set_country_flag = MDL_sayf_path
+    }
 	}
 	search_filters = { FOCUS_FILTER_POLITICAL }
 }
@@ -490,7 +359,7 @@ shared_focus = {
 		country_event = { id = manedalusia.9 }
 		hidden_effect = {
 			load_focus_tree={
-				tree = manedalusia_main
+				tree = manedalusia_start
 				keep_completed = yes
 			}
 			mark_focus_tree_layout_dirty = yes
@@ -541,6 +410,9 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_khaldun_takeover"
 		country_event = { id = manedalusia.12 }
+    hidden_effect = {
+      set_country_flag = MDL_khaldun_path
+    }
 	}
 	search_filters = { FOCUS_FILTER_POLITICAL }
 }
@@ -580,7 +452,7 @@ shared_focus = {
 		country_event = { id = manedalusia.13 }
 		hidden_effect={
 			load_focus_tree = {
-				tree=manedalusia_main
+				tree=manedalusia_start
 				keep_completed = yes
 			}
 			mark_focus_tree_layout_dirty = yes
@@ -621,19 +493,22 @@ shared_focus = {
 }
 
 shared_focus = {
-	id = MDL_senate_assumes_power
-	icon = GFX_MDL_senate_assumes_power
-	x = 0
-	y = 2
-	relative_position_id = MDL_senate_path
-	cost = 1
-	prerequisite = { focus = MDL_grant_rural_autonomy }
-	prerequisite = { focus = MDL_senate_building }
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus MDL_senate_assumes_power"
+  id = MDL_senate_assumes_power
+  icon = GFX_MDL_senate_assumes_power
+  x = 0
+  y = 2
+  relative_position_id = MDL_senate_path
+  cost = 1
+  prerequisite = { focus = MDL_grant_rural_autonomy }
+  prerequisite = { focus = MDL_senate_building }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_senate_assumes_power"
     country_event = { id = manedalusia.50 }
-	}
-	search_filters = { FOCUS_FILTER_POLITICAL }
+    hidden_effect = {
+      set_country_flag = MDL_senate_path
+    }
+  }
+  search_filters = { FOCUS_FILTER_POLITICAL }
 }
 
 shared_focus = {
@@ -671,7 +546,7 @@ shared_focus = {
     #country_event = manedalusia.73
 		hidden_effect = {#collapse focus tree
 			load_focus_tree={
-				tree = manedalusia_main
+				tree = manedalusia_start
 				keep_completed = yes
 			}
 			mark_focus_tree_layout_dirty = yes
@@ -816,7 +691,7 @@ shared_focus = {
     custom_effect_tooltip = MDL_WIP_tt
 		hidden_effect = {
 			load_focus_tree={
-				tree = manedalusia_main
+				tree = manedalusia_start
 				keep_completed = yes
 			}
 			mark_focus_tree_layout_dirty = yes
@@ -893,6 +768,9 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_vice_and_virtue"
     country_event = { id = manedalusia.52 }
+    hidden_effect = {
+      set_country_flag = MDL_commie_path
+    }
 	}
 	search_filters = { FOCUS_FILTER_POLITICAL }
 }
@@ -904,10 +782,18 @@ shared_focus = {
 	x = 10
 	y = 0
 	cost = 1
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus MDL_warplan_green"
-		country_event = { id = manedalusia.15 }	
-	}
+
+  allow_branch = {
+    if = {
+      has_country_flag = MDL_sayf_path
+      NOT = { has_country_flag = MDL_sunmad }
+    }
+  }
+
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_warplan_green"
+    country_event = { id = manedalusia.15 }
+  }
   search_filters = { FOCUS_FILTER_POLITICAL }
 }
 
@@ -1236,6 +1122,9 @@ shared_focus = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_annex_ovingoland"
 
     custom_effect_tooltip = MDL_annex_ovingoland_tt
+    effect_tooltip = {
+      add_core_of = MDL
+    }
 
     hidden_effect = {
       every_owned_state = {
@@ -1838,6 +1727,13 @@ shared_focus = {
   x = 41
   y = 0
   cost = 5
+
+  allow_branch = {
+    if = {
+      NOT = { has_country_flag = MDL_sunmad }
+    }
+  }
+
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_air_stuff"
     add_political_power = -50	
@@ -1863,7 +1759,7 @@ shared_focus = {
   prerequisite = { focus = MDL_air_stuff }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_radar"
-    air_experience = 10
+    air_experience = 25
     add_tech_bonus = {
 			name = radar_focus
 			bonus = 1.0
@@ -2117,6 +2013,13 @@ shared_focus = {
 	x = 20
 	y = 0
   cost = 5
+
+  allow_branch = {
+    if = {
+      NOT = { has_country_flag = MDL_sunmad }
+    }
+  }
+
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_economy_stuff"
 		add_tech_bonus = {
@@ -2428,6 +2331,13 @@ shared_focus = {
   cost = 5
 	x = 32
 	y = 0
+
+  allow_branch = {
+    if = {
+      NOT = { has_country_flag = MDL_sunmad }
+    }
+  }
+
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_army_stuff"
     set_technology = { tech_support = 1 }
@@ -2448,7 +2358,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_go_with_samira"
     if = {
-      limit = { NOT = { has_country_flag = MDL_crusade_active } }
+      limit = { NOT = { has_country_flag = MDL_holy_war_active } }
       country_event = { id = manedalusia.22 }
     }
 
@@ -2945,6 +2855,13 @@ shared_focus = {
     738 = { is_owned_and_controlled_by = ROOT }
 	  740 = { is_owned_and_controlled_by = ROOT }
   }
+
+  allow_branch = {
+    if = {
+      NOT = { has_country_flag = MDL_sunmad }
+    }
+  }
+
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_navy_stuff"
     navy_experience = 25
@@ -3433,6 +3350,13 @@ shared_focus = {
   x = 10
   y = 0
   cost = 1
+
+  allow_branch = {
+    if = {
+      has_country_flag = MDL_kill_them_all
+    }
+  }
+
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_kill_them_all"
     add_ideas = extensive_conscription
@@ -3724,6 +3648,14 @@ shared_focus = {
   x = 10
   y = 0
   cost = 2
+
+  allow_branch = {
+    if = {
+      has_country_flag = MDL_senate_path
+      NOT = { has_country_flag = MDL_sunmad }
+    }
+  }
+
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_elect_qunsul"
     add_ideas = MDL_qunsul_idea
@@ -4620,9 +4552,20 @@ shared_focus = {
   x = 10
   y = 0
   cost = 1
+
+  allow_branch = {
+    if = {
+      OR = {
+        has_country_flag = MDL_velvet_path
+        has_country_flag = MDL_holy_war_active
+      }
+      NOT = { has_country_flag = MDL_sunmad }
+    }
+  }
+
   completion_reward = {
-     log = "[GetDateText]: [Root.GetName]: Focus MDL_a_new_start"
-     add_political_power = 50
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_a_new_start"
+    add_political_power = 50
   }
   search_filters = { FOCUS_FILTER_POLITICAL }
 }
@@ -4826,13 +4769,6 @@ shared_focus = {
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_monument_to_aaliyah"
     add_ideas = MDL_aaliyah_monument
-    741 = {
-      add_building_construction = {
-        type = infrastructure
-        level = 1
-        instant_build = yes
-      }
-    }
   }
   search_filters = { FOCUS_FILTER_INDUSTRY }
 }
@@ -4849,8 +4785,19 @@ shared_focus = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_bulwark_of_harmony"
     custom_effect_tooltip = MDL_bulwark_of_harmony_tt
     hidden_effect = { set_country_flag = MDL_shield_doctrine_unlocked }
-    add_ideas = MDL_bulwark_of_harmony_idea
+    if = {
+      limit = {
+        NOT = { has_country_flag = MDL_holy_war_active }
+      }
+      add_ideas = MDL_bulwark_of_harmony_idea
+    }
     741 = {
+      add_extra_state_shared_building_slots = 1
+      add_building_construction = {
+        type = arms_factory
+        level = 1
+        instant_build = yes
+      }
       add_building_construction = {
         type = coastal_bunker
         level = 3
@@ -4859,13 +4806,13 @@ shared_focus = {
       }
       add_building_construction = {
         type = bunker
-        level = 1
+        level = 2
         province = 12315
         instant_build = yes
       }
       add_building_construction = {
         type = bunker
-        level = 1
+        level = 2
         province = 12279
         instant_build = yes
       }
@@ -4916,8 +4863,9 @@ shared_focus = {
 shared_focus = {
   id = MDL_peace_in_our_time
   icon = GFX_goal_COS_Peace
-  x = 10
-  y = 6
+  x = 0
+  y = 1
+  relative_position_id = MDL_bring_our_ponies_home
   cost = 5
   available = {
     MDL = { is_in_faction_with = EQS }
@@ -4931,6 +4879,13 @@ shared_focus = {
         has_government = democratic
         is_subject_of = EQS
       }
+    }
+  }
+
+  allow_branch = {
+    if = {
+      NOT = { has_country_flag = MDL_sunmad }
+      NOT = { has_country_flag = MDL_holy_war_active }
     }
   }
 
@@ -5081,16 +5036,22 @@ shared_focus = {
 
 ###HARMONIC HOLY WAR PATH###
 shared_focus = {
-  id = MDL_crusade_path
-  icon = GFX_goal_generic_political
+  id = MDL_sun_madness
+  icon = GFX_MDL_sun_madness
   x = 15
   y = 0
 
   available = { always = no }
 
+  allow_branch = {
+    if = {
+      has_country_flag = MDL_sunmad
+    }
+  }
+
   cost = 10
   completion_reward = {
-    log = "[GetDateText]: [Root.GetName]: Focus MDL_crusade_path"    
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_sun_madness"
   }
 }
 
@@ -5098,7 +5059,16 @@ shared_focus = {
   id = MDL_our_purpose_made_clear
   icon = GFX_goal_generic_political
   x = 0
-  y = 0
+  y = 1
+  relative_position_id = MDL_bring_our_ponies_home
+
+  allow_branch = {
+    if = {
+      NOT = { has_country_flag = MDL_sunmad }
+      has_country_flag = MDL_holy_war_active
+    }
+  }
+
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_our_purpose_made_clear"
   }

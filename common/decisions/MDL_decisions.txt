@@ -94,7 +94,7 @@ MDL_shield_doctrine_tab = {
   }
 }
 
-MDL_crusade_decisions_tab = {
+MDL_holy_war_tab = {
   MDL_mil_gov = {
     available = { has_war = no }
     visible = { has_country_flag = MDL_milgovs_unlocked }
