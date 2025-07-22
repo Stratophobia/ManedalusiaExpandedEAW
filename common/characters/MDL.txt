@@ -808,7 +808,7 @@ characters={
     name=MDL_ovingo_assembly
     portraits={
       civilian = {
-        large="gfx/leaders/MDL/ovingo_assembly.tga"
+        large="gfx/leaders/MDL/MDL_FED_generic.tga"
       }
     }
   }
@@ -816,7 +816,7 @@ characters={
     name=MDL_abyssinia_assembly
     portraits = {
       civilian = {
-        large="gfx/leaders/MDL/abyssinia_assembly.tga"
+        large="gfx/leaders/MDL/MDL_FED_generic.tga"
       }
     }
   }
@@ -824,7 +824,7 @@ characters={
     name=MDL_yemani_senate
     portraits = {
       civilian = {
-        large="gfx/leaders/MDL/yemani_senate.tga"
+        large="gfx/leaders/MDL/MDL_FED_generic.tga"
       }
     }
   }
@@ -832,7 +832,7 @@ characters={
     name=MDL_asstyrian_free_cities
     portraits = {
       civilian = {
-        large="gfx/leaders/MDL/asstyrian_free_cities.tga"
+        large="gfx/leaders/MDL/MDL_FED_generic.tga"
       }
     }
   }
@@ -840,7 +840,7 @@ characters={
     name=MDL_anseruk_consortium
     portraits = {
       civilian = {
-        large="gfx/leaders/MDL/anseruk_consortium.tga"
+        large="gfx/leaders/MDL/MDL_FED_generic.tga"
       }
     }
   }
@@ -848,7 +848,7 @@ characters={
     name=MDL_elected_princes
     portraits = {
       civilian = {
-        large="gfx/leaders/MDL/elected_princes.tga"
+        large="gfx/leaders/MDL/MDL_FED_generic.tga"
       }
     }
   }

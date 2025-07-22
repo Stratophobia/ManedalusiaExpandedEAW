@@ -813,6 +813,7 @@
       name = manedalusia.31.a
       trigger = {
         NOT = { has_government = democratic }
+        NOT = { has_country_flag = MDL_holy_war_active }
       }
       custom_effect_tooltip = MDL_asabiyyah_alteration_tt
       add_to_variable = {
@@ -827,6 +828,9 @@
     option = {
       name = manedalusia.31.b
       custom_effect_tooltip = MDL_asabiyyah_alteration_tt
+      trigger = {
+        NOT = { has_country_flag = MDL_holy_war_active }
+      }
       add_to_variable = {
         var = MDL_trade_var
         value = 0.10
@@ -848,9 +852,14 @@
         modifier = MDL_BAT_savages_opinion
       }
       hidden_effect = {
-        add_opinion_modifier = {
-          target = NLR
-          modifier = MDL_djinn_opinion
+        if = {
+          limit = {
+            NOT = { has_country_flag = MDL_holy_war_active }
+          }
+          add_opinion_modifier = {
+            target = NLR
+            modifier = MDL_djinn_opinion
+          }
         }
       }
       add_to_variable = {
@@ -2361,7 +2370,7 @@
     option = {
       name = manedalusia.89.a
       add_ideas = MDL_holy_zeal_2
-      custom_effect_tooltip = MDL_crusade_tree_loaded_tt
+      custom_effect_tooltip = MDL_holy_war_tree_loaded_tt
       hidden_effect = {
         clr_country_flag = MDL_sunmad
         set_country_flag = MDL_holy_war_active
@@ -2370,6 +2379,19 @@
           keep_completed = yes
         }
         mark_focus_tree_layout_dirty = yes
+
+        add_opinion_modifier = {
+          target = NLR
+          modifier = MDL_djinn_opinion
+        }
+        add_opinion_modifier = {
+          target = EQS
+          modifier = MDL_djinn_opinion
+        }
+        add_opinion_modifier = {
+          target = BAT
+          modifier = MDL_BAT_savages_opinion
+        }
         if = {
           limit = {
             NOT = { has_completed_focus = MDL_army_stuff }
