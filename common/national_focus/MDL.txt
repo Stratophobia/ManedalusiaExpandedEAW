@@ -32,15 +32,14 @@ focus_tree = {
   shared_focus = MDL_warplan_green
   shared_focus = MDL_elect_qunsul
   shared_focus = MDL_a_new_start
+  shared_focus = MDL_our_purpose_made_clear
   #SHARED
   shared_focus = MDL_economy_stuff
   shared_focus = MDL_army_stuff
   shared_focus = MDL_navy_stuff
   shared_focus = MDL_air_stuff
   #SPECIAL
-  shared_focus = MDL_peace_in_our_time
   shared_focus = MDL_sun_madness
-  shared_focus = MDL_our_purpose_made_clear
 }
 
 focus_tree = {
@@ -1768,7 +1767,7 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_radar
-  icon = GFX_goal_generic_radar
+  icon = GFX_MDL_radar
   x = 1
   y = 1
   relative_position_id = MDL_air_stuff
@@ -1793,7 +1792,7 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_air_industry
-  icon = GFX_goal_generic_air_fighter
+  icon = GFX_MDL_air_industry
   x = -1
   y = 1
   relative_position_id = MDL_air_stuff
@@ -1828,7 +1827,7 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_death_from_above
-  icon = GFX_goal_poland_goal
+  icon = GFX_MDL_death_from_above
   x = 0
   y = 2
   relative_position_id = MDL_air_stuff
@@ -1879,7 +1878,7 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_an_air_doctrine
-  icon = GFX_goal_generic_air_doctrine
+  icon = GFX_MDL_an_air_doctrine
   x = 0
   y = 1
   relative_position_id = MDL_death_from_above
@@ -4565,17 +4564,14 @@ shared_focus = {
 ###VELVET PATH###
 shared_focus = {
   id = MDL_a_new_start
-  icon = GFX_goal_ideology_social_conservative
+  icon = GFX_MDL_a_new_start
   x = 10
   y = 0
   cost = 1
 
   allow_branch = {
     if = {
-      OR = {
-        has_country_flag = MDL_velvet_path
-        has_country_flag = MDL_holy_war_active
-      }
+      has_country_flag = MDL_velvet_path
       NOT = { has_country_flag = MDL_sunmad }
     }
   }
@@ -4589,7 +4585,7 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_meet_with_crimson
-  icon = GFX_MDL_sayf_takeover
+  icon = GFX_MDL_meet_with_crimson
   x = -1
   y = 1
   relative_position_id = MDL_a_new_start
@@ -4604,7 +4600,7 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_empower_senate
-  icon = GFX_MDL_advisory_senate
+  icon = GFX_MDL_empower_senate
   x = 1
   y = 1
   cost = 5
@@ -4644,7 +4640,7 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_look_to_equestria
-  icon = GFX_goal_EQS_TNO_meet_leaders
+  icon = GFX_MDL_look_to_equestria
   x = 2
   y = 1
   cost = 5
@@ -4678,7 +4674,7 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_formalize_alliance
-  icon = GFX_goal_equestria
+  icon = GFX_MDL_formalize_alliance
   x = 0
   y = 2
   cost = 5
@@ -4708,7 +4704,7 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_expeditionary_corps
-  icon = GFX_goal_support_equestria
+  icon = GFX_MDL_expeditionary_corps
   x = -2
   y = 1
   cost = 5
@@ -4723,7 +4719,7 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_industrial_development_program
-  icon = GFX_goal_factory_complex
+  icon = GFX_MDL_industrial_development_program
   x = 0
   y = 2
   cost = 5
@@ -4758,7 +4754,7 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_springtime_in_manedalusia
-  icon = GFX_goal_generic_liberty_statue
+  icon = GFX_MDL_springtime_in_manedalusia
   x = 0
   y = 1
   cost = 5
@@ -4777,7 +4773,7 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_monument_to_aaliyah
-  icon = GFX_focus_generic_support_the_left_right
+  icon = GFX_MDL_monument_to_aaliyah
   x = 1
   y = 1
   cost = 5
@@ -4792,7 +4788,7 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_bulwark_of_harmony
-  icon = GFX_goal_nested_fortifications
+  icon = GFX_MDL_bulwark_of_harmony
   x = -1
   y = 1
   cost = 5
@@ -4840,7 +4836,7 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_bring_our_ponies_home
-  icon = GFX_goal_pony_passport
+  icon = GFX_MDL_bring_our_ponies_home
   x = 0
   y = 2
   cost = 5
@@ -4899,12 +4895,9 @@ shared_focus = {
     }
   }
 
-  allow_branch = {
-    if = {
-      NOT = { has_country_flag = MDL_sunmad }
-      NOT = { has_country_flag = MDL_holy_war_active }
-    }
-  }
+  prerequisite = { focus = MDL_industrial_development_program }
+  prerequisite = { focus = MDL_bring_our_ponies_home }
+  prerequisite = { focus = MDL_formalize_alliance }
 
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_peace_in_our_time"
@@ -5075,9 +5068,8 @@ shared_focus = {
 shared_focus = {
   id = MDL_our_purpose_made_clear
   icon = GFX_goal_generic_political
-  x = 0
-  y = 1
-  relative_position_id = MDL_bring_our_ponies_home
+  x = 10
+  y = 0
 
   allow_branch = {
     if = {
@@ -5089,6 +5081,11 @@ shared_focus = {
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_our_purpose_made_clear"
   }
+}
+
+shared_focus = {
+  id = MDL_all_is_not_lost
+  icon = GFX_goal_generic_political
 }
 
 ###GRIFO PATH###

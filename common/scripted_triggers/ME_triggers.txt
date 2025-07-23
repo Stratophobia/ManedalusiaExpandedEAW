@@ -1,4 +1,4 @@
-arabia_is_unified = {
+arabia_is_unified = {#UNUSED, REVISE
   OR = {
     EMR = { exists = no }
     AND = {
@@ -10,3 +10,13 @@ arabia_is_unified = {
   }
 }
 
+ME_equestria_is_lost = {
+  every_other_country = {
+    limit = {
+      is_equestrian_continent_country = yes
+      NOT = { original_tag = PCB }
+      has_pony_race_tech = yes
+    }
+    NOT = { has_government = democratic }
+  }
+}

@@ -1,0 +1,33 @@
+characters = {
+  EKS_command = {
+    name=EKS_command
+    portraits={
+      civilian={
+        large="gfx/leaders/EKS/.tga"
+        small="gfx/interface/ideas/Advisors/EKS/.tga"
+      }
+    }
+
+    country_leader={
+      ideology=liberation_front
+      expire="1965.1.1.1"
+      id=-1
+    }
+  }
+
+  EKS_command = {
+    name=EKS_command
+    portraits={
+      civilian={
+        large="gfx/leaders/EKS/.tga"
+        small="gfx/interface/ideas/Advisors/EKS/.tga"
+      }
+    }
+
+    country_leader={
+      ideology=liberalism
+      expire="1965.1.1.1"
+      id=-1
+    }
+  }
+}
