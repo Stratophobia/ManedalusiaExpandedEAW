@@ -3289,8 +3289,8 @@ shared_focus = {
   y = 1
   relative_position_id = MDL_coffee_current
   prerequisite = { focus = MDL_coffee_current focus = MDL_reliable_traders }
-  bypass = {
-    CTH = { exists = no }
+  available = {
+    CTH = { exists = yes }
   }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_colthaginian_deal"
@@ -3331,7 +3331,9 @@ shared_focus = {
   prerequisite = { focus = MDL_reliable_traders focus = MDL_coffee_current }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_merchant_outposts"
-    add_offsite_building = { type = industrial_complex level = 5 }
+    add_offsite_building = { type = industrial_complex level = 3 }
+    add_offsite_building = { type = arms_factory level = 1 }
+    add_offsite_building = { type = dockyard level = 1 }
   }
   search_filters = { FOCUS_FILTER_INDUSTRY }
 }
@@ -4831,7 +4833,7 @@ shared_focus = {
       }
     }
   }
-  search_filters = { FOCUS_FILTER_INDUSTRY }
+  search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_ARMY_BONUS }
 }
 
 shared_focus = {
@@ -5080,12 +5082,25 @@ shared_focus = {
 
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_our_purpose_made_clear"
+    create_faction = MDL_GUARDIANSHIP
   }
 }
 
 shared_focus = {
   id = MDL_all_is_not_lost
   icon = GFX_goal_generic_political
+  x = 0
+  y = 1
+  relative_position_id = MDL_our_purpose_made_clear
+
+  available = {
+    ME_equestria_is_lost = yes
+  }
+
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_all_is_not_lost"
+    custom_effect_tooltip = MDL_all_is_not_lost_tt
+  }
 }
 
 ###GRIFO PATH###

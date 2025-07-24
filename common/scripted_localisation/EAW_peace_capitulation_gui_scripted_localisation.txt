@@ -2547,6 +2547,7 @@ defined_text = {
 			var:losing_country^peace_gui_index = {
 				original_tag = MDL
         NOT = { has_country_flag = MDL_grifo_takeover }
+        NOT = { has_country_flag = MDL_holy_war_active }
 			}
 		}
 		localization_key = GetTNOReference_MDL
@@ -2559,6 +2560,15 @@ defined_text = {
 			}
 		}
 		localization_key = GetTNOReference_MDL_Grifo
+	}
+  text = {
+		trigger = {
+			var:losing_country^peace_gui_index = {
+				original_tag = MDL
+        has_country_flag = MDL_holy_war_active
+			}
+		}
+		localization_key = GetTNOReference_MDL_holy_war
 	}
 	text = {
 		trigger = {

@@ -535,7 +535,7 @@ ideas = {
     MDL_citizen_guard_idea = {
       picture = MDL_citizen_guard1
       modifier = {
-        conscription = 0.01
+        conscription = 0.02
         stability_factor = 0.05
         compliance_growth = 0.10
       }
@@ -915,19 +915,19 @@ ideas = {
     MDL_starry_sea_exercises = {
       picture = EQS_harmonic_stagnation3
       modifier = {
-			  experience_gain_navy = 0.03
-			  experience_gain_air = 0.01
-			}
+        experience_gain_navy = 0.03
+        experience_gain_air = 0.01
+      }
     }
   }
   country = {
     MDL_celebrating_victory = {
       picture = ROM_king_carol_ii_hedonist
       modifier = {
-				industrial_capacity_factory = 0.05
+        industrial_capacity_factory = 0.05
         democratic_drift = 0.05
-				consumer_goods_factor = 0.1
-			}
+        consumer_goods_factor = 0.1
+      }
     }
   }
   country = {
