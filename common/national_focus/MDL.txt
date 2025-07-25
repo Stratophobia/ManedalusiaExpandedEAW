@@ -2804,6 +2804,7 @@ shared_focus = {
     every_character = {
       limit = { is_unit_leader = yes }
       add_planning = 1
+      add_logistics = 1
     }
 	}
   search_filters = { FOCUS_FILTER_ARMY_BONUS }
