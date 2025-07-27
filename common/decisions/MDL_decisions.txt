@@ -86,9 +86,11 @@ MDL_shield_doctrine_tab = {
       ABY = {
         set_cosmetic_tag = ABY_MDL_admin
         add_ideas = civilian_economy
-        if = {
-          limit = { has_idea = ABY_angry_slaves }
-          remove_ideas = ABY_angry_slaves
+        remove_ideas = {
+          ABY_angry_slaves
+          ABY_wingbardian_concessions
+          ABY_wingbardian_concessions_2
+          ABY_wingbardian_concessions_3
         }
       }
       release_puppet = ABY

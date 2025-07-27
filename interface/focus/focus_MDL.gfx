@@ -1,5 +1,9 @@
 spriteTypes = {
   SpriteType = {
+    name = "GFX_MDL_lean_on_legacy"
+    textureFile = "gfx/interface/goals/MDL/MDL_lean_on_legacy.tga"
+  }
+  SpriteType = {
     name = "GFX_MDL_sun_madness"
     textureFile = "gfx/interface/goals/MDL/MDL_sun_madness.tga"
   }
@@ -970,10 +974,6 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_MDL_madgriff_in_the_harbor"
 		texturefile = "gfx/interface/goals/MDL/MDL_madgriff_in_the_harbor.tga"
-	}
-	SpriteType = {
-		name = "GFX_MDL_manedalusian_sun"
-		texturefile = "gfx/interface/goals/MDL/MDL_manedalusian_sun.tga"
 	}
 	SpriteType = {
 		name = "GFX_MDL_ash_shahid_chosen"

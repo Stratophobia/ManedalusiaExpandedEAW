@@ -847,9 +847,14 @@
     option = {
       name = manedalusia.31.c
       custom_effect_tooltip = MDL_asabiyyah_alteration_tt
-      add_opinion_modifier = {
-        target = BAT
-        modifier = MDL_BAT_savages_opinion
+      if = {
+        limit = {
+          NOT = { has_country_flag = MDL_holy_war_active }
+        }
+        add_opinion_modifier = {
+          target = BAT
+          modifier = MDL_BAT_savages_opinion
+        }
       }
       hidden_effect = {
         if = {
@@ -2380,9 +2385,12 @@
         }
         mark_focus_tree_layout_dirty = yes
 
-        add_opinion_modifier = {
-          target = NLR
-          modifier = MDL_djinn_opinion
+        if = {
+          limit = { NLR = exists = yes }
+          add_opinion_modifier = {
+            target = NLR
+            modifier = MDL_djinn_opinion
+          }
         }
         add_opinion_modifier = {
           target = EQS
@@ -2392,20 +2400,7 @@
           target = BAT
           modifier = MDL_BAT_savages_opinion
         }
-        if = {
-          limit = {
-            NOT = { has_completed_focus = MDL_army_stuff }
-          }
-          complete_national_focus = MDL_army_stuff
-          complete_national_focus = MDL_go_with_samira
-        }
-        if = {
-          limit = {
-            has_completed_focus = MDL_army_stuff
-            NOT = { has_completed_focus = MDL_go_with_samira }
-          }
-          complete_national_focus = MDL_go_with_samira
-        }
+        MDL_holy_war_autodo_military_focuses = yes
       }
       set_cosmetic_tag = MDL_crusader
     }

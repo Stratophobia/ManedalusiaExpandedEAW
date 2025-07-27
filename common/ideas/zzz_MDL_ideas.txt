@@ -909,6 +909,18 @@ ideas = {
       }
     }
   }
+#HOLY WAR IDEAS
+  country = {
+    MDL_holy_mandate = {
+      picture = generic_constitutional_guarantee#REPLACE
+      targeted_modifier = {
+				tag = MDL
+				cic_to_target_factor = 0.35
+        mic_to_target_factor = 0.75
+			}
+    }
+  }
+#ULTRAMAR IDEAS
   country = {
     MDL_ash_shuhud_resistance = {
       picture = MDL_native_resistance

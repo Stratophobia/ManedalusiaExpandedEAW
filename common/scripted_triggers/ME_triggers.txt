@@ -1,22 +1,33 @@
-arabia_is_unified = {#UNUSED, REVISE
-  OR = {
-    EMR = { exists = no }
-    AND = {
-      SDS = { exists = no }
-      SDL = { exists = no }
-      SDF = { exists = no }
-      SDC = { exists = no }
+ME_arabia_is_unified = {
+  custom_trigger_tooltip = {
+    tooltip = ME_arabia_is_unified_tt
+    OR = {
+      EMR = { exists = no }
+      AND = {
+        SDS = { exists = no }
+        SDL = { exists = no }
+        SDF = { exists = no }
+        SDC = { exists = no }
+      }
     }
   }
 }
 
 ME_equestria_is_lost = {
-  every_other_country = {
-    limit = {
-      is_equestrian_continent_country = yes
-      NOT = { original_tag = PCB }
-      has_pony_race_tech = yes
+  custom_trigger_tooltip = {
+    tooltip = ME_equestria_is_lost_tt
+    EQS = {
+      OR = {
+        exists = no
+        NOT = { has_government = democratic }
+      }
     }
-    NOT = { has_government = democratic }
+    CES = {
+      OR = {
+        exists = no
+        NOT = { has_government = democratic }
+        has_completed_focus = CES_solar_1_1
+      }
+    }
   }
 }

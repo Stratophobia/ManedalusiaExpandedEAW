@@ -45,6 +45,54 @@ MDL_reduce_sun_madness = {
   }
 }
 
+MDL_holy_war_autodo_military_focuses = {
+  if = {
+    limit = {
+      NOT = { has_completed_focus = MDL_go_with_samira }
+    }
+    complete_national_focus = MDL_go_with_samira
+  }
+  if = {
+    limit = {
+      NOT = { has_completed_focus = MDL_modern_army_crash_course }
+    }
+    complete_national_focus = MDL_modern_army_crash_course
+  }
+}
+
+MDL_get_all_resources_ABY_MGY = {
+  MGY = {
+    give_resource_rights = { receiver = MDL state = 731 }
+    give_resource_rights = { receiver = MDL state = 732 }
+    give_resource_rights = { receiver = MDL state = 735 }
+    give_resource_rights = { receiver = MDL state = 736 }
+    give_resource_rights = { receiver = MDL state = 762 }
+    give_resource_rights = { receiver = MDL state = 766 }
+    give_resource_rights = { receiver = MDL state = 770 }
+  }
+  ABY = {
+    give_resource_rights = { receiver = MDL state = 785 }
+    give_resource_rights = { receiver = MDL state = 775 }
+    give_resource_rights = { receiver = MDL state = 777 }
+    give_resource_rights = { receiver = MDL state = 779 }
+    give_resource_rights = { receiver = MDL state = 780 }
+    give_resource_rights = { receiver = MDL state = 782 }
+    give_resource_rights = { receiver = MDL state = 783 }
+    if = {
+      limit = { owns_state = 1201 }
+      give_resource_rights = { receiver = MDL state = 1201 }
+    }
+    if = {
+      limit = { owns_state = 1200 }
+      give_resource_rights = { receiver = MDL state = 1200 }
+    }
+    if = {
+      limit = { owns_state = 784 }
+      give_resource_rights = { receiver = MDL state = 784 }
+    }
+  }
+}
+
 #For Wingbardy War (All Main Paths)
 MDL_WNG_transfer_colonies = {
   WNG = {

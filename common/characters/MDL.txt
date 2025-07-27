@@ -185,6 +185,7 @@ characters={
 			traits = { army_infantry_1 army_commando_2 }
       visible = { NOT = { has_country_flag = MDL_samira_country_leader } }
 			available = { has_completed_focus = MDL_go_with_alneighzari }
+      visible = { NOT = { has_completed_focus = MDL_go_with_samira } }
 		}
 	}
 	MDL_alneighzari = {
