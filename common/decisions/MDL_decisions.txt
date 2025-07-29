@@ -79,21 +79,12 @@ MDL_shield_doctrine_tab = {
       }
     cost = 25
     complete_effect = {
+      MDL_create_dynamic_ABY = yes
       every_owned_state = {
         limit = { is_in_array = { state_original_cores = KLG } }
         remove_core_of = ABY
       }
-      ABY = {
-        set_cosmetic_tag = ABY_MDL_admin
-        add_ideas = civilian_economy
-        remove_ideas = {
-          ABY_angry_slaves
-          ABY_way_less_angry_slaves
-          ABY_wingbardian_concessions
-          ABY_wingbardian_concessions_2
-          ABY_wingbardian_concessions_3
-        }
-      }
+      ABY = { set_cosmetic_tag = ABY_MDL_admin }
       release_puppet = ABY
       hidden_effect = {
         ABY = {
@@ -110,18 +101,18 @@ MDL_holy_war_tab = {
 
 MDL_republican_war_decisions_tab = {
   MDL_recruit_new_soldiers = {
-		icon = helmet
+    icon = helmet
     visible = { has_country_flag = MDL_federal_army_unlocked }
     available = {
       hidden_trigger = { command_power > 19 }
     }
     custom_cost_trigger = {
-			check_variable = {
-				var = command_power
-				value = 20
-				compare = greater_than_or_equals
-			}
-		}
+      check_variable = {
+        var = command_power
+        value = 20
+        compare = greater_than_or_equals
+      }
+    }
     custom_cost_text = decision_cost_CP_20
     
     days_remove = 30

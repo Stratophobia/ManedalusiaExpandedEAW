@@ -5,6 +5,77 @@ MDL_remove_ABY_templates = {
   delete_unit_template_and_units = { division_template = "Highlander Regiment" }
 }
 
+MDL_create_dynamic_ABY = {
+  create_dynamic_country = {
+    original_tag = ABY
+    set_variable = { collaboration_formed_by = PREV }
+    set_temp_variable = { new_country = this }
+
+    PREV = {
+      every_controlled_state = {
+        limit = { occupied_country_tag = ABY }
+        var:new_country = { transfer_state = PREV }
+      }
+      puppet = new_country
+    }
+    load_focus_tree = { 
+      tree = generic_zebra_focus
+      keep_completed = yes		   
+    }
+    set_capital = {
+      state = 775
+      remember_old_capital = no
+    }
+    set_party_name = {
+      ideology = neutrality
+      long_name = MDL_ABY_FED_PARTY_LONG
+      name = MDL_ABY_FED_PARTY
+    }
+    set_party_name = {
+      ideology = democratic
+      long_name = ABY_MDL_ADMIN_PARTY_NAME_LONG
+      name = ABY_MDL_ADMIN_PARTY_NAME
+    }
+    generate_character = {
+      token_base = MDL_abyssinia_assembly
+      name = MDL_abyssinia_assembly
+    }
+    set_portraits = {
+      character = MDL_abyssinia_assembly
+      army = {
+        large = "gfx/leaders/MDL/MDL_FED_generic.tga"
+      }
+    }
+    add_country_leader_role = {
+      character = MDL_abyssinia_assembly
+      country_leader = {
+        ideology = republicanism
+        expire = "1965.1.1.1"
+        id=-1
+      }
+      promote_leader = yes
+    }
+    add_country_leader_role = {
+      character = MDL_abyssinia_assembly
+      country_leader = {
+        ideology = harmonic_constitutionalism
+        expire = "1965.1.1.1"
+        id=-1
+      }
+      promote_leader = yes
+    }
+    add_ideas = {
+      cat_race
+      poverty5
+      outdated_industry
+      lack_of_scientists2
+      better_science_base
+      civilian_economy
+    }
+    set_AI_strategies_on_every_possible_country_delayed = yes
+  }  
+}
+
 MDL_elevate_virianthrax = {
   add_country_leader_role = {
     character = MDL_virianthrax

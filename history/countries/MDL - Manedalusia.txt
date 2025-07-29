@@ -127,7 +127,6 @@ recruit_character = MDL_virianthrax
 ###FEDERATION LEADERS###
 recruit_character = MDL_nomarchical_council
 recruit_character = MDL_ovingo_assembly
-recruit_character = MDL_abyssinia_assembly 
 recruit_character = MDL_yemani_senate
 recruit_character = MDL_asstyrian_free_cities
 recruit_character = MDL_anseruk_consortium

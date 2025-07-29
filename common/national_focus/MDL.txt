@@ -19,10 +19,6 @@ focus_tree = {
 
   country = {
     factor = 0
-    modifier = {
-      add = 10
-      tag = MDL
-    }
   }
 
   default = no
@@ -47,10 +43,6 @@ focus_tree = {
 
   country = {
     factor = 0
-    modifier = {
-      add = 10
-      tag = MDL
-    }
   }
 
   default = no
@@ -63,10 +55,6 @@ focus_tree = {
   id = manedalusia_ultramar_1
   country = {
     factor = 0
-    modifier = {
-      add = 10
-      tag = MDL
-    }
   }
   default = no
   continuous_focus_position = { x = 550 y = 1800 }
@@ -78,10 +66,6 @@ focus_tree = {
   id = manedalusia_ultramar_2
   country = {
 		factor = 0
-		modifier = {
-			add = 10
-			tag = MDL
-		}
 	}
 	default = no
 	continuous_focus_position = { x = 550 y = 1800 }
@@ -4065,10 +4049,7 @@ shared_focus = {
     hidden_effect = {
       clr_country_flag = MDL_FA_recruit_2
       set_country_flag = MDL_FA_recruit_3
-      set_nationality = {
-        target_country = ABY
-        character = MDL_abyssinia_assembly
-      }
+      MDL_create_dynamic_ABY = yes
       release_puppet = ABY
       ABY = {
         remove_state_core = 1208
@@ -4079,36 +4060,10 @@ shared_focus = {
         remove_state_claim = 738
 
         set_cosmetic_tag = ABY_FEDERATION
-        remove_ideas = {
-          ABY_secret_police_idea_no_lr
-          ABY_weak_clawomonic_resistance
-          ABY_way_less_angry_slaves
-          ABY_angry_slaves
-          ABY_KLG_food_imports
-          ABY_risk_of_famine
-        }
-        load_focus_tree = {
-          tree = generic_zebra_focus
-        }
         add_ideas = MDL_federation_member
-        MDL_abyssinia_assembly = {
-          add_country_leader_role = {
-            country_leader = {
-              ideology = republicanism
-              expire = "1965.1.1.1"
-			        id=-1
-            }
-            promote_leader = yes
-          }
-        }
         set_politics = {
           ruling_party = neutrality
           allow_elections = no
-        }
-        set_party_name = {
-          ideology = neutrality
-          long_name = MDL_ABY_FED_PARTY_LONG
-          name = MDL_ABY_FED_PARTY
         }
       }
     }
@@ -5213,10 +5168,12 @@ shared_focus = {
   y = 1
   cost = 5
   relative_position_id = MDL_our_purpose_made_clear
+
   available = {
     ABY = { is_subject_of = ROOT }
     MGY = { is_subject_of = ROOT }
   }
+
   prerequisite = { focus = MDL_our_purpose_made_clear }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_holy_mandates"
@@ -5302,6 +5259,7 @@ shared_focus = {
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_forges_of_klugetown"
     1208 = {
+      add_manpower = -5000
       add_core_of = ROOT
       add_extra_state_shared_building_slots = 5
       add_building_construction = {

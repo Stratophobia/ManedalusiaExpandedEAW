@@ -813,14 +813,6 @@ characters={
       }
     }
   }
-  MDL_abyssinia_assembly = {
-    name=MDL_abyssinia_assembly
-    portraits = {
-      civilian = {
-        large="gfx/leaders/MDL/MDL_FED_generic.tga"
-      }
-    }
-  }
   MDL_yemani_senate = {
     name=MDL_yemani_senate
     portraits = {

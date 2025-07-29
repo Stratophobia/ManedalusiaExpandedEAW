@@ -438,7 +438,7 @@ ideas = {
           instant = yes
         }
         mechanized_equipment = {
-          reliability = 0.2
+          reliability = 0.25
           build_cost_ic = -0.05
           instant = yes
         }
@@ -953,7 +953,7 @@ ideas = {
       }
     }
     MDL_speartip_of_harmony_idea = {
-      picture = GFX_idea_MDL_speartip_of_harmony
+      picture = MDL_speartip_of_harmony
       modifier = {
         war_support_factor = 0.15
         army_attack_factor = 0.10
