@@ -86,4 +86,11 @@ leader_traits = {
     industrial_capacity_factory = -0.05
     industrial_capacity_dockyard = -0.05
   }
+  MDL_samira_lady_commander = {
+    allowed = { always = yes }
+    special_forces_attack_factor = 0.10
+    army_attack_factor = 0.05
+    stability_weekly = 0.003
+    war_support_factor = 0.15
+  }
 }

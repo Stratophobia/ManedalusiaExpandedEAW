@@ -701,6 +701,14 @@
 ###HARMONIC HOLY WAR PATH###
   MDL_sun_madness:0 "The End of All Things"
   MDL_sun_madness_desc:0 "The Dark Omen will be fulfilled, and the end of the world is nigh! Ash-Shahid, please help us!"
+  MDL_our_purpose_made_clear:0 "Our Purpose Made Clear"
+  MDL_holy_mandates:0 "The Holy Mandates"
+  MDL_all_is_not_lost:0 "All Is Not Yet Lost"
+  MDL_secure_klugetown:0 "Secure Klugetown"
+  MDL_speartip_of_harmony:0 "Harmony's Speartip"
+  MDL_rally_the_faithful:0 "Rally The Faithful"
+  MDL_forges_of_klugetown:0 "Leverage The Klugetown Industry"
+  MDL_strike_thralls_of_darkness:0 "Strike At The Thralls Of Darkness"
 ###ECONOMY TREE###
   MDL_economy_stuff:0 "Out of the Darkness"
   MDL_economy_stuff_desc:0 "We emerge from our subjugation onto a strange new world of machinery, standardized assembly lines, mass urbanization and scientific management. If we are to restore Coltoba's light to this world as bright as it was in ages long past, we cannot afford to be left behind in our modernization."
@@ -1083,7 +1091,7 @@
   MDL_post_war_investment_desc:0 "Manedalusia has granted us a substantial capital investment to aid in the war reconstruction."
   MDL_starry_sea_exercises:0 "Starry Sea Exercises"
   MDL_celebrating_victory:0 "The Grand Surfing Festival"
-###HARMONIC CRUSADE IDEAS###
+###HARMONIC HOLY WAR IDEAS###
   MDL_sunmad_0:0 "Sun Madness"
   MDL_sunmad_0_desc:0 "The Day of Black Sun has sent the nation into utter disarray. The terrified populace protests in the streets, unsanctioned preachers gather crowds of hundreds across the countryside, speaking of apocalyptic revelations. Even in the armed forces, discipline is crumbling as our soldiers spread terrifying rumors of the Eclipse's meaning, and all ash-shuhūd are convinced that the foreboding omen will bring about the destruction of all things. Everypony in Al-Manedalus either believes, or at least dreads in the darkest recesses of their mind, that we are witnessing the end of days."
   MDL_sunmad_1:0 "Sun Madness"
@@ -1092,6 +1100,12 @@
   MDL_sunmad_2_desc:0 "The Day of Black Sun has sent the nation into utter disarray. The terrified populace protests in the streets, unsanctioned preachers gather crowds of hundreds across the countryside, speaking of apocalyptic revelations. Even in the armed forces, discipline is crumbling as our soldiers spread terrifying rumors of the Eclipse's meaning, and all ash-shuhūd are convinced that the foreboding omen will bring about the destruction of all things. Everypony in Al-Manedalus either believes, or at least dreads in the darkest recesses of their mind, that we are witnessing the end of days."
   MDL_sunmad_3:0 "Sun Madness"
   MDL_sunmad_3_desc:0 "The Day of Black Sun has sent the nation into utter disarray. The terrified populace protests in the streets, unsanctioned preachers gather crowds of hundreds across the countryside, speaking of apocalyptic revelations. Even in the armed forces, discipline is crumbling as our soldiers spread terrifying rumors of the Eclipse's meaning, and all ash-shuhūd are convinced that the foreboding omen will bring about the destruction of all things. Everypony in Al-Manedalus either believes, or at least dreads in the darkest recesses of their mind, that we are witnessing the end of days."
+  MDL_speartip_of_harmony_idea:0 "Harmony's Speartip"
+  MDL_holy_fury:0 "§RHoly Fury§!"
+  MDL_rally_the_faithful_1:0 "Rallying The Faithful"
+  MDL_rally_the_faithful_2:0 "Rallying The Faithful"
+  MDL_holy_fury_desc:0 "We will not give up! We will not surrender! We will fight the Djinn until the end, even if if takes every drop of our blood and every fiber of our being! By the will of He Who Witnesses All Things, the Demons will DIE!"
+  MDL_holy_mandate:0 "Holy Mandate"
 ###ULTRAMAR IDEAS###
   MDL_ash_shuhud_resistance:0 "Ash-Shuhūd Resistance"
   MDL_ash_shuhud_resistance_desc:0 "The natives cling to their mind poison like addicts. Away from the civilizing light, this far-flung reach has been consumed by darkened thoughts and survived through belief in barbarian notions of divinity and destiny. Even as we strive to bring forth the light of Imperium to this land, they reject it, they fight us along every step of the way. We must remain strong; in time, they will falter."
@@ -1237,6 +1251,7 @@
   MDL_almanezor_desc:0 "A stallion of mixed passions, Al-Manesūr comes from a long line of ponies who pride themselves in their smithing work; Al-Manesūr, however, believing his family's traditional trade of pride to be subject to great change in the modern world, focused his efforts on pursuing a military career instead. Despite this, still inspired by his elder craftsponies, the young stallion always had a fascination with tinkering, which would develop into his admiration for machinery. It is no surprise, then, that now as a general of the Manedalusian Army, Al-Manesūr is one of the prime advocates for the mechanization of the armed forces, believing them to be both the most effective method of crushing enemy forces and preserving Manedalusia's limited pool of willing recruits.\n\nBoth politically and personally, Al-Manesūr is a stallion of the armed forces at heart, and hasn't known any other mode of life in his adulthood. No one is quite sure how or why he suffered the devastating injury that lead to near complete loss of vision in his eye; some believe it to have been an industrial accident, others a fencing injury. Either way, Al-Manesūr refuses to confirm or deny any rumors, and as is his attitude with most things, prefers to leave things left unsaid.\n\n§YPortrait By§!: Stratophobia"
   MDL_grandmistress_samira:0 "Grandmistress Samira"
   MDL_grandmistress_samira_desc:0 "Like most Manedalusian zebras, Samira has Zonician heritage, but this is something she only knows because she grew up in a zebra ghetto in the outskirts of Coltoba. Being an orphan for as long as she can remember, she spent her formative years living in the streets and surviving by begging. However, as a young filly, she claims to have received a divine revelation from Ash-Shahid on a cold night, which endowed her with her life's purpose in devotion to the All-Witnessing. Though the Hashm Koltāliba are normally happy to take in orphans like her, she was a bit too old when she was initially introduced to the Order, and so had to go above and beyond to prove her ability and devotion to her peers and then Grandmaster Ali, whom would eventually choose her as his successor.\n\nWhile all Koltāliba are known to be reclusive and prone to few spoken words, Samira distinguishes herself due to her strict adherence to ash-shuhūd practice, from fasting, to daily prayer, in addition to the vows of chastity, sobriety and poverty all Order members make.\n\n§YPortrait By§!: Stratophobia"
+  MDL_samira_lady_commander:0 "Lady Commander of Manedalusia, Stewardess of The Holy State, First Among the Servants of His Righteous Will and Protector of the Faithful"
   MDL_alneighzari:0 "Al-Neighzari"
   MDL_admiral_astur:0 "Astur"
   MDL_admiral_astur_desc:0 "Those who know Astur might be surprised to know that he's a former pirate. Most of the experience he's obtained over the years, he got by raiding commercial convoys around the coast of Western and Northern Zebrica, something he became so proficient at that he earned his nickname: the Pirate Gentlepony. There's hardly a single Tobuckian or Hippogriffian shipping company, commercial freighter manufacturer or general seagriff, pony or zebra that doesn't know Astur's name. For his crimes, he would eventually be caught and serve several years in prison in Hippogriffia, after which he made a daring escape by sea and evaded seapony patrols, Chiropterran raiders and other pirates to make his way back to his home in Manedalusia. His years in incarceration hardened him, but also made him repent his miscreant past and return to the faith in shame.\n\nGiven Manedalusia's lack of competent naval staff, Astur's expertise is more than welcome, though he's kept under close watch by other military staff. Astur takes great pride in the fact that over the course of his life, even as a criminal, he always abided by a strict sense of honor; he's never hurt or killed a civilian, nor has he ever attacked an enemy without giving them a chance to fight back, an attitude he's carried over into his newfound career in the admiralty."
@@ -1369,7 +1384,7 @@
   EMR_FEDERATION_DEF:0 "the Federated Principalities of North Arabia"
   SDS_FEDERATION:0 "Arabian Republic"
   SDS_FEDERATION_DEF:0 "the Arabian Republic"
-###SPECIAL TAGS - VELVET###
+###SPECIAL TAGS - HARMONIC###
   MGY_MDL_admin:0 "Himā Al-Farasmisr"
   MGY_MDL_admin_DEF:0 "the Himā Al-Farasmisr"
   ABY_MDL_admin:0 "Himā Al-Habasha"
@@ -1438,7 +1453,7 @@
   MDL_elite_army_tt:0 "We will unlock §GFederal Army§! £decision_icon_small §Cdecisions§! to train and organize an elite military force."
   MDL_purchase_land_maregypt_tt:0 "If Maregypt rejects our offer of purchase, a §Glimited war§! will be waged to take back our rightful land."
   MDL_velvet_war_MGY_tt:0 "We will wage a §Glimited war§! against §YMaregypt§!. If we can inflict §Y30K§! casualties on them while losing less than §Y5K§! ourselves, we will instantly win the war; if we fail, we can still win the war conventionally."
-  MDL_peace_in_our_time_tt:0 "§CThe penalties to§! §YTrade and Economy Law Cost§! §Cwill be removed from the§! §GAsabiyyah§! §Cspirit§!."
+  MDL_remove_tradelaw_econ_cost_tt:0 "§CThe penalties to§! §YTrade and Economy Law Cost§! §Cwill be removed from the§! §GAsabiyyah§! §Cspirit§!."
   MDL_holy_war_tree_loaded_tt:0 "§YManedalusia's Harmonic Holy War Tree will be loaded.§!"
   MDL_colthaginian_deal_tt:0 "Should Colthage accept our deal, a §Ymutual benefit§! will be provided to both countries as long as both @MDL §GManedalusia§! and the @CTH §CColthaginian Republic§! are independent. This Treaty can be reestablished if Colthage loses, and is then restored to independence."
   MDL_senate_reconcile_maregypt_tt:0 "@MGY §YMaregypt§! will lose all claims to @MDL §GManedalusian§! and @MKS §rOvingoland§! territories."
@@ -1470,8 +1485,10 @@
   MDL_king_of_arabia_tt:0 "\nEvery owned @SDL §GArabian§! Core state:"
   MDL_imperial_agriculture_tt:0 "Every owned state of @ABY @ASS @ANS @YMN @MGY @MKS:"
 ###HOLY WAR TOOLTIPS###
-  MDL_our_purpose_made_clear_tt:0 "The §GJunnah Doctrine§! £decision_icon_small §Cdecisions§! will be available if they are not already."
+  MDL_our_purpose_made_clear_tt:0 "The §GJunnah Doctrine§! £decision_icon_small §Cdecisions§! will be made available if they are not already."
   MDL_holy_mandates_tt:0 "All @ABY §rAbyssinian§! and @MGY §YMaregyptian§! resources are seized, and the two gain:"
+  MDL_rally_the_faithful_tt:0 "§CThe penalties to§! §YMobilization Law Cost§! §Cwill be removed from the§! §GAsabiyyah§! §Cspirit§!."
+  MDL_strike_thralls_of_darkness_tt:0 "We will wage §RTotal War§! upon @BAT Chiropterra. We will be able to instantly capitulate and annex them and their puppets, ending the conflict with any of its allies in a §Gwhite peace§!, as soon as we take control of the §YImperial Hills§!."
 ###SCRIPTED TRIGGER TOOLTIPS###
   ME_arabia_is_unified_tt:0 "Arabia has been unified"
   ME_equestria_is_lost_tt:0 "Equestria is §Rfully lost§! to the Djinn"

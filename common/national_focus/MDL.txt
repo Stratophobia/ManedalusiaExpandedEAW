@@ -250,36 +250,36 @@ shared_focus = {
 }
 
 shared_focus = {
-	id = MDL_ash_shahid_chosen
-	icon = GFX_MDL_ash_shahid_chosen
-	x = -4
-	y = 1
+  id = MDL_ash_shahid_chosen
+  icon = GFX_MDL_ash_shahid_chosen
+  x = -4
+  y = 1
   cost = 1
-	offset = {
-		x = 4
-		y = 0
-		trigger = {
-			has_completed_focus = MDL_ash_shahid_chosen
-		}
-	}
-	relative_position_id = MDL_lean_on_legacy
-	prerequisite = { focus = MDL_lean_on_legacy }
-	mutually_exclusive = { focus = MDL_khaldun_gambit focus = MDL_senate_path }
+  offset = {
+    x = 4
+    y = 0
+    trigger = {
+      has_completed_focus = MDL_ash_shahid_chosen
+    }
+  }
+  relative_position_id = MDL_lean_on_legacy
+  prerequisite = { focus = MDL_lean_on_legacy }
+  mutually_exclusive = { focus = MDL_khaldun_gambit focus = MDL_senate_path }
 
-	allow_branch = {
-		if = {
-			NOT = {
-				OR = {
-					has_completed_focus = MDL_try_for_harmony
-					has_completed_focus = MDL_try_for_socialism
-					has_completed_focus = MDL_khaldun_gambit
-					has_completed_focus = MDL_senate_path
-				}
-			}
-		}
-	}
+  allow_branch = {
+    if = {
+      NOT = {
+        OR = {
+          has_completed_focus = MDL_try_for_harmony
+          has_completed_focus = MDL_try_for_socialism
+          has_completed_focus = MDL_khaldun_gambit
+          has_completed_focus = MDL_senate_path
+        }
+      }
+    }
+  }
 
-	completion_reward = {
+  completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_ash_shahid_chosen"
 		country_event = { id = manedalusia.6 }
 		hidden_effect = {
@@ -2189,6 +2189,7 @@ shared_focus = {
       target_province = 4804
     }
     741 = {
+      add_extra_state_shared_building_slots = 1
       add_building_construction = {
 				type = infrastructure
 				level = 1
@@ -2196,6 +2197,7 @@ shared_focus = {
 			}
     }
 		738 = {
+      add_extra_state_shared_building_slots = 2
 			add_building_construction = {
 				type = infrastructure
 				level = 2
@@ -2203,6 +2205,7 @@ shared_focus = {
 			}
 		}
 		740 = {
+      add_extra_state_shared_building_slots = 2
 			add_building_construction = {
 				type = infrastructure
 				level = 2
@@ -2276,6 +2279,7 @@ shared_focus = {
 	prerequisite = { focus = MDL_economy_stuff }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_fiqh_decisions"
+    add_stability = 0.05
 		custom_effect_tooltip = MDL_fiqh_decisions_unlocked_tt
 	}
   search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2320,23 +2324,29 @@ shared_focus = {
 }
 
 shared_focus = {
-	id = MDL_place_in_the_sun
-	icon = GFX_MDL_place_in_the_sun
+  id = MDL_place_in_the_sun
+  icon = GFX_MDL_place_in_the_sun
   cost = 3
-	x = 0
-	y = 1
-	relative_position_id = MDL_coltoba_university
-	prerequisite = { focus = MDL_coltoba_university }
-	prerequisite = { focus = MDL_manedalusia_industrialism }
-	prerequisite = { focus = MDL_look_to_our_roots }
-	completion_reward = {
+  x = 0
+  y = 1
+  relative_position_id = MDL_coltoba_university
+  prerequisite = { focus = MDL_coltoba_university }
+  prerequisite = { focus = MDL_manedalusia_industrialism }
+  prerequisite = { focus = MDL_look_to_our_roots }
+  completion_reward = {
     country_event = { id = manedalusia.24 }
-		log = "[GetDateText]: [Root.GetName]: Focus MDL_place_in_the_sun"
-		swap_ideas = {
-			remove_idea = MDL_humbled_sultanate
-			add_idea = MDL_place_in_the_sun_idea
-		}
-	}
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_place_in_the_sun"
+    if = {
+      limit = { has_idea = MDL_humbled_sultanate }
+      swap_ideas = {
+        remove_idea = MDL_humbled_sultanate
+        add_idea = MDL_place_in_the_sun_idea
+      }
+    }
+    else = {
+      add_idea = MDL_place_in_the_sun_idea
+    }
+  }
   search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_ARMY_BONUS }
 }
 
@@ -4907,7 +4917,7 @@ shared_focus = {
 
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_peace_in_our_time"
-    custom_effect_tooltip = MDL_peace_in_our_time_tt
+    custom_effect_tooltip = MDL_remove_tradelaw_econ_cost_tt
     add_ideas = free_trade
     set_variable = { MDL_tradelaw_var = 0 }
     set_variable = { MDL_economy_var = 0 }
@@ -5089,6 +5099,7 @@ shared_focus = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_our_purpose_made_clear"
     create_faction = MDL_GUARDIANSHIP
     custom_effect_tooltip = MDL_our_purpose_made_clear_tt
+    custom_effect_tooltip = MDL_remove_tradelaw_econ_cost_tt
     if = {
       limit = {
         ABY = {
@@ -5101,11 +5112,21 @@ shared_focus = {
         target = ABY
       }
     }
-    create_wargoal = {
-      type = puppet_wargoal_focus
-      target = MGY
+    if = {
+      limit = {
+        MGY = {
+          exists = yes
+          NOT = { is_subject_of = MDL }
+        }
+      }
+      create_wargoal = {
+        type = puppet_wargoal_focus
+        target = MGY
+      }
     }
     hidden_effect = {
+      set_variable = { MDL_tradelaw_var = 0 }
+      set_variable = { MDL_economy_var = 0 }
       if = {
         limit = { NOT = { has_country_flag = MDL_shield_doctrine_unlocked } }
         set_country_flag = MDL_shield_doctrine_unlocked
@@ -5130,11 +5151,15 @@ shared_focus = {
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_all_is_not_lost"
     custom_effect_tooltip = MDL_all_is_not_lost_tt
+    swap_ideas = {
+      remove_idea = MDL_holy_zeal_2
+      add_idea = MDL_holy_fury
+    }
   }
 }
 
 shared_focus = {
-  id = MDL_HW1
+  id = MDL_rally_the_faithful
   icon = GFX_goal_generic_political
   x = 1
   y = 2
@@ -5142,7 +5167,11 @@ shared_focus = {
   relative_position_id = MDL_our_purpose_made_clear
   prerequisite = { focus = MDL_our_purpose_made_clear }
   completion_reward = {
-    log = "[GetDateText]: [Root.GetName]: Focus MDL_HW1"
+    custom_effect_tooltip = MDL_rally_the_faithful_tt
+    set_variable = { MDL_mobilization_var = 0 }
+    add_ideas = extensive_conscription
+    add_ideas = MDL_rally_the_faithful_1
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_rally_the_faithful"
   }
 }
 
@@ -5160,16 +5189,19 @@ shared_focus = {
 }
 
 shared_focus = {
-  id = MDL_HW3
+  id = MDL_strike_thralls_of_darkness
   icon = GFX_goal_generic_political
   x = 0
   y = 2
   cost = 5
   relative_position_id = MDL_all_is_not_lost
-  prerequisite = { focus = MDL_HW1 }
+  prerequisite = { focus = MDL_rally_the_faithful }
   prerequisite = { focus = MDL_HW2 }
+  will_lead_to_war_with = BAT
   completion_reward = {
-    log = "[GetDateText]: [Root.GetName]: Focus MDL_HW3"
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_strike_thralls_of_darkness"
+    custom_effect_tooltip = MDL_strike_thralls_of_darkness_tt
+    hidden_effect = { set_country_flag = MDL_holy_war_BAT }
     declare_war_on = { type = annex_everything target = BAT }
   }
 }
@@ -5188,6 +5220,7 @@ shared_focus = {
   prerequisite = { focus = MDL_our_purpose_made_clear }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_holy_mandates"
+    add_country_leader_trait = MDL_samira_lady_commander
     if = {
       limit = { NOT = { has_completed_focus = MDL_industrial_development_program } }
       741 = {
@@ -5234,14 +5267,24 @@ shared_focus = {
 }
 
 shared_focus = {
-  id = MDL_HW6
+  id = MDL_speartip_of_harmony
   icon = GFX_goal_generic_political
   x = -1
   y = 1
   relative_position_id = MDL_holy_mandates
   prerequisite = { focus = MDL_holy_mandates }
   completion_reward = {
-    log = "[GetDateText]: [Root.GetName]: Focus MDL_HW6"
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_speartip_of_harmony"
+    if = {
+      limit = { has_idea = MDL_bulwark_of_harmony_idea }
+      swap_ideas = {
+        remove_idea = MDL_bulwark_of_harmony_idea
+        add_idea = MDL_speartip_of_harmony_idea
+      }
+    }
+    else = {
+      add_ideas = MDL_speartip_of_harmony_idea
+    }
   }
 }
 

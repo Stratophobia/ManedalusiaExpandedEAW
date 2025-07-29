@@ -1,5 +1,17 @@
 spriteTypes = {
   SpriteType = {
+    name = "GFX_idea_MDL_holy_mandate"
+    texturefile = "gfx/interface/ideas/MDL/MDL_holy_mandate.tga"
+  }
+  SpriteType = {
+    name = "GFX_idea_MDL_speartip_of_harmony"
+    texturefile = "gfx/interface/ideas/MDL/MDL_speartip_of_harmony.tga"
+  }
+  SpriteType = {
+    name = "GFX_idea_MDL_holy_fury"
+    texturefile = "gfx/interface/ideas/MDL/MDL_holy_fury.tga"
+  }
+  SpriteType = {
     name = "GFX_idea_MDL_federal_constitution"
     texturefile = "gfx/interface/ideas/MDL/MDL_federal_constitution.tga"
   }

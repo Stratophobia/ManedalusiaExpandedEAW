@@ -81,13 +81,14 @@ MDL_shield_doctrine_tab = {
     complete_effect = {
       every_owned_state = {
         limit = { is_in_array = { state_original_cores = KLG } }
-        add_core_of = ABY
+        remove_core_of = ABY
       }
       ABY = {
         set_cosmetic_tag = ABY_MDL_admin
         add_ideas = civilian_economy
         remove_ideas = {
           ABY_angry_slaves
+          ABY_way_less_angry_slaves
           ABY_wingbardian_concessions
           ABY_wingbardian_concessions_2
           ABY_wingbardian_concessions_3
