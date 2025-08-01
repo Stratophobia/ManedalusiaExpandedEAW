@@ -5131,7 +5131,7 @@ shared_focus = {
 }
 
 shared_focus = {
-  id = MDL_HW2
+  id = MDL_fortress_manedalusia
   icon = GFX_goal_generic_political
   x = -1
   y = 2
@@ -5139,7 +5139,53 @@ shared_focus = {
   relative_position_id = MDL_our_purpose_made_clear
   prerequisite = { focus = MDL_our_purpose_made_clear }
   completion_reward = {
-    log = "[GetDateText]: [Root.GetName]: Focus MDL_HW2"
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_fortress_manedalusia"
+    if = {
+      limit = { NOT = { has_completed_focus = MDL_bulwark_of_harmony } }
+      add_ideas = MDL_aaliyah_monument
+    }
+    741 = {
+      add_extra_state_shared_building_slots = 2
+      add_building_construction = {
+        type = dockyard
+        level = 1
+        instant_build = yes
+      }
+      add_building_construction = {
+        type = coastal_bunker
+        level = 2
+        province = 12234
+        instant_build = yes
+      }
+    }
+    740 = {
+      add_extra_state_shared_building_slots = 2
+      add_building_construction = {
+        type = dockyard
+        level = 1
+        instant_build = yes
+      }
+      add_building_construction = {
+        type = coastal_bunker
+        level = 2
+        province = 10143
+        instant_build = yes
+      }
+    }
+    738 = {
+      add_extra_state_shared_building_slots = 2
+      add_building_construction = {
+        type = dockyard
+        level = 1
+        instant_build = yes
+      }
+      add_building_construction = {
+        type = coastal_bunker
+        level = 2
+        province = 7512
+        instant_build = yes
+      }
+    }
   }
 }
 
@@ -5151,7 +5197,7 @@ shared_focus = {
   cost = 5
   relative_position_id = MDL_all_is_not_lost
   prerequisite = { focus = MDL_rally_the_faithful }
-  prerequisite = { focus = MDL_HW2 }
+  prerequisite = { focus = MDL_fortress_manedalusia }
   will_lead_to_war_with = BAT
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_strike_thralls_of_darkness"
@@ -5226,6 +5272,7 @@ shared_focus = {
 shared_focus = {
   id = MDL_speartip_of_harmony
   icon = GFX_goal_generic_political
+  cost = 5
   x = -1
   y = 1
   relative_position_id = MDL_holy_mandates
@@ -5273,6 +5320,54 @@ shared_focus = {
         instant_build = yes
       }
     }
+  }
+}
+
+shared_focus = {
+  id = MDL_HW1
+  icon = GFX_goal_generic_political
+  x = 0
+  y = 2
+  available = {
+    BSG = { is_subject_of = ROOT }
+  }
+  relative_position_id = MDL_strike_thralls_of_darkness
+  prerequisite = { focus = MDL_strike_thralls_of_darkness }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_HW1"
+  }
+}
+
+shared_focus = {
+  id = MDL_HW2
+  icon = GFX_goal_generic_political
+  x = -1
+  y = 1
+  relative_position_id = MDL_strike_thralls_of_darkness
+  available = {
+    has_completed_focus = MDL_holy_mandates
+    BSG = { is_subject_of = ROOT }
+  }
+  prerequisite = { focus = MDL_strike_thralls_of_darkness }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_HW2"
+    BSG = { add_ideas = MDL_holy_mandate }
+    country_event = manedalusia.81
+  }
+}
+
+shared_focus = {
+  id = MDL_HW3
+  icon = GFX_goal_generic_political
+  x = 1
+  y = 1
+  relative_position_id = MDL_strike_thralls_of_darkness
+  available = {
+    BSG = { is_subject_of = ROOT }
+  }
+  prerequisite = { focus = MDL_strike_thralls_of_darkness }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_HW3"
   }
 }
 

@@ -5,6 +5,39 @@ MDL_remove_ABY_templates = {
   delete_unit_template_and_units = { division_template = "Highlander Regiment" }
 }
 
+MDL_BSG_setup = {
+  hidden_effect = {
+    BSG = {
+      set_capital = {
+        state = 712
+        remember_old_capital = no
+      }
+      set_party_name = {
+        ideology = fascism
+        long_name = BAT_VASSAL_NAME_LONG
+        name = BAT_VASSAL_NAME
+      }
+      set_party_name = {
+        ideology = democratic
+        long_name = BAT_VASSAL_NAME_LONG
+        name = BAT_VASSAL_NAME
+      }
+      load_focus_tree = { tree = generic_zebra_focus }
+    }
+    every_owned_state = {
+      limit = {
+        OR = {
+          is_in_array = { state_original_cores = BAT }
+          is_in_array = { state_original_cores = WAR }
+          is_in_array = { state_original_cores = TBK }
+        }
+      }
+      add_core_of = BSG
+    }
+    MDL = { BSG = { transfer_technology = yes } }
+  }
+}
+
 MDL_create_dynamic_ABY = {
   create_dynamic_country = {
     original_tag = ABY

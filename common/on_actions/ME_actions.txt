@@ -74,6 +74,30 @@ on_actions = {
     effect = {
       if = {
         limit = {
+          has_country_flag = MDL_holy_war_BAT
+          has_war_with = BAT
+          712 = { is_controlled_by = MDL }
+        }
+
+        every_other_country = {
+          if = {
+            limit = { is_subject_of = BAT }
+            annex_country = { target = PREV }
+          }
+          if = {
+            limit = {
+              has_war_with = MDL
+              is_in_faction_with = BAT
+            }
+            white_peace = MDL
+          }
+        }
+        annex_country = { target = BAT }
+      }
+    }
+    effect = {
+      if = {
+        limit = {
           has_country_flag = MDL_velvet_war_MGY
           has_war_with = MGY
           casualties_k < 5

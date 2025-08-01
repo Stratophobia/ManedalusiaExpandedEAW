@@ -2214,7 +2214,7 @@
     }
   }
 
-  country_event = {#FREE
+  country_event = {#freed chiropterran slaves
     id = manedalusia.81
     title = manedalusia.81.t
     desc = manedalusia.81.d
@@ -2222,6 +2222,10 @@
 
     option = {
       name = manedalusia.81.a
+      swap_ideas = {
+        remove_idea = MDL_rally_the_faithful_1
+        add_idea = MDL_rally_the_faithful_2
+      }
     }
   }
 
@@ -2457,7 +2461,7 @@
     }
   }
 
-  country_event = {#FREE
+  country_event = {#Abyssinian slavers decision
     id = manedalusia.91
     title = manedalusia.91.t
     desc = manedalusia.91.d
@@ -2465,6 +2469,45 @@
 
     option = {
       name = manedalusia.91.a
+      add_country_leader_trait = MDL_breaker_of_chains
+      add_ideas = MDL_never_slaves_again_idea_2
+      custom_effect_tooltip = MDL_asabiyyah_alteration_tt
+      add_to_variable = {
+        var = MDL_pp_var
+        value = 0.05
+      }
+      add_to_variable = {
+        var = army_morale_factor
+        value = 0.05
+      }
+      775 = { add_manpower = -50 }
+      785 = { add_manpower = -40 }
+      776 = { add_manpower = -25 }
+      777 = { add_manpower = -25 }
+      771 = { add_manpower = -20 }
+      782 = { add_manpower = -15 }
+      783 = { add_manpower = -15 }
+    }
+    option = {
+      name = manedalusia.91.b
+      add_country_leader_trait = MDL_breaker_of_chains
+      add_ideas = MDL_never_slaves_again_idea_1
+      custom_effect_tooltip = MDL_asabiyyah_alteration_tt
+      add_to_variable = {
+        var = MDL_org_var
+        value = 0.05
+      }
+      add_to_variable = {
+        var = MDL_surrender_var
+        value = 0.15
+      }
+      775 = { add_manpower = -300 }
+      785 = { add_manpower = -200 }
+      776 = { add_manpower = -150 }
+      777 = { add_manpower = -150 }
+      771 = { add_manpower = -100 }
+      782 = { add_manpower = -75 }
+      783 = { add_manpower = -75 }
     }
   }
 
@@ -2590,33 +2633,8 @@
     option = {
       name = manedalusia.94.a
       custom_effect_tooltip = MDL_shahanshah_cucked_tt
-      BSG = {
-        set_party_name = {
-          ideology = fascism
-          long_name = BAT_VASSAL_NAME_LONG
-          name = BAT_VASSAL_NAME
-        }
-      }
-      hidden_effect = {
-        every_owned_state = {
-          limit = {
-            OR = {
-              is_in_array = { state_original_cores = BAT }
-              is_in_array = { state_original_cores = WAR }
-              is_in_array = { state_original_cores = TBK }
-            }
-          }
-          add_core_of = BSG
-        }
-      }
-      hidden_effect = {
-        BSG = {
-          load_focus_tree = {
-            tree = generic_zebra_focus
-          }
-        }
-        MDL = { BSG = { transfer_technology = yes } }
-      }
+
+      MDL_BSG_setup = yes
       release_puppet = BSG
     }
   }

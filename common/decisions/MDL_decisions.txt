@@ -48,6 +48,26 @@ political_actions = {
 }
 
 MDL_shield_doctrine_tab = {
+  MDL_shield_attack_BAT = {
+    icon = crossed_swords
+    available = { has_war = no }
+    fire_only_once = yes
+    visible = {
+      has_country_flag = MDL_shield_doctrine_unlocked
+      BAT = {
+        exists = yes
+        has_government = fascism
+        is_in_faction = no
+      }
+    }
+    days_remove = 50
+    remove_effect = {
+      create_wargoal = {
+        type = puppet_wargoal_focus
+        target = BAT
+      }
+    }
+  }
   MDL_shield_puppet_MGY = {
     available = { has_war = no }
     visible = {
@@ -70,6 +90,23 @@ MDL_shield_doctrine_tab = {
       release_puppet = MGY
     }
   }
+  MDL_shield_puppet_BAT = {
+    available = { has_war = no }
+    visible = {
+      has_country_flag = MDL_shield_doctrine_unlocked
+      BAT = { exists = no }
+      712 = { is_owned_and_controlled_by = ROOT }
+    }
+    cost = 25
+    complete_effect = {
+      MDL_BSG_setup = yes
+      hidden_effect = { BSG = { set_cosmetic_tag = BSG_MDL_admin } }
+      release_puppet = BSG
+      hidden_effect = {
+        BSG = { load_focus_tree = { tree = generic_zebra_focus } }
+      }
+    }
+  }
   MDL_shield_puppet_ABY = {
     available = { has_war = no }
       visible = {
@@ -79,6 +116,7 @@ MDL_shield_doctrine_tab = {
       }
     cost = 25
     complete_effect = {
+      country_event = manedalusia.91
       MDL_create_dynamic_ABY = yes
       every_owned_state = {
         limit = { is_in_array = { state_original_cores = KLG } }

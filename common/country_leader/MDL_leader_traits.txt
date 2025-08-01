@@ -62,6 +62,18 @@ leader_traits = {
 		stability_weekly = 0.003
     fascism_drift = 0.02
   }
+  MDL_breaker_of_chains = {
+    allowed = { always = yes }
+    stability_factor = 0.10
+    democratic_drift = 0.03
+  }
+  MDL_samira_lady_commander = {
+    allowed = { always = yes }
+    special_forces_attack_factor = 0.10
+    army_attack_factor = 0.05
+    stability_weekly = 0.003
+    war_support_factor = 0.15
+  }
 ###GRIFO EXCLUSIVES###
   MDL_unfeathered_modernist = {
     production_factory_max_efficiency_factor = 0.05
@@ -85,12 +97,5 @@ leader_traits = {
     consumer_goods_factor = -0.25   
     industrial_capacity_factory = -0.05
     industrial_capacity_dockyard = -0.05
-  }
-  MDL_samira_lady_commander = {
-    allowed = { always = yes }
-    special_forces_attack_factor = 0.10
-    army_attack_factor = 0.05
-    stability_weekly = 0.003
-    war_support_factor = 0.15
   }
 }
