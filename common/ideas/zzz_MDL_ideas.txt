@@ -812,7 +812,7 @@ ideas = {
 			picture = generic_democratic_drift_bonus
 			modifier = {
 				consumer_goods_factor = -0.05
-				production_speed_buildings_factor = 0.15
+				production_speed_buildings_factor = 0.10
 			}
 		}
   }
@@ -928,6 +928,9 @@ ideas = {
   country = {
     MDL_holy_mandate = {
       picture = generic_constitutional_guarantee#REPLACE
+      modifier = {
+        autonomy_gain = -1
+      }
       targeted_modifier = {
         tag = MDL
         cic_to_target_factor = 0.25

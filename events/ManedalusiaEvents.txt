@@ -2490,7 +2490,6 @@
     }
     option = {
       name = manedalusia.91.b
-      add_country_leader_trait = MDL_breaker_of_chains
       add_ideas = MDL_never_slaves_again_idea_1
       custom_effect_tooltip = MDL_asabiyyah_alteration_tt
       add_to_variable = {
@@ -3077,5 +3076,59 @@
         limit = { has_country_flag = MDL_heteronyms_active }
         hidden_effect = { country_event = { id = manedalusia.118 days = 200 } }
       }
+    }
+  }
+
+  country_event = {#thanks for the island, nerd
+    id = manedalusia.119
+    title = manedalusia.119.t
+    desc = manedalusia.119.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.119.a
+    }
+  }
+
+  country_event = {#offer of support to CES
+    id = manedalusia.120
+    title = manedalusia.120.t
+    desc = manedalusia.120.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.120.a
+      MDL = {
+        give_guarantee = CES
+        country_event = { id = manedalusia.121 days = 1 }
+      }
+    }
+    option = {
+      name = manedalusia.120.b
+      MDL = {
+        country_event = { id = manedalusia.121 days = 1 }
+      }
+    }
+  }
+
+  country_event = {#CES yay
+    id = manedalusia.121
+    title = manedalusia.121.t
+    desc = manedalusia.122.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.121.a
+    }
+  }
+
+  country_event = {#CES nay
+    id = manedalusia.121
+    title = manedalusia.121.t
+    desc = manedalusia.122.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.121.a
     }
   }

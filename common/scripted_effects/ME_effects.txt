@@ -197,6 +197,21 @@ MDL_get_all_resources_ABY_MGY = {
   }
 }
 
+#only use for custom puppet tag BSG
+MDL_get_all_resources_BAT = {
+  BSG = {
+    give_resource_rights = { receiver = MDL state = 713 }
+    give_resource_rights = { receiver = MDL state = 690 }
+    give_resource_rights = { receiver = MDL state = 689 }
+    give_resource_rights = { receiver = MDL state = 815 }
+    give_resource_rights = { receiver = MDL state = 692 }
+    give_resource_rights = { receiver = MDL state = 728 }
+    give_resource_rights = { receiver = MDL state = 743 }
+    give_resource_rights = { receiver = MDL state = 688 }
+    give_resource_rights = { receiver = MDL state = 1206 }
+  }
+}
+
 #For Wingbardy War (All Main Paths)
 MDL_WNG_transfer_colonies = {
   WNG = {
