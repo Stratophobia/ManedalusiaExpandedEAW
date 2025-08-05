@@ -447,6 +447,9 @@
   MDL_support_CES_desc:0 "The defenders of old Equestrian Harmony are far from wholly gone on the continent. In the Southeast, they still hold strong. It is imperative that they do not falter, and we shall offer them any measure of aid they require."
   MDL_seize_summer_islands:0 "Seize the Summer Islands"
   MDL_seize_summer_islands_desc:0 "With the Djinn Empress distracted in her continental war and our forces gathered in the Starry Sea, we can effortlessly take control of the Summer Islands without resistance."
+#JUNNAH DOCTRINE
+  MDL_transfer_to_ABY:0 "Transfer Territory to the Abyssinian Protectorate"
+  MDL_transfer_to_MGY:0 "Transfer Territory to the Maregyptian Protectorate"
 #OTHERS
   CHN_manedalusia_protectorate:0 "Form the Manedalusian Protectorate"
   MDL_colthage_treaty_decision:0 "Restore Our Partnership With Colthage"
@@ -727,7 +730,8 @@
   MDL_forges_of_klugetown:0 "Leverage The Klugetown Industry"
   MDL_strike_thralls_of_darkness:0 "Strike At The Thralls Of Darkness"
   MDL_holy_mandate_BAT:0 "Burying The Nightmare"
-  MDL_secure_starry_sea:0 "Secure The Starry Sea"
+  MDL_secure_starry_sea_islands:0 "Secure The Starry Sea"
+  MDL_expand_junnah_doctrine:0 "Expand the Junnah Doctrine"
 ###ECONOMY TREE###
   MDL_economy_stuff:0 "Out of the Darkness"
   MDL_economy_stuff_desc:0 "We emerge from our subjugation onto a strange new world of machinery, standardized assembly lines, mass urbanization and scientific management. If we are to restore Coltoba's light to this world as bright as it was in ages long past, we cannot afford to be left behind in our modernization."
@@ -1518,9 +1522,10 @@
   MDL_our_purpose_made_clear_tt:0 "The §GJunnah Doctrine§! £decision_icon_small §Cdecisions§! will be made available if they are not already."
   MDL_holy_mandates_tt:0 "All @ABY §rAbyssinian§! and @MGY §YMaregyptian§! resources are seized, and the two gain:"
   MDL_rally_the_faithful_tt:0 "§CThe penalties to§! §YConscription Law Cost§! §Cwill be removed from the§! §GAsabiyyah§! §Cspirit§!."
-  custom_effect_tooltip = MDL_spawn_koltaliba_divs_tt:0 "Spawns three §CKoltāliba§! divisions in Coltoba."
+  MDL_spawn_koltaliba_divs_tt:0 "Spawns three §CKoltāliba§! divisions in Coltoba."
   MDL_strike_thralls_of_darkness_tt:0 "We will wage §RTotal War§! upon @BAT Chiropterra. We will be able to instantly capitulate and annex them and their puppets, ending the conflict with any of its allies in a §Gwhite peace§!, as soon as we take control of the §YImperial Hills§!."
   MDL_holy_mandate_BAT_tt:0 "All @BSG §rChiropterran§! resources are seized."
+  MDL_military_governorate:0 "Military Governorate"
 ###SCRIPTED TRIGGER TOOLTIPS###
   ME_arabia_is_unified_tt:0 "Arabia has been unified"
   ME_equestria_is_lost_tt:0 "Equestria is §Rfully lost§! to the Djinn"

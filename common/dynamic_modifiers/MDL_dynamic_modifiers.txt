@@ -1,3 +1,19 @@
+MDL_military_governorate = {
+  icon = GFX_modifiers_changeling_settlement_icon
+  enable = { always = yes }
+  remove_trigger = {
+    owner = {
+      NOT = { original_tag = MDL }
+    }
+  }
+  
+	compliance_growth = 0.15
+	resistance_growth = -0.50
+	resistance_target = -0.50
+	resistance_decay = 0.40
+	state_resources_factor = 0.5
+}
+
 MDL_colonial_admin = {
 	icon = GFX_modifiers_changeling_settlement_icon
 	enable = { always = yes }

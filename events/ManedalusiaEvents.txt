@@ -3114,7 +3114,7 @@
   country_event = {#CES yay
     id = manedalusia.121
     title = manedalusia.121.t
-    desc = manedalusia.122.d
+    desc = manedalusia.121.d
     is_triggered_only = yes
 
     option = {
@@ -3123,8 +3123,8 @@
   }
 
   country_event = {#CES nay
-    id = manedalusia.121
-    title = manedalusia.121.t
+    id = manedalusia.122
+    title = manedalusia.122.t
     desc = manedalusia.122.d
     is_triggered_only = yes
 

@@ -13,29 +13,30 @@ division_template = {
   }
   support = {
     artillery = { x = 0 y = 0 }
+    recon = { x = 0 y = 1 }
   }
 }
 
 units = {
 	division = {
-		name = "Koltāliba"
+		name = "Koltāliba Regiment"
 		location = 12234
 		division_template = "Hashm Koltāliba"
 		start_experience_factor = 1
 		start_equipment_factor = 1
 	}
   division = {
-		name = "Koltāliba"
+		name = "Koltāliba Regiment"
 		location = 12234
 		division_template = "Hashm Koltāliba"
 		start_experience_factor = 1
 		start_equipment_factor = 1
 	}
   division = {
-		name = "Koltāliba"
+		name = "Koltāliba Regiment"
 		location = 12234
 		division_template = "Hashm Koltāliba"
-		start_experience_factor = 0.5
+		start_experience_factor = 1
 		start_equipment_factor = 1
 	}
 }

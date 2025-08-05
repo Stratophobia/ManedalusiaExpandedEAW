@@ -166,33 +166,23 @@ MDL_holy_war_autodo_military_focuses = {
 
 MDL_get_all_resources_ABY_MGY = {
   MGY = {
-    give_resource_rights = { receiver = MDL state = 731 }
-    give_resource_rights = { receiver = MDL state = 732 }
-    give_resource_rights = { receiver = MDL state = 735 }
-    give_resource_rights = { receiver = MDL state = 736 }
-    give_resource_rights = { receiver = MDL state = 762 }
-    give_resource_rights = { receiver = MDL state = 766 }
-    give_resource_rights = { receiver = MDL state = 770 }
+    every_owned_state = {
+      MGY = {
+        give_resource_rights = {
+          receiver = MDL
+          state = PREV
+        }
+      }
+    }
   }
   ABY = {
-    give_resource_rights = { receiver = MDL state = 785 }
-    give_resource_rights = { receiver = MDL state = 775 }
-    give_resource_rights = { receiver = MDL state = 777 }
-    give_resource_rights = { receiver = MDL state = 779 }
-    give_resource_rights = { receiver = MDL state = 780 }
-    give_resource_rights = { receiver = MDL state = 782 }
-    give_resource_rights = { receiver = MDL state = 783 }
-    if = {
-      limit = { owns_state = 1201 }
-      give_resource_rights = { receiver = MDL state = 1201 }
-    }
-    if = {
-      limit = { owns_state = 1200 }
-      give_resource_rights = { receiver = MDL state = 1200 }
-    }
-    if = {
-      limit = { owns_state = 784 }
-      give_resource_rights = { receiver = MDL state = 784 }
+    every_owned_state = {
+      ABY = {
+        give_resource_rights = {
+          receiver = MDL
+          state = PREV
+        }
+      }
     }
   }
 }
@@ -200,15 +190,14 @@ MDL_get_all_resources_ABY_MGY = {
 #only use for custom puppet tag BSG
 MDL_get_all_resources_BAT = {
   BSG = {
-    give_resource_rights = { receiver = MDL state = 713 }
-    give_resource_rights = { receiver = MDL state = 690 }
-    give_resource_rights = { receiver = MDL state = 689 }
-    give_resource_rights = { receiver = MDL state = 815 }
-    give_resource_rights = { receiver = MDL state = 692 }
-    give_resource_rights = { receiver = MDL state = 728 }
-    give_resource_rights = { receiver = MDL state = 743 }
-    give_resource_rights = { receiver = MDL state = 688 }
-    give_resource_rights = { receiver = MDL state = 1206 }
+    every_owned_state = {
+      BSG = {
+        give_resource_rights = {
+          receiver = MDL
+          state = PREV
+        }
+      }
+    }
   }
 }
 

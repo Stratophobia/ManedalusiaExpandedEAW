@@ -132,11 +132,75 @@ MDL_shield_doctrine_tab = {
       }
     }
   }
+  MDL_transfer_to_ABY = {
+    available = { has_war = no }
+    targets = { ASS ANS }
+    visible = {
+      ABY = { is_subject_of = ROOT }
+      NOT = { country_exists = FROM }
+      any_occupied_country = { tag = FROM }
+    }
+    targets_dynamic = yes
+    target_non_existing = yes
+    target_trigger = {
+      FROM = {
+        OR = {
+          original_tag = ASS
+          original_tag = ANS
+        }
+      }
+    }
+    complete_effect = {
+      every_owned_state = {
+        limit = { is_in_array = { state_original_cores = FROM } }
+        add_core_of = ABY
+        ABY = {
+          transfer_state = PREV
+          give_resource_rights = {
+            receiver = MDL
+            state = PREV
+          }
+        }
+      }
+    }
+  }
+  MDL_transfer_to_MGY = {
+    available = { has_war = no }
+    targets = { YMN }
+    visible = {
+      MGY = { is_subject_of = ROOT }
+      NOT = { country_exists = FROM }
+      any_occupied_country = { tag = FROM }
+    }
+    targets_dynamic = yes
+    target_non_existing = yes
+    target_trigger = {
+      FROM = {
+        OR = {
+          original_tag = YMN
+        }
+      }
+    }
+    complete_effect = {
+      every_owned_state = {
+        limit = { is_in_array = { state_original_cores = FROM } }
+        add_core_of = MGY
+        MGY = {
+          transfer_state = PREV
+          give_resource_rights = {
+            receiver = MDL
+            state = PREV
+          }
+        }
+      }
+    }
+  }
 }
 
 MDL_holy_war_tab = {
   MDL_support_CES = {
     cost = 10
+    fire_only_once = yes
     visible = {
       CES = {
         exists = yes
@@ -174,7 +238,9 @@ MDL_holy_war_tab = {
       }
     }
     complete_effect = {
-      1995.owner = { country_event = manedalusia.119 }
+      1195 = {
+        owner = { country_event = manedalusia.119 }
+      }
       MDL = { transfer_state = 1195 }
     }
   }

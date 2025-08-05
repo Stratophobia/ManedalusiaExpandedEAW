@@ -5054,6 +5054,8 @@ shared_focus = {
 
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_our_purpose_made_clear"
+    add_country_leader_trait = MDL_samira_lady_commander
+
     create_faction = MDL_GUARDIANSHIP
     custom_effect_tooltip = MDL_our_purpose_made_clear_tt
     custom_effect_tooltip = MDL_remove_tradelaw_econ_cost_tt
@@ -5231,7 +5233,7 @@ shared_focus = {
   prerequisite = { focus = MDL_our_purpose_made_clear }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_holy_mandates"
-    add_country_leader_trait = MDL_samira_lady_commander
+
     if = {
       limit = { NOT = { has_completed_focus = MDL_industrial_development_program } }
       741 = {
@@ -5342,16 +5344,26 @@ shared_focus = {
 shared_focus = {
   id = MDL_secure_starry_sea_islands
   icon = GFX_goal_generic_political
-  x = 0
-  y = 2
+  x = -1
+  y = 1
   cost = 3
   available = {
     BSG = { is_subject_of = ROOT }
   }
-  relative_position_id = MDL_strike_thralls_of_darkness
-  prerequisite = { focus = MDL_strike_thralls_of_darkness }
+  relative_position_id = MDL_fortress_manedalusia
+  prerequisite = {
+    focus = MDL_fortress_manedalusia
+    focus = MDL_speartip_of_harmony
+  }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_secure_starry_sea_islands"
+    hidden_effect = {
+      if = {
+        limit = { has_country_flag = MDL_holy_war_BAT }
+        clr_country_flag = MDL_holy_war_BAT
+      }
+    }
+
     if = {
       limit = { PCB = { exists = yes } }
       create_wargoal = {
@@ -5376,8 +5388,8 @@ shared_focus = {
 shared_focus = {
   id = MDL_holy_mandate_BAT
   icon = GFX_goal_generic_political
-  x = -1
-  y = 1
+  x = 0
+  y = 2
   cost = 3
   relative_position_id = MDL_strike_thralls_of_darkness
   available = {
@@ -5395,18 +5407,48 @@ shared_focus = {
 }
 
 shared_focus = {
-  id = MDL_HW3
+  id = MDL_expand_junnah_doctrine
   icon = GFX_goal_generic_political
   x = 1
   y = 1
   cost = 3
-  relative_position_id = MDL_strike_thralls_of_darkness
+  relative_position_id = MDL_rally_the_faithful
   available = {
     BSG = { is_subject_of = ROOT }
   }
-  prerequisite = { focus = MDL_strike_thralls_of_darkness }
+  bypass = {
+    ASS = { exists = no }
+    ANS = { exists = no }
+    YMN = { exists = no }
+  }
+  prerequisite = {
+    focus = MDL_rally_the_faithful
+    focus = MDL_forges_of_klugetown
+  }
+
   completion_reward = {
-    log = "[GetDateText]: [Root.GetName]: Focus MDL_HW3"
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_expand_junnah_doctrine"
+    if = {
+      limit = { ASS = { exists = yes } }
+      create_wargoal = {
+        type = puppet_wargoal_focus
+        target = ASS
+      }
+    }
+    if = {
+      limit = { ANS = { exists = yes } }
+      create_wargoal = {
+        type = puppet_wargoal_focus
+        target = ANS
+      }
+    }
+    if = {
+      limit = { YMN = { exists = yes } }
+      create_wargoal = {
+        type = puppet_wargoal_focus
+        target = YMN
+      }
+    }
   }
 }
 
