@@ -82,7 +82,7 @@ on_actions = {
         every_other_country = {
           if = {
             limit = { is_subject_of = BAT }
-            annex_country = { target = PREV }
+            annex_country = { target = THIS }
           }
           if = {
             limit = {
@@ -93,6 +93,7 @@ on_actions = {
           }
         }
         annex_country = { target = BAT }
+        clr_country_flag = MDL_holy_war_BAT
       }
     }
     effect = {

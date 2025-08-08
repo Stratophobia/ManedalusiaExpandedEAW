@@ -88,13 +88,13 @@
 
     option = {#army comes in, order restored
       name = manedalusia.1.a
-      ai_chance = { factor = 70 }
+      ai_chance = { base = 70 }
       country_event = { id = manedalusia.65 }
     }
 
     option = {#Bingus Gamer Moment
       name = manedalusia.1.b
-      ai_chance = { factor = 5 }
+      ai_chance = { base = 5 }
       country_event = { id = manedalusia.58 }
     }
 
@@ -102,7 +102,7 @@
       name = manedalusia.1.c
       custom_effect_tooltip = ABY_disable_bingus
       set_variable = { ABY_noble_loyalties^15 = 0 }
-      ai_chance = { factor = 25 }
+      ai_chance = { base = 25 }
       release = MDL
       hidden_effect = {
         MDL = {
@@ -3105,8 +3105,11 @@
     }
     option = {
       name = manedalusia.120.b
+      ai_chance = {
+        base = 0
+      }
       MDL = {
-        country_event = { id = manedalusia.121 days = 1 }
+        country_event = { id = manedalusia.122 days = 1 }
       }
     }
   }
@@ -3131,4 +3134,80 @@
     option = {
       name = manedalusia.121.a
     }
+  }
+
+  country_event = {#khaldun's final entry
+    id = manedalusia.123
+    title = manedalusia.123.t
+    desc = manedalusia.123.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.123.a
+    }
+  }
+
+  country_event = {#junnah doctrine - request Katren
+    id = manedalusia.124
+    title = manedalusia.124.t
+    desc = manedalusia.124.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.124.a
+      ai_chance = { base = 50 }
+      add_political_power = 100
+      add_ideas = MDL_WNG_katren_accord_1
+      diplomatic_relation = { 
+	      country = MDL
+	      relation = non_aggression_pact 
+      }
+      MDL_WNG_transfer_colonies = yes
+      MDL = { country_event = manedalusia.125 }
+    }
+    option = {
+      name = manedalusia.124.b
+      ai_chance = { base = 50 }
+      add_ideas = MDL_WNG_katren_accord_2
+      diplomatic_relation = { 
+	      country = MDL
+	      relation = non_aggression_pact 
+      }
+      add_political_power = 100
+      ABY = { transfer_state = 1200 }
+      remove_state_claim = 1200
+      MDL = { country_event = manedalusia.126 }
+    }
+    option = {
+      name = manedalusia.124.c
+      ai_chance = { base = 0 }
+      MDL = { country_event = manedalusia.127 }
+    }
+  }
+
+  country_event = {#WNG yay
+    id = manedalusia.125
+    title = manedalusia.125.t
+    desc = manedalusia.125.d
+    is_triggered_only = yes
+
+    option = { name = manedalusia.125.a }
+  }
+
+  country_event = {#WNG may
+    id = manedalusia.126
+    title = manedalusia.126.t
+    desc = manedalusia.126.d
+    is_triggered_only = yes
+
+    option = { name = manedalusia.126.a }
+  }
+
+  country_event = {#WNG nay
+    id = manedalusia.127
+    title = manedalusia.127.t
+    desc = manedalusia.127.d
+    is_triggered_only = yes
+
+    option = { name = manedalusia.127.a }
   }

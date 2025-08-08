@@ -56,6 +56,7 @@ add_ideas = {
 	pre_industrial_society
 	poor_science_base
 	lack_of_scientists2
+  no_poverty
 }
 add_ideas = {
 	MDL_humbled_sultanate

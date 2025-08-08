@@ -132,6 +132,25 @@ MDL_shield_doctrine_tab = {
       }
     }
   }
+  MDL_katren_accord = {
+    visible = {
+      WNG = {
+        exists = yes
+        has_civil_war = no
+        owns_state = 1200
+      }
+      ABY = {
+        exists = yes
+        is_subject_of = ROOT
+      }
+    }
+    available = { has_war = no }
+    fire_only_once = yes
+    cost = 100
+    complete_effect = {
+      WNG = { country_event = { id = manedalusia.124 days = 2 } }
+    }
+  }
   MDL_transfer_to_ABY = {
     available = { has_war = no }
     targets = { ASS ANS }
@@ -200,6 +219,7 @@ MDL_shield_doctrine_tab = {
 MDL_holy_war_tab = {
   MDL_support_CES = {
     cost = 10
+    icon = eng_trade_unions_support
     fire_only_once = yes
     visible = {
       CES = {
@@ -208,13 +228,12 @@ MDL_holy_war_tab = {
         NOT = { has_completed_focus = CES_solar_1_1 }
       }
     }
-    available = {
-      has_war = no
-    }
+    available = { has_war = no }
     complete_effect = {
       CES = { country_event = { id = manedalusia.120 days = 1 } }
     }
   }
+
   MDL_seize_summer_islands = {
     icon = GFX_decision_infiltrate_state
     available = {
@@ -236,12 +255,152 @@ MDL_holy_war_tab = {
         EQS = { owns_state = 1195 }
         NLR = { owns_state = 1195 }
       }
+      OR = {
+        owns_state = 1193
+        owns_state = 1196
+      }
     }
     complete_effect = {
       1195 = {
         owner = { country_event = manedalusia.119 }
       }
       MDL = { transfer_state = 1195 }
+    }
+  }
+
+  MDL_operation_sundown = {
+    icon = crossed_swords
+    visible = {
+      BSG = { is_subject_of = ROOT }
+      EQC = {
+        OR = {
+          is_in_faction_with = EQS
+          is_in_faction_with = NLR
+        }
+      }
+    }
+    available = { has_war = no }
+    fire_only_once = yes
+    cost = 10
+    days_remove = 30
+    remove_effect = {
+      hidden_effect = { set_country_flag = MDL_can_peaceout_new_mareland }
+      declare_war_on = {
+        type = annex_country
+        target = EQC
+      }
+    }
+  }
+
+  MDL_peaceout_new_mareland = {
+    icon = GFX_decision_infiltrate_state
+    visible = {
+      has_country_flag = MDL_can_peaceout_new_mareland
+      OR = {
+        has_war_with = EQS
+        has_war_with = NLR
+        has_war_with = CHN
+      }
+    }
+    fire_only_once = yes
+    cost = 0
+    available = {
+      EQC = {
+        every_owned_state = { is_fully_controlled_by = ROOT }
+        has_capitulated = yes
+      }
+    }
+    complete_effect = {
+      hidden_effect = { clr_country_flag = MDL_can_peaceout_new_mareland }
+      every_other_country = {
+        limit = { is_in_faction_with = EQC }
+        if = {
+          limit = { is_subject_of = EQC }
+          annex_country = { target = THIS }
+        }
+        if = {
+          limit = {
+            MDL = { NOT = { has_country_flag = MDL_can_peaceout_in_starry_sea } }
+          }
+          white_peace = ROOT
+        }
+      }
+    }
+  }
+
+  MDL_peaceout_starry_sea = {
+    icon = GFX_decision_infiltrate_state
+    visible = {
+      has_completed_focus = MDL_expand_junnah_doctrine
+      has_country_flag = MDL_can_peaceout_in_starry_sea
+      OR = {
+        has_war_with = EQS
+        has_war_with = NLR
+      }
+    }
+    fire_only_once = yes
+    cost = 0
+    available = {
+      1193 = { is_fully_controlled_by = ROOT }
+      1194 = { is_fully_controlled_by = ROOT }
+      PCB = { has_capitulated = yes }
+    }
+    complete_effect = {
+      hidden_effect = { clr_country_flag = MDL_can_peaceout_in_starry_sea }
+      every_other_country = {
+        limit = { is_in_faction_with = PCB}
+        if = {
+          limit = { is_subject_of = PCB }
+          annex_country = { target = THIS }
+        }
+        if = {
+          limit = {
+            MDL = { NOT = { has_country_flag = MDL_can_peaceout_new_mareland } }
+          }
+          white_peace = ROOT
+        }
+      }
+      annex_country = { target = PCB }
+    }
+  }
+
+  MDL_starry_sea_mil_gov = {
+    icon = jachs_drawer
+    fire_only_once = yes
+    cost = 25
+
+    cancel_trigger = {
+      country_exists = FROM
+    }
+
+    targets = { DRG PCB MER EQC }
+    targets_dynamic = yes
+    target_non_existing = yes
+    target_trigger = {
+      FROM = {
+        OR = {
+          original_tag = DRG
+          original_tag = PCB
+          original_tag = MER
+          original_tag = EQC
+        }
+      }
+    }
+
+    visible = {
+      NOT = { country_exists = FROM }
+      any_occupied_country = { tag = FROM }
+    }
+    complete_effect = {
+      every_owned_state = {
+        limit = {
+          is_core_of = FROM
+          NOT = {
+            has_dynamic_modifier = { modifier = MDL_military_governorate }
+          }
+        }
+        add_dynamic_modifier = { modifier = MDL_military_governorate }
+      }
     }
   }
 }

@@ -36,6 +36,7 @@ focus_tree = {
   shared_focus = MDL_air_stuff
   #SPECIAL
   shared_focus = MDL_sun_madness
+  shared_focus = MDL_CES_victory
 }
 
 focus_tree = {
@@ -5043,7 +5044,7 @@ shared_focus = {
   icon = GFX_goal_generic_political
   x = 10
   y = 0
-  cost = 3
+  cost = 4
 
   allow_branch = {
     if = {
@@ -5113,6 +5114,7 @@ shared_focus = {
 
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_all_is_not_lost"
+    country_event = manedalusia.123
     custom_effect_tooltip = MDL_all_is_not_lost_tt
     swap_ideas = {
       remove_idea = MDL_holy_zeal_2
@@ -5126,7 +5128,7 @@ shared_focus = {
   icon = GFX_goal_generic_political
   x = 1
   y = 2
-  cost = 3
+  cost = 4
   relative_position_id = MDL_our_purpose_made_clear
   prerequisite = { focus = MDL_our_purpose_made_clear }
   completion_reward = {
@@ -5145,7 +5147,7 @@ shared_focus = {
   icon = GFX_goal_generic_political
   x = -1
   y = 2
-  cost = 3
+  cost = 4
   relative_position_id = MDL_our_purpose_made_clear
   prerequisite = { focus = MDL_our_purpose_made_clear }
   completion_reward = {
@@ -5204,7 +5206,7 @@ shared_focus = {
   icon = GFX_goal_generic_political
   x = 0
   y = 2
-  cost = 3
+  cost = 4
   relative_position_id = MDL_all_is_not_lost
   prerequisite = { focus = MDL_rally_the_faithful }
   prerequisite = { focus = MDL_fortress_manedalusia }
@@ -5222,7 +5224,7 @@ shared_focus = {
   icon = GFX_goal_generic_political
   x = -2
   y = 1
-  cost = 3
+  cost = 4
   relative_position_id = MDL_our_purpose_made_clear
 
   available = {
@@ -5258,7 +5260,7 @@ shared_focus = {
   icon = GFX_goal_generic_political
   x = 2
   y = 1
-  cost = 3
+  cost = 4
   relative_position_id = MDL_our_purpose_made_clear
   prerequisite = { focus = MDL_our_purpose_made_clear }
   bypass = {
@@ -5282,7 +5284,7 @@ shared_focus = {
 shared_focus = {
   id = MDL_speartip_of_harmony
   icon = GFX_goal_generic_political
-  cost = 3
+  cost = 4
   x = -1
   y = 1
   relative_position_id = MDL_holy_mandates
@@ -5307,7 +5309,7 @@ shared_focus = {
   icon = GFX_goal_generic_political
   x = 1
   y = 1
-  cost = 3
+  cost = 4
   relative_position_id = MDL_secure_klugetown
   prerequisite = { focus = MDL_secure_klugetown }
   available = {
@@ -5315,6 +5317,7 @@ shared_focus = {
   }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_forges_of_klugetown"
+    KLG = { retire_character = KLG_verko }
     1208 = {
       add_manpower = -5000
       add_core_of = ROOT
@@ -5346,21 +5349,29 @@ shared_focus = {
   icon = GFX_goal_generic_political
   x = -1
   y = 1
-  cost = 3
+  cost = 4
+  
+  relative_position_id = MDL_fortress_manedalusia
   available = {
     BSG = { is_subject_of = ROOT }
   }
-  relative_position_id = MDL_fortress_manedalusia
   prerequisite = {
     focus = MDL_fortress_manedalusia
     focus = MDL_speartip_of_harmony
   }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_secure_starry_sea_islands"
+    custom_effect_tooltip = MDL_secure_starry_sea_islands_tt
     hidden_effect = {
       if = {
         limit = { has_country_flag = MDL_holy_war_BAT }
         clr_country_flag = MDL_holy_war_BAT
+      }
+      if = {
+        limit = {
+          PCB = { is_in_faction = yes }
+        }
+        set_country_flag = MDL_can_peaceout_in_starry_sea
       }
     }
 
@@ -5389,8 +5400,8 @@ shared_focus = {
   id = MDL_holy_mandate_BAT
   icon = GFX_goal_generic_political
   x = 0
-  y = 2
-  cost = 3
+  y = 1
+  cost = 4
   relative_position_id = MDL_strike_thralls_of_darkness
   available = {
     has_completed_focus = MDL_holy_mandates
@@ -5411,15 +5422,16 @@ shared_focus = {
   icon = GFX_goal_generic_political
   x = 1
   y = 1
-  cost = 3
+  cost = 4
   relative_position_id = MDL_rally_the_faithful
-  available = {
-    BSG = { is_subject_of = ROOT }
-  }
+
   bypass = {
     ASS = { exists = no }
     ANS = { exists = no }
     YMN = { exists = no }
+  }
+  available = {
+    BSG = { is_subject_of = ROOT }
   }
   prerequisite = {
     focus = MDL_rally_the_faithful
@@ -5449,6 +5461,32 @@ shared_focus = {
         target = YMN
       }
     }
+  }
+}
+
+shared_focus = {
+  id = MDL_CES_victory
+  icon = GFX_goal_generic_political
+  x = 0
+  y = 1
+  relative_position_id = MDL_holy_mandate_BAT
+  
+  allow_branch = {
+    if = {
+      NOT = { has_country_flag = MDL_holy_war_last_stand }
+      NOT = { has_country_flag = MDL_sunmad }
+      has_country_flag = MDL_holy_war_active
+    }
+  }
+
+  available = {
+    CES = {
+      has_government = democratic
+      owns_state = 3
+    }
+  }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_CES_victory"
   }
 }
 
