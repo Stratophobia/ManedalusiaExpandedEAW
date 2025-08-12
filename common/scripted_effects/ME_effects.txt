@@ -152,6 +152,12 @@ MDL_reduce_sun_madness = {
 MDL_holy_war_autodo_military_focuses = {
   if = {
     limit = {
+      NOT = { has_completed_focus = MDL_army_stuff }
+    }
+    complete_national_focus = MDL_army_stuff
+  }
+  if = {
+    limit = {
       NOT = { has_completed_focus = MDL_go_with_samira }
     }
     complete_national_focus = MDL_go_with_samira

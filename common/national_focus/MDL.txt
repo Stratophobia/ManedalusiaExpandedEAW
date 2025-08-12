@@ -2197,6 +2197,8 @@ shared_focus = {
 				instant_build = yes
 			}
 		}
+
+    decrease_poverty = yes
 	}
   search_filters = { FOCUS_FILTER_INDUSTRY }
 }
@@ -5041,10 +5043,10 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_our_purpose_made_clear
-  icon = GFX_goal_generic_political
+  icon = GFX_MDL_our_purpose_made_clear
   x = 10
   y = 0
-  cost = 4
+  cost = 5
 
   allow_branch = {
     if = {
@@ -5057,7 +5059,7 @@ shared_focus = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_our_purpose_made_clear"
     add_country_leader_trait = MDL_samira_lady_commander
 
-    create_faction = MDL_GUARDIANSHIP
+    create_faction = MDL_JUNNAH
     custom_effect_tooltip = MDL_our_purpose_made_clear_tt
     custom_effect_tooltip = MDL_remove_tradelaw_econ_cost_tt
     if = {
@@ -5101,11 +5103,11 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_all_is_not_lost
-  icon = GFX_goal_generic_political
+  icon = GFX_MDL_all_is_not_lost
   x = 0
   y = 1
   relative_position_id = MDL_our_purpose_made_clear
-  cost = 1
+  cost = 5
   prerequisite = { focus = MDL_our_purpose_made_clear }
 
   available = {
@@ -5114,40 +5116,40 @@ shared_focus = {
 
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_all_is_not_lost"
-    country_event = manedalusia.123
     custom_effect_tooltip = MDL_all_is_not_lost_tt
-    swap_ideas = {
-      remove_idea = MDL_holy_zeal_2
-      add_idea = MDL_holy_fury
-    }
+    country_event = manedalusia.123
   }
 }
 
 shared_focus = {
   id = MDL_rally_the_faithful
-  icon = GFX_goal_generic_political
+  icon = GFX_MDL_rally_the_faithful
   x = 1
   y = 2
-  cost = 4
+  cost = 5
   relative_position_id = MDL_our_purpose_made_clear
   prerequisite = { focus = MDL_our_purpose_made_clear }
   completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_rally_the_faithful"
+
     custom_effect_tooltip = MDL_rally_the_faithful_tt
     custom_effect_tooltip = MDL_spawn_koltaliba_divs_tt
-    hidden_effect = { load_oob = "MDL_koltaliba" }
+    hidden_effect = {
+      set_technology = 1842
+      load_oob = "MDL_koltaliba"
+    }
     set_variable = { MDL_mobilization_var = 0 }
     add_ideas = extensive_conscription
     add_ideas = MDL_rally_the_faithful_1
-    log = "[GetDateText]: [Root.GetName]: Focus MDL_rally_the_faithful"
   }
 }
 
 shared_focus = {
   id = MDL_fortress_manedalusia
-  icon = GFX_goal_generic_political
+  icon = GFX_MDL_fortress_manedalusia
   x = -1
   y = 2
-  cost = 4
+  cost = 5
   relative_position_id = MDL_our_purpose_made_clear
   prerequisite = { focus = MDL_our_purpose_made_clear }
   completion_reward = {
@@ -5164,6 +5166,12 @@ shared_focus = {
         instant_build = yes
       }
       add_building_construction = {
+				type = naval_base
+				level = 1
+        province = 10143
+				instant_build = yes
+			}
+      add_building_construction = {
         type = coastal_bunker
         level = 2
         province = 12234
@@ -5177,6 +5185,12 @@ shared_focus = {
         level = 1
         instant_build = yes
       }
+      add_building_construction = {
+				type = naval_base
+				level = 1
+        province = 12234
+				instant_build = yes
+			}
       add_building_construction = {
         type = coastal_bunker
         level = 2
@@ -5197,16 +5211,22 @@ shared_focus = {
         province = 7512
         instant_build = yes
       }
+      add_building_construction = {
+				type = naval_base
+				level = 1
+        province = 7512
+				instant_build = yes
+			}
     }
   }
 }
 
 shared_focus = {
   id = MDL_strike_thralls_of_darkness
-  icon = GFX_goal_generic_political
+  icon = GFX_MDL_strike_thralls_of_darkness
   x = 0
   y = 2
-  cost = 4
+  cost = 5
   relative_position_id = MDL_all_is_not_lost
   prerequisite = { focus = MDL_rally_the_faithful }
   prerequisite = { focus = MDL_fortress_manedalusia }
@@ -5221,10 +5241,10 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_holy_mandates
-  icon = GFX_goal_generic_political
+  icon = GFX_MDL_holy_mandates
   x = -2
   y = 1
-  cost = 4
+  cost = 5
   relative_position_id = MDL_our_purpose_made_clear
 
   available = {
@@ -5257,10 +5277,10 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_secure_klugetown
-  icon = GFX_goal_generic_political
+  icon = GFX_MDL_secure_klugetown
   x = 2
   y = 1
-  cost = 4
+  cost = 5
   relative_position_id = MDL_our_purpose_made_clear
   prerequisite = { focus = MDL_our_purpose_made_clear }
   bypass = {
@@ -5283,8 +5303,8 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_speartip_of_harmony
-  icon = GFX_goal_generic_political
-  cost = 4
+  icon = GFX_MDL_speartip_of_harmony
+  cost = 5
   x = -1
   y = 1
   relative_position_id = MDL_holy_mandates
@@ -5306,10 +5326,10 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_forges_of_klugetown
-  icon = GFX_goal_generic_political
+  icon = GFX_MDL_forges_of_klugetown
   x = 1
   y = 1
-  cost = 4
+  cost = 5
   relative_position_id = MDL_secure_klugetown
   prerequisite = { focus = MDL_secure_klugetown }
   available = {
@@ -5346,22 +5366,25 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_secure_starry_sea_islands
-  icon = GFX_goal_generic_political
+  icon = GFX_MDL_secure_starry_sea_islands
   x = -1
   y = 1
-  cost = 4
+  cost = 5
   
   relative_position_id = MDL_fortress_manedalusia
   available = {
     BSG = { is_subject_of = ROOT }
   }
-  prerequisite = {
-    focus = MDL_fortress_manedalusia
-    focus = MDL_speartip_of_harmony
-  }
+  prerequisite = { focus = MDL_fortress_manedalusia }
+  prerequisite = { focus = MDL_speartip_of_harmony }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_secure_starry_sea_islands"
-    custom_effect_tooltip = MDL_secure_starry_sea_islands_tt
+    if = {
+      limit = {
+        PCB = { is_in_faction = yes }
+      }
+      custom_effect_tooltip = MDL_secure_starry_sea_islands_tt
+    }
     hidden_effect = {
       if = {
         limit = { has_country_flag = MDL_holy_war_BAT }
@@ -5398,10 +5421,10 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_holy_mandate_BAT
-  icon = GFX_goal_generic_political
+  icon = GFX_MDL_holy_mandate_BAT
   x = 0
   y = 1
-  cost = 4
+  cost = 5
   relative_position_id = MDL_strike_thralls_of_darkness
   available = {
     has_completed_focus = MDL_holy_mandates
@@ -5419,10 +5442,10 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_expand_junnah_doctrine
-  icon = GFX_goal_generic_political
+  icon = GFX_MDL_expand_junnah_doctrine
   x = 1
   y = 1
-  cost = 4
+  cost = 5
   relative_position_id = MDL_rally_the_faithful
 
   bypass = {
@@ -5433,10 +5456,8 @@ shared_focus = {
   available = {
     BSG = { is_subject_of = ROOT }
   }
-  prerequisite = {
-    focus = MDL_rally_the_faithful
-    focus = MDL_forges_of_klugetown
-  }
+  prerequisite = { focus = MDL_rally_the_faithful }
+  prerequisite = { focus = MDL_forges_of_klugetown }
 
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_expand_junnah_doctrine"
@@ -5465,10 +5486,153 @@ shared_focus = {
 }
 
 shared_focus = {
+  id = MDL_abyssinian_auxilliaries
+  icon = GFX_MDL_abyssinian_auxilliaries
+  cost = 5
+  x = 1
+  y = 1
+  relative_position_id = MDL_expand_junnah_doctrine
+  prerequisite = { focus = MDL_expand_junnah_doctrine }
+  available = {
+    ABY = { is_subject_of = ROOT }
+  }
+  completion_reward = {
+     log = "[GetDateText]: [Root.GetName]: Focus MDL_abyssinian_auxilliaries"
+     add_manpower = 15000
+     add_ideas = MDL_aby_aux_idea
+
+    add_tech_bonus = {
+      name = MDL_abyssinian_auxilliaries
+      bonus = 0.50
+      uses = 1
+      category = recon_tech
+    }
+  }
+}
+
+shared_focus = {
+  id = MDL_leverage_klugetown_airfield
+  icon = GFX_MDL_leverage_klugetown_airfield
+  cost = 5
+  x = 0
+  y = 2
+  relative_position_id = MDL_expand_junnah_doctrine
+  prerequisite = { focus = MDL_expand_junnah_doctrine }
+
+  available = {
+    has_completed_focus = MDL_air_stuff
+    1208 = { is_owned_and_controlled_by = ROOT }
+  }
+
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_leverage_klugetown_airfield"
+    add_ideas = MDL_klugepilled
+    if = {
+			limit = {
+				has_dlc = "By Blood Alone"
+			}
+			add_tech_bonus = {
+				name = MDL_leverage_klugetown_airfield
+				bonus = 0.5
+				uses = 1
+				category = light_air
+			}
+			add_tech_bonus = {
+				name = MDL_leverage_klugetown_airfield
+				bonus = 0.5
+				uses = 1
+				category = cat_air_guns
+			}
+			add_tech_bonus = {
+				name = MDL_leverage_klugetown_airfield
+				bonus = 0.5
+				uses = 1
+				category = cat_air_engine
+			}
+		}
+    else = {
+      add_tech_bonus = {
+			  name = MDL_leverage_klugetown_airfield
+			  bonus = 0.25
+			  uses = 1
+			  category = tactical_bomber
+		  }
+		  add_tech_bonus = {
+			  name = MDL_death_from_above
+			  bonus = 0.25
+			  uses = 1
+			  category = cas_bomber
+		  }
+    }
+  }
+}
+
+shared_focus = {
+  id = MDL_starry_sea_corridor
+  icon = GFX_MDL_starry_sea_corridor
+  x = 0
+  y = 2
+  cost = 5
+  relative_position_id = MDL_secure_starry_sea_islands
+  prerequisite = { focus = MDL_secure_starry_sea_islands }
+
+  available = {
+    1196 = { is_owned_and_controlled_by = ROOT }
+    1195 = { is_owned_and_controlled_by = ROOT }
+    1193 = { is_owned_and_controlled_by = ROOT }
+    7 = { is_owned_and_controlled_by = ROOT }
+  }
+
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_starry_sea_corridor"
+    add_ideas = MDL_starry_sea_corridor_idea
+  }
+}
+
+shared_focus = {
+  id = MDL_dragon_assault_corps
+  icon = GFX_MDL_dragon_assault_corps
+  x = -1
+  y = 1
+  cost = 5
+  relative_position_id = MDL_secure_starry_sea_islands
+  prerequisite = { focus = MDL_secure_starry_sea_islands }
+
+  available = {
+    OR = {
+      7 = { is_owned_and_controlled_by = ROOT }
+      DRG = { is_subject_of = ROOT }
+    }
+  }
+
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_dragon_assault_corps"
+    custom_effect_tooltip = MDL_dragon_assault_corps_tt
+    add_equipment_to_stockpile = {
+			type = dragon_equipment_0
+			amount = 300
+			producer = DRG
+		}
+    hidden_effect = {
+      set_technology = {
+        popup = no
+        dragons_light = 1
+      }
+      load_oob = "MDL_dragon_assault"
+			set_technology = {
+				popup = no
+				dragons_light = 0 
+			}
+			fix_weapon_techs = yes
+    }
+  }
+}
+shared_focus = {
   id = MDL_CES_victory
-  icon = GFX_goal_generic_political
+  icon = GFX_MDL_CES_victory
   x = 0
   y = 1
+  cost = 5
   relative_position_id = MDL_holy_mandate_BAT
   
   allow_branch = {
@@ -5483,6 +5647,13 @@ shared_focus = {
     CES = {
       has_government = democratic
       owns_state = 3
+    }
+    NLR = { exists = no }
+    EQS = {
+      OR = {
+        exists = no
+        has_government = democratic
+      }
     }
   }
   completion_reward = {

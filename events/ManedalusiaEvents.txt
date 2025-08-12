@@ -2389,6 +2389,19 @@
         }
         mark_focus_tree_layout_dirty = yes
 
+        every_other_country = {
+          limit = {
+            exists = yes
+            OR = {
+              is_in_faction_with = EQC
+              is_in_faction_with = NLR
+            }
+          }
+          add_opinion_modifier = {
+            target = THIS
+            modifier = MDL_BAT_savages_opinion
+          }
+        }
         if = {
           limit = { NLR = exists = yes }
           add_opinion_modifier = {
@@ -2400,10 +2413,7 @@
           target = EQS
           modifier = MDL_djinn_opinion
         }
-        add_opinion_modifier = {
-          target = BAT
-          modifier = MDL_BAT_savages_opinion
-        }
+        
         MDL_holy_war_autodo_military_focuses = yes
       }
       set_cosmetic_tag = MDL_crusader
@@ -3144,6 +3154,17 @@
 
     option = {
       name = manedalusia.123.a
+      swap_ideas = {
+        remove_idea = MDL_holy_zeal_2
+        add_idea = MDL_holy_fury
+      }
+      hidden_effect = {
+        set_country_flag = MDL_holy_war_last_stand
+        load_focus_tree = {
+          tree = manedalusia_main
+          keep_completed = yes
+        }
+      }
     }
   }
 

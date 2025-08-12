@@ -284,6 +284,7 @@ MDL_holy_war_tab = {
     cost = 10
     days_remove = 30
     remove_effect = {
+      custom_effect_tooltip = MDL_operation_sundown_tt
       hidden_effect = { set_country_flag = MDL_can_peaceout_new_mareland }
       declare_war_on = {
         type = annex_country
@@ -1609,7 +1610,7 @@ MDL_puppet_RIV = {
   MDL_transfer_to_FAT = {
     icon = jachs_drawer
     cost = 0
-    targets = { VED HAU SRS NTR MNC  }
+    targets = { VED HAU SRS NTR MNC DED HLR}
     visible = {
       has_country_flag = MDL_imperium_decisions_unlocked
       has_country_flag = MDL_imperium_restored
@@ -1627,6 +1628,8 @@ MDL_puppet_RIV = {
               original_tag = SRS
               original_tag = NTR
               original_tag = MNC
+              original_tag = DED
+              original_tag = HLR
             }
           }
 		}
@@ -2043,7 +2046,7 @@ MDL_puppet_RIV = {
         NOT = { country_exists = FROM }
       }
     }
-    targets = { FAT VED SRS HAU NTR MNC }
+    targets = { FAT VED SRS HAU NTR MNC DED HLR }
     targets_dynamic = yes
     target_non_existing = no
     target_trigger = {
@@ -2055,6 +2058,8 @@ MDL_puppet_RIV = {
           original_tag = HAU
           original_tag = NTR
           original_tag = MNC
+          original_tag = DED
+          original_tag = HLR
 				}
 			}
 		}

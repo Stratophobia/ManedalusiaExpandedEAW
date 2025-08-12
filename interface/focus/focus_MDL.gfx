@@ -1,5 +1,73 @@
 spriteTypes = {
   SpriteType = {
+    name = "GFX_MDL_all_is_not_lost"
+    textureFile = "gfx/interface/goals/MDL/MDL_all_is_not_lost.tga"
+  }
+  SpriteType = {
+    name = "GFX_MDL_starry_sea_corridor"
+    textureFile = "gfx/interface/goals/MDL/MDL_starry_sea_corridor.tga"
+  }
+  SpriteType = {
+    name = "GFX_MDL_secure_starry_sea_islands"
+    textureFile = "gfx/interface/goals/MDL/MDL_secure_starry_sea_islands.tga"
+  }
+  SpriteType = {
+    name = "GFX_MDL_our_purpose_made_clear"
+    textureFile = "gfx/interface/goals/MDL/MDL_our_purpose_made_clear.tga"
+  }
+  SpriteType = {
+    name = "GFX_MDL_holy_mandate_BAT"
+    textureFile = "gfx/interface/goals/MDL/MDL_holy_mandate_BAT.tga"
+  }
+  SpriteType = {
+    name = "GFX_MDL_expand_junnah_doctrine"
+    textureFile = "gfx/interface/goals/MDL/MDL_expand_junnah_doctrine.tga"
+  }
+  SpriteType = {
+    name = "GFX_MDL_CES_victory"
+    textureFile = "gfx/interface/goals/MDL/MDL_CES_victory.tga"
+  }
+  SpriteType = {
+    name = "GFX_MDL_abyssinian_auxilliaries"
+    textureFile = "gfx/interface/goals/MDL/MDL_abyssinian_auxilliaries.tga"
+  }
+  SpriteType = {
+    name = "GFX_MDL_forges_of_klugetown"
+    textureFile = "gfx/interface/goals/MDL/MDL_forges_of_klugetown.tga"
+  }
+  SpriteType = {
+    name = "GFX_MDL_fortress_manedalusia"
+    textureFile = "gfx/interface/goals/MDL/MDL_fortress_manedalusia.tga"
+  }
+  SpriteType = {
+    name = "GFX_MDL_leverage_klugetown_airfield"
+    textureFile = "gfx/interface/goals/MDL/MDL_leverage_klugetown_airfield.tga"
+  }
+  SpriteType = {
+    name = "GFX_MDL_dragon_assault_corps"
+    textureFile = "gfx/interface/goals/MDL/MDL_dragon_assault_corps.tga"
+  }
+  SpriteType = {
+    name = "GFX_MDL_holy_mandates"
+    textureFile = "gfx/interface/goals/MDL/MDL_holy_mandates.tga"
+  }
+  SpriteType = {
+    name = "GFX_MDL_rally_the_faithful"
+    textureFile = "gfx/interface/goals/MDL/MDL_rally_the_faithful.tga"
+  }
+  SpriteType = {
+    name = "GFX_MDL_secure_klugetown"
+    textureFile = "gfx/interface/goals/MDL/MDL_secure_klugetown.tga"
+  }
+  SpriteType = {
+    name = "GFX_MDL_speartip_of_harmony"
+    textureFile = "gfx/interface/goals/MDL/MDL_speartip_of_harmony.tga"
+  }
+  SpriteType = {
+    name = "GFX_MDL_strike_thralls_of_darkness"
+    textureFile = "gfx/interface/goals/MDL/MDL_strike_thralls_of_darkness.tga"
+  }
+  SpriteType = {
     name = "GFX_MDL_lean_on_legacy"
     textureFile = "gfx/interface/goals/MDL/MDL_lean_on_legacy.tga"
   }

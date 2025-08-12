@@ -1,5 +1,21 @@
 spriteTypes = {
   SpriteType = {
+    name = "GFX_idea_MDL_abyssinian_auxilliaries"
+    texturefile = "gfx/interface/ideas/MDL/MDL_abyssinian_auxilliaries.tga"
+  }
+  SpriteType = {
+    name = "GFX_idea_MDL_klugepilled"
+    texturefile = "gfx/interface/ideas/MDL/MDL_klugepilled.tga"
+  }
+  SpriteType = {
+    name = "GFX_idea_MDL_rally_the_faithful"
+    texturefile = "gfx/interface/ideas/MDL/MDL_rally_the_faithful.tga"
+  }
+  SpriteType = {
+    name = "GFX_idea_MDL_expeditionary_corps"
+    texturefile = "gfx/interface/ideas/MDL/MDL_expeditionary_corps.tga"
+  }
+  SpriteType = {
     name = "GFX_idea_MDL_never_slaves_again"
     texturefile = "gfx/interface/ideas/MDL/MDL_never_slaves_again.tga"
   }
