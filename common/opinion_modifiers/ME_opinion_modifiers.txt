@@ -14,4 +14,6 @@ opinion_modifiers = {
   MDL_BAT_savages_opinion = { value = -75 trade = no }
   MDL_liberty_beacon = { value = 50 trade = yes }
   MDL_consulate = { value = 50 trade = yes }
+  MDL_holy_shield_ally = { value = 85 trade = yes }
+  MDL_mutual_recognition = { value = 50 trade = yes }
 }

@@ -3178,7 +3178,10 @@
       name = manedalusia.124.a
       ai_chance = { base = 50 }
       add_political_power = 100
-      add_ideas = MDL_WNG_katren_accord_1
+      add_timed_idea = {
+        idea = MDL_WNG_katren_accord_1
+        days = 250
+      } 
       diplomatic_relation = { 
 	      country = MDL
 	      relation = non_aggression_pact 
@@ -3189,7 +3192,10 @@
     option = {
       name = manedalusia.124.b
       ai_chance = { base = 50 }
-      add_ideas = MDL_WNG_katren_accord_2
+      add_timed_idea = {
+        idea = MDL_WNG_katren_accord_2
+        days = 250
+      }
       diplomatic_relation = { 
 	      country = MDL
 	      relation = non_aggression_pact 
@@ -3231,4 +3237,52 @@
     is_triggered_only = yes
 
     option = { name = manedalusia.127.a }
+  }
+
+  country_event = {#SDS diplo event
+    id = manedalusia.128
+    title = manedalusia.128.t
+    desc = manedalusia.128.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.128.a
+      ai_chance = { base = 95 }
+
+      diplomatic_relation = { 
+	      country = MDL
+	      relation = non_aggression_pact 
+      }
+      add_opinion_modifier = { target = MDL modifier = MDL_mutual_recognition }
+      MDL = { country_event = manedalusia.129 }
+    }
+
+    option = {
+      name = manedalusia.128.b
+      ai_chance = { base = 5 }
+      MDL = { country_event = manedalusia.130 }
+    }
+  }
+
+  country_event = {#SDS yay
+    id = manedalusia.129
+    title = manedalusia.129.t
+    desc = manedalusia.129.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.129.a
+      add_opinion_modifier = { target = SDS modifier = MDL_mutual_recognition }
+    }
+  }
+
+  country_event = {#SDS nay
+    id = manedalusia.130
+    title = manedalusia.130.t
+    desc = manedalusia.130.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.130.a
+    }
   }

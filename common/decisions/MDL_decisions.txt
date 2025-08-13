@@ -132,6 +132,25 @@ MDL_shield_doctrine_tab = {
       }
     }
   }
+
+  MDL_recognize_SDS = {
+    visible = {
+      SDS = {
+        exists = yes
+        is_subject = no
+        has_government = democratic
+      }
+    }
+    cost = 30
+    fire_only_once = yes
+    available = {
+      has_war = no
+    }
+    complete_effect = {
+      SDS = { country_event = { id = manedalusia.128 days = 2 } }
+    }
+  }
+
   MDL_katren_accord = {
     visible = {
       WNG = {
@@ -220,8 +239,8 @@ MDL_holy_war_tab = {
   MDL_support_CES = {
     cost = 10
     icon = eng_trade_unions_support
-    fire_only_once = yes
     visible = {
+      NOT = { has_guaranteed = CES }
       CES = {
         exists = yes
         has_government = democratic
@@ -265,6 +284,37 @@ MDL_holy_war_tab = {
         owner = { country_event = manedalusia.119 }
       }
       MDL = { transfer_state = 1195 }
+    }
+  }
+
+  MDL_befriend_breakaway = {
+    fire_only_once = yes
+    cost = 25
+
+    cancel_trigger = {
+      NOT = { country_exists = FROM }
+      has_war_with = FROM
+    }
+
+    targets = { LSP SCS STG }
+    targets_dynamic = yes
+    target_non_existing = no
+    target_trigger = {
+      FROM = {
+        OR = {
+          original_tag = LSP
+          original_tag = SCS
+          original_tag = STG
+        }
+      }
+    }
+
+    visible = {
+      country_exists = FROM
+    }
+    complete_effect = {
+      add_opinion_modifier = { target = FROM modifier = MDL_holy_shield_ally }
+      FROM = { add_opinion_modifier = { target = MDL modifier = MDL_holy_shield_ally } }
     }
   }
 
