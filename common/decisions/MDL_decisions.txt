@@ -134,6 +134,7 @@ MDL_shield_doctrine_tab = {
   }
 
   MDL_recognize_SDS = {
+    icon = eng_trade_unions_support
     visible = {
       SDS = {
         exists = yes
@@ -289,8 +290,10 @@ MDL_holy_war_tab = {
 
   MDL_befriend_breakaway = {
     fire_only_once = yes
-    cost = 25
-
+    cost = 75
+    visible = {
+      has_completed_focus = MDL_secure_starry_sea_islands
+    }
     cancel_trigger = {
       NOT = { country_exists = FROM }
       has_war_with = FROM
@@ -459,36 +462,28 @@ MDL_holy_war_tab = {
 MDL_republican_war_decisions_tab = {
   MDL_recruit_new_soldiers = {
     icon = helmet
+    allowed = { original_tag = MDL }
     visible = { has_country_flag = MDL_federal_army_unlocked }
-    available = {
-      hidden_trigger = { command_power > 19 }
-    }
-    custom_cost_trigger = {
-      check_variable = {
-        var = command_power
-        value = 20
-        compare = greater_than_or_equals
-      }
-    }
-    custom_cost_text = decision_cost_CP_20
-    
-    days_remove = 30
+    available = { always = no }
 
-    complete_effect = {
-      hidden_effect = { add_command_power = -20 }
-    }
-    remove_effect = {
+    days_mission_timeout = 30
+
+    is_good = yes
+
+    activation = { has_country_flag = MDL_federal_army_unlocked }
+
+    timeout_effect = {
       if = {
         limit = { has_country_flag = MDL_FA_recruit_1 }
         add_manpower = 3000
       }
       if = {
         limit = { has_country_flag = MDL_FA_recruit_2 }
-        add_manpower = 5000
+        add_manpower = 4500
       }
       if = {
         limit = { has_country_flag = MDL_FA_recruit_3 }
-        add_manpower = 8000
+        add_manpower = 6000
       }
     }
   }

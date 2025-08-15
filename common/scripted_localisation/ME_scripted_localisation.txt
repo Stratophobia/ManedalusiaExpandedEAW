@@ -1,21 +1,4 @@
 defined_text = { # Country
-	name = GetDecisionCostCP20
-	text = {
-		trigger = {
-			check_variable = {
-				var = command_power
-				value = 20
-				compare = greater_than_or_equals
-			}
-		}
-		localization_key = decision_cost_CP_20
-	}
-	text = {
-		localization_key = decision_cost_CP_20_blocked
-	}
-}
-
-defined_text = { # Country
 	name = GetDecisionCostCP25AXP25
 	text = {
 		trigger = {

@@ -3272,7 +3272,10 @@
 
     option = {
       name = manedalusia.129.a
-      add_opinion_modifier = { target = SDS modifier = MDL_mutual_recognition }
+      add_opinion_modifier = {
+        target = SDS
+        modifier = MDL_mutual_recognition
+      }
     }
   }
 
@@ -3284,5 +3287,54 @@
 
     option = {
       name = manedalusia.130.a
+    }
+  }
+
+  country_event = {#holy war CES victory end
+    id = manedalusia.131
+    title = manedalusia.131.t
+    desc = manedalusia.131.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.131.a
+      drop_cosmetic_tag = yes
+      custom_effect_tooltip = MDL_game_end_tt
+    }
+  }
+
+  country_event = {#Samira returns power to Qamar
+    id = manedalusia.132
+    title = manedalusia.132.t
+    desc = manedalusia.132.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.132.a
+      promote_character = MDL_velvet_qamar
+      set_party_name = {
+        ideology = democratic
+        long_name =MDL_democratic_party_long
+        name = MDL_democratic_party
+      }
+    }
+  }
+
+  country_event = {#letter to mount aris
+    id = manedalusia.133
+    title = manedalusia.133.t
+    desc = manedalusia.133.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.133.a
+      add_political_power = -100
+    }
+    option = {
+      name = manedalusia.133.b
+      add_political_power = -50
+    }
+    option = {
+      name = manedalusia.133.c
     }
   }

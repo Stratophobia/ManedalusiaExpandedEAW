@@ -4136,6 +4136,7 @@ shared_focus = {
           OR = {
             has_government = democratic
             has_country_leader_ideology = republicanism
+            has_country_leader_ideology = conservative_liberalism
           }
           NOT = { is_subject_of = ROOT }
           NOT = { has_war_with = ROOT }
@@ -5420,9 +5421,26 @@ shared_focus = {
 }
 
 shared_focus = {
+  id = MDL_ask_HIP_for_help
+  icon = GFX_MDL_ask_HIP_for_help
+  x = -1
+  y = 1
+  relative_position_id = MDL_strike_thralls_of_darkness
+
+  available = {
+    HIP = { has_government = democratic }
+  }
+  prerequisite = { focus = MDL_strike_thralls_of_darkness }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_ask_HIP_for_help"
+    HIP = { country_event = { id = manedalusia.133 days = 2 } }
+  }
+}
+
+shared_focus = {
   id = MDL_holy_mandate_BAT
   icon = GFX_MDL_holy_mandate_BAT
-  x = 0
+  x = 1
   y = 1
   cost = 5
   relative_position_id = MDL_strike_thralls_of_darkness
@@ -5608,6 +5626,20 @@ shared_focus = {
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_dragon_assault_corps"
     custom_effect_tooltip = MDL_dragon_assault_corps_tt
+
+    7 = {
+      add_building_construction = {
+			  type = air_base
+			  level = 3
+			  instant_build = yes
+		  }
+    }
+    build_railway = {
+      level = 3
+      start_province = 10113
+      target_province = 13071
+    }
+
     add_equipment_to_stockpile = {
 			type = dragon_equipment_0
 			amount = 300
@@ -5631,9 +5663,9 @@ shared_focus = {
   id = MDL_CES_victory
   icon = GFX_MDL_CES_victory
   x = 0
-  y = 1
+  y = 2
   cost = 5
-  relative_position_id = MDL_holy_mandate_BAT
+  relative_position_id = MDL_strike_thralls_of_darkness
   
   allow_branch = {
     if = {
@@ -5655,9 +5687,88 @@ shared_focus = {
         has_government = democratic
       }
     }
+    BSG = { is_subject_of = ROOT }
+    ABY = { is_subject_of = ROOT }
+    MGY = { is_subject_of = ROOT }
   }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_CES_victory"
+    hidden_effect = { clr_country_flag = MDL_holy_war_active }
+    if = {
+      limit = { owns_state = 7 }
+      release = DRG
+    }
+    if = {
+      limit = { owns_state = 1193 }
+      release = PCB
+    }
+    if = {
+      limit = { owns_state = 1196 }
+      release = MER
+    }
+    country_event = manedalusia.132
+  }
+}
+
+shared_focus = {
+  id = MDL_holy_war_demobilize
+  icon = GFX_MDL_holy_war_demobilize
+  x = 1
+  y = 1
+  relative_position_id = MDL_CES_victory
+  prerequisite = { focus = MDL_CES_victory }
+  cost = 5
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_holy_war_demobilize"
+    add_ideas = volunteer_only
+    remove_ideas = MDL_rally_the_faithful_2
+  }
+}
+
+shared_focus = {
+  id = MDL_holy_war_stabilize_west_zebrica
+  icon = GFX_MDL_holy_war_stabilize_west_zebrica
+  x = -1
+  y = 1
+  relative_position_id = MDL_CES_victory
+  cost = 5
+  prerequisite = { focus = MDL_CES_victory }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_holy_war_stabilize_west_zebrica"
+    
+    custom_effect_tooltip = MDL_remove_holy_mandates_tt
+    effect_tooltip = {
+      remove_ideas = MDL_holy_mandate
+    }
+    hidden_effect = {
+      every_other_country = {
+        limit = { is_subject_of = ROOT }
+        if = {
+          limit = { has_idea = MDL_holy_mandate }
+          remove_ideas = MDL_holy_mandate
+        }
+      }
+    }
+  }
+}
+
+shared_focus = {
+  id = MDL_CES_victory_end
+  icon = GFX_MDL_CES_victory_end
+  x = 0
+  y = 2
+  cost = 2
+  relative_position_id = MDL_CES_victory
+  prerequisite = { focus = MDL_holy_war_stabilize_west_zebrica }
+  prerequisite = { focus = MDL_holy_war_demobilize }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_CES_victory_end"
+    remove_ideas = MDL_holy_zeal_2
+    if = {
+      limit = { NOT = { has_idea = civilian_economy } }
+      add_ideas = civilian_economy
+    }
+    country_event = manedalusia.131
   }
 }
 
@@ -6802,6 +6913,8 @@ shared_focus = {
     add_offsite_building = { type = industrial_complex level = 1 }
     add_offsite_building = { type = arms_factory level = 1 }
     add_ideas = MDL_corporativism_idea
+
+    decrease_poverty = yes
   }
   search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_WAR_SUPPORT }
 }
