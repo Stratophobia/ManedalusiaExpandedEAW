@@ -5827,9 +5827,66 @@ shared_focus = {
     }
   }
 
+  available = {
+    DRG = { exists = no }
+    7 = { is_owned_and_controlled_by = ROOT }
+  }
+
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_warplan_dragon"
+    country_event = manedalusia.140
   }
+  search_filters = { FOCUS_FILTER_POLITICAL }
+}
+
+shared_focus = {
+  id = MDL_secure_southeast
+  icon = GFX_goal_generic_political
+  x = 1
+  y = 1
+  relative_position_id = MDL_warplan_dragon
+  prerequisite = { focus = MDL_warplan_dragon }
+  cost = 5
+  will_lead_to_war_with = CES
+  will_lead_to_war_with = BAL
+  will_lead_to_war_with = NMS
+  will_lead_to_war_with = JUN
+  available = {
+    OR = {
+      CES = { exists = yes }
+      BAL = { exists = yes }
+      NMS = { exists = yes }
+      JUN = { exists = yes }
+    }
+  }
+  bypass = {
+    AND = {
+      CES = { exists = yes }
+      BAL = { exists = yes }
+      NMS = { exists = yes }
+      JUN = { exists = yes }     
+    }
+  }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_secure_southeast"
+    if = {
+      limit = { CES = { exists = yes } }
+      declare_war_on = { type = annex_everything target = CES }
+    }
+    if = {
+      limit = { BAL = { exists = yes } }
+      declare_war_on = { type = annex_everything target = BAL }
+    }
+    if = {
+      limit = { NMS = { exists = yes } }
+      declare_war_on = { type = annex_everything target = NMS }
+    }
+    if = {
+      limit = { JUN = { exists = yes } }
+      declare_war_on = { type = annex_everything target = JUN }
+    }
+  }
+  search_filters = { FOCUS_FILTER_ANNEXATION }
 }
 
 ###ULTRAMAR PATH###

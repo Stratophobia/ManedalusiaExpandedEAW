@@ -237,6 +237,28 @@ MDL_shield_doctrine_tab = {
 }
 
 MDL_holy_war_tab = {
+  MDL_transfer_to_DRG = {
+    cost = 0
+    visible = {
+      has_completed_focus = MDL_warplan_dragon
+      any_occupied_country = { tag = EQS }
+    }
+    available = {
+      has_war = no
+    }
+    complete_effect = {
+      every_owned_state = {
+        limit = { is_in_array = { state_original_cores = EQS } }
+        if = {
+          limit = {
+            NOT = { is_core_of = DRG }
+          }
+          add_core_of = DRG
+        }
+        DRG = { transfer_state = PREV }
+      }
+    }
+  }
   MDL_support_CES = {
     cost = 10
     icon = eng_trade_unions_support

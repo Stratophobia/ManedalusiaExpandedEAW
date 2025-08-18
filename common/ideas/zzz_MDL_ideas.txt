@@ -937,6 +937,22 @@ ideas = {
   }
 #HOLY WAR IDEAS
   country = {
+    MDL_HIP_supplies_full = {
+      picture = MDL_HIP_supplies
+      modifier = {
+        navy_max_range_factor = 0.05
+        naval_coordination = 0.05
+        weekly_manpower = 100
+        consumer_goods_factor = -0.10
+      }
+    }
+    MDL_HIP_supplies_min = {
+      picture = MDL_HIP_supplies
+      modifier = {
+        navy_max_range_factor = 0.05
+        weekly_manpower = 20
+      }
+    }
     MDL_starry_sea_corridor_idea = {
       picture = MDL_starry_sea_corridor
       modifier = {

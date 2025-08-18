@@ -2,21 +2,29 @@ MDL_CHN = {
 	color = rgb { 60 64 86 }
 	color_ui = rgb { 60 64 86 }
 }
+DRG_EKS_peace = {
+  color = rgb { 158 242 117 }
+  color_ui = rgb { 158 242 117 }
+}
+DRG_EKS_war = {
+  color = rgb { 5 143 5 }
+  color_ui = rgb { 5 143 5 }
+}
 MDL_crusader = {
-  color = rgb {5 143 5 }
-  color_ui = rgb {5 143 5 }
+  color = rgb { 5 143 5 }
+  color_ui = rgb { 5 143 5 }
 }
 MGY_MDL_admin = {
-  color = rgb {5 143 5 }
-  color_ui = rgb {5 143 5 }
+  color = rgb { 5 143 5 }
+  color_ui = rgb { 5 143 5 }
 }
 ABY_MDL_admin = {
-  color = rgb {5 143 5 }
-  color_ui = rgb {5 143 5 }
+  color = rgb { 5 143 5 }
+  color_ui = rgb { 5 143 5 }
 }
 BSG_MDL_admin = {
-  color = rgb {5 143 5 }
-  color_ui = rgb {5 143 5 }
+  color = rgb { 5 143 5 }
+  color_ui = rgb { 5 143 5 }
 }
 ABY_FEDERATION = {
 	color = rgb { 0 24 117 }

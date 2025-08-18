@@ -3373,7 +3373,10 @@
       ai_chance = { base = 10 }
       add_political_power = -100
       add_opinion_modifier = { target = MDL modifier = MDL_holy_shield_ally }
-      MDL = { add_opinion_modifier = { target = HIP modifier = MDL_holy_shield_ally } }
+      MDL = {
+        add_opinion_modifier = { target = HIP modifier = MDL_holy_shield_ally }
+        country_event = { id = manedalusia.137 days = 1 }
+      }
       diplomatic_relation = { 
 	      country = MDL
 	      relation = non_aggression_pact 
@@ -3387,10 +3390,16 @@
 	      country = MDL
 	      relation = non_aggression_pact 
       }
+      MDL = {
+        country_event = { id = manedalusia.138 days = 1 }
+      }
     }
     option = {
       name = manedalusia.133.c
       ai_chance = { base = 5 }
+      MDL = {
+        country_event = { id = manedalusia.139 days = 1 }
+      }
     }
   }
 
@@ -3420,5 +3429,75 @@
 
     option = {
       name = manedalusia.135.a
+    }
+  }
+
+  country_event = {#EQS nay
+    id = manedalusia.136
+    title = manedalusia.136.t
+    desc = manedalusia.136.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.136.a
+    }
+  }
+
+  country_event = {#HIP yay
+    id = manedalusia.137
+    title = manedalusia.137.t
+    desc = manedalusia.137.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.137.a
+      add_timed_idea = {
+        idea = MDL_HIP_supplies_full
+        days = 200
+      }
+    }
+  }
+
+  country_event = {#HIP may
+    id = manedalusia.138
+    title = manedalusia.138.t
+    desc = manedalusia.138.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.138.a
+      add_timed_idea = {
+        idea = MDL_HIP_supplies_min
+        days = 200
+      }
+    }
+  }
+  country_event = {#HIP nay
+    id = manedalusia.139
+    title = manedalusia.139.t
+    desc = manedalusia.139.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.139.a
+    }
+  }
+
+  country_event = {
+    id = manedalusia.140
+    title = manedalusia.140.t
+    desc = manedalusia.140.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.140.a
+      hidden_effect = { MDL_create_dynamic_DRG = yes }
+      DRG = { set_cosmetic_tag = DRG_EKS_war }
+      hidden_effect = {
+        every_state = {
+          limit = { is_in_array = { state_original_cores = EQS } }
+          add_core_of = DRG
+        }
+      }
     }
   }

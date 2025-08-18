@@ -109,6 +109,80 @@ MDL_create_dynamic_ABY = {
   }  
 }
 
+MDL_create_dynamic_DRG = {
+  create_dynamic_country = {
+    original_tag = DRG
+    set_variable = { collaboration_formed_by = PREV }
+    set_temp_variable = { new_country = this }
+
+    PREV = {
+      every_controlled_state = {
+        limit = { occupied_country_tag = DRG }
+        var:new_country = { transfer_state = PREV }
+      }
+      puppet = new_country
+    }
+    load_focus_tree = { 
+      tree = generic_zebra_focus
+      keep_completed = yes
+    }
+    set_capital = {
+      state = 7
+      remember_old_capital = no
+    }
+    set_party_name = {
+      ideology = democratic
+      long_name = MDL_DRG_EQS_NAME_LONG
+      name = MDL_DRG_EQS_NAME
+    }
+    generate_character = {
+      token_base = MDL_equestrian_command
+      name = MDL_equestrian_command
+    }
+    generate_character = {
+      token_base = MDL_equestrian_prov_parliament
+      name = MDL_equestrian_prov_parliament
+    }
+    set_portraits = {
+      character = MDL_equestrian_command
+      army = {
+        large = "gfx/leaders/MDL/MDL_equestrian_command.tga"
+      }
+    }
+    set_portraits = {
+      character = MDL_equestrian_prov_parliament
+      army = {
+        large = "gfx/leaders/MDL/MDL_FED_generic.tga"
+      }
+    }
+    add_country_leader_role = {
+      character = MDL_equestrian_command
+      country_leader = {
+        ideology = liberation_front
+        expire = "1965.1.1.1"
+        id=-1
+      }
+      promote_leader = yes
+    }
+    add_country_leader_role = {
+      character = MDL_equestrian_prov_parliament
+      country_leader = {
+        ideology = harmonic_constitutionalism
+        expire = "1965.1.1.1"
+        id=-1
+      }
+    }
+    add_ideas = {
+      pony_race
+      proper_science_base
+      modern_society
+      no_lack_of_scientists
+      no_poverty
+    }
+    set_AI_strategies_on_every_possible_country_delayed = yes
+  }
+}
+
 MDL_elevate_virianthrax = {
   add_country_leader_role = {
     character = MDL_virianthrax
