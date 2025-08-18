@@ -88,13 +88,35 @@
 
     option = {#army comes in, order restored
       name = manedalusia.1.a
-      ai_chance = { base = 70 }
+      ai_chance = {
+        base = 70
+        modifier = {
+          factor = 0
+          OR = {
+            MDL = { has_country_flag = MDL_AI_CRIMSON_SULTAN }
+            MDL = { has_country_flag = MDL_AI_SENATE }
+            MDL = { has_country_flag = MDL_AI_VELVET }
+            MDL = { has_country_flag = MDL_AI_ULTRAMAR }
+          }
+        }
+      }
       country_event = { id = manedalusia.65 }
     }
 
     option = {#Bingus Gamer Moment
       name = manedalusia.1.b
-      ai_chance = { base = 5 }
+      ai_chance = {
+        base = 5
+        modifier = {
+          factor = 0
+          OR = {
+            MDL = { has_country_flag = MDL_AI_CRIMSON_SULTAN }
+            MDL = { has_country_flag = MDL_AI_SENATE }
+            MDL = { has_country_flag = MDL_AI_VELVET }
+            MDL = { has_country_flag = MDL_AI_ULTRAMAR }
+          }
+        }
+      }
       country_event = { id = manedalusia.58 }
     }
 
@@ -102,7 +124,18 @@
       name = manedalusia.1.c
       custom_effect_tooltip = ABY_disable_bingus
       set_variable = { ABY_noble_loyalties^15 = 0 }
-      ai_chance = { base = 25 }
+      ai_chance = { 
+        base = 25
+        modifier = {
+          base = 100
+          OR = {
+            MDL = { has_country_flag = MDL_AI_CRIMSON_SULTAN }
+            MDL = { has_country_flag = MDL_AI_SENATE }
+            MDL = { has_country_flag = MDL_AI_VELVET }
+            MDL = { has_country_flag = MDL_AI_ULTRAMAR }
+          }
+        }
+      }
       release = MDL
       hidden_effect = {
         MDL = {
@@ -2381,6 +2414,11 @@
       add_ideas = MDL_holy_zeal_2
       custom_effect_tooltip = MDL_holy_war_tree_loaded_tt
       hidden_effect = {
+        if = {
+          limit = { has_country_flag = MDL_AI_VELVET }
+          clr_country_flag = MDL_AI_VELVET
+        }
+        set_country_flag = MDL_AI_HOLY_WAR
         clr_country_flag = MDL_sunmad
         set_country_flag = MDL_holy_war_active
         load_focus_tree = {
@@ -2633,7 +2671,7 @@
     }
   }
 
-  country_event = {#establish bat puppet state
+  country_event = {#establish BAT puppet state
     id = manedalusia.94
     title = manedalusia.94.t
     desc = manedalusia.94.d
@@ -3120,6 +3158,9 @@
       }
       MDL = {
         country_event = { id = manedalusia.122 days = 1 }
+        hidden_effect = {
+          set_country_flag = MDL_CES_rejected
+        }
       }
     }
   }
@@ -3158,12 +3199,13 @@
         remove_idea = MDL_holy_zeal_2
         add_idea = MDL_holy_fury
       }
+      custom_effect_tooltip = MDL_holy_war_new_focus_tt
       hidden_effect = {
-        set_country_flag = MDL_holy_war_last_stand
         load_focus_tree = {
           tree = manedalusia_main
           keep_completed = yes
         }
+        mark_focus_tree_layout_dirty effect = yes
       }
     }
   }
@@ -3328,13 +3370,55 @@
 
     option = {
       name = manedalusia.133.a
+      ai_chance = { base = 10 }
       add_political_power = -100
+      add_opinion_modifier = { target = MDL modifier = MDL_holy_shield_ally }
+      MDL = { add_opinion_modifier = { target = HIP modifier = MDL_holy_shield_ally } }
+      diplomatic_relation = { 
+	      country = MDL
+	      relation = non_aggression_pact 
+      }
     }
     option = {
       name = manedalusia.133.b
+      ai_chance = { base = 85 }
       add_political_power = -50
+      diplomatic_relation = { 
+	      country = MDL
+	      relation = non_aggression_pact 
+      }
     }
     option = {
       name = manedalusia.133.c
+      ai_chance = { base = 5 }
+    }
+  }
+
+  country_event = {#EQS accept MDL into UPA event
+    id = manedalusia.134
+    title = manedalusia.134.t
+    desc = manedalusia.134.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.134.a
+      ai_chance = { base = 100 }
+      add_to_faction = MDL
+      MDL = { country_event = manedalusia.135 }
+    }
+    option = {
+      name = manedalusia.134.b
+      ai_chance = { base = 0 }
+    }
+  }
+
+  country_event = {#EQS yay
+    id = manedalusia.135
+    title = manedalusia.135.t
+    desc = manedalusia.135.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.135.a
     }
   }

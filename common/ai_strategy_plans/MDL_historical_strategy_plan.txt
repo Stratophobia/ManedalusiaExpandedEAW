@@ -7,7 +7,6 @@ MDL_historical = {
 	}
 
 	enable = {
-
 		OR = {
 			AND = {
 				is_historical_focus_on = yes
@@ -20,7 +19,7 @@ MDL_historical = {
 		}
 	}
 	abort = {
-		
+		has_country_flag = MDL_AI_HOLY_WAR
   }
 
   ai_national_focuses = {

@@ -1,5 +1,9 @@
 spriteTypes = {
   SpriteType = {
+    name = "GFX_idea_MDL_starry_sea_corridor"
+    texturefile = "gfx/interface/ideas/MDL/MDL_starry_sea_corridor.tga"
+  }
+  SpriteType = {
     name = "GFX_idea_MDL_abyssinian_auxilliaries"
     texturefile = "gfx/interface/ideas/MDL/MDL_abyssinian_auxilliaries.tga"
   }

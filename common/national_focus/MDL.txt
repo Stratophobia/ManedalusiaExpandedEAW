@@ -37,6 +37,7 @@ focus_tree = {
   #SPECIAL
   shared_focus = MDL_sun_madness
   shared_focus = MDL_CES_victory
+  shared_focus = MDL_warplan_dragon
 }
 
 focus_tree = {
@@ -1103,6 +1104,7 @@ shared_focus = {
       advisor = {
         slot = political_advisor
         idea_token = MDL_senate
+        cost = 50
         allowed = { original_tag = MDL }
         traits = { MDL_subdued_senate }
       }
@@ -4531,7 +4533,7 @@ shared_focus = {
   }
   completion_reward = {
      log = "[GetDateText]: [Root.GetName]: Focus MDL_triumph_of_the_federation"
-     country_event = { id = manedalusia.69 }#nice
+     country_event = { id = manedalusia.69 }
   }
 }
 
@@ -4587,6 +4589,7 @@ shared_focus = {
       advisor = {
         slot = political_advisor
         idea_token = MDL_senate
+        cost = 50
         allowed = { original_tag = MDL }
         traits = { MDL_empowered_senate }
       }
@@ -4671,7 +4674,7 @@ shared_focus = {
   }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_formalize_alliance"
-    EQS = { add_to_faction = MDL }
+    EQS = { country_event = manedalusia.134 }
   }
   search_filters = { FOCUS_FILTER_POLITICAL }
 }
@@ -5100,6 +5103,7 @@ shared_focus = {
       }
     }
   }
+  search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ARMY_BONUS }
 }
 
 shared_focus = {
@@ -5108,11 +5112,12 @@ shared_focus = {
   x = 0
   y = 1
   relative_position_id = MDL_our_purpose_made_clear
-  cost = 5
+  cost = 2
   prerequisite = { focus = MDL_our_purpose_made_clear }
 
   available = {
     ME_equestria_is_lost = yes
+    NOT = { has_completed_focus = MDL_CES_victory }
   }
 
   completion_reward = {
@@ -5120,6 +5125,7 @@ shared_focus = {
     custom_effect_tooltip = MDL_all_is_not_lost_tt
     country_event = manedalusia.123
   }
+  search_filters = { FOCUS_FILTER_POLITICAL }
 }
 
 shared_focus = {
@@ -5143,6 +5149,7 @@ shared_focus = {
     add_ideas = extensive_conscription
     add_ideas = MDL_rally_the_faithful_1
   }
+  search_filters = { FOCUS_FILTER_MANPOWER }
 }
 
 shared_focus = {
@@ -5155,10 +5162,6 @@ shared_focus = {
   prerequisite = { focus = MDL_our_purpose_made_clear }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_fortress_manedalusia"
-    if = {
-      limit = { NOT = { has_completed_focus = MDL_bulwark_of_harmony } }
-      add_ideas = MDL_aaliyah_monument
-    }
     741 = {
       add_extra_state_shared_building_slots = 2
       add_building_construction = {
@@ -5220,6 +5223,7 @@ shared_focus = {
 			}
     }
   }
+  search_filters = { FOCUS_FILTER_INDUSTRY }
 }
 
 shared_focus = {
@@ -5238,6 +5242,7 @@ shared_focus = {
     hidden_effect = { set_country_flag = MDL_holy_war_BAT }
     declare_war_on = { type = annex_everything target = BAT }
   }
+  search_filters = { FOCUS_FILTER_ANNEXATION }
 }
 
 shared_focus = {
@@ -5274,6 +5279,7 @@ shared_focus = {
       MDL_get_all_resources_ABY_MGY = yes
     }
   }
+  search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY }
 }
 
 shared_focus = {
@@ -5300,6 +5306,7 @@ shared_focus = {
       target = KLG
     }
   }
+  search_filters = { FOCUS_FILTER_ANNEXATION }
 }
 
 shared_focus = {
@@ -5323,6 +5330,7 @@ shared_focus = {
       add_ideas = MDL_speartip_of_harmony_idea
     }
   }
+  search_filters = { FOCUS_FILTER_ARMY_BONUS }
 }
 
 shared_focus = {
@@ -5363,6 +5371,7 @@ shared_focus = {
       }
     }
   }
+  search_filters = { FOCUS_FILTER_INDUSTRY }
 }
 
 shared_focus = {
@@ -5418,6 +5427,7 @@ shared_focus = {
       target = 7.owner
     }
   }
+  search_filters = { FOCUS_FILTER_ANNEXATION }
 }
 
 shared_focus = {
@@ -5425,16 +5435,31 @@ shared_focus = {
   icon = GFX_MDL_ask_HIP_for_help
   x = -1
   y = 1
+  cost = 5
   relative_position_id = MDL_strike_thralls_of_darkness
 
   available = {
-    HIP = { has_government = democratic }
+    HIP = {
+      exists = yes
+      is_subject = no
+      has_government = democratic
+    }
+  }
+  bypass = {
+    HIP = {
+      OR = {
+        exists = no
+        NOT = { has_government = democratic }
+        is_subject = yes
+      }
+    }
   }
   prerequisite = { focus = MDL_strike_thralls_of_darkness }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_ask_HIP_for_help"
     HIP = { country_event = { id = manedalusia.133 days = 2 } }
   }
+  search_filters = { FOCUS_FILTER_POLITICAL }
 }
 
 shared_focus = {
@@ -5456,6 +5481,7 @@ shared_focus = {
     hidden_effect = { MDL_get_all_resources_BAT = yes }
     country_event = manedalusia.81
   }
+  search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY }
 }
 
 shared_focus = {
@@ -5501,6 +5527,7 @@ shared_focus = {
       }
     }
   }
+  search_filters = { FOCUS_FILTER_ANNEXATION }
 }
 
 shared_focus = {
@@ -5526,6 +5553,7 @@ shared_focus = {
       category = recon_tech
     }
   }
+  search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_MANPOWER }
 }
 
 shared_focus = {
@@ -5583,6 +5611,7 @@ shared_focus = {
 		  }
     }
   }
+  search_filters = { FOCUS_FILTER_AIRFORCE_BONUS }
 }
 
 shared_focus = {
@@ -5605,6 +5634,7 @@ shared_focus = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_starry_sea_corridor"
     add_ideas = MDL_starry_sea_corridor_idea
   }
+  search_filters = { FOCUS_FILTER_ARMY_BONUS }
 }
 
 shared_focus = {
@@ -5658,7 +5688,9 @@ shared_focus = {
 			fix_weapon_techs = yes
     }
   }
+  search_filters = { FOCUS_FILTER_MANPOWER }
 }
+
 shared_focus = {
   id = MDL_CES_victory
   icon = GFX_MDL_CES_victory
@@ -5669,8 +5701,12 @@ shared_focus = {
   
   allow_branch = {
     if = {
-      NOT = { has_country_flag = MDL_holy_war_last_stand }
-      NOT = { has_country_flag = MDL_sunmad }
+      NOT = {
+        OR = {
+          has_completed_focus = MDL_all_is_not_lost
+          has_country_flag = MDL_sunmad
+        }
+      }
       has_country_flag = MDL_holy_war_active
     }
   }
@@ -5693,7 +5729,7 @@ shared_focus = {
   }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_CES_victory"
-    hidden_effect = { clr_country_flag = MDL_holy_war_active }
+    hidden_effect = { clr_country_flag = MDL_holy_war_won }
     if = {
       limit = { owns_state = 7 }
       release = DRG
@@ -5708,6 +5744,7 @@ shared_focus = {
     }
     country_event = manedalusia.132
   }
+  search_filters = { FOCUS_FILTER_POLITICAL }
 }
 
 shared_focus = {
@@ -5723,6 +5760,7 @@ shared_focus = {
     add_ideas = volunteer_only
     remove_ideas = MDL_rally_the_faithful_2
   }
+  search_filters = { FOCUS_FILTER_POLITICAL }
 }
 
 shared_focus = {
@@ -5750,6 +5788,7 @@ shared_focus = {
       }
     }
   }
+  search_filters = { FOCUS_FILTER_POLITICAL }
 }
 
 shared_focus = {
@@ -5769,6 +5808,27 @@ shared_focus = {
       add_ideas = civilian_economy
     }
     country_event = manedalusia.131
+  }
+  search_filters = { FOCUS_FILTER_POLITICAL }
+}
+
+shared_focus = {
+  id = MDL_warplan_dragon
+  icon = GFX_goal_generic_political
+  x = 0
+  y = 2
+  relative_position_id = MDL_strike_thralls_of_darkness
+  cost = 5
+
+  allow_branch = {
+    if = {
+      has_country_flag = MDL_holy_war_active
+      has_completed_focus = MDL_all_is_not_lost
+    }
+  }
+
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_warplan_dragon"
   }
 }
 

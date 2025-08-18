@@ -150,3 +150,47 @@ MDL_alternate_ultramar = {
 	}
 
 }
+
+MDL_alternate_holy_war = {
+	name = "The Holy War"
+	desc = ""
+
+	allowed = {
+		original_tag = MDL
+	}
+
+	enable = {
+    has_country_flag = MDL_AI_HOLY_WAR
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+
+	}
+
+	research = {
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		
+	}
+
+}

@@ -241,6 +241,7 @@ MDL_holy_war_tab = {
     cost = 10
     icon = eng_trade_unions_support
     visible = {
+      NOT = { has_country_flag = MDL_CES_rejected }
       NOT = { has_guaranteed = CES }
       CES = {
         exists = yes

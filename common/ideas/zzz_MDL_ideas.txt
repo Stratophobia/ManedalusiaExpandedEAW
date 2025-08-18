@@ -938,7 +938,7 @@ ideas = {
 #HOLY WAR IDEAS
   country = {
     MDL_starry_sea_corridor_idea = {
-      picture = generic_disjointed_gov#REPLACE
+      picture = MDL_starry_sea_corridor
       modifier = {
         naval_coordination = 0.10
         navy_max_range_factor = 0.05
