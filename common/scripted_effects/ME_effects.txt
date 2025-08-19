@@ -164,14 +164,6 @@ MDL_create_dynamic_DRG = {
       }
       promote_leader = yes
     }
-    add_country_leader_role = {
-      character = MDL_equestrian_prov_parliament
-      country_leader = {
-        ideology = harmonic_constitutionalism
-        expire = "1965.1.1.1"
-        id=-1
-      }
-    }
     add_ideas = {
       pony_race
       proper_science_base

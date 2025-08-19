@@ -937,6 +937,14 @@ ideas = {
   }
 #HOLY WAR IDEAS
   country = {
+    MDL_ember = {
+      picture = MDL_ember
+      modifier = {
+        surrender_limit = 0.05
+        stability_factor = 0.15
+        war_support_factor = 0.15
+      }
+    }
     MDL_HIP_supplies_full = {
       picture = MDL_HIP_supplies
       modifier = {
@@ -1013,7 +1021,7 @@ ideas = {
         conscription_factor = 0.10
         army_morale_factor = 0.15
         surrender_limit = 0.75
-        weekly_manpower = 500
+        weekly_manpower = 250
       }
       targeted_modifier = {
         tag = EQS

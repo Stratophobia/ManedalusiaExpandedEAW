@@ -3483,7 +3483,7 @@
     }
   }
 
-  country_event = {
+  country_event = {#warplan dragon
     id = manedalusia.140
     title = manedalusia.140.t
     desc = manedalusia.140.d
@@ -3492,12 +3492,104 @@
     option = {
       name = manedalusia.140.a
       hidden_effect = { MDL_create_dynamic_DRG = yes }
-      DRG = { set_cosmetic_tag = DRG_EKS_war }
+      DRG = {
+        set_cosmetic_tag = DRG_EKS_war
+        add_ideas = MDL_ember
+      }
       hidden_effect = {
         every_state = {
           limit = { is_in_array = { state_original_cores = EQS } }
           add_core_of = DRG
         }
       }
+    }
+  }
+
+  country_event = {#Holy War victory event - DRG
+    id = manedalusia.141
+    title = manedalusia.141.t
+    desc = manedalusia.141.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.141.a
+      DRG = {
+        set_capital = {
+          state = 3
+          remember_old_capital = no
+        }
+        set_cosmetic_tag = DRG_EKS_peace
+        add_country_leader_role = {
+          character = MDL_equestrian_prov_parliament
+          country_leader = {
+            ideology = harmonic_constitutionalism
+            expire = "1965.1.1.1"
+            id=-1
+          }
+          promote_leader = yes
+        }
+        set_party_name = {
+          ideology = democratic
+          long_name = MDL_DRG_EQS_WIN_NAME_LONG
+          name = MDL_DRG_EQS_WIN_NAME
+        }
+      }
+      if = {
+        limit = { LSP = { exists = yes } }
+        create_wargoal = {
+          type = puppet_wargoal_focus
+          target = LSP
+        }
+      }
+      if = {
+        limit = { VAN = { exists = yes } }
+        create_wargoal = {
+          type = puppet_wargoal_focus
+          target = VAN
+        }
+      }
+      if = {
+        limit = { SCS = { exists = yes } }
+        create_wargoal = {
+          type = puppet_wargoal_focus
+          target = SCS
+        }
+      }
+    }
+  }
+
+  country_event = {#MDL holy war end
+    id = manedalusia.142
+    title = manedalusia.142.t
+    desc = manedalusia.142.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.142.a
+      end_puppet = DRG
+      custom_effect_tooltip = MDL_game_end_tt
+    }
+  }
+
+  country_event = {#Velvet - Khaldun event
+    id = manedalusia.143
+    title = manedalusia.143.t
+    desc = manedalusia.143.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.143.a
+      add_political_power = 50
+    }
+  }
+
+  country_event = {#war in the heavens
+    id = manedalusia.144
+    title = manedalusia.144.t
+    desc = manedalusia.144.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.144.a
     }
   }

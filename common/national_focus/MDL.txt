@@ -4554,7 +4554,7 @@ shared_focus = {
 
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_a_new_start"
-    add_political_power = 50
+    country_event = manedalusia.143
   }
   search_filters = { FOCUS_FILTER_POLITICAL }
 }
@@ -5389,6 +5389,7 @@ shared_focus = {
   prerequisite = { focus = MDL_speartip_of_harmony }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_secure_starry_sea_islands"
+    country_event = manedalusia.144
     if = {
       limit = {
         PCB = { is_in_faction = yes }
@@ -5729,7 +5730,7 @@ shared_focus = {
   }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_CES_victory"
-    hidden_effect = { clr_country_flag = MDL_holy_war_won }
+    hidden_effect = { set_country_flag = MDL_holy_war_won }
     if = {
       limit = { owns_state = 7 }
       release = DRG
@@ -5814,7 +5815,7 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_warplan_dragon
-  icon = GFX_goal_generic_political
+  icon = GFX_MDL_warplan_dragon
   x = 0
   y = 2
   relative_position_id = MDL_strike_thralls_of_darkness
@@ -5841,7 +5842,7 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_secure_southeast
-  icon = GFX_goal_generic_political
+  icon = GFX_MDL_secure_southeast
   x = 1
   y = 1
   relative_position_id = MDL_warplan_dragon
@@ -5861,10 +5862,10 @@ shared_focus = {
   }
   bypass = {
     AND = {
-      CES = { exists = yes }
-      BAL = { exists = yes }
-      NMS = { exists = yes }
-      JUN = { exists = yes }     
+      CES = { exists = no }
+      BAL = { exists = no }
+      NMS = { exists = no }
+      JUN = { exists = no }     
     }
   }
   completion_reward = {
@@ -5887,6 +5888,88 @@ shared_focus = {
     }
   }
   search_filters = { FOCUS_FILTER_ANNEXATION }
+}
+
+shared_focus = {
+  id = MDL_militarize_EQS
+  icon = GFX_MDL_militarize_EQS
+  x = -1
+  y = 1
+  cost = 5
+  relative_position_id = MDL_warplan_dragon
+  prerequisite = { focus = MDL_warplan_dragon }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_militarize_EQS"
+    DRG = {
+      add_ideas = war_economy
+      add_ideas = extensive_conscription
+      add_ideas = limited_exports
+    }
+  }
+}
+
+shared_focus = {
+  id = MDL_kill_the_djinn
+  icon = GFX_MDL_kill_the_djinn
+  x = 0
+  y = 2
+  cost = 5
+  relative_position_id = MDL_warplan_dragon
+  prerequisite = { focus = MDL_militarize_EQS }
+  prerequisite = { focus = MDL_secure_southeast }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_kill_the_djinn"
+    if = {
+      limit = {
+        OR = {
+          EQS = { exists = yes }
+          NLR = { exists = yes }
+        }
+      }
+      if = {
+        limit = { EQS = { exists = yes } }
+        declare_war_on = { type = annex_everything target = EQS }
+      }
+      if = {
+        limit = { NLR = { exists = yes } }
+        declare_war_on = { type = annex_everything target = NLR }
+      }
+    }
+    else = {
+      3 = {
+        owner = {
+          MDL = { declare_war_on = { type = annex_everything target = PREV } }
+          DRG = { declare_war_on = { type = annex_everything target = PREV } }
+        }
+      }
+    }
+  }
+}
+
+shared_focus = {
+  id = MDL_thus_spoke_ash_shahid
+  icon = GFX_MDL_thus_spoke_ash_shahid
+  x = 0
+  y = 1
+  cost = 2
+  relative_position_id = MDL_kill_the_djinn
+  prerequisite = { focus = MDL_kill_the_djinn }
+
+  available = {
+    DRG = {
+      exists = yes
+      is_subject_of = ROOT
+      owns_state = 3
+    }
+    VAN = { exists = no }
+    SCS = { exists = no }
+    LSP = { exists = no }
+  }
+
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_thus_spoke_ash_shahid"
+    country_event = manedalusia.142
+  }
 }
 
 ###ULTRAMAR PATH###

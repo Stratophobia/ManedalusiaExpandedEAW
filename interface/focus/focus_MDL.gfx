@@ -1,5 +1,25 @@
 spriteTypes = {
   SpriteType = {
+    name = "GFX_MDL_kill_the_djinn"
+    texturefile = "gfx/interface/goals/MDL/MDL_kill_the_djinn.tga"
+  }
+  SpriteType = {
+    name = "GFX_MDL_militarize_EQS"
+    texturefile = "gfx/interface/goals/MDL/MDL_militarize_EQS.tga"
+  }
+  SpriteType = {
+    name = "GFX_MDL_secure_southeast"
+    texturefile = "gfx/interface/goals/MDL/MDL_secure_southeast.tga"
+  }
+  SpriteType = {
+    name = "GFX_MDL_thus_spoke_ash_shahid"
+    texturefile = "gfx/interface/goals/MDL/MDL_thus_spoke_ash_shahid.tga"
+  }
+  SpriteType = {
+    name = "GFX_MDL_warplan_dragon"
+    texturefile = "gfx/interface/goals/MDL/MDL_warplan_dragon.tga"
+  }
+  SpriteType = {
     name = "GFX_MDL_ask_HIP_for_help"
     textureFile = "gfx/interface/goals/MDL/MDL_ask_HIP_for_help.tga"
   }
