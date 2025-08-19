@@ -283,7 +283,7 @@ MDL_WNG_transfer_colonies = {
     limit = {
       ABY = {
         exists = yes
-        is_in_faction_with = MDL
+        is_subject_of = MDL
       }
     }
     WNG = {
