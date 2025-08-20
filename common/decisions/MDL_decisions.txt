@@ -331,9 +331,6 @@ MDL_holy_war_tab = {
   MDL_befriend_breakaway = {
     fire_only_once = yes
     cost = 75
-    visible = {
-      has_completed_focus = MDL_secure_starry_sea_islands
-    }
     cancel_trigger = {
       NOT = { country_exists = FROM }
       has_war_with = FROM
@@ -352,9 +349,15 @@ MDL_holy_war_tab = {
       }
     }
 
+
     visible = {
-      country_exists = FROM
+      has_completed_focus = MDL_secure_starry_sea_islands
+      FROM = {
+        exists = yes
+        NOT = { is_in_faction_with = EQS }
+      }
     }
+
     complete_effect = {
       add_opinion_modifier = { target = FROM modifier = MDL_holy_shield_ally }
       FROM = { add_opinion_modifier = { target = MDL modifier = MDL_holy_shield_ally } }
