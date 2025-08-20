@@ -354,7 +354,12 @@ MDL_holy_war_tab = {
       has_completed_focus = MDL_secure_starry_sea_islands
       FROM = {
         exists = yes
-        NOT = { is_in_faction_with = EQS }
+        NOT = {
+          OR = {
+            is_in_faction_with = EQS
+            is_in_faction_with = NLR
+          }
+        }
       }
     }
 

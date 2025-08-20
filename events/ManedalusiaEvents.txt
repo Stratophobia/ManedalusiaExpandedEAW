@@ -3593,3 +3593,14 @@
       name = manedalusia.144.a
     }
   }
+
+  country_event = {#Samira and Al-Neighzari hang out
+    id = manedalusia.145
+    title = manedalusia.145.t
+    desc = manedalusia.145.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.145.a
+    }
+  }

@@ -1739,8 +1739,25 @@ shared_focus = {
 
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_air_stuff"
-    add_political_power = -50	
-    set_technology = { early_fighter = 1 }
+    add_political_power = -50
+    if = {
+      limit = { has_dlc = "By Blood Alone" }
+      if = {
+				limit = { NOT = { has_tech = iw_small_airframe } }
+				set_technology = { iw_small_airframe = 1 }
+			}
+			set_technology = {
+				aa_lmg = 1
+				engines_1 = 1
+			}
+    }
+    else = {
+      if = {
+        limit = { NOT = { has_tech = early_fighter } }
+        set_technology = { early_fighter = 1 }
+      }
+    }
+    
     741 = {
       add_building_construction = {
 			  type = air_base
@@ -1951,7 +1968,19 @@ shared_focus = {
   cost = 5
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_naval_air"
-    set_technology = { naval_bomber1 = 1 }
+    if = {
+      limit = { has_dlc = "By Blood Alone" }
+      set_technology = {
+				early_bombs = 1
+        air_torpedoe_1 = 1
+			}
+    }
+    else = {
+      if = {
+        limit = { NOT = { has_tech = naval_bomber1 } }
+        set_technology = { naval_bomber1 = 1 }
+      }
+    }
 		add_tech_bonus = {
 			name = MDL_naval_air
 			bonus = 1.0
@@ -2856,6 +2885,12 @@ shared_focus = {
   prerequisite = { focus = MDL_alchemical_investment }
   completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_grand_army_of_al_manedalus"
+    if = {
+      limit = {
+        NOT = { has_country_flag = MDL_holy_war_active }
+      }
+      country_event = manedalusia.145
+    }
     add_ideas = MDL_grand_army
   }
   search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_BONUS }
