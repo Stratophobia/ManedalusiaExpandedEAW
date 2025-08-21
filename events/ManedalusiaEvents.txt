@@ -3243,8 +3243,12 @@
 	      relation = non_aggression_pact 
       }
       add_political_power = 100
-      ABY = { transfer_state = 1200 }
+      ABY = {
+        transfer_state = 1200
+        transfer_state = 1201
+      }
       remove_state_claim = 1200
+      remove_state_claim = 1201
       MDL = { country_event = manedalusia.126 }
     }
     option = {
