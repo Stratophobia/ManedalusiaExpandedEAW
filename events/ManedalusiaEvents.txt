@@ -1553,10 +1553,7 @@
       set_cosmetic_tag = MDL_federal_republic
       add_ideas = MDL_federation_member
       hidden_effect = {
-        set_nationality = {
-          target_country = MGY
-          character = MDL_nomarchical_council
-        }
+        MDL_create_dynamic_MGY = yes
         set_nationality = {
           target_country = MKS
           character = MDL_ovingo_assembly
@@ -1568,24 +1565,9 @@
         MGY = {
           set_cosmetic_tag = MGY_FEDERATION
           add_ideas = MDL_federation_member
-          MDL_nomarchical_council = {
-            add_country_leader_role = {
-              country_leader = {
-                ideology = republicanism
-                expire = "1965.1.1.1"
-                id=-1
-              }
-              promote_leader = yes
-            }
-          }
           set_politics = {
             ruling_party = neutrality
             allow_elections = no
-          }
-          set_party_name = {
-            ideology = neutrality
-            long_name = MDL_MGY_FED_PARTY_LONG
-            name = MDL_MGY_FED_PARTY 
           }
         }
         MKS = {
@@ -2440,18 +2422,8 @@
             modifier = MDL_BAT_savages_opinion
           }
         }
-        if = {
-          limit = { NLR = exists = yes }
-          add_opinion_modifier = {
-            target = NLR
-            modifier = MDL_djinn_opinion
-          }
-        }
-        add_opinion_modifier = {
-          target = EQS
-          modifier = MDL_djinn_opinion
-        }
         
+        MDL_djinn_SOL_setup = yes
         MDL_holy_war_autodo_military_focuses = yes
       }
       set_cosmetic_tag = MDL_crusader
@@ -2519,6 +2491,7 @@
       name = manedalusia.91.a
       add_country_leader_trait = MDL_breaker_of_chains
       add_ideas = MDL_never_slaves_again_idea_2
+      ABY = { add_ideas = MDL_queen_morticia }
       custom_effect_tooltip = MDL_asabiyyah_alteration_tt
       add_to_variable = {
         var = MDL_pp_var
@@ -2573,7 +2546,10 @@
       retire_character = MDL_antonio_aviario
       remove_ideas = MDL_ash_shuhud_resistance
 
-      hidden_effect = { clr_country_flag = MDL_grifo_takeover }
+      hidden_effect = {
+        clr_country_flag = MDL_grifo_takeover
+        set_country_flag = MDL_samira_country_leader
+      }
 
       add_country_leader_role = {
         character = MDL_grandmistress_samira
@@ -2598,9 +2574,10 @@
         long_name = MDL_SAYF_PARTY_1_LONG
         name = MDL_SAYF_PARTY_1
       }
+      custom_effect_tooltip = MDL_samira_tree_loaded_tt
       hidden_effect = {
         load_focus_tree = {
-          tree = generic_zebra_focus
+          tree = manedalusia_samira
         }
       }
     }
@@ -3571,6 +3548,7 @@
     option = {
       name = manedalusia.142.a
       end_puppet = DRG
+      remove_ideas = MDL_holy_fury
       custom_effect_tooltip = MDL_game_end_tt
     }
   }
@@ -3606,5 +3584,16 @@
 
     option = {
       name = manedalusia.145.a
+    }
+  }
+
+  country_event = {#all that remains
+    id = manedalusia.146
+    title = manedalusia.146.t
+    desc = manedalusia.146.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.146.a
     }
   }

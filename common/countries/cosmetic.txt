@@ -30,6 +30,10 @@ ABY_FEDERATION = {
 	color = rgb { 0 24 117 }
 	color_ui = rgb { 0 24 117 }
 }
+MGY_FEDERATION = {
+  color = rgb { 255 220 104 }
+  color_ui = rgb { 255 220 104 }
+}
 MDL_ultramar = {
   color = rgb { 40 40 110 }
   color_ui = rgb { 40 40 110 }

@@ -1,5 +1,9 @@
 spriteTypes = {
   SpriteType = {
+    name = "GFX_idea_MDL_demon"
+    texturefile = "gfx/interface/ideas/MDL/MDL_demon.tga"
+  }
+  SpriteType = {
     name = "GFX_idea_MDL_ember"
     texturefile = "gfx/interface/ideas/MDL/MDL_ember.tga"
   }

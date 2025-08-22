@@ -81,15 +81,13 @@ on_actions = {
         }
 
         every_other_country = {
+          limit = { is_in_faction_with = BAT }
           if = {
             limit = { is_subject_of = BAT }
             annex_country = { target = THIS }
           }
           if = {
-            limit = {
-              has_war_with = MDL
-              is_in_faction_with = BAT
-            }
+            limit = { has_war_with = MDL }
             white_peace = MDL
           }
         }

@@ -109,6 +109,77 @@ MDL_create_dynamic_ABY = {
   }  
 }
 
+MDL_create_dynamic_MGY = {
+  create_dynamic_country = {
+    original_tag = MGY
+    set_variable = { collaboration_formed_by = PREV }
+    set_temp_variable = { new_country = this }
+
+    PREV = {
+      every_controlled_state = {
+        limit = { occupied_country_tag = MGY }
+        var:new_country = { transfer_state = PREV }
+      }
+      puppet = new_country
+    }
+    load_focus_tree = { 
+      tree = generic_zebra_focus
+      keep_completed = yes		   
+    }
+    set_capital = {
+      state = 733
+      remember_old_capital = no
+    }
+    set_party_name = {
+      ideology = neutrality
+      long_name = MDL_MGY_FED_PARTY_LONG
+      name = MDL_MGY_FED_PARTY
+    }
+    set_party_name = {
+      ideology = democratic
+      long_name = MDL_MGY_DEMOCRATIC_PARTY_LONG
+      name = MDL_MGY_DEMOCRATIC_PARTY
+    }
+    generate_character = {
+      token_base = MDL_nomarchical_council
+      name = MDL_nomarchical_council
+    }
+    set_portraits = {
+      character = MDL_nomarchical_council
+      army = {
+        large = "gfx/leaders/MDL/nomarchy_council.tga"
+      }
+    }
+    add_country_leader_role = {
+      character = MDL_nomarchical_council
+      country_leader = {
+        ideology = republicanism
+        expire = "1965.1.1.1"
+        id=-1
+      }
+      promote_leader = yes
+    }
+    add_country_leader_role = {
+      character = MDL_nomarchical_council
+      country_leader = {
+        ideology = harmonic_constitutionalism
+        expire = "1965.1.1.1"
+        id=-1
+      }
+      promote_leader = yes
+    }
+    add_ideas = {
+      pony_race
+      poverty5
+      outdated_industry
+      lack_of_scientists2
+      better_science_base
+      civilian_economy
+    }
+    set_AI_strategies_on_every_possible_country_delayed = yes
+  }  
+}
+
 MDL_create_dynamic_DRG = {
   create_dynamic_country = {
     original_tag = DRG
@@ -212,6 +283,49 @@ MDL_reduce_sun_madness = {
   else_if = {
     limit = { has_idea = MDL_sunmad_3 }
     remove_ideas = MDL_sunmad_3
+  }
+}
+
+MDL_djinn_SOL_setup = {
+  if = {
+    limit = {
+      NLR = { exists = yes }
+    }
+    add_opinion_modifier = {
+      target = NLR
+      modifier = MDL_djinn_opinion
+    }
+  }
+  add_opinion_modifier = {
+    target = EQS
+    modifier = MDL_djinn_opinion
+  }
+  if = {
+    limit = {
+      EQS = {
+        exists = yes
+        is_ai = yes
+      }     
+    }
+    EQS = { add_ideas = MDL_demon_of_the_outer_night }
+  }
+  if = {
+    limit = {
+      NLR = {
+        exists = yes
+        is_ai = yes
+      }
+    }
+    NLR = { add_ideas = MDL_demon_of_the_outer_night }
+  }
+  if = {
+    limit = {
+      CHN = {
+        exists = yes
+        is_ai = yes
+      }
+    }
+    CHN = { add_political_power = - 9999 }
   }
 }
 

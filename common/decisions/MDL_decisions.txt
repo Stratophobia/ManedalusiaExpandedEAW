@@ -78,6 +78,7 @@ MDL_shield_doctrine_tab = {
     }
     cost = 25
     complete_effect = {
+      MDL_create_dynamic_MGY = yes
       hidden_effect = {
         MGY = {
           load_focus_tree = { tree = generic_zebra_focus }
@@ -124,8 +125,8 @@ MDL_shield_doctrine_tab = {
         remove_core_of = ABY
       }
       ABY = { set_cosmetic_tag = ABY_MDL_admin }
-      release_puppet = ABY
       hidden_effect = {
+        release_puppet = ABY
         ABY = {
           load_focus_tree = { tree = generic_zebra_focus }
         }
@@ -2815,7 +2816,6 @@ CHN_protectorates = {
     visible = {
       MDL = { has_completed_focus = MDL_formalize_alliance }
       has_government = fascism
-      controls_canterlot = yes
       has_completed_focus = unite_the_people
       owns_state = 741
     }

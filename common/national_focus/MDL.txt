@@ -41,6 +41,18 @@ focus_tree = {
 }
 
 focus_tree = {
+  id = manedalusia_samira
+
+  country = {
+    factor = 0
+  }
+  default = no
+  continuous_focus_position = { x = 550 y = 1800 }
+
+  shared_focus = MDL_samira_1
+}
+
+focus_tree = {
   id = manedalusia_sayf_genocide
 
   country = {
@@ -2550,7 +2562,7 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_even_sweeter_rides"
     add_ideas = MDL_streamlined_tank_production
     add_tech_bonus = {
-      name = MDL_armor
+      name = MDL_even_sweeter_rides
       bonus = 1.0
       uses = 2
       category = armor
@@ -3327,6 +3339,7 @@ shared_focus = {
   relative_position_id = MDL_coffee_current
   prerequisite = { focus = MDL_coffee_current focus = MDL_reliable_traders }
   available = {
+    has_war = no
     CTH = { exists = yes }
   }
   completion_reward = {
@@ -7855,4 +7868,21 @@ shared_focus = {
     country_event = manedalusia.114
   }
   search_filters = { FOCUS_FILTER_POLITICAL }
+}
+
+shared_focus = {
+  id = MDL_samira_1
+  icon = GFX_focus_ger_reichskommisariats
+
+  x = 15
+  y = 0
+  cost = 4
+
+  available = { always = no }
+
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_samira_1"
+    custom_effect_tooltip = MDL_WIP_tt
+    country_event = manedalusia.146
+  }
 }

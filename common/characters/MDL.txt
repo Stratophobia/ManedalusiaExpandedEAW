@@ -183,9 +183,15 @@ characters={
 			idea_token = MDL_grandmistress_samira
 			allowed = { original_tag = MDL }
 			traits = { army_infantry_1 army_commando_2 }
-      visible = { NOT = { has_country_flag = MDL_samira_country_leader } }
 			available = { has_completed_focus = MDL_go_with_alneighzari }
-      visible = { NOT = { has_completed_focus = MDL_go_with_samira } }
+      visible = {
+        NOT = {
+          OR = {
+            has_country_flag = MDL_samira_country_leader
+            has_completed_focus = MDL_go_with_samira
+          }
+        }
+      }
 		}
 	}
 	MDL_alneighzari = {
@@ -223,6 +229,7 @@ characters={
     advisor = {
       slot = high_command
       idea_token = MDL_mehmet
+      cost = 80
       allowed = { original_tag = MDL }
       traits = { army_artillery_1 }
       available = { always = yes }
@@ -797,14 +804,6 @@ characters={
     }
   }
 ###FEDERATION LEADER CHARACTERS###
-  MDL_nomarchical_council = {
-    name=MDL_nomarchical_council
-    portraits={
-      civilian={
-        large="gfx/leaders/MDL/nomarchy_council.tga"
-      }
-    }
-  }
   MDL_ovingo_assembly = {
     name=MDL_ovingo_assembly
     portraits={

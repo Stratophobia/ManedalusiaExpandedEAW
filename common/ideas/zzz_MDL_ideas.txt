@@ -790,6 +790,12 @@ ideas = {
     }
   }
   country = {
+    MDL_queen_morticia = {
+      picture = ABY_morticia
+      modifier = {
+        stability_factor = 0.10
+      }
+    }
     MDL_paying_MGY = {
       picture = HUN_treaty_of_triannon
       modifier = {
@@ -937,6 +943,24 @@ ideas = {
   }
 #HOLY WAR IDEAS
   country = {
+    MDL_demon_of_the_outer_night = {
+      picture = MDL_demon
+      on_add = {
+        add_political_power = 1000
+        add_stability = 0.75
+        add_war_support = 0.75
+        add_equipment_to_stockpile = { type = infantry_equipment amount = 25000 producer = EQS }
+        add_equipment_to_stockpile = { type = support_equipment amount = 5000 producer = EQS }
+      }
+      modifier = {
+        political_power_gain = 0.10
+        industrial_capacity_factory = 0.10
+      }
+      cancel = {
+        is_ai = no
+        MDL = { is_ai = yes }
+      }
+    }
     MDL_ember = {
       picture = MDL_ember
       modifier = {
