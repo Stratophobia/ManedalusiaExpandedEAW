@@ -579,3 +579,12 @@ MDL_shuffle_grifo_heteronym = {
     }
   }
 }
+
+MDL_holy_war_gimp_CHN = {
+  CHN = {
+    add_political_power = -3000
+    add_war_support = -0.75
+    add_stability = -0.75
+    add_manpower = -999999
+  }
+}

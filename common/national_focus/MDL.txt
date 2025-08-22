@@ -2690,7 +2690,10 @@ shared_focus = {
   prerequisite = { focus = MDL_better_gear focus = MDL_better_guns }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_citizen_guard"
-    set_technology = { tech_military_police = 1 }
+    if = {
+      limit = { NOT = { has_tech = tech_military_police } }
+      set_technology = { tech_military_police = 1 }
+    }
     add_ideas = MDL_citizen_guard_idea
   }
   search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_STABILITY FOCUS_FILTER_MANPOWER}

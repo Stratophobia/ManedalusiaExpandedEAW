@@ -65,7 +65,6 @@ on_actions = {
       if = {
         limit = {
           has_country_flag = MDL_velvet_path
-          EQS = { has_civil_war = yes }
           has_global_flag = daybreaker_spawned
         }
         clr_country_flag = MDL_velvet_path
