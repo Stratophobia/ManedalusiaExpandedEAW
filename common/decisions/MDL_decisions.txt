@@ -48,6 +48,24 @@ political_actions = {
 }
 
 MDL_shield_doctrine_tab = {
+  MDL_shield_puppet_ZAR = {
+    icon = eng_trade_unions_support
+    visible = {
+      ZAR = { exists = no }
+      owns_state = 747
+    }
+    complete_effect = {
+      hidden_effect = {
+        ZAR = {
+          set_cosmetic_tag = ZAR_MDL_admin
+          load_focus_tree = {
+            tree = generic_zebra_focus
+          }
+        }
+      }
+      release_puppet = ZAR
+    }
+  }
   MDL_shield_attack_BAT = {
     icon = crossed_swords
     available = { has_war = no }
@@ -259,7 +277,12 @@ MDL_holy_war_tab = {
     cost = 0
     visible = {
       has_completed_focus = MDL_warplan_dragon
-      any_occupied_country = { tag = EQS }
+      any_occupied_country = {
+        OR = {
+          tag = EQS
+          tag = NLR
+        }
+      }
     }
     available = {
       has_war = no

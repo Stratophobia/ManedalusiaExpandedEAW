@@ -2501,7 +2501,10 @@ shared_focus = {
 	prerequisite = { focus = MDL_go_with_alneighzari focus = MDL_go_with_samira }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_bigger_cannons"
-    set_technology = { gw_artillery = 1 }
+    if = {
+      limit = { NOT = { has_tech = gw_artillery } }
+      set_technology = { gw_artillery = 1 }
+    }
 		add_tech_bonus = {
 			name = MDL_artillery
 			bonus = 1.0
@@ -5352,6 +5355,18 @@ shared_focus = {
   }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_secure_klugetown"
+    if = {
+      limit = {
+        ABY = {
+          has_civil_war = no
+          has_government = communism
+        }
+      }
+      declare_war_on = {
+        type = puppet_wargoal_focus
+        target = ABY
+      }
+    }
     create_wargoal = {
       type = annex_everything
       target = KLG
@@ -6012,9 +6027,24 @@ shared_focus = {
       is_subject_of = ROOT
       owns_state = 3
     }
-    VAN = { exists = no }
-    SCS = { exists = no }
-    LSP = { exists = no }
+    VAN = {
+      OR = {
+        exists = no
+        has_government = democratic
+      }
+    }
+    SCS = {
+      OR = {
+        exists = no
+        has_government = democratic
+      }
+    }
+    LSP = {
+      OR = {
+        exists = no
+        has_government = democratic
+      }
+    }
   }
 
   completion_reward = {

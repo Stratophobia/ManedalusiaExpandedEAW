@@ -3490,6 +3490,7 @@
           add_core_of = DRG
         }
       }
+      release_puppet = DRG
     }
   }
 

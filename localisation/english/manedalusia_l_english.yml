@@ -455,6 +455,9 @@
   manedalusia.144.t:0 "War In The Heavens"
   manedalusia.144.d:0 "\"It isn't right.\"\n\nMoonstriker had never seen Armil as somber as he had been since the start of their assignment. While Manedalusian scouting vessels gathered intelligence on fleet movements in the Starry Sea, they had been hanging back, off the coast of Abyssinia. In the late afternoon, just before total sunset, the stallion had gotten into the habit of staring off into the horizon from the main deck, observing the sun and moon in the sky. Ever since the Eclipse that the celestial bodies bore an inescapable aura of malice; their radiances were no longer complementary, and seemed to struggle with each other to conquer the heavenly sphere.\n\n\"Look at the way they move\", he said when Laylah got close. \"It just isn't right. Nature should not fight itself in this manner. Its elements were created for each other's mutual benefit.\"\n\nWhile no one in Manedalusia had spent these last few months in a good mental place, it was Khaldun's state that worried Laylah the most. He had lost a good portion of his levity, and seemingly transformed into a different creature entirely. \"What will happen if we fail, Khaldun?\", she asked. \"Do you think-?\"\n\n\"No!\", he snapped back. Rubbing his eyes and gaining his composure, he calmly continued: \"Do not poison your mind with the possibility of failure, Laylah. We will succeed.\""
   manedalusia.144.a:0 "\"We have to.\""
+  manedalusia.145.t:0 "What The Heart Wants"
+  manedalusia.145.d:0 "Samira tilted her head, and the small beast mimicked her action. When she raised a hoof towards it, it no longer hissed, and allowed her to touch its scales without complaint.\n\n\"Hey, he likes you!\", cheered Al-Neighzari when he saw the Grandmistress. \"Xerxes is usually not really a fan of other ponies. Or zebras, for that matter! You must have a way with animals.\"\n\n\"Standing among the Koltāliba is not too different from dealing with tamed beasts.\", replied Samira. \"It's the nature of our trade. You become comfortable in it with time.\"\n\n\"Well, reckon you'll have more time to do that now that we're largely done. It was a pleasure working with you, miss!, Through all the highs and lows. And...\" he chuckled. \"I can think of one pony that'll be missing your presence more than I.\"\n\nSamira stood quiet, like she didn't really understand the question. \"Oh, come on!\", he laughed. \"I mean the artillery officer, Mehmet I believe is his name. The poor guy's head over heels for you! Can you not see it?\"\n\nSamira shrugged. \"We all have our duties, Al-Neighzari. Mine bind me to chastity, both in body and mind. How Mehmet feels about me is neither here nor there.\"\n\n\"How cold of you.\", the engineer smirked while allowing Xerxes to wrap around his hoof. \"When I was a young foal, I used to read old poetry about unreturned love. I suppose it's made me something of a hopeless romantic. Do tell, Samira- if we've worked together for long enough for you to confide- do you truly feel nothing for Mehmet, nor anypony else?\"\n\nThe Grandmistress held an uncomfortable silence, before at last responding: \"In my line of work, undue sentiments are a liability, and I never take unneeded risks. That is all you need to know, Al-Neighari.\"\nWith that said, the Grandmistress bid Farewell and left the engineer's office. Al-Neighari let Xerxes slither out of his hoof and into his cage, while continuing to hold a sly smile."
+  manedalusia.145.a:0 "\"Alas, the Heart does not abide to reason, Samira.\""
 ###NEWS EVENTS###
   manedalusia_news.1.t:0 "The Army of Divine Retribution"
   manedalusia_news.1.d:0 "[This.GetNewspaperHeader]The world watches in horror as the situation in the Abyssinian occupied territory of Manedalusia escalates into total war. The warlord Crimson Sayf has signed a decree explictily targetting the civilian population of Abyssinia, and his armed forces are now sacking and destroying the eastern countryside as they make their way towards the capital. It seems the Manedalusian seeks to wholly destroy Abyssinia in a cruel act of revenge."
@@ -552,6 +555,7 @@
   MDL_katren_accord_desc:0 "Wingbardy's presence in Zebrica is worrysome, but with Abyssinia secured under Manedalusian purview, any perfidious ambitions on part of their governmetn might be moot. In the interest of continual peace, we will propose a treaty for the return of Purrsia and Katren to Abyssinia, in exchange for monetary compensation. Hopefully, the Wingbardians will listen to reason."
   MDL_recognize_SDS:0 "Offer Recognition to the Arabian Republic"
   MDL_recognize_SDS_desc:0 "The political climate in Arabia remains uncertain, but one thing is clear: it would only be beneficial for all creatures in West Zebrica if the Harmonic government of Gallarb was given primacy. We will establish diplomatic channels with the Arabian Republic and offer them a proposal for mutual recognition of sovereignty."
+  MDL_shield_puppet_ZAR:0 "Integrate Zarantia into the Junnah Doctrine"
 #OTHERS
   CHN_manedalusia_protectorate:0 "Form the Manedalusian Protectorate"
   MDL_colthage_treaty_decision:0 "Restore Our Partnership With Colthage"
@@ -1541,12 +1545,12 @@
   MDL_JUNNAH:0 "Holy Shield"
   MDL_IMPERIO:0 "Esfera Imperial De Cartínia"
 ###ABYSSINIA PUPPET###
-  ABY_FEDERATION:0 "United Nagashists of Abyssinia"
-  ABY_FEDERATION_DEF:0 "the United Nagashists of Abyssinia"
-  ABY_FEDERATION_ADJ:0 "Abyssinian"
-  ABY_MDL_admin:0 "Himā Al-Habasha"
-  ABY_MDL_admin_DEF:0 "the Himā Al-Habasha"
-  ABY_MDL_admin_ADJ:0 "Abyssinian"
+  ABY_FEDERATION_neutrality:0 "United Nagashists of Abyssinia"
+  ABY_FEDERATION_neutrality_DEF:0 "the United Nagashists of Abyssinia"
+  ABY_FEDERATION_neutrality_ADJ:0 "Abyssinian"
+  ABY_MDL_admin_democratic:0 "Himā Al-Habasha"
+  ABY_MDL_admin_democratic_DEF:0 "Al-Himā Al-Habasha"
+  ABY_MDL_admin_democratic_ADJ:0 "Abyssinian"
   MDL_abyssinia_assembly:0 "Fēderalawī Mikir Bēt"
   ABY_MDL_ADMIN_PARTY_NAME_LONG:0 "Manedalusian Protectorate Administration"
   ABY_MDL_ADMIN_PARTY_NAME:0 "Manedalusian Administration"
@@ -1570,6 +1574,9 @@
   DRG_EKS_war_ADJ:0 "Equestrian"
   DRG_EKS_peace:0 "Provisional Commonwealth of Equestria"
   DRG_EKS_peace_DEF:0 "the Provisional Commonwealth of Equestria"
+  ZAR_MDL_admin_democratic:0 "Ittihād Al-Zarāntiyyah"
+  ZAR_MDL_admin_democratic_DEF:0 "Al-Ittihād Al-Zarāntiyyah"
+  ZAR_MDL_admin_democratic_ADJ:0 "Zarantian"
   DRG_EKS_peace_ASJ:0 "Equestrian"
 ###CUSTOM TAGS - FEDERATION###
   MDL_federal_republic:0 "Federal Republic of Manedalusia"
@@ -1730,13 +1737,13 @@
   decision_cost_CP_25_AXP_25_tooltip:0 "It costs [This.GetDecisionCostCP25AXP25] to take the decision"
 ###LEADER TRAITS###
   MDL_samira_lady_commander:0 "§GLady Commander of Manedalusia, Stewardess of The Holy State, First Among the Servants of His Righteous Will and Protector of the Faithful§!"
-  MDL_grifo_lord_regent_of_overseas:0 "§BLord-Governor Of The Overseas Dominion§!"
+  MDL_grifo_lord_regent_of_overseas:0 "§CLord-Governor Of The Overseas Dominion§!"
   MDL_grifo_imperial_regent:0 "§rLord-Regent Of Sacred Karthin's Imperial Throne§!"
   MDL_sayf_pretender:0 "Unproven Pretender"
-  MDL_sayf_sword_of_ash_shahid:0 "§RThe Sword Of Ash-Shahid§r"
+  MDL_sayf_sword_of_ash_shahid:0 "§RThe Sword Of Ash-Shahid§!"
   MDL_sayf_spirit_of_vengeance:0 "§RSpirit of Vengeance§!"
   MDL_sayf_completely_numb:0 "Completely Numb"
-  MDL_breaker_of_chains:0 "§BBreaker of Chains§!"
+  MDL_breaker_of_chains:0 "§CBreaker of Chains§!"
   MDL_sunset_fundamentalist:0 "Fundamentalist"
 ###TRAITS###
   MDL_logistical_cantrips_trait:0 "Logistical Cantrips"
@@ -1756,6 +1763,9 @@
 ###TNO QUOTES####
   GetTNOReference_MDL_Grifo:0 "Was it worth it? All things are worth it."
   GetTNOReference_MDL_holy_war:0 "Their faith did not falter, not even for an instant."
+###HIDDEN IDEAS###
+  CHN_holy_war_ai_debuff:0 "CHN Holy War Debuff"
+  CHN_holy_war_ai_debuff_desc:0 "Meant for the Changeling Lands in the Holy War campaign for Manedalusia."
 ###WELCOME SCREEN###
   EAW_WS_MDL:0 "[Root.GetNameDefCap] - The Witnesses of Ash-Shahid"
   EAW_WS_MDL_desc:0 "\"To Be is to Perceive; and He who Perceives All holds dominion over all. By His dreams was the world shaped from the Outer Night. \"\n- Opening Passage from the Book of Revelation\n\nSome centuries before Luna's banishment, the §YMaregyptian Kingdom§! at that time had been stretching outward, establishing colonial outposts and mercantile bases beyond the barely inhabited desert reaches of the country, nestled along critical nodes of sea travel through the Green Bay. Coltoba was one such city, built in the fairly temperate coast beyond the Kom Marebo as a border fortress and trading post between the heartland of Maregypt and the catfolk of §rAbyssinia§!. For some generations, the city remained as a fairly independent, but still ultimately integral part of Maregypt.\n\nThat would change when a horse from distant Arabia, taking the name of Al-Wallid after his father, came to the port city, emerging from his exile by his older brother. Al-Wallid II subscribed to a very particular interpretation of ancient Arabian religious traditions. He came to the city during a moment of weakness for Maregypt, when its armies could not hope to circumnavigate the desert or travel by sea with a large force to contest him; and as such, he routed the city's garrison with a small mercenary force and conquered it for himself, declaring an Emirate and, eventually, a Sultanate. So was born the ancient and venerable §YHouse of Everleaf§!.\n\nThe §GSultanate of Al-Manedalus§! remained a regional power for a little over a century, and became a near omnipresent economic juggernaut around Western and Northern Zebrica, only topped by contemporary §CKolt-Hadast§!. Unfortunately for the young nation, the last Sultan of Everleaf died heirless in battle against the city of Manephis, believing both that he could take advantage of the destabilized Maregyptian Kingdom's weakness to expand his domain, and convinced the Pharaoh was responsible for the suspicious death of his father. Following his defeat, the coast of Manedalusia was retaken by Maregyptian forces, the Sultanate declared null and void, and Manedalusia's independence extinguished for the millenium that followed.\n\nThe roughly millenium-long period of foreign rule is known to Manedalusians as the §!the Ages of Humility§!; two centuries-long periods of darkness and economic stagnation, though the ponies of Al-Manedalus did enjoy some respite during the §YGolden Age of Sailing§!, when the Kingdom of Abyssinia ruled them as a province. This period was ended when Saddle Arabia took Manedalusia and strangled its profitable trade routes.\n\nIn the wake of Arabia's political collapse and Abyssinia's introduction of slavery into the region, the future seems dire for the Manedalusians, who even after all this time hold on to their religion and culture. What the future holds for this humble city and its wider nation remains uncertain..."

@@ -945,17 +945,6 @@ ideas = {
   country = {
     MDL_demon_of_the_outer_night = {
       picture = MDL_demon
-      on_add = {
-        add_political_power = 1000
-        add_stability = 0.75
-        add_war_support = 0.75
-        add_equipment_to_stockpile = { type = infantry_equipment amount = 25000 producer = EQS }
-        add_equipment_to_stockpile = { type = support_equipment amount = 5000 producer = EQS }
-      }
-      modifier = {
-        political_power_gain = 0.10
-        industrial_capacity_factory = 0.10
-      }
       cancel = {
         is_ai = no
         MDL = { is_ai = yes }
@@ -1027,14 +1016,14 @@ ideas = {
       picture = MDL_rally_the_faithful
       modifier = {
         special_forces_cap = 0.25
-        weekly_manpower = 750
+        weekly_manpower = 600
       }
     }
     MDL_rally_the_faithful_2 = {
       picture = MDL_rally_the_faithful
       modifier = {
         special_forces_cap = 0.50
-        weekly_manpower = 1250
+        weekly_manpower = 900
       }
     }
     MDL_holy_fury = {
@@ -1331,6 +1320,32 @@ ideas = {
         production_factory_efficiency_gain_factor = 0.10
       }
     }
+  }
+###HIDDEN IDEAS###
+  hidden_ideas = {
+    CHN_holy_war_ai_debuff = {
+      available = { is_ai = yes }
+      cancel = { is_ai = no }
+      removal_cost = -1
+
+			modifier = {
+				training_time_army_factor = 0.5
+				army_morale_factor = -0.25
+        army_attack_factor = -0.50
+        army_defence_factor = -0.50
+				industrial_capacity_factory = -0.90
+			}
+      targeted_modifier = {
+        tag = EQS
+        attack_bonus_against = -0.95
+        defense_bonus_against = 0.95
+      }
+      targeted_modifier = {
+        tag = NLR
+        attack_bonus_against = -0.95
+        defense_bonus_against = -0.95
+      }
+		}
   }
 }
 

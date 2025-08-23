@@ -586,5 +586,10 @@ MDL_holy_war_gimp_CHN = {
     add_war_support = -0.75
     add_stability = -0.75
     add_manpower = -999999
+    add_ideas = CHN_holy_war_ai_debuff
+  }
+  every_other_country = {
+    limit = { is_subject_of = CHN }
+    add_ideas = CHN_holy_war_ai_debuff
   }
 }
