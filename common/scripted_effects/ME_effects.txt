@@ -247,6 +247,19 @@ MDL_create_dynamic_DRG = {
 }
 
 MDL_elevate_virianthrax = {
+  generate_character = {
+    token_base = MDL_virianthrax
+    name = MDL_virianthrax
+  }
+  set_portraits = {
+    character = MDL_virianthrax
+    civilian={
+      large="gfx/leaders/MDL/virianthrax.tga"
+    }
+    army = {
+      large = "gfx/leaders/MDL/MDL_virianthrax.tga"
+    }
+  }
   add_country_leader_role = {
     character = MDL_virianthrax
     country_leader = {

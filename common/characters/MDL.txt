@@ -409,6 +409,7 @@ characters={
       idea_token=MDL_pacific_sunset
       cost = 150
       allowed = { always = yes }
+      available = { NOT = { has_government = democratic } }
       traits = { prince_of_terror }
     }
   }
@@ -444,14 +445,6 @@ characters={
 			traits = { MDL_military_academy }
 		}
 	}
-  MDL_virianthrax = {
-    name=MDL_virianthrax
-    portraits={
-      civilian={
-        large="gfx/leaders/MDL/virianthrax.tga"
-      }
-    }
-  }
 ###GRIFO EXCLUSIVES###
   MDL_antonio_aviario = {
     name=MDL_antonio_aviario

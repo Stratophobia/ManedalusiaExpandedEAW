@@ -91,13 +91,8 @@
       ai_chance = {
         base = 70
         modifier = {
-          factor = 0
-          OR = {
-            MDL = { has_country_flag = MDL_AI_CRIMSON_SULTAN }
-            MDL = { has_country_flag = MDL_AI_SENATE }
-            MDL = { has_country_flag = MDL_AI_VELVET }
-            MDL = { has_country_flag = MDL_AI_ULTRAMAR }
-          }
+          base = 0
+          MDL_has_set_path_rules = yes
         }
       }
       country_event = { id = manedalusia.65 }
@@ -108,13 +103,8 @@
       ai_chance = {
         base = 5
         modifier = {
-          factor = 0
-          OR = {
-            MDL = { has_country_flag = MDL_AI_CRIMSON_SULTAN }
-            MDL = { has_country_flag = MDL_AI_SENATE }
-            MDL = { has_country_flag = MDL_AI_VELVET }
-            MDL = { has_country_flag = MDL_AI_ULTRAMAR }
-          }
+          base = 0
+          MDL_has_set_path_rules = yes
         }
       }
       country_event = { id = manedalusia.58 }
@@ -128,12 +118,7 @@
         base = 25
         modifier = {
           base = 100
-          OR = {
-            MDL = { has_country_flag = MDL_AI_CRIMSON_SULTAN }
-            MDL = { has_country_flag = MDL_AI_SENATE }
-            MDL = { has_country_flag = MDL_AI_VELVET }
-            MDL = { has_country_flag = MDL_AI_ULTRAMAR }
-          }
+          MDL_has_set_path_rules = yes
         }
       }
       release = MDL
