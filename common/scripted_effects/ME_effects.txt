@@ -331,15 +331,6 @@ MDL_djinn_SOL_setup = {
     }
     NLR = { add_ideas = MDL_demon_of_the_outer_night }
   }
-  if = {
-    limit = {
-      CHN = {
-        exists = yes
-        is_ai = yes
-      }
-    }
-    CHN = { add_political_power = - 9999 }
-  }
 }
 
 MDL_holy_war_autodo_military_focuses = {
@@ -593,16 +584,21 @@ MDL_shuffle_grifo_heteronym = {
   }
 }
 
-MDL_holy_war_gimp_CHN = {
-  CHN = {
-    add_political_power = -3000
-    add_war_support = -0.75
-    add_stability = -0.75
-    add_manpower = -999999
-    add_ideas = CHN_holy_war_ai_debuff
-  }
+MDL_holy_war_gimp_all_empress_enemies = {
   every_other_country = {
-    limit = { is_subject_of = CHN }
-    add_ideas = CHN_holy_war_ai_debuff
+    limit = {
+      is_ai = yes
+      OR = {
+        OR = {
+          original_tag = CHN
+          original_tag = LSP
+          original_tag = SCS
+          original_tag = STG
+          original_tag = VAN
+        }
+        is_subject_of = CHN
+      }
+    }
+    add_ideas = MDL_holy_war_ai_debuff
   }
 }

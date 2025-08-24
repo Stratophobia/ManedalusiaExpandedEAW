@@ -2409,10 +2409,8 @@
         }
         
         if = {
-          limit = {
-            CHN = { is_ai = yes }
-          }
-          MDL_holy_war_gimp_CHN = yes
+          limit = { is_ai = no }
+          MDL_holy_war_gimp_all_empress_enemies = yes
         }
 
         MDL_djinn_SOL_setup = yes

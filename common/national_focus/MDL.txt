@@ -1117,7 +1117,6 @@ shared_focus = {
         slot = political_advisor
         idea_token = MDL_senate
         cost = 50
-        allowed = { original_tag = MDL }
         traits = { MDL_subdued_senate }
       }
     }
@@ -2376,7 +2375,7 @@ shared_focus = {
       }
     }
     else = {
-      add_idea = MDL_place_in_the_sun_idea
+      add_ideas = MDL_place_in_the_sun_idea
     }
   }
   search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_ARMY_BONUS }
@@ -2398,7 +2397,10 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_army_stuff"
-    set_technology = { tech_support = 1 }
+    if = {
+      limit = { NOT = { has_tech = tech_support } }
+      set_technology = { tech_support = 1 }
+    }
 		army_experience = 25
 	}
   search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_RESEARCH }
@@ -3268,7 +3270,7 @@ shared_focus = {
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_marine_corps"
     add_tech_bonus = {
-			name = MDL_marine_bonus
+			name = MDL_marine_corps
 			bonus = 2.0
 			uses = 2
 			category = marine_tech
@@ -4644,7 +4646,6 @@ shared_focus = {
         slot = political_advisor
         idea_token = MDL_senate
         cost = 50
-        allowed = { original_tag = MDL }
         traits = { MDL_empowered_senate }
       }
     }
@@ -4879,7 +4880,6 @@ shared_focus = {
     focus = MDL_bulwark_of_harmony
     focus = MDL_monument_to_aaliyah
   }
-  mutually_exclusive = { focus = MDL_topple_catwe }
   available = {
     ABY = {
       has_civil_war = no
@@ -4896,9 +4896,9 @@ shared_focus = {
       }
     }
   }
+  will_lead_to_war_with = ABY
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_bring_our_ponies_home"
-    will_lead_to_war_with = ABY
     create_wargoal = {
       type = puppet_wargoal_focus
       target = ABY
@@ -5196,7 +5196,7 @@ shared_focus = {
     custom_effect_tooltip = MDL_rally_the_faithful_tt
     custom_effect_tooltip = MDL_spawn_koltaliba_divs_tt
     hidden_effect = {
-      set_technology = 1842
+      set_technology = { 1842 = 1 }
       load_oob = "MDL_koltaliba"
     }
     set_variable = { MDL_mobilization_var = 0 }
@@ -5315,6 +5315,7 @@ shared_focus = {
   prerequisite = { focus = MDL_our_purpose_made_clear }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_holy_mandates"
+    add_ideas = MDL_holy_fleet
 
     if = {
       limit = { NOT = { has_completed_focus = MDL_industrial_development_program } }
@@ -6078,6 +6079,10 @@ shared_focus = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_get_some_gear"
     add_equipment_to_stockpile = { type = infantry_equipment amount = 2000 producer = GRI }
     add_equipment_to_stockpile = { type = support_equipment amount = 150 producer = GRI }
+    if = {
+      limit = { NOT = { has_tech = tech_support } }
+      set_technology = { tech_support = 1 }
+    }
     add_tech_bonus = {
       name = MDL_get_some_gear
       bonus = 1.0
@@ -6679,8 +6684,8 @@ shared_focus = {
         instant_build = yes
       }
     }
-    search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
   }
+  search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
 }
 
 shared_focus = {
@@ -7904,7 +7909,7 @@ shared_focus = {
 }
 
 shared_focus = {
-  id = MDL_samira_1
+  id = MDL_samira_1_1
   icon = GFX_focus_ger_reichskommisariats
 
   x = 15

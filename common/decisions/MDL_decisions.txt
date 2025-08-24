@@ -412,7 +412,7 @@ MDL_holy_war_tab = {
       custom_effect_tooltip = MDL_operation_sundown_tt
       hidden_effect = { set_country_flag = MDL_can_peaceout_new_mareland }
       declare_war_on = {
-        type = annex_country
+        type = annex_everything
         target = EQC
       }
     }

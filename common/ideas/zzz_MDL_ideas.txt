@@ -946,8 +946,20 @@ ideas = {
     MDL_demon_of_the_outer_night = {
       picture = MDL_demon
       cancel = {
-        is_ai = no
-        MDL = { is_ai = yes }
+        OR = {
+          is_ai = no
+          MDL = { is_ai = yes }
+        }
+      }
+    }
+    MDL_holy_fleet = {
+      picture = MDL_holy_fleet
+      modifier = {
+        industrial_capacity_dockyard = 0.50
+        naval_coordination = 0.05
+        experience_gain_navy_factor = 0.10
+        refit_speed = 0.15
+        repair_speed_factor = 0.15
       }
     }
     MDL_ember = {
@@ -1323,27 +1335,26 @@ ideas = {
   }
 ###HIDDEN IDEAS###
   hidden_ideas = {
-    CHN_holy_war_ai_debuff = {
+    MDL_holy_war_ai_debuff = {
       available = { is_ai = yes }
       cancel = { is_ai = no }
       removal_cost = -1
 
 			modifier = {
-				training_time_army_factor = 0.5
-				army_morale_factor = -0.25
-        army_attack_factor = -0.50
-        army_defence_factor = -0.50
+				training_time_army_factor = 0.75
+				army_morale_factor = -0.50
 				industrial_capacity_factory = -0.90
+        political_power_factor = -0.90
 			}
       targeted_modifier = {
         tag = EQS
-        attack_bonus_against = -0.95
-        defense_bonus_against = 0.95
+        attack_bonus_against = -0.99
+        defense_bonus_against = 0.99
       }
       targeted_modifier = {
         tag = NLR
-        attack_bonus_against = -0.95
-        defense_bonus_against = -0.95
+        attack_bonus_against = -0.99
+        defense_bonus_against = -0.99
       }
 		}
   }
