@@ -2027,7 +2027,6 @@ MDL_puppet_RIV = {
 			NOT = { has_war_with = FROM }
 		}
 		days_remove = 50
-    will_lead_to_war_with = FROM
     visible = {
       has_country_flag = MDL_imperium_decisions_unlocked
       has_country_flag = MDL_imperium_restored
@@ -2107,7 +2106,7 @@ MDL_puppet_RIV = {
 			NOT = { has_war_with = FROM }
 		}
 		days_remove = 50
-    will_lead_to_war_with = FROM
+
     visible = {
       has_country_flag = MDL_imperium_decisions_unlocked
       has_country_flag = MDL_imperium_restored
@@ -2184,7 +2183,7 @@ MDL_puppet_RIV = {
 			NOT = { has_war_with = FROM }
 		}
 		days_remove = 50
-    will_lead_to_war_with = FROM
+
     visible = {
       has_country_flag = MDL_imperium_decisions_unlocked
       has_country_flag = MDL_imperium_restored
@@ -2267,7 +2266,7 @@ MDL_puppet_RIV = {
 			NOT = { has_war_with = FROM }
 		}
 		days_remove = 50
-    will_lead_to_war_with = FROM
+
     visible = {
       has_country_flag = MDL_imperium_decisions_unlocked
       has_country_flag = MDL_imperium_restored
@@ -2340,7 +2339,7 @@ MDL_puppet_RIV = {
 			NOT = { has_war_with = FROM }
 		}
 		days_remove = 50
-		will_lead_to_war_with = FROM
+
     visible = {
       has_country_flag = MDL_imperium_decisions_unlocked
       has_country_flag = MDL_imperium_restored
@@ -2406,7 +2405,7 @@ MDL_puppet_RIV = {
 			NOT = { has_war_with = FROM }
 		}
 		days_remove = 50
-		will_lead_to_war_with = FROM
+
     visible = {
       has_country_flag = MDL_imperium_decisions_unlocked
       has_country_flag = MDL_imperium_restored
@@ -2477,7 +2476,7 @@ MDL_puppet_RIV = {
 			NOT = { has_war_with = FROM }
 		}
 		days_remove = 50
-    will_lead_to_war_with = FROM
+
     visible = {
       has_country_flag = MDL_imperium_decisions_unlocked
       has_country_flag = MDL_imperium_restored
@@ -2565,7 +2564,7 @@ MDL_puppet_RIV = {
 			NOT = { has_war_with = FROM }
 		}
 		days_remove = 50
-    will_lead_to_war_with = FROM
+
     visible = {
       has_country_flag = MDL_imperium_decisions_unlocked
       has_country_flag = MDL_imperium_restored
@@ -2645,7 +2644,7 @@ MDL_puppet_RIV = {
 			NOT = { has_war_with = FROM }
 		}
 		days_remove = 50
-    will_lead_to_war_with = FROM
+
     visible = {
       has_country_flag = MDL_imperium_decisions_unlocked
       has_country_flag = MDL_imperium_restored
@@ -2722,7 +2721,7 @@ MDL_puppet_RIV = {
 			NOT = { has_war_with = FROM }
 		}
 		days_remove = 50
-    will_lead_to_war_with = FROM
+
     visible = {
       has_country_flag = MDL_imperium_decisions_unlocked
 			country_exists = FROM

@@ -1336,7 +1336,6 @@ ideas = {
 ###HIDDEN IDEAS###
   hidden_ideas = {
     MDL_holy_war_ai_debuff = {
-      available = { is_ai = yes }
       cancel = { is_ai = no }
       removal_cost = -1
 

@@ -1,47 +1,40 @@
 leader_traits = {
 	MDL_council_unstable_trait = {
 		allowed = { always = yes }
-		ai_will_do = { factor = 1 }
+		ai_will_do = { factor = 0 }
 		stability_factor = -0.10
 	}
 	MDL_sunset_fundamentalist = {
-		allowed = { always = yes }
-		ai_will_do = { factor = 1 }
+		ai_will_do = { factor = 0 }
 		monthly_population = 0.1
 		communism_drift = 0.01
 	}
 	MDL_sayf_pretender = {
-		allowed = { always = yes }
-		ai_will_do = { factor = 1 }
+		ai_will_do = { factor = 0 }
 		stability_factor = -0.05
 		political_power_cost = 0.10
 		fascism_drift = -0.03
 	}
   MDL_sayf_sword_of_ash_shahid = {
-    allowed = { always = yes }
     special_forces_attack_factor = 0.10
     army_attack_factor = 0.05
   }
   MDL_sayf_spirit_of_vengeance = {
-    allowed = { always = yes }
     targeted_modifier = {
 			tag = ABY
 			army_attack_factor = 0.10
 		}
   }
   MDL_sayf_completely_numb = {
-    allowed = { always = yes }
-      political_power_gain = -2.0
+    political_power_gain = -2.0
   }
   MDL_subdued_senate = {
-    allowed = { always = yes }
     economy_cost_factor = -0.05
     trade_laws_cost_factor = -0.05
     mobilization_laws_cost_factor = -0.05
     fascism_drift = 0.04
   }
   MDL_empowered_senate = {
-    allowed = { always = yes }
     economy_cost_factor = -0.10
     trade_laws_cost_factor = -0.10
     mobilization_laws_cost_factor = 0.05
@@ -63,12 +56,10 @@ leader_traits = {
     fascism_drift = 0.02
   }
   MDL_breaker_of_chains = {
-    allowed = { always = yes }
     stability_factor = 0.10
     democratic_drift = 0.03
   }
   MDL_samira_lady_commander = {
-    allowed = { always = yes }
     special_forces_attack_factor = 0.10
     army_attack_factor = 0.05
     stability_weekly = 0.003

@@ -1130,7 +1130,7 @@ shared_focus = {
   x = 1
   y = 1
   relative_position_id = MDL_neighle_infrastructure
-  cost = 2,90
+  cost = 2.90
   prerequisite = { focus = MDL_neighle_infrastructure }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_annex_ovingoland"
@@ -4126,7 +4126,6 @@ shared_focus = {
         add_ideas = MDL_federation_member
         set_politics = {
           ruling_party = neutrality
-          allow_elections = no
         }
       }
     }
@@ -4271,7 +4270,6 @@ shared_focus = {
         }
         set_politics = {
           ruling_party = neutrality
-          allow_elections = no
         }
         set_party_name = {
           ideology = neutrality
@@ -4365,7 +4363,6 @@ shared_focus = {
         }
         set_politics = {
           ruling_party = neutrality
-          allow_elections = no
         }
         set_party_name = {
           ideology = neutrality
@@ -4389,7 +4386,6 @@ shared_focus = {
         }
         set_politics = {
           ruling_party = neutrality
-          allow_elections = no
         }
         set_party_name = {
           ideology = neutrality
@@ -4466,7 +4462,6 @@ shared_focus = {
         }
         set_politics = {
           ruling_party = neutrality
-          allow_elections = no
         }
         set_party_name = {
           ideology = neutrality
@@ -4543,7 +4538,6 @@ shared_focus = {
         add_ideas = MDL_federation_member
         set_politics = {
           ruling_party = democratic
-          allow_elections = no
         }
       }
       set_nationality = {
@@ -4563,7 +4557,6 @@ shared_focus = {
         }
         set_politics = {
           ruling_party = neutrality
-          allow_elections = no
         }
         set_party_name = {
           ideology = neutrality
