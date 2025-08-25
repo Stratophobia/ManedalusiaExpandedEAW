@@ -220,6 +220,16 @@ MDL_shield_doctrine_tab = {
           }
         }
       }
+      if = {
+        limit = {
+          MGY = { owns_state = 956 }
+          ABY = {
+            owns_state = 810
+            owns_state = 790
+          }
+        }
+        country_event = { id = manedalusia.72 days = 2 }
+      }
     }
   }
   MDL_transfer_to_MGY = {
@@ -250,6 +260,16 @@ MDL_shield_doctrine_tab = {
             state = PREV
           }
         }
+      }
+      if = {
+        limit = {
+          MGY = { owns_state = 956 }
+          ABY = {
+            owns_state = 810
+            owns_state = 790
+          }
+        }
+        country_event = { id = manedalusia.72 days = 2 }
       }
     }
   }

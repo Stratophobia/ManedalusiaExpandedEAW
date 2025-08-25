@@ -2,6 +2,10 @@ MDL_CHN = {
 	color = rgb { 60 64 86 }
 	color_ui = rgb { 60 64 86 }
 }
+MDL_grand_sultanate = {
+  color = rgb { 5 143 5 }
+  color_ui = rgb { 5 143 5 }
+}
 DRG_EKS_peace = {
   color = rgb { 158 242 117 }
   color_ui = rgb { 158 242 117 }

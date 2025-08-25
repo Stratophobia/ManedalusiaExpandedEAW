@@ -2027,7 +2027,7 @@
     }
   }
 
-  country_event = {#Katren test event
+  country_event = {#FREE
     id = manedalusia.72
     title = manedalusia.72.t
     desc = manedalusia.72.d
@@ -2035,13 +2035,13 @@
 
     option = {
       name = manedalusia.72.a
-      KTR = {
-        transfer_state = 1200
+      hidden_effect = {
+        MDL_get_all_resources_ABY_MGY = yes
       }
     }
   }
 
-  country_event = {#Suleiman swears revenge
+  country_event = {#FREE
     id = manedalusia.73
     title = manedalusia.73.t
     desc = manedalusia.73.d
@@ -2052,7 +2052,7 @@
     }
   }
 
-  country_event = {#Katren Legation - ABY
+  country_event = {#FREE
     id = manedalusia.74
     title = manedalusia.74.t
     desc = manedalusia.74.d
@@ -2061,14 +2061,9 @@
     option = {
       name = manedalusia.74.a
     }
-    option = {
-      name = manedalusia.74.b
-      trigger = { is_ai = no }
-      KTR = { change_tag_from = ROOT }
-    }
   }
 
-  country_event = {#Katren legation - MDL
+  country_event = {#FREE
     id = manedalusia.75
     title = manedalusia.75.t
     desc = manedalusia.75.d
@@ -2076,11 +2071,6 @@
 
     option = {
       name = manedalusia.75.a
-    }
-    option = {
-      name = manedalusia.75.b
-      trigger = { is_ai = no }
-      KTR = { change_tag_from = ROOT }
     }
   }
 

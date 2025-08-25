@@ -24,21 +24,21 @@ units = {
 		name = "Koltāliba Regiment"
 		location = 12234
 		division_template = "Hashm Koltāliba"
-		start_experience_factor = 1
-		start_equipment_factor = 1
+		start_experience_factor = 1.0
+		start_equipment_factor = 1.0
 	}
   division = {
 		name = "Koltāliba Regiment"
 		location = 12234
 		division_template = "Hashm Koltāliba"
-		start_experience_factor = 1
-		start_equipment_factor = 1
+		start_experience_factor = 1.0
+		start_equipment_factor = 1.0
 	}
   division = {
 		name = "Koltāliba Regiment"
 		location = 12234
 		division_template = "Hashm Koltāliba"
-		start_experience_factor = 1
-		start_equipment_factor = 1
+		start_experience_factor = 1.0
+		start_equipment_factor = 1.0
 	}
 }

@@ -1046,7 +1046,6 @@ ideas = {
         conscription_factor = 0.10
         army_morale_factor = 0.15
         surrender_limit = 0.75
-        weekly_manpower = 250
       }
       targeted_modifier = {
         tag = EQS
