@@ -1,5 +1,41 @@
 spriteTypes = {
   SpriteType = {
+    name = "GFX_MDL_begin_genocide_proper"
+    texturefile = "gfx/interface/goals/MDL/MDL_begin_genocide_proper.tga"
+  }
+  SpriteType = {
+    name = "GFX_MDL_emergency_industry"
+    texturefile = "gfx/interface/goals/MDL/MDL_emergency_industry.tga"
+  }
+  SpriteType = {
+    name = "GFX_MDL_get_the_king"
+    texturefile = "gfx/interface/goals/MDL/MDL_get_the_king.tga"
+  }
+  SpriteType = {
+    name = "GFX_MDL_get_the_militias"
+    texturefile = "gfx/interface/goals/MDL/MDL_get_the_militias.tga"
+  }
+  SpriteType = {
+    name = "GFX_MDL_get_the_strays"
+    texturefile = "gfx/interface/goals/MDL/MDL_get_the_strays.tga"
+  }
+  SpriteType = {
+    name = "GFX_MDL_it_is_done"
+    texturefile = "gfx/interface/goals/MDL/MDL_it_is_done.tga"
+  }
+  SpriteType = {
+    name = "GFX_MDL_sack_mountain_temples"
+    texturefile = "gfx/interface/goals/MDL/MDL_sack_mountain_temples.tga"
+  }
+  SpriteType = {
+    name = "GFX_MDL_kill_them_all"
+    texturefile = "gfx/interface/goals/MDL/MDL_kill_them_all.tga"
+  }
+  SpriteType = {
+    name = "GFX_MDL_loot_the_countryside"
+    texturefile = "gfx/interface/goals/MDL/MDL_loot_the_countryside.tga"
+  }
+  SpriteType = {
     name = "GFX_MDL_kill_the_djinn"
     texturefile = "gfx/interface/goals/MDL/MDL_kill_the_djinn.tga"
   }

@@ -584,6 +584,68 @@ MDL_shuffle_grifo_heteronym = {
   }
 }
 
+MDL_upgrade_knights_technology = {
+	if = {
+		limit = {
+			has_tech = tech_knights
+			NOT = { has_tech = tech_knights2 }
+		}
+		set_technology = {
+			tech_knights2 = 1
+		}
+	}
+	else_if = {
+		limit = {
+			has_tech = tech_knights2
+			NOT = { has_tech = tech_knights_regular }
+		}
+		set_technology = {
+			tech_knights_regular = 1
+		}
+	}
+	else_if = {
+		limit = {
+			has_tech = tech_knights_regular
+			NOT = { has_tech = tech_knights_regular2 }
+		}
+		set_technology = {
+			tech_knights_regular2 = 1
+		}
+	}
+	else_if = {
+		limit = {
+			has_tech = tech_knights_regular2
+			NOT = { has_tech = tech_knights3 }
+		}
+		set_technology = {
+			tech_knights3 = 1
+		}
+	}
+	else_if = {
+		limit = {
+			has_tech = tech_knights3
+			NOT = { has_tech = tech_knights_a }
+		}
+		set_technology = {
+			tech_knights_a = 1
+		}
+	}
+	else_if = {
+		limit = {
+			has_tech = tech_knights_a
+			NOT = { has_tech = tech_knights_b }
+		}
+		set_technology = {
+			tech_knights_b = 1
+		}
+	}
+	else = {
+		set_technology = {
+			tech_knights_c = 1
+		}
+	}
+}
+
 MDL_holy_war_gimp_all_empress_enemies = {
   every_other_country = {
     limit = {
@@ -594,6 +656,7 @@ MDL_holy_war_gimp_all_empress_enemies = {
           original_tag = LSP
           original_tag = SCS
           original_tag = STG
+          original_tag = CRY
           original_tag = VAN
         }
         is_subject_of = CHN

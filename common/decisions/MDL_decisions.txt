@@ -1986,7 +1986,7 @@ MDL_puppet_RIV = {
 		}
 		
 		remove_effect = {
-			LSC_upgrade_knights_technology = yes
+			MDL_upgrade_knights_technology = yes
 		}
 	}
   MDL_research_enchanted_tools_tech = {

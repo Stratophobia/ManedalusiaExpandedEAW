@@ -1802,10 +1802,11 @@
       custom_effect_tooltip = MDL_batshit_insane_tree_loaded_tt
       set_cosmetic_tag = MDL_GENOCIDE
       hidden_effect = {
-        set_country_flag = MDL_genocide
+        set_country_flag = MDL_kill_them_all
         load_focus_tree = {
           tree = manedalusia_sayf_genocide
         }
+        mark_focus_tree_layout_dirty = yes
       }
       declare_war_on = {
         type = annex_everything
@@ -1839,7 +1840,6 @@
       name = manedalusia.62.a
       country_event = { id = manedalusia.63 days = 1 }
       ABY = {
-        retire_character = ABY_catrina_catwe
         retire_character = ABY_sourpuss_dejen
         retire_character = ABY_ras_thurston
         retire_character = ABY_meow_skulls
@@ -2027,7 +2027,7 @@
     }
   }
 
-  country_event = {#FREE
+  country_event = {#In Search Of Something
     id = manedalusia.72
     title = manedalusia.72.t
     desc = manedalusia.72.d
@@ -2041,7 +2041,7 @@
     }
   }
 
-  country_event = {#FREE
+  country_event = {#Sayf kills catrina
     id = manedalusia.73
     title = manedalusia.73.t
     desc = manedalusia.73.d
@@ -2049,6 +2049,7 @@
 
     option = {
       name = manedalusia.73.a
+      ABY = { retire_character = ABY_catrina_catwe }
     }
   }
 

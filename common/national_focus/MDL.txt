@@ -3420,7 +3420,7 @@ shared_focus = {
 #SAYF GENOCIDE PATH
 shared_focus = {
   id = MDL_kill_them_all
-  icon = GFX_goal_support_fascism
+  icon = GFX_MDL_kill_them_all
   x = 10
   y = 0
   cost = 1
@@ -3433,7 +3433,7 @@ shared_focus = {
 
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_kill_them_all"
-    add_ideas = extensive_conscription
+    add_ideas = all_adults_serve
     add_ideas = closed_economy
     add_ideas = tot_economic_mobilisation
   }
@@ -3441,7 +3441,7 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_get_the_militias
-  icon = GFX_goal_military_academy
+  icon = GFX_MDL_get_the_militias
   x = -1
   y = 1
   relative_position_id = MDL_kill_them_all
@@ -3456,7 +3456,7 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_emergency_industry
-  icon = GFX_goal_national_artillery
+  icon = GFX_MDL_emergency_industry
   x = 1
   y = 1
   relative_position_id = MDL_kill_them_all
@@ -3484,7 +3484,7 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_loot_the_countryside
-  icon = GFX_focus_generic_strike_at_democracy2
+  icon = GFX_MDL_loot_the_countryside
   x = 0
   y = 2
   relative_position_id = MDL_kill_them_all
@@ -3507,7 +3507,7 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_begin_genocide_proper
-  icon = GFX_goal_skull_treaty2
+  icon = GFX_MDL_begin_genocide_proper
   x = 0
   y = 1
   cost = 2
@@ -3542,7 +3542,7 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_sack_mountain_temples
-  icon = GFX_goal_purge_opposition 
+  icon = GFX_MDL_sack_mountain_temples 
   x = 2
   y = 1
   cost = 2
@@ -3582,7 +3582,7 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_get_the_strays
-  icon =  GFX_goal_graveyard
+  icon =  GFX_MDL_get_the_strays
   x = -2
   y = 1
   cost = 2
@@ -3622,7 +3622,7 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_get_the_king
-  icon = GFX_goal_authority
+  icon = GFX_MDL_get_the_king
   x = 0
   y = 1
   relative_position_id = MDL_begin_genocide_proper
@@ -3646,9 +3646,7 @@ shared_focus = {
     }
     if = {
       limit = { ABY = { has_government = fascism } }
-      ABY = {
-        retire_character = ABY_catrina_catwe
-      }
+      country_event = manedalusia.73
     }
     775 = {
       add_manpower = -1000000
@@ -3662,14 +3660,14 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_it_is_done
-  icon = GFX_focus_ger_reichskommisariats 
+  icon = GFX_MDL_it_is_done 
   x = 0
   y = 1
   cost = 1
   relative_position_id = MDL_get_the_king
   available = {
     has_war = no
-    owns_state = 775
+    775 = { is_owned_and_controlled_by = ROOT }
   }
   prerequisite = { focus = MDL_sack_mountain_temples }
   prerequisite = { focus = MDL_get_the_strays }
@@ -5187,7 +5185,7 @@ shared_focus = {
     custom_effect_tooltip = MDL_rally_the_faithful_tt
     custom_effect_tooltip = MDL_spawn_koltaliba_divs_tt
     hidden_effect = {
-      set_technology = 1842
+      set_technology = { tech_spirit_warriors = 1 }
       load_oob = "MDL_koltaliba"
     }
     set_variable = { MDL_mobilization_var = 0 }
