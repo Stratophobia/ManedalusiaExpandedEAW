@@ -5281,6 +5281,7 @@ shared_focus = {
   will_lead_to_war_with = BAT
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_strike_thralls_of_darkness"
+    MDL_holy_war_gimp_the_republic = yes
     custom_effect_tooltip = MDL_strike_thralls_of_darkness_tt
     hidden_effect = { set_country_flag = MDL_holy_war_BAT }
     declare_war_on = { type = annex_everything target = BAT }
@@ -5304,6 +5305,7 @@ shared_focus = {
   prerequisite = { focus = MDL_our_purpose_made_clear }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_holy_mandates"
+    MDL_holy_war_gimp_the_republic = yes
     add_ideas = MDL_holy_fleet
 
     if = {
@@ -5375,6 +5377,7 @@ shared_focus = {
   prerequisite = { focus = MDL_holy_mandates }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_speartip_of_harmony"
+    MDL_holy_war_gimp_the_republic = yes
     if = {
       limit = { has_idea = MDL_bulwark_of_harmony_idea }
       swap_ideas = {
@@ -5402,6 +5405,7 @@ shared_focus = {
   }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_forges_of_klugetown"
+    MDL_holy_war_gimp_the_republic
     KLG = { retire_character = KLG_verko }
     1208 = {
       add_manpower = -5000
@@ -5445,6 +5449,7 @@ shared_focus = {
   prerequisite = { focus = MDL_speartip_of_harmony }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_secure_starry_sea_islands"
+    MDL_holy_war_gimp_the_republic = yes
     country_event = manedalusia.144
     if = {
       limit = {
@@ -5533,6 +5538,7 @@ shared_focus = {
   prerequisite = { focus = MDL_strike_thralls_of_darkness }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_holy_mandate_BAT"
+    MDL_holy_war_gimp_the_republic = yes
     custom_effect_tooltip = MDL_holy_mandate_BAT_tt
     BSG = { add_ideas = MDL_holy_mandate }
     hidden_effect = { MDL_get_all_resources_BAT = yes }
@@ -5562,6 +5568,7 @@ shared_focus = {
 
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_expand_junnah_doctrine"
+    MDL_holy_war_gimp_the_republic
     if = {
       limit = { ASS = { exists = yes } }
       create_wargoal = {

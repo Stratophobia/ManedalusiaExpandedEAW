@@ -88,7 +88,7 @@ MDL_shield_doctrine_tab = {
     }
   }
   MDL_shield_puppet_MGY = {
-    available = { has_war = no }
+    ai_will_do = { factor = 300 }
     visible = {
       has_country_flag = MDL_shield_doctrine_unlocked
       MGY = { exists = no }
@@ -112,6 +112,7 @@ MDL_shield_doctrine_tab = {
   }
   MDL_shield_puppet_BAT = {
     available = { has_war = no }
+    ai_will_do = { factor = 300 }
     visible = {
       has_country_flag = MDL_shield_doctrine_unlocked
       BAT = { exists = no }
@@ -128,12 +129,12 @@ MDL_shield_doctrine_tab = {
     }
   }
   MDL_shield_puppet_ABY = {
-    available = { has_war = no }
-      visible = {
-        has_country_flag = MDL_shield_doctrine_unlocked
-        ABY = { exists = no }
-        775 = { is_owned_and_controlled_by = ROOT }
-      }
+    ai_will_do = { factor = 300 }
+    visible = {
+      has_country_flag = MDL_shield_doctrine_unlocked
+      ABY = { exists = no }
+      775 = { is_owned_and_controlled_by = ROOT }
+    }
     cost = 25
     complete_effect = {
       country_event = manedalusia.91

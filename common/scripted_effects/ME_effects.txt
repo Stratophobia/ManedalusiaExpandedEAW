@@ -652,6 +652,7 @@ MDL_holy_war_gimp_all_empress_enemies = {
       is_ai = yes
       OR = {
         OR = {
+          has_cosmetic_tag = EQS_DEM1
           original_tag = CHN
           original_tag = LSP
           original_tag = SCS
@@ -663,5 +664,21 @@ MDL_holy_war_gimp_all_empress_enemies = {
       }
     }
     add_ideas = MDL_holy_war_ai_debuff
+  }
+}
+
+MDL_holy_war_gimp_the_republic = {
+  every_other_country = {
+    limit = {
+      is_ai = yes
+      has_cosmetic_tag = EQS_DEM1
+    }
+    if = {
+      limit = {
+        MDL = { is_ai = no }
+        NOT = { has_idea = MDL_holy_war_ai_debuff }
+      }
+      add_ideas = MDL_holy_war_ai_debuff
+    }
   }
 }
