@@ -82,7 +82,7 @@ on_actions = {
         every_other_country = {
           limit = { is_in_faction_with = BAT }
           if = {
-            limit = { is_subject_of = BAT }
+            limit = { original_tag = ZAR }
             annex_country = { target = THIS }
           }
           if = {

@@ -1024,7 +1024,7 @@ ideas = {
       targeted_modifier = {
         tag = MDL
         cic_to_target_factor = 0.25
-        mic_to_target_factor = 0.75
+        mic_to_target_factor = 0.25
       }
     }
     MDL_rally_the_faithful_1 = {
@@ -1048,7 +1048,7 @@ ideas = {
         war_support_factor = 0.15
         conscription_factor = 0.10
         army_morale_factor = 0.15
-        surrender_limit = 0.75
+        surrender_limit = 0.50
       }
       targeted_modifier = {
         tag = EQS
@@ -1343,19 +1343,24 @@ ideas = {
 
 			modifier = {
 				training_time_army_factor = 0.75
-				army_morale_factor = -0.50
 				industrial_capacity_factory = -0.90
         political_power_factor = -0.90
+        army_morale_factor = -0.99
+        surrender_limit = -0.50
 			}
       targeted_modifier = {
         tag = EQS
         attack_bonus_against = -0.99
         defense_bonus_against = 0.99
+        attack_bonus_against_cores = -0.99
+        breakthrough_bonus_against = -0.99
       }
       targeted_modifier = {
         tag = NLR
         attack_bonus_against = -0.99
         defense_bonus_against = -0.99
+        attack_bonus_against_cores = -0.99
+        breakthrough_bonus_against = -0.99
       }
 		}
   }

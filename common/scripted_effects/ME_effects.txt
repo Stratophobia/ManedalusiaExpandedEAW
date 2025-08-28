@@ -357,20 +357,44 @@ MDL_holy_war_autodo_military_focuses = {
 MDL_get_all_resources_ABY_MGY = {
   MGY = {
     every_owned_state = {
+      limit = {
+        NOT = {
+          is_in_array = {
+            array = MDL_holy_mandate_resources
+            value = THIS
+          }
+        }
+      }
       MGY = {
         give_resource_rights = {
           receiver = MDL
           state = PREV
+        }
+        add_to_array = {
+          array = MDL_holy_mandate_resources
+          value = PREV
         }
       }
     }
   }
   ABY = {
     every_owned_state = {
+      limit = {
+        NOT = {
+          is_in_array = {
+            array = MDL_holy_mandate_resources
+            value = THIS
+          }
+        }
+      }
       ABY = {
         give_resource_rights = {
           receiver = MDL
           state = PREV
+        }
+        add_to_array = {
+          array = MDL_holy_mandate_resources
+          value = PREV
         }
       }
     }

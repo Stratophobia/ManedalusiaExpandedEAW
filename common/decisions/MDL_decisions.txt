@@ -215,10 +215,6 @@ MDL_shield_doctrine_tab = {
         add_core_of = ABY
         ABY = {
           transfer_state = PREV
-          give_resource_rights = {
-            receiver = MDL
-            state = PREV
-          }
         }
       }
       if = {
