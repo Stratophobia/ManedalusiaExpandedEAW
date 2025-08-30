@@ -944,6 +944,35 @@ ideas = {
       }
     }
   }
+#UNITED SULTANATE IDEAS
+  country = {
+    MDL_aby_war_attack_idea = {
+      picture = generic_purge#REPLACE
+      cancel = {
+        NOT = { has_war_with = ABY }
+      }
+      modifier = {
+        supply_consumption_factor = -0.10
+      }
+      targeted_modifier = {
+        tag = ABY
+        attack_bonus_against = 0.05
+      }
+    }
+    MDL_aby_war_defense_idea = {
+      picture = generic_purge#REPLACE
+      cancel = {
+        NOT = { has_war_with = ABY }
+      }
+      modifier = {
+        army_morale_factor = 0.10
+      }
+      targeted_modifier = {
+        tag = ABY
+        defense_bonus_against = 0.05
+      }
+    }
+  }
 #HOLY WAR IDEAS
   country = {
     MDL_demon_of_the_outer_night = {

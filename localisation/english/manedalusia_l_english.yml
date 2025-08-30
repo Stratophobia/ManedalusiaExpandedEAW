@@ -643,7 +643,17 @@
   MDL_fiqh_5:0 "On Free Will"
   MDL_mil_gov:0 "Establish [From.GetNameDefCap] Governorate"
   MDL_mil_gov_desc:0 "With [From.GetNameDef] in our hooves, we can establish a functional military administration to draw additional recruits and resources."
-#SAYF'S PATH
+###UNITED SULTANATE PATH###
+  MDL_US_start_1_1:0 "Now Or Never"
+  MDL_US_start_2_1:0 "Loot The Coltoba Armory"
+  MDL_US_start_2_2:0 "Al-Manesūr's Offensive"
+  MDL_US_start_2_3:0 "Moonstriker's Shield"
+  MDL_US_start_2_4:0 "Coltoba Stands!"
+  MDL_US_start_3_1:0 "The Lion Is Brought To Heel"
+  MDL_US_start_3_2:0 "All Together Now"
+  MDL_US_start_3_3:0 "A United Homefront"
+  MDL_US_start_4_1:0 "Al-Manedalus Triumphant"
+###SAYF'S PATH###
   MDL_warplan_green:0 "Warplan Green"
   MDL_warplan_green_desc:0 "We cannot allow our rightful land to be occupied by the Maregyptian infidels. Thankfully, Crimson Sayf has formulated a plan of action..."
   MDL_fortify_coltoba:0 "Fortify Coltoba"
@@ -1171,8 +1181,8 @@
   MDL_pax_in_excelsior:0 "Pax In Excelsis"
   MDL_pax_in_excelsior_desc:0 "As Above, So Below; and with the world brought under the harmonious guidance of a true Imperium, whose spirit shall echo into eternity, the very Heavens above mimic this lasting peace. All stormclouds melt away, and the veterans of the Overseas, their mission complete, will finally know respite."
 ###SAMIRA TREE###
-  MDL_samira_1_1:0 "Charting The New Course"
-  MDL_samira_1_1_desc:0 "Through grit and discipline, we've beaten back the madgriff and his thugs, but the damage to Coltoba and beyond has been immense. As what remains of Manedalusian leadership, the Grandmistress now bears the unenviable burden of choosing how Al-Manedalus may begin to recover from this blow."
+  MDL_charting_new_course:0 "Charting The New Course"
+  MDL_charting_new_course_desc:0 "Through grit and discipline, we've beaten back the madgriff and his thugs, but the damage to Coltoba and beyond has been immense. As what remains of Manedalusian leadership, the Grandmistress now bears the unenviable burden of choosing how Al-Manedalus may begin to recover from this blow."
 ###MANEDALUSIA IDEAS###
   MDL_asabiyyah_modifier:0 "Asabiyyah"
   MDL_asabiyyah_modifier_desc:0 "Asabiyyah is the Manedalusian term for a people's sense of unity, solidarity, and shared purpose and destiny. The Manedalusians are a people used to hardship, and they take solace in their share faith and sense of group identity. A wise ruler seeks to foster his people's Asabiyyah, while a selfish and foolish one seeks to manipulate it for their own gain.\n\n§YNot all choices are as simple as they seem. The Asabiyyah is a reflection of Manedalusians' very way of life, and should you seek to alter it, always remember that to attempt to mimic Ash-Shahid's divine omnipotence is a grave sin. Serve your people well, and they will do the same to you.§!"
@@ -1274,7 +1284,7 @@
   MDL_celebrating_victory:0 "The Grand Surfing Festival"
 ###HARMONIC HOLY WAR IDEAS###
   MDL_demon_of_the_outer_night:0 "§RDjinn§!"
-  MDL_demon_of_the_outer_night_desc:0 "The Book of Revelation speaks often of unseen things, remnants of the great Darkness that preceded Creation, that coalesce into a parody of Form and bring forth Madness and chaos into the order of Nature. Such are the Djinn - the things that should not, and cannot be, that exist outside Ash-Shahid's Watchful Eye and gaze with hatred and malice upon the beauty of His domain. When they seep into the world, through whatever means, they gather followers deceived by their false powers and wage war against the fabric of Perception itself, seeking to collapse the orderly realm back into the all-encompassing void that spawned them. Though usually confined to irrelevant corners of the world and worshipped by primitive sects, this Demon has deceived the ponies of Equus that it is their beloved Princess turned Empress. Wielding absolute power over a whole nation none the wiser, the Demon will continue to grow in strength until it can tear reality asunder. No matter what happens, and no matter what has to be done, it must be stopped!\n\n§YThis nation is substantially stronger than normal and will only become more so with time.§!"
+  MDL_demon_of_the_outer_night_desc:0 "The Book of Revelation speaks often of unseen things, remnants of the great Darkness that preceded Creation, that coalesce into a parody of Form and bring forth Madness and chaos into the order of Nature. Such are the Djinn - the things that should not, and cannot be, that exist outside Ash-Shahid's Watchful Eye and gaze with hatred and malice upon the beauty of His domain. When they seep into the world, through whatever means, they gather followers deceived by their false powers and wage war against the fabric of Perception itself, seeking to collapse the orderly realm back into the all-encompassing void that spawned them. Though usually confined to irrelevant corners of the world and worshipped by primitive sects, this Demon has deceived the ponies of Equestria that it is their beloved Princess turned Empress. Wielding absolute power over a whole nation none the wiser, the Demon will continue to grow in strength until it can tear reality asunder. No matter what happens, and no matter what has to be done, it must be stopped!\n\n§YThis nation is substantially stronger than normal and will only become more so with time.§!"
   MDL_sunmad_0:0 "Sun Madness"
   MDL_sunmad_0_desc:0 "The Day of Black Sun has sent the nation into utter disarray. The terrified populace protests in the streets, unsanctioned preachers gather crowds of hundreds across the countryside, speaking of apocalyptic revelations. Even in the armed forces, discipline is crumbling as our soldiers spread terrifying rumors of the Eclipse's meaning, and all ash-shuhūd are convinced that the foreboding omen will bring about the destruction of all things. Everypony in Al-Manedalus either believes, or at least dreads in the darkest recesses of their mind, that we are witnessing the end of days."
   MDL_sunmad_1:0 "Sun Madness"

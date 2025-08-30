@@ -1,5 +1,41 @@
 spriteTypes = {
   SpriteType = {
+    name = "GFX_MDL_US_start_1_1"
+    texturefile = "gfx/interface/goals/MDL/MDL_US_start_1_1.tga"
+  }
+  SpriteType = {
+    name = "GFX_MDL_US_start_2_1"
+    texturefile = "gfx/interface/goals/MDL/MDL_US_start_2_1.tga"
+  }
+  SpriteType = {
+    name = "GFX_MDL_US_start_2_2"
+    texturefile = "gfx/interface/goals/MDL/MDL_US_start_2_2.tga"
+  }
+  SpriteType = {
+    name = "GFX_MDL_US_start_2_3"
+    texturefile = "gfx/interface/goals/MDL/MDL_US_start_2_3.tga"
+  }
+  SpriteType = {
+    name = "GFX_MDL_US_start_2_4"
+    texturefile = "gfx/interface/goals/MDL/MDL_US_start_2_4.tga"
+  }
+  SpriteType = {
+    name = "GFX_MDL_US_start_3_1"
+    texturefile = "gfx/interface/goals/MDL/MDL_US_start_3_1.tga"
+  }
+  SpriteType = {
+    name = "GFX_MDL_US_start_3_2"
+    texturefile = "gfx/interface/goals/MDL/MDL_US_start_3_2.tga"
+  }
+  SpriteType = {
+    name = "GFX_MDL_US_start_3_3"
+    texturefile = "gfx/interface/goals/MDL/MDL_US_start_3_3.tga"
+  }
+  SpriteType = {
+    name = "GFX_MDL_US_start_4_1"
+    texturefile = "gfx/interface/goals/MDL/MDL_US_start_4_1.tga"
+  }
+  SpriteType = {
     name = "GFX_MDL_begin_genocide_proper"
     texturefile = "gfx/interface/goals/MDL/MDL_begin_genocide_proper.tga"
   }

@@ -79,6 +79,7 @@
     immediate = {
       hidden_effect = {
         MDL = {
+          MDL_remove_ABY_templates = yes
           load_focus_tree = {
             tree = manedalusia_start
           }
@@ -1890,10 +1891,36 @@
 
     option = {
       name = manedalusia.65.a
+      hidden_effect = {
+        MDL = {
+          set_party_name = {
+            ideology = fascism
+            long_name = MDL_SAYF_PARTY_1_LONG
+            name = MDL_SAYF_PARTY_1
+          }
+          retire_character = MDL_fernao_grifo
+          retire_character = MDL_rosa_branca
+          retire_character = MDL_alexandre_de_aguilar
+          add_country_leader_role = {
+            character = MDL_crimson_sayf
+            country_leader = {
+              desc = MDL_crimson_sayf_desc
+              expire = "1965.1.1"
+              ideology = stratocracy
+            }
+            promote_leader = yes
+          }
+          set_country_flag = MDL_US_start
+          remove_ideas = MDL_madgriff_in_the_harbor
+          load_focus_tree = {
+            tree = manedalusia_US_start
+          }
+        }
+      }
     }
   }
 
-  country_event = {#sayf leaves senate path
+  country_event = {#sayf leaves - senate path
     id = manedalusia.66
     title = manedalusia.66.t
     desc = manedalusia.66.d
@@ -3569,7 +3596,7 @@
     }
   }
 
-  country_event = {#all that remains
+  country_event = {#FREE
     id = manedalusia.146
     title = manedalusia.146.t
     desc = manedalusia.146.d
@@ -3579,3 +3606,4 @@
       name = manedalusia.146.a
     }
   }
+

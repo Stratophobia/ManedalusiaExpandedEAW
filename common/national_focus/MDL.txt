@@ -49,7 +49,17 @@ focus_tree = {
     default = no
     continuous_focus_position = { x = 550 y = 1800 }
 
-    shared_focus = MDL_samira_1_1
+    shared_focus = MDL_charting_new_course
+  }
+
+  focus_tree = {
+    id = manedalusia_US_start
+
+    country = { factor = 0 }
+    default = no
+    continuous_focus_position = { x = 550 y = 1800 }
+
+    shared_focus = MDL_US_start_1_1
   }
 
   focus_tree = {
@@ -3498,9 +3508,9 @@ shared_focus = {
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_loot_the_countryside"
     add_timed_idea = {
-			idea = MDL_looting_abyssinia
-			days = 200
-		}
+      idea = MDL_looting_abyssinia
+      days = 200
+    }
     add_equipment_to_stockpile = { type = infantry_equipment amount = 500 producer = ABY }
   }
 }
@@ -7901,8 +7911,235 @@ shared_focus = {
   search_filters = { FOCUS_FILTER_POLITICAL }
 }
 
+###UNITED SULTANATE START TREE###
 shared_focus = {
-  id = MDL_samira_1_1
+  id = MDL_US_start_1_1
+  icon = GFX_MDL_US_start_1_1
+  cost = 1
+
+  x = 10
+  y = 0
+
+  allow_branch = {
+    if = {
+      has_country_flag = MDL_US_start
+    }
+  }
+
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_US_start_1_1"
+    MDL_armil_khaldun = {
+      add_field_marshal_role = {
+        traits={ pony_race_trait trickster trait_unpredictable inspirational_leader }
+        skill=2
+        attack_skill=1
+        defense_skill=3
+        planning_skill=2
+        logistics_skill=1
+        desc = MDL_armil_khaldun_desc
+      }
+    }
+    custom_effect_tooltip = MDL_khaldun_stats_tt
+    MDL_crimson_sayf = {
+      add_field_marshal_role = {
+        traits = { pony_race_trait harsh_leader infantry_leader }
+        skill=3
+        attack_skill=4
+        defense_skill=2
+        planning_skill=2
+        logistics_skill=2
+        desc = MDL_crimson_sayf_desc
+      }
+    }
+    custom_effect_tooltip = MDL_sayf_stats_tt
+    MDL_moonstriker_laylah={
+      add_corps_commander_role = {
+        traits = { pony_race_trait organizer MDL_logistical_cantrips_trait skilled_staffer }
+        skill=2
+        attack_skill=1
+        defense_skill=3
+        planning_skill=2
+        logistics_skill=5
+        desc= MDL_moonstriker_laylah_desc
+      }
+    }
+    custom_effect_tooltip = MDL_moonstriker_stats_tt
+    MDL_almanezor = {
+      add_corps_commander_role = {
+        traits = { pony_race_trait panzer_leader trait_reckless }
+        skill=3
+        attack_skill=4
+        defense_skill=2
+        planning_skill=5
+        logistics_skill=2
+        desc= MDL_almanezor_desc
+      }
+    }
+    custom_effect_tooltip = MDL_almanezor_stats_tt
+    MDL_clover_breeze = {
+      add_corps_commander_role = {
+        traits = { pony_race_trait politically_connected air_force_commander }
+        skill=2
+        attack_skill=1
+        defense_skill=2
+        planning_skill=3
+        logistics_skill=1
+        desc = MDL_clover_breeze_desc
+      }
+    }
+    custom_effect_tooltip = MDL_clover_breeze_stats_tt
+  }
+}
+
+shared_focus = {
+  id = MDL_US_start_2_1
+  icon = GFX_MDL_US_start_2_1
+  x = -3
+  y = 1
+  cost = 2
+  relative_position_id = MDL_US_start_1_1
+  prerequisite = { focus = MDL_US_start_1_1 }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_US_start_2_1"
+    add_equipment_to_stockpile = { type = infantry_equipment amount = 750 producer = ABY }
+  }
+}
+
+shared_focus = {
+  id = MDL_US_start_2_2
+  icon = GFX_MDL_US_start_2_2
+  x = -1
+  y = 1
+  cost = 2
+  relative_position_id = MDL_US_start_1_1
+  prerequisite = { focus = MDL_US_start_1_1 }
+  mutually_exclusive = { focus = MDL_US_start_2_3 }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_US_start_2_2"
+    add_timed_idea = {
+      idea = MDL_aby_war_attack_idea
+      days = 150
+    }
+  }
+}
+
+shared_focus = {
+  id = MDL_US_start_2_3
+  icon = GFX_MDL_US_start_2_3
+  x = 1
+  y = 1
+  cost = 2
+  relative_position_id = MDL_US_start_1_1
+  prerequisite = { focus = MDL_US_start_1_1 }
+  mutually_exclusive = { focus = MDL_US_start_2_2 }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_US_start_2_3"
+    add_ideas = MDL_aby_war_defense_idea
+  }
+}
+
+shared_focus = {
+  id = MDL_US_start_2_4
+  icon = GFX_MDL_US_start_2_4
+  x = 3
+  y = 1
+  cost = 2
+  relative_position_id = MDL_US_start_1_1
+  741 = { is_controlled_by = ROOT }
+  prerequisite = { focus = MDL_US_start_1_1 }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_US_start_2_4"
+    741 = {
+      add_building_construction = {
+        type = arms_factory
+        level = 1
+        instant_build = yes
+      }
+      add_building_construction = {
+        type = coastal_bunker
+        level = 2
+        province = 12234
+        instant_build = yes
+      }
+    }
+  }
+}
+
+shared_focus = {
+  id = MDL_US_start_3_1
+  icon = GFX_MDL_US_start_3_1
+  x = 1
+  y = 1
+  cost = 2
+  relative_position_id = MDL_US_start_2_1
+  available = {
+    771 = { is_controlled_by = ROOT }
+  }
+  prerequisite = { focus = MDL_US_start_2_1 }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_US_start_2_2"
+    add_stability = 0.10
+    add_war_support = 0.15
+  }
+}
+
+shared_focus = {
+  id = MDL_US_start_3_2
+  icon = GFX_MDL_US_start_3_2
+  x = 1
+  y = 1
+  cost = 2
+  relative_position_id = MDL_US_start_2_2
+  prerequisite = {
+    focus = MDL_US_start_2_2
+    focus = MDL_US_start_2_3
+  }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_US_start_3_2"
+    add_manpower = 7500
+    MDL_increase_conscription = yes
+  }
+}
+
+shared_focus = {
+  id = MDL_US_start_3_3
+  icon = GFX_MDL_US_start_3_3
+  x = -1
+  y = 1
+  cost = 2
+  relative_position_id = MDL_US_start_2_4
+  prerequisite = { focus = MDL_US_start_2_4 }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_US_start_3_3"
+    add_political_power = 100
+  }
+}
+
+shared_focus = {
+  id = MDL_US_start_4_1
+  icon = GFX_MDL_US_start_4_1
+  x = 0
+  y = 1
+  cost = 1
+  relative_position_id = MDL_US_start_3_2
+  available = {
+    always = no
+    ABY = { exists = no }
+    775 = { is_owned_and_controlled_by = ROOT }
+  }
+  prerequisite = { focus = MDL_US_start_3_1 }
+  prerequisite = { focus = MDL_US_start_3_2 }
+  prerequisite = { focus = MDL_US_start_3_3 }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_US_start_4_1"
+    custom_effect_tooltip = MDL_WIP_tt
+    country_event = manedalusia.146
+  }
+}
+
+###SAMIRA TREE###
+shared_focus = {
+  id = MDL_charting_new_course
   icon = GFX_focus_ger_reichskommisariats
 
   x = 15
@@ -7912,7 +8149,7 @@ shared_focus = {
   available = { always = no }
 
   completion_reward = {
-    log = "[GetDateText]: [Root.GetName]: Focus MDL_samira_1"
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_charting_new_course"
     custom_effect_tooltip = MDL_WIP_tt
   }
 }
