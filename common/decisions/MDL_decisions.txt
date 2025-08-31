@@ -1151,12 +1151,22 @@ MDL_grifo_imperium_decisions_tab = {
     }
     complete_effect = {
       hidden_effect = {
-        set_nationality = {
-          target_country = EQC
-          character = EQC_rosa_branca
-        }
         EQC = {
           load_focus_tree = generic_griffon_focus
+          generate_character = {
+            token_base = EQC_rosa_branca
+            name = MDL_rosa_branca
+          }
+          set_portraits = {
+            character = EQC_rosa_branca
+            civilian = {
+              large = "gfx/leaders/MDL/rosa_branca.tga"
+              small="gfx/interface/ideas/Advisors/MDL/MDL_rosa_branca.tga"
+            }
+            army = {
+              large = "gfx/leaders/MDL/rosa_branca.tga"
+            }
+          }
           add_country_leader_role = {
             character = EQC_rosa_branca
               country_leader={
@@ -1194,9 +1204,21 @@ MDL_grifo_imperium_decisions_tab = {
     }
     complete_effect = {
       hidden_effect = {
-        MIT_alexandre_de_aguilar = { set_nationality = MIT }
         MIT = {
           load_focus_tree = generic_griffon_focus
+          generate_character = {
+            token_base = MIT_alexandre_de_aguilar
+            name = MDL_alexandre_de_aguilar
+          }
+          set_portraits = {
+            character = MIT_alexandre_de_aguilar
+            civilian = {
+              large = "gfx/leaders/MDL/alexandre_de_aguilar.tga"
+            }
+            army = {
+              large = "gfx/leaders/MDL/alexandre_de_aguilar.tga"
+            }
+          }
           add_country_leader_role = {
             character = MIT_alexandre_de_aguilar
             country_leader={
@@ -1247,9 +1269,22 @@ MDL_grifo_imperium_decisions_tab = {
           }
           remove_core_of = MCW
         }
-        MCW_antonio_aviario = { set_nationality = MCW }
         MCW = {
           load_focus_tree = generic_griffon_focus
+          generate_character = {
+            token_base = MCW_antonio_aviario
+            name = MDL_antonio_aviario
+          }
+          set_portraits = {
+            character = MCW_antonio_aviario
+            civilian = {
+              large = "gfx/leaders/MDL/antonio_aviario.tga"
+              small="gfx/interface/ideas/Advisors/MDL/MDL_antonio_aviario.tga"
+            }
+            army = {
+              large = "gfx/leaders/MDL/MDL_antonio_aviario.tga"
+            }
+          }
           add_country_leader_role = {
             character=MCW_antonio_aviario
             country_leader={

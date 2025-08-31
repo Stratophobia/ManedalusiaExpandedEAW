@@ -947,7 +947,7 @@ ideas = {
 #UNITED SULTANATE IDEAS
   country = {
     MDL_aby_war_attack_idea = {
-      picture = generic_purge#REPLACE
+      picture = generic_volunteer_expedition_bonus
       cancel = {
         NOT = { has_war_with = ABY }
       }
@@ -960,7 +960,7 @@ ideas = {
       }
     }
     MDL_aby_war_defense_idea = {
-      picture = generic_purge#REPLACE
+      picture = generic_manpower_bonus
       cancel = {
         NOT = { has_war_with = ABY }
       }

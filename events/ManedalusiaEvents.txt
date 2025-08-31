@@ -3040,6 +3040,21 @@
     option = {
       name = manedalusia.114.a
       country_event = { id = manedalusia.115 days = 3 }
+      hidden_effect = {
+        generate_character = {
+          token_base = MDL_emperor
+          name = MDL_emperor
+        }
+        set_portraits = {
+          character = MDL_emperor
+          civilian = {
+            large = "gfx/leaders/MDL/MDL_emperor.tga"
+          }
+          army = {
+            large = "gfx/leaders/MDL/MDL_emperor.tga"
+          }
+        }
+      }
       add_country_leader_role = {
         character = MDL_emperor
         country_leader = {

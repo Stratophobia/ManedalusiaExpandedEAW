@@ -7487,6 +7487,9 @@ shared_focus = {
   relative_position_id = MDL_imperial_heavy_fighters
   prerequisite = { focus = MDL_imperial_heavy_tanks }
   prerequisite = { focus = MDL_imperial_heavy_fighters }
+  available = {
+    has_idea = modern_society
+  }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_project_excelsior"
 		add_breakthrough_progress = {

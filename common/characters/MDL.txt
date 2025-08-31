@@ -700,54 +700,7 @@ characters={
 			}
 		}
 	}
-  MDL_emperor = {
-    name=MDL_emperor
-    portraits = {
-      civilian = {
-        large="gfx/leaders/MDL/MDL_emperor.tga"
-      }
-    }
-  }
 ###GRIFO PUPPETS###
-  EQC_rosa_branca = {#for EQC puppet
-    name=MDL_rosa_branca
-    gender=female
-    portraits = {
-      civilian={
-        large="gfx/leaders/MDL/rosa_branca.tga"
-        small="gfx/interface/ideas/Advisors/MDL/MDL_rosa_branca.tga"
-      }
-      army={
-        large="gfx/leaders/MDL/rosa_branca.tga"
-      }
-    }
-  }
-  MCW_antonio_aviario = {#for MCW puppet
-    name=MDL_antonio_aviario
-    gender=male
-    portraits={
-      civilian={
-        large="gfx/leaders/MDL/antonio_aviario.tga"
-        small="gfx/interface/ideas/Advisors/MDL/MDL_antonio_aviario.tga"
-      }
-      army={
-        large="gfx/leaders/MDL/antonio_aviario.tga"
-      }
-    }
-  }
-  MIT_alexandre_de_aguilar = {#for MIT puppet
-    name=MDL_alexandre_de_aguilar
-    gender=male
-    portraits={
-      civilian={
-        large="gfx/leaders/MDL/alexandre_de_aguilar.tga"
-        small="gfx/interface/ideas/Advisors/MDL/MDL_alexandre_de_aguilar.tga"
-      }
-      army={
-        large="gfx/leaders/MDL/alexandre_de_aguilar.tga"
-      }
-    }
-  }
   MDL_imperial_council_JER = {
     name=MDL_imperial_council_JER
     portraits = {

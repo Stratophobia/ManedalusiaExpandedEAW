@@ -30,29 +30,18 @@ MDL_has_set_path_rules = {
   }
 }
 
-any_original_cores_owned_by_PREV_or_subject = {
-	custom_trigger_tooltip = {
-		tooltip = owns_any_cores_original_subject_tt
-		hidden_trigger = {
-			any_of_scopes = {
-				array = original_cores
-				owner = {
-					OR = {
-						tag = PREV
-						is_subject_of = PREV
-					}
-				}
-			}
-		}
-	}
-}
-
 ME_arabia_is_unified = {
   custom_trigger_tooltip = {
     tooltip = ME_arabia_is_unified_tt
     868 = {
       owner = {
-        SDL = { any_original_cores_owned_by_PREV_or_subject = yes }
+        owns_state = 864
+        owns_state = 854
+        owns_state = 858
+        owns_state = 866
+        owns_state = 843
+        owns_state = 834
+        owns_state = 818
       }
     }
   }

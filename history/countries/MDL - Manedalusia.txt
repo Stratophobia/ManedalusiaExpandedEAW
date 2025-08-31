@@ -133,8 +133,7 @@ recruit_character = MDL_elected_princes
 
 ###GRIFO EXCLUSIVES###
 recruit_character = MDL_rosa_branca
-recruit_character = EQC_rosa_branca
-recruit_character = MCW_antonio_aviario
+recruit_character = MDL_alexandre_de_aguilar
 recruit_character = MDL_antonio_aviario
 recruit_character = MDL_diogo_cao
 recruit_character = MDL_imperial_admiralty_char
@@ -142,8 +141,6 @@ recruit_character = MDL_imperial_office_artillery
 recruit_character = MDL_imperial_office_infantry
 recruit_character = MDL_imperial_office_commando
 recruit_character = MDL_imperial_office_support
-recruit_character = MDL_alexandre_de_aguilar
-recruit_character = MIT_alexandre_de_aguilar
 recruit_character = MDL_imperial_college
 recruit_character = MDL_grifo_modernist
 recruit_character = MDL_grifo_romanticist
@@ -155,7 +152,6 @@ recruit_character = MDL_imperial_council_GRI
 recruit_character = MDL_imperial_council_FAT
 recruit_character = MDL_imperial_council_FIR
 recruit_character = MDL_imperial_council_RIV
-recruit_character = MDL_emperor
 
 set_popularities = {
 	democratic = 15
