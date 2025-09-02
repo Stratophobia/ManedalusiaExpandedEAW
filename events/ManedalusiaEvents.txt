@@ -1540,12 +1540,6 @@
       add_ideas = MDL_federation_member
       hidden_effect = {
         MDL_create_dynamic_MGY = yes
-        set_nationality = {
-          target_country = MKS
-          character = MDL_ovingo_assembly
-        }
-      }
-      hidden_effect = {
         release_puppet = MGY
         release_puppet = MKS
         MGY = {
@@ -1557,6 +1551,16 @@
           }
         }
         MKS = {
+          generate_character = {
+            token_base = MDL_ovingo_assembly
+            name = MDL_ovingo_assembly
+          }
+          set_portraits = {
+            character = MDL_ovingo_assembly
+            civilian = {
+              large = "gfx/leaders/MDL/MDL_FED_generic.tga.tga"
+            }
+          }
           set_cosmetic_tag = MKS_FEDERATION
           add_ideas = MDL_federation_member
           MDL_ovingo_assembly = {
@@ -2316,7 +2320,7 @@
     option = {
       name = manedalusia.84.a
 
-    add_country_leader_role = {
+      add_country_leader_role = {
         character = MDL_grandmistress_samira
         country_leader = {
           desc = MDL_grandmistress_samira_desc
@@ -2325,6 +2329,7 @@
         }
         promote_leader = yes
       }
+      hidden_effect = { set_country_flag = MDL_samira_country_leader }
       set_party_name = {
         ideology = democratic
         long_name = MDL_SAMIRA_PARTY_NAME_LONG
@@ -2539,7 +2544,7 @@
     }
   }
 
-  country_event = {#Samira Kills Grifo
+  country_event = {#Samira kills Grifo
     id = manedalusia.92
     title = manedalusia.92.t
     desc = manedalusia.92.d
@@ -2552,11 +2557,16 @@
       retire_character = MDL_rosa_branca
       retire_character = MDL_alexandre_de_aguilar
       retire_character = MDL_antonio_aviario
-      remove_ideas = MDL_ash_shuhud_resistance
+
+      swap_ideas = {
+        remove_idea = MDL_ash_shuhud_resistance
+        add_idea = MDL_humbled_sultanate
+      }
 
       hidden_effect = {
         clr_country_flag = MDL_grifo_takeover
         set_country_flag = MDL_samira_country_leader
+        set_country_flag = MDL_samira_path
       }
 
       add_country_leader_role = {
@@ -2572,6 +2582,14 @@
         ruling_party = neutrality
         allow_elections = no
       }
+      add_country_leader_role = {
+        character = MDL_zahid
+        country_leader = {
+          expire = "1965.1.1"
+          ideology = surveillance_state
+        }
+        promote_leader = yes
+      }
       set_party_name = {
         ideology = neutrality
         long_name = MDL_SAMIRA_PARTY_NAME_LONG
@@ -2579,8 +2597,8 @@
       }
       set_party_name = {
         ideology = fascism
-        long_name = MDL_SAYF_PARTY_1_LONG
-        name = MDL_SAYF_PARTY_1
+        long_name = MDL_ZAHID_PARTY_NAME_LONG
+        name = MDL_ZAHID_PARTY_NAME
       }
       custom_effect_tooltip = MDL_samira_tree_loaded_tt
       hidden_effect = {
@@ -3611,7 +3629,7 @@
     }
   }
 
-  country_event = {#FREE
+  country_event = {#United Sultanate start event
     id = manedalusia.146
     title = manedalusia.146.t
     desc = manedalusia.146.d
@@ -3622,3 +3640,25 @@
     }
   }
 
+  country_event = {#all that remains
+    id = manedalusia.147
+    title = manedalusia.147.t
+    desc = manedalusia.147.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.147.a
+      add_ideas = MDL_koltaliba_rule_1
+    }
+  }
+
+  country_event = {#spymaster zahid
+    id = manedalusia.148
+    title = manedalusia.148.t
+    desc = manedalusia.148.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.148.a
+    }
+  }

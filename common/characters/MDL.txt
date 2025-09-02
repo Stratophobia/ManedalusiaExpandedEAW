@@ -165,6 +165,19 @@ characters={
       available = { always = yes }
     }
 	}
+  MDL_zahid = {
+    name=MDL_zahid
+    gender=male
+    portraits={
+      civilian = {
+        large="gfx/leaders/MDL/zahid.tga"
+        small="gfx/interface/ideas/Advisors/MDL/MDL_zahid.tga"
+      }
+      army = {
+        large="gfx/leaders/MDL/zahid.tga"
+      }
+    }
+  }
 	MDL_grandmistress_samira = {
 		name=MDL_grandmistress_samira
     gender=female
@@ -746,47 +759,6 @@ characters={
     portraits = {
       civilian = {
         large="gfx/leaders/MDL/imperial_council.tga"
-      }
-    }
-  }
-###FEDERATION LEADER CHARACTERS###
-  MDL_ovingo_assembly = {
-    name=MDL_ovingo_assembly
-    portraits={
-      civilian = {
-        large="gfx/leaders/MDL/MDL_FED_generic.tga"
-      }
-    }
-  }
-  MDL_yemani_senate = {
-    name=MDL_yemani_senate
-    portraits = {
-      civilian = {
-        large="gfx/leaders/MDL/MDL_FED_generic.tga"
-      }
-    }
-  }
-  MDL_asstyrian_free_cities = {
-    name=MDL_asstyrian_free_cities
-    portraits = {
-      civilian = {
-        large="gfx/leaders/MDL/MDL_FED_generic.tga"
-      }
-    }
-  }
-  MDL_anseruk_consortium = {
-    name=MDL_anseruk_consortium
-    portraits = {
-      civilian = {
-        large="gfx/leaders/MDL/MDL_FED_generic.tga"
-      }
-    }
-  }
-  MDL_elected_princes = {
-    name=MDL_elected_princes
-    portraits = {
-      civilian = {
-        large="gfx/leaders/MDL/MDL_FED_generic.tga"
       }
     }
   }

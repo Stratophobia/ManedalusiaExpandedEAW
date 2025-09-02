@@ -973,6 +973,20 @@ ideas = {
       }
     }
   }
+#SAMIRA IDEAS
+  country = {
+    MDL_koltaliba_rule_1 = {
+      picture = MDL_koltaliba_rule
+      modifier = {
+        stability_factor = 0.10
+        war_support_factor = 0.10
+        special_forces_cap = 0.50
+        special_forces_attack_factor = 0.05
+        special_forces_defence_factor = 0.05
+        conscription = -2
+      }
+    }
+  }
 #HOLY WAR IDEAS
   country = {
     MDL_demon_of_the_outer_night = {

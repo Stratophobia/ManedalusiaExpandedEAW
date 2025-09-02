@@ -47,6 +47,10 @@ political_actions = {
   }
 }
 
+MDL_koltaliba_tab = {
+
+}
+
 MDL_shield_doctrine_tab = {
   MDL_shield_puppet_ZAR = {
     icon = eng_trade_unions_support

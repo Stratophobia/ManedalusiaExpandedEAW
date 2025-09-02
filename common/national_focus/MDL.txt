@@ -1917,6 +1917,10 @@ focus_tree = {
         uses = 2
         category = air_doctrine
       }
+      add_breakthrough_progress = {
+				specialization = specialization_air
+				value = 0.35
+			}
     }
     search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_AIRFORCE_BONUS }
   }
@@ -4254,12 +4258,18 @@ shared_focus = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_integrate_yemane"
     custom_effect_tooltip = MDL_integrate_yemane_tt
     hidden_effect = {
-      set_nationality = {
-        target_country = YMN
-        character = MDL_yemani_senate
-      }
       release_puppet = YMN
       YMN = {
+        generate_character = {
+          token_base = MDL_yemani_senate
+          name = MDL_yemani_senate
+        }
+        set_portraits = {
+          character = MDL_yemani_senate
+          civilian = {
+            large = "gfx/leaders/MDL/MDL_FED_generic.tga.tga"
+          }
+        }
         remove_state_claim = 788 
         load_focus_tree = {
           tree = generic_zebra_focus
@@ -4345,15 +4355,17 @@ shared_focus = {
     hidden_effect = {
       release_puppet = ASS
       release_puppet = ANS
-      set_nationality = {
-        target_country = ASS
-        character = MDL_asstyrian_free_cities
-      }
-      set_nationality = {
-        target_country = ANS
-        character = MDL_anseruk_consortium
-      }
       ASS = {
+        generate_character = {
+          token_base = MDL_asstyrian_free_cities
+          name = MDL_asstyrian_free_cities
+        }
+        set_portraits = {
+          character = MDL_asstyrian_free_cities
+          civilian = {
+            large = "gfx/leaders/MDL/MDL_FED_generic.tga.tga"
+          }
+        }
         load_focus_tree = {
           tree = generic_zebra_focus
         }
@@ -4377,6 +4389,16 @@ shared_focus = {
         }
       }
       ANS = {
+        generate_character = {
+          token_base = MDL_anseruk_consortium
+          name = MDL_anseruk_consortium
+        }
+        set_portraits = {
+          character = MDL_anseruk_consortium
+          civilian = {
+            large = "gfx/leaders/MDL/MDL_FED_generic.tga.tga"
+          }
+        }
         load_focus_tree = {
           tree = generic_zebra_focus
         }
@@ -4452,11 +4474,17 @@ shared_focus = {
     custom_effect_tooltip = MDL_integrate_emirs_tt
     hidden_effect = {
       release_puppet = EMR
-      set_nationality = {
-        target_country = EMR
-        character = MDL_elected_princes
-      }
       EMR = {
+        generate_character = {
+          token_base = MDL_elected_princes
+          name = MDL_elected_princes
+        }
+        set_portraits = {
+          character = MDL_elected_princes
+          civilian = {
+            large = "gfx/leaders/MDL/MDL_FED_generic.tga.tga"
+          }
+        }
         add_ideas = MDL_federation_member
         add_country_leader_role = {
           character = MDL_elected_princes
@@ -4536,7 +4564,7 @@ shared_focus = {
       release_puppet = SDS
       EMR = {
         every_owned_state = {
-          limit = { is_core_of = EMR }
+          limit = { is_in_array = { state_original_cores = EMR } }
           remove_core_of = SDS
         }
       }
@@ -4546,11 +4574,17 @@ shared_focus = {
           ruling_party = democratic
         }
       }
-      set_nationality = {
-        target_country = EMR
-        character = MDL_elected_princes
-      }
       EMR = {
+        generate_character = {
+          token_base = MDL_elected_princes
+          name = MDL_elected_princes
+        }
+        set_portraits = {
+          character = MDL_elected_princes
+          civilian = {
+            large = "gfx/leaders/MDL/MDL_FED_generic.tga.tga"
+          }
+        }
         set_cosmetic_tag = EMR_FEDERATION
         add_ideas = MDL_federation_member
         add_country_leader_role = {
@@ -8147,12 +8181,69 @@ shared_focus = {
 
   x = 15
   y = 0
-  cost = 4
-
-  available = { always = no }
+  cost = 6
 
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_charting_new_course"
-    custom_effect_tooltip = MDL_WIP_tt
+    country_event = manedalusia.147
+    set_variable = { MDL_samira_happiness_score = 0 }#begin Samira Happinness mechanic
+    MDL_grandmistress_samira = {
+      add_field_marshal_role = {
+        traits={ zebra_race_trait MDL_koltaliba_member_trait thorough_planner ambusher organizer }
+        skill=1
+        attack_skill=2
+        defense_skill=1
+        planning_skill=2
+        logistics_skill=2
+        desc = MDL_grandmistress_samira_desc
+      }
+    }
+    custom_effect_tooltip = MDL_samira_field_marshal_stats_tt
+  }
+}
+
+shared_focus = {
+  id = MDL_restore_the_asabiyyah
+  icon = GFX_goal_generic_political
+
+  x = 0
+  y = 1
+  cost = 6
+  relative_position_id = MDL_charting_new_course
+  prerequisite = { focus = MDL_charting_new_course }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_restore_the_asabiyyah"
+    hidden_effect = {
+      set_country_flag = MDL_asabiyyah_unlocked
+    }
+    add_dynamic_modifier = {
+	    modifier = MDL_asabiyyah_modifier
+    }
+  }
+}
+
+shared_focus = {
+  id = MDL_get_the_spymasters
+  icon = GFX_goal_generic_political
+
+  x = 3
+  y = 1
+  cost = 6
+  relative_position_id = MDL_charting_new_course
+  prerequisite = { focus = MDL_charting_new_course }
+
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_get_the_spymasters"
+    country_event = manedalusia.148
+    MDL_zahid = {
+      add_corps_commander_role = {
+        traits = { zebra_race_trait ambusher MDL_koltaliba_member_trait }
+        skill=1
+        attack_skill=1
+        defense_skill=1
+        planning_skill=3
+        logistics_skill=2
+      }
+    }
   }
 }

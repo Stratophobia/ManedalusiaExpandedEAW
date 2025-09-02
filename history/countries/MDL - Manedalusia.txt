@@ -108,6 +108,7 @@ recruit_character = MDL_armil_khaldun
 recruit_character = MDL_crimson_sayf
 recruit_character = MDL_moonstriker_laylah
 recruit_character = MDL_almanezor
+recruit_character = MDL_zahid
 recruit_character = MDL_grandmistress_samira
 recruit_character = MDL_alneighzari
 recruit_character = MDL_canterto_maneossa
@@ -123,13 +124,6 @@ recruit_character = MDL_pacific_sunset
 recruit_character = MDL_clover_breeze
 recruit_character = MDL_iron_muhtal
 recruit_character = MDL_cims
-
-###FEDERATION LEADERS###
-recruit_character = MDL_ovingo_assembly
-recruit_character = MDL_yemani_senate
-recruit_character = MDL_asstyrian_free_cities
-recruit_character = MDL_anseruk_consortium
-recruit_character = MDL_elected_princes
 
 ###GRIFO EXCLUSIVES###
 recruit_character = MDL_rosa_branca
