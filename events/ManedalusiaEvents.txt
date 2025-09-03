@@ -2457,9 +2457,7 @@
       retire_character = MDL_moonstriker_laylah
       retire_character = MDL_almanezor
       retire_character = MDL_clover_breeze
-      hidden_effect = {
-        retire_character = MDL_cims
-      }
+
       set_politics = {
         ruling_party = fascism
         allow_elections = no
