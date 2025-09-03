@@ -65,6 +65,12 @@ leader_traits = {
     stability_weekly = 0.003
     war_support_factor = 0.15
   }
+  MDL_master_of_subterfuge = {
+    encryption_factor = 0.05
+    decryption_factor = 0.05
+    army_speed_factor = 0.05
+    army_morale_factor = 0.05
+  }
 ###GRIFO EXCLUSIVES###
   MDL_unfeathered_modernist = {
     production_factory_max_efficiency_factor = 0.05

@@ -48,7 +48,69 @@ political_actions = {
 }
 
 MDL_koltaliba_tab = {
+  MDL_put_zahid_in_charge = {
+    visible = {
+      NOT = { has_government = fascism }
+    }
+    available = {
+      has_completed_focus = MDL_get_the_spymasters
+    }
+    cost = 25
+    complete_effect = {
+      set_politics = { ruling_party = fascism }
+      add_ideas = MDL_spymasters_rule
+    }
+  }
+  MDL_samira_stress_mission = {
+    allowed = { original_tag = MDL }
+    visible = {
+      NOT = { has_country_flag = MDL_samira_stress_resolved }
+      NOT = { has_government = fascism }
+    }
+    
+    is_good = no
 
+    available = { always = no }
+
+    activation = {
+      AND = {
+        has_country_flag = MDL_samira_path
+        has_government = neutrality
+      }
+    }
+
+    cancel_trigger = {
+      OR = {
+        has_country_flag = MDL_samira_stress_resolved
+        has_government = fascism
+      }
+    }
+
+    days_mission_timeout = 200#TEST
+
+    timeout_effect = {
+      custom_effect_tooltip = MDL_decrease_samira_happiness_tt
+      MDL_decrease_samira_happiness = yes
+    }
+  }
+  MDL_zahid_power_mission = {
+    visible = { has_government = fascism }
+    is_good = no
+    available = { always = no }
+    activation = { has_government = fascism }
+    cancel_trigger = {
+      has_government = neutrality
+    }
+    days_mission_timeout = 200#TEST
+    timeout_effect = {
+      custom_effect_tooltip = MDL_decrease_samira_happiness_tt
+      custom_effect_tooltip = MDL_damage_asabiyyah_tt
+      MDL_decrease_samira_happiness = yes
+      hidden_effect = {
+        MDL_damage_asabiyyah = yes
+      }
+    }
+  }
 }
 
 MDL_shield_doctrine_tab = {

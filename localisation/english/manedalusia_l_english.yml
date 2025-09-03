@@ -542,6 +542,13 @@
   MDL_vice_and_virtue:0 "Of Vice and Virtue"
   MDL_vice_and_virtue_desc:0 "The modern industrial world is a breeding ground of sodomy, apostasy and degeneracy, and our people can ill afford to be taken in by vice in our time of strife. Our industrialization is needed for our survival, but it must be both swift in its implementation and restrained in its reach."
 ###DECISIONS###
+#KOLTALIBA
+  MDL_samira_stress_resolved:0 "§GThe Grandmistress' mind is at ease.§!"
+  MDL_koltaliba_tab:0 "Rule Of The Hashm Koltāliba"
+  MDL_put_zahid_in_charge:0 "Give Way To The Spymasters"
+  MDL_put_zahid_in_charge_desc:0 "The Koltāliba's Spymasters are always at the ready to fulfill their role to their fullest, and with Al-Manedalus stuck in its current predicament, they've been emboldened to take a more active role. Zahid and his acolytes are without match in the realm of subterfuge, and if given the reigns to decide our direction, they are sure not to disappoint."
+  MDL_samira_stress_mission:0 "The Grandmistress' Burden"
+  MDL_samira_stress_mission_desc:0 "Samira's mind has wandered astray to the realm of doubt since she was tasked with ruling over Manedalusia. The Grandmistress is not used to the public spotlight, and prefers to keep herself away from the earthly and mundane. The necessity of leading the nation has put a great toll on her, and it will likely take quite long before she becomes used to the position."
 #HOLY WAR
   MDL_holy_war_tab:0 "The Holy War"
   MDL_holy_war_tab_desc:0 "Darkness tugs at the heart of our world; in Canterlot, the Djinn Empress has usurped the throne of Equestria, and if she is not stopped, all of Creation will fall to the grip of the Outer Night. Ash-Shahid has called all of the faithful to arms in the name of Harmony, to destroy this monster no matter the cost!"
@@ -1285,6 +1292,8 @@
 ###SAMIRA IDEAS###
   MDL_koltaliba_rule_1:0 "Rule Of The Koltāliba"
   MDL_koltaliba_rule_1_desc:0 "With the Military Council responsible for Manedalusia's independence anihilated and the people of Coltoba traumatized by Grifo's crew, the Hashm Koltāliba now remain as the only temporal authority within Manedalusia. The secretive Order of warrior-monks is now begrudgingly tasked with ruling over a still reeling nation and a distrustful populace."
+  MDL_spymasters_rule:0 "Spymasters' Primacy"
+  MDL_spymasters_rule_desc:0 "Ever since its founding, the Hashm Koltāliba have fulfilled many roles - as trainers, warriors, monks, and even advisors to the Sultans of Everleaf. However, one of their most crucial historical roles since the end of the Sultanate and throughout the Ages of Humility was as assassins and spies. Abyssinian nobility and the Pharaohs of Maregypt would've had a much easier time pacifying the Manedalusian coast were it not for the Koltāliba's efforts to continually foment and foster rebellion, as well as sending their most skilled members to personally dispose of troublesome commanders and political figures. "
 ###HARMONIC IDEAS###
   MDL_queen_morticia:0 "Queen Morticia"
   MDL_queen_morticia_desc:0 "Be it driven by mercy or pragmatism, the Manedalusian government has allowed the Queen to remain in her position of authority as nominal ruling monarch of Abyssinia."
@@ -1492,7 +1501,7 @@
   MDL_jean_claude_of_aquileia:0 "Jean-Claude Al-Aqīlī"
   MDL_jean_claude_desc:0 "Jean-Claude is, for obvious reason, an unusual face in the shores of Manedalusia. Being a young naval officer in the tumultuous years of the first Aquileian revolution, Jean-Claude was initially optimistic about the prospects of pan-griffonian republicanism, but would eventually grow disillusioned and apathetic to the revolutionary movement after the Discret restoration. Somehow, he managed to largely avoid political loyalties among the admiralty and fly under the radar, keeping his opinions to himself, such that he could retire early from the Aquileian Navy with honors and with little in the way of prejudice from his superiors.\n\nDipping into the private sector for the first time in his life, Jean-Claude decided to look for work in the Wingbardian Abyssinian territories, finding modest success as a small investor and working private security for public officials. Despite his successful gigs, Jean-Claude was looking for a stable long-term career, and he knew from the start that he was not a griffon for boring deskwork. It was by a stroke of luck that he would meet Khaldun in the city of Katren shortly after his rise to generalship, and the Manedalusian was impressed by his service record. Jean-Claude did not get the chance to play a big part in the January coup itself, but he is now among the scarce few qualified naval officers in Manedalusia.\n\nOn the personal level, Jean-Claude has an interest in theology and jurisprudence, despite not being a convert to the faith. Among the admiralty and the Coltoba populace, he's known for having a perpetually friendly demeanor and a nearly infectious sense of optimism.\n\n§YPortrait By§!: Stratophobia"
   MDL_qadi_of_coltoba:0 "Qadi of Coltoba"
-  MDL_qadi_of_coltoba_desc:0 "One of the premier traditional positions of authority among the ash-shuhūd, the Qadi of Coltoba is the only one whose office has been stable and always occupied in Manedalusia over the course of the centuries. Tasked with interpreting and applying the Fiqh, it's said that in ancient times, when the Sultans of Everleaf ruled over Al-Manedalus, the Qadi was among their most trusted and reliable advisors. The current Qadi, Cloudgazer Suleiman, has held the position for nearly twenty years, and there's hardly a pony in all of Manedalusia that has a more detailed knowledge of the Fiqh, its precedents, history and application than himself."
+  MDL_qadi_of_coltoba_desc:0 "One of the premier traditional positions of authority among the ash-shuhūd, the Qadi of Coltoba is the only one whose office has been stable and always occupied in Manedalusia over the course of the centuries. Tasked with interpreting and applying the Fiqh, it's said that in ancient times, when the Sultans of Everleaf ruled over Al-Manedalus, the Qadi was among their most trusted and reliable advisors. The current Qadi, Cloudgazer Aamir, has held the position for nearly twenty years, and there's hardly a pony in all of Manedalusia that has a more detailed knowledge of the Fiqh, its precedents, history and application than himself."
   MDL_emerald_bargain:0 "Emerald Bargain"
   MDL_ink_al_shieri:0 "Ink Al-Shieri"
   MDL_stratophobia:0 "Tale Flair"
@@ -1693,6 +1702,7 @@
   MDL_mehmet_stats_tt:0 "§gLevel§!: §Y2§!, (£trait_attack §Y3§!, £trait_defense §Y1§!, £trait_planning §Y2§!, £trait_logistics §Y1§!)\n§gTraits§!: §C$artillery_officer$§!\n\n"
   MDL_samira_stats_tt:0 "§gLevel§!: §Y3§!, (£trait_attack §Y2§!, £trait_defense §Y2§!, £trait_planning §Y3§!, £trait_logistics §Y3§!)\n§gTraits§!: §C$ambusher$§!, §C$thorough_planner$§!, §C$MDL_koltaliba_member_trait$§!, §C$organizer$§!\n\n"
   MDL_samira_field_marshal_stats_tt:0 "§gLevel§!: §Y1§!, (£trait_attack §Y2§!, £trait_defense §Y1§!, £trait_planning §Y2§!, £trait_logistics §Y2§!)\n§gTraits§!: §C$ambusher$§!, §C$thorough_planner$§!, §C$MDL_koltaliba_member_trait$§!, §C$organizer$§!\n\n"
+  MDL_zahid_stats_tt:0 "gLevel§!: §Y1§!, (£trait_attack §Y1§!, £trait_defense §Y1§!, £trait_planning §Y3§!, £trait_logistics §Y2§!)\n§gTraits§!: §C$ambusher$§!, §C$trait_swift_wing$§!, §C$MDL_koltaliba_member_trait$§!\n\n"
   MDL_grifo_stats_tt:0 "§gLevel§!: §Y1§!, (£trait_attack §Y1§!, £trait_defense §Y1§!, £trait_planning §Y1§!, £trait_logistics §Y1§!)\n§gTraits§!: §C$substance_abuser$§!, §C$armchair_general$§!, §C$promising_general$§!\n\n"
   MDL_rosa_branca_stats_tt:0 "§gLevel§!: §Y2§!, (£trait_attack §Y1§!, £trait_defense §Y3§!, £trait_planning §Y2§!, £trait_logistics §Y1§!)\n§gTraits§!: §C$harsh_leader$§!\n\n"
   MDL_alexandre_de_aguilar_stats_tt:0 "§gLevel§!: §Y1§!, (£trait_attack §Y1§!, £trait_defense §Y1§!, £trait_planning §Y1§!, £trait_logistics §Y1§!)\n§gTraits§!: §C$engineer_officer$§!, §C$air_force_commander$§!\n\n"
@@ -1728,6 +1738,8 @@
   MDL_colthaginian_deal_tt:0 "Should Colthage accept our deal, a §Ymutual benefit§! will be provided to both countries as long as both @MDL §GManedalusia§! and the @CTH §CColthaginian Republic§! are independent. This Treaty can be reestablished if Colthage loses, and is then restored to independence."
   MDL_senate_reconcile_maregypt_tt:0 "@MGY §YMaregypt§! will lose all claims to @MDL §GManedalusian§! and @MKS §rOvingoland§! territories."
   MDL_annex_ovingoland_tt:0 "Every @MKS §rOvingoland§! core state:"
+  MDL_decrease_samira_happiness_tt:0 "§RThe Grandmistress'§! §Chope§! §Rwill waver.§!"
+  MDL_damage_asabiyyah_tt:0 "The §YAsabiyyah§! §Cmodifier§! will suffer a §Rrandom penalty.§!"
   MDL_game_end_tt:0 "§GThank you for playing Manedalusia Expanded!§!"
 ###FEDERAL ARMY TOOLTIPS###
   MDL_integrate_abyssinia_tt:0 "@ABY Abyssinia will lose all claims to @MDL Manedalusian territories, as well as its core on @KLG Klugetown.\n\nWe will integrate @ABYB Abyssinia into the §GWestern Zebrican Federation§!."
@@ -1793,6 +1805,7 @@
   decision_cost_CP_25_AXP_25_blocked:0 "£command_power  §R25§! £army_experience  §R25§!"
   decision_cost_CP_25_AXP_25_tooltip:0 "It costs [This.GetDecisionCostCP25AXP25] to take the decision"
 ###LEADER TRAITS###
+  MDL_master_of_subterfuge:0 "Master Of Subterfuge"
   MDL_samira_lady_commander:0 "§GLady Commander of Manedalusia, Stewardess of The Holy State, First Among the Servants of His Righteous Will and Protector of the Faithful§!"
   MDL_grifo_lord_regent_of_overseas:0 "§CLord-Governor Of The Overseas Dominion§!"
   MDL_grifo_imperial_regent:0 "§rLord-Regent Of Sacred Karthin's Imperial Throne§!"

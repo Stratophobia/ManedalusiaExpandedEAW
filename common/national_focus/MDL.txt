@@ -8227,7 +8227,7 @@ shared_focus = {
   icon = GFX_goal_generic_political
 
   x = 3
-  y = 1
+  y = 2
   cost = 6
   relative_position_id = MDL_charting_new_course
   prerequisite = { focus = MDL_charting_new_course }
@@ -8237,7 +8237,7 @@ shared_focus = {
     country_event = manedalusia.148
     MDL_zahid = {
       add_corps_commander_role = {
-        traits = { zebra_race_trait ambusher MDL_koltaliba_member_trait }
+        traits = { zebra_race_trait ambusher MDL_koltaliba_member_trait trait_swift_wing }
         skill=1
         attack_skill=1
         defense_skill=1
@@ -8245,5 +8245,162 @@ shared_focus = {
         logistics_skill=2
       }
     }
+    custom_effect_tooltip = MDL_zahid_stats_tt
+  }
+}
+
+shared_focus = {
+  id = MDL_SAM01
+  icon = GFX_goal_generic_political
+  x = -3
+  y = 2
+  relative_position_id = MDL_charting_new_course
+  prerequisite = { focus = MDL_charting_new_course }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM01"
+  }
+}
+
+shared_focus = {
+  id = MDL_SAM02
+  icon = GFX_goal_generic_political
+  x = 6
+  y = 1
+  relative_position_id = MDL_charting_new_course
+  prerequisite = { focus = MDL_charting_new_course }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM02"
+  }
+}
+
+shared_focus = {
+  id = MDL_SAM03
+  icon = GFX_goal_generic_political
+  x = -6
+  y = 1
+  relative_position_id = MDL_charting_new_course
+  prerequisite = { focus = MDL_charting_new_course }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM03"
+  }
+}
+
+shared_focus = {
+  id = MDL_SAM04
+  icon = GFX_goal_generic_political
+  x = -1
+  y = 1
+  relative_position_id = MDL_SAM02
+  prerequisite = { focus = MDL_SAM02 }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM04"
+  }
+}
+
+shared_focus = {
+  id = MDL_SAM05
+  icon = GFX_goal_generic_political
+  x = 1
+  y = 1
+  relative_position_id = MDL_SAM02
+  prerequisite = { focus = MDL_SAM02 }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM05"
+  }
+}
+
+shared_focus = {
+  id = MDL_SAM06
+  icon = GFX_goal_generic_political
+  x = -1
+  y = 1
+  relative_position_id = MDL_SAM01
+  prerequisite = { focus = MDL_SAM01 }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM06"
+  }
+}
+
+shared_focus = {
+  id = MDL_SAM07
+  icon = GFX_goal_generic_political
+  x = 1
+  y = 1
+  relative_position_id = MDL_SAM01
+  prerequisite = { focus = MDL_SAM01 }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM07"
+  }
+}
+
+shared_focus = {
+  id = MDL_SAM08
+  icon = GFX_goal_generic_political
+  x = -1
+  y = 1
+  relative_position_id = MDL_restore_the_asabiyyah
+  prerequisite = { focus = MDL_restore_the_asabiyyah }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM08"
+  }
+}
+
+shared_focus = {
+  id = MDL_SAM09
+  icon = GFX_goal_generic_political
+  x = 1
+  y = 1
+  relative_position_id = MDL_restore_the_asabiyyah
+  prerequisite = { focus = MDL_restore_the_asabiyyah }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM09"
+  }
+}
+
+shared_focus = {
+  id = MDL_SAM10
+  icon = GFX_goal_generic_political
+  x = -1
+  y = 1
+  relative_position_id = MDL_SAM03
+  prerequisite = { focus = MDL_SAM03 }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM10"
+  }
+}
+
+shared_focus = {
+  id = MDL_SAM11
+  icon = GFX_goal_generic_political
+  x = 1
+  y = 1
+  relative_position_id = MDL_SAM03
+  prerequisite = { focus = MDL_SAM03 }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM11"
+  }
+}
+
+shared_focus = {
+  id = MDL_SAM12
+  icon = GFX_goal_generic_political
+  x = -1
+  y = 1
+  relative_position_id = MDL_get_the_spymasters
+  prerequisite = { focus = MDL_get_the_spymasters }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM12"
+  }
+}
+
+shared_focus = {
+  id = MDL_SAM13
+  icon = GFX_goal_generic_political
+  x = 1
+  y = 1
+  relative_position_id = MDL_get_the_spymasters
+  prerequisite = { focus = MDL_get_the_spymasters }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM13"
   }
 }

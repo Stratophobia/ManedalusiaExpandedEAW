@@ -975,15 +975,25 @@ ideas = {
   }
 #SAMIRA IDEAS
   country = {
+    MDL_spymasters_rule = {
+      picture = MDL_spymasters
+      cancel = {
+        NOT = { has_government = fascism }
+      }
+      modifier = {
+        encryption_factor = 0.20
+        decryption_factor = 0.20
+      }
+    }
     MDL_koltaliba_rule_1 = {
       picture = MDL_koltaliba_rule
       modifier = {
-        stability_factor = 0.10
-        war_support_factor = 0.10
+        stability_factor = -0.05
+        war_support_factor = -0.05
         special_forces_cap = 0.50
         special_forces_attack_factor = 0.05
         special_forces_defence_factor = 0.05
-        conscription = -2
+        conscription = -0.10
       }
     }
   }

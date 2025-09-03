@@ -735,3 +735,86 @@ MDL_decrease_samira_happiness = {
     }
   }
 }
+
+MDL_damage_asabiyyah = {
+  random_list = {
+    1 = {
+      add_to_variable = {
+        var = MDL_trade_var
+        value = -0.10
+      }
+    }
+    1 = {
+      add_to_variable = {
+        var = MDL_production_var
+        value = -0.10
+      }
+    }
+    1 = {
+      add_to_variable = {
+        var = MDL_research_var
+        value = -0.10
+      }
+    }
+    1 = {
+      add_to_variable = {
+        var = MDL_org_var
+        value = -0.10
+      }
+    }
+    1 = {
+      add_to_variable = {
+        var = MDL_morale_var
+        value = -0.10
+      }
+    }
+    1 = {
+      add_to_variable = {
+        var = MDL_pp_var
+        value = -0.10
+      }
+    }
+    1 = {
+      add_to_variable = {
+        var = MDL_surrender_var
+        value = -0.10
+      }
+    }
+    1 = {
+      add_to_variable = {
+        var = MDL_war_var
+        value = -0.10
+      }
+    }
+    1 = {
+      add_to_variable = {
+        var = MDL_consoom_var
+        value = -0.10
+      }
+    }
+    1 = {
+      add_to_variable = {
+        var = MDL_economy_var
+        value = -0.10
+      }
+    }
+    1 = {
+      add_to_variable = {
+        var = MDL_tradelaw_var
+        value = -0.10
+      }
+    }
+    1 = {
+      add_to_variable = {
+        var = MDL_mobilization_var
+        value = -0.10
+      }
+    }
+    1 = {
+      add_to_variable = {
+        var = MDL_stability_var
+        value = -0.10
+      }
+    }
+  }
+}

@@ -3660,5 +3660,16 @@
 
     option = {
       name = manedalusia.148.a
+      add_advisor_role = {
+        character = MDL_zahid
+        advisor = {
+          slot = high_command
+          idea_token = MDL_zahid
+          cost = 150
+          can_be_fired = no
+          traits = { MDL_master_of_subterfuge }
+        }
+      }
+      hidden_effect = { add_ideas = MDL_zahid }
     }
   }
