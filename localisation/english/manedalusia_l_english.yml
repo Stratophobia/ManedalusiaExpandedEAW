@@ -1206,6 +1206,12 @@
 ###SAMIRA TREE###
   MDL_charting_new_course:0 "Charting The New Course"
   MDL_charting_new_course_desc:0 "Through grit and discipline, we've beaten back the madgriff and his thugs, but the damage to Coltoba and beyond has been immense. As what remains of Manedalusian leadership, the Grandmistress now bears the unenviable burden of choosing how Al-Manedalus may begin to recover from this blow."
+  MDL_restore_the_asabiyyah:0 "Restoring Asabiyyah"
+  MDL_restore_the_asabiyyah_desc:0 "What holds together Manedalusia is the everpresent solidarity and shared sense of purpose that unites its people. It made us resist Abyssinia's occupation, and will continue to assist us now."
+  MDL_SAM14:0 "A Unified National Armory"
+  MDL_SAM14_desc:0 "Koltāliba weapon stockpiles are largely made up of foreign weapon imports, but our facilities can be easily repurposed into a proper national armory that can help supply the whole Manedalusian army with modernized rifle models."
+  MDL_SAM17:0 "A Deal They Cannot Refuse"
+  MDL_SAM17_desc:0 "Grifo's rampage through the harbor has put guild assets in a precarious position. While we intend to reimburse them fully, this act of good will is done with the understanding that their facilities will be employed to further develop Coltoba and Manedalusia's economy as a whole."
 ###MANEDALUSIA IDEAS###
   MDL_asabiyyah_modifier:0 "Asabiyyah"
   MDL_asabiyyah_modifier_desc:0 "Asabiyyah is the Manedalusian term for a people's sense of unity, solidarity, and shared purpose and destiny. The Manedalusians are a people used to hardship, and they take solace in their share faith and sense of group identity. A wise ruler seeks to foster his people's Asabiyyah, while a selfish and foolish one seeks to manipulate it for their own gain.\n\n§YNot all choices are as simple as they seem. The Asabiyyah is a reflection of Manedalusians' very way of life, and should you seek to alter it, always remember that to attempt to mimic Ash-Shahid's divine omnipotence is a grave sin. Serve your people well, and they will do the same to you.§!"

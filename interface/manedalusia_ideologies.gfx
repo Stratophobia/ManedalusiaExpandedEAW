@@ -7,12 +7,4 @@ spriteTypes = {
 		name = "GFX_ideology_MDL_esotericism"
 		texturefile="gfx/interface/ideologies/MDL_esotericism.tga"
 	}
-  SpriteType = {
-		name = "GFX_ideology_MDL_nazism"
-		texturefile="gfx/interface/ideologies/MDL_nazism.tga"
-	}
-  SpriteType = {
-    name = "GFX_ideology_MDL_surveillance_state"
-    texturefile="gfx/interface/ideologies/MDL_suv_state.tga"
-  }
 }

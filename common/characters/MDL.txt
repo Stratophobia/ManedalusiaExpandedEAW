@@ -454,7 +454,9 @@ characters={
 			ledger = army
 			idea_token = MDL_cims
 			allowed = { original_tag = MDL }
-      visible = { has_country_flag = MDL_grifo_takeover }
+      visible = {
+        NOT = { has_country_flag = MDL_grifo_takeover }
+      }
       available = { has_completed_focus = MDL_coltoba_institute_military_science }
 			traits = { MDL_military_academy }
 		}

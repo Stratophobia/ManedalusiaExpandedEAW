@@ -27,6 +27,7 @@ MDL_koltaliba_tab = {
   allowed = { original_tag = MDL }
   visible = { has_country_flag = MDL_samira_path }
   visible_when_empty = yes
+  icon = GFX_decision_category_MDL_koltaliba
 }
 
 MDL_holy_war_tab = {
