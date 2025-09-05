@@ -3671,3 +3671,14 @@
       hidden_effect = { add_ideas = MDL_zahid }
     }
   }
+
+  country_event = {#samira deals with abyssinian nobles
+    id = manedalusia.149
+    title = manedalusia.149.t
+    desc = manedalusia.149.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.149
+    }
+  }

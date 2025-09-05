@@ -8275,6 +8275,29 @@ shared_focus = {
   prerequisite = { focus = MDL_charting_new_course }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM02"
+    MDL_mehmet = {
+      set_character_name = MDL_mehmet_major
+      add_corps_commander_role = {
+        traits = { pony_race_trait artillery_officer }
+        skill=2
+        attack_skill=3
+        defense_skill=1
+        logistics_skill=2
+        planning_skill=1
+      }
+    }
+    custom_effect_tooltip = MDL_mehmet_stats_tt
+    MDL_iron_muhtal = {
+      add_corps_commander_role = {
+        traits = { pony_race_trait }
+        skill = 1
+        attack_skill=1
+        defense_skill=3
+        logistics_skill=1
+        planning_skill=2
+      }
+    }
+    custom_effect_tooltip = MDL_muhtal_stats_tt
   }
 }
 
@@ -8349,6 +8372,11 @@ shared_focus = {
   cost = 6
   x = -1
   y = 1
+  available = {
+    741 = { is_owned_and_controlled_by = ROOT }
+    740 = { is_owned_and_controlled_by = ROOT }
+    738 = { is_owned_and_controlled_by = ROOT }
+  }
   relative_position_id = MDL_restore_the_asabiyyah
   prerequisite = { focus = MDL_restore_the_asabiyyah }
   completion_reward = {
@@ -8480,6 +8508,7 @@ shared_focus = {
   prerequisite = { focus = MDL_get_the_spymasters }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM13"
+    add_war_support = 0.05
     custom_effect_tooltip = MDL_spawn_koltaliba_divs_tt
     hidden_effect = {
       set_technology = { tech_spirit_warriors = 1 }
@@ -8526,10 +8555,17 @@ shared_focus = {
   cost = 6
   x = 4
   y = 1
+  available = {
+    has_government = fascism
+  }
   relative_position_id = MDL_charting_new_course
   prerequisite = { focus = MDL_charting_new_course }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM15"
+    741 = { add_manpower = 75000 }
+    764 = { add_manpower = 25000 }
+
+    decrease_poverty = yes
   }
 }
 
@@ -8576,10 +8612,22 @@ shared_focus = {
   x = 0
   y = 2
   relative_position_id = MDL_restore_the_asabiyyah
+  available = {
+    has_government = neutrality
+    733 = { is_owned_and_controlled_by = ROOT }
+    775 = { is_owned_and_controlled_by = ROOT }
+  }
   prerequisite = { focus = MDL_SAM08 }
   prerequisite = { focus = MDL_SAM09 }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM18"
+    remove_ideas = MDL_humbled_sultanate
+    create_wargoal = {
+      type = annex_everything
+      target = KLG
+    }
+    ABY = { add_to_ROOT_potential_cores = yes }
+    MGY = { add_to_ROOT_potential_cores = yes }
   }
 }
 
@@ -8592,8 +8640,28 @@ shared_focus = {
   relative_position_id = MDL_SAM03
   prerequisite = { focus = MDL_SAM10 }
   prerequisite = { focus = MDL_SAM11 }
+  available = {
+    ABY = { exists = no }
+    775 = { is_owned_and_controlled_by = ROOT }
+    has_government = neutrality
+  }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM19"
+    country_event = manedalusia.149
+    effect_tooltip = {
+      every_state = {
+        limit = { is_in_array = { state_original_cores = ABY } }
+        add_resistance = -15
+        add_compliance = 20
+      }
+    }
+    hidden_effect = {
+      every_owned_state = {
+        limit = { is_in_array = { state_original_cores = ABY } }
+        add_resistance = -15
+        add_compliance = 20
+      }
+    }
   }
 }
 
@@ -8618,10 +8686,18 @@ shared_focus = {
   x = 0
   y = 2
   relative_position_id = MDL_SAM01
+  available = {
+    has_government = fascism
+  }
   prerequisite = { focus = MDL_SAM06 }
   prerequisite = { focus = MDL_SAM07 }
+  will_lead_to_war_with = MGY
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM21"
+    create_wargoal = {
+      type = annex_everything
+      target = MGY
+    }
   }
 }
 
@@ -8637,6 +8713,15 @@ shared_focus = {
   }
   prerequisite = { focus = MDL_SAM12 }
   prerequisite = { focus = MDL_SAM13 }
+  bypass = {
+    ABY = {
+      OR = {
+        is_subject_of = WNG
+        exists = no
+      }
+    }
+  }
+  will_lead_to_war_with = ABY
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM22"
     create_wargoal = {
@@ -8782,8 +8867,10 @@ shared_focus = {
   x = 1
   y = 1
   relative_position_id = MDL_SAM26
-  prerequisite = { focus = MDL_SAM26 }
-  prerequisite = { focus = MDL_SAM25 }
+  prerequisite = {
+    focus = MDL_SAM25
+    focus = MDL_SAM26
+  }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM32"
   }
@@ -8822,8 +8909,10 @@ shared_focus = {
   x = 1
   y = 1
   relative_position_id = MDL_SAM29
-  prerequisite = { focus = MDL_SAM29 }
-  prerequisite = { focus = MDL_SAM30 }
+  prerequisite = {
+    focus = MDL_SAM29
+    focus = MDL_SAM30
+  }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM35"
   }
@@ -8940,8 +9029,10 @@ shared_focus = {
   y = 1
   relative_position_id = MDL_SAM21
   prerequisite = { focus = MDL_SAM21 }
+  
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM43"
+
   }
 }
 
@@ -8952,15 +9043,34 @@ shared_focus = {
   x = 0
   y = 1
   relative_position_id = MDL_SAM22
-  available = {
-    ABY = { exists = no }
-    775 = { is_owned_and_controlled_by = ROOT }
-    has_government = neutrality
-  }
   prerequisite = { focus = MDL_SAM22 }
+  available = {
+    has_government = fascism
+    ABY = {
+      OR = {
+        exists = no
+        is_subject_of = WNG
+      }
+    }
+  }
+  bypass = {
+    NOT = { 784 = { is_owned_and_controlled_by = WNG } }
+  }
+  will_lead_to_war_with = WNG
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM44"
-    ABY = { add_to_ROOT_potential_cores = yes }
+    hidden_effect = { set_country_flag = MDL_war_with_wingbardy }
+    custom_effect_tooltip = MDL_war_with_wingbardy_tt
+    declare_war_on = { type = annex_everything target = WNG }
+    if = {
+      limit = {
+        ABY = {
+          exists = yes
+          is_subject = yes
+        }
+      }
+      declare_war_on = { type = annex_everything target = ABY }
+    }
   }
 }
 
@@ -9101,10 +9211,20 @@ shared_focus = {
   x = 1
   y = 1
   relative_position_id = MDL_SAM07
+  available = {
+    1208 = { is_owned_and_controlled_by = ROOT }
+  }
   prerequisite = { focus = MDL_SAM07 }
   prerequisite = { focus = MDL_SAM18 }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM55"
+    increase_society_development = yes
+    1208 = { add_core_of = ROOT }
+    build_railway = {
+      level = 2
+      start_province = 12234
+      target_province = 12386
+    }
   }
 }
 
@@ -9119,5 +9239,7 @@ shared_focus = {
   prerequisite = { focus = MDL_SAM12 }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM56"
+    add_research_slot = 1
+    increase_science_base = yes
   }
 }

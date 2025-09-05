@@ -59,6 +59,89 @@ MDL_koltaliba_tab = {
       add_ideas = MDL_spymasters_rule
     }
   }
+
+  MDL_sabotage_enemies = {
+    icon = GFX_decision_infiltrate_state
+    cost = 25
+    modifier = {
+      army_morale_factor = -0.15
+      surrender_limit = -0.35
+    }
+    days_remove = 75
+    visible = {
+      has_government = fascism
+      has_war = yes
+    }
+    available = { has_government = fascism }
+    cancel_trigger = {
+      OR = {
+        has_war = no
+        has_government = neutrality
+      }
+    }
+    remove_effect = {
+      every_enemy_country = {
+        add_ideas = MDL_sabotaged_supply
+      }
+    }
+  }
+
+  MDL_research_spirit_warrior_tech = {
+		icon = crossed_swords
+
+		cost = 50
+		days_remove = 1#TEST
+		modifier = {
+			research_speed_factor = -0.05
+			consumer_goods_factor = 0.05
+		}
+		available = {
+			NOT = {
+			  has_decision = MDL_research_zeeb_starter_tech
+			}
+		}
+		visible = {
+      has_completed_focus = MDL_SAM13
+			NOT = { has_tech = zebra_warriors_of_new_age }
+		}
+
+		ai_will_do = {
+			factor = 50
+		}
+		
+		remove_effect = {
+		  MDL_upgrade_zeeb_tech = yes
+		}
+	}
+
+  MDL_research_zeeb_starter_tech = {
+		icon = crossed_swords
+
+		cost = 50
+		days_remove = 1#TEST
+		modifier = {
+			research_speed_factor = -0.05
+			consumer_goods_factor = 0.05
+		}
+		available = {
+			NOT = {
+				has_decision = MDL_research_spirit_warrior_tech
+			}
+		}
+		visible = {
+      has_completed_focus = MDL_SAM13
+			NOT = { has_tech = tech_zebra_crafting }
+		}
+
+		ai_will_do = {
+			factor = 50
+		}
+		
+		remove_effect = {
+		  MDL_get_zeeb_tech = yes
+		}
+	}
+
   MDL_samira_stress_mission = {
     allowed = { original_tag = MDL }
     visible = {
@@ -84,7 +167,7 @@ MDL_koltaliba_tab = {
       }
     }
 
-    days_mission_timeout = 200#TEST
+    days_mission_timeout = 200
 
     timeout_effect = {
       custom_effect_tooltip = MDL_decrease_samira_happiness_tt
@@ -99,7 +182,7 @@ MDL_koltaliba_tab = {
     cancel_trigger = {
       has_government = neutrality
     }
-    days_mission_timeout = 200#TEST
+    days_mission_timeout = 200
     timeout_effect = {
       custom_effect_tooltip = MDL_decrease_samira_happiness_tt
       custom_effect_tooltip = MDL_damage_asabiyyah_tt

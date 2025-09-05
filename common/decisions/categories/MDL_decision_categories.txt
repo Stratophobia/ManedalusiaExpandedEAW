@@ -45,8 +45,10 @@ MDL_fiqh_decisions_tab = {
   priority = 200
   allowed = { original_tag = MDL }
   visible = {
-    has_completed_focus = MDL_fiqh_decisions
-    has_completed_focus = MDL_SAM08
+    OR = {
+      has_completed_focus = MDL_fiqh_decisions
+      has_completed_focus = MDL_SAM08
+    }
   }
   icon = GFX_decision_category_MDL_fiqh
 }

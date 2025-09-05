@@ -608,6 +608,96 @@ MDL_shuffle_grifo_heteronym = {
   }
 }
 
+MDL_get_zeeb_tech = {
+  if = {
+    limit = {
+      NOT = { has_tech = tech_zebra_climate }
+    }
+    set_technology = { tech_zebra_climate = 1 }
+  }
+  else_if = {
+    limit = {
+      has_tech = tech_zebra_climate
+      NOT = { has_tech = tech_zebra_alchemy }
+    }
+    set_technology = { tech_zebra_alchemy = 1 }
+  }
+  else = {
+    set_technology = { tech_zebra_crafting = 1 }
+  }
+}
+
+MDL_upgrade_zeeb_tech = {
+  if = {
+    limit = {
+      has_tech = tech_spirit_warriors
+      NOT = { has_tech = tech_spirit_warriors2 }
+    }
+    set_technology = {
+      tech_spirit_warriors2 = 1
+    }
+  }
+  else_if = {
+    limit = {
+      has_tech = tech_spirit_warriors2
+      NOT = { has_tech = tech_spirit_warriors3 }
+    }
+    set_technology = {
+      tech_spirit_warriors3 = 1
+    }
+  }
+  else_if = {
+    limit = {
+      has_tech = tech_spirit_warriors3
+      NOT = { has_tech = tech_spirit_warriors4 }
+    }
+    set_technology = {
+      tech_spirit_warriors4 = 1
+    }
+  }
+  else_if = {
+    limit = {
+      has_tech = tech_spirit_warriors4
+      NOT = { has_tech = tech_spirit_warriors5 }
+    }
+    set_technology = {
+      tech_spirit_warriors5 = 1
+    }
+  }
+  else_if = {
+    limit = {
+      has_tech = tech_spirit_warriors5
+      NOT = { has_tech = tech_spirit_warriors6 }
+    }
+    set_technology = {
+      tech_spirit_warriors6 = 1
+    }
+  }
+  else_if = {
+    limit = {
+      has_tech = tech_spirit_warriors6
+      NOT = { has_tech = zebra_steel_rituals }
+    }
+    set_technology = {
+      zebra_steel_rituals = 1
+    }
+  }
+  else_if = {
+    limit = {
+      has_tech = zebra_steel_rituals
+      NOT = { has_tech = zebra_bounded_weapons }
+    }
+    set_technology = {
+      zebra_bounded_weapons = 1
+    }
+  }
+  else = {
+    set_technology = {
+      zebra_warriors_of_new_age = 1
+    }
+  }
+}
+
 MDL_upgrade_knights_technology = {
 	if = {
 		limit = {

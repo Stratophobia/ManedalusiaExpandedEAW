@@ -985,6 +985,18 @@ ideas = {
         decryption_factor = 0.20
       }
     }
+    MDL_sabotaged_supply = {
+      picture = MDL_sabotage
+      cancel = {
+        OR = {
+          NOT = { has_war_with = MDL }
+        }
+      }
+      modifier = {
+        army_morale_factor = -0.15
+        surrender_limit = -0.35
+      }
+    }
     MDL_koltaliba_rule_1 = {
       picture = MDL_koltaliba_rule
       modifier = {
