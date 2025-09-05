@@ -8353,6 +8353,8 @@ shared_focus = {
   prerequisite = { focus = MDL_restore_the_asabiyyah }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM08"
+    add_stability = 0.05
+    custom_effect_tooltip = MDL_fiqh_decisions_unlocked_tt
   }
 }
 
@@ -8364,8 +8366,47 @@ shared_focus = {
   y = 1
   relative_position_id = MDL_restore_the_asabiyyah
   prerequisite = { focus = MDL_restore_the_asabiyyah }
+  available = {
+    741 = { is_owned_and_controlled_by = ROOT }
+    740 = { is_owned_and_controlled_by = ROOT }
+    738 = { is_owned_and_controlled_by = ROOT }
+  }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM09"
+    build_railway = {
+        level = 1
+        start_province = 12234
+        target_province = 7512
+      }
+      build_railway = {
+        level = 2
+        start_province = 7512
+        target_province = 4804
+      }
+      741 = {
+        add_extra_state_shared_building_slots = 1
+        add_building_construction = {
+          type = infrastructure
+          level = 1
+          instant_build = yes
+        }
+      }
+      738 = {
+        add_extra_state_shared_building_slots = 2
+        add_building_construction = {
+          type = infrastructure
+          level = 2
+          instant_build = yes
+        }
+      }
+      740 = {
+        add_extra_state_shared_building_slots = 2
+        add_building_construction = {
+          type = infrastructure
+          level = 2
+          instant_build = yes
+        }
+      }
   }
 }
 
@@ -8402,9 +8443,27 @@ shared_focus = {
   x = -1
   y = 1
   relative_position_id = MDL_get_the_spymasters
+  available = {
+    has_government = fascism
+    741 = { is_owned_and_controlled_by = ROOT }
+  }
   prerequisite = { focus = MDL_get_the_spymasters }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM12"
+    741 = {
+      add_building_construction = {
+        type = bunker
+        level = 2
+        province = 12279
+        instant_build = yes
+      }
+      add_building_construction = {
+        type = bunker
+        level = 2
+        province = 12315
+        instant_build = yes
+      }
+    }
   }
 }
 
@@ -8415,9 +8474,18 @@ shared_focus = {
   x = 1
   y = 1
   relative_position_id = MDL_get_the_spymasters
+  available = {
+    has_government = fascism
+  }
   prerequisite = { focus = MDL_get_the_spymasters }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM13"
+    custom_effect_tooltip = MDL_spawn_koltaliba_divs_tt
+    hidden_effect = {
+      set_technology = { tech_spirit_warriors = 1 }
+      load_oob = "MDL_koltaliba"
+    }
+    custom_effect_tooltip = MDL_get_zeeb_tech_tt
   }
 }
 
@@ -8436,7 +8504,7 @@ shared_focus = {
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM14"
     add_tech_bonus = {
-      name = MDL_SAM16
+      name = MDL_SAM14
       bonus = 1.0
       uses = 2
       category = infantry_weapons
@@ -8472,9 +8540,14 @@ shared_focus = {
   x = -2
   y = 1
   relative_position_id = MDL_charting_new_course
+  available = {
+    has_government = fascism
+  }
   prerequisite = { focus = MDL_charting_new_course }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM16"
+    add_research_slot = 1
+    increase_science_base = yes
   }
 }
 
@@ -8559,10 +8632,17 @@ shared_focus = {
   x = 0
   y = 2
   relative_position_id = MDL_get_the_spymasters
+  available = {
+    has_government = fascism
+  }
   prerequisite = { focus = MDL_SAM12 }
   prerequisite = { focus = MDL_SAM13 }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM22"
+    create_wargoal = {
+      type = annex_everything
+      target = ABY
+    }
   }
 }
 
@@ -8872,9 +8952,15 @@ shared_focus = {
   x = 0
   y = 1
   relative_position_id = MDL_SAM22
+  available = {
+    ABY = { exists = no }
+    775 = { is_owned_and_controlled_by = ROOT }
+    has_government = neutrality
+  }
   prerequisite = { focus = MDL_SAM22 }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM44"
+    ABY = { add_to_ROOT_potential_cores = yes }
   }
 }
 
@@ -9015,10 +9101,8 @@ shared_focus = {
   x = 1
   y = 1
   relative_position_id = MDL_SAM07
-  prerequisite = {
-    focus = MDL_SAM07
-    focus = MDL_SAM18
-  }
+  prerequisite = { focus = MDL_SAM07 }
+  prerequisite = { focus = MDL_SAM18 }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM55"
   }
@@ -9031,10 +9115,8 @@ shared_focus = {
   x = -1
   y = 1
   relative_position_id = MDL_SAM12
-  prerequisite = {
-    focus = MDL_SAM18
-    focus = MDL_SAM12
-  }
+  prerequisite = { focus = MDL_SAM18 }
+  prerequisite = { focus = MDL_SAM12 }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM56"
   }

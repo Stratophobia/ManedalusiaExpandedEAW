@@ -340,7 +340,10 @@ characters={
     advisor = {
       slot=political_advisor
       idea_token=MDL_emerald_bargain
-      available = { has_completed_focus = MDL_work_with_guilds }
+      available = {
+        has_completed_focus = MDL_work_with_guilds
+        has_completed_focus = MDL_SAM17
+      }
       traits = { smooth_talking_charmer }
     }
   }

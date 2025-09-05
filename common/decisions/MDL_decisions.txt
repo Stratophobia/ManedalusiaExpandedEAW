@@ -52,9 +52,7 @@ MDL_koltaliba_tab = {
     visible = {
       NOT = { has_government = fascism }
     }
-    available = {
-      has_completed_focus = MDL_get_the_spymasters
-    }
+
     cost = 25
     complete_effect = {
       set_politics = { ruling_party = fascism }
@@ -1070,7 +1068,6 @@ MDL_fiqh_decisions_tab = {
   MDL_fiqh_1 = {#natural causality
     icon = eng_trade_unions_support
     allowed = { original_tag = MDL }
-    visible = { has_completed_focus = MDL_fiqh_decisions }
     cost = 50
     fire_only_once = yes
     complete_effect = {
@@ -1080,7 +1077,6 @@ MDL_fiqh_decisions_tab = {
   MDL_fiqh_2 = {#the princesses
     icon = eng_trade_unions_support
     allowed = { original_tag = MDL }
-    visible = { has_completed_focus = MDL_fiqh_decisions }
     cost = 50
     fire_only_once = yes
     complete_effect = {
@@ -1090,7 +1086,6 @@ MDL_fiqh_decisions_tab = {
   MDL_fiqh_3 = {#qadi authority
     icon = eng_trade_unions_support
     allowed = { original_tag = MDL }
-    visible = { has_completed_focus = MDL_fiqh_decisions }
     cost = 50
     fire_only_once = yes
     complete_effect = {
@@ -1100,7 +1095,6 @@ MDL_fiqh_decisions_tab = {
   MDL_fiqh_4 = {#kalam
     icon = eng_trade_unions_support
     allowed = { original_tag = MDL }
-    visible = { has_completed_focus = MDL_fiqh_decisions }
     cost = 50
     fire_only_once = yes
     complete_effect = {
@@ -1110,7 +1104,6 @@ MDL_fiqh_decisions_tab = {
   MDL_fiqh_5 = {#free will
     icon = eng_trade_unions_support
     allowed = { original_tag = MDL }
-    visible = { has_completed_focus = MDL_fiqh_decisions }
     cost = 50
     fire_only_once = yes
     complete_effect = {
