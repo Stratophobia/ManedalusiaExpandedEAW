@@ -2166,6 +2166,9 @@ focus_tree = {
       log = "[GetDateText]: [Root.GetName]: Focus MDL_work_with_guilds"
       add_political_power = -35
       add_offsite_building = { type = industrial_complex level = 3 }
+
+      custom_effect_tooltip = available_political_advisor
+      show_ideas_tooltip = MDL_emerald_bargain
     }
     search_filters = { FOCUS_FILTER_INDUSTRY }
   }
@@ -3071,7 +3074,7 @@ shared_focus = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_restore_merchant_fleet"
     add_political_power = -50
     add_tech_bonus = {
-      name = MDL_cl
+      name = MDL_restore_merchant_fleet
       bonus = 0.50
       uses = 2
       category = cl_tech
@@ -8258,10 +8261,15 @@ shared_focus = {
   cost = 6
   x = -3
   y = 2
+  available = {
+    has_government = fascism
+  }
   relative_position_id = MDL_charting_new_course
   prerequisite = { focus = MDL_charting_new_course }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM01"
+    add_manpower = 250000
+    MDL_increase_conscription = yes
   }
 }
 
@@ -8289,12 +8297,13 @@ shared_focus = {
     custom_effect_tooltip = MDL_mehmet_stats_tt
     MDL_iron_muhtal = {
       add_corps_commander_role = {
-        traits = { pony_race_trait }
+        traits = { pony_race_trait supply_raider scavenger }
         skill = 1
         attack_skill=1
         defense_skill=3
         logistics_skill=1
         planning_skill=2
+        desc = MDL_iron_muhtal_desc
       }
     }
     custom_effect_tooltip = MDL_muhtal_stats_tt
@@ -8320,10 +8329,19 @@ shared_focus = {
   cost = 6
   x = -1
   y = 1
+  available = {
+    has_government = fascism
+  }
   relative_position_id = MDL_SAM02
   prerequisite = { focus = MDL_SAM02 }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM04"
+    add_ideas = MDL_magical_reloading
+
+    custom_effect_tooltip = available_political_advisor
+    show_ideas_tooltip = MDL_alneighzari
+
+    MDL_switch_power_to_samira = yes
   }
 }
 
@@ -8350,6 +8368,12 @@ shared_focus = {
   prerequisite = { focus = MDL_SAM01 }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM06"
+    add_to_variable = {
+      var = MDL_trade_var
+      value = 0.45
+    }
+    decrease_illiteracy = yes
+    custom_effect_tooltip = MDL_reliable_traders_tt
   }
 }
 
@@ -8360,9 +8384,19 @@ shared_focus = {
   x = 1
   y = 1
   relative_position_id = MDL_SAM01
+  available = {
+    has_government = neutrality
+  }
   prerequisite = { focus = MDL_SAM01 }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM07"
+    add_stability = 0.10
+    add_war_support = 0.15
+    add_tech_bonus = {
+      bonus = 2.0
+      uses = 1
+      category = race_tech
+    }
   }
 }
 
@@ -8406,35 +8440,36 @@ shared_focus = {
         start_province = 12234
         target_province = 7512
       }
-      build_railway = {
+    build_railway = {
+      level = 2
+      start_province = 7512
+      target_province = 4804
+    }
+    741 = {
+      add_extra_state_shared_building_slots = 1
+      add_building_construction = {
+        type = infrastructure
+        level = 1
+        instant_build = yes
+      }
+    }
+    738 = {
+      add_extra_state_shared_building_slots = 2
+      add_building_construction = {
+        type = infrastructure
         level = 2
-        start_province = 7512
-        target_province = 4804
+        instant_build = yes
       }
-      741 = {
-        add_extra_state_shared_building_slots = 1
-        add_building_construction = {
-          type = infrastructure
-          level = 1
-          instant_build = yes
-        }
+    }
+    740 = {
+      add_extra_state_shared_building_slots = 2
+      add_building_construction = {
+        type = infrastructure
+        level = 2
+        instant_build = yes
       }
-      738 = {
-        add_extra_state_shared_building_slots = 2
-        add_building_construction = {
-          type = infrastructure
-          level = 2
-          instant_build = yes
-        }
-      }
-      740 = {
-        add_extra_state_shared_building_slots = 2
-        add_building_construction = {
-          type = infrastructure
-          level = 2
-          instant_build = yes
-        }
-      }
+    }
+    decrease_poverty = yes
   }
 }
 
@@ -8461,6 +8496,13 @@ shared_focus = {
   prerequisite = { focus = MDL_SAM03 }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM11"
+    add_tech_bonus = {
+      name = MDL_SAM11
+      bonus = 1.0
+      uses = 2
+      category = cl_tech
+    }
+    add_ideas = MDL_merchant_fleet_idea
   }
 }
 
@@ -8562,10 +8604,15 @@ shared_focus = {
   prerequisite = { focus = MDL_charting_new_course }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM15"
+    add_ideas = MDL_national_census
     741 = { add_manpower = 75000 }
     764 = { add_manpower = 25000 }
-
-    decrease_poverty = yes
+    add_tech_bonus = {
+      bonus = 2.0
+      uses = 1
+      category = race_tech
+    }
+    MDL_switch_power_to_samira = yes
   }
 }
 
@@ -8584,6 +8631,8 @@ shared_focus = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM16"
     add_research_slot = 1
     increase_science_base = yes
+
+    MDL_switch_power_to_samira = yes
   }
 }
 
@@ -8602,6 +8651,8 @@ shared_focus = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM17"
     add_political_power = -10
     add_offsite_building = { type = industrial_complex level = 3 }
+    custom_effect_tooltip = available_political_advisor
+    show_ideas_tooltip = MDL_emerald_bargain
   }
 }
 
@@ -8710,6 +8761,7 @@ shared_focus = {
   relative_position_id = MDL_get_the_spymasters
   available = {
     has_government = fascism
+    ABY = { has_civil_war = no }
   }
   prerequisite = { focus = MDL_SAM12 }
   prerequisite = { focus = MDL_SAM13 }
@@ -9029,10 +9081,18 @@ shared_focus = {
   y = 1
   relative_position_id = MDL_SAM21
   prerequisite = { focus = MDL_SAM21 }
-  
+  available = {
+    has_government = neutrality
+    733 = { is_owned_and_controlled_by = ROOT }
+  }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM43"
-
+    set_country_flag = MDL_zahid_power_mission_nullified
+    country_event = manedalusia.150
+    swap_ideas = {
+      remove_idea = MDL_koltaliba_rule_1
+      add_idea = MDL_koltaliba_rule_2
+    }
   }
 }
 
@@ -9071,6 +9131,7 @@ shared_focus = {
       }
       declare_war_on = { type = annex_everything target = ABY }
     }
+    MDL_switch_power_to_samira = yes
   }
 }
 
@@ -9241,5 +9302,30 @@ shared_focus = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM56"
     add_research_slot = 1
     increase_science_base = yes
+  }
+}
+
+shared_focus = {
+  id = MDL_SAM57
+  icon = GFX_goal_generic_political
+  x = 1
+  y = 1
+  relative_position_id = MDL_SAM55
+  available = {
+    has_idea = proper_science_base
+    has_idea = modern_society
+    has_idea = no_lack_of_scientists
+    has_idea = no_poverty
+
+    775 = { is_owned_and_controlled_by = ROOT }
+    733 = { is_owned_and_controlled_by = ROOT }
+    1208 = { is_owned_and_controlled_by = ROOT }
+    810 = { is_owned_and_controlled_by = ROOT }
+    956 = { is_owned_and_controlled_by = ROOT }
+  }
+  prerequisite = { focus = MDL_SAM55 }
+  prerequisite = { focus = MDL_SAM56 }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM57"
   }
 }

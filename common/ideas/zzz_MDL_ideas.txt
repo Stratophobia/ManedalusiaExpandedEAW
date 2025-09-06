@@ -975,6 +975,12 @@ ideas = {
   }
 #SAMIRA IDEAS
   country = {
+    MDL_national_census = {
+      picture = MDL_national_census
+      modifier = {
+        conscription = 0.01
+      }
+    }
     MDL_spymasters_rule = {
       picture = MDL_spymasters
       cancel = {
@@ -1005,7 +1011,16 @@ ideas = {
         special_forces_cap = 0.50
         special_forces_attack_factor = 0.05
         special_forces_defence_factor = 0.05
-        conscription = -0.10
+        conscription_factor = -0.90
+      }
+    }
+    MDL_koltaliba_rule_2 = {
+      picture = MDL_koltaliba_rule
+      modifier = {
+        special_forces_cap = 0.50
+        special_forces_attack_factor = 0.1
+        special_forces_defence_factor = 0.1
+        conscription_factor = -0.50
       }
     }
   }

@@ -180,7 +180,10 @@ MDL_koltaliba_tab = {
     available = { always = no }
     activation = { has_government = fascism }
     cancel_trigger = {
-      has_government = neutrality
+      OR = {
+        has_country_flag = MDL_zahid_power_mission_nullified
+        has_government = neutrality
+      }
     }
     days_mission_timeout = 200
     timeout_effect = {

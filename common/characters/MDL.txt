@@ -220,7 +220,12 @@ characters={
 			idea_token = MDL_alneighzari
 			allowed = { original_tag = MDL }
 			traits = { unhindered_s }
-			available = { has_completed_focus = MDL_go_with_samira }
+			available = {
+        OR = {
+          has_completed_focus = MDL_go_with_samira
+          has_completed_focus = MDL_SAM04
+        }
+      }
 		}
     scientist = {
       available = { always = yes }

@@ -936,7 +936,14 @@
   country_event = {#fiqh4 kalam
     id = manedalusia.33
     title = manedalusia.33.t
-    desc = manedalusia.33.d
+    desc = {
+      text = manedalusia.33.d
+      trigger = { NOT = { has_country_flag = MDL_laylah_absent } }
+    }
+    desc = {
+      text = manedalusia.33.d_laylah_absent
+      trigger = { has_country_flag = MDL_laylah_absent }
+    }
     is_triggered_only = yes
 
     option = {
@@ -3680,5 +3687,16 @@
 
     option = {
       name = manedalusia.149
+    }
+  }
+
+  country_event = {#samira reforms the order
+    id = manedalusia.150
+    title = manedalusia.150.t
+    desc = manedalusia.150.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.150.a
     }
   }

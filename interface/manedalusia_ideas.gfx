@@ -1,5 +1,13 @@
 spriteTypes = {
   SpriteType = {
+    name = "GFX_idea_MDL_national_census"
+    texturefile = "gfx/interface/ideas/MDL/MDL_national_census.tga"
+  }
+  SpriteType = {
+    name = "GFX_idea_MDL_sabotage"
+    texturefile = "gfx/interface/ideas/MDL/MDL_sabotage.tga"
+  }
+  SpriteType = {
     name = "GFX_idea_MDL_spymasters"
     texturefile = "gfx/interface/ideas/MDL/MDL_spymasters.tga"
   }
