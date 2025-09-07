@@ -1,5 +1,53 @@
 spriteTypes = {
   SpriteType = {
+    name="GFX_MDL_SAM01"
+    texturefile = "gfx/interface/goals/MDL/MDL_SAM01.tga"
+  }
+  SpriteType = {
+    name="GFX_MDL_SAM21"
+    texturefile = "gfx/interface/goals/MDL/MDL_SAM21.tga"
+  }
+  SpriteType = {
+    name="GFX_MDL_SAM08"
+    texturefile = "gfx/interface/goals/MDL/MDL_SAM08.tga"
+  }
+  SpriteType = {
+    name="GFX_MDL_SAM09"
+    texturefile = "gfx/interface/goals/MDL/MDL_SAM09.tga"
+  }
+  SpriteType = {
+    name="GFX_MDL_SAM17"
+    texturefile = "gfx/interface/goals/MDL/MDL_SAM17.tga"
+  }
+  SpriteType = {
+    name="GFX_MDL_SAM07"
+    texturefile = "gfx/interface/goals/MDL/MDL_SAM07.tga"
+  }
+  SpriteType = {
+    name="GFX_MDL_restore_the_asabiyyah"
+    texturefile = "gfx/interface/goals/MDL/MDL_restore_the_asabiyyah.tga"
+  }
+  SpriteType = {
+    name="GFX_MDL_SAM12"
+    texturefile = "gfx/interface/goals/MDL/MDL_SAM12.tga"
+  }
+  SpriteType = {
+    name="GFX_MDL_SAM14"
+    texturefile = "gfx/interface/goals/MDL/MDL_SAM14.tga"
+  }
+  SpriteType = {
+    name="GFX_MDL_SAM15"
+    texturefile = "gfx/interface/goals/MDL/MDL_SAM15.tga"
+  }
+  SpriteType = {
+    name="GFX_MDL_SAM22"
+    texturefile = "gfx/interface/goals/MDL/MDL_SAM22.tga"
+  }
+  SpriteType = {
+    name = "GFX_MDL_charting_new_course"
+    texturefile = "gfx/interface/goals/MDL/MDL_charting_new_course.tga"
+  }
+  SpriteType = {
     name = "GFX_MDL_US_start_1_1"
     texturefile = "gfx/interface/goals/MDL/MDL_US_start_1_1.tga"
   }

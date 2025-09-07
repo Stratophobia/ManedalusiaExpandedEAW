@@ -303,7 +303,10 @@ ideas = {
       }
 			available = {
 				any_controlled_state_is_coastal = yes
-        has_completed_focus = MDL_coltoba_shipyards
+        OR = {
+          has_completed_focus = MDL_coltoba_shipyards
+          has_completed_focus = MDL_SAM03
+        }
 			}
       modifier = {
         navy_max_range_factor = 0.10
@@ -1011,7 +1014,7 @@ ideas = {
         special_forces_cap = 0.50
         special_forces_attack_factor = 0.05
         special_forces_defence_factor = 0.05
-        conscription_factor = -0.90
+        conscription_factor = -0.75
       }
     }
     MDL_koltaliba_rule_2 = {
@@ -1165,7 +1168,7 @@ ideas = {
 			picture = MEX_politicised_army
       modifier = {
 				non_core_manpower = 0.04
-        weekly_manpower = 250
+        weekly_manpower = 200
         training_time_factor = -0.05
 			}
 		}

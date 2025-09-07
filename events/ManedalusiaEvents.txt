@@ -1565,7 +1565,7 @@
           set_portraits = {
             character = MDL_ovingo_assembly
             civilian = {
-              large = "gfx/leaders/MDL/MDL_FED_generic.tga.tga"
+              large = "gfx/leaders/MDL/MDL_FED_generic.tga"
             }
           }
           set_cosmetic_tag = MKS_FEDERATION
@@ -1663,6 +1663,16 @@
           retire_character = MDL_canterto_maneossa
           retire_character = MDL_fernao_grifo
           remove_ideas = MDL_madgriff_in_the_harbor
+          MDL_zahid = {
+            add_corps_commander_role = {
+              traits = { zebra_race_trait ambusher MDL_koltaliba_member_trait trait_swift_wing }
+              skill=1
+              attack_skill=1
+              defense_skill=1
+              planning_skill=3
+              logistics_skill=2
+            }
+          }
         }
       }
     }
@@ -3698,5 +3708,16 @@
 
     option = {
       name = manedalusia.150.a
+    }
+  }
+
+  country_event = {#samira is at peace
+    id = manedalusia.151
+    title = manedalusia.151.t
+    desc = manedalusia.151.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.151.t
     }
   }

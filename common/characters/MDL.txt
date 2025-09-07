@@ -438,7 +438,11 @@ characters={
     name = MDL_iron_muhtal
     portraits = {
       civilian = {
+        large = "gfx/leaders/MDL/iron_muhtal.tga"
         small = "gfx/interface/ideas/Advisors/MDL/MDL_iron_muhtal.tga"
+      }
+      army = {
+        large = "gfx/leaders/MDL/iron_muhtal.tga"
       }
     }
     advisor = {

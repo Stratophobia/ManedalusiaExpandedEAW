@@ -62,17 +62,16 @@ MDL_koltaliba_tab = {
 
   MDL_sabotage_enemies = {
     icon = GFX_decision_infiltrate_state
-    cost = 25
+    cost = 10
     modifier = {
       army_morale_factor = -0.15
       surrender_limit = -0.35
     }
     days_remove = 75
     visible = {
-      has_government = fascism
       has_war = yes
     }
-    available = { has_government = fascism }
+
     cancel_trigger = {
       OR = {
         has_war = no
@@ -175,10 +174,16 @@ MDL_koltaliba_tab = {
     }
   }
   MDL_zahid_power_mission = {
-    visible = { has_government = fascism }
+    visible = {
+      has_government = fascism
+      NOT = { has_country_flag = MDL_zahid_power_mission_nullified }
+    }
     is_good = no
     available = { always = no }
-    activation = { has_government = fascism }
+    activation = {
+      has_government = fascism
+      NOT = { has_country_flag = MDL_zahid_power_mission_nullified }
+    }
     cancel_trigger = {
       OR = {
         has_country_flag = MDL_zahid_power_mission_nullified

@@ -2977,6 +2977,7 @@ shared_focus = {
   prerequisite = { focus = MDL_navy_stuff }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_expand_markets"
+    country_event = { days = 5 id = manedalusia.27 }
     741 = {
       add_extra_state_shared_building_slots = 1
       add_building_construction = {
@@ -3001,7 +3002,6 @@ shared_focus = {
         instant_build = yes
       }
     }
-    country_event = { days = 5 id = manedalusia.27 }
   }
   search_filters = { FOCUS_FILTER_INDUSTRY }
 }
@@ -4007,6 +4007,7 @@ shared_focus = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_dream_of_a_federation"
     create_faction = MDL_FEDERATION
     country_event = { id = manedalusia.56 }
+    custom_effect_tooltip = MDL_FA_recruit_2_tt
     hidden_effect = {
       clr_country_flag = MDL_FA_recruit_1
       set_country_flag = MDL_FA_recruit_2
@@ -4121,6 +4122,7 @@ shared_focus = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_liberate_abyssinia"
     country_event = manedalusia.68
     custom_effect_tooltip = MDL_integrate_abyssinia_tt
+    custom_effect_tooltip = MDL_FA_recruit_3_tt
 
     hidden_effect = {
       clr_country_flag = MDL_FA_recruit_2
@@ -4270,7 +4272,7 @@ shared_focus = {
         set_portraits = {
           character = MDL_yemani_senate
           civilian = {
-            large = "gfx/leaders/MDL/MDL_FED_generic.tga.tga"
+            large = "gfx/leaders/MDL/MDL_FED_generic.tga"
           }
         }
         remove_state_claim = 788 
@@ -4366,7 +4368,7 @@ shared_focus = {
         set_portraits = {
           character = MDL_asstyrian_free_cities
           civilian = {
-            large = "gfx/leaders/MDL/MDL_FED_generic.tga.tga"
+            large = "gfx/leaders/MDL/MDL_FED_generic.tga"
           }
         }
         load_focus_tree = {
@@ -4399,7 +4401,7 @@ shared_focus = {
         set_portraits = {
           character = MDL_anseruk_consortium
           civilian = {
-            large = "gfx/leaders/MDL/MDL_FED_generic.tga.tga"
+            large = "gfx/leaders/MDL/MDL_FED_generic.tga"
           }
         }
         load_focus_tree = {
@@ -4485,7 +4487,7 @@ shared_focus = {
         set_portraits = {
           character = MDL_elected_princes
           civilian = {
-            large = "gfx/leaders/MDL/MDL_FED_generic.tga.tga"
+            large = "gfx/leaders/MDL/MDL_FED_generic.tga"
           }
         }
         add_ideas = MDL_federation_member
@@ -8180,7 +8182,7 @@ shared_focus = {
 ###SAMIRA TREE###
 shared_focus = {
   id = MDL_charting_new_course
-  icon = GFX_focus_ger_reichskommisariats
+  icon = GFX_MDL_charting_new_course
 
   x = 15
   y = 0
@@ -8237,6 +8239,10 @@ shared_focus = {
   cost = 6
   relative_position_id = MDL_charting_new_course
   prerequisite = { focus = MDL_charting_new_course }
+
+  available = {
+    has_government = neutrality
+  }
 
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_get_the_spymasters"
@@ -8320,6 +8326,17 @@ shared_focus = {
   prerequisite = { focus = MDL_charting_new_course }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM03"
+    add_ideas = MDL_coltoba_shipyards_idea
+    741 = {
+      add_extra_state_shared_building_slots = 2
+      add_building_construction = {
+        type = dockyard
+        level = 2
+        instant_build = yes
+      }
+    }
+    custom_effect_tooltip = available_designer
+    show_ideas_tooltip = MDL_naval_manufacturer_1
   }
 }
 
@@ -8364,22 +8381,37 @@ shared_focus = {
   cost = 6
   x = -1
   y = 1
+  available = {
+    has_government = fascism
+  }
   relative_position_id = MDL_SAM01
   prerequisite = { focus = MDL_SAM01 }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM06"
-    add_to_variable = {
-      var = MDL_trade_var
-      value = 0.45
+    741 = {
+      add_building_construction = {
+        type = bunker
+        level = 2
+        province = 10280
+        instant_build = yes
+      }
+      add_building_construction = {
+        type = coastal_bunker
+        level = 1
+        province = 12234
+        instant_build = yes
+      }
     }
-    decrease_illiteracy = yes
-    custom_effect_tooltip = MDL_reliable_traders_tt
+    if = {
+      limit = { has_idea = civilian_economy }
+      add_ideas = low_economic_mobilisation
+    }
   }
 }
 
 shared_focus = {
   id = MDL_SAM07
-  icon = GFX_goal_generic_political
+  icon = GFX_MDL_SAM07
   cost = 6
   x = 1
   y = 1
@@ -8392,6 +8424,14 @@ shared_focus = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM07"
     add_stability = 0.10
     add_war_support = 0.15
+    741 = {
+      add_extra_state_shared_building_slots = 1
+      add_building_construction = {
+        type = industrial_complex
+        level = 1
+        instant_build = yes
+      }
+    }
     add_tech_bonus = {
       bonus = 2.0
       uses = 1
@@ -8402,7 +8442,7 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_SAM08
-  icon = GFX_goal_generic_political
+  icon = GFX_MDL_SAM08
   cost = 6
   x = -1
   y = 1
@@ -8422,7 +8462,7 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_SAM09
-  icon = GFX_goal_generic_political
+  icon = GFX_MDL_SAM09
   cost = 6
   x = 1
   y = 1
@@ -8483,6 +8523,12 @@ shared_focus = {
   prerequisite = { focus = MDL_SAM03 }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM10"
+    add_to_variable = {
+      var = MDL_trade_var
+      value = 0.45
+    }
+    decrease_illiteracy = yes
+    custom_effect_tooltip = MDL_reliable_traders_tt
   }
 }
 
@@ -8508,7 +8554,7 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_SAM12
-  icon = GFX_goal_generic_political
+  icon = GFX_MDL_SAM12
   cost = 6
   x = -1
   y = 1
@@ -8521,6 +8567,12 @@ shared_focus = {
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM12"
     741 = {
+      add_extra_state_shared_building_slots = 1
+      add_building_construction = {
+        type = arms_factory
+        level = 1
+        instant_build = yes
+      }
       add_building_construction = {
         type = bunker
         level = 2
@@ -8545,7 +8597,7 @@ shared_focus = {
   y = 1
   relative_position_id = MDL_get_the_spymasters
   available = {
-    has_government = fascism
+    has_government = neutrality
   }
   prerequisite = { focus = MDL_get_the_spymasters }
   completion_reward = {
@@ -8562,7 +8614,7 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_SAM14
-  icon = GFX_goal_generic_political
+  icon = GFX_MDL_SAM14
   cost = 6
   x = 2
   y = 1
@@ -8593,7 +8645,7 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_SAM15
-  icon = GFX_goal_generic_political
+  icon = GFX_MDL_SAM15
   cost = 6
   x = 4
   y = 1
@@ -8620,7 +8672,7 @@ shared_focus = {
   id = MDL_SAM16
   icon = GFX_goal_generic_political
   cost = 6
-  x = -2
+  x = -4
   y = 1
   relative_position_id = MDL_charting_new_course
   available = {
@@ -8638,9 +8690,9 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_SAM17
-  icon = GFX_goal_generic_political
+  icon = GFX_MDL_SAM17
   cost = 6
-  x = -4
+  x = -2
   y = 1
   relative_position_id = MDL_charting_new_course
   prerequisite = { focus = MDL_charting_new_course }
@@ -8672,12 +8724,12 @@ shared_focus = {
   prerequisite = { focus = MDL_SAM09 }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM18"
+    set_cosmetic_tag = MDL_grand_sultanate
     remove_ideas = MDL_humbled_sultanate
     create_wargoal = {
       type = annex_everything
       target = KLG
     }
-    ABY = { add_to_ROOT_potential_cores = yes }
     MGY = { add_to_ROOT_potential_cores = yes }
   }
 }
@@ -8699,20 +8751,7 @@ shared_focus = {
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM19"
     country_event = manedalusia.149
-    effect_tooltip = {
-      every_state = {
-        limit = { is_in_array = { state_original_cores = ABY } }
-        add_resistance = -15
-        add_compliance = 20
-      }
-    }
-    hidden_effect = {
-      every_owned_state = {
-        limit = { is_in_array = { state_original_cores = ABY } }
-        add_resistance = -15
-        add_compliance = 20
-      }
-    }
+    ABY = { add_to_ROOT_potential_cores = yes }
   }
 }
 
@@ -8754,7 +8793,7 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_SAM22
-  icon = GFX_goal_generic_political
+  icon = GFX_MDL_SAM22
   cost = 6
   x = 0
   y = 2
@@ -8790,9 +8829,24 @@ shared_focus = {
   x = 1
   y = 1
   relative_position_id = MDL_SAM19
+  available = {
+    has_government = fascism
+  }
+  bypass = {
+    YMN = { exists = no }
+  }
   prerequisite = { focus = MDL_SAM19 }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM23"
+    if = {
+      limit = {
+        YMN = { exists = yes }
+      }
+      create_wargoal = {
+        type = annex_everything
+        target = YMN
+      }
+    }
   }
 }
 
@@ -8802,10 +8856,35 @@ shared_focus = {
   cost = 6
   x = -1
   y = 1
+  available = {
+    has_government = fascism
+  }
+  bypass = {
+    ASS = { exists = no }
+    ANS = { exists = no }
+  }
   relative_position_id = MDL_SAM19
   prerequisite = { focus = MDL_SAM19 }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM24"
+    if = {
+      limit = {
+        ASS = { exists = yes }
+      }
+      create_wargoal = {
+        type = annex_everything
+        target = ASS
+      }
+    }
+    if = {
+      limit = {
+        ANS = { exists = yes }
+      }
+      create_wargoal = {
+        type = annex_everything
+        target = ANS
+      }
+    }
   }
 }
 
@@ -8925,6 +9004,10 @@ shared_focus = {
   }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM32"
+    country_event = manedalusia.151
+    ASS = { add_to_ROOT_potential_cores = yes }
+    ANS = { add_to_ROOT_potential_cores = yes }
+    YMN = { add_to_ROOT_potential_cores = yes }
   }
 }
 
@@ -9087,7 +9170,10 @@ shared_focus = {
   }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM43"
-    set_country_flag = MDL_zahid_power_mission_nullified
+    custom_effect_tooltip = MDL_zahid_power_mission_nullified_tt
+    hidden_effect = {
+      set_country_flag = MDL_zahid_power_mission_nullified
+    }
     country_event = manedalusia.150
     swap_ideas = {
       remove_idea = MDL_koltaliba_rule_1
@@ -9105,7 +9191,7 @@ shared_focus = {
   relative_position_id = MDL_SAM22
   prerequisite = { focus = MDL_SAM22 }
   available = {
-    has_government = fascism
+    has_government = neutrality
     ABY = {
       OR = {
         exists = no
@@ -9131,7 +9217,6 @@ shared_focus = {
       }
       declare_war_on = { type = annex_everything target = ABY }
     }
-    MDL_switch_power_to_samira = yes
   }
 }
 
@@ -9280,7 +9365,13 @@ shared_focus = {
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM55"
     increase_society_development = yes
-    1208 = { add_core_of = ROOT }
+    1208 = {
+      add_core_of = ROOT
+      add_resource = {
+        type = steel
+        amount = 8
+      }
+    }
     build_railway = {
       level = 2
       start_province = 12234
