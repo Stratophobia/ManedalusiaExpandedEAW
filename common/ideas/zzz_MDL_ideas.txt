@@ -984,6 +984,14 @@ ideas = {
         conscription = 0.01
       }
     }
+    MDL_meritocratic_sultanate_idea = {
+      picture = MDL_meritocratic_sultanate
+      modifier = {
+        political_power_gain = 0.05
+        political_advisor_cost_factor = -0.05
+        war_support_factor = 0.10
+      }
+    }
     MDL_spymasters_rule = {
       picture = MDL_spymasters
       cancel = {

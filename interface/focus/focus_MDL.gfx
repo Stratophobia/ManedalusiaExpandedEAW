@@ -1,5 +1,77 @@
 spriteTypes = {
   SpriteType = {
+    name="GFX_MDL_SAM03"
+    texturefile = "gfx/interface/goals/MDL/MDL_SAM03.tga"
+  }
+  SpriteType = {
+    name="GFX_MDL_SAM13"
+    texturefile = "gfx/interface/goals/MDL/MDL_SAM13.tga"
+  }
+  SpriteType = {
+    name="GFX_MDL_SAM16"
+    texturefile = "gfx/interface/goals/MDL/MDL_SAM16.tga"
+  }
+  SpriteType = {
+    name="GFX_MDL_SAM56"
+    texturefile = "gfx/interface/goals/MDL/MDL_SAM56.tga"
+  }
+  SpriteType = {
+    name="GFX_MDL_SAM19"
+    texturefile = "gfx/interface/goals/MDL/MDL_SAM19.tga"
+  }
+  SpriteType = {
+    name="GFX_MDL_SAM20"
+    texturefile = "gfx/interface/goals/MDL/MDL_SAM20.tga"
+  }
+  SpriteType = {
+    name="GFX_MDL_SAM23"
+    texturefile = "gfx/interface/goals/MDL/MDL_SAM23.tga"
+  }
+  SpriteType = {
+    name="GFX_MDL_SAM24"
+    texturefile = "gfx/interface/goals/MDL/MDL_SAM24.tga"
+  }
+  SpriteType = {
+    name="GFX_MDL_SAM27"
+    texturefile = "gfx/interface/goals/MDL/MDL_SAM27.tga"
+  }
+  SpriteType = {
+    name="GFX_MDL_SAM28"
+    texturefile = "gfx/interface/goals/MDL/MDL_SAM28.tga"
+  }
+  SpriteType = {
+    name="GFX_MDL_SAM55"
+    texturefile = "gfx/interface/goals/MDL/MDL_SAM55.tga"
+  }
+  SpriteType = {
+    name="GFX_MDL_get_the_spymasters"
+    texturefile = "gfx/interface/goals/MDL/MDL_get_the_spymasters.tga"
+  }
+  SpriteType = {
+    name="GFX_MDL_SAM04"
+    texturefile = "gfx/interface/goals/MDL/MDL_SAM04.tga"
+  }
+  SpriteType = {
+    name="GFX_MDL_SAM06"
+    texturefile = "gfx/interface/goals/MDL/MDL_SAM06.tga"
+  }
+  SpriteType = {
+    name="GFX_MDL_SAM11"
+    texturefile = "gfx/interface/goals/MDL/MDL_SAM11.tga"
+  }
+  SpriteType = {
+    name="GFX_MDL_SAM18"
+    texturefile = "gfx/interface/goals/MDL/MDL_SAM18.tga"
+  }
+  SpriteType = {
+    name="GFX_MDL_SAM43"
+    texturefile = "gfx/interface/goals/MDL/MDL_SAM43.tga"
+  }
+  SpriteType = {
+    name="GFX_MDL_SAM44"
+    texturefile = "gfx/interface/goals/MDL/MDL_SAM44.tga"
+  }
+  SpriteType = {
     name="GFX_MDL_SAM01"
     texturefile = "gfx/interface/goals/MDL/MDL_SAM01.tga"
   }

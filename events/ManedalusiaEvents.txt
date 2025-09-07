@@ -2486,6 +2486,7 @@
       custom_effect_tooltip = MDL_grifo_tree_loaded_tt
       hidden_effect = {
         set_country_flag = MDL_grifo_takeover
+        set_country_flag = MDL_laylah_absent
         if = {
           limit = { NOT = { has_dlc = "Man the Guns" } }
           load_oob = "MDL_grifo_fleet_legacy"

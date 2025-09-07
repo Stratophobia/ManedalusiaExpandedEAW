@@ -3195,7 +3195,7 @@ shared_focus = {
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_naval_patrols"
     add_doctrine_cost_reduction = {
-      name = MDL_naval_doctrine
+      name = MDL_naval_patrols
       cost_reduction = 0.5
       uses = 3
       category = cat_trade_interdiction
@@ -3230,13 +3230,13 @@ shared_focus = {
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_capital_ships"
     add_tech_bonus = {
-			name = MDL_bb_bonus
+			name = MDL_capital_ships
 			bonus = 1.5
 			uses = 1
 			category = bb_tech
 		}
     add_tech_bonus = {
-			name = MDL_cv_bonus
+			name = MDL_capital_ships
 			bonus = 1.5
 			uses = 1
 			category = cv_tech
@@ -8263,7 +8263,7 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_SAM01
-  icon = GFX_goal_generic_political
+  icon = GFX_MDL_SAM01
   cost = 6
   x = -3
   y = 2
@@ -8281,7 +8281,7 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_SAM02
-  icon = GFX_goal_generic_political
+  icon = GFX_MDL_SAM02
   x = 6
   y = 1
   cost = 6
@@ -8318,7 +8318,7 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_SAM03
-  icon = GFX_goal_generic_political
+  icon = GFX_MDL_SAM03
   cost = 6
   x = -6
   y = 1
@@ -8342,7 +8342,7 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_SAM04
-  icon = GFX_goal_generic_political
+  icon = GFX_MDL_SAM04
   cost = 6
   x = -1
   y = 1
@@ -8357,14 +8357,12 @@ shared_focus = {
 
     custom_effect_tooltip = available_political_advisor
     show_ideas_tooltip = MDL_alneighzari
-
-    MDL_switch_power_to_samira = yes
   }
 }
 
 shared_focus = {
   id = MDL_SAM05
-  icon = GFX_goal_generic_political
+  icon = GFX_MDL_SAM05
   cost = 6
   x = 1
   y = 1
@@ -8372,12 +8370,19 @@ shared_focus = {
   prerequisite = { focus = MDL_SAM02 }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM05"
+    every_character = {
+      limit = { is_unit_leader = yes }
+      add_attack = 1
+      add_defense = 1
+      add_planning = 1
+      add_logistics = 1
+    }
   }
 }
 
 shared_focus = {
   id = MDL_SAM06
-  icon = GFX_goal_generic_political
+  icon = GFX_MDL_SAM06
   cost = 6
   x = -1
   y = 1
@@ -8515,7 +8520,7 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_SAM10
-  icon = GFX_goal_generic_political
+  icon = GFX_MDL_SAM10
   cost = 6
   x = -1
   y = 1
@@ -8534,11 +8539,14 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_SAM11
-  icon = GFX_goal_generic_political
+  icon = GFX_MDL_SAM11
   cost = 6
   x = 1
   y = 1
   relative_position_id = MDL_SAM03
+  available = {
+    has_government = neutrality
+  }
   prerequisite = { focus = MDL_SAM03 }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM11"
@@ -8591,7 +8599,7 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_SAM13
-  icon = GFX_goal_generic_political
+  icon = GFX_MDL_SAM13
   cost = 6
   x = 1
   y = 1
@@ -8664,13 +8672,16 @@ shared_focus = {
       uses = 1
       category = race_tech
     }
-    MDL_switch_power_to_samira = yes
+    if = {
+      limit = { NOT = { has_completed_focus = MDL_SAM43 } }
+      MDL_switch_power_to_samira = yes
+    }
   }
 }
 
 shared_focus = {
   id = MDL_SAM16
-  icon = GFX_goal_generic_political
+  icon = GFX_MDL_SAM16
   cost = 6
   x = -4
   y = 1
@@ -8684,7 +8695,10 @@ shared_focus = {
     add_research_slot = 1
     increase_science_base = yes
 
-    MDL_switch_power_to_samira = yes
+    if = {
+      limit = { NOT = { has_completed_focus = MDL_SAM43 } }
+      MDL_switch_power_to_samira = yes
+    }
   }
 }
 
@@ -8710,33 +8724,31 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_SAM18
-  icon = GFX_goal_generic_political
+  icon = GFX_MDL_SAM18
   cost = 6
   x = 0
   y = 2
   relative_position_id = MDL_restore_the_asabiyyah
   available = {
     has_government = neutrality
-    733 = { is_owned_and_controlled_by = ROOT }
-    775 = { is_owned_and_controlled_by = ROOT }
+    has_completed_focus = MDL_SAM19
+    has_completed_focus = MDL_SAM20
   }
   prerequisite = { focus = MDL_SAM08 }
   prerequisite = { focus = MDL_SAM09 }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM18"
-    set_cosmetic_tag = MDL_grand_sultanate
     remove_ideas = MDL_humbled_sultanate
     create_wargoal = {
       type = annex_everything
       target = KLG
     }
-    MGY = { add_to_ROOT_potential_cores = yes }
   }
 }
 
 shared_focus = {
   id = MDL_SAM19
-  icon = GFX_goal_generic_political
+  icon = GFX_MDL_SAM19
   cost = 6
   x = 0
   y = 2
@@ -8757,21 +8769,35 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_SAM20
-  icon = GFX_goal_generic_political
+  icon = GFX_MDL_SAM20
   cost = 6
   x = 0
   y = 2
   relative_position_id = MDL_SAM02
+  available = {
+    has_government = neutrality
+    733 = { is_owned_and_controlled_by = ROOT }
+  }
   prerequisite = { focus = MDL_SAM04 }
   prerequisite = { focus = MDL_SAM05 }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM20"
+    MGY = { add_to_ROOT_potential_cores = yes }
+    if = {
+      limit = {
+        MKS = { exists = yes }
+      }
+      create_wargoal = {
+        type = annex_everything
+        target = MKS
+      }
+    }
   }
 }
 
 shared_focus = {
   id = MDL_SAM21
-  icon = GFX_goal_generic_political
+  icon = GFX_MDL_SAM21
   cost = 6
   x = 0
   y = 2
@@ -8824,7 +8850,7 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_SAM23
-  icon = GFX_goal_generic_political
+  icon = GFX_MDL_SAM23
   cost = 6
   x = 1
   y = 1
@@ -8852,7 +8878,7 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_SAM24
-  icon = GFX_goal_generic_political
+  icon = GFX_MDL_SAM24
   cost = 6
   x = -1
   y = 1
@@ -8890,7 +8916,7 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_SAM25
-  icon = GFX_goal_generic_political
+  icon = GFX_MDL_SAM25
   cost = 6
   x = 0
   y = 1
@@ -8901,12 +8927,13 @@ shared_focus = {
   }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM25"
+    add_ideas = MDL_koltaliba_commissars_idea
   }
 }
 
 shared_focus = {
   id = MDL_SAM26
-  icon = GFX_goal_generic_political
+  icon = GFX_MDL_SAM26
   cost = 6
   x = 0
   y = 1
@@ -8922,33 +8949,63 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_SAM27
-  icon = GFX_goal_generic_political
+  icon = GFX_MDL_SAM27
   cost = 6
   x = -1
   y = 1
   relative_position_id = MDL_SAM20
+  available = {
+    has_government = fascism
+    766 = { is_owned_and_controlled_by = ROOT }
+  }
   prerequisite = { focus = MDL_SAM20 }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM27"
+    every_state = {
+      limit = { is_in_array = { state_original_cores = MKS } }
+      add_core_of = ROOT
+    }
+    add_manpower = 50000
   }
 }
 
 shared_focus = {
   id = MDL_SAM28
-  icon = GFX_goal_generic_political
+  icon = GFX_MDL_SAM28
   cost = 6
   x = 1
   y = 1
+  available = {
+    has_government = fascism
+  }
   relative_position_id = MDL_SAM20
   prerequisite = { focus = MDL_SAM20 }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM28"
+    add_doctrine_cost_reduction = {
+      name = MDL_SAM28
+      cost_reduction = 0.5
+      uses = 3
+      category = cat_trade_interdiction
+    }
+    add_tech_bonus = {
+			name = MDL_SAM28
+			bonus = 1.5
+			uses = 1
+			category = bb_tech
+		}
+    add_tech_bonus = {
+			name = MDL_SAM28
+			bonus = 1.5
+			uses = 1
+			category = cv_tech
+		}
   }
 }
 
 shared_focus = {
   id = MDL_SAM29
-  icon = GFX_goal_generic_political
+  icon = GFX_MDL_SAM29
   cost = 6
   x = 0
   y = 1
@@ -8959,12 +9016,13 @@ shared_focus = {
   }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM29"
+    add_ideas = MDL_koltaliba_regimentation
   }
 }
 
 shared_focus = {
   id = MDL_SAM30
-  icon = GFX_goal_generic_political
+  icon = GFX_MDL_SAM30
   cost = 6
   x = 0
   y = 1
@@ -8980,7 +9038,7 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_SAM31
-  icon = GFX_goal_generic_political
+  icon = GFX_MDL_SAM31
   cost = 6
   x = -1
   y = 1
@@ -8993,11 +9051,18 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_SAM32
-  icon = GFX_goal_generic_political
+  icon = GFX_MDL_SAM32
   cost = 6
   x = 1
   y = 1
   relative_position_id = MDL_SAM26
+  available = {
+    has_government = neutrality
+    1208 = { is_owned_and_controlled_by = ROOT }
+    810 = { is_owned_and_controlled_by = ROOT }
+    790 = { is_owned_and_controlled_by = ROOT }
+    956 = { is_owned_and_controlled_by = ROOT }
+  }
   prerequisite = {
     focus = MDL_SAM25
     focus = MDL_SAM26
@@ -9005,6 +9070,21 @@ shared_focus = {
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM32"
     country_event = manedalusia.151
+    build_railway = {
+      level = 2
+      start_province = 12386
+      target_province = 15540
+    }
+    build_railway = {
+      level = 1
+      start_province = 15540
+      target_province = 15487
+    }
+    build_railway = {
+      level = 1
+      start_province = 15540
+      target_province = 18985
+    }
     ASS = { add_to_ROOT_potential_cores = yes }
     ANS = { add_to_ROOT_potential_cores = yes }
     YMN = { add_to_ROOT_potential_cores = yes }
@@ -9013,7 +9093,7 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_SAM33
-  icon = GFX_goal_generic_political
+  icon = GFX_MDL_SAM33
   cost = 6
   x = 1
   y = 1
@@ -9026,7 +9106,7 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_SAM34
-  icon = GFX_goal_generic_political
+  icon = GFX_MDL_SAM34
   cost = 6
   x = -1
   y = 1
@@ -9039,23 +9119,29 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_SAM35
-  icon = GFX_goal_generic_political
+  icon = GFX_MDL_SAM35
   cost = 6
   x = 1
   y = 1
   relative_position_id = MDL_SAM29
+  available = {
+    has_government = neutrality
+    has_completed_focus = MDL_SAM32
+  }
   prerequisite = {
     focus = MDL_SAM29
     focus = MDL_SAM30
   }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM35"
+    set_cosmetic_tag = MDL_grand_sultanate
+    add_ideas = MDL_meritocratic_sultanate_idea
   }
 }
 
 shared_focus = {
   id = MDL_SAM36
-  icon = GFX_goal_generic_political
+  icon = GFX_MDL_SAM36
   cost = 6
   x = 1
   y = 1
@@ -9068,7 +9154,7 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_SAM37
-  icon = GFX_goal_generic_political
+  icon = GFX_MDL_SAM37
   cost = 6
   x = -1
   y = 1
@@ -9084,7 +9170,7 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_SAM38
-  icon = GFX_goal_generic_political
+  icon = GFX_MDL_SAM38
   cost = 6
   x = 1
   y = 1
@@ -9095,12 +9181,13 @@ shared_focus = {
   }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM38"
+    increase_society_development = yes
   }
 }
 
 shared_focus = {
   id = MDL_SAM39
-  icon = GFX_goal_generic_political
+  icon = GFX_MDL_SAM39
   cost = 6
   x = -1
   y = 1
@@ -9111,12 +9198,14 @@ shared_focus = {
   }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM39"
+    add_research_slot = 1
+    increase_science_base = yes
   }
 }
 
 shared_focus = {
   id = MDL_SAM40
-  icon = GFX_goal_generic_political
+  icon = GFX_MDL_SAM40
   cost = 6
   x = 1
   y = 1
@@ -9132,7 +9221,7 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_SAM41
-  icon = GFX_goal_generic_political
+  icon = GFX_MDL_SAM41
   cost = 6
   x = 1
   y = 1
@@ -9145,7 +9234,7 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_SAM42
-  icon = GFX_goal_generic_political
+  icon = GFX_MDL_SAM42
   cost = 6
   x = -1
   y = 1
@@ -9158,7 +9247,7 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_SAM43
-  icon = GFX_goal_generic_political
+  icon = GFX_MDL_SAM43
   cost = 6
   x = 0
   y = 1
@@ -9184,7 +9273,7 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_SAM44
-  icon = GFX_goal_generic_political
+  icon = GFX_MDL_SAM44
   cost = 6
   x = 0
   y = 1
@@ -9222,7 +9311,7 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_SAM45
-  icon = GFX_goal_generic_political
+  icon = GFX_MDL_SAM45
   cost = 6
   x = -1
   y = 1
@@ -9235,7 +9324,7 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_SAM46
-  icon = GFX_goal_generic_political
+  icon = GFX_MDL_SAM46
   cost = 6
   x = 1
   y = 1
@@ -9248,7 +9337,7 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_SAM47
-  icon = GFX_goal_generic_political
+  icon = GFX_MDL_SAM47
   cost = 6
   x = -1
   y = 1
@@ -9261,7 +9350,7 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_SAM48
-  icon = GFX_goal_generic_political
+  icon = GFX_MDL_SAM48
   cost = 6
   x = 1
   y = 1
@@ -9274,7 +9363,7 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_SAM49
-  icon = GFX_goal_generic_political
+  icon = GFX_MDL_SAM49
   cost = 6
   x = -1
   y = 1
@@ -9287,7 +9376,7 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_SAM50
-  icon = GFX_goal_generic_political
+  icon = GFX_MDL_SAM50
   cost = 6
   x = 1
   y = 1
@@ -9300,7 +9389,7 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_SAM51
-  icon = GFX_goal_generic_political
+  icon = GFX_MDL_SAM51
   cost = 6
   x = -1
   y = 1
@@ -9313,7 +9402,7 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_SAM52
-  icon = GFX_goal_generic_political
+  icon = GFX_MDL_SAM52
   cost = 6
   x = 1
   y = 1
@@ -9326,7 +9415,7 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_SAM53
-  icon = GFX_goal_generic_political
+  icon = GFX_MDL_SAM53
   cost = 6
   x = -1
   y = 1
@@ -9339,7 +9428,7 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_SAM54
-  icon = GFX_goal_generic_political
+  icon = GFX_MDL_SAM54
   cost = 6
   x = 1
   y = 1
@@ -9352,7 +9441,7 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_SAM55
-  icon = GFX_goal_generic_political
+  icon = GFX_MDL_SAM55
   cost = 6
   x = 1
   y = 1
@@ -9382,7 +9471,7 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_SAM56
-  icon = GFX_goal_generic_political
+  icon = GFX_MDL_SAM56
   cost = 6
   x = -1
   y = 1
@@ -9398,21 +9487,22 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_SAM57
-  icon = GFX_goal_generic_political
+  icon = GFX_MDL_SAM57
   x = 1
   y = 1
+  cost = 2
   relative_position_id = MDL_SAM55
   available = {
+    has_war = no
+
     has_idea = proper_science_base
     has_idea = modern_society
     has_idea = no_lack_of_scientists
     has_idea = no_poverty
 
-    775 = { is_owned_and_controlled_by = ROOT }
-    733 = { is_owned_and_controlled_by = ROOT }
-    1208 = { is_owned_and_controlled_by = ROOT }
-    810 = { is_owned_and_controlled_by = ROOT }
-    956 = { is_owned_and_controlled_by = ROOT }
+    has_completed_focus = MDL_SAM43
+    has_completed_focus = MDL_SAM44
+    has_completed_focus = MDL_SAM35
   }
   prerequisite = { focus = MDL_SAM55 }
   prerequisite = { focus = MDL_SAM56 }

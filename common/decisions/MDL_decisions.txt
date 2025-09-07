@@ -59,6 +59,16 @@ MDL_koltaliba_tab = {
       add_ideas = MDL_spymasters_rule
     }
   }
+  MDL_put_samira_in_charge = {
+    visible = {
+      has_government = fascism
+      has_completed_focus = MDL_SAM43
+    }
+    cost = 25
+    complete_effect = {
+      set_politics = { ruling_party = neutrality }
+    }
+  }
 
   MDL_sabotage_enemies = {
     icon = GFX_decision_infiltrate_state
