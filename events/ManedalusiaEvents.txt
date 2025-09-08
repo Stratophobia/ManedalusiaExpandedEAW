@@ -3664,6 +3664,7 @@
 
     option = {
       name = manedalusia.147.a
+      custom_effect_tooltip = MDL_samira_start_tt
       add_ideas = MDL_koltaliba_rule_1
     }
   }
@@ -3712,7 +3713,7 @@
     }
   }
 
-  country_event = {#samira is at peace
+  country_event = {#FREE
     id = manedalusia.151
     title = manedalusia.151.t
     desc = manedalusia.151.d
@@ -3722,3 +3723,26 @@
       name = manedalusia.151.t
     }
   }
+
+  country_event = {#zahid mehmet duel
+    id = manedalusia.152
+    title = manedalusia.152.t
+    desc = manedalusia.152.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.152.a
+    }
+  }
+
+  country_event = {#samira arabia peace event
+    id = manedalusia.153
+    title = manedalusia.153.t
+    desc = manedalusia.153.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.153.a
+    }
+  }
+

@@ -2547,7 +2547,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_sweet_ass_rides"
 		add_tech_bonus = {
-			name = MDL_motorized
+			name = MDL_sweet_ass_rides
 			bonus = 0.5
       uses = 2
 			category = motorized_equipment
@@ -3305,6 +3305,8 @@ shared_focus = {
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_naval_academy"
     add_research_slot = 1
+    add_ideas = MDL_naval_academy_idea
+
     increase_science_base = yes
   }
   search_filters = { FOCUS_FILTER_RESEARCH }
@@ -8533,6 +8535,10 @@ shared_focus = {
       value = 0.45
     }
     decrease_illiteracy = yes
+
+    custom_effect_tooltip = available_industrial_concern
+    show_ideas_tooltip = MDL_industrial_concern_1
+
     custom_effect_tooltip = MDL_reliable_traders_tt
   }
 }
@@ -8738,11 +8744,15 @@ shared_focus = {
   prerequisite = { focus = MDL_SAM09 }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM18"
-    remove_ideas = MDL_humbled_sultanate
+    country_event = manedalusia.24
+    hidden_effect = { set_country_flag = MDL_samira_stress_resolved }
+    create_faction = MDL_GUARDIANSHIP
+    custom_effect_tooltip = MDL_samira_stress_resolved_tt
     create_wargoal = {
       type = annex_everything
       target = KLG
     }
+    remove_ideas = MDL_humbled_sultanate
   }
 }
 
@@ -8810,6 +8820,10 @@ shared_focus = {
   will_lead_to_war_with = MGY
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM21"
+    if = {
+      limit = { NOT = { has_completed_focus = MDL_SAM43 } }
+      MDL_switch_power_to_samira = yes
+    }
     create_wargoal = {
       type = annex_everything
       target = MGY
@@ -8841,6 +8855,10 @@ shared_focus = {
   will_lead_to_war_with = ABY
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM22"
+    if = {
+      limit = { NOT = { has_completed_focus = MDL_SAM43 } }
+      MDL_switch_power_to_samira = yes
+    }
     create_wargoal = {
       type = annex_everything
       target = ABY
@@ -8944,6 +8962,14 @@ shared_focus = {
   }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM26"
+    add_ideas = MDL_magical_engines
+
+    add_tech_bonus = {
+			name = MDL_SAM26
+			bonus = 0.5
+      uses = 2
+			category = motorized_equipment
+		}
   }
 }
 
@@ -9033,6 +9059,12 @@ shared_focus = {
   }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM30"
+    add_tech_bonus = {
+			name = MDL_SAM30
+			bonus = 2.0
+			uses = 2
+			category = marine_tech
+		}
   }
 }
 
@@ -9046,6 +9078,15 @@ shared_focus = {
   prerequisite = { focus = MDL_SAM26 }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM31"
+    add_ideas = MDL_streamlined_tank_production
+    add_tech_bonus = {
+      name = MDL_SAM31
+      bonus = 1.0
+      uses = 2
+      category = armor
+    }
+    custom_effect_tooltip = available_designer
+    show_ideas_tooltip = MDL_black_guard_steelworks
   }
 }
 
@@ -9069,7 +9110,6 @@ shared_focus = {
   }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM32"
-    country_event = manedalusia.151
     build_railway = {
       level = 2
       start_province = 12386
@@ -9098,9 +9138,47 @@ shared_focus = {
   x = 1
   y = 1
   relative_position_id = MDL_SAM25
+  available = {
+    810 = { is_owned_and_controlled_by = ROOT }
+    790 = { is_owned_and_controlled_by = ROOT }
+  }
   prerequisite = { focus = MDL_SAM25 }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM33"
+    add_tech_bonus = {
+      name = MDL_SAM33
+      bonus = 0.5
+      uses = 2
+      category = synth_resources
+    }
+
+    808 = {
+      add_resource = {
+        type = oil
+        amount = 2
+      }
+    }
+    801 = {
+      add_resource = {
+        type = oil
+        amount = 2
+      }
+    }
+    790 = {
+      add_resource = {
+        type = oil
+        amount = 2
+      }
+    }
+    795 = {
+      add_resource = {
+        type = oil
+        amount = 2
+      }
+    }
+
+    custom_effect_tooltip = available_industrial_concern
+    show_ideas_tooltip = MDL_refining_concern
   }
 }
 
@@ -9110,10 +9188,14 @@ shared_focus = {
   cost = 6
   x = -1
   y = 1
+  available = {
+    has_completed_focus = MDL_SAM32
+  }
   relative_position_id = MDL_SAM29
   prerequisite = { focus = MDL_SAM29 }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM34"
+    decrease_illiteracy = yes
   }
 }
 
@@ -9149,6 +9231,19 @@ shared_focus = {
   prerequisite = { focus = MDL_SAM30 }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM36"
+    add_tech_bonus = {
+      name = MDL_SAM36
+      bonus = 0.75
+      uses = 3
+      category = dd_tech
+      category = ca_tech
+    }
+    add_tech_bonus = {
+			name = MDL_SAM36
+			bonus = 0.75
+			uses = 1
+			category = ss_tech
+		}
   }
 }
 
@@ -9165,6 +9260,7 @@ shared_focus = {
   }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM37"
+    add_ideas = MDL_manedalusian_industrious_pride
   }
 }
 
@@ -9216,6 +9312,7 @@ shared_focus = {
   }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM40"
+    add_ideas = MDL_grand_admiralty_idea
   }
 }
 
@@ -9229,6 +9326,98 @@ shared_focus = {
   prerequisite = { focus = MDL_SAM33 }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM41"
+    827 = {
+      add_building_construction = {
+          type = bunker
+          level = 2
+          province = 15478
+          instant_build = yes
+      }
+      add_building_construction = {
+          type = bunker
+          level = 2
+          province = 15467
+          instant_build = yes
+      }
+      add_building_construction = {
+          type = bunker
+          level = 2
+          province = 15136
+          instant_build = yes
+      }
+    }
+    828 = {
+      add_building_construction = {
+          type = bunker
+          level = 2
+          province = 15452
+          instant_build = yes
+      }
+      add_building_construction = {
+          type = bunker
+          level = 2
+          province = 15457
+          instant_build = yes
+      }
+      add_building_construction = {
+          type = bunker
+          level = 2
+          province = 15448
+          instant_build = yes
+      }
+    }
+    812 = {
+      add_building_construction = {
+          type = bunker
+          level = 2
+          province = 15449
+          instant_build = yes
+      }
+      add_building_construction = {
+          type = bunker
+          level = 2
+          province = 15441
+          instant_build = yes
+      }
+    }
+    799 = {
+      add_building_construction = {
+          type = bunker
+          level = 2
+          province = 15434
+          instant_build = yes
+      }
+      add_building_construction = {
+          type = bunker
+          level = 2
+          province = 15435
+          instant_build = yes
+      }
+      add_building_construction = {
+          type = bunker
+          level = 2
+          province = 15509
+          instant_build = yes
+      }
+      add_building_construction = {
+          type = bunker
+          level = 2
+          province = 15510
+          instant_build = yes
+      }
+      add_building_construction = {
+          type = bunker
+          level = 2
+          province = 15506
+          instant_build = yes
+      }
+      add_building_construction = {
+          type = bunker
+          level = 2
+          province = 15503
+          instant_build = yes
+      }
+    }
   }
 }
 
@@ -9240,8 +9429,16 @@ shared_focus = {
   y = 1
   relative_position_id = MDL_SAM34
   prerequisite = { focus = MDL_SAM34 }
+  bypass = {
+    NLR = { exists = yes }
+  }
+  will_lead_to_war_with = BAT
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM42"
+    create_wargoal = {
+      type = annex_everything
+      target = BAT
+    }
   }
 }
 
@@ -9319,6 +9516,7 @@ shared_focus = {
   prerequisite = { focus = MDL_SAM37 }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM45"
+    add_ideas = MDL_aaliyah_monument
   }
 }
 
@@ -9332,6 +9530,15 @@ shared_focus = {
   prerequisite = { focus = MDL_SAM37 }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM46"
+    add_ideas = MDL_grand_zoco_idea
+    741 = {
+      add_extra_state_shared_building_slots = 2
+      add_building_construction = {
+        type = industrial_complex
+        level = 2
+        instant_build = yes
+      }
+    }
   }
 }
 
@@ -9343,8 +9550,17 @@ shared_focus = {
   y = 1
   relative_position_id = MDL_SAM41
   prerequisite = { focus = MDL_SAM41 }
+  mutually_exclusive = { focus = MDL_SAM48 }
+  available = {
+    ME_arabia_is_unified = yes
+  }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM47"
+    868 = {
+      owner = {
+        country_event = { days = 2 id = manedalusia.153 }
+      }
+    }
   }
 }
 
@@ -9354,10 +9570,31 @@ shared_focus = {
   cost = 6
   x = 1
   y = 1
+  mutually_exclusive = { focus = MDL_SAM47 }
   relative_position_id = MDL_SAM41
   prerequisite = { focus = MDL_SAM41 }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM48"
+    if = {
+      limit = { SDL = { exists = yes } }
+      declare_war_on = { type = annex_everything target = SDL }
+    }
+    if = {
+      limit = { SDF = { exists = yes } }
+      declare_war_on = { type = annex_everything target = SDF }
+    }
+    if = {
+      limit = { SDS = { exists = yes } }
+      declare_war_on = { type = annex_everything target = SDS }
+    }
+    if = {
+      limit = { SDC = { exists = yes } }
+      declare_war_on = { type = annex_everything target = SDC }
+    }
+    if = {
+      limit = { EMR = { exists = yes } }
+      declare_war_on = { type = annex_everything target = EMR }
+    }
   }
 }
 
@@ -9395,8 +9632,22 @@ shared_focus = {
   y = 1
   relative_position_id = MDL_SAM42
   prerequisite = { focus = MDL_SAM42 }
+  available = {
+    712 = { is_owned_and_controlled_by = ROOT }
+  }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM51"
+    add_political_power = 100
+    add_war_support = 0.05
+    swap_ideas = {
+      remove_idea = MDL_koltaliba_rule_2
+      add_idea = MDL_koltaliba_rule_3
+    }
+    hidden_effect = {
+      MDL_BSG_setup = yes
+      BSG = { set_cosmetic_tag = BSG_MDL_admin }
+    }
+    release_puppet = BSG
   }
 }
 
@@ -9410,6 +9661,22 @@ shared_focus = {
   prerequisite = { focus = MDL_SAM42 }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM52"
+    add_ideas = MDL_golden_coast_idea
+    741 = {
+      add_extra_state_shared_building_slots = 1
+      add_manpower = 150000
+      add_resource = { type = steel amount = 5 }
+    }
+    738 = {
+      add_extra_state_shared_building_slots = 1
+      add_manpower = 50000
+      add_resource = { type = steel amount = 5 }
+    }
+    740 = {
+      add_extra_state_shared_building_slots = 1
+      add_manpower = 50000
+      add_resource = { type = steel amount = 5 }
+    }
   }
 }
 
@@ -9423,6 +9690,7 @@ shared_focus = {
   prerequisite = { focus = MDL_SAM40 }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM53"
+    add_ideas = MDL_naval_academy_idea
   }
 }
 
@@ -9436,6 +9704,7 @@ shared_focus = {
   prerequisite = { focus = MDL_SAM40 }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM54"
+    add_ideas = MDL_naval_depots_idea
   }
 }
 
@@ -9508,5 +9777,6 @@ shared_focus = {
   prerequisite = { focus = MDL_SAM56 }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM57"
+    custom_effect_tooltip = MDL_SAM57_tt
   }
 }

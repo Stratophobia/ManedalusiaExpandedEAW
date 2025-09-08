@@ -1,5 +1,49 @@
 spriteTypes = {
   SpriteType = {
+    name="GFX_MDL_SAM02"
+    texturefile = "gfx/interface/goals/MDL/MDL_SAM02.tga"
+  }
+  SpriteType = {
+    name="GFX_MDL_SAM05"
+    texturefile = "gfx/interface/goals/MDL/MDL_SAM05.tga"
+  }
+  SpriteType = {
+    name="GFX_MDL_SAM10"
+    texturefile = "gfx/interface/goals/MDL/MDL_SAM10.tga"
+  }
+  SpriteType = {
+    name="GFX_MDL_SAM25"
+    texturefile = "gfx/interface/goals/MDL/MDL_SAM25.tga"
+  }
+  SpriteType = {
+    name="GFX_MDL_SAM26"
+    texturefile = "gfx/interface/goals/MDL/MDL_SAM26.tga"
+  }
+  SpriteType = {
+    name="GFX_MDL_SAM31"
+    texturefile = "gfx/interface/goals/MDL/MDL_SAM31.tga"
+  }
+  SpriteType = {
+    name="GFX_MDL_SAM32"
+    texturefile = "gfx/interface/goals/MDL/MDL_SAM32.tga"
+  }
+  SpriteType = {
+    name="GFX_MDL_SAM48"
+    texturefile = "gfx/interface/goals/MDL/MDL_SAM48.tga"
+  }
+  SpriteType = {
+    name="GFX_MDL_SAM33"
+    texturefile = "gfx/interface/goals/MDL/MDL_SAM33.tga"
+  }
+  SpriteType = {
+    name="GFX_MDL_SAM41"
+    texturefile = "gfx/interface/goals/MDL/MDL_SAM41.tga"
+  }
+  SpriteType = {
+    name="GFX_MDL_SAM47"
+    texturefile = "gfx/interface/goals/MDL/MDL_SAM47.tga"
+  }
+  SpriteType = {
     name="GFX_MDL_SAM03"
     texturefile = "gfx/interface/goals/MDL/MDL_SAM03.tga"
   }

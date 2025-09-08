@@ -11,7 +11,10 @@ ideas = {
       visible = {
         NOT = { has_country_flag = MDL_grifo_takeover }
       }
-      available = { has_completed_focus = MDL_bigger_cannons }
+      available = {
+        has_completed_focus = MDL_bigger_cannons
+        has_completed_focus = MDL_SAM04
+      }
 			research_bonus = {
 				artillery = 0.15
 			}
@@ -34,7 +37,12 @@ ideas = {
         NOT = { has_country_flag = MDL_grifo_takeover }
       }
 			traits = { infantry_equipment_manufacturer }
-			available = { has_completed_focus = MDL_go_with_samira }
+			available = {
+        OR = {
+          has_completed_focus = MDL_go_with_samira
+          has_completed_focus = MDL_charting_new_course
+        }
+      }
 			equipment_bonus = {
 				infantry_equipment = {
 					breakthrough = 0.03
@@ -66,6 +74,7 @@ ideas = {
       available = { has_completed_focus = MDL_alchemical_investment }
       visible = {
         NOT = { has_country_flag = MDL_grifo_takeover }
+        NOT = { has_country_flag = MDL_samira_path }
       }
       research_bonus = {
 				infantry_weapons = 0.15
@@ -168,7 +177,10 @@ ideas = {
 		MDL_industrial_concern_1 = {
 			picture = MDL_industrial_concern_1
 			allowed = { original_tag = MDL }
-			available = { has_completed_focus = MDL_industrial_union }
+			available = {
+        has_completed_focus = MDL_industrial_union
+        has_completed_focus = MDL_SAM10
+      }
 			research_bonus = {
 				industry = 0.15
 			}
@@ -1028,10 +1040,21 @@ ideas = {
     MDL_koltaliba_rule_2 = {
       picture = MDL_koltaliba_rule
       modifier = {
-        special_forces_cap = 0.50
+        special_forces_cap = 0.75
         special_forces_attack_factor = 0.1
         special_forces_defence_factor = 0.1
         conscription_factor = -0.50
+      }
+    }
+    MDL_koltaliba_rule_3 = {
+      picture = MDL_koltaliba_rule
+      modifier = {
+        special_forces_cap = 0.75
+        special_forces_attack_factor = 0.1
+        special_forces_defence_factor = 0.1
+        conscription_factor = -0.50
+        non_core_manpower = 0.02
+        political_power_gain = 0.05
       }
     }
   }
@@ -1233,6 +1256,12 @@ ideas = {
         experience_gain_navy = 0.05
         naval_doctrine_cost_factor = -0.10
       }
+    }
+    MDL_naval_academy_idea = {
+      picture = MDL_naval_academy_idea
+      research_bonus = {
+				naval_equipment = 0.10
+			}
     }
     MDL_naval_projection_idea = {
       picture = shipwaves

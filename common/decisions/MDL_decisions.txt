@@ -57,6 +57,12 @@ MDL_koltaliba_tab = {
     complete_effect = {
       set_politics = { ruling_party = fascism }
       add_ideas = MDL_spymasters_rule
+      hidden_effect = {
+        every_other_country = {
+          limit = { is_subject_of = ROOT }
+          set_politics = { ruling_party = fascism }
+        }
+      }
     }
   }
   MDL_put_samira_in_charge = {
@@ -67,6 +73,12 @@ MDL_koltaliba_tab = {
     cost = 25
     complete_effect = {
       set_politics = { ruling_party = neutrality }
+      hidden_effect = {
+        every_other_country = {
+          limit = { is_subject_of = ROOT }
+          set_politics = { ruling_party = neutrality }
+        }
+      }
     }
   }
 
@@ -85,7 +97,6 @@ MDL_koltaliba_tab = {
     cancel_trigger = {
       OR = {
         has_war = no
-        has_government = neutrality
       }
     }
     remove_effect = {
@@ -99,16 +110,12 @@ MDL_koltaliba_tab = {
 		icon = crossed_swords
 
 		cost = 50
-		days_remove = 1#TEST
+		days_remove = 150
 		modifier = {
 			research_speed_factor = -0.05
 			consumer_goods_factor = 0.05
 		}
-		available = {
-			NOT = {
-			  has_decision = MDL_research_zeeb_starter_tech
-			}
-		}
+
 		visible = {
       has_completed_focus = MDL_SAM13
 			NOT = { has_tech = zebra_warriors_of_new_age }
@@ -127,16 +134,12 @@ MDL_koltaliba_tab = {
 		icon = crossed_swords
 
 		cost = 50
-		days_remove = 1#TEST
+		days_remove = 150
 		modifier = {
 			research_speed_factor = -0.05
 			consumer_goods_factor = 0.05
 		}
-		available = {
-			NOT = {
-				has_decision = MDL_research_spirit_warrior_tech
-			}
-		}
+
 		visible = {
       has_completed_focus = MDL_SAM13
 			NOT = { has_tech = tech_zebra_crafting }
@@ -164,6 +167,7 @@ MDL_koltaliba_tab = {
 
     activation = {
       AND = {
+        NOT = { has_country_flag = MDL_samira_stress_resolved }
         has_country_flag = MDL_samira_path
         has_government = neutrality
       }
@@ -288,9 +292,6 @@ MDL_shield_doctrine_tab = {
       MDL_BSG_setup = yes
       hidden_effect = { BSG = { set_cosmetic_tag = BSG_MDL_admin } }
       release_puppet = BSG
-      hidden_effect = {
-        BSG = { load_focus_tree = { tree = generic_zebra_focus } }
-      }
     }
   }
   MDL_shield_puppet_ABY = {

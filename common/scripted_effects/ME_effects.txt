@@ -18,6 +18,11 @@ MDL_BSG_setup = {
         name = BAT_VASSAL_NAME
       }
       set_party_name = {
+        ideology = neutrality
+        long_name = BAT_VASSAL_NAME_LONG
+        name = BAT_VASSAL_NAME
+      }
+      set_party_name = {
         ideology = democratic
         long_name = BAT_VASSAL_NAME_LONG
         name = BAT_VASSAL_NAME
@@ -798,26 +803,15 @@ MDL_holy_war_gimp_the_republic = {
 }
 
 MDL_increase_samira_happiness = {
-  if = {
-    limit = {
-      AND = {
-        check_variable = { MDL_samira_happiness_score > 0 }
-        check_variable = { MDL_samira_happiness_score < 10 }
-      }
-    }
-    add_to_variable = {
-      var = MDL_samira_happiness_score
-      value = 1
-    }
+  add_to_variable = {
+    var = MDL_samira_happiness_score
+    value = 1
   }
 }
 MDL_decrease_samira_happiness = {
   if = {
     limit = {
-      AND = {
-        check_variable = { MDL_samira_happiness_score > 0 }
-        check_variable = { MDL_samira_happiness_score < 10 }
-      }
+      check_variable = { MDL_samira_happiness_score > 0 }
     }
     add_to_variable = {
       var = MDL_samira_happiness_score
