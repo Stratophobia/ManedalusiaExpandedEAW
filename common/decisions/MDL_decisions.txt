@@ -1,3 +1,38 @@
+MDL_debug_tab = {
+  MDL_debug_samira_happiness_low = {
+    visible = {
+      is_debug = yes
+    }
+    complete_effect = {
+      set_variable = { MDL_samira_happiness_score = 0 }
+    }
+  }
+  MDL_debug_samira_happiness_medium = {
+    visible = {
+      is_debug = yes
+    }
+    complete_effect = {
+      set_variable = { MDL_samira_happiness_score = 5 }
+    }
+  }
+  MDL_debug_samira_happiness_high = {
+    visible = {
+      is_debug = yes
+    }
+    complete_effect = {
+      set_variable = { MDL_samira_happiness_score = 10 }
+    }
+  }
+  MDL_debug_samira_happiness_max = {
+    visible = {
+      is_debug = yes
+    }
+    complete_effect = {
+      set_variable = { MDL_samira_happiness_score = 13 }
+    }
+  }
+}
+
 foreign_politics = {
   MDL_colthage_treaty_decision = {
     allowed = { original_tag = MDL }
@@ -51,9 +86,10 @@ MDL_koltaliba_tab = {
   MDL_put_zahid_in_charge = {
     visible = {
       NOT = { has_government = fascism }
+      NOT = { has_completed_focus = MDL_SAM57 }
     }
 
-    cost = 25
+    cost = 0
     complete_effect = {
       set_politics = { ruling_party = fascism }
       add_ideas = MDL_spymasters_rule
@@ -69,8 +105,9 @@ MDL_koltaliba_tab = {
     visible = {
       has_government = fascism
       has_completed_focus = MDL_SAM43
+      NOT = { has_completed_focus = MDL_SAM57 }
     }
-    cost = 25
+    cost = 0
     complete_effect = {
       set_politics = { ruling_party = neutrality }
       hidden_effect = {
@@ -84,7 +121,7 @@ MDL_koltaliba_tab = {
 
   MDL_sabotage_enemies = {
     icon = GFX_decision_infiltrate_state
-    cost = 10
+    cost = 25
     modifier = {
       army_morale_factor = -0.15
       surrender_limit = -0.35
@@ -92,11 +129,13 @@ MDL_koltaliba_tab = {
     days_remove = 75
     visible = {
       has_war = yes
+      has_government = fascism
     }
 
     cancel_trigger = {
       OR = {
         has_war = no
+        NOT = { has_government = fascism }
       }
     }
     remove_effect = {
@@ -110,7 +149,7 @@ MDL_koltaliba_tab = {
 		icon = crossed_swords
 
 		cost = 50
-		days_remove = 150
+		days_remove = 1#TEST 150
 		modifier = {
 			research_speed_factor = -0.05
 			consumer_goods_factor = 0.05
@@ -134,7 +173,7 @@ MDL_koltaliba_tab = {
 		icon = crossed_swords
 
 		cost = 50
-		days_remove = 150
+		days_remove = 1#TEST 150
 		modifier = {
 			research_speed_factor = -0.05
 			consumer_goods_factor = 0.05
@@ -159,8 +198,9 @@ MDL_koltaliba_tab = {
     visible = {
       NOT = { has_country_flag = MDL_samira_stress_resolved }
       NOT = { has_government = fascism }
+      has_completed_focus = MDL_charting_new_course
     }
-    
+
     is_good = no
 
     available = { always = no }
@@ -169,6 +209,7 @@ MDL_koltaliba_tab = {
       AND = {
         NOT = { has_country_flag = MDL_samira_stress_resolved }
         has_country_flag = MDL_samira_path
+        has_completed_focus = MDL_charting_new_course
         has_government = neutrality
       }
     }
@@ -180,11 +221,17 @@ MDL_koltaliba_tab = {
       }
     }
 
-    days_mission_timeout = 200
+    days_mission_timeout = 5#TEST 200
 
     timeout_effect = {
       custom_effect_tooltip = MDL_decrease_samira_happiness_tt
       MDL_decrease_samira_happiness = yes
+      hidden_effect = {
+        if = {
+          limit = { NOT = { has_country_flag = MDL_max_hope_locked } }
+        }
+        set_country_flag = MDL_max_hope_locked
+      }
     }
   }
   MDL_zahid_power_mission = {
@@ -204,13 +251,17 @@ MDL_koltaliba_tab = {
         has_government = neutrality
       }
     }
-    days_mission_timeout = 200
+    days_mission_timeout = 5#TEST 200
     timeout_effect = {
       custom_effect_tooltip = MDL_decrease_samira_happiness_tt
       custom_effect_tooltip = MDL_damage_asabiyyah_tt
       MDL_decrease_samira_happiness = yes
       hidden_effect = {
         MDL_damage_asabiyyah = yes
+        if = {
+          limit = { NOT = { has_country_flag = MDL_max_hope_locked } }
+        }
+        set_country_flag = MDL_max_hope_locked
       }
     }
   }

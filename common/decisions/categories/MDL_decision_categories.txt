@@ -1,3 +1,10 @@
+MDL_debug_tab = {
+  priority = 300
+  allowed = { original_tag = MDL }
+  visible = { is_debug = yes }
+  visible_when_empty = no
+}
+
 MDL_grifo_imperium_decisions_tab = {
   priority = 201
   allowed = { original_tag = MDL }

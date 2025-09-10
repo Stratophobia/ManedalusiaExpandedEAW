@@ -803,6 +803,7 @@ MDL_holy_war_gimp_the_republic = {
 }
 
 MDL_increase_samira_happiness = {
+  custom_effect_tooltip = MDL_increase_samira_happiness_tt
   add_to_variable = {
     var = MDL_samira_happiness_score
     value = 1
@@ -909,6 +910,16 @@ MDL_damage_asabiyyah = {
         var = MDL_stability_var
         value = -0.10
       }
+    }
+  }
+}
+
+MDL_level_up_mehmet_fight_level = {
+  custom_effect_tooltip = MDL_level_up_mehmet_fight_level_tt
+  hidden_effect = {
+    add_to_variable = {
+      var = MDL_mehmet_fight_level
+      value = 1
     }
   }
 }

@@ -50,6 +50,10 @@ focus_tree = {
     continuous_focus_position = { x = 550 y = 1800 }
 
     shared_focus = MDL_charting_new_course
+
+    shared_focus = MDL_SAM58
+    shared_focus = MDL_SAM59
+    shared_focus = MDL_SAM60
   }
 
   focus_tree = {
@@ -8194,6 +8198,7 @@ shared_focus = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_charting_new_course"
     country_event = manedalusia.147
     set_variable = { MDL_samira_happiness_score = 0 }#begin Samira Happinness mechanic
+    set_variable = { MDL_mehmet_fight_level = 0 }#Mehmet's fight skill
     MDL_grandmistress_samira = {
       add_field_marshal_role = {
         traits={ zebra_race_trait MDL_koltaliba_member_trait thorough_planner ambusher organizer }
@@ -8616,6 +8621,7 @@ shared_focus = {
   prerequisite = { focus = MDL_get_the_spymasters }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM13"
+    country_event = manedalusia.74
     add_war_support = 0.05
     custom_effect_tooltip = MDL_spawn_koltaliba_divs_tt
     hidden_effect = {
@@ -9452,7 +9458,6 @@ shared_focus = {
   prerequisite = { focus = MDL_SAM21 }
   available = {
     has_government = neutrality
-    733 = { is_owned_and_controlled_by = ROOT }
   }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM43"
@@ -9460,7 +9465,7 @@ shared_focus = {
     hidden_effect = {
       set_country_flag = MDL_zahid_power_mission_nullified
     }
-    country_event = manedalusia.150
+    country_event = manedalusia.152
     swap_ideas = {
       remove_idea = MDL_koltaliba_rule_1
       add_idea = MDL_koltaliba_rule_2
@@ -9599,32 +9604,6 @@ shared_focus = {
 }
 
 shared_focus = {
-  id = MDL_SAM49
-  icon = GFX_MDL_SAM49
-  cost = 6
-  x = -1
-  y = 1
-  relative_position_id = MDL_SAM42
-  prerequisite = { focus = MDL_SAM42}
-  completion_reward = {
-    log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM49"
-  }
-}
-
-shared_focus = {
-  id = MDL_SAM50
-  icon = GFX_MDL_SAM50
-  cost = 6
-  x = 1
-  y = 1
-  relative_position_id = MDL_SAM42
-  prerequisite = { focus = MDL_SAM42}
-  completion_reward = {
-    log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM50"
-  }
-}
-
-shared_focus = {
   id = MDL_SAM51
   icon = GFX_MDL_SAM51
   cost = 6
@@ -9661,6 +9640,13 @@ shared_focus = {
   prerequisite = { focus = MDL_SAM42 }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM52"
+    if = {
+      limit = {
+        check_variable = { MDL_samira_happiness_score > 11 }
+        NOT = { has_completed_focus = MDL_SAM57 }
+      }
+      country_event = manedalusia.154
+    }
     add_ideas = MDL_golden_coast_idea
     741 = {
       add_extra_state_shared_building_slots = 1
@@ -9778,5 +9764,57 @@ shared_focus = {
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM57"
     custom_effect_tooltip = MDL_SAM57_tt
+    country_event = manedalusia.151
+  }
+}
+
+shared_focus = {
+  id = MDL_SAM58
+  icon = GFX_goal_generic_political
+  cost = 2
+  x = 0
+  y = 1
+  relative_position_id = MDL_SAM57
+  allow_branch={
+    if = {
+      has_country_flag = MDL_samira_no_hope
+    }
+  }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM58"
+  }
+}
+
+shared_focus = {
+  id = MDL_SAM59
+  icon = GFX_goal_generic_political
+  cost = 2
+  x = 0
+  y = 1
+  relative_position_id = MDL_SAM57
+  allow_branch={
+    if = {
+      has_country_flag = MDL_samira_medium_hope
+    }
+  }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM59"
+  }
+}
+
+shared_focus = {
+  id = MDL_SAM60
+  icon = GFX_goal_generic_political
+  cost = 2
+  x = 0
+  y = 1
+  relative_position_id = MDL_SAM57
+  allow_branch={
+    if = {
+      has_country_flag = MDL_samira_high_hope
+    }
+  }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM60"
   }
 }

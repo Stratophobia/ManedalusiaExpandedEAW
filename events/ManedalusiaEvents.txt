@@ -2101,7 +2101,7 @@
     }
   }
 
-  country_event = {#FREE
+  country_event = {#mehmet fight level-up 1
     id = manedalusia.74
     title = manedalusia.74.t
     desc = manedalusia.74.d
@@ -2109,6 +2109,7 @@
 
     option = {
       name = manedalusia.74.a
+      MDL_level_up_mehmet_fight_level = yes
     }
   }
 
@@ -3702,7 +3703,7 @@
     }
   }
 
-  country_event = {#samira reforms the order
+  country_event = {#FREE
     id = manedalusia.150
     title = manedalusia.150.t
     desc = manedalusia.150.d
@@ -3713,18 +3714,113 @@
     }
   }
 
-  country_event = {#FREE
+  country_event = {#samira's final decree
     id = manedalusia.151
     title = manedalusia.151.t
-    desc = manedalusia.151.d
+    desc = {
+      text = manedalusia.151.d1
+      trigger = {
+        check_variable = { MDL_samira_happiness_score < 5 }
+      }
+    }
+    desc = {
+      text = manedalusia.151.d2
+      trigger = {
+        OR = {
+          AND = {
+            check_variable = { MDL_samira_happiness_score > 4 }
+            check_variable = { MDL_samira_happiness_score < 8 }
+            NOT = { has_country_flag = MDL_max_hope_locked }
+          }
+          AND = {
+            check_variable = { MDL_samira_happiness_score > 7 }
+            has_country_flag = MDL_max_hope_locked
+          }
+        }
+      }
+    }
+    desc = {
+      text = manedalusia.151.d3
+      trigger = {
+        check_variable = { MDL_samira_happiness_score > 7 }
+        NOT = { has_country_flag = MDL_max_hope_locked }
+      }
+    }
     is_triggered_only = yes
 
     option = {
-      name = manedalusia.151.t
+      name = manedalusia.151.a1
+      trigger = {
+        check_variable = { MDL_samira_happiness_score < 5 }
+      }
+      if = {
+        limit = { NOT = { has_government = fascism } }
+        set_politics = { ruling_party = fascism }
+      }
+      custom_effect_tooltip = MDL_samira_conclusion_branch_tt
+      hidden_effect = {
+        set_country_flag = MDL_samira_no_hope
+        load_focus_tree = {
+          tree = manedalusia_samira
+          keep_completed = yes
+        }
+        mark_focus_tree_layout_dirty = yes
+      }
+    }
+    option = {
+      name = manedalusia.151.a2
+      trigger = {
+        OR = {
+          AND = {
+            check_variable = { MDL_samira_happiness_score > 4 }
+            check_variable = { MDL_samira_happiness_score < 8 }
+            NOT = { has_country_flag = MDL_max_hope_locked }
+          }
+          AND = {
+            check_variable = { MDL_samira_happiness_score > 7 }
+            has_country_flag = MDL_max_hope_locked
+          }
+        }
+      }
+      if = {
+        limit = { NOT = { has_government = neutrality } }
+        set_politics = { ruling_party = neutrality }
+      }
+
+      custom_effect_tooltip = MDL_samira_conclusion_branch_tt
+      hidden_effect = {
+        set_country_flag = MDL_samira_medium_hope
+        load_focus_tree = {
+          tree = manedalusia_samira
+          keep_completed = yes
+        }
+        mark_focus_tree_layout_dirty = yes
+      }
+    }
+    option = {
+      name = manedalusia.151.a3
+      trigger = {
+        check_variable = { MDL_samira_happiness_score > 7 }
+        NOT = { has_country_flag = MDL_max_hope_locked }
+      }
+      if = {
+        limit = { NOT = { has_government = neutrality } }
+        set_politics = { ruling_party = neutrality }
+      }
+
+      custom_effect_tooltip = MDL_samira_conclusion_branch_tt
+      hidden_effect = {
+        set_country_flag = MDL_samira_high_hope
+        load_focus_tree = {
+          tree = manedalusia_samira
+          keep_completed = yes
+        }
+        mark_focus_tree_layout_dirty = yes
+      }
     }
   }
 
-  country_event = {#zahid mehmet duel
+  country_event = {#zahid mehmet duel 1
     id = manedalusia.152
     title = manedalusia.152.t
     desc = manedalusia.152.d
@@ -3732,6 +3828,10 @@
 
     option = {
       name = manedalusia.152.a
+      country_event = manedalusia.157
+    }
+    option = {
+      name = manedalusia.152.b
     }
   }
 
@@ -3746,3 +3846,83 @@
     }
   }
 
+  country_event = {#the head and the heart 1
+    id = manedalusia.154
+    title = manedalusia.154.t
+    desc = manedalusia.154.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.154.a
+      country_event = manedalusia.155
+    }
+    option = {
+      name = manedalusia.154.b
+    }
+  }
+
+  country_event = {#the head and the heart 2
+    id = manedalusia.155
+    title = manedalusia.155.t
+    desc = manedalusia.155.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.155.a
+      hidden_effect = { country_event = manedalusia.156 }
+    }
+  }
+
+  country_event = {#the head and the heart 3
+    id = manedalusia.156
+    title = manedalusia.156.t
+    desc = manedalusia.156.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.156.a
+      MDL_increase_samira_happiness = yes
+    }
+  }
+
+  country_event = {#zahid mehmet duel 2
+    id = manedalusia.157
+    title = manedalusia.157.t
+    desc = manedalusia.157.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.157.a
+    }
+    option = {
+      name = manedalusia.157.b
+      trigger = {
+        check_variable = { MDL_mehmet_fight_level > 0 }
+      }
+      country_event = manedalusia.158
+    }
+  }
+
+  country_event = {#zahid mehmet duel automatic success
+    id = manedalusia.158
+    title = manedalusia.158.t
+    desc = manedalusia.158.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.158.a
+      hidden_effect = { country_event = manedalusia.159 }
+    }
+  }
+
+  country_event = {#zahid mehmet duel good resolution
+    id = manedalusia.159
+    title = manedalusia.159.t
+    desc = manedalusia.159.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.159.a
+      MDL_increase_samira_happiness = yes
+    }
+  }
