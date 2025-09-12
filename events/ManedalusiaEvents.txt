@@ -3665,6 +3665,7 @@
 
     option = {
       name = manedalusia.147.a
+      hidden_effect = { country_event = manedalusia.167 }
       custom_effect_tooltip = MDL_samira_start_tt
       add_ideas = MDL_koltaliba_rule_1
     }
@@ -3729,11 +3730,11 @@
         OR = {
           AND = {
             check_variable = { MDL_samira_happiness_score > 4 }
-            check_variable = { MDL_samira_happiness_score < 8 }
+            check_variable = { MDL_samira_happiness_score < 9 }
             NOT = { has_country_flag = MDL_max_hope_locked }
           }
           AND = {
-            check_variable = { MDL_samira_happiness_score > 7 }
+            check_variable = { MDL_samira_happiness_score > 8 }
             has_country_flag = MDL_max_hope_locked
           }
         }
@@ -3742,7 +3743,7 @@
     desc = {
       text = manedalusia.151.d3
       trigger = {
-        check_variable = { MDL_samira_happiness_score > 7 }
+        check_variable = { MDL_samira_happiness_score > 8 }
         NOT = { has_country_flag = MDL_max_hope_locked }
       }
     }
@@ -3773,11 +3774,11 @@
         OR = {
           AND = {
             check_variable = { MDL_samira_happiness_score > 4 }
-            check_variable = { MDL_samira_happiness_score < 8 }
+            check_variable = { MDL_samira_happiness_score < 9 }
             NOT = { has_country_flag = MDL_max_hope_locked }
           }
           AND = {
-            check_variable = { MDL_samira_happiness_score > 7 }
+            check_variable = { MDL_samira_happiness_score > 8 }
             has_country_flag = MDL_max_hope_locked
           }
         }
@@ -3789,6 +3790,22 @@
 
       custom_effect_tooltip = MDL_samira_conclusion_branch_tt
       hidden_effect = {
+        set_country_leader_description = {
+          ideology = neutrality
+          desc = MDL_grandmistress_samira_sultana_desc
+        }
+        MDL_grandmistress_samira = {
+          set_character_name = MDL_grandmistress_samira_sultana
+          set_leader_description = MDL_grandmistress_samira_sultana_desc
+          set_portraits = {
+            army = {
+              large="gfx/leaders/MDL/grandmistress_samira_sultana.tga"
+            }
+            civilian={
+              large="gfx/leaders/MDL/grandmistress_samira_sultana.tga"
+            }
+          }
+        }
         set_country_flag = MDL_samira_medium_hope
         load_focus_tree = {
           tree = manedalusia_samira
@@ -3800,7 +3817,7 @@
     option = {
       name = manedalusia.151.a3
       trigger = {
-        check_variable = { MDL_samira_happiness_score > 7 }
+        check_variable = { MDL_samira_happiness_score > 8 }
         NOT = { has_country_flag = MDL_max_hope_locked }
       }
       if = {
@@ -3810,6 +3827,8 @@
 
       custom_effect_tooltip = MDL_samira_conclusion_branch_tt
       hidden_effect = {
+        country_event = { id = manedalusia.164 days = 3 }
+        
         set_country_flag = MDL_samira_high_hope
         load_focus_tree = {
           tree = manedalusia_samira
@@ -3923,6 +3942,107 @@
 
     option = {
       name = manedalusia.159.a
+      MDL_increase_samira_happiness = yes
+    }
+  }
+
+  country_event = {#zahid install the qadi
+    id = manedalusia.160
+    title = manedalusia.160.t
+    desc = manedalusia.160.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.160.a
+      add_country_leader_role = {
+        character = MDL_qadi_of_coltoba
+        country_leader = {
+          desc = MDL_qadi_of_coltoba_desc
+          expire = "1965.1.1"
+          ideology = surveillance_state
+        }
+        promote_leader = yes
+      }
+    }
+  }
+
+  country_event = {#sad samira final event
+    id = manedalusia.161
+    title = manedalusia.161.t
+    desc = manedalusia.161.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.161.a
+      custom_effect_tooltip = MDL_game_end_tt
+    }
+  }
+  
+  country_event = {#medium hope samira final event
+    id = manedalusia.162
+    title = manedalusia.162.t
+    desc = manedalusia.162.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.162.a
+    }
+  }
+
+  country_event = {#samira happy ending coronation
+    id = manedalusia.163
+    title = manedalusia.163.t
+    desc = manedalusia.163.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.163.a
+    }
+  }
+
+  country_event = {#samira confesses feelings
+    id = manedalusia.164
+    title = manedalusia.164.t
+    desc = manedalusia.164.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.164.a
+    }
+  }
+
+  country_event = {#samira good ending
+    id = manedalusia.165
+    title = manedalusia.165.t
+    desc = manedalusia.165.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.165.a
+      country_event = { id = manedalusia.166 days = 2 }
+    }
+  }
+
+  country_event = {#samira good ending last event
+    id = manedalusia.166
+    title = manedalusia.166.t
+    desc = manedalusia.166.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.166.a
+      custom_effect_tooltip = MDL_game_end_tt
+    }
+  }
+
+  country_event = {#mehmet comforts samira
+    id = manedalusia.167
+    title = manedalusia.167
+    desc = manedalusia.167.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.167.a
       MDL_increase_samira_happiness = yes
     }
   }

@@ -823,7 +823,10 @@ MDL_decrease_samira_happiness = {
 
 MDL_switch_power_to_samira = {
   if = {
-    limit = { has_government = fascism }
+    limit = {
+      has_government = fascism
+      NOT = { has_completed_focus = MDL_SAM57 }
+    }
     custom_effect_tooltip = MDL_samira_returns_to_power_tt
     hidden_effect = {
       set_politics = { ruling_party = neutrality }

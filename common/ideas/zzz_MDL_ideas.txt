@@ -1000,6 +1000,7 @@ ideas = {
       picture = MDL_meritocratic_sultanate
       modifier = {
         political_power_gain = 0.05
+        stability_weekly = 0.003
         political_advisor_cost_factor = -0.05
         war_support_factor = 0.10
       }
@@ -1054,6 +1055,16 @@ ideas = {
         special_forces_defence_factor = 0.15
         conscription_factor = -0.50
         non_core_manpower = 0.02
+        political_power_gain = 0.05
+      }
+    }
+    MDL_koltaliba_rule_4 = {
+      picture = MDL_koltaliba_rule
+      modifier = {
+        special_forces_cap = 1.0
+        special_forces_attack_factor = 0.20
+        special_forces_defence_factor = 0.20
+        conscription_factor = -0.50
         political_power_gain = 0.05
       }
     }

@@ -9559,6 +9559,9 @@ shared_focus = {
   available = {
     ME_arabia_is_unified = yes
   }
+  bypass = {
+    868 = { is_owned_and_controlled_by = ROOT }
+  }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM47"
     868 = {
@@ -9578,6 +9581,11 @@ shared_focus = {
   mutually_exclusive = { focus = MDL_SAM47 }
   relative_position_id = MDL_SAM41
   prerequisite = { focus = MDL_SAM41 }
+  will_lead_to_war_with = SDF
+  will_lead_to_war_with = SDS
+  will_lead_to_war_with = SDL
+  will_lead_to_war_with = SDC
+  will_lead_to_war_with = EMR
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM48"
     if = {
@@ -9642,8 +9650,9 @@ shared_focus = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM52"
     if = {
       limit = {
-        check_variable = { MDL_samira_happiness_score > 11 }
+        check_variable = { MDL_samira_happiness_score > 7 }
         NOT = { has_completed_focus = MDL_SAM57 }
+        NOT = { has_country_flag = MDL_max_hope_locked }
       }
       country_event = manedalusia.154
     }
@@ -9770,7 +9779,7 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_SAM58
-  icon = GFX_goal_generic_political
+  icon = GFX_MDL_SAM58
   cost = 2
   x = 0
   y = 1
@@ -9782,12 +9791,13 @@ shared_focus = {
   }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM58"
+    country_event = manedalusia.160
   }
 }
 
 shared_focus = {
   id = MDL_SAM59
-  icon = GFX_goal_generic_political
+  icon = GFX_MDL_SAM59
   cost = 2
   x = 0
   y = 1
@@ -9799,12 +9809,13 @@ shared_focus = {
   }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM59"
+    add_ideas = MDL_place_in_the_sun_idea
   }
 }
 
 shared_focus = {
   id = MDL_SAM60
-  icon = GFX_goal_generic_political
+  icon = GFX_MDL_SAM60
   cost = 2
   x = 0
   y = 1
@@ -9816,5 +9827,203 @@ shared_focus = {
   }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM60"
+    country_event = manedalusia.163
+    add_ideas = MDL_place_in_the_sun_idea
+
+    hidden_effect = {
+      set_country_leader_description = {
+        ideology = neutrality
+        desc = MDL_grandmistress_samira_sultana_happy_desc
+      }
+      MDL_grandmistress_samira = {
+        set_character_name = MDL_grandmistress_samira_sultana
+        set_leader_description = MDL_grandmistress_samira_sultana_happy_desc
+        set_portraits = {
+          army = {
+            large="gfx/leaders/MDL/grandmistress_samira_sultana_happy.tga"
+          }
+          civilian={
+            large="gfx/leaders/MDL/grandmistress_samira_sultana_happy.tga"
+          }
+        }
+      }
+    }
+  }
+}
+
+shared_focus = {
+  id = MDL_SAM61
+  icon = GFX_MDL_SAM61
+  cost = 2
+  x = -1
+  y = 1
+  relative_position_id = MDL_SAM58
+  prerequisite = { focus = MDL_SAM58 }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM61"
+    add_political_power = 50
+    add_stability = 0.05
+  }
+}
+
+shared_focus = {
+  id = MDL_SAM62
+  icon = GFX_MDL_SAM62
+  cost = 2
+  x = 1
+  y = 1
+  relative_position_id = MDL_SAM58
+  prerequisite = { focus = MDL_SAM58 }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM62"
+    if = {
+      limit = { has_idea = MDL_koltaliba_rule_3 }
+      swap_ideas = {
+        remove_idea = MDL_koltaliba_rule_3
+        add_idea = MDL_koltaliba_rule_4
+      }
+    }
+    else = {
+      hidden_effect = {
+        remove_ideas = {
+          MDL_koltaliba_rule_1
+          MDL_koltaliba_rule_2
+        }
+      }
+      add_ideas = MDL_koltaliba_rule_4
+    }
+  }
+}
+
+shared_focus = {
+  id = MDL_SAM63
+  icon = GFX_MDL_SAM63
+  cost = 2
+  x = 0
+  y = 2
+  relative_position_id = MDL_SAM58
+  prerequisite = { focus = MDL_SAM61 }
+  prerequisite = { focus = MDL_SAM62 }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM63"
+    country_event = manedalusia.161
+  }
+}
+
+shared_focus = {
+  id = MDL_SAM64
+  icon = GFX_MDL_SAM64
+  cost = 2
+  x = -1
+  y = 1
+  relative_position_id = MDL_SAM59
+  prerequisite = { focus = MDL_SAM59 }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM64"
+    add_political_power = 100
+    every_owned_state = {
+      limit = {
+        NOT = { is_core_of = ROOT }
+      }
+      add_compliance = 30
+      add_resistance = -30
+    }
+  }
+}
+
+shared_focus = {
+  id = MDL_SAM65
+  icon = GFX_MDL_SAM65
+  cost = 2
+  x = 1
+  y = 1
+  relative_position_id = MDL_SAM59
+  prerequisite = { focus = MDL_SAM59 }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM65"
+    add_war_support = 0.10
+    army_experience = 15
+    add_ideas = MDL_grand_army
+  }
+}
+
+shared_focus = {
+  id = MDL_SAM66
+  icon = GFX_MDL_SAM66
+  cost = 2
+  x = 0
+  y = 2
+  relative_position_id = MDL_SAM59
+  prerequisite = { focus = MDL_SAM64 }
+  prerequisite = { focus = MDL_SAM65 }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM66"
+    country_event = manedalusia.162
+  }
+}
+
+shared_focus = {
+  id = MDL_SAM67
+  icon = GFX_MDL_SAM67
+  cost = 2
+  x = -1
+  y = 1
+  relative_position_id = MDL_SAM60
+  prerequisite = { focus = MDL_SAM60 }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM67"
+    army_experience = 50
+    add_doctrine_cost_reduction = {
+			name = MDL_go_with_alneighzari
+			cost_reduction = 0.75
+			uses = 1
+			category = cat_mobile_warfare
+			category = cat_superior_firepower
+			category = cat_grand_battle_plan
+			category = cat_mass_assault
+		}
+    add_ideas = MDL_grand_army
+  }
+}
+
+shared_focus = {
+  id = MDL_SAM68
+  icon = GFX_MDL_SAM68
+  cost = 2
+  x = 1
+  y = 1
+  relative_position_id = MDL_SAM60
+  prerequisite = { focus = MDL_SAM60 }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM68"
+    add_political_power = 150
+    add_war_support = -0.05
+    if = {
+      limit = {
+        NOT = { has_idea = civilian_economy }
+      }
+      add_ideas = civilian_economy
+    }
+    if = {
+      limit = {
+        NOT = { has_idea = free_trade }
+      }
+      add_ideas = free_trade
+    }
+  }
+}
+
+shared_focus = {
+  id = MDL_SAM69
+  icon = GFX_MDL_SAM69
+  cost = 2
+  x = 0
+  y = 2
+  relative_position_id = MDL_SAM60
+  prerequisite = { focus = MDL_SAM67 }
+  prerequisite = { focus = MDL_SAM68 }
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM69"
+    country_event = manedalusia.165
   }
 }

@@ -7,4 +7,8 @@ spriteTypes = {
 		name = "GFX_ideology_MDL_esotericism"
 		texturefile="gfx/interface/ideologies/MDL_esotericism.tga"
 	}
+  SpriteType = {
+    name = "GFX_ideology_MDL_holy_order_h"
+		texturefile="gfx/interface/ideologies/MDL_holy_order_h.tga"
+  }
 }

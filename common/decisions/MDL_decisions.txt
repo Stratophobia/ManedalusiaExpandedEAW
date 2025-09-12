@@ -2136,7 +2136,7 @@ MDL_puppet_RIV = {
   MDL_transfer_to_FIR = {
     icon = jachs_drawer
     cost = 0
-    targets = { WAT FBK }
+    targets = { WAT FBK HLR DED }
     visible = {
       has_country_flag = MDL_imperium_decisions_unlocked
       has_country_flag = MDL_imperium_restored
@@ -2151,6 +2151,8 @@ MDL_puppet_RIV = {
           OR = {
               original_tag = WAT
               original_tag = FBK
+              original_tag = HLR
+              original_tag = DED
             }
           }
 		}
@@ -2724,7 +2726,7 @@ MDL_puppet_RIV = {
         NOT = { country_exists = FROM }
       }
     }
-    targets = { FIR WAT FBK }
+    targets = { FIR WAT FBK HLR DED }
     targets_dynamic = yes
     target_non_existing = no
     target_trigger = {
@@ -2733,6 +2735,8 @@ MDL_puppet_RIV = {
           original_tag = FIR
           original_tag = WAT
           original_tag = FBK
+          original_tag = HLR
+          original_tag = DED
 				}
 			}
 		}

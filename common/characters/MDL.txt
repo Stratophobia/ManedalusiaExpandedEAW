@@ -325,6 +325,7 @@ characters={
     name = MDL_qadi_of_coltoba
     portraits={
       civilian={
+        large="gfx/leaders/MDL/qadi.tga"
         small="gfx/interface/ideas/Advisors/MDL/MDL_qadi.tga"
       }
     }
