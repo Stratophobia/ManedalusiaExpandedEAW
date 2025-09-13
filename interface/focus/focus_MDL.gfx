@@ -5,7 +5,7 @@ spriteTypes = {
   }
   SpriteType = {
     name="GFX_MDL_SAM67"
-    texturefile = "gfx/interface/goals/MDL/MDL_SAM68.tga"
+    texturefile = "gfx/interface/goals/MDL/MDL_SAM67.tga"
   }
   SpriteType = {
     name="GFX_MDL_SAM68"

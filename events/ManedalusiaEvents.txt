@@ -3665,7 +3665,9 @@
 
     option = {
       name = manedalusia.147.a
-      hidden_effect = { country_event = manedalusia.167 }
+      hidden_effect = { 
+        country_event = { id = manedalusia.167 days = 2 }
+      }
       custom_effect_tooltip = MDL_samira_start_tt
       add_ideas = MDL_koltaliba_rule_1
     }
@@ -4037,12 +4039,25 @@
 
   country_event = {#mehmet comforts samira
     id = manedalusia.167
-    title = manedalusia.167
+    title = manedalusia.167.t
     desc = manedalusia.167.d
     is_triggered_only = yes
 
     option = {
       name = manedalusia.167.a
       MDL_increase_samira_happiness = yes
+
+      MDL_mehmet = {
+        set_character_name = MDL_mehmet_major
+        add_corps_commander_role = {
+          traits = { pony_race_trait artillery_officer }
+          skill=2
+          attack_skill=3
+          defense_skill=1
+          logistics_skill=2
+          planning_skill=1
+        }
+      }
+      custom_effect_tooltip = MDL_mehmet_stats_tt
     }
   }

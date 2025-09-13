@@ -4486,6 +4486,7 @@ shared_focus = {
     hidden_effect = {
       release_puppet = EMR
       EMR = {
+        set_cosmetic_tag = { EMR_FEDERATION }
         generate_character = {
           token_base = MDL_elected_princes
           name = MDL_elected_princes
@@ -8296,18 +8297,6 @@ shared_focus = {
   prerequisite = { focus = MDL_charting_new_course }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM02"
-    MDL_mehmet = {
-      set_character_name = MDL_mehmet_major
-      add_corps_commander_role = {
-        traits = { pony_race_trait artillery_officer }
-        skill=2
-        attack_skill=3
-        defense_skill=1
-        logistics_skill=2
-        planning_skill=1
-      }
-    }
-    custom_effect_tooltip = MDL_mehmet_stats_tt
     MDL_iron_muhtal = {
       add_corps_commander_role = {
         traits = { pony_race_trait supply_raider scavenger }
@@ -8319,6 +8308,24 @@ shared_focus = {
         desc = MDL_iron_muhtal_desc
       }
     }
+    add_tech_bonus = {
+			name = infantry_bonus
+			bonus = 1.0
+			uses = 2
+			category = support_tech
+		}
+		add_tech_bonus = {
+			name = MDL_field_medics
+			bonus = 0.5
+			uses = 1
+			category = hospital_tech
+		}
+    add_tech_bonus = {
+			name = MDL_recon_bonus
+			bonus = 0.5
+			uses = 1
+			category = recon_tech
+		}
     custom_effect_tooltip = MDL_muhtal_stats_tt
   }
 }
@@ -8743,17 +8750,17 @@ shared_focus = {
   relative_position_id = MDL_restore_the_asabiyyah
   available = {
     has_government = neutrality
-    has_completed_focus = MDL_SAM19
-    has_completed_focus = MDL_SAM20
+    ABY = { exists = no }
+    MGY = { exists = no }
   }
   prerequisite = { focus = MDL_SAM08 }
   prerequisite = { focus = MDL_SAM09 }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM18"
+    custom_effect_tooltip = MDL_samira_stress_resolved_tt
     country_event = manedalusia.24
     hidden_effect = { set_country_flag = MDL_samira_stress_resolved }
     create_faction = MDL_GUARDIANSHIP
-    custom_effect_tooltip = MDL_samira_stress_resolved_tt
     create_wargoal = {
       type = annex_everything
       target = KLG
@@ -9104,7 +9111,6 @@ shared_focus = {
   y = 1
   relative_position_id = MDL_SAM26
   available = {
-    has_government = neutrality
     1208 = { is_owned_and_controlled_by = ROOT }
     810 = { is_owned_and_controlled_by = ROOT }
     790 = { is_owned_and_controlled_by = ROOT }
@@ -9213,7 +9219,6 @@ shared_focus = {
   y = 1
   relative_position_id = MDL_SAM29
   available = {
-    has_government = neutrality
     has_completed_focus = MDL_SAM32
   }
   prerequisite = {
@@ -9974,14 +9979,14 @@ shared_focus = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM67"
     army_experience = 50
     add_doctrine_cost_reduction = {
-			name = MDL_go_with_alneighzari
-			cost_reduction = 0.75
-			uses = 1
-			category = cat_mobile_warfare
-			category = cat_superior_firepower
-			category = cat_grand_battle_plan
-			category = cat_mass_assault
-		}
+      name = MDL_SAM67
+      cost_reduction = 0.75
+      uses = 1
+      category = cat_mobile_warfare
+      category = cat_superior_firepower
+      category = cat_grand_battle_plan
+      category = cat_mass_assault
+    }
     add_ideas = MDL_grand_army
   }
 }

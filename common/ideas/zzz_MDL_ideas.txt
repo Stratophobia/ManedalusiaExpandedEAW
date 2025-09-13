@@ -669,7 +669,7 @@ ideas = {
       picture = MDL_vizier_moonstriker
       modifier = {
         stability_factor = 0.05
-        research_speed_factor = 0.05
+        research_speed_factor = 0.025
       }
     }
   }
@@ -1011,8 +1011,8 @@ ideas = {
         NOT = { has_government = fascism }
       }
       modifier = {
-        encryption_factor = 0.20
-        decryption_factor = 0.20
+        encryption_factor = 0.30
+        decryption_factor = 0.30
       }
     }
     MDL_sabotaged_supply = {

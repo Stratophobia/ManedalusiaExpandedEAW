@@ -31,6 +31,30 @@ MDL_debug_tab = {
       set_variable = { MDL_samira_happiness_score = 13 }
     }
   }
+  MDL_debug_set_mehmet_fight_1 = {
+    visible = {
+      is_debug = yes
+    }
+    complete_effect = {
+      set_variable = { MDL_mehmet_fight_level = 1 }
+    }
+  }
+  MDL_debug_set_mehmet_fight_2 = {
+    visible = {
+      is_debug = yes
+    }
+    complete_effect = {
+      set_variable = { MDL_mehmet_fight_level = 2 }
+    }
+  }
+  MDL_debug_set_mehmet_fight_3 = {
+    visible = {
+      is_debug = yes
+    }
+    complete_effect = {
+      set_variable = { MDL_mehmet_fight_level = 3 }
+    }
+  }
 }
 
 foreign_politics = {
@@ -84,6 +108,7 @@ political_actions = {
 
 MDL_koltaliba_tab = {
   MDL_put_zahid_in_charge = {
+    icon = GFX_decision_jachs_drawer
     visible = {
       NOT = { has_government = fascism }
       NOT = { has_completed_focus = MDL_SAM57 }
@@ -102,6 +127,7 @@ MDL_koltaliba_tab = {
     }
   }
   MDL_put_samira_in_charge = {
+    icon = GFX_decision_jachs_drawer
     visible = {
       has_government = fascism
       has_completed_focus = MDL_SAM43
@@ -129,7 +155,6 @@ MDL_koltaliba_tab = {
     days_remove = 75
     visible = {
       has_war = yes
-      has_government = fascism
     }
 
     cancel_trigger = {
@@ -170,7 +195,7 @@ MDL_koltaliba_tab = {
 	}
 
   MDL_research_zeeb_starter_tech = {
-		icon = crossed_swords
+		icon = GFX_decision_zebra_charger
 
 		cost = 50
 		days_remove = 1#TEST 150
@@ -207,6 +232,7 @@ MDL_koltaliba_tab = {
 
     activation = {
       AND = {
+        has_country_flag = MDL_samira_path
         NOT = { has_country_flag = MDL_samira_stress_resolved }
         has_country_flag = MDL_samira_path
         has_completed_focus = MDL_charting_new_course
@@ -221,7 +247,7 @@ MDL_koltaliba_tab = {
       }
     }
 
-    days_mission_timeout = 5#TEST 200
+    days_mission_timeout = 200
 
     timeout_effect = {
       custom_effect_tooltip = MDL_decrease_samira_happiness_tt
@@ -243,6 +269,7 @@ MDL_koltaliba_tab = {
     available = { always = no }
     activation = {
       has_government = fascism
+      has_country_flag = MDL_samira_path
       NOT = { has_country_flag = MDL_zahid_power_mission_nullified }
     }
     cancel_trigger = {
@@ -251,7 +278,7 @@ MDL_koltaliba_tab = {
         has_government = neutrality
       }
     }
-    days_mission_timeout = 5#TEST 200
+    days_mission_timeout = 200
     timeout_effect = {
       custom_effect_tooltip = MDL_decrease_samira_happiness_tt
       custom_effect_tooltip = MDL_damage_asabiyyah_tt
@@ -1367,7 +1394,7 @@ MDL_grifo_imperium_decisions_tab = {
           load_focus_tree = generic_griffon_focus
           generate_character = {
             token_base = EQC_rosa_branca
-            name = MDL_rosa_branca
+            name = EQC_rosa_branca
           }
           set_portraits = {
             character = EQC_rosa_branca
@@ -1420,7 +1447,7 @@ MDL_grifo_imperium_decisions_tab = {
           load_focus_tree = generic_griffon_focus
           generate_character = {
             token_base = MIT_alexandre_de_aguilar
-            name = MDL_alexandre_de_aguilar
+            name = MIT_alexandre_de_aguilar
           }
           set_portraits = {
             character = MIT_alexandre_de_aguilar
@@ -1485,7 +1512,7 @@ MDL_grifo_imperium_decisions_tab = {
           load_focus_tree = generic_griffon_focus
           generate_character = {
             token_base = MCW_antonio_aviario
-            name = MDL_antonio_aviario
+            name = MCW_antonio_aviario
           }
           set_portraits = {
             character = MCW_antonio_aviario
@@ -1991,7 +2018,7 @@ MDL_puppet_RIV = {
   MDL_transfer_to_FAT = {
     icon = jachs_drawer
     cost = 0
-    targets = { VED HAU SRS NTR MNC DED HLR}
+    targets = { VED HAU SRS NTR MNC }
     visible = {
       has_country_flag = MDL_imperium_decisions_unlocked
       has_country_flag = MDL_imperium_restored
@@ -2009,8 +2036,6 @@ MDL_puppet_RIV = {
               original_tag = SRS
               original_tag = NTR
               original_tag = MNC
-              original_tag = DED
-              original_tag = HLR
             }
           }
 		}
