@@ -151,16 +151,19 @@ MDL_koltaliba_tab = {
     modifier = {
       army_morale_factor = -0.15
       surrender_limit = -0.35
+      army_speed_factor = -0.05
     }
     days_remove = 75
     visible = {
       has_war = yes
+      every_enemy_country = {
+        NOT = { has_idea = MDL_sabotaged_supply }
+      }
     }
 
     cancel_trigger = {
       OR = {
         has_war = no
-        NOT = { has_government = fascism }
       }
     }
     remove_effect = {
@@ -174,7 +177,7 @@ MDL_koltaliba_tab = {
 		icon = crossed_swords
 
 		cost = 50
-		days_remove = 1#TEST 150
+		days_remove = 150
 		modifier = {
 			research_speed_factor = -0.05
 			consumer_goods_factor = 0.05
@@ -198,7 +201,7 @@ MDL_koltaliba_tab = {
 		icon = GFX_decision_zebra_charger
 
 		cost = 50
-		days_remove = 1#TEST 150
+		days_remove = 150
 		modifier = {
 			research_speed_factor = -0.05
 			consumer_goods_factor = 0.05
@@ -2989,7 +2992,7 @@ MDL_puppet_RIV = {
       }
     }
 
-    targets = { ABY MGY KLG ASS ANS MKS YMN EMR SDF SDC SDL SDS }
+    targets = { ABY MGY KLG ASS ANS MKS YMN EMR SDF SDC SDL SDS KTZ }
 		targets_dynamic = yes
 		target_non_existing = no
     target_trigger = {
@@ -3007,6 +3010,7 @@ MDL_puppet_RIV = {
           original_tag = SDC
           original_tag = SDL
           original_tag = SDS
+          original_tag = KTZ
 				}
 			}
 		}

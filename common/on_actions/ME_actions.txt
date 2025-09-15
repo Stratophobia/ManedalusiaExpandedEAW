@@ -19,10 +19,11 @@ on_actions = {
 					}
 					#Adds up to 100
 					random_list = {
-						25 = { MDL = { set_country_flag = MDL_AI_CRIMSON_SULTAN } }
-						25 = { MDL = { set_country_flag = MDL_AI_SENATE } }
-            25 = { MDL = { set_country_flag = MDL_AI_VELVET } }
-            25 = { MDL = { set_country_flag = MDL_AI_ULTRAMAR } }
+						20 = { MDL = { set_country_flag = MDL_AI_CRIMSON_SULTAN } }
+						20 = { MDL = { set_country_flag = MDL_AI_SENATE } }
+            20 = { MDL = { set_country_flag = MDL_AI_VELVET } }
+            20 = { MDL = { set_country_flag = MDL_AI_ULTRAMAR } }
+            20 = { MDL = { set_country_flag = MDL_AI_SAMIRA } }
 					}
 				}
 			}

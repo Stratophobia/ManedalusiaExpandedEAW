@@ -647,6 +647,13 @@ MDL_upgrade_zeeb_tech = {
       has_tech = tech_spirit_warriors2
       NOT = { has_tech = tech_spirit_warriors3 }
     }
+    if = {
+      limit = {
+        has_country_flag = MDL_samira_path
+        NOT = { has_completed_focus = MDL_SAM57 }
+      }
+      country_event = manedalusia.168
+    }
     set_technology = {
       tech_spirit_warriors3 = 1
     }
@@ -676,6 +683,13 @@ MDL_upgrade_zeeb_tech = {
     }
     set_technology = {
       tech_spirit_warriors6 = 1
+    }
+    if = {
+      limit = {
+        has_country_flag = MDL_samira_path
+        NOT = { has_completed_focus = MDL_SAM57 }
+      }
+      country_event = manedalusia.171
     }
   }
   else_if = {

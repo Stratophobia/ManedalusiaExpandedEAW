@@ -31,6 +31,12 @@ MDL_ai_behavior = {
     allow_achievements = yes
   }
   option = {
+    name = MDL_SAMIRA
+    text = "RULE_OPTION_SAMIRA"
+    desc = "RULE_OPTION_SAMIRA_MDL_AI_DESC"
+    allow_achievements = yes
+  }
+  option = {
     name = RANDOM
     text = "RULE_OPTION_RANDOM"
     desc = "RULE_OPTION_RANDOM_AI_DESC"

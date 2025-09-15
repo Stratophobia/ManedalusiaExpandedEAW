@@ -178,11 +178,16 @@
         modifier = {
           factor = 0
           OR = {
+            has_country_flag = MDL_AI_SAMIRA
             has_country_flag = MDL_AI_ULTRAMAR
             has_game_rule = {
-				      rule = MDL_ai_behavior
-				      option = MDL_ULTRAMAR
-			      }
+              rule = MDL_ai_behavior
+              option = MDL_ULTRAMAR
+            }
+            has_game_rule = {
+              rule = MDL_ai_behavior
+              option = MDL_SAMIRA
+            }
           }
         }
       }
@@ -198,11 +203,16 @@
         modifier = {
           base = 100
           OR = {
+            has_country_flag = MDL_AI_SAMIRA
             has_country_flag = MDL_AI_ULTRAMAR
             has_game_rule = {
-				      rule = MDL_ai_behavior
-				      option = MDL_ULTRAMAR
-			      }
+              rule = MDL_ai_behavior
+              option = MDL_ULTRAMAR
+            }
+            has_game_rule = {
+              rule = MDL_ai_behavior
+              option = MDL_SAMIRA
+            }
           }
         }
       }
@@ -2810,6 +2820,16 @@
 			      }
           }
         }
+        modifier = {
+          base = 0
+          OR = {
+            has_country_flag = MDL_SAMIRA
+            has_game_rule = {
+              rule = MDL_ai_behavior
+              option = MDL_SAMIRA
+            }
+          }
+        }
       }
       country_event = manedalusia.95
     }
@@ -2825,6 +2845,16 @@
 				      rule = MDL_ai_behavior
 				      option = MDL_ULTRAMAR
 			      }
+          }
+        }
+        modifier = {
+          base = 100
+          OR = {
+            has_country_flag = MDL_SAMIRA
+            has_game_rule = {
+              rule = MDL_ai_behavior
+              option = MDL_SAMIRA
+            }
           }
         }
       }
@@ -2982,8 +3012,10 @@
       hidden_effect = {
         set_province_name = { id = 3144 name = "MDL_state_karthin"}
       }
-      remove_country_leader_trait = MDL_grifo_lord_regent_of_overseas
-      add_country_leader_trait = MDL_grifo_imperial_regent
+      swap_ruler_traits = {
+        remove = MDL_grifo_lord_regent_of_overseas
+        add = MDL_grifo_imperial_regent
+      }
     }
   }
 
@@ -3864,6 +3896,34 @@
 
     option = {
       name = manedalusia.153.a
+      ai_chance = {
+        base = 50
+        modifier = {
+          factor = 0
+          OR = {
+            has_government = fascism
+            has_government = communism
+          }
+        }
+      }
+      diplomatic_relation = { 
+        country = MDL
+        relation = non_aggression_pact 
+      }
+    }
+    option = {
+      name = manedalusia.153.b
+      MDL = { country_event = manedalusia.170 }
+      ai_chance = {
+        base = 50
+        modifier = {
+          base = 100
+          OR = {
+            has_government = fascism
+            has_government = communism
+          }
+        }
+      }
     }
   }
 
@@ -3999,6 +4059,24 @@
 
     option = {
       name = manedalusia.163.a
+      hidden_effect = {
+        set_country_leader_description = {
+          ideology = neutrality
+          desc = MDL_grandmistress_samira_sultana_happy_desc
+        }
+        MDL_grandmistress_samira = {
+          set_character_name = MDL_grandmistress_samira_sultana
+          set_leader_description = MDL_grandmistress_samira_sultana_happy_desc
+          set_portraits = {
+            army = {
+              large="gfx/leaders/MDL/grandmistress_samira_sultana_happy.tga"
+            }
+            civilian={
+              large="gfx/leaders/MDL/grandmistress_samira_sultana_happy.tga"
+            }
+          }
+        }
+      }
     }
   }
 
@@ -4059,5 +4137,144 @@
         }
       }
       custom_effect_tooltip = MDL_mehmet_stats_tt
+    }
+  }
+
+  country_event = {#first mehmet samira fight 1
+    id = manedalusia.168
+    title = manedalusia.168.t
+    desc = manedalusia.168.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.168.a
+    }
+    option = {
+      name = manedalusia.168.b
+      trigger = {
+        check_variable = { MDL_mehmet_fight_level > 1 }
+      }
+      country_event = manedalusia.169
+    }
+  }
+
+  country_event = {#first mehmet samira fight 2
+    id = manedalusia.169
+    title = manedalusia.169.t
+    desc = manedalusia.169.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.169.a
+      MDL_increase_samira_happiness = yes
+      hidden_effect = { set_country_flag = MDL_mehmet_won_first_duel }
+    }
+  }
+
+  country_event = {#arabians fuck around and find out
+    name = manedalusia.170
+    title = manedalusia.170.t
+    desc = manedalusia.170.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.170.a
+      create_wargoal = {
+        type = annex_everything
+        target = 868.owner
+      }
+    }
+  }
+
+  country_event = {#second mehmet samira duel 1
+    id = manedalusia.171
+    title = manedalusia.171.t
+    desc = {
+      text = manedalusia.171.d_first_duel_win
+      trigger = { has_country_flag = MDL_mehmet_won_first_duel }
+    }
+    desc = {
+      text = manedalusia.171.d_first_duel_loss
+      trigger = {
+        NOT = { has_country_flag = MDL_mehmet_won_first_duel }
+      }
+    }
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.171.a
+    }
+    option = {
+      name = manedalusia.171.b
+      trigger = {
+        check_variable = { MDL_mehmet_fight_level > 2 }
+      }
+      country_event = manedalusia.172
+    }
+  }
+
+  country_event = {#second mehmet samira duel 2
+    id = manedalusia.172
+    title = manedalusia.172.t
+    desc = manedalusia.172.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.172.a
+      MDL_increase_samira_happiness = yes
+      hidden_effect = { MDL_increase_samira_happiness = yes }#samira finds it really hot if you can beat her
+    }
+  }
+
+  country_event = {#Al-Neighzari hypes Mehmet up
+    id = manedalusia.173
+    title = manedalusia.173.t
+    desc = manedalusia.173.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.173.a
+       MDL_level_up_mehmet_fight_level = yes     
+    }
+  }
+
+  country_event = {#mehmet crosses the desert
+    id = manedalusia.174
+    title = manedalusia.174.t
+    desc = manedalusia.174.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.174.a
+       MDL_level_up_mehmet_fight_level = yes     
+    }
+  }
+
+  country_event = {#on the brevity of life 1
+    id = manedalusia.175
+    title = manedalusia.175.t
+    desc = manedalusia.175.d
+    is_triggered_only = yes
+    
+    option = {
+      name = manedalusia.175.a
+    }
+    option = {
+      name = manedalusia.175.b
+      hidden_effect = { country_event = manedalusia.176 }
+    }
+    option = {
+      name = manedalusia.175.c
+    }
+  }
+
+  country_event = {#on the brevity of life 2
+    id = manedalusia.176
+    title = manedalusia.176.t
+    desc = manedalusia.176.d
+
+    option = {
+      name = manedalusia.176.a
+      MDL_level_up_mehmet_fight_level = yes
     }
   }

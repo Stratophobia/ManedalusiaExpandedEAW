@@ -1000,7 +1000,7 @@ ideas = {
       picture = MDL_meritocratic_sultanate
       modifier = {
         political_power_gain = 0.05
-        stability_weekly = 0.003
+        stability_weekly = 0.001
         political_advisor_cost_factor = -0.05
         war_support_factor = 0.10
       }
@@ -1023,6 +1023,7 @@ ideas = {
         }
       }
       modifier = {
+        army_speed_factor = -0.05
         army_morale_factor = -0.15
         surrender_limit = -0.35
       }

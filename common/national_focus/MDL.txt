@@ -2529,7 +2529,7 @@ shared_focus = {
       set_technology = { gw_artillery = 1 }
     }
 		add_tech_bonus = {
-			name = MDL_artillery
+			name = MDL_bigger_cannons
 			bonus = 1.0
 			uses = 2
 			category = artillery
@@ -6132,6 +6132,10 @@ shared_focus = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_get_some_gear"
     add_equipment_to_stockpile = { type = infantry_equipment amount = 2000 producer = GRI }
     add_equipment_to_stockpile = { type = support_equipment amount = 150 producer = GRI }
+    if = {
+      limit = { NOT = { has_tech = tech_support } }
+      set_technology = { tech_support = 1 }
+    }
     add_tech_bonus = {
       name = MDL_get_some_gear
       bonus = 1.0
@@ -8308,25 +8312,26 @@ shared_focus = {
         desc = MDL_iron_muhtal_desc
       }
     }
-    add_tech_bonus = {
-			name = infantry_bonus
-			bonus = 1.0
-			uses = 2
-			category = support_tech
-		}
-		add_tech_bonus = {
-			name = MDL_field_medics
-			bonus = 0.5
-			uses = 1
-			category = hospital_tech
-		}
-    add_tech_bonus = {
-			name = MDL_recon_bonus
-			bonus = 0.5
-			uses = 1
-			category = recon_tech
-		}
     custom_effect_tooltip = MDL_muhtal_stats_tt
+
+    add_tech_bonus = {
+      name = infantry_bonus
+      bonus = 1.0
+      uses = 2
+      category = support_tech
+    }
+    add_tech_bonus = {
+      name = MDL_field_medics
+      bonus = 0.5
+      uses = 1
+      category = hospital_tech
+    }
+    add_tech_bonus = {
+      name = MDL_recon_bonus
+      bonus = 0.5
+      uses = 1
+      category = recon_tech
+    }
   }
 }
 
@@ -8383,6 +8388,16 @@ shared_focus = {
   relative_position_id = MDL_SAM02
   prerequisite = { focus = MDL_SAM02 }
   completion_reward = {
+    if = {
+      limit = { has_completed_focus = MDL_SAM04 }
+      country_event = manedalusia.173
+    }
+    add_tech_bonus = {
+			name = MDL_SAM05
+			bonus = 1.0
+			uses = 2
+			category = artillery
+		}
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM05"
     every_character = {
       limit = { is_unit_leader = yes }
@@ -8805,6 +8820,7 @@ shared_focus = {
   prerequisite = { focus = MDL_SAM05 }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM20"
+    country_event = id = manedalusia.175
     MGY = { add_to_ROOT_potential_cores = yes }
     if = {
       limit = {
@@ -8978,11 +8994,11 @@ shared_focus = {
     add_ideas = MDL_magical_engines
 
     add_tech_bonus = {
-			name = MDL_SAM26
-			bonus = 0.5
+      name = MDL_SAM26
+      bonus = 0.5
       uses = 2
-			category = motorized_equipment
-		}
+      category = motorized_equipment
+    }
   }
 }
 
@@ -9055,6 +9071,10 @@ shared_focus = {
   }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM29"
+    if = {
+      limit = { has_completed_focus = MDL_SAM18 }
+      country_event = manedalusia.174
+    }
     add_ideas = MDL_koltaliba_regimentation
   }
 }
@@ -9834,25 +9854,6 @@ shared_focus = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM60"
     country_event = manedalusia.163
     add_ideas = MDL_place_in_the_sun_idea
-
-    hidden_effect = {
-      set_country_leader_description = {
-        ideology = neutrality
-        desc = MDL_grandmistress_samira_sultana_happy_desc
-      }
-      MDL_grandmistress_samira = {
-        set_character_name = MDL_grandmistress_samira_sultana
-        set_leader_description = MDL_grandmistress_samira_sultana_happy_desc
-        set_portraits = {
-          army = {
-            large="gfx/leaders/MDL/grandmistress_samira_sultana_happy.tga"
-          }
-          civilian={
-            large="gfx/leaders/MDL/grandmistress_samira_sultana_happy.tga"
-          }
-        }
-      }
-    }
   }
 }
 
@@ -10012,8 +10013,9 @@ shared_focus = {
     if = {
       limit = {
         NOT = { has_idea = free_trade }
+        NOT = { has_idea = limited_exports }
       }
-      add_ideas = free_trade
+      add_ideas = limited_exports
     }
   }
 }
