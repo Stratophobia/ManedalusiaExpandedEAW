@@ -12,8 +12,10 @@ ideas = {
         NOT = { has_country_flag = MDL_grifo_takeover }
       }
       available = {
-        has_completed_focus = MDL_bigger_cannons
-        has_completed_focus = MDL_SAM04
+        OR = {
+          has_completed_focus = MDL_bigger_cannons
+          has_completed_focus = MDL_SAM04
+        }
       }
 			research_bonus = {
 				artillery = 0.15
@@ -102,7 +104,12 @@ ideas = {
         NOT = { has_country_flag = MDL_grifo_takeover }
       }
       traits = { motorized_equipment_manufacturer }
-      available = { has_completed_focus = MDL_sweet_ass_rides }
+      available = {
+        OR = {
+          has_completed_focus = MDL_sweet_ass_rides
+          has_completed_focus = MDL_SAM26
+        }
+      }
       equipment_bonus = {
         motorized_equipment = {
           maximum_speed = 0.1
@@ -178,8 +185,10 @@ ideas = {
 			picture = MDL_industrial_concern_1
 			allowed = { original_tag = MDL }
 			available = {
-        has_completed_focus = MDL_industrial_union
-        has_completed_focus = MDL_SAM10
+        OR = {
+          has_completed_focus = MDL_industrial_union
+          has_completed_focus = MDL_SAM10
+        }
       }
 			research_bonus = {
 				industry = 0.15
@@ -196,7 +205,12 @@ ideas = {
 		MDL_refining_concern = {
 			picture = MDL_refining_concern
 			allowed = { original_tag = MDL }
-			available = { has_completed_focus = MDL_refining_contractor }
+			available = {
+        OR = {
+          has_completed_focus = MDL_refining_contractor
+          has_completed_focus = MDL_SAM33
+        }
+      }
 			traits = { refinery_concern }
 			modifier = {
 				production_speed_synthetic_refinery_factor = 0.05
@@ -221,7 +235,12 @@ ideas = {
         NOT = { has_country_flag = MDL_grifo_takeover }
       }
 			traits = { electronics_concern }
-			available = { has_completed_focus = MDL_go_with_alneighzari }
+			available = {
+        OR = {
+          has_completed_focus = MDL_go_with_alneighzari
+          has_completed_focus = MDL_SAM04
+        }
+      }
 			modifier = {
 				production_factory_efficiency_gain_factor = 0.05
 			}
@@ -283,7 +302,12 @@ ideas = {
       visible = {
         NOT = { has_country_flag = MDL_grifo_takeover }
       }
-      available = { has_completed_focus = MDL_even_sweeter_rides }
+      available = {
+        OR = {
+          has_completed_focus = MDL_even_sweeter_rides
+          has_completed_focus = MDL_SAM31
+        }
+      }
       equipment_bonus = {
         mechanized_equipment = {
           build_cost_ic = -0.10
@@ -1031,6 +1055,7 @@ ideas = {
     MDL_koltaliba_rule_1 = {
       picture = MDL_koltaliba_rule
       modifier = {
+        compliance_growth = 0.15
         stability_factor = -0.05
         war_support_factor = -0.05
         special_forces_cap = 0.50
@@ -1042,6 +1067,7 @@ ideas = {
     MDL_koltaliba_rule_2 = {
       picture = MDL_koltaliba_rule
       modifier = {
+        compliance_growth = 0.15
         special_forces_cap = 0.75
         special_forces_attack_factor = 0.1
         special_forces_defence_factor = 0.1
@@ -1051,6 +1077,7 @@ ideas = {
     MDL_koltaliba_rule_3 = {
       picture = MDL_koltaliba_rule
       modifier = {
+        compliance_growth = 0.15
         special_forces_cap = 1.0
         special_forces_attack_factor = 0.15
         special_forces_defence_factor = 0.15
@@ -1062,6 +1089,7 @@ ideas = {
     MDL_koltaliba_rule_4 = {
       picture = MDL_koltaliba_rule
       modifier = {
+        compliance_growth = 0.15
         special_forces_cap = 1.0
         special_forces_attack_factor = 0.20
         special_forces_defence_factor = 0.20

@@ -3713,6 +3713,7 @@
 
     option = {
       name = manedalusia.148.a
+      MDL_increase_samira_happiness = yes
       add_advisor_role = {
         character = MDL_zahid
         advisor = {
@@ -3727,18 +3728,20 @@
     }
   }
 
-  country_event = {#samira deals with abyssinian nobles
+  country_event = {#samira deals with abyssinian nobles 1
     id = manedalusia.149
     title = manedalusia.149.t
     desc = manedalusia.149.d
     is_triggered_only = yes
 
     option = {
-      name = manedalusia.149
+      name = manedalusia.149.a
+      MDL_increase_samira_happiness = yes
+      add_ideas = MDL_never_slaves_again_idea_2
     }
   }
 
-  country_event = {#FREE
+  country_event = {#Mehmet is a true leader
     id = manedalusia.150
     title = manedalusia.150.t
     desc = manedalusia.150.d
@@ -3746,6 +3749,12 @@
 
     option = {
       name = manedalusia.150.a
+      MDL_increase_samira_happiness = yes
+      MDL_mehmet = {
+        add_unit_leader_trait = war_hero
+        add_planning = 1
+        add_logistics = 1
+      }
     }
   }
 
@@ -4272,9 +4281,10 @@
     id = manedalusia.176
     title = manedalusia.176.t
     desc = manedalusia.176.d
+    is_triggered_only = yes
 
     option = {
       name = manedalusia.176.a
-      MDL_level_up_mehmet_fight_level = yes
+      MDL_increase_samira_happiness = yes
     }
   }

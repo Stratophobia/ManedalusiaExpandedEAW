@@ -470,7 +470,12 @@ characters={
       visible = {
         NOT = { has_country_flag = MDL_grifo_takeover }
       }
-      available = { has_completed_focus = MDL_coltoba_institute_military_science }
+      available = {
+        OR = {
+          has_completed_focus = MDL_coltoba_institute_military_science
+          has_completed_focus = MDL_SAM18
+        }
+      }
 			traits = { MDL_military_academy }
 		}
 	}

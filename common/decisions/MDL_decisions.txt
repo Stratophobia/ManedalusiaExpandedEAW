@@ -156,9 +156,6 @@ MDL_koltaliba_tab = {
     days_remove = 75
     visible = {
       has_war = yes
-      every_enemy_country = {
-        NOT = { has_idea = MDL_sabotaged_supply }
-      }
     }
 
     cancel_trigger = {

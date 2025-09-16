@@ -8286,7 +8286,7 @@ shared_focus = {
   prerequisite = { focus = MDL_charting_new_course }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM01"
-    add_manpower = 250000
+    add_manpower = 25000
     MDL_increase_conscription = yes
   }
 }
@@ -8820,7 +8820,7 @@ shared_focus = {
   prerequisite = { focus = MDL_SAM05 }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM20"
-    country_event = id = manedalusia.175
+    country_event = manedalusia.175
     MGY = { add_to_ROOT_potential_cores = yes }
     if = {
       limit = {
@@ -8992,13 +8992,15 @@ shared_focus = {
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM26"
     add_ideas = MDL_magical_engines
-
     add_tech_bonus = {
       name = MDL_SAM26
       bonus = 0.5
       uses = 2
       category = motorized_equipment
     }
+
+    custom_effect_tooltip = available_designer
+    show_ideas_tooltip = MDL_motorized_concern
   }
 }
 
@@ -9142,6 +9144,10 @@ shared_focus = {
   }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM32"
+    if = {
+      limit = { has_completed_focus = MDL_SAM38 }
+      country_event = manedalusia.150
+    }
     build_railway = {
       level = 2
       start_province = 12386
@@ -9461,7 +9467,15 @@ shared_focus = {
   relative_position_id = MDL_SAM34
   prerequisite = { focus = MDL_SAM34 }
   bypass = {
-    NLR = { exists = yes }
+    OR = {
+      NLR = { exists = yes }
+      BAT = {
+        OR = {
+          exists = no
+          has_war_with = MDL
+        }
+      }
+    }
   }
   will_lead_to_war_with = BAT
   completion_reward = {
@@ -9516,6 +9530,7 @@ shared_focus = {
     }
   }
   bypass = {
+    ABY = { exists = no }
     NOT = { 784 = { is_owned_and_controlled_by = WNG } }
   }
   will_lead_to_war_with = WNG
