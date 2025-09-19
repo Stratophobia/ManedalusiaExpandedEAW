@@ -1,4 +1,9 @@
 leader_traits = {
+  MDL_muftia_trait = {
+    drift_defence_factor = 0.15
+    improve_relations_maintain_cost_factor = -0.5
+    ai_focus_defense_factor = 0.75
+  }
 	MDL_council_unstable_trait = {
 		allowed = { always = yes }
 		ai_will_do = { factor = 0 }

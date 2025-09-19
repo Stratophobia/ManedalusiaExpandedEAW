@@ -66,6 +66,36 @@
       name = manedalusia_news.2.c
     }
   }
+  news_event = {#sultanate restoration
+    id = manedalusia_news.3
+    title = manedalusia_news.3.t
+    desc = manedalusia_news.3.d
+    picture = GFX_news_event_hindia_3
+    major = yes
+    is_triggered_only = yes
+
+    option = {
+      trigger = { original_tag = MDL }
+      name = manedalusia_news.3.a
+    }
+    option = {
+      name = manedalusia_news.3.b
+      trigger = {
+        OR = {
+          original_tag = ABY
+          original_tag = MGY
+        }
+      }
+    }
+    option = {
+      name = manedalusia_news.3.c
+      trigger = {
+        NOT = { original_tag = MDL }
+        NOT = { original_tag = ABY }
+        NOT = { original_tag = MGY }
+      }
+    }
+  }
 
 ###COUNTRY EVENTS###
   country_event = {# The Manedalusia Coup
@@ -4285,6 +4315,18 @@
 
     option = {
       name = manedalusia.176.a
+      MDL_increase_samira_happiness = yes
+    }
+  }
+
+  country_event = {#velvet reassures samira
+    id = manedalusia.177
+    title = manedalusia.177.t
+    desc = manedalusia.177.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.177.a
       MDL_increase_samira_happiness = yes
     }
   }

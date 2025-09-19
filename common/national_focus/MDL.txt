@@ -1178,6 +1178,9 @@ focus_tree = {
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus MDL_crimson_sultanate"
       country_event = { id = manedalusia.39 }
+      hidden_effect = {
+        country_event = { days = 2 id = manedalusia_news.3 }
+      }
     }
     search_filters = { FOCUS_FILTER_POLITICAL }
   }
@@ -9255,6 +9258,9 @@ shared_focus = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM35"
     set_cosmetic_tag = MDL_grand_sultanate
     add_ideas = MDL_meritocratic_sultanate_idea
+    hidden_effect = {
+      news_event = { days = 1 id = manedalusia_news.3 }
+    }
   }
 }
 
@@ -9561,6 +9567,10 @@ shared_focus = {
   prerequisite = { focus = MDL_SAM37 }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM45"
+    if = {
+      limit = { has_completed_focus = MDL_SAM35 }
+      country_event = manedalusia.177
+    }
     add_ideas = MDL_aaliyah_monument
   }
 }
