@@ -1224,6 +1224,17 @@ ideas = {
       }
     }
   }
+#MIRAGE IDEAS
+  country = {
+    MDL_hisba_idea_1 = {
+      picture = generic_purge#REPLACE
+      modifier = {
+        industrial_concern_cost_factor = -0.10
+        line_change_production_efficiency_factor = 0.25
+        local_resources_factor = 0.05
+      }
+    }
+  }
 #ULTRAMAR IDEAS
   country = {
     MDL_ash_shuhud_resistance = {

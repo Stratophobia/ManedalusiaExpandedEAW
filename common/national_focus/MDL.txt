@@ -25,6 +25,7 @@ focus_tree = {
     continuous_focus_position = { x = 550 y = 1800 }
 
     #PATHS
+    shared_focus = MDL_office_of_vice_and_virtue
     shared_focus = MDL_warplan_green
     shared_focus = MDL_elect_qunsul
     shared_focus = MDL_a_new_start
@@ -579,9 +580,6 @@ focus_tree = {
         }
         mark_focus_tree_layout_dirty = yes
       }
-      #hidden_effect = {
-      #  set_country_flag = MDL_suleiman_active
-      #}
     }
     search_filters = { FOCUS_FILTER_POLITICAL }
   }
@@ -642,7 +640,7 @@ focus_tree = {
     prerequisite = { focus = MDL_try_for_harmony }
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus MDL_rural_deal"
-      add_popularity = { ideology = communism popularity = -0.10 }
+      add_stability = 0.05
     }
     search_filters = { FOCUS_FILTER_POLITICAL }
   }
@@ -657,7 +655,7 @@ focus_tree = {
     prerequisite = { focus = MDL_rural_deal }
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus MDL_imams_deal"
-      add_stability = 0.05
+      country_event = manedalusia.178
     }
     search_filters = { FOCUS_FILTER_POLITICAL }
   }
@@ -694,10 +692,6 @@ focus_tree = {
       }
     }
 
-    available = {
-      always = no
-    }
-
     relative_position_id = MDL_deal_with_the_madgriff
     cost = 1
     prerequisite = { focus = MDL_deal_with_the_madgriff }
@@ -716,7 +710,8 @@ focus_tree = {
 
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus MDL_try_for_socialism"
-      custom_effect_tooltip = MDL_WIP_tt
+      add_political_power = -10
+      add_popularity = { ideology = communism popularity = 0.05 }
       hidden_effect = {
         load_focus_tree={
           tree = manedalusia_start
@@ -738,6 +733,7 @@ focus_tree = {
     prerequisite = { focus = MDL_try_for_socialism }
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus MDL_curtail_the_guilds"
+      add_popularity = { ideology = neutrality popularity = -0.20 }
     }
     search_filters = { FOCUS_FILTER_POLITICAL }
   }
@@ -752,6 +748,9 @@ focus_tree = {
     prerequisite = { focus = MDL_try_for_socialism }
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus MDL_rural_charter"
+      add_stability = 0.05
+      741 = { add_manpower = 15000 }
+      764 = { add_manpower = 15000 }
     }
     search_filters = { FOCUS_FILTER_POLITICAL }
   }
@@ -766,6 +765,7 @@ focus_tree = {
     prerequisite = { focus = MDL_curtail_the_guilds }
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus MDL_officialize_hisbas"
+      add_ideas = MDL_hisba_idea_1
     }
     search_filters = { FOCUS_FILTER_POLITICAL }
   }
@@ -780,6 +780,11 @@ focus_tree = {
     prerequisite = { focus = MDL_rural_charter }
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus MDL_asabiyyah"
+      custom_effect_tooltip = MDL_asabiyyah_tt
+
+      set_variable = { MDL_mobilization_var = 0 }
+      set_variable = { MDL_economy_var = 0 }
+      set_variable = { MDL_tradelaw_var = 0 }
     }
     search_filters = { FOCUS_FILTER_POLITICAL }
   }
@@ -802,6 +807,26 @@ focus_tree = {
     }
     search_filters = { FOCUS_FILTER_POLITICAL }
   }
+
+###MIRAGE'S TREE###
+shared_focus = {
+  id = MDL_office_of_vice_and_virtue
+  icon = GFX_goal_generic_political
+  x = 10
+  y = 0
+  cost = 1
+
+  allow_branch = {
+    if = {
+      has_country_flag = MDL_mirage_path
+      NOT = { has_country_flag = MDL_sunmad }
+    }
+  }
+
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_office_of_vice_and_virtue"
+  }
+}
 
 ###SAYF'S TREE###
   shared_focus = {

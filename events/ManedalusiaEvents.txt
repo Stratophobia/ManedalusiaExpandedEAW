@@ -1527,6 +1527,7 @@
       }
       custom_effect_tooltip = MDL_commie_tree_loaded_tt
       hidden_effect = {
+        set_country_flag = MDL_mirage_path
         load_focus_tree = { tree = manedalusia_main }
       }
     }
@@ -4328,5 +4329,18 @@
     option = {
       name = manedalusia.177.a
       MDL_increase_samira_happiness = yes
+    }
+  }
+
+  country_event = {#velvet talks to Mirage
+    id = manedalusia.178
+    title = manedalusia.178.t
+    desc = manedalusia.178.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.178.a
+      add_popularity = { ideology = democratic popularity = 0.05 }
+      add_popularity = { ideology = communism popularity = -0.10 }
     }
   }
