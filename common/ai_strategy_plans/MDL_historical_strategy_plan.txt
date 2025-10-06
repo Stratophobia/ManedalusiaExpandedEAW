@@ -8,14 +8,18 @@ MDL_historical = {
 
 	enable = {
 		OR = {
-			AND = {
-				is_historical_focus_on = yes
-			}
-      has_country_flag = MDL_AI_VELVET
-			has_game_rule = {
-				rule = MDL_ai_behavior
-				option = MDL_VELVET
-			}
+		  AND = {
+			  is_historical_focus_on = yes
+			  has_game_rule = {
+				  rule = MDL_ai_behavior
+				  option = DEFAULT
+			  }
+		  }
+		  has_country_flag = MDL_AI_VELVET
+		  has_game_rule = {
+			  rule = MDL_ai_behavior
+			  option = MDL_VELVET
+		  }
 		}
 	}
 	abort = {

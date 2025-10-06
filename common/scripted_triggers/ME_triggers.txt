@@ -23,13 +23,6 @@ MDL_has_set_path_rules = {
 					rule = MDL_ai_behavior
 					option = MDL_SAMIRA
 				}
-        OR = {
-          MDL = { has_country_flag = MDL_AI_CRIMSON_SULTAN }
-          MDL = { has_country_flag = MDL_AI_SENATE }
-          MDL = { has_country_flag = MDL_AI_VELVET }
-          MDL = { has_country_flag = MDL_AI_ULTRAMAR }
-          MDL = { has_country_flag = MDL_AI_SAMIRA }
-        }
       }
     }
   }
