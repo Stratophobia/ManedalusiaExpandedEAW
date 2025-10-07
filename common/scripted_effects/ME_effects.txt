@@ -429,10 +429,9 @@ MDL_WNG_transfer_colonies = {
   if = {
     limit = {
       ABY = {
-        exists = yes
         OR = {
-          is_in_faction_with = MDL
-          is_subject_of = MDL
+          is_in_faction_with = ROOT
+          is_subject_of = ROOT
         }
       }
     }
@@ -442,24 +441,18 @@ MDL_WNG_transfer_colonies = {
         ABY = { transfer_state = PREV }
       }
     }
-    ABY = {
-      if = {
-        limit = { has_idea = ABY_wingbardian_concessions }
-        remove_ideas = ABY_wingbardian_concessions
-      }
-    }
   }
   else = {
     WNG = {
       every_owned_state = {
         limit = { is_in_array = { state_original_cores = ABY } }
-        MDL = { transfer_state = PREV }
+        ROOT = { transfer_state = PREV }
       }
     }
     ABY = {
       every_owned_state = {
         limit = { is_in_array = { state_original_cores = ABY } }
-        MDL = { transfer_state = PREV }
+        ROOT = { transfer_state = PREV }
       }
     }
   }

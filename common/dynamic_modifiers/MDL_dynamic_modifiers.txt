@@ -1,5 +1,5 @@
 MDL_military_governorate = {
-  icon = GFX_modifiers_changeling_settlement_icon
+  icon = GFX_modifiers_MDL_military_governorate
   enable = { always = yes }
   remove_trigger = {
     owner = {
@@ -15,7 +15,7 @@ MDL_military_governorate = {
 }
 
 MDL_colonial_admin = {
-	icon = GFX_modifiers_changeling_settlement_icon
+	icon = GFX_modifiers_MDL_colonial_admin
 	enable = { always = yes }
 	remove_trigger = {
 		owner = {

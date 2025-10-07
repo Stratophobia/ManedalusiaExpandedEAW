@@ -1,29 +1,27 @@
 MDL_has_set_path_rules = {
   custom_trigger_tooltip = {
     tooltip = ME_has_set_path_rules_tt
-    hidden_trigger = {
-      OR = {
-        has_game_rule = {
-					rule = MDL_ai_behavior
-					option = MDL_VELVET
-				}
-        has_game_rule = {
-					rule = MDL_ai_behavior
-					option = MDL_CRIMSON_SULTAN
-				}
-        has_game_rule = {
-					rule = MDL_ai_behavior
-					option = MDL_SENATE
-				}
-        has_game_rule = {
-					rule = MDL_ai_behavior
-					option = MDL_ULTRAMAR
-				}
-        has_game_rule = {
-					rule = MDL_ai_behavior
-					option = MDL_SAMIRA
-				}
-      }
+    OR = {
+      has_game_rule = {
+				rule = MDL_ai_behavior
+				option = MDL_VELVET
+			}
+      has_game_rule = {
+				rule = MDL_ai_behavior
+				option = MDL_CRIMSON_SULTAN
+			}
+      has_game_rule = {
+				rule = MDL_ai_behavior
+				option = MDL_SENATE
+			}
+      has_game_rule = {
+				rule = MDL_ai_behavior
+				option = MDL_ULTRAMAR
+			}
+      has_game_rule = {
+				rule = MDL_ai_behavior
+				option = MDL_SAMIRA
+			}
     }
   }
 }

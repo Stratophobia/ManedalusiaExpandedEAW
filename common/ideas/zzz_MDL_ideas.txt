@@ -586,7 +586,7 @@ ideas = {
   }
   country = {
     MDL_grand_zoco_idea = {
-      picture = can_wartime_prices_and_trade_board
+      picture = MDL_grand_zoco_idea
       modifier = {
         trade_opinion_factor = 0.10
         research_speed_factor = 0.05
@@ -792,7 +792,7 @@ ideas = {
   }
   country = {
     MDL_federation_joint_development = {
-      picture = generic_production_bonus
+      picture = MDL_federation_joint_development
       modifier={
         production_speed_rail_way_factor = 0.25
         industrial_capacity_factory = 0.05

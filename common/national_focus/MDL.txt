@@ -4622,7 +4622,7 @@ shared_focus = {
         set_portraits = {
           character = MDL_elected_princes
           civilian = {
-            large = "gfx/leaders/MDL/MDL_FED_generic.tga.tga"
+            large = "gfx/leaders/MDL/MDL_FED_generic.tga"
           }
         }
         set_cosmetic_tag = EMR_FEDERATION

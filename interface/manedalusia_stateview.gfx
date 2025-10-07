@@ -1,0 +1,10 @@
+spriteTypes = {
+	SpriteType = {
+		name = "GFX_modifiers_MDL_colonial_admin"
+		texturefile="gfx/interface/state_modifiers/MDL/MDL_colonial_admin.tga"
+	}
+  SpriteType = {
+		name = "GFX_modifiers_MDL_military_governorate"
+		texturefile="gfx/interface/state_modifiers/MDL/MDL_military_governorate.tga"
+	}
+}

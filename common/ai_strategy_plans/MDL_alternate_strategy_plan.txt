@@ -58,7 +58,6 @@ MDL_alternate_senate = {
 	}
 
 	enable = {
-
 		OR = {
       has_country_flag = MDL_AI_SENATE
 			has_game_rule = {
@@ -72,7 +71,7 @@ MDL_alternate_senate = {
 	}
 
 	ai_national_focuses = {
-    MDL_senate_path
+    MDL_senate_assumes_power
 	}
 
 	research = {
