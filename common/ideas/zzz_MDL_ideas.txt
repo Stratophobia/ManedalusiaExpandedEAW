@@ -407,6 +407,7 @@ ideas = {
 	}
 	country = {
 		MDL_holy_zeal_1 = {
+      name = MDL_holy_zeal
 			picture = MDL_holy_zeal
 			modifier = {
         army_org_factor = 0.05
@@ -414,9 +415,8 @@ ideas = {
 				conscription_factor = 0.05
 			}
 		}
-	}
-  country = {
     MDL_holy_zeal_2 = {
+      name = MDL_holy_zeal
       picture = MDL_holy_zeal
       modifier = {
         army_org_factor = 0.05
@@ -425,16 +425,14 @@ ideas = {
         army_morale_factor = 0.05
       }
     }
-  }
-	country = {
-		MDL_manedalusian_industrious_pride = {
+    MDL_manedalusian_industrious_pride = {
 			picture = MDL_industrious_pride
 			equipment_bonus = {
 				artillery_equipment = { build_cost_ic = -0.05 instant = yes }
 				infantry_equipment = { build_cost_ic = -0.1 instant = yes }
 			}
 		}
-	}
+  }
 	country = {
 		MDL_place_in_the_sun_idea = {
 			picture = MDL_place_in_the_sun_idea
@@ -616,7 +614,7 @@ ideas = {
   }
   country = {
     MDL_naval_depots_idea = {
-      picture = generic_navy_bonus
+      picture = MDL_naval_depots_idea
       modifier = {
         naval_coordination = 0.05
         navy_max_range_factor = 0.10

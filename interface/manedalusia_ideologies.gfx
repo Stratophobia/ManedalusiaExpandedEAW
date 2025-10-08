@@ -3,6 +3,10 @@ spriteTypes = {
 		name = "GFX_ideology_MDL_holy_order_n"
 		texturefile="gfx/interface/ideologies/MDL_holy_order_n.tga"
 	}
+  SpriteType = {
+    name = "GFX_ideology_MDL_religious_socialism"
+    texturefile = "gfx/interface/ideologies/MDL_religious_socialism.tga"
+  }
 	SpriteType = {
 		name = "GFX_ideology_MDL_esotericism"
 		texturefile="gfx/interface/ideologies/MDL_esotericism.tga"
