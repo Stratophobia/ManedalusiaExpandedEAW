@@ -828,6 +828,45 @@ shared_focus = {
   }
 }
 
+shared_focus = {
+  id = MDL_sack_hermetics_from_army
+  icon = GFX_goal_generic_political
+  x = -2
+  y = 1
+  relative_position_id = MDL_office_of_vice_and_virtue
+  prerequisite = { focus = MDL_office_of_vice_and_virtue }
+  cost = 5
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_sack_hermetics_from_army"
+  }
+}
+
+shared_focus = {
+  id = MDL_prepare_righteous_reclamation
+  icon = GFX_goal_generic_political
+  x = 0
+  y = 1
+  relative_position_id = MDL_office_of_vice_and_virtue
+  prerequisite = { focus = MDL_office_of_vice_and_virtue }
+  cost = 5
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_prepare_righteous_reclamation"
+  }
+}
+
+shared_focus = {
+  id = MDL_a_holy_occupation_army
+  icon = GFX_goal_generic_political
+  x = 2
+  y = 1
+  relative_position_id = MDL_office_of_vice_and_virtue
+  prerequisite = { focus = MDL_office_of_vice_and_virtue }
+  cost = 5
+  completion_reward = {
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_a_holy_occupation_army"
+  }
+}
+
 ###SAYF'S TREE###
   shared_focus = {
     id = MDL_warplan_green

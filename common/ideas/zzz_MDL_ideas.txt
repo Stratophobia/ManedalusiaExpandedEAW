@@ -607,7 +607,7 @@ ideas = {
     MDL_grand_admiralty_idea = {
       picture = MDL_grand_admiralty
       modifier = {
-        experience_gain_navy = 0.05
+        experience_gain_navy = 0.1
         naval_doctrine_cost_factor = -0.10
       }
     }
