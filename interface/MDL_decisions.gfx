@@ -1,35 +1,85 @@
 spriteTypes = {
   SpriteType = {
     name = "GFX_decision_category_MDL_koltaliba"
-    texturefile="gfx/interface/decisions/MDL/MDL_koltaliba.tga"
+    texturefile="gfx/interface/decisions/MDL/cat/MDL_koltaliba.tga"
   }
   SpriteType = {
     name = "GFX_decision_category_MDL_holy_war"
-    texturefile="gfx/interface/decisions/MDL/MDL_holy_war.tga"
+    texturefile="gfx/interface/decisions/MDL/cat/MDL_holy_war.tga"
   }
   SpriteType = {
     name="GFX_decision_category_MDL_shield_doctrine"
-    texturefile="gfx/interface/decisions/MDL/MDL_shield_doctrine.tga"
+    texturefile="gfx/interface/decisions/MDL/cat/MDL_shield_doctrine.tga"
   }
   SpriteType = {
     name="GFX_decision_category_MDL_grifo_imperium"
-    texturefile="gfx/interface/decisions/MDL/MDL_grifo_imperium.tga"
+    texturefile="gfx/interface/decisions/MDL/cat/MDL_grifo_imperium.tga"
   }
   SpriteType = {
     name="GFX_decision_category_MDL_republic_flag"
-    texturefile="gfx/interface/decisions/MDL/MDL_republic_flag.tga"
+    texturefile="gfx/interface/decisions/MDL/cat/MDL_republic_flag.tga"
   }
   SpriteType = {
     name="GFX_decision_MDL_eye"
-    texturefile="gfx/interface/decisions/MDL/MDL_eye.tga"
+    texturefile="gfx/interface/decisions/MDL/cat/MDL_eye.tga"
   }
   SpriteType = {
     name = GFX_decision_category_MDL_crimson_war
-    texturefile = "gfx/interface/decisions/MDL/MDL_crimson_war.tga"
+    texturefile = "gfx/interface/decisions/MDL/cat/MDL_crimson_war.tga"
   }
   SpriteType = {
     name="GFX_decision_category_MDL_fiqh"
-    texturefile="gfx/interface/decisions/MDL/MDL_fiqh.tga"
+    texturefile="gfx/interface/decisions/MDL/cat/MDL_fiqh.tga"
+  }
+###FIQH###
+  SpriteType = {
+    name="GFX_decision_MDL_fiqh_1"
+    texturefile="gfx/interface/decisions/MDL/MDL_fiqh_1.tga"
+  }
+  SpriteType = {
+    name="GFX_decision_MDL_fiqh_2"
+    texturefile="gfx/interface/decisions/MDL/MDL_fiqh_2.tga"
+  }
+  SpriteType = {
+    name="GFX_decision_MDL_fiqh_3"
+    texturefile="gfx/interface/decisions/MDL/MDL_fiqh_3.tga"
+  }
+  SpriteType = {
+    name="GFX_decision_MDL_fiqh_4"
+    texturefile="gfx/interface/decisions/MDL/MDL_fiqh_4.tga"
+  }
+  SpriteType = {
+    name="GFX_decision_MDL_fiqh_5"
+    texturefile="gfx/interface/decisions/MDL/MDL_fiqh_5.tga"
+  }
+###FEDERAL ARMY###
+  SpriteType = {
+    name="GFX_decision_MDL_abyssinia_fed_army_buff"
+    texturefile="gfx/interface/decisions/MDL/MDL_abyssinia_fed_army_buff.tga"
+  }
+  SpriteType = {
+    name="GFX_decision_MDL_cut_out_bloat_in_army"
+    texturefile="gfx/interface/decisions/MDL/MDL_cut_out_bloat_in_army.tga"
+  }
+  SpriteType = {
+    name="GFX_decision_MDL_donkey_fed_army_buff"
+    texturefile="gfx/interface/decisions/MDL/MDL_donkey_fed_army_buff.tga"
+  }
+  SpriteType = {
+    name="GFX_decision_MDL_klugetown_fed_army_buff"
+    texturefile="gfx/interface/decisions/MDL/MDL_klugetown_fed_army_buff.tga"
+  }
+  SpriteType = {
+    name="GFX_decision_MDL_knights_fed_army_buff"
+    texturefile="gfx/interface/decisions/MDL/MDL_knights_fed_army_buff.tga"
+  }
+  SpriteType = {
+    name="GFX_decision_MDL_recruit_new_soldiers"
+    texturefile="gfx/interface/decisions/MDL/MDL_recruit_new_soldiers.tga"
+  }
+  SpriteType = {
+    name="GFX_decision_MDL_yemane_fed_army_buff"
+    texturefile="gfx/interface/decisions/MDL/MDL_yemane_fed_army_buff.tga"
   }
 }
 

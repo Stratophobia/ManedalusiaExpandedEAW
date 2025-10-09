@@ -794,7 +794,7 @@ MDL_holy_war_tab = {
 
 MDL_republican_war_decisions_tab = {
   MDL_recruit_new_soldiers = {
-    icon = helmet
+    icon = GFX_decision_MDL_recruit_new_soldiers
     allowed = { original_tag = MDL }
     visible = { has_country_flag = MDL_federal_army_unlocked }
     available = { always = no }
@@ -821,18 +821,31 @@ MDL_republican_war_decisions_tab = {
     }
   }
   MDL_cut_out_bloat_in_army = {
-		icon = helmet
+		icon = GFX_decision_MDL_cut_out_bloat_in_army
     visible = { has_country_flag = MDL_federal_army_unlocked }
     cost = 25
     days_remove = 30
 
     remove_effect = {
-      add_manpower = -3000
+      if = {
+        limit = { has_country_flag = MDL_FA_recruit_1 }
+        add_manpower = -3000
+      }
+      else_if = {
+        limit = { has_country_flag = MDL_FA_recruit_2 }
+        add_manpower = -5000
+      }
+      else = {
+        add_manpower = -6500
+      }
+      add_command_power = 10
       army_experience = 30
+      navy_experience = 30
+      air_experience = 30
     }
   }
   MDL_abyssinia_fed_army_buff = {
-    icon = rifles
+    icon = GFX_decision_MDL_abyssinia_fed_army_buff
     visible = { has_country_flag = MDL_federal_army_unlocked }
     available = {
       has_completed_focus = MDL_integrate_abyssinia
@@ -875,7 +888,7 @@ MDL_republican_war_decisions_tab = {
     }
   }
   MDL_klugetown_fed_army_buff = {
-		icon = generic_assassination
+		icon = GFX_decision_MDL_klugetown_fed_army_buff
     visible = { has_country_flag = MDL_federal_army_unlocked }
     available = {
       has_completed_focus = MDL_integrate_klugetown
@@ -925,7 +938,7 @@ MDL_republican_war_decisions_tab = {
     }
   }
   MDL_donkey_fed_army_buff = {
-		icon = generic_police_action
+		icon = GFX_decision_MDL_donkey_fed_army_buff
     visible = { has_country_flag = MDL_federal_army_unlocked }
     available = {
       has_completed_focus = MDL_integrate_donkeys
@@ -972,7 +985,7 @@ MDL_republican_war_decisions_tab = {
     }
   }
   MDL_yemane_fed_army_buff = {
-		icon = generic_naval
+		icon = GFX_decision_MDL_yemane_fed_army_buff
     visible = { has_country_flag = MDL_federal_army_unlocked }
     available = {
       has_completed_focus = MDL_integrate_yemane
@@ -1016,7 +1029,7 @@ MDL_republican_war_decisions_tab = {
     }
   }
   MDL_knights_fed_army_buff = {
-		icon = knight_helm
+		icon = GFX_decision_MDL_knights_fed_army_buff
     visible = { has_country_flag = MDL_federal_army_unlocked }
     available = {
       has_completed_focus = MDL_liberate_purrsia
@@ -1246,7 +1259,7 @@ MDL_wingbardy_war_tab = {
 
 MDL_fiqh_decisions_tab = {
   MDL_fiqh_1 = {#natural causality
-    icon = eng_trade_unions_support
+    icon = GFX_decision_MDL_fiqh_1
     allowed = { original_tag = MDL }
     cost = 50
     fire_only_once = yes
@@ -1255,7 +1268,7 @@ MDL_fiqh_decisions_tab = {
     }
   }
   MDL_fiqh_2 = {#the princesses
-    icon = eng_trade_unions_support
+    icon = GFX_decision_MDL_fiqh_2
     allowed = { original_tag = MDL }
     cost = 50
     fire_only_once = yes
@@ -1264,7 +1277,7 @@ MDL_fiqh_decisions_tab = {
     }
   }
   MDL_fiqh_3 = {#qadi authority
-    icon = eng_trade_unions_support
+    icon = GFX_decision_MDL_fiqh_3
     allowed = { original_tag = MDL }
     cost = 50
     fire_only_once = yes
@@ -1273,7 +1286,7 @@ MDL_fiqh_decisions_tab = {
     }
   }
   MDL_fiqh_4 = {#kalam
-    icon = eng_trade_unions_support
+    icon = GFX_decision_MDL_fiqh_4
     allowed = { original_tag = MDL }
     cost = 50
     fire_only_once = yes
@@ -1282,7 +1295,7 @@ MDL_fiqh_decisions_tab = {
     }
   }
   MDL_fiqh_5 = {#free will
-    icon = eng_trade_unions_support
+    icon = GFX_decision_MDL_fiqh_5
     allowed = { original_tag = MDL }
     cost = 50
     fire_only_once = yes
