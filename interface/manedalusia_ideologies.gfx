@@ -1,4 +1,8 @@
 spriteTypes = {
+  SpriteType = {
+    name = "GFX_ideology_MDL_harmonic_theocracy"
+    texturefile = "gfx/interface/ideologies/MDL_harmonic_theocracy.tga"
+  }
 	SpriteType = {
 		name = "GFX_ideology_MDL_holy_order_n"
 		texturefile="gfx/interface/ideologies/MDL_holy_order_n.tga"

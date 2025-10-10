@@ -25,7 +25,7 @@ characters={
 		gender=female
 		country_leader={
 			desc=MDL_velvet_qamar_desc
-			ideology=socialism
+			ideology=harmonic_theocracy
       traits = {
 			  MDL_muftia_trait
 			}

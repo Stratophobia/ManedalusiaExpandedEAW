@@ -1,0 +1,139 @@
+##### MDL NAME LISTS #####
+### REGULAR DESTROYER NAMES###
+MDL_DD_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_DESTROYERS
+
+	for_countries = { MDL }
+
+	type = ship
+	ship_types = { ship_hull_light destroyer }
+
+	prefix = ""
+	fallback_name = "Destroyer-%d"
+
+	unique = {
+	}
+}
+
+### LIGHT CRUISER NAMES###
+MDL_CL_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_CL
+
+	for_countries = { MDL }
+
+	type = ship
+	ship_types = { ship_hull_cruiser light_cruiser }
+	
+	prefix = ""
+	fallback_name = "Light Cruiser-%d"
+
+	unique = {
+	}
+}
+
+### HEAVY CRUISER NAMES###
+MDL_CA_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_CA
+
+	for_countries = { MDL }
+
+	type = ship
+	ship_types = { ship_hull_cruiser heavy_cruiser }
+	
+	prefix = ""
+	fallback_name = "Heavy Cruiser-%d"
+
+	unique = {
+	}
+}
+
+
+### BATTLESHIP NAMES ###
+MDL_BB_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_BB
+
+	for_countries = { MDL }
+
+	type = ship
+	ship_types = { ship_hull_heavy battleship }
+	
+	prefix = ""
+	fallback_name = "Battleship-%d"	
+
+	unique = {
+	}
+}
+
+### BATTLECRUISER NAMES ###
+MDL_BC_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_BC
+
+	for_countries = { MDL }
+
+	type = ship
+	ship_types = { ship_hull_heavy battle_cruiser }
+	
+	prefix = ""
+	fallback_name = "Battlecruiser-%d"
+
+	unique = {
+	}
+}
+
+### AIRCRAFT CARRIER NAMES ###
+MDL_CV_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_CARRIERS
+
+	for_countries = { MDL }
+
+	type = ship
+	ship_types = { ship_hull_carrier carrier }
+	
+	prefix = ""
+	fallback_name = "Carrier-%d"
+
+	unique = {
+	}
+}
+
+### SUBMARINES ###
+MDL_SS_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_SUBMARINES
+
+	for_countries = { MDL }
+
+	type = ship
+	ship_types = { ship_hull_submarine submarine }
+
+	prefix = ""
+	fallback_name = "Submarine-%d"
+
+	unique = {
+	}
+}
+
+### THEME: STATES CITIES REGIONS RIVERS ###
+MDL_STATES = {
+	name = NAME_THEME_PLACES
+	fallback_name = "Ship-%d"
+	for_countries = { MDL }
+
+	type = ship
+
+	prefix = ""
+	unique = {
+		"Coltoba"
+		"Sineighi"
+		"Maneistrata"
+		"Empyrean"
+		"Salmon-Eater"
+		"Waka Waka"
+		"Nemo"
+		"Alamane"
+		"Green Bay"
+		"Wanderer"
+		"Enlightened"
+		"Revalation"
+		"Tortuga"
+	}
+}

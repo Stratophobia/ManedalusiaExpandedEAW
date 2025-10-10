@@ -16,6 +16,23 @@ set_technology = {
 	basic_train = 1
 }
 if = {
+  limit = {
+    has_dlc = "Man the Guns"
+  }
+  set_technology = {
+		early_ship_hull_light = 1
+    basic_ship_hull_light = 1
+		early_ship_hull_cruiser = 1
+    early_ship_hull_heavy = 1
+		coastal_defense_ships = 1
+		basic_battery = 1
+		basic_depth_charges = 1
+		basic_torpedo = 1
+    basic_light_battery = 1
+		mtg_transport = 1
+  }
+}
+if = {
 	limit = {
 		NOT = { has_dlc = "Man the Guns" }
 	}
@@ -25,33 +42,11 @@ if = {
 		transport = 1
 	}
 }
-if = {
-  limit = { has_dlc = "Man the Guns" }
-  set_technology = {#fuck me if i know what any of these are
-		basic_naval_mines = 1
-		submarine_mine_laying = 1
-		early_ship_hull_light = 1
-		basic_ship_hull_light = 1
-		early_ship_hull_submarine = 1
-		early_ship_hull_cruiser = 1
-		basic_ship_hull_cruiser = 1
-		early_ship_hull_heavy = 1
-		early_ship_hull_carrier = 1
-		basic_battery = 1
-		basic_light_battery = 1
-		basic_medium_battery = 1
-		basic_heavy_battery = 1
-		basic_torpedo = 1
-		sonar = 1
-		smoke_generator = 1
-		basic_depth_charges = 1
-		basic_cruiser_armor_scheme = 1
-		basic_heavy_armor_scheme = 1
-		mtg_transport = 1
-		basic_fire_control_system = 1
-	}
-}
 actually_fix_weapon_techs = yes
+
+generic_DD_template = yes
+generic_CL_template = yes
+
 add_ideas = {
 	pre_industrial_society
 	poor_science_base
@@ -164,4 +159,41 @@ set_rule = {
 	can_generate_female_aces = yes
 	can_generate_female_unit_leaders  = yes
 	can_generate_female_country_leaders = yes
+}
+
+create_equipment_variant = {
+	name = "Salmon-Eater Class"
+	type = ship_hull_light_1
+	name_group = MDL_DD_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_battery_slot = ship_light_battery_2
+		fixed_ship_anti_air_slot = empty
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+		fixed_ship_radar_slot = empty
+		fixed_ship_engine_slot = light_ship_engine_2
+		fixed_ship_torpedo_slot = ship_torpedo_1
+		mid_1_custom_slot = ship_torpedo_1
+		rear_1_custom_slot = ship_depth_charge_1
+	}
+}
+
+create_equipment_variant = {
+	name = "Flea Class"
+	type = ship_hull_cruiser_coastal_defense_ship	
+	name_group = MDL_CA_HISTORICAL
+	parent_version = 0
+	modules = {
+		fixed_ship_battery_slot = ship_heavy_battery_1
+		fixed_ship_anti_air_slot = ship_anti_air_1
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+		fixed_ship_radar_slot = empty
+		fixed_ship_engine_slot = cruiser_ship_engine_1
+		fixed_ship_secondaries_slot = ship_secondaries_1
+		fixed_ship_armor_slot = ship_armor_cruiser_1
+		front_1_custom_slot = ship_anti_air_1
+		mid_1_custom_slot = ship_secondaries_1
+		mid_2_custom_slot = ship_secondaries_1
+		rear_1_custom_slot = ship_medium_battery_1
+	}
 }

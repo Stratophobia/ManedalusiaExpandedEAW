@@ -697,6 +697,10 @@ focus_tree = {
     prerequisite = { focus = MDL_deal_with_the_madgriff }
     mutually_exclusive = { focus = MDL_lean_on_legacy focus = MDL_try_for_harmony }
 
+    available = {
+      always = no
+    }
+
     allow_branch={
       if = {
         NOT = {
@@ -710,6 +714,7 @@ focus_tree = {
 
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus MDL_try_for_socialism"
+      custom_effect_tooltip = MDL_WIP_tt
       add_political_power = -10
       add_popularity = { ideology = communism popularity = 0.05 }
       hidden_effect = {
