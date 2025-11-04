@@ -2040,7 +2040,7 @@
   MDL_establish_colonial_admin:0 "Establish [From.GetAdjective] Administration"
   MDL_heteronyms_tt:0 "Every §Y200 days§!, Grifo's primary §rHeteronym§! will switch to one of four available options."
   MDL_native_affairs_tt:0 "Every §rDominion§!:"
-  MDL_every_SDL_state:0 "\nEvery owned @SDL §GArabian§! Core state:"
+  MDL_every_SDL_state_tt:0 "\nEvery owned @SDL §GArabian§! Core state:"
   MDL_imperial_agriculture_tt:0 "Every owned state of @ABY @ASS @ANS @YMN @MGY @MKS:"
 ###STATE MODIFIER###
   MDL_sultanate_province:0 "Iqlīm"
