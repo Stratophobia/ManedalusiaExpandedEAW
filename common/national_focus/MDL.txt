@@ -16,11 +16,7 @@ focus_tree = {
 
   focus_tree = {
     id = manedalusia_main
-
-    country = {
-      factor = 0
-    }
-
+    country = { factor = 0 }
     default = no
     continuous_focus_position = { x = 550 y = 1800 }
 
@@ -59,7 +55,6 @@ focus_tree = {
 
   focus_tree = {
     id = manedalusia_US_start
-
     country = { factor = 0 }
     default = no
     continuous_focus_position = { x = 550 y = 1800 }
@@ -69,11 +64,7 @@ focus_tree = {
 
   focus_tree = {
     id = manedalusia_sayf_genocide
-
-    country = {
-      factor = 0
-    }
-
+    country = { factor = 0 }
     default = no
     continuous_focus_position = { x = 550 y = 1800 }
 
@@ -82,9 +73,7 @@ focus_tree = {
 
   focus_tree = {
     id = manedalusia_ultramar_1
-    country = {
-      factor = 0
-    }
+    country = { factor = 0 }
     default = no
     continuous_focus_position = { x = 550 y = 1800 }
 
@@ -109,9 +98,7 @@ focus_tree = {
     x = 10
     y = 1
     cost = 2
-    available = {
-      always = yes
-    }
+    available = { always = yes }
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus MDL_gather_the_council"
       country_event = { id = manedalusia.2 }
@@ -146,66 +133,7 @@ focus_tree = {
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus MDL_general_staff"
       country_event = { id = manedalusia.5 }		
-      MDL_armil_khaldun = {
-        add_field_marshal_role = {
-          traits={ pony_race_trait trickster trait_unpredictable inspirational_leader }
-          skill=2
-          attack_skill=1
-          defense_skill=3
-          planning_skill=2
-          logistics_skill=1
-          desc = MDL_armil_khaldun_desc
-        }
-      }
-      custom_effect_tooltip = MDL_khaldun_stats_tt
-      MDL_crimson_sayf = {
-        add_field_marshal_role = {
-          traits = { pony_race_trait harsh_leader infantry_leader }
-          skill=3
-          attack_skill=4
-          defense_skill=2
-          planning_skill=2
-          logistics_skill=2
-          desc = MDL_crimson_sayf_desc
-        }
-      }
-      custom_effect_tooltip = MDL_sayf_stats_tt
-      MDL_moonstriker_laylah={
-        add_corps_commander_role = {
-          traits = { pony_race_trait organizer MDL_logistical_cantrips_trait skilled_staffer }
-          skill=2
-          attack_skill=1
-          defense_skill=3
-          planning_skill=2
-          logistics_skill=5
-          desc= MDL_moonstriker_laylah_desc
-        }
-      }
-      custom_effect_tooltip = MDL_moonstriker_stats_tt
-      MDL_almanezor = {
-        add_corps_commander_role = {
-          traits = { pony_race_trait panzer_leader trait_reckless }
-          skill=3
-          attack_skill=4
-          defense_skill=2
-          planning_skill=5
-          logistics_skill=2
-          desc= MDL_almanezor_desc
-        }
-      }
-      custom_effect_tooltip = MDL_almanezor_stats_tt
-      MDL_clover_breeze = {
-        add_corps_commander_role = {
-          traits = { pony_race_trait politically_connected air_force_commander }
-          skill=2
-          attack_skill=1
-          defense_skill=2
-          planning_skill=3
-          logistics_skill=1
-          desc = MDL_clover_breeze_desc
-        }
-      }
-      custom_effect_tooltip = MDL_clover_breeze_stats_tt
+      MDL_assign_general_staff_init = yes
     }
     search_filters = { FOCUS_FILTER_POLITICAL }
   }
@@ -367,7 +295,7 @@ focus_tree = {
     prerequisite = { focus = MDL_lean_on_legacy }
     mutually_exclusive = { focus = MDL_ash_shahid_chosen focus = MDL_senate_path }
 
-    available = { always = no }
+    available = { always = no }#WIP
 
     allow_branch = {
       if = {
@@ -439,9 +367,7 @@ focus_tree = {
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus MDL_khaldun_takeover"
       country_event = { id = manedalusia.12 }
-      hidden_effect = {
-        set_country_flag = MDL_khaldun_path
-      }
+      hidden_effect = { set_country_flag = MDL_khaldun_path }
     }
     search_filters = { FOCUS_FILTER_POLITICAL }
   }
@@ -454,9 +380,7 @@ focus_tree = {
     offset = {
       x = -4
       y = 0
-      trigger = {
-        has_completed_focus = MDL_senate_path
-      }
+      trigger = { has_completed_focus = MDL_senate_path }
     }
     relative_position_id = MDL_lean_on_legacy
     cost = 1
@@ -533,9 +457,7 @@ focus_tree = {
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus MDL_senate_assumes_power"
       country_event = { id = manedalusia.50 }
-      hidden_effect = {
-        set_country_flag = MDL_senate_path
-      }
+      hidden_effect = { set_country_flag = MDL_senate_path }
     }
     search_filters = { FOCUS_FILTER_POLITICAL }
   }
@@ -548,9 +470,7 @@ focus_tree = {
     offset = {
       x = -8
       y = 0
-      trigger = {
-        has_completed_focus = MDL_try_for_harmony
-      }
+      trigger = { has_completed_focus = MDL_try_for_harmony }
     }
     relative_position_id = MDL_deal_with_the_madgriff
     cost = 1
@@ -672,9 +592,7 @@ focus_tree = {
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus MDL_sultana_velvet"
       country_event = { id = manedalusia.51 }
-      hidden_effect = {
-        set_country_flag = MDL_velvet_path
-      }
+      hidden_effect = { set_country_flag = MDL_velvet_path }
     }
     search_filters = { FOCUS_FILTER_POLITICAL }
   }
@@ -687,9 +605,7 @@ focus_tree = {
     offset = {
       x = 8
       y = 0
-      trigger={
-        has_completed_focus = MDL_try_for_socialism
-      }
+      trigger={ has_completed_focus = MDL_try_for_socialism }
     }
 
     relative_position_id = MDL_deal_with_the_madgriff
@@ -697,9 +613,7 @@ focus_tree = {
     prerequisite = { focus = MDL_deal_with_the_madgriff }
     mutually_exclusive = { focus = MDL_lean_on_legacy focus = MDL_try_for_harmony }
 
-    available = {
-      always = no
-    }
+    available = { always = no }#WIP
 
     allow_branch={
       if = {
@@ -806,9 +720,7 @@ focus_tree = {
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus MDL_vice_and_virtue"
       country_event = { id = manedalusia.52 }
-      hidden_effect = {
-        set_country_flag = MDL_commie_path
-      }
+      hidden_effect = { set_country_flag = MDL_commie_path }
     }
     search_filters = { FOCUS_FILTER_POLITICAL }
   }
@@ -1039,7 +951,7 @@ shared_focus = {
         MGY = {
           add_timed_idea = {
             idea = MDL_destroyed_army
-            days = 180
+            days = 360
           }
         }
       }
@@ -1217,15 +1129,12 @@ shared_focus = {
     prerequisite = { focus = MDL_neighle_infrastructure }
     completion_reward = {
       log = "[GetDateText]: [Root.GetName]: Focus MDL_annex_ovingoland"
-
       custom_effect_tooltip = MDL_annex_ovingoland_tt
-      effect_tooltip = {
-        add_core_of = MDL
-      }
+      effect_tooltip = { add_core_of = MDL }
 
       hidden_effect = {
-        every_owned_state = {
-          limit = { is_in_array = { state_original_cores = MKS } }
+        for_each_scope_loop = {
+          array = MKS.original_cores
           add_core_of = MDL
         }
       }
@@ -1523,7 +1432,9 @@ shared_focus = {
       has_war = no
     }
     bypass = {
-      WNG = { NOT = { owns_state = 784 } }
+      WNG = {
+        NOT = { owns_state = 784 }
+      }
     }
     prerequisite = { focus = MDL_conquer_abyssinia }
     will_lead_to_war_with = WNG

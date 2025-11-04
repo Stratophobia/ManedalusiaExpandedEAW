@@ -1419,7 +1419,7 @@
       MGY = {
         add_timed_idea = {
           idea = MDL_destroyed_army
-          days = 200
+          days = 360
         }
       }
       hidden_effect = { clr_country_flag = MDL_warplan_green_flag }

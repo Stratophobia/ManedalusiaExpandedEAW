@@ -5,6 +5,64 @@ MDL_remove_ABY_templates = {
   delete_unit_template_and_units = { division_template = "Highlander Regiment" }
 }
 
+MDL_assign_general_staff_init = {
+  MDL_armil_khaldun = {
+    add_field_marshal_role = {
+      traits={ pony_race_trait trickster trait_unpredictable inspirational_leader }
+      skill=2
+      attack_skill=1
+      defense_skill=3
+      planning_skill=2
+      logistics_skill=1
+      desc = MDL_armil_khaldun_desc
+    }
+  } custom_effect_tooltip = MDL_khaldun_stats_tt
+  MDL_crimson_sayf = {
+    add_field_marshal_role = {
+      traits = { pony_race_trait harsh_leader infantry_leader }
+      skill=3
+      attack_skill=4
+      defense_skill=2
+      planning_skill=2
+      logistics_skill=2
+      desc = MDL_crimson_sayf_desc
+    }
+  } custom_effect_tooltip = MDL_sayf_stats_tt
+  MDL_moonstriker_laylah={
+    add_corps_commander_role = {
+      traits = { pony_race_trait organizer MDL_logistical_cantrips_trait skilled_staffer }
+      skill=2
+      attack_skill=1
+      defense_skill=3
+      planning_skill=2
+      logistics_skill=5
+      desc= MDL_moonstriker_laylah_desc
+    }
+  } custom_effect_tooltip = MDL_moonstriker_stats_tt
+  MDL_almanezor = {
+    add_corps_commander_role = {
+      traits = { pony_race_trait panzer_leader trait_reckless }
+      skill=3
+      attack_skill=4
+      defense_skill=2
+      planning_skill=5
+      logistics_skill=2
+      desc= MDL_almanezor_desc
+    }
+  } custom_effect_tooltip = MDL_almanezor_stats_tt
+  MDL_clover_breeze = {
+    add_corps_commander_role = {
+      traits = { pony_race_trait politically_connected air_force_commander }
+      skill=2
+      attack_skill=1
+      defense_skill=2
+      planning_skill=3
+      logistics_skill=1
+      desc = MDL_clover_breeze_desc
+    }
+  } custom_effect_tooltip = MDL_clover_breeze_stats_tt
+}
+
 MDL_BSG_setup = {
   hidden_effect = {
     BSG = {
