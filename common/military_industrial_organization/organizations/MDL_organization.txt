@@ -1,0 +1,368 @@
+########    ###    ##    ## ##    ##  ######  
+   ##      ## ##   ###   ## ##   ##  ##    ## 
+   ##     ##   ##  ####  ## ##  ##   ##       
+   ##    ##     ## ## ## ## #####     ######  
+   ##    ######### ##  #### ##  ##         ## 
+   ##    ##     ## ##   ### ##   ##  ##    ## 
+   ##    ##     ## ##    ## ##    ##  ######  
+
+MDL_black_guard_steelworks_mio = {
+  name = MDL_black_guard_steelworks
+  icon = GFX_idea_MDL_black_guard_steelworks
+
+  include = generic_heavy_tank_organization
+
+  allowed = { original_tag = MDL }
+  visible = {
+    owner = {
+      NOT = { has_country_flag = MDL_grifo_takeover }
+    }
+  }
+  available = {
+    owner = {
+      OR = {
+        has_completed_focus = MDL_even_sweeter_rides
+        has_completed_focus = MDL_SAM31
+      }
+    }
+  }
+  initial_trait = {
+    modifier = { land_bunker_effectiveness_factor = 0.10 }
+    organization_modifier = { military_industrial_organization_funds_gain = 0.10 }
+    equipment_bonus = {
+      build_cost_ic = -0.15
+    }
+  }
+}
+
+MDL_imperial_tanks_mio = {
+  name = MDL_imperial_tanks
+  icon = GFX_idea_MDL_imperial_tanks
+
+  include = generic_heavy_tank_organization
+
+  allowed = {
+    original_tag = MDL
+    has_dlc = "Arms Against Tyranny"
+  }
+  visible = {
+    owner = { has_country_flag = MDL_grifo_takeover }
+  }
+  available = {
+    owner = { has_completed_focus = MDL_imperial_armor }
+  }
+}
+
+ ######  ##     ## #### ########   ######  
+##    ## ##     ##  ##  ##     ## ##    ## 
+##       ##     ##  ##  ##     ## ##       
+ ######  #########  ##  ########   ######  
+      ## ##     ##  ##  ##              ## 
+##    ## ##     ##  ##  ##        ##    ## 
+ ######  ##     ## #### ##         ######  
+
+MDL_mercantile_league_mio = {
+  name = MDL_mercantile_league
+  icon = GFX_idea_MDL_mercantile_league
+
+  include = generic_raider_ship_organization
+
+  allowed = {
+    original_tag = MDL
+    has_dlc = "Arms Against Tyranny"
+  }
+  visible = {
+    owner = {
+      NOT = { has_country_flag = MDL_grifo_takeover }
+    }
+  }
+  available = {
+    owner = {
+      any_controlled_state_is_coastal = yes
+      OR = {
+        has_completed_focus = MDL_coltoba_shipyards
+        has_completed_focus = MDL_SAM03
+      }
+    }
+  }
+  initial_trait = {
+    organization_modifier = { military_industrial_organization_design_team_assign_cost = -0.5 }
+    equipment_bonus = {
+      defense = -0.03
+      naval_speed = 0.15
+    }
+  }
+}
+
+MDL_imperial_ships_mio = {
+  name = MDL_imperial_ships
+  icon = GFX_idea_MDL_imperial_ships
+
+  include = generic_battle_line_ship_organization
+
+  allowed = {
+    original_tag = MDL
+    has_dlc = "Arms Against Tyranny"
+  }
+  available = {
+    owner = { any_controlled_state_is_coastal = yes }
+  }
+  visible = {
+    owner = { has_country_flag = MDL_grifo_takeover }
+  }
+}
+
+########  ##          ###    ##    ## ########  ######  
+##     ## ##         ## ##   ###   ## ##       ##    ## 
+##     ## ##        ##   ##  ####  ## ##       ##       
+########  ##       ##     ## ## ## ## ######    ######  
+##        ##       ######### ##  #### ##             ## 
+##        ##       ##     ## ##   ### ##       ##    ## 
+##        ######## ##     ## ##    ## ########  ######  
+
+MDL_empyrean_mio = {
+  name = MDL_empyrean
+  icon = GFX_idea_MDL_empyrean
+
+  include = generic_naval_aircraft_organization
+
+  research_bonus = 0.10
+  task_capacity = 999
+
+  allowed = {
+    original_tag = MDL
+    has_dlc = "Arms Against Tyranny"
+  }
+  visible = {
+    owner = {
+      NOT = { has_country_flag = MDL_grifo_takeover }
+    }
+  }
+}
+
+MDL_sundrinker_airwings_mio = {
+  name = MDL_sundrinker_airwings
+  icon = GFX_idea_MDL_sundrinker_airwings
+
+  include = generic_light_aircraft_organization
+
+  research_bonus = 0.05
+  task_capacity = 999
+
+  allowed = {
+    original_tag = MDL
+    has_dlc = "Arms Against Tyranny"
+  }
+  visible = {
+    owner = {
+      NOT = { has_country_flag = MDL_grifo_takeover }
+    }
+  }
+  available = {
+    owner = { has_completed_focus = MDL_air_industry }
+  }
+}
+
+MDL_tailspin_shipping_mio = {
+  name = MDL_tailspin_shipping
+  icon = GFX_idea_MDL_tailspin_shipping
+
+  include = generic_cas_aircraft_organization
+
+  research_bonus = 0.10
+  task_capacity = 999
+
+  allowed = {
+    original_tag = MDL
+    has_dlc = "Arms Against Tyranny"
+  }
+  visible = {
+    owner = {
+      NOT = { has_country_flag = MDL_grifo_takeover }
+    }
+  }
+  available = {
+    owner = { has_completed_focus = MDL_air_industry }
+  }
+}
+
+MDL_imperial_planes_mio = {
+  name = MDL_imperial_planes
+  icon = GFX_idea_MDL_imperial_planes
+
+  include = generic_heavy_aircraft_organization
+
+  research_bonus = 0.15
+  task_capacity = 999
+
+  allowed = {
+    original_tag = MDL
+    has_dlc = "Arms Against Tyranny"
+  }
+  visible = {
+    owner = { has_country_flag = MDL_grifo_takeover }
+  }
+  available = {
+    owner = { has_completed_focus = MDL_imperial_plane_tech }
+  }
+}
+
+##     ##    ###    ######## ######## ########  #### ######## ##       
+###   ###   ## ##      ##    ##       ##     ##  ##  ##       ##       
+#### ####  ##   ##     ##    ##       ##     ##  ##  ##       ##       
+## ### ## ##     ##    ##    ######   ########   ##  ######   ##       
+##     ## #########    ##    ##       ##   ##    ##  ##       ##       
+##     ## ##     ##    ##    ##       ##    ##   ##  ##       ##       
+##     ## ##     ##    ##    ######## ##     ## #### ######## ######## 
+
+MDL_office_of_artillery_mio = {
+  name = MDL_office_of_artillery
+  icon = GFX_idea_MDL_office_of_artillery
+
+  include = generic_artillery_organization
+
+  research_bonus = 0.05
+  task_capacity = 999
+
+  allowed = {
+    original_tag = MDL
+    has_dlc = "Arms Against Tyranny"
+  }
+  visible = {
+    owner = {
+      NOT = { has_country_flag = MDL_grifo_takeover }
+    }
+  }
+  initial_trait = {
+    limit_to_equipment_type = { artillery_equipment }
+    modifier = { land_bunker_effectiveness_factor = 0.10 }
+    organization_modifier = { military_industrial_organization_funds_gain = 0.10 }
+    equipment_bonus = {
+      soft_attack = 0.05
+      hard_attack = 0.05
+    }
+  }
+}
+
+MDL_hashm_koltaliba_org_mio = {
+  name = MDL_hashm_koltaliba_org
+  icon = GFX_idea_MDL_hashm_koltaliba_org
+
+  include = generic_infantry_equipment_organization
+
+  research_bonus = 0.05
+
+  allowed = {
+    original_tag = MDL
+    has_dlc = "Arms Against Tyranny"
+  }
+  visible = {
+    owner = {
+      NOT = { has_country_flag = MDL_grifo_takeover }
+    }
+  }
+  initial_trait = {
+    modifier = { equipment_capture_factor = 0.15 }
+    limit_to_equipment_type = { infantry_equipment }
+    equipment_bonus = {
+      breakthrough = 0.05
+      soft_attack = 0.05
+    }
+  }
+}
+
+MDL_moonstriker_labs_mio = {
+  name = MDL_moonstriker_labs
+  icon = GFX_idea_MDL_moonstriker_labs
+  allowed = { original_tag = MDL }
+  include = generic_infantry_equipment_organization
+
+  research_bonus = 0.10
+  task_capacity = 999
+
+  allowed = {
+    original_tag = MDL
+    has_dlc = "Arms Against Tyranny"
+  }
+  visible = {
+    owner = {
+      NOT = { has_country_flag = MDL_grifo_takeover }
+      NOT = { has_country_flag = MDL_samira_path }
+    }
+  }
+  available = {
+    owner = { has_completed_focus = MDL_alchemical_investment }
+  }
+  initial_trait = {
+    modifier = { equipment_capture_factor = 0.15 }
+    limit_to_equipment_type = { magical_equipment }
+    equipment_bonus = {
+      instant = yes
+      ap_attack = 0.05
+      soft_attack = 0.05
+      hard_attack = 0.05
+      defense = 0.05
+      build_cost_ic = 0.05
+    }
+  }
+}
+
+MDL_motorized_concern_mio = {
+  name = MDL_motorized_concern
+  icon = GFX_idea_MDL_motorized_concern
+
+  include = generic_motorized_mechanized_organization
+
+  allowed = {
+    original_tag = MDL
+    has_dlc = "Arms Against Tyranny"
+  }
+  visible = {
+    owner = {
+      NOT = { has_country_flag = MDL_grifo_takeover }
+    }
+  }
+  available = {
+    owner = {
+      OR = {
+        has_completed_focus = MDL_sweet_ass_rides
+        has_completed_focus = MDL_SAM26
+      }
+    }
+  }
+  initial_trait = {
+    organization_modifier = { military_industrial_organization_design_team_assign_cost = -0.5 }
+    equipment_bonus = {
+      maximum_speed = 0.10
+      maximum_speed = 0.05
+    }
+  }
+}
+
+MDL_imperial_arms_mio = {
+  name = MDL_imperial_arms
+  icon = GFX_idea_MDL_imperial_arms
+
+  research_bonus = 0.05
+  task_capacity = 999
+
+  include = generic_infantry_equipment_organization
+
+  allowed = {
+    original_tag = MDL
+    has_dlc = "Arms Against Tyranny"
+  }
+  visible = {
+    owner = { has_country_flag = MDL_grifo_takeover }
+  }
+  available = {
+    owner = { has_completed_focus = MDL_colonial_arms_production }
+  }
+  initial_trait = {
+    limit_to_equipment_type = { infantry_equipment }
+    equipment_bonus = {
+      soft_attack = 0.05
+      build_cost_ic = -0.05
+    }
+  }
+}

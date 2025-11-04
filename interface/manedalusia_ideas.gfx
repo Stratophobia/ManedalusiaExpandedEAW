@@ -284,12 +284,12 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/MDL/MDL_asabiyyah.tga"
 	}
 	SpriteType = {
-		name = "GFX_idea_MDL_artillery_concern"
-		texturefile = "gfx/interface/ideas/MDL/MDL_artillery_concern.tga"
+		name = "GFX_idea_MDL_office_of_artillery"
+		texturefile = "gfx/interface/ideas/MDL/MDL_office_of_artillery.tga"
 	}
 	SpriteType = {
-		name = "GFX_idea_MDL_infantry_concern"
-		texturefile = "gfx/interface/ideas/MDL/MDL_infantry_concern.tga"
+		name = "GFX_idea_MDL_hashm_koltaliba_org"
+		texturefile = "gfx/interface/ideas/MDL/MDL_hashm_koltaliba_org.tga"
 	}
 	SpriteType = {
 		name = "GFX_idea_MDL_motorized_concern"
@@ -304,14 +304,13 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/MDL/MDL_electronics_concern.tga"
 	}
 	SpriteType = {
-		name = "GFX_idea_MDL_naval_manufacturer_1"
-		texturefile = "gfx/interface/ideas/MDL/MDL_naval_manufacturer_1.tga"
+		name = "GFX_idea_MDL_mercantile_league"
+		texturefile = "gfx/interface/ideas/MDL/MDL_mercantile_league.tga"
 	}
 	SpriteType = {
 		name = "GFX_idea_MDL_refining_concern"
 		texturefile = "gfx/interface/ideas/MDL/MDL_refining_concern.tga"
 	}
-
 	SpriteType = {
 		name = "GFX_idea_MDL_madgriff_in_the_harbor"
 		texturefile = "gfx/interface/ideas/MDL/MDL_madgriff_in_the_harbor.tga"

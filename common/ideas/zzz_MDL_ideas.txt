@@ -1,13 +1,11 @@
 ideas = {
-	materiel_manufacturer = {
-		designer = yes
+  materiel_manufacturer = {
+    designer = yes
 
-		MDL_artillery_concern = {
-			picture = MDL_artillery_concern
-			allowed = {
-				original_tag = MDL
-			}
-			traits = { artillery_manufacturer }
+    MDL_office_of_artillery = {
+      picture = MDL_office_of_artillery
+      allowed = { original_tag = MDL }
+      traits = { artillery_manufacturer }
       visible = {
         NOT = { has_country_flag = MDL_grifo_takeover }
       }
@@ -17,29 +15,23 @@ ideas = {
           has_completed_focus = MDL_SAM04
         }
       }
-			research_bonus = {
-				artillery = 0.15
-			}
-			equipment_bonus = {
-				artillery_equipment = {
-					soft_attack = 0.05
-					instant = yes
-				}
-			}
-		}
-		MDL_infantry_concern = {
-			picture = MDL_infantry_concern
-			allowed = {
-				original_tag = MDL
-			}
-			research_bonus = {
-				infantry_weapons = 0.1
-			}
+      research_bonus = { artillery = 0.15 }
+      equipment_bonus = {
+        artillery_equipment = {
+          soft_attack = 0.05
+          instant = yes
+        }
+      }
+    }
+    MDL_hashm_koltaliba_org = {
+      picture = MDL_hashm_koltaliba_org
+      allowed = { original_tag = MDL }
+      research_bonus = { infantry_weapons = 0.15 }
       visible = {
         NOT = { has_country_flag = MDL_grifo_takeover }
       }
-			traits = { infantry_equipment_manufacturer }
-			available = {
+      traits = { infantry_equipment_manufacturer }
+      available = {
         OR = {
           has_completed_focus = MDL_go_with_samira
           has_completed_focus = MDL_charting_new_course
@@ -47,8 +39,8 @@ ideas = {
       }
 			equipment_bonus = {
 				infantry_equipment = {
-					breakthrough = 0.03
-					soft_attack = 0.1
+					breakthrough = 0.05
+					soft_attack = 0.05
 					instant = yes
 				}
 			}
@@ -78,9 +70,7 @@ ideas = {
         NOT = { has_country_flag = MDL_grifo_takeover }
         NOT = { has_country_flag = MDL_samira_path }
       }
-      research_bonus = {
-				infantry_weapons = 0.15
-			}
+      research_bonus = { infantry_weapons = 0.15 }
       equipment_bonus = {
 				magical_equipment = {
 					instant = yes
@@ -112,7 +102,7 @@ ideas = {
       }
       equipment_bonus = {
         motorized_equipment = {
-          maximum_speed = 0.1
+          maximum_speed = 0.10
           instant = yes
         }
       }
@@ -253,9 +243,7 @@ ideas = {
     MDL_empyrean = {
       picture = MDL_empyrean
       allowed = { original_tag = MDL }
-      research_bonus = {
-        air_equipment = 0.15
-      }
+      research_bonus = { air_equipment = 0.15 }
       visible = {
         NOT = { has_country_flag = MDL_grifo_takeover }
       }
@@ -268,9 +256,7 @@ ideas = {
         NOT = { has_country_flag = MDL_grifo_takeover }
       }
       available = { has_completed_focus = MDL_air_industry }
-      research_bonus = {
-        air_equipment = 0.15
-      }
+      research_bonus = { air_equipment = 0.15 }
       traits = { light_aircraft_manufacturer }
     }
     MDL_tailspin_shipping = {
@@ -280,9 +266,7 @@ ideas = {
         NOT = { has_country_flag = MDL_grifo_takeover }
       }
       available = { has_completed_focus = MDL_air_industry }
-      research_bonus = {
-        air_equipment = 0.15
-      }
+      research_bonus = { air_equipment = 0.15 }
       traits = { CAS_manufacturer }
     }
     MDL_imperial_planes = {
@@ -309,13 +293,9 @@ ideas = {
         }
       }
       equipment_bonus = {
-        mechanized_equipment = {
-          build_cost_ic = -0.10
-        }
+        mechanized_equipment = { build_cost_ic = -0.15 }
       }
-      research_bonus = {
-        armor = 0.15
-      }
+      research_bonus = { armor = 0.15 }
       traits = { heavy_tank_manufacturer }
     }
     MDL_imperial_tanks = {
@@ -331,8 +311,8 @@ ideas = {
 	naval_manufacturer = {
 		designer = yes
 
-		MDL_naval_manufacturer_1 = {
-			picture = MDL_naval_manufacturer_1
+		MDL_mercantile_league = {
+			picture = MDL_mercantile_league
 			allowed = { original_tag = MDL }
       visible = {
         NOT = { has_country_flag = MDL_grifo_takeover }
@@ -344,12 +324,8 @@ ideas = {
           has_completed_focus = MDL_SAM03
         }
 			}
-      modifier = {
-        navy_max_range_factor = 0.10
-      }
-			research_bonus = {
-				naval_equipment = 0.15
-			}
+      modifier = { navy_max_range_factor = 0.10 }
+			research_bonus = { naval_equipment = 0.15 }
 			traits = { naval_manufacturer }
 			equipment_bonus = {
 				screen_ship = {

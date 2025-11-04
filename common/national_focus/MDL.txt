@@ -2527,7 +2527,7 @@ shared_focus = {
     show_ideas_tooltip = MDL_alneighzari
 
     custom_effect_tooltip = available_designer
-    show_ideas_tooltip = MDL_infantry_concern
+    show_ideas_tooltip = MDL_hashm_koltaliba_org
 	}
   search_filters = { FOCUS_FILTER_RESEARCH }
 }
@@ -2607,7 +2607,7 @@ shared_focus = {
 			category = artillery
 		}
     custom_effect_tooltip = available_designer
-    show_ideas_tooltip = MDL_artillery_concern
+    show_ideas_tooltip = MDL_office_of_artillery
 	}
   search_filters = { FOCUS_FILTER_RESEARCH }
 }
@@ -3173,7 +3173,7 @@ shared_focus = {
     add_ideas = MDL_coltoba_shipyards_idea
 
     custom_effect_tooltip = available_designer
-    show_ideas_tooltip = MDL_naval_manufacturer_1
+    show_ideas_tooltip = MDL_mercantile_league
   }
   search_filters = { FOCUS_FILTER_NAVY_BONUS }
 }
@@ -8427,7 +8427,7 @@ shared_focus = {
       }
     }
     custom_effect_tooltip = available_designer
-    show_ideas_tooltip = MDL_naval_manufacturer_1
+    show_ideas_tooltip = MDL_mercantile_league
   }
 }
 
