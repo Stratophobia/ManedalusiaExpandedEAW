@@ -1,4 +1,8 @@
 spriteTypes = {
+  SpriteType = {
+    name = "GFX_modifiers_MDL_sultanate_province"
+    texturefile = "gfx/interface/state_modifiers/MDL/MDL_sultanate_province.tga"
+  }
 	SpriteType = {
 		name = "GFX_modifiers_MDL_colonial_admin"
 		texturefile="gfx/interface/state_modifiers/MDL/MDL_colonial_admin.tga"

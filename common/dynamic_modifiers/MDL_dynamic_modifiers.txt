@@ -6,12 +6,27 @@ MDL_military_governorate = {
       NOT = { original_tag = MDL }
     }
   }
-  
-	compliance_growth = 0.15
-	resistance_growth = -0.50
-	resistance_target = -0.50
-	resistance_decay = 0.40
-	state_resources_factor = 0.5
+  compliance_growth = 0.15
+  resistance_growth = -0.50
+  resistance_target = -0.50
+  resistance_decay = 0.40
+  state_resources_factor = 0.5
+}
+
+MDL_sultanate_province = {
+  icon = GFX_modifiers_MDL_sultanate_province
+  enable = { always = yes }
+  remove_trigger = {
+    owner = {
+      NOT = { original_tag = MDL }
+    }
+  }
+  compliance_growth = 0.25
+  resistance_growth = -0.25
+  resistance_target = -0.25
+  resistance_decay = 0.25
+  state_resources_factor = 0.10
+  local_factories = 0.20
 }
 
 MDL_colonial_admin = {

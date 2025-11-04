@@ -77,13 +77,7 @@ MDL_mercantile_league_mio = {
     }
   }
   available = {
-    owner = {
-      any_controlled_state_is_coastal = yes
-      OR = {
-        has_completed_focus = MDL_coltoba_shipyards
-        has_completed_focus = MDL_SAM03
-      }
-    }
+    owner = { any_controlled_state_is_coastal = yes }
   }
   initial_trait = {
     organization_modifier = { military_industrial_organization_design_team_assign_cost = -0.5 }
