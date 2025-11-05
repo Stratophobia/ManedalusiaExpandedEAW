@@ -114,10 +114,7 @@ MDL_create_dynamic_ABY = {
       }
       puppet = new_country
     }
-    load_focus_tree = { 
-      tree = generic_zebra_focus
-      keep_completed = yes		   
-    }
+    load_focus_tree = { tree = generic_zebra_focus }
     set_capital = {
       state = 775
       remember_old_capital = no
@@ -1066,5 +1063,40 @@ MDL_invade_arabia = {
   if = {
     limit = { SDC = { exists = yes } }
     declare_war_on = { type = annex_everything target = SDC }
+  }
+}
+
+MDL_provide_starting_airforce = {
+  custom_effect_tooltip = MDL_provide_starting_airforce_tt
+  hidden_effect = {
+    if = {
+      limit = { has_dlc = "By Blood Alone" }
+      set_technology = {
+        iw_small_airframe = 1
+        iw_medium_airframe = 1
+        aa_lmg = 1
+        engines_1 = 1
+        early_bombs = 1
+      }
+      generic_early_fighter = yes
+      generic_early_tac_bomber = yes
+      add_equipment_to_stockpile = {
+        type = small_plane_airframe
+        amount = 50
+        producer = MDL
+        variant_name = "Early Fighter"
+      }
+    }
+    else = {
+      set_technology = {
+        early_fighter = 1
+        early_bomber = 1
+      }
+      add_equipment_to_stockpile = {
+        type = small_plane_airframe
+        amount = 75
+        producer = MDL
+      }
+    }
   }
 }

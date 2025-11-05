@@ -2076,6 +2076,8 @@
 ###SCRIPTED TRIGGER TOOLTIPS###
   ME_arabia_is_unified_tt:0 "Arabia has been unified"
   ME_equestria_is_lost_tt:0 "Equestria §Rhas fallen to the Djinn§!"
+###AIR TREE TOOLTIPS###
+  MDL_provide_starting_airforce_tt:0 "Provides a basic air force of §Y50 Early Fighters§!."
 ###MISC###
   MDL_AI_BEHAVIOR:0 "@MDL Manedalusia"
   RULE_OPTION_CRIMSON_SULTAN:0 "Supremacist - The Crimson Sultan"

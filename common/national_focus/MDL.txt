@@ -593,7 +593,6 @@ shared_focus = {
   cost = 1
   prerequisite = { focus = MDL_deal_with_the_madgriff }
   mutually_exclusive = { focus = MDL_lean_on_legacy focus = MDL_try_for_harmony }
-  available = { always = no }#WIP
 
   allow_branch={
     if = {
@@ -607,7 +606,6 @@ shared_focus = {
   }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_try_for_socialism"
-    custom_effect_tooltip = MDL_WIP_tt
     add_political_power = -10
     add_popularity = { ideology = communism popularity = 0.05 }
     hidden_effect = {
@@ -1509,13 +1507,13 @@ shared_focus = {
           }
         }
       }
-      country_event = { id = manedalusia.53 }
+      country_event = manedalusia.53
     }
     else_if = {
       limit = {
         ABY = { has_government = fascism }
       }
-      country_event = { id = manedalusia.71 }
+      country_event = manedalusia.71
     }
     ABY = { add_to_ROOT_potential_cores = yes }
     hidden_effect = {
@@ -1704,36 +1702,8 @@ shared_focus = {
   }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_air_stuff"
-    add_political_power = -50
-    if = {
-      limit = { has_dlc = "By Blood Alone" }
-      set_technology = {
-        iw_small_airframe = 1
-        iw_medium_airframe = 1
-        aa_lmg = 1
-        engines_1 = 1
-        early_bombs = 1
-      }
-      generic_early_fighter = yes
-      generic_early_tac_bomber = yes
-      add_equipment_to_stockpile = {
-        type = small_plane_airframe
-        amount = 75
-        producer = MDL
-        variant_name = "Early Fighter"
-      }
-    }
-    else = {
-      set_technology = {
-        early_fighter = 1
-        early_bomber = 1
-      }
-      add_equipment_to_stockpile = {
-        type = small_plane_airframe
-        amount = 75
-        producer = MDL
-      }
-    }
+    add_political_power = -75
+    MDL_provide_starting_airforce = yes
     741 = {
       add_building_construction = {
         type = air_base
@@ -4098,7 +4068,9 @@ shared_focus = {
     }
   }
   bypass = {
-    WNG = { NOT = { owns_state = 784 } }
+    WNG = {
+      NOT = { owns_state = 784 }
+    }
   }
   will_lead_to_war_with = WNG
   completion_reward = {
@@ -4449,31 +4421,10 @@ shared_focus = {
   prerequisite = { focus = MDL_integrate_yemane }
   prerequisite = { focus = MDL_integrate_donkeys }
   mutually_exclusive = { focus = MDL_liberate_emirs }
-  available = {
-    ME_arabia_is_unified = yes 
-  }
+  available = { ME_arabia_is_unified = yes  }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_our_finest_hour"
-    if = {
-      limit = { SDS = { exists = yes } }
-      declare_war_on = { type = annex_everything target = SDS }
-    }
-    if = {
-      limit = { SDL = { exists = yes } }
-      declare_war_on = { type = annex_everything target = SDL }
-    }
-    if = {
-      limit = { SDF = { exists = yes } }
-      declare_war_on = { type = annex_everything target = SDF }
-    }
-    if = {
-      limit = { SDC = { exists = yes } }
-      declare_war_on = { type = annex_everything target = SDC }
-    }
-    if = {
-      limit = { EMR = { exists = yes } }
-      declare_war_on = { type = annex_everything target = EMR }
-    }
+    MDL_invade_arabia = yes
   }
 }
 
@@ -4521,9 +4472,7 @@ shared_focus = {
           }
           promote_leader = yes
         }
-        set_politics = {
-          ruling_party = neutrality
-        }
+        set_politics = { ruling_party = neutrality }
         set_party_name = {
           ideology = neutrality
           long_name = MDL_EMR_FED_PARTY_LONG
