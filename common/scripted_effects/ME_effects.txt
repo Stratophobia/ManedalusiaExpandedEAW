@@ -995,3 +995,53 @@ MDL_level_up_mehmet_fight_level = {
     }
   }
 }
+
+MDL_fortify_arabian_border = {
+  custom_effect_tooltip = MDL_SAM41_tt
+  hidden_effect = {
+    827 = {
+      add_building_construction = {
+        type = bunker
+        level = 2
+        province = {
+          all_provinces = yes
+          limit_to_border = yes
+        }
+        instant_build = yes
+      }
+    }
+    828 = {
+      add_building_construction = {
+        type = bunker
+        level = 2
+        province = {
+          all_provinces = yes
+          limit_to_border = yes
+        }
+        instant_build = yes
+      }
+    }
+    812 = {
+      add_building_construction = {
+        type = bunker
+        level = 2
+        province = {
+          all_provinces = yes
+          limit_to_border = yes
+        }
+        instant_build = yes
+      }
+    }
+    799 = {
+      add_building_construction = {
+        type = bunker
+        level = 2
+        province = {
+          all_provinces = yes
+          limit_to_border = yes
+        }
+        instant_build = yes
+      }
+    }
+  }
+}

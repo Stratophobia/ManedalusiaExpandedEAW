@@ -52,7 +52,7 @@ leader_traits = {
   }
   MDL_grifo_lord_regent_of_overseas = {
     political_power_gain = 0.05
-    compliance_growth = 0.05
+    compliance_growth = 0.10
     fascism_drift = 0.01
   }
   MDL_grifo_imperial_regent = {

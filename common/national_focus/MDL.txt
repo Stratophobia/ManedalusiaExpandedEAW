@@ -8107,9 +8107,7 @@ shared_focus = {
   prerequisite = { focus = MDL_charting_new_course }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_restore_the_asabiyyah"
-    hidden_effect = {
-      set_country_flag = MDL_asabiyyah_unlocked
-    }
+    hidden_effect = { set_country_flag = MDL_asabiyyah_unlocked }
     add_dynamic_modifier = { modifier = MDL_asabiyyah_modifier }
   }
 }
@@ -8311,9 +8309,7 @@ shared_focus = {
   x = 1
   y = 1
   relative_position_id = MDL_SAM01
-  available = {
-    has_government = neutrality
-  }
+  available = { has_government = neutrality }
   prerequisite = { focus = MDL_SAM01 }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM07"
@@ -8328,6 +8324,7 @@ shared_focus = {
       }
     }
     add_tech_bonus = {
+      name = MDL_SAM07
       bonus = 2.0
       uses = 1
       category = race_tech
@@ -8371,10 +8368,10 @@ shared_focus = {
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM09"
     build_railway = {
-        level = 1
-        start_province = 12234
-        target_province = 7512
-      }
+      level = 1
+      start_province = 12234
+      target_province = 7512
+    }
     build_railway = {
       level = 2
       start_province = 7512
@@ -8496,9 +8493,7 @@ shared_focus = {
   x = 1
   y = 1
   relative_position_id = MDL_get_the_spymasters
-  available = {
-    has_government = neutrality
-  }
+  available = { has_government = neutrality }
   prerequisite = { focus = MDL_get_the_spymasters }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM13"
@@ -8550,9 +8545,7 @@ shared_focus = {
   cost = 6
   x = 4
   y = 1
-  available = {
-    has_government = fascism
-  }
+  available = { has_government = fascism }
   relative_position_id = MDL_charting_new_course
   prerequisite = { focus = MDL_charting_new_course }
   completion_reward = {
@@ -8700,9 +8693,7 @@ shared_focus = {
   x = 0
   y = 2
   relative_position_id = MDL_SAM01
-  available = {
-    has_government = fascism
-  }
+  available = { has_government = fascism }
   prerequisite = { focus = MDL_SAM06 }
   prerequisite = { focus = MDL_SAM07 }
   will_lead_to_war_with = MGY
@@ -8761,9 +8752,7 @@ shared_focus = {
   x = 1
   y = 1
   relative_position_id = MDL_SAM19
-  available = {
-    has_government = fascism
-  }
+  available = { has_government = fascism }
   bypass = {
     YMN = { exists = no }
   }
@@ -8855,7 +8844,6 @@ shared_focus = {
       uses = 2
       category = motorized_equipment
     }
-
     custom_effect_tooltip = available_designer
     show_ideas_tooltip = MDL_motorized_concern
   }
@@ -9047,28 +9035,16 @@ shared_focus = {
       category = synth_resources
     }
     808 = {
-      add_resource = {
-        type = oil
-        amount = 2
-      }
+      add_resource = { type = oil amount = 2 }
     }
     801 = {
-      add_resource = {
-        type = oil
-        amount = 2
-      }
+      add_resource = { type = oil amount = 2 }
     }
     790 = {
-      add_resource = {
-        type = oil
-        amount = 2
-      }
+      add_resource = { type = oil amount = 2 }
     }
     795 = {
-      add_resource = {
-        type = oil
-        amount = 2
-      }
+      add_resource = { type = oil amount = 2 }
     }
     custom_effect_tooltip = available_industrial_concern
     show_ideas_tooltip = MDL_refining_concern
@@ -9217,50 +9193,7 @@ shared_focus = {
   prerequisite = { focus = MDL_SAM33 }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM41"
-    827 = {
-      add_building_construction = {
-        type = bunker
-        level = 2
-        province = {
-          all_provinces = yes
-          limit_to_border = yes
-        }
-        instant_build = yes
-      }
-    }
-    828 = {
-      add_building_construction = {
-        type = bunker
-        level = 2
-        province = {
-          all_provinces = yes
-          limit_to_border = yes
-        }
-        instant_build = yes
-      }
-    }
-    812 = {
-      add_building_construction = {
-        type = bunker
-        level = 2
-        province = {
-          all_provinces = yes
-          limit_to_border = yes
-        }
-        instant_build = yes
-      }
-    }
-    799 = {
-      add_building_construction = {
-        type = bunker
-        level = 2
-        province = {
-          all_provinces = yes
-          limit_to_border = yes
-        }
-        instant_build = yes
-      }
-    }
+    MDL_fortify_arabian_border = yes
   }
 }
 
