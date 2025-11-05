@@ -1045,3 +1045,26 @@ MDL_fortify_arabian_border = {
     }
   }
 }
+
+MDL_invade_arabia = {
+  if = {
+    limit = { EMR = { exists = yes } }
+    declare_war_on = { type = annex_everything target = EMR }
+  }
+  if = {
+    limit = { SDS = { exists = yes } }
+    declare_war_on = { type = annex_everything target = SDS }
+  }
+  if = {
+    limit = { SDF = { exists = yes } }
+    declare_war_on = { type = annex_everything target = SDF }
+  }
+  if = {
+    limit = { SDL = { exists = yes } }
+    declare_war_on = { type = annex_everything target = SDL }
+  }
+  if = {
+    limit = { SDC = { exists = yes } }
+    declare_war_on = { type = annex_everything target = SDC }
+  }
+}
