@@ -54,17 +54,6 @@ on_actions = {
     effect = {
       if = {
         limit = {
-          has_country_flag = MDL_reunification_war_senate
-          has_war_with = MGY
-          casualties_k < 5
-          MGY = { casualties_k > 50 }
-        }
-        country_event = manedalusia.55
-      }
-    }
-    effect = {
-      if = {
-        limit = {
           has_country_flag = MDL_velvet_path
           has_global_flag = daybreaker_spawned
         }

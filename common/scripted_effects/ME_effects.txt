@@ -165,6 +165,7 @@ MDL_create_dynamic_ABY = {
       better_science_base
       civilian_economy
     }
+    MDL = { ABY = { transfer_technology = yes } }
     set_AI_strategies_on_every_possible_country_delayed = yes
   }  
 }
@@ -302,6 +303,7 @@ MDL_create_dynamic_DRG = {
       no_lack_of_scientists
       no_poverty
     }
+    MDL = { DRG = { transfer_technology = yes } }
     set_AI_strategies_on_every_possible_country_delayed = yes
   }
 }
@@ -1097,6 +1099,29 @@ MDL_provide_starting_airforce = {
         amount = 75
         producer = MDL
       }
+    }
+  }
+}
+
+MDL_initiate_warplan_green = {
+  custom_effect_tooltip = MDL_warplan_green_tt
+  effect_tooltip = {
+    MGY = {
+      add_timed_idea = {
+        idea = MDL_destroyed_army
+        days = 360
+      }
+    }
+  }
+  declare_war_on = { type = annex_everything target = MGY }
+  hidden_effect = { set_country_flag = MDL_warplan_green_flag }
+}
+
+MDL_conclude_warplan_green = {
+  hidden_effect = {
+    if = {
+      limit = { has_country_flag = MDL_warplan_green_flag }
+      clr_country_flag = MDL_warplan_green_flag
     }
   }
 }

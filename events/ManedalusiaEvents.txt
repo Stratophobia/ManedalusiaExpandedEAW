@@ -1408,11 +1408,22 @@
     }
   }
 
-  country_event = {# cap Maregypt event - sayf
+  country_event = {#Warplan Green - proc MGY debuff
     id = manedalusia.49
     title = manedalusia.49.t
-    desc = manedalusia.49.d
-    is_triggered_only = yes#on_action 
+    desc = {
+      text = manedalusia.49.d_sayf
+      trigger = { has_government = fascism }
+    }
+    desc = {
+      text = manedalusia.49.d_senate
+      trigger = { has_government = neutrality }
+    }
+    desc = {
+      text = manedalusia.49.d_commie
+      trigger = { has_government = communism }
+    }
+    is_triggered_only = yes#on_action
 
     option = {
       name = manedalusia.49.a
@@ -1422,7 +1433,7 @@
           days = 360
         }
       }
-      hidden_effect = { clr_country_flag = MDL_warplan_green_flag }
+      MDL_conclude_warplan_green = yes
     }
   }
 
@@ -1557,7 +1568,7 @@
     }
   }
 
-  country_event = {# cap Maregypt event - senate
+  country_event = {#FREE
     id = manedalusia.55
     title = manedalusia.55.t
     desc = manedalusia.55.d
@@ -1565,14 +1576,6 @@
 
     option = {
       name = manedalusia.55.a
-      MGY = {
-        add_timed_idea = {
-          idea = MDL_destroyed_army
-          days = 200
-        }
-      }
-      MGY = { add_ideas = MDL_destroyed_army }
-      hidden_effect = { clr_country_flag = MDL_reunification_war_senate }
     }
   }
 
@@ -3600,8 +3603,8 @@
         add_ideas = MDL_ember
       }
       hidden_effect = {
-        every_state = {
-          limit = { is_in_array = { state_original_cores = EQS } }
+        for_each_scope_loop = {
+          array = EQS.original_cores
           add_core_of = DRG
         }
       }
@@ -4343,5 +4346,28 @@
       name = manedalusia.178.a
       add_popularity = { ideology = democratic popularity = 0.05 }
       add_popularity = { ideology = communism popularity = -0.10 }
+    }
+  }
+
+  country_event = {#Laylah is sacked from army role
+    id = manedalusia.179
+    title = manedalusia.179.t
+    desc = manedalusia.179.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.179.a
+      retire_character = MDL_moonstriker_laylah
+    }
+  }
+
+  country_event = {#laylah lore event - commie path
+    id = manedalusia.180
+    title = manedalusia.180.t
+    desc = manedalusia.180.d
+    is_triggered_only = yes
+
+    option = {
+      name = manedalusia.180.a
     }
   }

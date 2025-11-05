@@ -16,9 +16,7 @@ set_technology = {
 	basic_train = 1
 }
 if = {
-  limit = {
-    has_dlc = "Man the Guns"
-  }
+  limit = { has_dlc = "Man the Guns" }
   set_technology = {
 		early_ship_hull_light = 1
     basic_ship_hull_light = 1
@@ -44,6 +42,7 @@ if = {
 }
 actually_fix_weapon_techs = yes
 
+generic_BB_template = yes
 generic_DD_template = yes
 generic_CL_template = yes
 
