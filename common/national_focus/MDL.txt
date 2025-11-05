@@ -1605,7 +1605,7 @@ shared_focus = {
       custom_effect_tooltip = MDL_every_SDL_state_tt
       effect_tooltip = {
         add_compliance = 15
-        add_dynamic_modifier = { modifier = MDL_colonial_admin }     
+        add_dynamic_modifier = { modifier = MDL_sultanate_province }     
       }
       for_each_scope_loop = {
         array = SDL.original_cores
