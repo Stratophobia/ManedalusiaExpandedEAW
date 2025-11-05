@@ -9219,94 +9219,46 @@ shared_focus = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM41"
     827 = {
       add_building_construction = {
-          type = bunker
-          level = 2
-          province = 15478
-          instant_build = yes
-      }
-      add_building_construction = {
-          type = bunker
-          level = 2
-          province = 15467
-          instant_build = yes
-      }
-      add_building_construction = {
-          type = bunker
-          level = 2
-          province = 15136
-          instant_build = yes
+        type = bunker
+        level = 2
+        province = {
+          all_provinces = yes
+          limit_to_border = yes
+        }
+        instant_build = yes
       }
     }
     828 = {
       add_building_construction = {
-          type = bunker
-          level = 2
-          province = 15452
-          instant_build = yes
-      }
-      add_building_construction = {
-          type = bunker
-          level = 2
-          province = 15457
-          instant_build = yes
-      }
-      add_building_construction = {
-          type = bunker
-          level = 2
-          province = 15448
-          instant_build = yes
+        type = bunker
+        level = 2
+        province = {
+          all_provinces = yes
+          limit_to_border = yes
+        }
+        instant_build = yes
       }
     }
     812 = {
       add_building_construction = {
-          type = bunker
-          level = 2
-          province = 15449
-          instant_build = yes
-      }
-      add_building_construction = {
-          type = bunker
-          level = 2
-          province = 15441
-          instant_build = yes
+        type = bunker
+        level = 2
+        province = {
+          all_provinces = yes
+          limit_to_border = yes
+        }
+        instant_build = yes
       }
     }
     799 = {
       add_building_construction = {
-          type = bunker
-          level = 2
-          province = 15434
-          instant_build = yes
-      }
-      add_building_construction = {
-          type = bunker
-          level = 2
-          province = 15435
-          instant_build = yes
-      }
-      add_building_construction = {
-          type = bunker
-          level = 2
-          province = 15509
-          instant_build = yes
-      }
-      add_building_construction = {
-          type = bunker
-          level = 2
-          province = 15510
-          instant_build = yes
-      }
-      add_building_construction = {
-          type = bunker
-          level = 2
-          province = 15506
-          instant_build = yes
-      }
-      add_building_construction = {
-          type = bunker
-          level = 2
-          province = 15503
-          instant_build = yes
+        type = bunker
+        level = 2
+        province = {
+          all_provinces = yes
+          limit_to_border = yes
+        }
+        instant_build = yes
       }
     }
   }
@@ -9355,9 +9307,7 @@ shared_focus = {
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM43"
     custom_effect_tooltip = MDL_zahid_power_mission_nullified_tt
-    hidden_effect = {
-      set_country_flag = MDL_zahid_power_mission_nullified
-    }
+    hidden_effect = { set_country_flag = MDL_zahid_power_mission_nullified }
     country_event = manedalusia.152
     swap_ideas = {
       remove_idea = MDL_koltaliba_rule_1
@@ -9454,9 +9404,7 @@ shared_focus = {
   relative_position_id = MDL_SAM41
   prerequisite = { focus = MDL_SAM41 }
   mutually_exclusive = { focus = MDL_SAM48 }
-  available = {
-    ME_arabia_is_unified = yes
-  }
+  available = { ME_arabia_is_unified = yes }
   bypass = {
     868 = { is_owned_and_controlled_by = ROOT }
   }
@@ -9683,9 +9631,7 @@ shared_focus = {
   y = 1
   relative_position_id = MDL_SAM57
   allow_branch={
-    if = {
-      has_country_flag = MDL_samira_no_hope
-    }
+    if = { has_country_flag = MDL_samira_no_hope }
   }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM58"
@@ -9701,9 +9647,7 @@ shared_focus = {
   y = 1
   relative_position_id = MDL_SAM57
   allow_branch={
-    if = {
-      has_country_flag = MDL_samira_medium_hope
-    }
+    if = { has_country_flag = MDL_samira_medium_hope }
   }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM59"
@@ -9718,10 +9662,8 @@ shared_focus = {
   x = 0
   y = 1
   relative_position_id = MDL_SAM57
-  allow_branch={
-    if = {
-      has_country_flag = MDL_samira_high_hope
-    }
+  allow_branch = {
+    if = { has_country_flag = MDL_samira_high_hope }
   }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM60"

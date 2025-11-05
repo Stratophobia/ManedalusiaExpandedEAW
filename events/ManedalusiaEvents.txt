@@ -3137,6 +3137,7 @@
 
     option = {
       name = manedalusia.114.a
+      MDL_grifo_dismiss_heteronyms = yes
       country_event = { id = manedalusia.115 days = 3 }
       hidden_effect = {
         generate_character = {
@@ -3190,7 +3191,6 @@
     }
   }
 
-
   country_event = {#the many faces of fernao grifo
     id = manedalusia.117
     title = manedalusia.117.t
@@ -3214,6 +3214,7 @@
     title = manedalusia.118.t
     desc = manedalusia.118.d
     is_triggered_only = yes
+    trigger = { has_country_flag = MDL_heteronyms_active }
 
     option = {
       name = manedalusia.118.a
@@ -3323,8 +3324,8 @@
         days = 250
       } 
       diplomatic_relation = { 
-	      country = MDL
-	      relation = non_aggression_pact 
+        country = MDL
+        relation = non_aggression_pact 
       }
       MDL_WNG_transfer_colonies = yes
       MDL = { country_event = manedalusia.125 }
