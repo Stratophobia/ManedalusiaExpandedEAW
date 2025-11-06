@@ -145,7 +145,12 @@ MDL_sundrinker_airwings_mio = {
     }
   }
   available = {
-    owner = { has_completed_focus = MDL_air_industry }
+    owner = {
+      OR = {
+        has_completed_focus = MDL_air_industry
+        has_completed_focus = MDL_charting_new_course
+      }
+    }
   }
 }
 
@@ -168,7 +173,12 @@ MDL_tailspin_shipping_mio = {
     }
   }
   available = {
-    owner = { has_completed_focus = MDL_air_industry }
+    owner = {
+      OR = {
+        has_completed_focus = MDL_air_industry
+        has_completed_focus = MDL_charting_new_course
+      }
+    }
   }
 }
 
