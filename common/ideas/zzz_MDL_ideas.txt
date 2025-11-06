@@ -286,12 +286,6 @@ ideas = {
       visible = {
         NOT = { has_country_flag = MDL_grifo_takeover }
       }
-      available = {
-        OR = {
-          has_completed_focus = MDL_even_sweeter_rides
-          has_completed_focus = MDL_SAM31
-        }
-      }
       equipment_bonus = {
         mechanized_equipment = { build_cost_ic = -0.15 }
       }

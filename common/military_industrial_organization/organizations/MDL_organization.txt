@@ -18,14 +18,6 @@ MDL_black_guard_steelworks_mio = {
       NOT = { has_country_flag = MDL_grifo_takeover }
     }
   }
-  available = {
-    owner = {
-      OR = {
-        has_completed_focus = MDL_even_sweeter_rides
-        has_completed_focus = MDL_SAM31
-      }
-    }
-  }
   initial_trait = {
     modifier = { land_bunker_effectiveness_factor = 0.10 }
     organization_modifier = { military_industrial_organization_funds_gain = 0.10 }

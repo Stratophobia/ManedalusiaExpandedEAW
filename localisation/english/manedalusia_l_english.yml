@@ -1985,7 +1985,7 @@
   MDL_alexandre_de_aguilar_stats_tt:0 "§gLevel§!: §Y1§!, (£trait_attack §Y1§!, £trait_defense §Y1§!, £trait_planning §Y1§!, £trait_logistics §Y1§!)\n§gTraits§!: §C$engineer_officer$§!, §C$air_force_commander$§!\n\n"
   MDL_antonio_aviario_stats_tt:0 "§gLevel§!: §Y2§!, (£trait_attack §Y2§!, £trait_defense §Y2§!, £trait_planning §Y1§!, £trait_logistics §Y2§!)\n§gTraits§!: §C$trait_reckless$§!, §C$inspirational_leader$§!\n\n"
   MDL_grifo_fleet_taken_tt:0 "§GWe have successfully seized Grifo's fleet!§!"
-  MDL_western_zebrican_hegemony_tt:0 "We will unlock £decision_icon_small §Cdecisions§! to §Rdeclare war§! and establish §Cprotectorate realms§! across Western Zebrica."
+  MDL_western_zebrican_hegemony_tt:0 "Unlocks £decision_icon_small §Cdecisions§! to §Rdeclare war§! and establish §Cprotectorate realms§! across Western Zebrica."
   MDL_clean_loose_ends_tt:0 "All remaining troublesome advisors will be permanently §Rremoved§!. (The following advisors will remain: §YTale Flair§!, §YPeaceful Sunset§!)"
   MDL_sayf_tree_loaded_tt:0 "§RSayf's Focus Tree will be loaded.§!"
   MDL_samira_tree_loaded_tt:0 "§YSamira's Focus Tree will be loaded.§!"

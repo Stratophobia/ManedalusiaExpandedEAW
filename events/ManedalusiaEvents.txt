@@ -2958,7 +2958,7 @@
 
     option = {
       name = manedalusia.102.a
-      add_opinion_modifier = { target = GRI modifier = MDL_consulate }
+      add_opinion_modifier = { target = GRD modifier = MDL_consulate }
     }
   }
 
