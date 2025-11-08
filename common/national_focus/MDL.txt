@@ -963,7 +963,7 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_restore_grand_vizier
-  icon = GFX_focus_restore_grand_vizier
+  icon = GFX_focus_MDL_restore_grand_vizier
   x = 0
   y = 1
   relative_position_id = MDL_attack_maregypt
@@ -1116,7 +1116,7 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_the_crimson_sultanate
-  icon = GFX_focus_MDL_crimson_sultanate
+  icon = GFX_focus_MDL_the_crimson_sultanate
   x = 0
   y = 3
   relative_position_id = MDL_attack_maregypt
@@ -1129,7 +1129,7 @@ shared_focus = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_crimson_sultanate"
     country_event = manedalusia.39
     hidden_effect = {
-      country_event = { days = 2 id = manedalusia_news.3 }
+      country_event = { days = 1 id = manedalusia_news.3 }
     }
   }
   search_filters = { FOCUS_FILTER_POLITICAL }

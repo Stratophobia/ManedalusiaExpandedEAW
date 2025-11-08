@@ -19,4 +19,8 @@ spriteTypes = {
     name = "GFX_ideology_MDL_holy_order_h"
 		texturefile="gfx/interface/ideologies/MDL_holy_order_h.tga"
   }
+  SpriteType = {
+    name = "GFX_ideology_MDL_nazism"
+		texturefile="gfx/interface/ideologies/MDL_nazism.tga"
+  }
 }
