@@ -1,5 +1,41 @@
 spriteTypes = {
   SpriteType = {
+    name = "GFX_decision_MDL_katren_accord"
+    texturefile="gfx/interface/decisions/MDL/MDL_katren_accord.tga"
+  }
+  SpriteType = {
+    name = "GFX_decision_MDL_recognize_SDS"
+    texturefile="gfx/interface/decisions/MDL/MDL_recognize_SDS.tga"
+  }
+  SpriteType = {
+    name = "GFX_decision_MDL_shield_attack_BAT"
+    texturefile="gfx/interface/decisions/MDL/MDL_shield_attack_BAT.tga"
+  }
+  SpriteType = {
+    name = "GFX_decision_MDL_shield_attack_KLG"
+    texturefile="gfx/interface/decisions/MDL/MDL_shield_attack_KLG.tga"
+  }
+  SpriteType = {
+    name = "GFX_decision_MDL_shield_integrate_KLG"
+    texturefile="gfx/interface/decisions/MDL/MDL_shield_integrate_KLG.tga"
+  }
+  SpriteType = {
+    name = "GFX_decision_MDL_shield_puppet_ABY"
+    texturefile="gfx/interface/decisions/MDL/MDL_shield_puppet_ABY.tga"
+  }
+  SpriteType = {
+    name = "GFX_decision_MDL_shield_puppet_BAT"
+    texturefile="gfx/interface/decisions/MDL/MDL_shield_puppet_BAT.tga"
+  }
+  SpriteType = {
+    name = "GFX_decision_MDL_shield_puppet_MGY"
+    texturefile="gfx/interface/decisions/MDL/MDL_shield_puppet_MGY.tga"
+  }
+  SpriteType = {
+    name = "GFX_decision_MDL_shield_puppet_ZAR"
+    texturefile="gfx/interface/decisions/MDL/MDL_shield_puppet_ZAR.tga"
+  }
+  SpriteType = {
     name = "GFX_decision_category_MDL_koltaliba"
     texturefile="gfx/interface/decisions/MDL/cat/MDL_koltaliba.tga"
   }

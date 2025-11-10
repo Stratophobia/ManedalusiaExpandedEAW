@@ -697,6 +697,9 @@
   MDL_recognize_SDS:0 "Offer Recognition to the Arabian Republic"
   MDL_recognize_SDS_desc:0 "The political climate in Arabia remains uncertain, but one thing is clear: it would only be beneficial for all creatures in West Zebrica if the Harmonic government of Gallarb was given primacy. We will establish diplomatic channels with the Arabian Republic and offer them a proposal for mutual recognition of sovereignty."
   MDL_shield_puppet_ZAR:0 "Integrate Zarantia into the Junnah Doctrine"
+  MDL_shield_attack_KLG:0 "End The Mafia's Rule"
+  MDL_shield_attack_KLG_desc:0 "The city-state of Klugetown has maintained its independence by playing a careful game of balance between Abyssinia and Maregypt, but with both nations brought under Manedalusia's purview, this criminal haven can finally be brought to a merciful end."
+  MDL_shield_integrate_KLG:0 "Integrate The City of Klugetown"
 #OTHERS
   CHN_manedalusia_protectorate:0 "Form the Manedalusian Protectorate"
   MDL_colthage_treaty_decision:0 "Restore Our Partnership With Colthage"

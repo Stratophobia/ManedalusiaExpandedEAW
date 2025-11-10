@@ -296,7 +296,7 @@ MDL_koltaliba_tab = {
 
 MDL_shield_doctrine_tab = {
   MDL_shield_puppet_ZAR = {
-    icon = eng_trade_unions_support
+    icon = GFX_decision_MDL_shield_puppet_ZAR
     visible = {
       ZAR = { exists = no }
       owns_state = 747
@@ -314,7 +314,7 @@ MDL_shield_doctrine_tab = {
     }
   }
   MDL_shield_attack_BAT = {
-    icon = crossed_swords
+    icon = GFX_decision_MDL_attack_BAT
     available = { has_war = no }
     fire_only_once = yes
     visible = {
@@ -335,6 +335,7 @@ MDL_shield_doctrine_tab = {
     }
   }
   MDL_shield_puppet_MGY = {
+    icon = GFX_decision_MDL_shield_puppet_MGY
     ai_will_do = { factor = 300 }
     visible = {
       has_country_flag = MDL_shield_doctrine_unlocked
@@ -358,6 +359,7 @@ MDL_shield_doctrine_tab = {
     }
   }
   MDL_shield_puppet_BAT = {
+    icon = GFX_decision_MDL_shield_puppet_BAT
     available = { has_war = no }
     ai_will_do = { factor = 300 }
     visible = {
@@ -383,6 +385,7 @@ MDL_shield_doctrine_tab = {
     }
   }
   MDL_shield_puppet_ABY = {
+    icon = GFX_decision_MDL_shield_puppet_ABY
     ai_will_do = { factor = 300 }
     visible = {
       has_country_flag = MDL_shield_doctrine_unlocked
@@ -398,15 +401,42 @@ MDL_shield_doctrine_tab = {
         remove_core_of = ABY
       }
       ABY = { set_cosmetic_tag = ABY_MDL_admin }
-      hidden_effect = {
-        release_puppet = ABY
-        ABY = {
-          load_focus_tree = { tree = generic_zebra_focus }
-        }
+      hidden_effect = { release_puppet = ABY }
+    }
+  }
+  MDL_shield_attack_KLG = {
+    icon = GFX_decision_MDL_shield_attack_KLG
+    available = { has_war = no }
+    fire_only_once = yes
+    visible = {
+      has_country_flag = MDL_shield_doctrine_unlocked
+      has_country_flag = MDL_velvet_path
+      KLG = { exists = yes }
+      ABY = { is_subject_of = MDL }
+      MGY = { is_subject_of = MDL }
+    }
+    days_remove = 50
+    remove_effect = {
+      create_wargoal = {
+        type = annex_everything
+        target = KLG
       }
     }
   }
-
+  MDL_shield_integrate_KLG = {
+    icon = GFX_decision_MDL_shield_integrate_KLG
+    visible = {
+      has_country_flag = MDL_shield_doctrine_unlocked
+      has_country_flag = MDL_velvet_path
+      KLG = { exists = no }
+      owns_state = 1208
+    }
+    cost = 25
+    fire_only_once = yes
+    complete_effect = {
+      1208 = { add_core_of = MDL }
+    }
+  }
   MDL_recognize_SDS = {
     icon = eng_trade_unions_support
     visible = {
@@ -418,15 +448,14 @@ MDL_shield_doctrine_tab = {
     }
     cost = 30
     fire_only_once = yes
-    available = {
-      has_war = no
-    }
+    available = { has_war = no }
     complete_effect = {
       SDS = { country_event = { id = manedalusia.128 days = 2 } }
     }
   }
 
   MDL_katren_accord = {
+    icon = GFX_decision_MDL_katren_accord
     visible = {
       WNG = {
         exists = yes
