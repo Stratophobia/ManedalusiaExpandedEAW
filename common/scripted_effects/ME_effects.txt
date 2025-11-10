@@ -174,13 +174,13 @@ MDL_create_dynamic_KAR = {
       name = KAR_khan_clone
     }
     set_portraits = {
-      character = MDL_khan_clone
+      character = KAR_khan_clone
       civilian = {
         large = "gfx/leaders/KAR/Kurstanbek_Khan.tga"
       }
     }
     add_country_leader_role = {
-      character = MDL_khan_clone
+      character = KAR_khan_clone
       country_leader = {
         ideology = nazism
         expire = "1965.1.1.1"
