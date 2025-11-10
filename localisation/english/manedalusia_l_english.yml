@@ -1974,7 +1974,7 @@
   MDL_EMR_FED_PARTY_LONG:0 "Elected Principalities"
   MDL_EMR_FED_PARTY:0 "Principalities"
 ###CUSTOM TOOLTIP EFFECTS###
-  MDL_rally_militias_tt:0 "2 §YMilitia Regiment§! units will be spawned in §YColtoba§!"
+  MDL_rally_militias_tt:0 "3 §YMilitia Regiment§! units will be spawned in §YColtoba§!"
   MDL_khaldun_stats_tt:0 "§gLevel§!: §Y2§!, (£trait_attack §Y1§!, £trait_defense §Y3§!, £trait_planning §Y2§!, £trait_logistics §Y1§!)\n§gTraits§!: §C$trickster$§!, §C$trait_unpredictable$§!, §C$inspirational_leader$§!\n\n"
   MDL_sayf_stats_tt:0 "§gLevel§!: §Y4§!, (£trait_attack §Y4§!, £trait_defense §Y2§!, £trait_planning §Y2§!, £trait_logistics §Y2§!)\n§gTraits§!: §C$harsh_leader$§!, §C$infantry_leader$§!\n\n"
   MDL_sayf_genocide_stats_tt:0 "§gLevel§!: §Y5§!, (£trait_attack §Y7§!, £trait_defense §Y2§!, £trait_planning §Y5§!, £trait_logistics §Y5§!)\n§gTraits§!: §C$harsh_leader$§!, §C$infantry_leader$§!\n\n"
