@@ -71,7 +71,7 @@ MDL_create_dynamic_BAT = {
 
     PREV = {
       every_controlled_state = {
-        limit = { occupied_country_tag = ABY }
+        limit = { occupied_country_tag = BAT }
         var:new_country = { transfer_state = PREV }
       }
       puppet = new_country
@@ -142,6 +142,116 @@ MDL_create_dynamic_BAT = {
       civilian_economy
     }
     MDL = { BAT = { transfer_technology = yes } }
+    set_AI_strategies_on_every_possible_country_delayed = yes
+  }
+}
+
+MDL_create_dynamic_KAR = {
+  create_dynamic_country = {
+    original_tag = KAR
+    set_variable = { collaboration_formed_by = PREV }
+    set_temp_variable = { new_country = this }
+
+    PREV = {
+      every_controlled_state = {
+        limit = { occupied_country_tag = KAR }
+        var:new_country = { transfer_state = PREV }
+      }
+      puppet = new_country
+    }
+    load_focus_tree = { tree = generic_zebra_focus }
+    set_capital = {
+      state = 999
+      remember_old_capital = no
+    }
+    set_party_name = {
+      ideology = fascism
+      long_name = KAR_VASSAl_PARTY_NAME_LONG
+      name = KAR_VASSAl_PARTY_NAME
+    }
+    generate_character = {
+      token_base = KAR_khan_clone
+      name = KAR_khan_clone
+    }
+    set_portraits = {
+      character = MDL_khan_clone
+      civilian = {
+        large = "gfx/leaders/KAR/Kurstanbek_Khan.tga"
+      }
+    }
+    add_country_leader_role = {
+      character = MDL_khan_clone
+      country_leader = {
+        ideology = nazism
+        expire = "1965.1.1.1"
+        id=-1
+      }
+      promote_leader = yes
+    }
+    add_ideas = {
+      horse_race
+      poverty5
+      outdated_industry
+      lack_of_scientists2
+      better_science_base
+      civilian_economy
+    }
+    MDL = { KAR = { transfer_technology = yes } }
+    set_AI_strategies_on_every_possible_country_delayed = yes
+  }
+}
+
+MDL_create_dynamic_MAZ = {
+  create_dynamic_country = {
+    original_tag = MAZ
+    set_variable = { collaboration_formed_by = PREV }
+    set_temp_variable = { new_country = this }
+
+    PREV = {
+      every_controlled_state = {
+        limit = { occupied_country_tag = MAZ }
+        var:new_country = { transfer_state = PREV }
+      }
+      puppet = new_country
+    }
+    load_focus_tree = { tree = generic_zebra_focus }
+    set_capital = {
+      state = 943
+      remember_old_capital = no
+    }
+    set_party_name = {
+      ideology = fascism
+      long_name = MDL_SAMIRA_PARTY_NAME_LONG
+      name = MDL_SAMIRA_PARTY_NAME
+    }
+    generate_character = {
+      token_base = MAZ_grandmistress_samira
+      name = MAZ_grandmistress_samira
+    }
+    set_portraits = {
+      character = MAZ_grandmistress_samira
+      civilian = {
+        large = "gfx/leaders/MDL/grandmistress_samira.tga"
+      }
+    }
+    add_country_leader_role = {
+      character = MAZ_grandmistress_samira
+      country_leader = {
+        expire = "1965.1.1"
+        ideology = holy_order_f
+        desc = MDL_grandmistress_samira_desc
+      }
+      promote_leader = yes 
+    }
+    add_ideas = {
+      zebra_race
+      poverty5
+      outdated_industry
+      lack_of_scientists2
+      better_science_base
+      civilian_economy
+    }
+    MDL = { MAZ = { transfer_technology = yes } }
     set_AI_strategies_on_every_possible_country_delayed = yes
   }
 }
@@ -533,8 +643,8 @@ MDL_WNG_transfer_colonies = {
       ABY = {
         exists = yes
         OR = {
-          is_in_faction_with = ROOT
-          is_subject_of = ROOT
+          is_in_faction_with = MDL
+          is_subject_of = MDL
         }
       }
     }
@@ -549,13 +659,13 @@ MDL_WNG_transfer_colonies = {
     WNG = {
       every_owned_state = {
         limit = { is_core_of = ABY }
-        ROOT = { transfer_state = PREV }
+        MDL = { transfer_state = PREV }
       }
     }
     ABY = {
       every_owned_state = {
         limit = { is_core_of = ABY }
-        ROOT = { transfer_state = PREV }
+        MDL = { transfer_state = PREV }
       }
     }
   }

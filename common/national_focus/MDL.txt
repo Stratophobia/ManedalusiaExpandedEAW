@@ -2729,7 +2729,6 @@ shared_focus = {
 	x = -1
 	y = 1
 	relative_position_id = MDL_coltoba_institute_military_science
-  bypass = { has_completed_focus = MDL_take_lands_in_lakes }
 	prerequisite = { focus = MDL_go_with_samira }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_samira_as_general"
@@ -9295,6 +9294,14 @@ shared_focus = {
     }
     hidden_effect = {
       MDL_create_dynamic_BAT = yes
+      for_each_scope_loop = {
+        array = WAR.original_cores
+        add_core_of = BAT
+      }
+      for_each_scope_loop = {
+        array = TBK.original_cores
+        add_core_of = BAT
+      }
       release_puppet = BAT
     }
     BAT = { set_cosmetic_tag = BAT_MDL_admin }

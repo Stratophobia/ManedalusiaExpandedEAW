@@ -869,7 +869,7 @@
       }
       add_to_variable = {
         var = MDL_trade_var
-        value -0.05
+        value = -0.05
       }
     }
     option = {
@@ -1213,41 +1213,21 @@
 
     option = {
       name = manedalusia.44.a
-      hidden_effect = { KAR = { set_cosmetic_tag = KAR_VASSAL } }
       custom_effect_tooltip = MDL_shahanshah_cucked_tt
       hidden_effect = {
-        KAR = {
-          add_country_leader_role = {
-            character = KAR_kurstanbek_khan
-            country_leader = {
-              expire = "1965.1.1"
-              ideology = nazism
-            }
-            promote_leader = yes 
-          }
-          set_capital = {
-            state = 999
-            remember_old_capital = no
-          }
+        MDL_create_dynamic_KAR = yes
+        for_each_scope_loop = {
+          array = MTO.original_cores
+          add_core_of = KAR
         }
-      }
-      hidden_effect = {
-        every_owned_state = {
-          limit = {
-            OR = {
-              is_core_of = MTO
-              is_core_of = AES
-            }
-          }
+        for_each_scope_loop = {
+          array = AES.original_cores
           add_core_of = KAR
         }
         release_puppet = KAR
       }
       KAR = {
-        if = {
-          limit = { has_idea = zebrica_legacy_of_storm2 }
-          remove_ideas = zebrica_legacy_of_storm2
-        }
+        set_cosmetic_tag = KAR_VASSAL
         add_ideas = MDL_KAR_shahdom
       }
     }
@@ -1261,57 +1241,49 @@
 
     option = {
       name = manedalusia.45.a
-      set_nationality = {
-        target_country = CGL
-        character = MDL_grandmistress_samira
-      }
-      CGL = {
-        add_country_leader_role = {
-          character = MDL_grandmistress_samira
-          country_leader = {
-            expire = "1965.1.1"
-            ideology = holy_order_f
-            desc = MDL_grandmistress_samira_desc
-          }
-          promote_leader = yes 
-        }
-        set_party_name = {
-          ideology = fascism
-          long_name = MDL_SAMIRA_PARTY_NAME_LONG
-          name = MDL_SAMIRA_PARTY_NAME
-        }
-      }
       hidden_effect = {
-        every_owned_state = {
-          limit = {
-            OR = {
-              is_core_of = MAZ
-              is_core_of = MSS
-              is_core_of = SON
-              is_core_of = MSH
-              is_core_of = ZWA
-              is_core_of = ZUG
-              is_core_of = ZEL
-              is_core_of = HAY
-              is_core_of = REE
-            }
+        MDL_create_dynamic_MAZ = yes
+        MAZ = {
+          for_each_scope_loop = {
+            array = MSS.original_cores
+            add_core_of = PREV
           }
-          add_core_of = CGL
-        }
-      }
-      hidden_effect = {
-        CGL = {
-          load_focus_tree = {
-            tree = generic_zebra_focus
+          for_each_scope_loop = {
+            array = SON.original_cores
+            add_core_of = PREV
+          }
+          for_each_scope_loop = {
+            array = MSH.original_cores
+            add_core_of = PREV
+          }
+          for_each_scope_loop = {
+            array = ZWA.original_cores
+            add_core_of = PREV
+          }
+          for_each_scope_loop = {
+            array = ZUG.original_cores
+            add_core_of = PREV
+          }
+          for_each_scope_loop = {
+            array = ZEL.original_cores
+            add_core_of = PREV
+          }
+          for_each_scope_loop = {
+            array = HAY.original_cores
+            add_core_of = PREV
+          }
+          for_each_scope_loop = {
+            array = REE.original_cores
+            add_core_of = PREV
           }
         }
-        MDL = { CGL = { transfer_technology = yes } }
+        release_puppet = MAZ
       }
-      release_puppet = CGL
-      CGL = {
+      MAZ = {
+        set_cosmetic_tag = MAZ_VASSAL
         add_ideas = MDL_MAZ_vassal
       }
-    } 
+    }
   }
 
   country_event = {#Sayf dreams of Grogar
@@ -1328,8 +1300,7 @@
         limit = { ZAI = { exists = yes } }
         declare_war_on = { type = annex_everything target = ZAI }
       }
-      if = {
-        limit = { ZAI = { exists = no } }
+      else = {
         declare_war_on = {
           type = annex_everything
           target = 891.owner
@@ -1360,7 +1331,9 @@
         name = MDL_SAYF_PARTY_3
       }
       hidden_effect = { set_country_leader_ideology = falangism }
-      hidden_effect = { country_event = { days = 25 id = manedalusia.46 } }
+      hidden_effect = {
+        country_event = { days = 25 id = manedalusia.46 }
+      }
     }
   }
 
@@ -2068,7 +2041,9 @@
         }
       }
       white_peace = MDL
-      MDL = { annex = EQC }
+      MDL = {
+        annex_country = { target = EQC }
+      }
     }
   }
 
@@ -2157,15 +2132,15 @@
       ai_chance = {
         base = 50
         modifier = {
-          base = 100
           has_government = democratic
+          add = 50
         }
         modifier = {
-          base = 0
           OR = {
             has_government = fascism
             has_government = communism
           }
+          factor = 0
         }
       }
       add_timed_idea = {
@@ -2188,19 +2163,18 @@
       ai_chance = {
         base = 50
         modifier = {
-          base = 100
           OR = {
             has_government = fascism
             has_government = communism
           }
+          add = 50
         }
         modifier = {
-          base = 0
           has_government = democratic
+          factor = 0
         }
       }
       name = manedalusia.77.b
-      ai_chance = { factor = 0 }
       MDL = { country_event = { id = manedalusia.79 days = 3 } }
     }
   }
@@ -2707,6 +2681,14 @@
 
       hidden_effect = {
         MDL_create_dynamic_BAT = yes
+        for_each_scope_loop = {
+          array = WAR.original_cores
+          add_core_of = BAT
+        }
+        for_each_scope_loop = {
+          array = TBK.original_cores
+          add_core_of = BAT
+        }
         release_puppet = BAT
       }
       BAT = { set_cosmetic_tag = BAT_crimson_vassal }
@@ -2808,7 +2790,7 @@
       ai_chance = {
         base = 10
         modifier = {
-          base = 100
+          add = 90
           OR = {
             has_country_flag = MDL_AI_ULTRAMAR
             has_game_rule = {
@@ -2818,9 +2800,9 @@
           }
         }
         modifier = {
-          base = 0
+          factor = 0
           OR = {
-            has_country_flag = MDL_SAMIRA
+            has_country_flag = MDL_AI_SAMIRA
             has_game_rule = {
               rule = MDL_ai_behavior
               option = MDL_SAMIRA
@@ -2845,9 +2827,9 @@
           }
         }
         modifier = {
-          base = 100
+          add = 10
           OR = {
-            has_country_flag = MDL_SAMIRA
+            has_country_flag = MDL_AI_SAMIRA
             has_game_rule = {
               rule = MDL_ai_behavior
               option = MDL_SAMIRA
@@ -3924,7 +3906,7 @@
       ai_chance = {
         base = 50
         modifier = {
-          base = 100
+          add = 50
           OR = {
             has_government = fascism
             has_government = communism

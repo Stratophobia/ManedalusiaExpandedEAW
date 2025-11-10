@@ -102,6 +102,10 @@ MDL_caliphate = {
   color = rgb { 130 30 30 }
   color_ui = rgb { 130 30 30 }
 }
+MAZ_VASSAL = {
+  color = rgb { 130 30 30 }
+  color_ui = rgb { 130 30 30 }
+}
 ZAR_VASSAL = {
   color = rgb { 130 30 30 }
   color_ui = rgb { 130 30 30 }

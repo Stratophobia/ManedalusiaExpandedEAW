@@ -369,6 +369,14 @@ MDL_shield_doctrine_tab = {
     complete_effect = {
       hidden_effect = {
         MDL_create_dynamic_BAT = yes
+        for_each_scope_loop = {
+          array = WAR.original_cores
+          add_core_of = BAT
+        }
+        for_each_scope_loop = {
+          array = TBK.original_cores
+          add_core_of = BAT
+        }
         release_puppet = BAT
       }
       BAT = { set_cosmetic_tag = BAT_MDL_admin }

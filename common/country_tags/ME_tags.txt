@@ -1,2 +1,1 @@
-CGL = "countries/Samira.txt"
 RIZ = "countries/RizzPuppet.txt"
