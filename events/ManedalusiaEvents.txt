@@ -15,9 +15,7 @@
       name = manedalusia_news.1.a 
     }
     option = {
-      trigger = {
-        has_government = democratic
-      }
+      trigger = { has_government = democratic }
       name = manedalusia_news.1.b
       add_opinion_modifier = {
         target = FROM
@@ -122,8 +120,8 @@
       ai_chance = {
         base = 70
         modifier = {
-          base = 0
           MDL_has_set_path_rules = yes
+          factor = 0
         }
       }
       country_event = { id = manedalusia.65 }
@@ -134,8 +132,8 @@
       ai_chance = {
         base = 5
         modifier = {
-          base = 0
           MDL_has_set_path_rules = yes
+          factor = 0
         }
       }
       country_event = { id = manedalusia.58 }
@@ -148,8 +146,8 @@
       ai_chance = { 
         base = 25
         modifier = {
-          base = 100
           MDL_has_set_path_rules = yes
+          add = 75
         }
       }
       release = MDL
@@ -231,7 +229,6 @@
       ai_chance = {
         base = 5
         modifier = {
-          base = 100
           OR = {
             has_country_flag = MDL_AI_SAMIRA
             has_country_flag = MDL_AI_ULTRAMAR
@@ -244,11 +241,10 @@
               option = MDL_SAMIRA
             }
           }
+          add = 95
         }
       }
-      hidden_effect = {
-        country_event = manedalusia.90
-      }
+      hidden_effect = { country_event = manedalusia.90 }
     }
   }
 
@@ -295,7 +291,6 @@
           promote_leader = yes
         }
       }
-      set_party_leader = { ideology = fascism leader = MDL_crimson_sayf }
       add_popularity = { ideology = fascism popularity = 0.1 }
     }
   }
@@ -343,10 +338,7 @@
 
     option = {
       name = manedalusia.8.a
-      set_politics = {
-        ruling_party = fascism
-        allow_elections = no
-      }
+      set_politics = { ruling_party = fascism }
       set_party_name = {
         ideology = neutrality
         long_name = MDL_NA_SAYF_LONG
@@ -363,14 +355,11 @@
           promote_leader = yes
         }
       }
-      set_party_leader = { ideology = neutrality leader = MDL_armil_khaldun }
       retire_character = MDL_transitional_military_council
       add_country_leader_trait = MDL_sayf_pretender
       custom_effect_tooltip = MDL_sayf_tree_loaded_tt
       hidden_effect = {
-        load_focus_tree = {
-          tree = manedalusia_main
-        }
+        load_focus_tree = { tree = manedalusia_main }
       }
     }
   }
@@ -435,7 +424,6 @@
         }
       }
       retire_character = MDL_transitional_military_council
-      set_party_leader = { ideology = neutrality leader = MDL_armil_khaldun }
       set_party_name = {
         ideology = neutrality
         long_name = MDL_KHALDUN_PARTY_1_LONG
@@ -862,7 +850,7 @@
     }
   }
 
-  country_event = {fiqh2 princesses
+  country_event = {#fiqh2 princesses
     id = manedalusia.31
     title = manedalusia.31.t
     desc = manedalusia.31.d
@@ -1364,7 +1352,7 @@
     option = {
       name = manedalusia.47.a
       custom_effect_tooltip = MDL_game_end_tt
-      hidden_effect = { set_cosmetic_tag = MDL_caliphate }
+      set_cosmetic_tag = MDL_caliphate
       MDL_crimson_sayf = { set_character_name = MDL_crimson_sayf_caliph }
       set_party_name = {
         ideology = fascism
@@ -1457,7 +1445,6 @@
         }
       }
       retire_character = MDL_transitional_military_council
-      set_party_leader = { ideology = neutrality leader = MDL_senate }
       set_party_name = {
         ideology = neutrality
         long_name = MDL_SENATE_NAME_LONG
@@ -1491,10 +1478,7 @@
         }
       }
       retire_character = MDL_transitional_military_council
-      set_politics = {
-        ruling_party = democratic
-        allow_elections = no
-      }
+      set_politics = { ruling_party = democratic }
       set_party_name = {
         ideology = neutrality
         long_name = MDL_NA_VELVET_MIRAGE_LONG
@@ -1527,10 +1511,7 @@
         }
       }
       retire_character = MDL_transitional_military_council
-      set_politics = {
-        ruling_party = communism
-        allow_elections = no
-      }
+      set_politics = { ruling_party = communism }
       set_party_name = {
         ideology = neutrality
         long_name = MDL_NA_VELVET_MIRAGE_LONG
@@ -1596,10 +1577,7 @@
         MGY = {
           set_cosmetic_tag = MGY_FEDERATION
           add_ideas = MDL_federation_member
-          set_politics = {
-            ruling_party = neutrality
-            allow_elections = no
-          }
+          set_politics = { ruling_party = neutrality }
         }
         MKS = {
           generate_character = {
@@ -1624,10 +1602,7 @@
               promote_leader = yes
             }
           }
-          set_politics = {
-            ruling_party = neutrality
-            allow_elections = no
-          }
+          set_politics = { ruling_party = neutrality }
           set_party_name = {
             ideology = neutrality
             long_name = MDL_MKS_FED_PARTY_LONG
@@ -1779,10 +1754,7 @@
           }
           ABY = { MDL = { transfer_technology = yes } }
           load_oob = "MDL_army"
-          set_politics = {
-            ruling_party = fascism
-            allow_elections = no
-          }
+          set_politics = { ruling_party = fascism }
           country_event = { id = manedalusia.60 days = 1 }
         }
       } 
@@ -1830,10 +1802,7 @@
           }
           ABY = { MDL = { transfer_technology = yes } }
           load_oob = "MDL_army"
-          set_politics = {
-            ruling_party = fascism
-            allow_elections = no
-          }
+          set_politics = { ruling_party = fascism }
           country_event = { id = manedalusia.60 days = 1 }
         }
       }
@@ -2038,10 +2007,7 @@
             }
             promote_leader = yes
           }
-          set_politics = {
-            ruling_party = neutrality
-            allow_elections = no       
-          }
+          set_politics = { ruling_party = neutrality }
           set_party_name = {
             ideology = neutrality
             long_name = MDL_KLG_FED_PARTY_LONG
@@ -2520,10 +2486,7 @@
       retire_character = MDL_almanezor
       retire_character = MDL_clover_breeze
 
-      set_politics = {
-        ruling_party = fascism
-        allow_elections = no
-      }
+      set_politics = { ruling_party = fascism }
       remove_ideas = MDL_madgriff_in_the_harbor
       remove_ideas = MDL_humbled_sultanate
       add_ideas = MDL_ash_shuhud_resistance
@@ -2639,10 +2602,7 @@
         }
         promote_leader = yes
       }
-      set_politics = {
-        ruling_party = neutrality
-        allow_elections = no
-      }
+      set_politics = { ruling_party = neutrality }
       add_country_leader_role = {
         character = MDL_zahid
         country_leader = {
@@ -2745,8 +2705,11 @@
       name = manedalusia.94.a
       custom_effect_tooltip = MDL_shahanshah_cucked_tt
 
-      MDL_BSG_setup = yes
-      release_puppet = BSG
+      hidden_effect = {
+        MDL_create_dynamic_BAT = yes
+        release_puppet = BAT
+      }
+      BAT = { set_cosmetic_tag = BAT_crimson_vassal }
     }
   }
 

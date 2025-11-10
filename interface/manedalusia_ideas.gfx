@@ -276,8 +276,8 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/MDL/MDL_manedalusian_industrious_pride.tga"
 	}
 	SpriteType = {
-		name = "GFX_idea_MDL_holy_zeal"
-		texturefile = "gfx/interface/ideas/MDL/MDL_holy_zeal.tga"
+		name = "GFX_idea_MDL_holy_zeal_idea"
+		texturefile = "gfx/interface/ideas/MDL/MDL_holy_zeal_idea.tga"
 	}
 	SpriteType = {
 		name = "GFX_idea_MDL_asabiyyah"

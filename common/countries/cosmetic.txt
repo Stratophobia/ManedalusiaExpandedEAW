@@ -1,6 +1,6 @@
 MDL_CHN = {
-	color = rgb { 60 64 86 }
-	color_ui = rgb { 60 64 86 }
+  color = rgb { 60 64 86 }
+  color_ui = rgb { 60 64 86 }
 }
 MDL_grand_sultanate = {
   color = rgb { 5 143 5 }
@@ -30,9 +30,13 @@ ABY_MDL_admin = {
   color = rgb { 5 143 5 }
   color_ui = rgb { 5 143 5 }
 }
-BSG_MDL_admin = {
+BAT_MDL_admin = {
   color = rgb { 5 143 5 }
   color_ui = rgb { 5 143 5 }
+}
+BAT_crimson_vassal = {
+  color = rgb { 130 30 30 }
+  color_ui = rgb { 130 30 30 }
 }
 ABY_FEDERATION = {
 	color = rgb { 0 24 117 }

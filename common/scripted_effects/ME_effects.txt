@@ -63,41 +63,86 @@ MDL_assign_general_staff_init = {
   } custom_effect_tooltip = MDL_clover_breeze_stats_tt
 }
 
-MDL_BSG_setup = {
-  hidden_effect = {
-    BSG = {
-      set_capital = {
-        state = 712
-        remember_old_capital = no
+MDL_create_dynamic_BAT = {
+  create_dynamic_country = {
+    original_tag = BAT
+    set_variable = { collaboration_formed_by = PREV }
+    set_temp_variable = { new_country = this }
+
+    PREV = {
+      every_controlled_state = {
+        limit = { occupied_country_tag = ABY }
+        var:new_country = { transfer_state = PREV }
       }
-      set_party_name = {
-        ideology = fascism
-        long_name = BAT_VASSAL_NAME_LONG
-        name = BAT_VASSAL_NAME
-      }
-      set_party_name = {
-        ideology = neutrality
-        long_name = BAT_VASSAL_NAME_LONG
-        name = BAT_VASSAL_NAME
-      }
-      set_party_name = {
-        ideology = democratic
-        long_name = BAT_VASSAL_NAME_LONG
-        name = BAT_VASSAL_NAME
-      }
-      load_focus_tree = { tree = generic_zebra_focus }
+      puppet = new_country
     }
-    every_owned_state = {
-      limit = {
-        OR = {
-          is_in_array = { state_original_cores = BAT }
-          is_in_array = { state_original_cores = WAR }
-          is_in_array = { state_original_cores = TBK }
-        }
-      }
-      add_core_of = BSG
+    load_focus_tree = { tree = generic_zebra_focus }
+    set_capital = {
+      state = 712
+      remember_old_capital = no
     }
-    MDL = { BSG = { transfer_technology = yes } }
+    set_party_name = {
+      ideology = fascism
+      long_name = BAT_VASSAL_NAME_LONG
+      name = BAT_VASSAL_NAME
+    }
+    set_party_name = {
+      ideology = neutrality
+      long_name = BAT_VASSAL_NAME_LONG
+      name = BAT_VASSAL_NAME
+    }
+    set_party_name = {
+      ideology = democratic
+      long_name = BAT_VASSAL_NAME_LONG
+      name = BAT_VASSAL_NAME
+    }
+    generate_character = {
+      token_base = BAT_purification_committee
+      name = BAT_purification_committee
+    }
+    set_portraits = {
+      character = BAT_purification_committee
+      civilian = {
+        large = "gfx/leaders/MDL/BAT_purification_committee.tga"
+      }
+    }
+    add_country_leader_role = {
+      character = BAT_purification_committee
+      country_leader = {
+        ideology = ultranationalism
+        expire = "1965.1.1.1"
+        id=-1
+      }
+      promote_leader = yes
+    }
+    add_country_leader_role = {
+      character = BAT_purification_committee
+      country_leader = {
+        ideology = theocracy_subideology
+        expire = "1965.1.1.1"
+        id=-1
+      }
+      promote_leader = yes
+    }
+    add_country_leader_role = {
+      character = BAT_purification_committee
+      country_leader = {
+        ideology = harmonic_theocracy
+        expire = "1965.1.1.1"
+        id=-1
+      }
+      promote_leader = yes
+    }
+    add_ideas = {
+      pony_race
+      poverty5
+      outdated_industry
+      lack_of_scientists2
+      better_science_base
+      civilian_economy
+    }
+    MDL = { BAT = { transfer_technology = yes } }
+    set_AI_strategies_on_every_possible_country_delayed = yes
   }
 }
 
@@ -167,7 +212,7 @@ MDL_create_dynamic_ABY = {
     }
     MDL = { ABY = { transfer_technology = yes } }
     set_AI_strategies_on_every_possible_country_delayed = yes
-  }  
+  }
 }
 
 MDL_create_dynamic_MGY = {
@@ -237,8 +282,9 @@ MDL_create_dynamic_MGY = {
       better_science_base
       civilian_economy
     }
+    MDL = { MGY = { transfer_technology = yes } }
     set_AI_strategies_on_every_possible_country_delayed = yes
-  }  
+  }
 }
 
 MDL_create_dynamic_DRG = {
@@ -319,7 +365,7 @@ MDL_elevate_virianthrax = {
       large="gfx/leaders/MDL/virianthrax.tga"
     }
     army = {
-      large = "gfx/leaders/MDL/MDL_virianthrax.tga"
+      large = "gfx/leaders/MDL/virianthrax.tga"
     }
   }
   add_country_leader_role = {
@@ -463,11 +509,10 @@ MDL_get_all_resources_ABY_MGY = {
   }
 }
 
-#only use for custom puppet tag BSG
 MDL_get_all_resources_BAT = {
-  BSG = {
+  BAT = {
     every_owned_state = {
-      BSG = {
+      BAT = {
         give_resource_rights = {
           receiver = MDL
           state = PREV
@@ -537,10 +582,7 @@ MDL_increase_conscription = {
     limit = { has_idea = service_by_requirement }
 		add_ideas = all_adults_serve
 	}
-	else = {
-		limit = { has_idea = all_adults_serve }
-		add_manpower = 10000
-	}
+	else = { add_manpower = 10000 }
 }
 
 #Grifo path only. heteronym setup

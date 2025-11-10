@@ -367,9 +367,11 @@ MDL_shield_doctrine_tab = {
     }
     cost = 25
     complete_effect = {
-      MDL_BSG_setup = yes
-      hidden_effect = { BSG = { set_cosmetic_tag = BSG_MDL_admin } }
-      release_puppet = BSG
+      hidden_effect = {
+        MDL_create_dynamic_BAT = yes
+        release_puppet = BAT
+      }
+      BAT = { set_cosmetic_tag = BAT_MDL_admin }
     }
   }
   MDL_shield_puppet_ABY = {
@@ -657,7 +659,7 @@ MDL_holy_war_tab = {
   MDL_operation_sundown = {
     icon = crossed_swords
     visible = {
-      BSG = { is_subject_of = ROOT }
+      BAT = { is_subject_of = ROOT }
       EQC = {
         OR = {
           is_in_faction_with = EQS
@@ -1083,7 +1085,6 @@ MDL_republican_war_decisions_tab = {
 MDL_crimson_war_tab = {
   MDL_crimson_war_riseia = {
     icon = GFX_decision_infiltrate_state
-    visible = { has_country_flag = MDL_crimson_war_decisions_unlocked }
     available = { 956 = { is_owned_and_controlled_by = ROOT } }
     fire_only_once = yes
     cost = 25
@@ -1104,7 +1105,6 @@ MDL_crimson_war_tab = {
     }
   }
   MDL_crimson_war_great_lakes = {
-    visible = { has_country_flag = MDL_crimson_war_decisions_unlocked }
     icon = GFX_decision_infiltrate_state
     fire_only_once = yes
     cost = 25
@@ -1160,7 +1160,6 @@ MDL_crimson_war_tab = {
   MDL_crimson_war_bats = {
     icon = GFX_decision_infiltrate_state
     visible = {
-      has_country_flag = MDL_crimson_war_decisions_unlocked
       BAT = {
         exists = yes
         is_subject = no
@@ -1180,7 +1179,6 @@ MDL_crimson_war_tab = {
   }
   MDL_crimson_war_zar_puppet = {
     visible = {
-      has_country_flag = MDL_crimson_war_decisions_unlocked
       ZAR = { exists = no }
       owns_state = 755
     }
@@ -1200,7 +1198,6 @@ MDL_crimson_war_tab = {
     }
   }
   MDL_crimson_war_hestraya = {
-    visible = { has_country_flag = MDL_crimson_war_decisions_unlocked }
     icon = GFX_decision_infiltrate_state
     available = {
       868 = { is_owned_and_controlled_by = ROOT }

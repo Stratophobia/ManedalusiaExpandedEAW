@@ -340,17 +340,17 @@ ideas = {
     }
 	}
 
-	country = {
-		MDL_humbled_sultanate = {
-			picture = MDL_humbled_sultanate
-			modifier = {
-				political_power_factor = -0.25
-				stability_factor = -0.1
-				army_morale_factor = -0.1
-				army_org_factor = -0.05
-			}
-		}
-
+###MANEDALUSIAN IDEAS###
+  country = {
+    MDL_humbled_sultanate = {
+      picture = MDL_humbled_sultanate
+      modifier = {
+        political_power_factor = -0.25
+        stability_factor = -0.1
+        army_morale_factor = -0.1
+        army_org_factor = -0.05
+      }
+    }
     MDL_destroyed_army = {
       picture = unhappy_army_3
       modifier = {
@@ -360,69 +360,58 @@ ideas = {
         surrender_limit = -0.35
       }
     }
-	}
-	country = {
-		MDL_madgriff_in_the_harbor = {
-			picture = MDL_madgriff_in_the_harbor
-			modifier = {
-				stability_factor = -0.05
-				fascism_drift = 0.10
-			}
-		}
-	}
-	country = {
-		MDL_holy_zeal_1 = {
-      name = MDL_holy_zeal
-			picture = MDL_holy_zeal
-			modifier = {
+    MDL_madgriff_in_the_harbor = {
+      picture = MDL_madgriff_in_the_harbor
+      modifier = {
+        stability_factor = -0.05
+        fascism_drift = 0.10
+      }
+    }
+    MDL_holy_zeal_idea = {
+      picture = MDL_holy_zeal_idea
+      modifier = {
         army_org_factor = 0.05
-				war_support_factor = 0.05
-				conscription_factor = 0.05
-			}
-		}
-    MDL_holy_zeal_2 = {
-      name = MDL_holy_zeal
-      picture = MDL_holy_zeal
+        war_support_factor = 0.05
+        conscription_factor = 0.05
+      }
+    }
+    MDL_holy_zeal_idea_2 = {
+      name = MDL_holy_zeal_idea
+      picture = MDL_holy_zeal_idea
       modifier = {
         army_org_factor = 0.05
         war_support_factor = 0.15
-				conscription_factor = 0.05
+        conscription_factor = 0.05
         army_morale_factor = 0.05
       }
     }
     MDL_manedalusian_industrious_pride = {
-			picture = MDL_industrious_pride
-			equipment_bonus = {
-				artillery_equipment = { build_cost_ic = -0.05 instant = yes }
-				infantry_equipment = { build_cost_ic = -0.1 instant = yes }
-			}
-		}
-  }
-	country = {
-		MDL_place_in_the_sun_idea = {
-			picture = MDL_place_in_the_sun_idea
-			modifier = {
-				stability_factor = 0.10
-				political_power_gain = 0.05
-				drift_defence_factor = 0.30
-			}
-		}
-	}
-	country = {
-		MDL_qadi_away = {
-			picture = MDL_coltoba_city
-			modifier = {
-				stability_factor = -0.10
-				political_power_factor = -0.10
-			}
-		}
-	}
-  country = {
+      picture = MDL_industrious_pride
+      equipment_bonus = {
+        artillery_equipment = { build_cost_ic = -0.05 instant = yes }
+        infantry_equipment = { build_cost_ic = -0.1 instant = yes }
+      }
+    }
+    MDL_place_in_the_sun_idea = {
+      picture = MDL_place_in_the_sun_idea
+      modifier = {
+        stability_factor = 0.10
+        political_power_gain = 0.05
+        drift_defence_factor = 0.30
+      }
+    }
+    MDL_qadi_away = {
+      picture = MDL_coltoba_city
+      modifier = {
+        stability_factor = -0.10
+        political_power_factor = -0.10
+      }
+    }
     MDL_magical_reloading = {
       picture = MDL_magical_reloading
       modifier = {
-				army_artillery_attack_factor = 0.15
-			}
+        army_artillery_attack_factor = 0.15
+      }
       equipment_bonus = {
         artillery_equipment = {
           soft_attack = 0.05
@@ -432,8 +421,6 @@ ideas = {
         }
       }
     }
-  }
-  country = {
     MDL_magical_engines = {
       picture = MDL_magical_engines
       equipment_bonus = {
@@ -449,8 +436,6 @@ ideas = {
         }
       }
     }
-  }
-  country = {
     MDL_koltaliba_commissars_idea = {
       picture = MDL_koltaliba_commissars
       modifier = {
@@ -458,20 +443,16 @@ ideas = {
         supply_consumption_factor = -0.10
       }
     }
-  }
-  country = {
     MDL_koltaliba_regimentation = {
       picture = MDL_koltaliba_regimentation
       modifier = {
         special_forces_cap = 0.15
         special_forces_no_supply_grace = 72
-				heat_attrition_factor = -0.15
+        heat_attrition_factor = -0.15
         special_forces_out_of_supply_factor = -0.15
         special_forces_training_time_factor = 0.2
       }
     }
-  }
-  country = {
     MDL_industrial_council = {
       picture = MDL_industrial_council
       modifier = {
@@ -480,8 +461,6 @@ ideas = {
         industrial_capacity_factory = 0.05
       }
     }
-  }
-  country = {
     MDL_citizen_guard_idea = {
       picture = MDL_citizen_guard1
       modifier = {
@@ -490,8 +469,6 @@ ideas = {
         compliance_growth = 0.10
       }
     }
-  }
-  country = {
     MDL_streamlined_tank_production = {
       picture = MDL_streamlined_tank_production
       equipment_bonus = {
@@ -502,8 +479,6 @@ ideas = {
         }
       }
     }
-  }
-  country = {
     MDL_manedalusian_rangers_idea = {
       picture = BAR_fire_and_sword
       modifier = {
@@ -512,8 +487,6 @@ ideas = {
         special_forces_defence_factor = 0.10
       }
     }
-  }
-  country = {
     MDL_merchant_fleet_idea = {
       picture = MDL_merchant_fleet
       equipment_bonus = {
@@ -523,8 +496,6 @@ ideas = {
         }
       }
     }
-  }
-  country = {
     MDL_coltoba_shipyards_idea = {
       picture = MDL_coltoba_shipyards1
       modifier = {
@@ -546,8 +517,6 @@ ideas = {
         }
       }
     }
-  }
-  country = {
     MDL_grand_zoco_idea = {
       picture = MDL_grand_zoco_idea
       modifier = {
@@ -556,8 +525,6 @@ ideas = {
         production_factory_efficiency_gain_factor = 0.10
       }
     }
-  }
-  country = {
     MDL_golden_coast_idea = {
       picture = MDL_golden_coast
       modifier = {
@@ -567,8 +534,6 @@ ideas = {
         industrial_capacity_dockyard = 0.05
       }
     }
-  }
-  country = {
     MDL_grand_admiralty_idea = {
       picture = MDL_grand_admiralty
       modifier = {
@@ -576,8 +541,6 @@ ideas = {
         naval_doctrine_cost_factor = -0.10
       }
     }
-  }
-  country = {
     MDL_naval_depots_idea = {
       picture = MDL_naval_depots_idea
       modifier = {
@@ -587,8 +550,6 @@ ideas = {
         production_speed_dockyard_factor = 0.10
       }
     }
-  }
-  country = {
     MDL_coffee_trade = {
       picture = MDL_coffee_trade
       modifier = {
@@ -596,8 +557,6 @@ ideas = {
         production_factory_max_efficiency_factor = 0.05
       }
     }
-  }
-  country = {
     MDL_colthage_treaty = {
       picture = MDL_colthage_treaty1
       cancel = {
@@ -609,22 +568,18 @@ ideas = {
       modifier = {
         political_power_gain = 0.05
         consumer_goods_factor = -0.05
-				production_factory_efficiency_gain_factor = 0.05
+        production_factory_efficiency_gain_factor = 0.05
       }
     }
-  }
-  country = {
     MDL_grand_army = {
       picture = GRI_hat
       modifier = {
-				max_command_power = 10
-				command_power_gain = 0.05
-				experience_gain_army = 0.01
-				land_doctrine_cost_factor = -0.10
-			}
+        max_command_power = 10
+        command_power_gain = 0.05
+        experience_gain_army = 0.01
+        land_doctrine_cost_factor = -0.10
+      }
     }
-  }
-  country = {
     MDL_jizya_idea = {
       picture = MDL_jizya
       modifier = {
@@ -633,8 +588,6 @@ ideas = {
         MONTHLY_POPULATION = -0.20
       }
     }
-  }
-  country = {
     MDL_gunpowder_empire_idea = {
       picture = MDL_gunpowder_empire1
       modifier={
@@ -650,8 +603,6 @@ ideas = {
         }
       }
     }
-  }
-  country = {
     MDL_moonstriker_vizier = {
       picture = MDL_vizier_moonstriker
       modifier = {
@@ -659,8 +610,6 @@ ideas = {
         research_speed_factor = 0.025
       }
     }
-  }
-  country = {
     MDL_qadi_vizier = {
       picture = MDL_vizier_qadi
       modifier = {
@@ -668,8 +617,6 @@ ideas = {
           consumer_goods_factor = -0.05
       }
     }
-  }
-  country = {
     MDL_KAR_shahdom = {
       picture = MDL_KAR_shahdom
       modifier = {
@@ -677,44 +624,34 @@ ideas = {
         conscription_factor = -0.10
       }
     }
-  }
-  country = {
-		MDL_bomber_pilots_idea = {
-			picture = FRA_army_of_aggression_focus
-			modifier = {
-				air_strategic_bomber_bombing_factor = 0.15
-				air_accidents_factor = -0.10
-			}
-		}
-	}
-  country = {
-		MDL_unstoppable_pilots_idea = {
-			picture = FRA_army_of_aggression_focus
-			modifier = {
-				air_night_penalty = -0.30
-				air_weather_penalty = -0.30
-			}
-		}
-	}
-  country = {
+    MDL_bomber_pilots_idea = {
+      picture = FRA_army_of_aggression_focus
+      modifier = {
+        air_strategic_bomber_bombing_factor = 0.15
+        air_accidents_factor = -0.10
+      }
+    }
+    MDL_unstoppable_pilots_idea = {
+      picture = FRA_army_of_aggression_focus
+      modifier = {
+        air_night_penalty = -0.30
+        air_weather_penalty = -0.30
+      }
+    }
     MDL_looting_abyssinia = {
       picture = generic_purge
       modifier = {
         supply_consumption_factor = -0.50
       }
     }
-  }
-  country = {
     MDL_abyssinian_genocide = {
       picture = generic_purge
       modifier = {
         stability_factor = -0.15
         non_core_manpower = -3.0
-				fascism_drift = 0.03
+        fascism_drift = 0.03
       }
     }
-  }
-  country = {
     MDL_federal_assembly_1 = {
       picture = MDL_federal_assembly
       modifier = {
@@ -722,8 +659,6 @@ ideas = {
         trade_laws_cost_factor = -0.05
       }
     }
-  }
-  country = {
     MDL_federal_assembly_2 = {
       picture = MDL_federal_assembly
       modifier = {
@@ -732,8 +667,6 @@ ideas = {
         high_command_cost_factor = -0.10
       }
     }
-  }
-  country = {
     MDL_federal_constitution_idea = {
       picture = MDL_federal_constitution
       modifier = {
@@ -752,8 +685,6 @@ ideas = {
         weekly_manpower = 150
       }
     }
-  }
-  country = {
     MDL_federation_joint_development = {
       picture = MDL_federation_joint_development
       modifier={
@@ -764,8 +695,6 @@ ideas = {
         train_equipment = { build_cost_ic = -0.50 }
       }
     }
-  }
-  country = {
     MDL_federation_member = {
       picture = MDL_federation_member
       modifier = {
@@ -774,18 +703,14 @@ ideas = {
         min_export = 0.05
       }
     }
-  }
-  country = {
     MDL_KLG_FED_idea = {
       picture = FRA_factory_strikes
       modifier = {
         production_factory_max_efficiency_factor = 0.10
-				industrial_capacity_factory = 0.10
-				production_speed_buildings_factor = 0.05
+        industrial_capacity_factory = 0.10
+        production_speed_buildings_factor = 0.05
       }
     }
-  }
-  country = {
     MDL_qunsul_idea = {
       picture = MDL_qunsul
       modifier = {
@@ -793,8 +718,6 @@ ideas = {
         political_power_gain = 0.05
       }
     }
-  }
-  country = {
     MDL_queen_morticia = {
       picture = ABY_morticia
       modifier = {
@@ -808,8 +731,6 @@ ideas = {
         consumer_goods_factor = 0.25
       }
     }
-  }
-  country = {
     MDL_paying_MGY_1 = {
       picture = HUN_treaty_of_triannon
       modifier = {
@@ -817,17 +738,13 @@ ideas = {
         consumer_goods_factor = -0.25
       }
     }
-  }
-  country = {
     MDL_aaliyah_monument = {
-			picture = MDL_aaliyah_monument
-			modifier = {
-				consumer_goods_factor = -0.05
-				production_speed_buildings_factor = 0.10
-			}
-		}
-  }
-  country = {
+      picture = MDL_aaliyah_monument
+      modifier = {
+        consumer_goods_factor = -0.05
+        production_speed_buildings_factor = 0.10
+      }
+    }
     MDL_bulwark_of_harmony_idea = {
       picture = EQS_harmonic_stagnation2
       modifier = {
@@ -836,8 +753,6 @@ ideas = {
         army_core_defence_factor = 0.15
       }
     }
-  }
-  country = {
     MDL_expeditionary_corps_idea = {
       picture = MDL_expeditionary_corps
       modifier = {
@@ -848,26 +763,21 @@ ideas = {
         weekly_manpower = 150
       }
     }
-  }
-
-  country = {
     MDL_post_war_investment = {
-			picture = generic_goods_red_bonus
+      picture = generic_goods_red_bonus
       modifier = {
         political_power_gain = -0.05
-				industry_free_repair_factor = 0.1
-				industry_repair_factor = 0.1
-	  		production_speed_buildings_factor = 0.10
+        industry_free_repair_factor = 0.1
+        industry_repair_factor = 0.1
+        production_speed_buildings_factor = 0.10
       }
       targeted_modifier = {
-				tag = MDL
-				cic_to_target_factor = 0.05
-				extra_trade_to_target_factor = 0.15
-				trade_cost_for_target_factor = -0.1
-			}
+        tag = MDL
+        cic_to_target_factor = 0.05
+        extra_trade_to_target_factor = 0.15
+        trade_cost_for_target_factor = -0.1
+      }
     }
-  }
-  country = {
     MDL_starry_sea_exercises = {
       picture = EQS_harmonic_stagnation3
       modifier = {
@@ -875,8 +785,6 @@ ideas = {
         experience_gain_air = 0.01
       }
     }
-  }
-  country = {
     MDL_WNG_katren_accord_1 = {
       picture = HUN_treaty_of_triannon
       modifier = {
@@ -911,8 +819,6 @@ ideas = {
         consumer_goods_factor = 0.1
       }
     }
-  }
-  country = {
     MDL_sunmad_0 = {
       picture = FRA_scw_intervention_republicans_focus
       modifier = {
@@ -925,7 +831,7 @@ ideas = {
       picture = FRA_scw_intervention_republicans_focus
       modifier = {
         political_power_factor = -0.75
-				stability_factor = -0.30
+        stability_factor = -0.30
         army_morale_factor = -0.3
       }
     }
@@ -933,7 +839,7 @@ ideas = {
       picture = FRA_scw_intervention_republicans_focus
       modifier = {
         political_power_factor = -0.50
-				stability_factor = -0.20
+        stability_factor = -0.20
         army_morale_factor = -0.2
       }
     }
@@ -945,9 +851,7 @@ ideas = {
         army_morale_factor = -0.1
       }
     }
-  }
-#UNITED SULTANATE IDEAS
-  country = {
+###UNITED SULTANATE IDEAS###
     MDL_aby_war_attack_idea = {
       picture = generic_volunteer_expedition_bonus
       cancel = {
@@ -974,9 +878,7 @@ ideas = {
         defense_bonus_against = 0.05
       }
     }
-  }
-#SAMIRA IDEAS
-  country = {
+###SAMIRA IDEAS###
     MDL_national_census = {
       picture = MDL_national_census
       modifier = {
@@ -1060,9 +962,7 @@ ideas = {
         political_power_gain = 0.05
       }
     }
-  }
-#HOLY WAR IDEAS
-  country = {
+###HOLY WAR IDEAS###
     MDL_demon_of_the_outer_night = {
       picture = MDL_demon
       cancel = {
@@ -1186,9 +1086,7 @@ ideas = {
         army_defence_factor = 0.10
       }
     }
-  }
-#MIRAGE IDEAS
-  country = {
+###MIRAGE IDEAS###
     MDL_hisba_idea_1 = {
       picture = generic_purge#REPLACE
       modifier = {
@@ -1197,9 +1095,7 @@ ideas = {
         local_resources_factor = 0.05
       }
     }
-  }
-#ULTRAMAR IDEAS
-  country = {
+###ULTRAMAR IDEAS###
     MDL_ash_shuhud_resistance = {
       picture = MDL_native_resistance
       modifier = {
@@ -1207,16 +1103,14 @@ ideas = {
         stability_factor = -0.2
       }
     }
-  }
-  country = {
-		MDL_colonial_troops_idea = {
-			picture = MEX_politicised_army
+    MDL_colonial_troops_idea = {
+      picture = MEX_politicised_army
       modifier = {
-				non_core_manpower = 0.04
+        non_core_manpower = 0.04
         weekly_manpower = 200
         training_time_factor = -0.05
-			}
-		}
+      }
+    }
     MDL_southern_griffonian_society = {
       picture = generic_disjointed_gov
       modifier = {
@@ -1228,9 +1122,9 @@ ideas = {
     }
     MDL_colonial_arms_production_idea = {
       picture = generic_license_production
- 			equipment_bonus = {
-				infantry_equipment = { build_cost_ic = -0.20 instant = yes }
-			}
+      equipment_bonus = {
+        infantry_equipment = { build_cost_ic = -0.20 instant = yes }
+      }
     }
     MDL_pony_synthesis_idea = {
       picture = MDL_pony_synthesis
@@ -1240,7 +1134,7 @@ ideas = {
       }
     }
     MDL_pony_imperials_idea = {
-			picture = MDL_place_in_the_sun_idea
+      picture = MDL_place_in_the_sun_idea
       modifier = {
         political_power_factor = 0.05
         stability_factor = 0.05
@@ -1274,8 +1168,8 @@ ideas = {
     MDL_naval_academy_idea = {
       picture = MDL_naval_academy_idea
       research_bonus = {
-				naval_equipment = 0.10
-			}
+        naval_equipment = 0.10
+      }
     }
     MDL_naval_projection_idea = {
       picture = shipwaves
@@ -1386,10 +1280,10 @@ ideas = {
     MDL_spec_ops_idea = {
       picture = MDL_spec_ops
       modifier = {
-				special_forces_cap = 0.10
-				special_forces_attack_factor = 0.10
-				special_forces_defence_factor = 0.10
-			}
+        special_forces_cap = 0.10
+        special_forces_attack_factor = 0.10
+        special_forces_defence_factor = 0.10
+      }
     }
     MDL_corporativism_idea = {
       picture = generic_archonism_idea
@@ -1399,14 +1293,14 @@ ideas = {
       }
     }
     MDL_imperial_logistical_corps = {
-			picture = general_staff
-			modifier = {
-			  attrition = -0.05
-				supply_consumption_factor = -0.05
-				out_of_supply_factor = -0.10
-				no_supply_grace = 24
-			}
-		}
+      picture = general_staff
+      modifier = {
+        attrition = -0.05
+        supply_consumption_factor = -0.05
+        out_of_supply_factor = -0.10
+        no_supply_grace = 24
+      }
+    }
     MDL_imperial_artillery_barrage = {
       picture = MDL_nonstop_barrage
       equipment_bonus = {
@@ -1440,10 +1334,10 @@ ideas = {
     }
     MDL_shadowweavers = {
       picture = CHN_political_divisions
-			modifier = {
-				crypto_strength = 1
-				encryption_factor = 0.15
-			}
+      modifier = {
+        crypto_strength = 1
+        encryption_factor = 0.15
+      }
     }
     MDL_native_affairs_idea = {
       picture = generic_constitutional_guarantee
@@ -1475,13 +1369,13 @@ ideas = {
       cancel = { is_ai = no }
       removal_cost = -1
 
-			modifier = {
-				training_time_army_factor = 0.75
-				industrial_capacity_factory = -0.90
+      modifier = {
+        training_time_army_factor = 0.75
+        industrial_capacity_factory = -0.90
         political_power_factor = -0.90
         army_morale_factor = -0.99
         surrender_limit = -0.50
-			}
+      }
       targeted_modifier = {
         tag = EQS
         attack_bonus_against = -0.99
@@ -1496,7 +1390,7 @@ ideas = {
         attack_bonus_against_cores = -0.99
         breakthrough_bonus_against = -0.99
       }
-		}
+    }
   }
 }
 

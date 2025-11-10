@@ -2077,11 +2077,11 @@ spriteTypes = {
     legacy_lazy_load = no
   }
   SpriteType = {
-    name = "GFX_focus_MDL_enforce_jizya_shine"
-    texturefile = "gfx/interface/goals/MDL/MDL_enforce_jizya.tga"
+    name = "GFX_focus_MDL_enforce_Jizya_shine"
+    texturefile = "gfx/interface/goals/MDL/MDL_enforce_Jizya.tga"
     effectFile = "gfx/FX/buttonstate.lua"
     animation = {
-      animationmaskfile = "gfx/interface/goals/MDL/MDL_enforce_jizya.tga"
+      animationmaskfile = "gfx/interface/goals/MDL/MDL_enforce_Jizya.tga"
       animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
       animationrotation = -90.0
       animationlooping = no
@@ -2094,7 +2094,7 @@ spriteTypes = {
     }
 
     animation = {
-      animationmaskfile = "gfx/interface/goals/MDL/MDL_enforce_jizya.tga"
+      animationmaskfile = "gfx/interface/goals/MDL/MDL_enforce_Jizya.tga"
       animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
       animationrotation = 90.0
       animationlooping = no

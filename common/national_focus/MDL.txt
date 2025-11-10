@@ -895,7 +895,7 @@ shared_focus = {
   prerequisite = { focus = MDL_warplan_green }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_holy_zeal"
-    add_ideas = MDL_holy_zeal_1
+    add_ideas = MDL_holy_zeal_idea
 
     add_to_variable = {
       var = MDL_war_var
@@ -988,8 +988,8 @@ shared_focus = {
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_righteous_fury"
     swap_ideas = {
-      remove_idea = MDL_holy_zeal_1
-      add_idea = MDL_holy_zeal_2
+      remove_idea = MDL_holy_zeal_idea
+      add_idea = MDL_holy_zeal_idea_2
     }
   }
   search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_WAR_SUPPORT }
@@ -1161,7 +1161,7 @@ shared_focus = {
 
 shared_focus = {
   id = MDL_enforce_Jizya
-  icon = GFX_focus_MDL_enforce_jizya
+  icon = GFX_focus_MDL_enforce_Jizya
   x = 1
   y = 1
   relative_position_id = MDL_long_road_to_mareakech
@@ -1632,7 +1632,7 @@ shared_focus = {
   relative_position_id = MDL_western_zebrican_hegemony
   prerequisite = { focus = MDL_western_zebrican_hegemony }
   available = {
-    BAT = { all_original_cores_owned_by_ROOT = yes }
+    712 = { is_owned_and_controlled_by = ROOT }
     BAT = { exists = no }
   }
   bypass = {
@@ -1684,7 +1684,7 @@ shared_focus = {
   prerequisite = { focus = MDL_take_lands_in_lakes }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_universal_caliphate"
-    custom_effect_tooltip = MDL_caliphate_tt
+    effect_tooltip = { set_cosmetic_tag = MDL_caliphate }
     country_event = { id = manedalusia.47 }
   }
   search_filters = { FOCUS_FILTER_POLITICAL }
@@ -5348,7 +5348,7 @@ shared_focus = {
   
   relative_position_id = MDL_fortress_manedalusia
   available = {
-    BSG = { is_subject_of = ROOT }
+    BAT = { is_subject_of = ROOT }
   }
   prerequisite = { focus = MDL_fortress_manedalusia }
   prerequisite = { focus = MDL_speartip_of_harmony }
@@ -5438,14 +5438,14 @@ shared_focus = {
   relative_position_id = MDL_strike_thralls_of_darkness
   available = {
     has_completed_focus = MDL_holy_mandates
-    BSG = { is_subject_of = ROOT }
+    BAT = { is_subject_of = ROOT }
   }
   prerequisite = { focus = MDL_strike_thralls_of_darkness }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_holy_mandate_BAT"
     MDL_holy_war_gimp_the_republic = yes
     custom_effect_tooltip = MDL_holy_mandate_BAT_tt
-    BSG = { add_ideas = MDL_holy_mandate }
+    BAT = { add_ideas = MDL_holy_mandate }
     hidden_effect = { MDL_get_all_resources_BAT = yes }
     country_event = manedalusia.81
   }
@@ -5466,7 +5466,7 @@ shared_focus = {
     YMN = { exists = no }
   }
   available = {
-    BSG = { is_subject_of = ROOT }
+    BAT = { is_subject_of = ROOT }
   }
   prerequisite = { focus = MDL_rally_the_faithful }
   prerequisite = { focus = MDL_forges_of_klugetown }
@@ -5692,7 +5692,7 @@ shared_focus = {
         has_government = democratic
       }
     }
-    BSG = { is_subject_of = ROOT }
+    BAT = { is_subject_of = ROOT }
     ABY = { is_subject_of = ROOT }
     MGY = { is_subject_of = ROOT }
   }
@@ -9294,10 +9294,10 @@ shared_focus = {
       add_idea = MDL_koltaliba_rule_3
     }
     hidden_effect = {
-      MDL_BSG_setup = yes
-      BSG = { set_cosmetic_tag = BSG_MDL_admin }
+      MDL_create_dynamic_BAT = yes
+      release_puppet = BAT
     }
-    release_puppet = BSG
+    BAT = { set_cosmetic_tag = BAT_MDL_admin }
   }
 }
 

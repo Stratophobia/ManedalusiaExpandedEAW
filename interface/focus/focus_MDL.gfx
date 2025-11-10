@@ -268,8 +268,8 @@ spriteTypes = {
     textureFile = "gfx/interface/goals/MDL/MDL_empower_senate.tga"
   }
   SpriteType = {
-    name = "GFX_focus_MDL_enforce_jizya"
-    textureFile = "gfx/interface/goals/MDL/MDL_enforce_jizya.tga"
+    name = "GFX_focus_MDL_enforce_Jizya"
+    textureFile = "gfx/interface/goals/MDL/MDL_enforce_Jizya.tga"
   }
   SpriteType = {
     name = "GFX_focus_MDL_equestrian_investment"

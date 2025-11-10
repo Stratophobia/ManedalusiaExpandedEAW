@@ -33,7 +33,7 @@ on_actions = {
     effect = {
       if = {
         limit = {
-          has_country_tag = MDL_azir_war
+          has_country_flag = MDL_azir_war
           owns_state = 891#Azir
           has_war = no
         }
