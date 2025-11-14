@@ -106,12 +106,7 @@
 
     immediate = {
       hidden_effect = {
-        MDL = {
-          MDL_remove_ABY_templates = yes
-          load_focus_tree = {
-            tree = manedalusia_start
-          }
-        }
+        MDL = { load_focus_tree = manedalusia_start }
       }
     }
 
@@ -152,13 +147,7 @@
       }
       release = MDL
       hidden_effect = {
-        MDL = {
-          load_focus_tree = {
-            tree = manedalusia_start
-          }
-          MDL_remove_ABY_templates = yes
-          load_oob = "MDL_1007"
-        }
+        MDL = { MDL_set_init_templates = yes }
       }
     }
 
@@ -170,13 +159,7 @@
       release = MDL
       MDL = { change_tag_from = ROOT }
       hidden_effect = {
-        MDL = {
-          load_focus_tree = {
-            tree = manedalusia_start
-          }
-          MDL_remove_ABY_templates = yes
-          load_oob = "MDL_1007"
-        }
+        MDL = { MDL_set_init_templates = yes }
       }
     }
   }
@@ -271,6 +254,7 @@
         name = MDL_SAYF_PARTY_1
       }
       hidden_effect = {
+        MDL_grant_init_ship_templates = yes
         if = {
           limit = { NOT = { has_dlc = "Man the Guns" } }
           load_oob = "MDL_grifo_fleet_legacy"
@@ -279,8 +263,6 @@
           limit = { has_dlc = "Man the Guns" }
           load_oob = "MDL_grifo_fleet"
         }
-      }
-      hidden_effect = {
         add_country_leader_role = {
           character = MDL_crimson_sayf
           country_leader = {
@@ -291,7 +273,7 @@
           promote_leader = yes
         }
       }
-      add_popularity = { ideology = fascism popularity = 0.1 }
+      add_popularity = { ideology = fascism popularity = 0.10 }
     }
   }
 
@@ -1721,10 +1703,8 @@
       }
       hidden_effect = {
         MDL = {
-          MDL_remove_ABY_templates = yes
-          load_focus_tree = {
-            tree = manedalusia_sayf_genocide
-          }
+          MDL_set_init_templates = yes
+          load_focus_tree = manedalusia_sayf_genocide
           ABY = { MDL = { transfer_technology = yes } }
           load_oob = "MDL_army"
           set_politics = { ruling_party = fascism }
@@ -2321,7 +2301,6 @@
 
     option = {
       name = manedalusia.84.a
-
       add_country_leader_role = {
         character = MDL_grandmistress_samira
         country_leader = {
@@ -2337,7 +2316,6 @@
         long_name = MDL_SAMIRA_PARTY_NAME_LONG
         name = MDL_SAMIRA_PARTY_NAME
       }
-
       country_event = { id = manedalusia.88 days = 5 }
     }
   }
@@ -2469,6 +2447,7 @@
       hidden_effect = {
         set_country_flag = MDL_grifo_takeover
         set_country_flag = MDL_laylah_absent
+        MDL_grant_init_ship_templates = yes
         if = {
           limit = { NOT = { has_dlc = "Man the Guns" } }
           load_oob = "MDL_grifo_fleet_legacy"

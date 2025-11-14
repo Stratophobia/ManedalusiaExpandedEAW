@@ -2843,7 +2843,7 @@ shared_focus = {
   prerequisite = { focus = MDL_protect_the_skies }
   prerequisite = { focus = MDL_alchemical_investment }
   completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus MDL_grand_army_of_al_manedalus"
+    log = "[GetDateText]: [Root.GetName]: Focus MDL_grand_army_of_al_manedalus"
     if = {
       limit = {
         NOT = { has_country_flag = MDL_holy_war_active }
@@ -2865,7 +2865,7 @@ shared_focus = {
   available = {
     741 = { is_owned_and_controlled_by = ROOT }
     738 = { is_owned_and_controlled_by = ROOT }
-	  740 = { is_owned_and_controlled_by = ROOT }
+    740 = { is_owned_and_controlled_by = ROOT }
   }
 
   allow_branch = {
@@ -2885,6 +2885,7 @@ shared_focus = {
         instant_build = yes
       }
     }
+    MDL_grant_init_ship_templates = yes
   }
   search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_NAVY_BONUS }
 }

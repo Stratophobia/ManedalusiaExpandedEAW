@@ -1,8 +1,11 @@
-MDL_remove_ABY_templates = {
-  delete_unit_template_and_units = { division_template = "Local Levy" }
-  delete_unit_template_and_units = { division_template = "Clawa Regiment" }
-  delete_unit_template_and_units = { division_template = "Crown Guard" }
-  delete_unit_template_and_units = { division_template = "Highlander Regiment" }
+MDL_set_init_templates = {
+  hidden_effect = {
+    delete_unit_template_and_units = { division_template = "Local Levy" }
+    delete_unit_template_and_units = { division_template = "Clawa Regiment" }
+    delete_unit_template_and_units = { division_template = "Crown Guard" }
+    delete_unit_template_and_units = { division_template = "Highlander Regiment" }
+    load_oob = "MDL_1007"
+  }
 }
 
 MDL_assign_general_staff_init = {
@@ -1274,6 +1277,83 @@ MDL_conclude_warplan_green = {
     if = {
       limit = { has_country_flag = MDL_warplan_green_flag }
       clr_country_flag = MDL_warplan_green_flag
+    }
+  }
+}
+
+MDL_grant_init_ship_templates = {
+  custom_effect_tooltip = MDL_grant_init_ship_templates_tt
+  hidden_effect = {
+    if = {
+      limit = { has_dlc = "Man the Guns" }
+      set_technology = {
+		    early_ship_hull_submarine = 1
+        early_ship_hull_cruiser = 1
+        early_ship_hull_heavy = 1
+		    early_ship_hull_light = 1
+        basic_ship_hull_light = 1
+		    coastal_defense_ships = 1
+		    basic_battery = 1
+		    basic_depth_charges = 1
+		    basic_torpedo = 1
+        basic_light_battery = 1
+      }
+      #SUBS
+	    create_equipment_variant = {
+		    name = "Waka Waka Class"
+		    type = ship_hull_submarine_1
+		    name_group = MDL_SS_HISTORICAL
+		    parent_version = 0
+		    modules = {
+			    fixed_ship_torpedo_slot = ship_torpedo_sub_1
+			    fixed_ship_engine_slot = sub_ship_engine_1
+			    rear_1_custom_slot = ship_mine_layer_sub
+		    }
+	    }
+      #DESTROYERS
+      create_equipment_variant = {
+		    name = "Salmon-Eater Class"	
+		    type = ship_hull_light_1
+		    name_group = MDL_DD_HISTORICAL
+		    parent_version = 0
+		    modules = {
+			    fixed_ship_battery_slot = ship_light_battery_1
+			    fixed_ship_anti_air_slot = ship_anti_air_1
+			    fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			    fixed_ship_radar_slot = ship_sonar_1
+			    fixed_ship_engine_slot = light_ship_engine_1
+			    fixed_ship_torpedo_slot = ship_torpedo_1
+			    mid_1_custom_slot = ship_torpedo_1
+			    rear_1_custom_slot = ship_depth_charge_1
+		    }
+	    }
+      create_equipment_variant = {
+	      name = "Flea Class"
+	      type = ship_hull_cruiser_coastal_defense_ship	
+	      name_group = MDL_CA_HISTORICAL
+	      parent_version = 0
+	      modules = {
+		      fixed_ship_battery_slot = ship_heavy_battery_1
+		      fixed_ship_anti_air_slot = ship_anti_air_1
+		      fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+		      fixed_ship_radar_slot = empty
+		      fixed_ship_engine_slot = cruiser_ship_engine_1
+		      fixed_ship_secondaries_slot = ship_secondaries_1
+		      fixed_ship_armor_slot = ship_armor_cruiser_1
+		      front_1_custom_slot = ship_anti_air_1
+		      mid_1_custom_slot = ship_secondaries_1
+		      mid_2_custom_slot = ship_secondaries_1
+		      rear_1_custom_slot = ship_medium_battery_1
+	      }
+      }
+    }
+    else = {
+      hidden_effect = {
+        set_technology = {
+          early_light_cruiser = 1
+          early_submarine = 1
+        }
+      }
     }
   }
 }
