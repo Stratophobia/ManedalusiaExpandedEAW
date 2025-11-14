@@ -2286,9 +2286,7 @@ shared_focus = {
       uses = 3
       category = race_tech
     }
-    hidden_effect = {
-      country_event = { days = 10 id = manedalusia.21 }
-    }
+    country_event = { days = 10 id = manedalusia.21 }
   }
   search_filters = { FOCUS_FILTER_RESEARCH }
 }

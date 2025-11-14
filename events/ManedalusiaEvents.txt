@@ -254,7 +254,6 @@
         name = MDL_SAYF_PARTY_1
       }
       hidden_effect = {
-        MDL_grant_init_ship_templates = yes
         if = {
           limit = { NOT = { has_dlc = "Man the Guns" } }
           load_oob = "MDL_grifo_fleet_legacy"

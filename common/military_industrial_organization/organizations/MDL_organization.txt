@@ -294,9 +294,9 @@ MDL_moonstriker_labs_mio = {
     limit_to_equipment_type = { magical_equipment }
     equipment_bonus = {
       instant = yes
-      ap_attack = 0.05
+      ap_attack = 0.10
       soft_attack = 0.05
-      hard_attack = 0.05
+      hard_attack = 0.10
       defense = 0.05
       build_cost_ic = 0.05
     }
