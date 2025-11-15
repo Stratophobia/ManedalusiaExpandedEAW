@@ -224,6 +224,13 @@ MDL_office_of_artillery_mio = {
     original_tag = MDL
     has_dlc = "Arms Against Tyranny"
   }
+  available = {
+    owner = {
+      OR = {
+        has_completed_focus = MDL_bigger_cannons
+      }
+    }
+  }
   visible = {
     owner = {
       NOT = { has_country_flag = MDL_grifo_takeover }

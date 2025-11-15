@@ -52,12 +52,8 @@ MDL_fiqh_decisions_tab = {
   priority = 200
   allowed = { original_tag = MDL }
   visible = {
-    OR = {
-      has_completed_focus = MDL_fiqh_decisions
-      has_completed_focus = MDL_SAM08
-    }
+    has_power_balance = { id = MDL_theological_bop }
   }
-  icon = GFX_decision_category_MDL_fiqh
 }
 
 MDL_crimson_war_tab = {

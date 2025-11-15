@@ -33,6 +33,8 @@ add_ideas = {
 	MDL_madgriff_in_the_harbor
 }
 
+set_variable = { MDL_theological_bop_init_value = 0 }
+
 set_country_flag = has_custom_advisors
 set_country_flag = MDL_asabiyyah_unlocked
 add_dynamic_modifier = { modifier = MDL_asabiyyah_modifier }
@@ -63,7 +65,7 @@ set_variable = { MDL_FA_smash_var = 0 }
 set_variable = { MDL_FA_dig_in_var = 0 }#boolean
 
 set_stability = 0.45
-set_war_support = 0.45
+set_war_support = 0.35
 set_convoys = 25
 
 recruit_character = MDL_transitional_military_council

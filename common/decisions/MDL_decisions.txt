@@ -1,56 +1,63 @@
-MDL_debug_tab = {
+MDL_debug_tab_general = {
+  MDL_debug_starting_tree = {
+    visible = { is_debug = yes }
+    complete_effect = { load_focus_tree = manedalusia_start }
+  }
+  MDL_debug_main_tree = {
+    visible = { is_debug = yes }
+    complete_effect = { load_focus_tree = manedalusia_main }
+  }
+#  MDL_debug_ultramar_tree = {
+#    visible = { is_debug = yes }
+#    complete_effect = {
+#
+#    }
+#  }
+  MDL_debug_samira_tree = {
+    visible = { is_debug = yes }
+    complete_effect = { load_focus_tree = manedalusia_samira }
+  }
+}
+
+MDL_debug_tab_samira = {
   MDL_debug_samira_happiness_low = {
-    visible = {
-      is_debug = yes
-    }
+    visible = { is_debug = yes }
     complete_effect = {
       set_variable = { MDL_samira_happiness_score = 0 }
     }
   }
   MDL_debug_samira_happiness_medium = {
-    visible = {
-      is_debug = yes
-    }
+    visible = { is_debug = yes }
     complete_effect = {
       set_variable = { MDL_samira_happiness_score = 5 }
     }
   }
   MDL_debug_samira_happiness_high = {
-    visible = {
-      is_debug = yes
-    }
+    visible = { is_debug = yes }
     complete_effect = {
       set_variable = { MDL_samira_happiness_score = 10 }
     }
   }
   MDL_debug_samira_happiness_max = {
-    visible = {
-      is_debug = yes
-    }
+    visible = { is_debug = yes }
     complete_effect = {
       set_variable = { MDL_samira_happiness_score = 13 }
     }
   }
   MDL_debug_set_mehmet_fight_1 = {
-    visible = {
-      is_debug = yes
-    }
+    visible = { is_debug = yes }
     complete_effect = {
       set_variable = { MDL_mehmet_fight_level = 1 }
     }
   }
   MDL_debug_set_mehmet_fight_2 = {
-    visible = {
-      is_debug = yes
-    }
+    visible = { is_debug = yes }
     complete_effect = {
       set_variable = { MDL_mehmet_fight_level = 2 }
     }
   }
   MDL_debug_set_mehmet_fight_3 = {
-    visible = {
-      is_debug = yes
-    }
+    visible = { is_debug = yes }
     complete_effect = {
       set_variable = { MDL_mehmet_fight_level = 3 }
     }
@@ -1292,6 +1299,24 @@ MDL_wingbardy_war_tab = {
 }
 
 MDL_fiqh_decisions_tab = {
+  MDL_debug_traditionalists = {
+    visible = { is_debug = yes }
+    complete_effect = {
+      add_power_balance_value = {
+			  id = MDL_theological_bop
+			  value = -0.15
+		  }
+    }
+  }
+  MDL_debug_hermetics = {
+    visible = { is_debug = yes }
+    complete_effect = {
+      add_power_balance_value = {
+			  id = MDL_theological_bop
+			  value = 0.15
+		  }
+    }
+  }
   MDL_fiqh_1 = {#natural causality
     icon = GFX_decision_MDL_fiqh_1
     allowed = { original_tag = MDL }

@@ -45,10 +45,10 @@ MDL_assign_general_staff_init = {
   MDL_almanezor = {
     add_corps_commander_role = {
       traits = { pony_race_trait panzer_leader trait_reckless }
-      skill=3
+      skill=2
       attack_skill=4
-      defense_skill=2
-      planning_skill=5
+      defense_skill=1
+      planning_skill=3
       logistics_skill=2
       desc= MDL_almanezor_desc
     }

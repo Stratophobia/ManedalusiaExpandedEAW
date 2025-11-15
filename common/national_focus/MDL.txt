@@ -2251,6 +2251,8 @@ shared_focus = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_fiqh_decisions"
     add_stability = 0.05
     custom_effect_tooltip = MDL_fiqh_decisions_unlocked_tt
+
+    set_power_balance = { id = MDL_theological_bop }
   }
   search_filters = { FOCUS_FILTER_POLITICAL }
 }
@@ -2299,10 +2301,8 @@ shared_focus = {
   y = 1
   relative_position_id = MDL_coltoba_university
   prerequisite = { focus = MDL_coltoba_university }
-  prerequisite = {
-    focus = MDL_look_to_our_roots
-    focus = MDL_manedalusia_industrialism
-  }
+  prerequisite = { focus = MDL_look_to_our_roots }
+  prerequisite = { focus = MDL_manedalusia_industrialism }
   completion_reward = {
     country_event = { id = manedalusia.24 }
     log = "[GetDateText]: [Root.GetName]: Focus MDL_place_in_the_sun"

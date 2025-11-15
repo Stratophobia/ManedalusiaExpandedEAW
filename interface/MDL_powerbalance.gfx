@@ -1,0 +1,27 @@
+spriteTypes = {
+  SpriteType = {
+    name = "GFX_bop_MDL_hermetic_side_active"
+    texturefile = "gfx/interface/bop/MDL_hermetic_side_active.tga"
+  }
+  SpriteType = {
+    name = "GFX_bop_MDL_hermetic_side_inactive"
+    texturefile = "gfx/interface/bop/MDL_hermetic_side_inactive.tga"
+  }
+  SpriteType = {
+    name = "GFX_bop_MDL_hermetic_side_superactive"
+    texturefile = "gfx/interface/bop/MDL_hermetic_side_superactive.tga"
+  }
+  SpriteType = {
+    name = "GFX_bop_MDL_traditionalist_side_active"
+    texturefile = "gfx/interface/bop/MDL_traditionalist_side_active.tga"
+  }
+  SpriteType = {
+    name = "GFX_bop_MDL_traditionalist_side_inactive"
+    texturefile = "gfx/interface/bop/MDL_traditionalist_side_inactive.tga"
+  }
+  SpriteType = {
+    name = "GFX_bop_MDL_traditionalist_side_superactive"
+    texturefile = "gfx/interface/bop/MDL_traditionalist_side_superactive.tga"
+  }
+}
+
