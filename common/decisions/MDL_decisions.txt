@@ -1270,11 +1270,8 @@ MDL_wingbardy_war_tab = {
   MDL_wingbardy_war_mission = {
     allowed = { original_tag = MDL }
     visible = { has_country_flag = MDL_war_with_wingbardy }
-    
     is_good = yes
-
     available = { always = no }
-
     activation = {
       AND = {
         has_country_flag = MDL_war_with_wingbardy
@@ -1282,16 +1279,13 @@ MDL_wingbardy_war_tab = {
         NOT = { 784 = { is_controlled_by = WNG } }
       }
     }
-
     cancel_trigger = {
       OR = {
         1200 = { is_controlled_by = WNG }
         784 = { is_controlled_by = WNG }
       }
     }
-
     days_mission_timeout = 45
-
     timeout_effect = {
       country_event = { id = manedalusia.43 }
     }
@@ -1317,13 +1311,37 @@ MDL_fiqh_decisions_tab = {
 		  }
     }
   }
+  MDL_favor_traditionalists = {
+    icon = GFX_decision_MDL_favor_traditionalists
+    allowed = { original_tag = MDL }
+    cost = 100
+    days_remove = 50
+    remove_effect = {
+      add_power_balance_value = {
+        id = MDL_theological_bop
+        value = -0.10
+      }
+    }
+  }
+  MDL_favor_hermetics = {
+    icon = GFX_decision_MDL_favor_hermetics
+    allowed = { original_tag = MDL }
+    cost = 100
+    days_remove = 50
+    remove_effect = {
+      add_power_balance_value = {
+        id = MDL_theological_bop
+        value = 0.10
+      }
+    }
+  }
   MDL_fiqh_1 = {#natural causality
     icon = GFX_decision_MDL_fiqh_1
     allowed = { original_tag = MDL }
     cost = 50
     fire_only_once = yes
     complete_effect = {
-      country_event = { id = manedalusia.30 }
+      country_event = manedalusia.30
     }
   }
   MDL_fiqh_2 = {#the princesses
@@ -1332,7 +1350,7 @@ MDL_fiqh_decisions_tab = {
     cost = 50
     fire_only_once = yes
     complete_effect = {
-      country_event = { id = manedalusia.31 }
+      country_event = manedalusia.31
     }
   }
   MDL_fiqh_3 = {#qadi authority
@@ -1341,7 +1359,7 @@ MDL_fiqh_decisions_tab = {
     cost = 50
     fire_only_once = yes
     complete_effect = {
-      country_event = { id = manedalusia.32 }
+      country_event = manedalusia.32
     }
   }
   MDL_fiqh_4 = {#kalam
@@ -1350,7 +1368,7 @@ MDL_fiqh_decisions_tab = {
     cost = 50
     fire_only_once = yes
     complete_effect = {
-      country_event = { id = manedalusia.33 }
+      country_event = manedalusia.33
     }
   }
   MDL_fiqh_5 = {#free will
@@ -1359,7 +1377,7 @@ MDL_fiqh_decisions_tab = {
     cost = 50
     fire_only_once = yes
     complete_effect = {
-      country_event = { id = manedalusia.34 }
+      country_event = manedalusia.34
     }
   }
 }

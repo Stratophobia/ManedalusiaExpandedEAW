@@ -63,11 +63,15 @@ spriteTypes = {
     name = GFX_decision_category_MDL_crimson_war
     texturefile = "gfx/interface/decisions/MDL/cat/MDL_crimson_war.tga"
   }
-  SpriteType = {
-    name="GFX_decision_category_MDL_fiqh"
-    texturefile="gfx/interface/decisions/MDL/cat/MDL_fiqh.tga"
-  }
 ###FIQH###
+  SpriteType = {
+    name = "GFX_decision_MDL_favor_hermetics"
+    texturefile="gfx/interface/decisions/MDL/MDL_favor_hermetics.tga"
+  }
+  SpriteType = {
+    name = "GFX_decision_MDL_favor_traditionalists"
+    texturefile="gfx/interface/decisions/MDL/MDL_favor_traditionalists.tga"
+  }
   SpriteType = {
     name="GFX_decision_MDL_fiqh_1"
     texturefile="gfx/interface/decisions/MDL/MDL_fiqh_1.tga"

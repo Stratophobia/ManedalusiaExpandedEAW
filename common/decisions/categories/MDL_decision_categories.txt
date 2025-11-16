@@ -53,6 +53,7 @@ MDL_fiqh_decisions_tab = {
   allowed = { original_tag = MDL }
   visible = {
     has_power_balance = { id = MDL_theological_bop }
+    has_country_flag = MDL_fiqh_decisions_unlocked
   }
 }
 

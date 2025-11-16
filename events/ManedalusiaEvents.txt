@@ -436,6 +436,10 @@
 
     option = {
       name = manedalusia.14.a
+      add_power_balance_value = {
+        id = MDL_theological_bop
+        value = -0.05
+      }
     }
   }
 
@@ -793,7 +797,10 @@
     option = {#ashari
       name = manedalusia.30.a
       custom_effect_tooltip = MDL_asabiyyah_alteration_tt
-
+      add_power_balance_value = {
+        id = MDL_theological_bop
+        value = -0.10
+      }
       add_to_variable = {
         var = MDL_org_var
         value = 0.04
@@ -815,7 +822,10 @@
     option = {#Sineighis
       name = manedalusia.30.c
       custom_effect_tooltip = MDL_asabiyyah_alteration_tt
-
+      add_power_balance_value = {
+        id = MDL_theological_bop
+        value = 0.10
+      }
       add_to_variable = {
         var = MDL_research_var
         value = 0.10
@@ -844,6 +854,10 @@
         NOT = { has_country_flag = MDL_holy_war_active }
       }
       custom_effect_tooltip = MDL_asabiyyah_alteration_tt
+      add_power_balance_value = {
+        id = MDL_theological_bop
+        value = -0.05
+      }
       add_to_variable = {
         var = MDL_stability_var
         value = 0.10
@@ -894,6 +908,10 @@
             modifier = MDL_djinn_opinion
           }
         }
+      }
+      add_power_balance_value = {
+        id = MDL_theological_bop
+        value = 0.05
       }
       add_to_variable = {
         var = MDL_war_var
@@ -958,25 +976,37 @@
     option = {
       name = manedalusia.33.a
       custom_effect_tooltip = MDL_asabiyyah_alteration_tt
+      add_power_balance_value = {
+        id = MDL_theological_bop
+        value = -0.10
+      }
       add_to_variable = {
         var = MDL_org_var
-        value = 0.02
+        value = 0.03
       }
     }
     option = {
       name = manedalusia.33.b
       custom_effect_tooltip = MDL_asabiyyah_alteration_tt
+      add_power_balance_value = {
+        id = MDL_theological_bop
+        value = 0.05
+      }
       add_to_variable = {
         var = MDL_morale_var
-        value = 0.02
+        value = 0.03
       }
     }
     option = {
       name = manedalusia.33.c
       custom_effect_tooltip = MDL_asabiyyah_alteration_tt
+      add_power_balance_value = {
+        id = MDL_theological_bop
+        value = 0.15
+      }
       add_to_variable = {
         var = MDL_research_var
-        value = 0.05
+        value = 0.03
       }
     }
   }
@@ -990,14 +1020,26 @@
     option = {
       name = manedalusia.34.a
       custom_effect_tooltip = MDL_asabiyyah_alteration_tt
+      add_power_balance_value = {
+        id = MDL_theological_bop
+        value = 0.05
+      }
     }
     option = {
       name = manedalusia.34.b
       custom_effect_tooltip = MDL_asabiyyah_alteration_tt
+      add_power_balance_value = {
+        id = MDL_theological_bop
+        value = -0.10
+      }
     }
     option = {
       name = manedalusia.34.c
       custom_effect_tooltip = MDL_asabiyyah_alteration_tt
+      add_power_balance_value = {
+        id = MDL_theological_bop
+        value = -0.05
+      }
     }
   }
 
@@ -1162,10 +1204,18 @@
     option = {#qadi
       name = manedalusia.42.a
       add_ideas = MDL_qadi_vizier
+      add_power_balance_value = {
+        id = MDL_theological_bop
+        value = -0.10
+      }
     }
     option = {#moonstriker
       name = manedalusia.42.b
       add_ideas = MDL_moonstriker_vizier
+      add_power_balance_value = {
+        id = MDL_theological_bop
+        value = 0.15
+      }
     }
   }
 
@@ -2441,6 +2491,7 @@
       remove_ideas = MDL_madgriff_in_the_harbor
       remove_ideas = MDL_humbled_sultanate
       add_ideas = MDL_ash_shuhud_resistance
+      remove_power_balance = { id = MDL_theological_bop }
       custom_effect_tooltip = MDL_batshit_insane_tree_loaded_tt
       custom_effect_tooltip = MDL_grifo_tree_loaded_tt
       hidden_effect = {
@@ -2539,6 +2590,11 @@
         add_idea = MDL_humbled_sultanate
       }
 
+      set_power_balance = {
+        id = MDL_theological_bop
+        set_value = 0
+      }
+
       hidden_effect = {
         clr_country_flag = MDL_grifo_takeover
         set_country_flag = MDL_samira_country_leader
@@ -2591,6 +2647,10 @@
     option = {
       name = manedalusia.93.a
       custom_effect_tooltip = MDL_shahanshah_cucked_tt
+      add_power_balance_value = {
+        id = MDL_theological_bop
+        value = 0.05
+      }
       RIZ = {
         set_party_name = {
           ideology = fascism
@@ -2829,7 +2889,7 @@
       name = manedalusia.99.a
       MDL_fernao_grifo = {
         add_field_marshal_role = {
-          traits = { griffon_race_trait substance_abuser armchair_general promising_general }
+traits = { griffon_race_trait substance_abuser armchair_general promising_general }
           skill=1
           attack_skill=1
           defense_skill=1

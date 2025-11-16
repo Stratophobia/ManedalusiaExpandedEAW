@@ -1356,3 +1356,4 @@ MDL_grant_init_ship_templates = {
     }
   }
 }
+

@@ -1,5 +1,5 @@
 MDL_theological_bop = {
-  initial_value = var:MDL_theological_bop_init_value
+  initial_value = 0
   left_side = MDL_bop_traditionalist_side
   right_side = MDL_bop_hermetic_side
   decision_category = MDL_fiqh_decisions_tab
@@ -31,7 +31,7 @@ MDL_theological_bop = {
       min = -0.55
       max = -0.22
       modifier = {
-        army_morale_factor = 0.025
+        army_morale_factor = 0.050
         weekly_manpower = 50
       }
       on_activate = {
@@ -52,7 +52,7 @@ MDL_theological_bop = {
       min = -1.00
       max = -0.55
       modifier = {
-        army_morale_factor = 0.050
+        army_morale_factor = 0.075
         weekly_manpower = 100
       }
       on_activate = {

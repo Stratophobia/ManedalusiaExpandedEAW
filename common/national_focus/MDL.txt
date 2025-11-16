@@ -386,6 +386,10 @@ shared_focus = {
   }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_senate_path"
+    add_power_balance_value = {
+      id = MDL_theological_bop
+      value = 0.05
+    }
     country_event = manedalusia.13
     hidden_effect={
       load_focus_tree = {
@@ -460,7 +464,6 @@ shared_focus = {
   cost = 1
   prerequisite = { focus = MDL_deal_with_the_madgriff }
   mutually_exclusive = { focus = MDL_lean_on_legacy focus = MDL_try_for_socialism }
-
   allow_branch={
     if = {
       NOT = {
@@ -473,6 +476,10 @@ shared_focus = {
   }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_try_for_harmony"
+    add_power_balance_value = {
+      id = MDL_theological_bop
+      value = 0.05
+    }
     add_political_power = -10
     add_popularity = { ideology = democratic popularity = 0.05 }
     hidden_effect = {#collapse focus tree
@@ -607,6 +614,10 @@ shared_focus = {
   }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_try_for_socialism"
+    add_power_balance_value = {
+      id = MDL_theological_bop
+      value = -0.05
+    }
     add_political_power = -10
     add_popularity = { ideology = communism popularity = 0.05 }
     hidden_effect = {
@@ -987,6 +998,10 @@ shared_focus = {
   cost = 2.90
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_righteous_fury"
+    add_power_balance_value = {
+      id = MDL_theological_bop
+      value = -0.10
+    }
     swap_ideas = {
       remove_idea = MDL_holy_zeal_idea
       add_idea = MDL_holy_zeal_idea_2
@@ -1203,6 +1218,10 @@ shared_focus = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_gunpowder_empire"
     create_faction = MDL_GUARDIANSHIP
     custom_effect_tooltip = MDL_western_zebrican_hegemony_tt
+    add_power_balance_value = {
+      id = MDL_theological_bop
+      value = -0.10
+    }
     hidden_effect = { set_country_flag = MDL_crimson_war_decisions_unlocked }
   }
   search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1863,6 +1882,10 @@ shared_focus = {
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_unstoppable_pilots"
     add_ideas = MDL_unstoppable_pilots_idea
+    add_power_balance_value = {
+      id = MDL_theological_bop
+      value = 0.05
+    }
   }
   search_filters = { FOCUS_FILTER_AIRFORCE_BONUS }
 }
@@ -1879,6 +1902,10 @@ shared_focus = {
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_bomber_pilots"
     add_ideas = MDL_bomber_pilots_idea
+    add_power_balance_value = {
+      id = MDL_theological_bop
+      value = -0.05
+    }
   }
   search_filters = { FOCUS_FILTER_AIRFORCE_BONUS }
 }
@@ -2251,8 +2278,7 @@ shared_focus = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_fiqh_decisions"
     add_stability = 0.05
     custom_effect_tooltip = MDL_fiqh_decisions_unlocked_tt
-
-    set_power_balance = { id = MDL_theological_bop }
+    hidden_effect = { set_country_flag = MDL_fiqh_decisions_unlocked }
   }
   search_filters = { FOCUS_FILTER_POLITICAL }
 }
@@ -2353,12 +2379,16 @@ shared_focus = {
   mutually_exclusive = { focus = MDL_go_with_alneighzari }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_go_with_samira"
+    add_power_balance_value = {
+      id = MDL_theological_bop
+      value = -0.05
+    }
     if = {
       limit = { NOT = { has_country_flag = MDL_holy_war_active } }
       country_event = manedalusia.22
     }
     add_doctrine_cost_reduction = {
-      name = MDL_go_with_alneighzari
+      name = MDL_go_with_samira
       cost_reduction = 0.5
       uses = 2
       category = cat_grand_battle_plan
@@ -2385,6 +2415,10 @@ shared_focus = {
   mutually_exclusive = { focus = MDL_go_with_samira }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_go_with_alneighzari"
+    add_power_balance_value = {
+      id = MDL_theological_bop
+      value = 0.05
+    }
     country_event = { id = manedalusia.23 }
     add_doctrine_cost_reduction = {
       name = MDL_go_with_alneighzari
@@ -3098,6 +3132,7 @@ shared_focus = {
         instant_build = yes
       }
     }
+    decrease_poverty = yes
   }
   search_filters = { FOCUS_FILTER_INDUSTRY }
 }
@@ -5950,6 +5985,10 @@ shared_focus = {
 
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_thus_spoke_ash_shahid"
+    add_power_balance_value = {
+      id = MDL_theological_bop
+      value = -0.05
+    }
     country_event = manedalusia.142
   }
 }
@@ -8252,6 +8291,7 @@ shared_focus = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM08"
     add_stability = 0.05
     custom_effect_tooltip = MDL_fiqh_decisions_unlocked_tt
+    hidden_effect = { set_country_flag = MDL_fiqh_decisions_unlocked }
   }
 }
 
