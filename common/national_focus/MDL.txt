@@ -881,6 +881,7 @@ shared_focus = {
   prerequisite = { focus = MDL_warplan_green }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_warplan_conscription"
+    custom_effect_tooltip = MDL_asabiyyah_alteration_tt
     add_manpower = 8000
     MDL_increase_conscription = yes
 
@@ -906,6 +907,7 @@ shared_focus = {
   prerequisite = { focus = MDL_warplan_green }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_holy_zeal"
+    custom_effect_tooltip = MDL_asabiyyah_alteration_tt
     add_ideas = MDL_holy_zeal_idea
 
     add_to_variable = {
@@ -3299,6 +3301,7 @@ shared_focus = {
   prerequisite = { focus = MDL_back_in_bussiness }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_coffee_current"
+    custom_effect_tooltip = MDL_asabiyyah_alteration_tt
     add_ideas = MDL_coffee_trade
     add_to_variable = {
       var = MDL_consoom
@@ -4567,6 +4570,15 @@ shared_focus = {
   prerequisite = { focus = MDL_a_new_start }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_empower_senate"
+    custom_effect_tooltip = MDL_asabiyyah_alteration_tt
+    add_to_variable = {
+      var = MDL_stability_var
+      value = 0.05
+    }
+    add_to_variable = {
+      var = MDL_org_var
+      value = 0.02
+    }
     add_advisor_role = {
       character = MDL_senate
       advisor = {
@@ -4656,6 +4668,15 @@ shared_focus = {
   }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_formalize_alliance"
+    custom_effect_tooltip = MDL_asabiyyah_alteration_tt
+    add_to_variable = {
+      var = MDL_war_var
+      value = 0.05
+    }
+    add_to_variable = {
+      var = MDL_trade_var
+      value = 0.05
+    }
     EQS = { country_event = manedalusia.134 }
   }
   search_filters = { FOCUS_FILTER_POLITICAL }
@@ -4743,6 +4764,15 @@ shared_focus = {
   prerequisite = { focus = MDL_springtime_in_manedalusia }
   completion_reward = {
     log = "[GetDateText]: [Root.GetName]: Focus MDL_monument_to_aaliyah"
+    custom_effect_tooltip = MDL_asabiyyah_alteration_tt
+    add_to_variable = {
+      var = MDL_morale_var
+      value = 0.02
+    }
+    add_to_variable = {
+      var = MDL_surrender_var
+      value = 0.10
+    }
     add_ideas = MDL_aaliyah_monument
   }
   search_filters = { FOCUS_FILTER_INDUSTRY }

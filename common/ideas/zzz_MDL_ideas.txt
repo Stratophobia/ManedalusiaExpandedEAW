@@ -607,7 +607,7 @@ ideas = {
       picture = MDL_vizier_moonstriker
       modifier = {
         stability_factor = 0.05
-        research_speed_factor = 0.025
+        research_speed_factor = 0.015
       }
     }
     MDL_qadi_vizier = {

@@ -571,7 +571,7 @@
       custom_effect_tooltip = MDL_asabiyyah_alteration_tt
       add_to_variable = {
         var = MDL_research_var
-        value = 0.05
+        value = 0.025
       }
       add_to_variable = {
         var = MDL_consoom_var

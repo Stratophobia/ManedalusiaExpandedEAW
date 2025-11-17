@@ -46,7 +46,7 @@ set_variable = { MDL_trade_var = -0.05 }
 set_variable = { MDL_production_var = 0.05 }
 set_variable = { MDL_org_var = 0.04 }
 set_variable = { MDL_morale_var = 0.10 }
-set_variable = { MDL_research_var = -0.025 }
+set_variable = { MDL_research_var = -0.015 }
 set_variable = { MDL_surrender_var = 0.05 }
 set_variable = { MDL_consoom_var = -0.40 }
 set_variable = { MDL_pp_var = -0.10 }
