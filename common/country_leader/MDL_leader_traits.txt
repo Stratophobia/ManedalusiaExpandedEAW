@@ -1,9 +1,9 @@
 leader_traits = {
-  MDL_muftia_trait = {
-    drift_defence_factor = 0.15
-    improve_relations_maintain_cost_factor = -0.5
-    ai_focus_defense_factor = 0.75
-  }
+	MDL_muftia_trait = {
+		drift_defence_factor = 0.15
+		improve_relations_maintain_cost_factor = -0.5
+		ai_focus_defense_factor = 0.75
+	}
 	MDL_council_unstable_trait = {
 		allowed = { always = yes }
 		ai_will_do = { factor = 0 }
@@ -20,84 +20,89 @@ leader_traits = {
 		political_power_cost = 0.10
 		fascism_drift = -0.03
 	}
-  MDL_sayf_sword_of_ash_shahid = {
-    special_forces_attack_factor = 0.10
-    army_attack_factor = 0.05
-  }
-  MDL_sayf_spirit_of_vengeance = {
-    targeted_modifier = {
+	MDL_sayf_sword_of_ash_shahid = {
+		special_forces_attack_factor = 0.10
+		army_attack_factor = 0.05
+	}
+	MDL_sayf_spirit_of_vengeance = {
+		targeted_modifier = {
 			tag = ABY
 			army_attack_factor = 0.10
 		}
-  }
-  MDL_sayf_completely_numb = {
-    political_power_gain = -2.0
-  }
-  MDL_subdued_senate = {
-    economy_cost_factor = -0.05
-    trade_laws_cost_factor = -0.05
-    mobilization_laws_cost_factor = -0.05
-    fascism_drift = 0.04
-  }
-  MDL_empowered_senate = {
-    economy_cost_factor = -0.10
-    trade_laws_cost_factor = -0.10
-    mobilization_laws_cost_factor = 0.05
-    democratic_drift = 0.04
-  }
-  MDL_military_academy = {
-    land_doctrine_cost_factor = -0.05
-    air_doctrine_cost_factor = -0.05
-    naval_doctrine_cost_factor = -0.05
-  }
-  MDL_grifo_lord_regent_of_overseas = {
-    political_power_gain = 0.05
-    compliance_growth = 0.10
-    fascism_drift = 0.01
-  }
-  MDL_grifo_imperial_regent = {
-    political_power_gain = 0.05
+	}
+	MDL_sayf_completely_numb = {
+		political_power_gain = -2.0
+	}
+	MDL_militarized_senate = {
+    experience_gain_army = 0.01
+		war_support_factor = 0.15
+		neutrality_drift = 0.01
+	}
+	MDL_subdued_senate = {
+		economy_cost_factor = -0.05
+		trade_laws_cost_factor = -0.05
+		mobilization_laws_cost_factor = -0.05
+		fascism_drift = 0.04
+	}
+	MDL_empowered_senate = {
+		economy_cost_factor = -0.10
+		trade_laws_cost_factor = -0.10
+		mobilization_laws_cost_factor = 0.05
+		democratic_drift = 0.04
+	}
+	MDL_military_academy = {
+		land_doctrine_cost_factor = -0.05
+		air_doctrine_cost_factor = -0.05
+		naval_doctrine_cost_factor = -0.05
+	}
+	MDL_grifo_lord_regent_of_overseas = {
+		political_power_gain = 0.05
+		compliance_growth = 0.10
+		fascism_drift = 0.01
+	}
+	MDL_grifo_imperial_regent = {
+		political_power_gain = 0.05
 		stability_weekly = 0.003
-    fascism_drift = 0.02
-  }
-  MDL_breaker_of_chains = {
-    stability_factor = 0.10
-    democratic_drift = 0.03
-  }
-  MDL_samira_lady_commander = {
-    special_forces_attack_factor = 0.10
-    army_attack_factor = 0.05
-    stability_weekly = 0.003
-    war_support_factor = 0.15
-  }
-  MDL_master_of_subterfuge = {
-    encryption_factor = 0.05
-    decryption_factor = 0.05
-    army_speed_factor = 0.05
-    army_morale_factor = 0.05
-  }
+		fascism_drift = 0.02
+	}
+	MDL_breaker_of_chains = {
+		stability_factor = 0.10
+		democratic_drift = 0.03
+	}
+	MDL_samira_lady_commander = {
+		special_forces_attack_factor = 0.10
+		army_attack_factor = 0.05
+		stability_weekly = 0.003
+		war_support_factor = 0.15
+	}
+	MDL_master_of_subterfuge = {
+		encryption_factor = 0.05
+		decryption_factor = 0.05
+		army_speed_factor = 0.05
+		army_morale_factor = 0.05
+	}
 ###GRIFO EXCLUSIVES###
-  MDL_unfeathered_modernist = {
-    production_factory_max_efficiency_factor = 0.05
-    production_factory_efficiency_gain_factor = 0.05
-    neutrality_drift = -0.04
-    fascism_drift = 0.15
-  }
-  MDL_nostalgic_romanticist = {
-    political_power_gain = 0.10
-    stability_factor = 0.05
-    neutrality_drift = 0.05
-  }
-  MDL_unrepenting_socialite = {
-    improve_relations_maintain_cost_factor = -0.50
-    trade_opinion_factor = 0.25
-    war_support_factor = -0.05
-    conscription_factor = -0.05
-  }
-  MDL_soft_hearted_naturalist = {
-    stability_factor = 0.10
-    consumer_goods_factor = -0.25   
-    industrial_capacity_factory = -0.05
-    industrial_capacity_dockyard = -0.05
-  }
+	MDL_unfeathered_modernist = {
+		production_factory_max_efficiency_factor = 0.05
+		production_factory_efficiency_gain_factor = 0.05
+		neutrality_drift = -0.04
+		fascism_drift = 0.15
+	}
+	MDL_nostalgic_romanticist = {
+		political_power_gain = 0.10
+		stability_factor = 0.05
+		neutrality_drift = 0.05
+	}
+	MDL_unrepenting_socialite = {
+		improve_relations_maintain_cost_factor = -0.50
+		trade_opinion_factor = 0.25
+		war_support_factor = -0.05
+		conscription_factor = -0.05
+	}
+	MDL_soft_hearted_naturalist = {
+		stability_factor = 0.10
+		consumer_goods_factor = -0.25	
+		industrial_capacity_factory = -0.05
+		industrial_capacity_dockyard = -0.05
+	}
 }

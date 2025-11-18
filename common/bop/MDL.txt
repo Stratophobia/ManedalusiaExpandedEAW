@@ -1,116 +1,116 @@
 MDL_theological_bop = {
-  initial_value = 0
-  left_side = MDL_bop_traditionalist_side
-  right_side = MDL_bop_hermetic_side
-  decision_category = MDL_fiqh_decisions_tab
-  range = {
-    id = MDL_bop_mutazilite_range
-    min = -0.22
-    max = 0.22
-    modifier = {
-      stability_factor = 0.05
-    }
-    on_activate = {
-      set_power_balance_gfx = {
-        id = MDL_theological_bop
-        side = MDL_bop_traditionalist_side
-        gfx = GFX_bop_MDL_traditionalist_side_inactive
-      }
-      set_power_balance_gfx = {
-        id = MDL_theological_bop
-        side = MDL_bop_hermetic_side
-        gfx = GFX_bop_MDL_hermetic_side_inactive
-      }
-    }
-  }
-  side = {
-    id = MDL_bop_traditionalist_side
-    icon = GFX_bop_MDL_traditionalist_side_inactive
-    range = {
-      id = MDL_bop_traditionalist_moderate
-      min = -0.55
-      max = -0.22
-      modifier = {
-        army_morale_factor = 0.050
-        weekly_manpower = 50
-      }
-      on_activate = {
-        set_power_balance_gfx = {
-          id = MDL_theological_bop
-          side = MDL_bop_traditionalist_side
-          gfx = GFX_bop_MDL_traditionalist_side_active
-        }
-        set_power_balance_gfx = {
-          id = MDL_theological_bop
-          side = MDL_bop_hermetic_side
-          gfx = GFX_bop_MDL_hermetic_side_inactive
-        }
-      }
-    }
-    range = {
-      id = MDL_bop_traditionalist_total
-      min = -1.00
-      max = -0.55
-      modifier = {
-        army_morale_factor = 0.075
-        weekly_manpower = 100
-      }
-      on_activate = {
-        set_power_balance_gfx = {
-          id = MDL_theological_bop
-          side = MDL_bop_traditionalist_side
-          gfx = GFX_bop_MDL_traditionalist_side_superactive
-        }
-        set_power_balance_gfx = {
-          id = MDL_theological_bop
-          side = MDL_bop_hermetic_side
-          gfx = GFX_bop_MDL_hermetic_side_inactive
-        }
-      }
-    }
-  }
-  side = {
-    id = MDL_bop_hermetic_side
-    icon = GFX_bop_MDL_hermetic_side_inactive
-    range = {
-      id = MDL_bop_hermetic_moderate
-      min = 0.22
-      max = 0.55
-      modifier = {
-        research_speed_factor = 0.015
-      }
-      on_activate = {
-        set_power_balance_gfx = {
-          id = MDL_theological_bop
-          side = MDL_bop_traditionalist_side
-          gfx = GFX_bop_MDL_traditionalist_side_inactive
-        }
-        set_power_balance_gfx = {
-          id = MDL_theological_bop
-          side = MDL_bop_hermetic_side
-          gfx = GFX_bop_MDL_hermetic_side_active
-        }
-      }
-    }
-    range = {
-      id = MDL_bop_hermetic_total
-      min = 0.55
-      max = 1.00
-      modifier = {
-        research_speed_factor = 0.030
-      }
-      on_activate = {
-        set_power_balance_gfx = {
-          id = MDL_theological_bop
-          side = MDL_bop_traditionalist_side
-          gfx = GFX_bop_MDL_traditionalist_side_inactive
-        }
-        set_power_balance_gfx = {
-          id = MDL_theological_bop
-          side = MDL_bop_hermetic_side
-          gfx = GFX_bop_MDL_hermetic_side_superactive
-        }
-      }
-    }
-  }
+	initial_value = 0
+	left_side = MDL_bop_traditionalist_side
+	right_side = MDL_bop_hermetic_side
+	decision_category = MDL_fiqh_decisions_tab
+	range = {
+		id = MDL_bop_mutazilite_range
+		min = -0.22
+		max = 0.22
+		modifier = {
+			stability_factor = 0.05
+		}
+		on_activate = {
+			set_power_balance_gfx = {
+				id = MDL_theological_bop
+				side = MDL_bop_traditionalist_side
+				gfx = GFX_bop_MDL_traditionalist_side_inactive
+			}
+			set_power_balance_gfx = {
+				id = MDL_theological_bop
+				side = MDL_bop_hermetic_side
+				gfx = GFX_bop_MDL_hermetic_side_inactive
+			}
+		}
+	}
+	side = {
+		id = MDL_bop_traditionalist_side
+		icon = GFX_bop_MDL_traditionalist_side_inactive
+		range = {
+			id = MDL_bop_traditionalist_moderate
+			min = -0.55
+			max = -0.22
+			modifier = {
+				army_morale_factor = 0.050
+				weekly_manpower = 50
+			}
+			on_activate = {
+				set_power_balance_gfx = {
+					id = MDL_theological_bop
+					side = MDL_bop_traditionalist_side
+					gfx = GFX_bop_MDL_traditionalist_side_active
+				}
+				set_power_balance_gfx = {
+					id = MDL_theological_bop
+					side = MDL_bop_hermetic_side
+					gfx = GFX_bop_MDL_hermetic_side_inactive
+				}
+			}
+		}
+		range = {
+			id = MDL_bop_traditionalist_total
+			min = -1.00
+			max = -0.55
+			modifier = {
+				army_morale_factor = 0.075
+				weekly_manpower = 100
+			}
+			on_activate = {
+				set_power_balance_gfx = {
+					id = MDL_theological_bop
+					side = MDL_bop_traditionalist_side
+					gfx = GFX_bop_MDL_traditionalist_side_superactive
+				}
+				set_power_balance_gfx = {
+					id = MDL_theological_bop
+					side = MDL_bop_hermetic_side
+					gfx = GFX_bop_MDL_hermetic_side_inactive
+				}
+			}
+		}
+	}
+	side = {
+		id = MDL_bop_hermetic_side
+		icon = GFX_bop_MDL_hermetic_side_inactive
+		range = {
+			id = MDL_bop_hermetic_moderate
+			min = 0.22
+			max = 0.55
+			modifier = {
+				research_speed_factor = 0.015
+			}
+			on_activate = {
+				set_power_balance_gfx = {
+					id = MDL_theological_bop
+					side = MDL_bop_traditionalist_side
+					gfx = GFX_bop_MDL_traditionalist_side_inactive
+				}
+				set_power_balance_gfx = {
+					id = MDL_theological_bop
+					side = MDL_bop_hermetic_side
+					gfx = GFX_bop_MDL_hermetic_side_active
+				}
+			}
+		}
+		range = {
+			id = MDL_bop_hermetic_total
+			min = 0.55
+			max = 1.00
+			modifier = {
+				research_speed_factor = 0.030
+			}
+			on_activate = {
+				set_power_balance_gfx = {
+					id = MDL_theological_bop
+					side = MDL_bop_traditionalist_side
+					gfx = GFX_bop_MDL_traditionalist_side_inactive
+				}
+				set_power_balance_gfx = {
+					id = MDL_theological_bop
+					side = MDL_bop_hermetic_side
+					gfx = GFX_bop_MDL_hermetic_side_superactive
+				}
+			}
+		}
+	}
 }
