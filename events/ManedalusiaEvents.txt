@@ -3025,13 +3025,18 @@ traits = { griffon_race_trait substance_abuser armchair_general promising_genera
 		option = {
 			name = manedalusia.108.a
 			371 = { set_state_name = "MDL_state_karthin" }
-			set_cosmetic_tag = MDL_sacro_imperio
 			hidden_effect = {
 				set_province_name = { id = 3144 name = "MDL_state_karthin"}
 			}
+			set_cosmetic_tag = MDL_sacro_imperio
 			swap_ruler_traits = {
 				remove = MDL_grifo_lord_regent_of_overseas
 				add = MDL_grifo_imperial_regent
+			}
+			set_party_name = {
+				ideology = fascism
+				long_name = MDL_GRIFO_PARTY_2_NAME_LONG
+				name = MDL_GRIFO_PARTY_2_NAME
 			}
 		}
 	}
@@ -3086,6 +3091,14 @@ traits = { griffon_race_trait substance_abuser armchair_general promising_genera
 				trigger = { has_country_flag = MDL_grifo_takeover }
 			}
 			name = manedalusia.110.a
+			if = {
+				limit = { has_country_flag = MDL_grifo_takeover }
+				set_party_name = {
+					ideology = democratic
+					long_name = MDL_GRIFO_PARTY_DEMOCRATIC_NAME_LONG
+					name = MDL_GRIFO_PARTY_DEMOCRATIC_NAME
+				}
+			}
 			decrease_illiteracy = yes
 		}
 	}
@@ -3159,9 +3172,6 @@ traits = { griffon_race_trait substance_abuser armchair_general promising_genera
 					civilian = {
 						large = "gfx/leaders/MDL/MDL_emperor.tga"
 					}
-					army = {
-						large = "gfx/leaders/MDL/MDL_emperor.tga"
-					}
 				}
 			}
 			add_country_leader_role = {
@@ -3171,6 +3181,11 @@ traits = { griffon_race_trait substance_abuser armchair_general promising_genera
 					ideology = esotericism
 				}
 				promote_leader = yes
+			}
+			set_party_name = {
+				ideology = fascism
+				long_name = MDL_GRIFO_PARTY_3_NAME_LONG
+				name = MDL_GRIFO_PARTY_3_NAME
 			}
 		}
 	}
@@ -3469,7 +3484,7 @@ traits = { griffon_race_trait substance_abuser armchair_general promising_genera
 			promote_character = MDL_velvet_qamar
 			set_party_name = {
 				ideology = democratic
-				long_name =MDL_democratic_party_long
+				long_name = MDL_democratic_party_long
 				name = MDL_democratic_party
 			}
 		}

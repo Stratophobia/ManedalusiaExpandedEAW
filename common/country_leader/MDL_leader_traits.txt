@@ -34,7 +34,7 @@ leader_traits = {
 		political_power_gain = -2.0
 	}
 	MDL_militarized_senate = {
-    experience_gain_army = 0.01
+		experience_gain_army = 0.01
 		war_support_factor = 0.15
 		neutrality_drift = 0.01
 	}

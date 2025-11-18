@@ -7164,6 +7164,11 @@ shared_focus = {
 		add_ideas = MDL_corporativism_idea
 
 		decrease_poverty = yes
+		set_party_name = {
+			ideology = communism
+			long_name = MDL_GRIFO_PARTY_COMMIE_NAME_LONG
+			name = MDL_GRIFO_PARTY_COMMIE_NAME
+		}
 	}
 	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_WAR_SUPPORT }
 }
