@@ -3500,17 +3500,11 @@ shared_focus = {
 		add_ideas = MDL_abyssinian_genocide
 		771 = {
 			add_manpower = -350000
-			remove_building = {
-				type = infrastructure
-				level = 2
-			}
+			MDL_destroy_everything = yes
 		}
 		772 = {
 			add_manpower = -100000
-			remove_building = {
-				type = infrastructure
-				level = 1
-			}
+			MDL_destroy_everything = yes
 		}
 	}
 }
@@ -3533,24 +3527,15 @@ shared_focus = {
 		add_equipment_to_stockpile = { type = support_equipment amount = 150 producer = ABY }
 		774 = {
 			add_manpower = -200000
-			remove_building = {
-				type = infrastructure
-				level = 1
-			}
+			MDL_destroy_everything = yes
 		}
 		782 = {
 			add_manpower = -150000
-			remove_building = {
-				type = infrastructure
-				level = 1
-			}
+			MDL_destroy_everything = yes
 		}
 		783 = {
 			add_manpower = -200000
-			remove_building = {
-				type = infrastructure
-				level = 1
-			}
+			MDL_destroy_everything = yes
 		}
 	}
 }
@@ -3573,24 +3558,15 @@ shared_focus = {
 		add_equipment_to_stockpile = { type = infantry_equipment amount = 1000 producer = ABY }
 		773 = {
 			add_manpower = -100000
-			remove_building = {
-				type = infrastructure
-				level = 1
-			}
+			MDL_destroy_everything = yes
 		}
 		778 = {
 			add_manpower = -200000
-			remove_building = {
-				type = infrastructure
-				level = 1
-			}
+			MDL_destroy_everything = yes
 		}
 		779 = {
 			add_manpower = -250000
-			remove_building = {
-				type = infrastructure
-				level = 1
-			}
+			MDL_destroy_everything = yes
 		}
 	}
 }
@@ -3625,10 +3601,7 @@ shared_focus = {
 		}
 		775 = {
 			add_manpower = -1000000
-			remove_building = {
-				type = infrastructure
-				level = 3
-			}
+			MDL_destroy_everything = yes
 		}
 	}
 }
@@ -3652,38 +3625,23 @@ shared_focus = {
 		country_event = { id = manedalusia.62 }
 		777 = {
 			add_manpower = -350000
-			remove_building = {
-				type = infrastructure
-				level = 1
-			}
+			MDL_destroy_everything = yes
 		}
 		785 = {
 			add_manpower = -350000
-			remove_building = {
-				type = infrastructure
-				level = 1
-			}
+			MDL_destroy_everything = yes
 		}
 		776 = {
 			add_manpower = -500000
-			remove_building = {
-				type = infrastructure
-				level = 2
-			}
+			MDL_destroy_everything = yes
 		}
 		786 = {
 			add_manpower = -200000
-			remove_building = {
-				type = infrastructure
-				level = 1
-			}
+			MDL_destroy_everything = yes
 		}
 		785 = {
 			add_manpower = -200000
-			remove_building = {
-				type = infrastructure
-				level = 1
-			}
+			MDL_destroy_everything = yes
 		}
 	}
 }
@@ -3834,6 +3792,7 @@ shared_focus = {
 	relative_position_id = MDL_federal_constitution
 	prerequisite = { focus = MDL_federal_constitution }
 	available = {
+		owns_state = 741
 		owns_state = 738
 		owns_state = 740
 	}

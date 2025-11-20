@@ -1365,3 +1365,21 @@ MDL_decrease_illiteracy = {
 		}
 	}
 }
+
+MDL_destroy_everything = {
+	set_building_level = {
+		type = infrastructure
+		level = 0
+		instant_build = yes
+	}
+	set_building_level = {
+			type = arms_factory
+		level = 0
+		instant_build = yes
+	}
+	set_building_level = {
+		type = industrial_complex
+		level = 0
+		instant_build = yes
+	}
+}
