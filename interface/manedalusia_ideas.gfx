@@ -157,7 +157,7 @@ spriteTypes = {
   }
   SpriteType = {
     name = "GFX_idea_RIZ_council_adaptation"
-    texturefile = "gfx/interface/ideas/RIZ/RIZ_council_adaptation.tga"
+    texturefile = "gfx/interface/ideas/MDL/MDL_RIZ_council_adaptation.tga"
   }
   SpriteType = {
     name = "GFX_idea_MDL_native_resistance"
