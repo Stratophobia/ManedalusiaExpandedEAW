@@ -1220,7 +1220,7 @@ shared_focus = {
 	prerequisite = { focus = MDL_enforce_Jizya }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_gunpowder_empire"
-		create_faction = MDL_GUARDIANSHIP
+		create_faction_from_template = faction_template_MDL_guardianship
 		custom_effect_tooltip = MDL_western_zebrican_hegemony_tt
 		add_power_balance_value = {
 			id = MDL_theological_bop
@@ -3893,7 +3893,7 @@ shared_focus = {
 	prerequisite = { focus = MDL_federal_assembly }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_dream_of_a_federation"
-		create_faction = MDL_FEDERATION
+		create_faction_from_template = faction_template_MDL_federation
 		country_event = { id = manedalusia.56 }
 		custom_effect_tooltip = MDL_FA_recruit_2_tt
 		hidden_effect = {
@@ -5034,7 +5034,7 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_our_purpose_made_clear"
 		add_country_leader_trait = MDL_samira_lady_commander
 
-		create_faction = MDL_JUNNAH
+		create_faction_from_template = faction_template_MDL_shield
 		custom_effect_tooltip = MDL_our_purpose_made_clear_tt
 		custom_effect_tooltip = MDL_remove_tradelaw_econ_cost_tt
 		if = {
@@ -7464,7 +7464,7 @@ shared_focus = {
 	prerequisite = { focus = MDL_i_see_maar_fall_like_lightning }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_integrate_karthin"
-		create_faction = MDL_IMPERIO
+		create_faction_from_template = faction_template_MDL_imperium
 		WNG = { add_to_ROOT_potential_cores = yes }
 		custom_effect_tooltip = MDL_integrate_karthin_tt
 		hidden_effect = { set_country_flag = MDL_imperium_restored }
@@ -8558,7 +8558,7 @@ shared_focus = {
 		custom_effect_tooltip = MDL_samira_stress_resolved_tt
 		country_event = manedalusia.24
 		hidden_effect = { set_country_flag = MDL_samira_stress_resolved }
-		create_faction = MDL_GUARDIANSHIP
+		create_faction_from_template = faction_template_MDL_guardianship_NA
 		create_wargoal = {
 			type = annex_everything
 			target = KLG
