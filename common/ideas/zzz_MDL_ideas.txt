@@ -352,7 +352,7 @@ ideas = {
 			}
 		}
 		MDL_destroyed_army = {
-			picture = unhappy_army_3
+			picture = MDL_destroyed_army
 			modifier = {
 				army_attack_factor = -0.75
 				army_defence_factor = -0.75
