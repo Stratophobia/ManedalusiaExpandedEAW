@@ -113,7 +113,7 @@ ideas = {
 		designer = yes
 
 		MDL_imperial_railway = {
-			picture = GFX_idea_MDL_imperial_railway
+			picture = MDL_imperial_railway
 
 			allowed = { original_tag = MDL }
 			visible = { has_country_flag = MDL_grifo_takeover }
@@ -126,7 +126,7 @@ ideas = {
 
 		MDL_imperial_construction = {
 			name=MDL_imperial_construction
-			picture = GFX_idea_MDL_imperial_construction
+			picture = MDL_imperial_construction
 			allowed = { original_tag = MDL }
 			visible = { has_country_flag = MDL_grifo_takeover }
 			available = { has_completed_focus = MDL_colonial_industry }
@@ -141,7 +141,7 @@ ideas = {
 		}
 
 		MDL_imperial_agri = {
-			picture = GFX_idea_MDL_imperial_agri
+			picture = MDL_imperial_agri
 			allowed = { original_tag = MDL }
 			visible = { has_country_flag = MDL_grifo_takeover }
 			available = { has_completed_focus = MDL_imperial_agriculture }
@@ -155,7 +155,7 @@ ideas = {
 		}
 
 		MDL_imperial_electrics = {
-			picture = GFX_idea_MDL_imperial_electrics
+			picture = MDL_imperial_electrics
 			allowed = { original_tag = MDL }
 			visible = { has_country_flag = MDL_grifo_takeover }
 			available = {
@@ -480,7 +480,7 @@ ideas = {
 			}
 		}
 		MDL_manedalusian_rangers_idea = {
-			picture = BAR_fire_and_sword
+			picture = MDL_manedalusian_rangers_idea
 			modifier = {
 				special_forces_cap = 0.15
 				special_forces_attack_factor = 0.10
@@ -738,14 +738,14 @@ ideas = {
 			}
 		}
 		MDL_paying_MGY = {
-			picture = HUN_treaty_of_triannon
+			picture = MDL_paying_MGY
 			modifier = {
 				political_power_cost = 0.05
 				consumer_goods_factor = 0.25
 			}
 		}
 		MDL_paying_MGY_1 = {
-			picture = HUN_treaty_of_triannon
+			picture = MDL_paying_MGY
 			modifier = {
 				political_power_gain = 0.05
 				consumer_goods_factor = -0.25
@@ -759,7 +759,7 @@ ideas = {
 			}
 		}
 		MDL_bulwark_of_harmony_idea = {
-			picture = EQS_harmonic_stagnation2
+			picture = MDL_bulwark_of_harmony_idea
 			modifier = {
 				war_support_factor = 0.10
 				army_core_attack_factor = 0.15
@@ -1047,7 +1047,7 @@ ideas = {
 			}
 		}
 		MDL_holy_mandate = {
-			picture = GFX_idea_MDL_holy_mandate
+			picture = MDL_holy_mandate
 			modifier = {
 				autonomy_gain = -1
 			}
@@ -1072,7 +1072,7 @@ ideas = {
 			}
 		}
 		MDL_holy_fury = {
-			picture = GFX_idea_MDL_holy_fury
+			picture = MDL_holy_fury
 			modifier = {
 				army_org_factor = 0.15
 				war_support_factor = 0.15
