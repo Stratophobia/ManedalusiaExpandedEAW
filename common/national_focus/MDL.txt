@@ -1121,8 +1121,6 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_annex_ovingoland"
 		custom_effect_tooltip = MDL_annex_ovingoland_tt
-		effect_tooltip = { add_core_of = MDL }
-
 		hidden_effect = {
 			for_each_scope_loop = {
 				array = MKS.original_cores
@@ -1592,8 +1590,7 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_restore_mareakech"
 		custom_effect_tooltip = MDL_every_SDL_state_tt
 		effect_tooltip = {
-			add_compliance = 15
-			add_dynamic_modifier = { modifier = MDL_sultanate_province }		
+			add_dynamic_modifier = { modifier = MDL_sultanate_province } 
 		}
 		for_each_scope_loop = {
 			array = SDL.original_cores
@@ -2106,7 +2103,12 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_basic_education"
 		custom_effect_tooltip = GRI_education_tooltip
-		MDL_decrease_illiteracy = yes
+		hidden_effect = {
+			country_event = {
+				id = manedalusia.181
+				days = 120
+			}
+		}
 	}
 }
 
@@ -2545,8 +2547,6 @@ shared_focus = {
 			uses = 2
 			category = armor
 		}
-		custom_effect_tooltip = available_designer
-		show_ideas_tooltip = MDL_black_guard_steelworks
 	}
 	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 }
@@ -3889,6 +3889,10 @@ shared_focus = {
 	y = 2
 	cost = 5
 	relative_position_id = MDL_senate_reconcile_maregypt
+	available = {
+		733 = { is_owned_and_controlled_by = ROOT }
+		766 = { is_owned_and_controlled_by = ROOT }
+	}
 	prerequisite = { focus = MDL_elite_army }
 	prerequisite = { focus = MDL_coltoba_naval_center }
 	prerequisite = { focus = MDL_joint_development }
@@ -5289,7 +5293,7 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_forges_of_klugetown"
-		MDL_holy_war_gimp_the_republic
+		MDL_holy_war_gimp_the_republic = yes
 		KLG = { retire_character = KLG_verko }
 		1208 = {
 			add_manpower = -5000
@@ -5452,7 +5456,7 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_expand_junnah_doctrine"
-		MDL_holy_war_gimp_the_republic
+		MDL_holy_war_gimp_the_republic = yes
 		if = {
 			limit = { ASS = { exists = yes } }
 			create_wargoal = {
@@ -6354,7 +6358,12 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_imperial_education"
 		custom_effect_tooltip = GRI_education_tooltip
-		MDL_decrease_illiteracy = yes
+		hidden_effect = {
+			country_event = {
+				id = manedalusia.109
+				days = 120
+			}
+		}
 	}
 }
 
@@ -6585,14 +6594,16 @@ shared_focus = {
 		add_ideas = MDL_maxed_dominion
 		custom_effect_tooltip = MDL_every_SDL_state_tt
 		effect_tooltip = {
-			add_compliance = 15
-			add_dynamic_modifier = { modifier = MDL_colonial_admin }		
+			add_dynamic_modifier = { modifier = MDL_colonial_admin }
 		}
 		hidden_effect = {
-			every_owned_state = {
-				limit = { is_in_array = { state_original_cores = SDL } }
-				add_compliance = 15
-				add_dynamic_modifier = { modifier = MDL_colonial_admin }
+			for_each_scope_loop = {
+				array = SDL.original_cores
+				if = {
+					limit = { is_owned_and_controlled_by = ROOT }
+					add_compliance = 15
+					add_dynamic_modifier = { modifier = MDL_colonial_admin }
+				}
 			}
 		}
 	}
@@ -7032,13 +7043,7 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_imperial_agriculture"
-
 		custom_effect_tooltip = MDL_imperial_agriculture_tt
-		effect_tooltip = {
-			add_extra_state_shared_building_slots = 1
-			add_manpower = 5000
-		}
-
 		hidden_effect = {
 			every_owned_state = {
 				limit = {
@@ -7055,7 +7060,6 @@ shared_focus = {
 				add_manpower = 5000
 			}
 		}
-
 		custom_effect_tooltip = available_industrial_concern
 		show_ideas_tooltip = MDL_imperial_agri
 	}
@@ -7867,7 +7871,9 @@ shared_focus = {
 	y = 1
 	cost = 2
 	relative_position_id = MDL_US_start_1_1
-	741 = { is_controlled_by = ROOT }
+	available = {
+		741 = { is_controlled_by = ROOT }
+	}
 	prerequisite = { focus = MDL_US_start_1_1 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_US_start_2_4"

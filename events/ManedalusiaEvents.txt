@@ -1575,6 +1575,7 @@
 			set_cosmetic_tag = MDL_federal_republic
 			add_ideas = MDL_federation_member
 			hidden_effect = {
+				set_country_flag = have_regular_puppets
 				MDL_create_dynamic_MGY = yes
 				release_puppet = MGY
 				release_puppet = MKS
@@ -3041,25 +3042,13 @@ traits = { griffon_race_trait substance_abuser armchair_general promising_genera
 		}
 	}
 
-	country_event = {#literacy event 1
+	country_event = {#manedalusians get woke on tritheism 1
 		id = manedalusia.109
-		title = {
-			text = manedalusia.109.t_grifo
-			trigger = { has_country_flag = MDL_grifo_takeover }
-		}
 		title = manedalusia.109.t
-		desc = {
-			text = manedalusia.109.d_grifo
-			trigger = { has_country_flag = MDL_grifo_takeover }
-		}
 		desc = manedalusia.109.d
 		is_triggered_only = yes
 
 		option = {
-			name = {
-				text = manedalusia.109.a_grifo
-				trigger = { has_country_flag = MDL_grifo_takeover }
-			}
 			name = manedalusia.109.a
 			decrease_illiteracy = yes
 			hidden_effect = {
@@ -3071,33 +3060,18 @@ traits = { griffon_race_trait substance_abuser armchair_general promising_genera
 		}
 	}
 
-	country_event = {#literacy event 2
+	country_event = {#manedalusians get woke on tritheism 2
 		id = manedalusia.110
-		title = {
-			text = manedalusia.110.t_grifo
-			trigger = { has_country_flag = MDL_grifo_takeover }
-		}
 		title = manedalusia.110.t
-		desc = {
-			text = manedalusia.110.d_grifo
-			trigger = { has_country_flag = MDL_grifo_takeover }
-		}
 		desc = manedalusia.110.d
 		is_triggered_only = yes
 
 		option = {
-			name = {
-				text = manedalusia.110.a_grifo
-				trigger = { has_country_flag = MDL_grifo_takeover }
-			}
 			name = manedalusia.110.a
-			if = {
-				limit = { has_country_flag = MDL_grifo_takeover }
-				set_party_name = {
-					ideology = democratic
-					long_name = MDL_GRIFO_PARTY_DEMOCRATIC_NAME_LONG
-					name = MDL_GRIFO_PARTY_DEMOCRATIC_NAME
-				}
+			set_party_name = {
+				ideology = democratic
+				long_name = MDL_GRIFO_PARTY_DEMOCRATIC_NAME_LONG
+				name = MDL_GRIFO_PARTY_DEMOCRATIC_NAME
 			}
 			decrease_illiteracy = yes
 		}
@@ -3320,7 +3294,7 @@ traits = { griffon_race_trait substance_abuser armchair_general promising_genera
 		option = {
 			name = manedalusia.123.a
 			swap_ideas = {
-				remove_idea = MDL_holy_zeal_2
+				remove_idea = MDL_holy_zeal_idea_2
 				add_idea = MDL_holy_fury
 			}
 			custom_effect_tooltip = MDL_holy_war_new_focus_tt
@@ -3329,7 +3303,7 @@ traits = { griffon_race_trait substance_abuser armchair_general promising_genera
 					tree = manedalusia_main
 					keep_completed = yes
 				}
-				mark_focus_tree_layout_dirty effect = yes
+				mark_focus_tree_layout_dirty = yes
 			}
 		}
 	}
@@ -4238,7 +4212,7 @@ traits = { griffon_race_trait substance_abuser armchair_general promising_genera
 	}
 
 	country_event = {#arabians fuck around and find out
-		name = manedalusia.170
+		id = manedalusia.170
 		title = manedalusia.170.t
 		desc = manedalusia.170.d
 		is_triggered_only = yes
@@ -4391,5 +4365,35 @@ traits = { griffon_race_trait substance_abuser armchair_general promising_genera
 
 		option = {
 			name = manedalusia.180.a
+		}
+	}
+
+	country_event = {#literacy event 1
+		id = manedalusia.181
+		title = manedalusia.181.t
+		desc = manedalusia.181.d
+		is_triggered_only = yes
+
+		option = {
+			name = manedalusia.181.a
+			decrease_illiteracy = yes
+			hidden_effect = {
+				country_event = {
+					id = manedalusia.182
+					days = 120
+				}
+			}
+		}
+	}
+
+	country_event = {#literacy event 2
+		id = manedalusia.182
+		title = manedalusia.182.t
+		desc = manedalusia.182.d
+		is_triggered_only = yes
+
+		option = {
+			name = manedalusia.182.a
+			decrease_illiteracy = yes
 		}
 	}

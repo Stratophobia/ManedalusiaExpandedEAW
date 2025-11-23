@@ -12,22 +12,13 @@ set_technology = {
 	basic_train = 1
 }
 actually_fix_weapon_techs = yes
-if = {
-  limit = { has_dlc = "Man the Guns" }
-  set_technology = { mtg_transport = 1 }
-}
-if = {
-	limit = {
-		NOT = { has_dlc = "Man the Guns" }
-	}
-	set_technology = { transport = 1 }
-}
+set_technology = { mtg_transport = 1 }
 
 add_ideas = {
 	pre_industrial_society
 	poor_science_base
 	lack_of_scientists2
-  poverty4
+	poverty4
 
 	MDL_humbled_sultanate
 	MDL_madgriff_in_the_harbor

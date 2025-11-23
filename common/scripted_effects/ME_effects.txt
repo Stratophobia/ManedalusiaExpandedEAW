@@ -1410,15 +1410,6 @@ MDL_grant_init_ship_templates = {
 	}
 }
 
-MDL_decrease_illiteracy = {
-	hidden_effect = {
-		country_event = {
-			id = manedalusia.109
-			days = 120
-		}
-	}
-}
-
 MDL_destroy_everything = {
 	set_building_level = {
 		type = infrastructure
