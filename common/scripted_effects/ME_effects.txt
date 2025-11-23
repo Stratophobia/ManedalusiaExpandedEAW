@@ -154,6 +154,7 @@ MDL_create_dynamic_EMR = {
 		original_tag = EMR
 		set_variable = { collaboration_formed_by = PREV }
 		set_temp_variable = { new_country = this }
+
 		PREV = {
 			every_controlled_state = {
 				limit = { occupied_country_tag = EMR }
@@ -161,10 +162,15 @@ MDL_create_dynamic_EMR = {
 			}
 			puppet = new_country
 		}
-		load_focus_tree = generic_zebra_focus
+		load_focus_tree = { tree = generic_zebra_focus }
 		set_capital = {
 			state = 843
 			remember_old_capital = no
+		}
+		set_party_name = {
+			ideology = neutrality
+			long_name = MDL_EMR_FED_PARTY_LONG
+			name = MDL_EMR_FED_PARTY
 		}
 		generate_character = {
 			token_base = MDL_elected_princes
@@ -183,11 +189,6 @@ MDL_create_dynamic_EMR = {
 				expire = "1965.1.1"
 			}
 			promote_leader = yes
-		}
-		set_party_name = {
-			ideology = neutrality
-			long_name = MDL_EMR_FED_PARTY_LONG
-			name = MDL_EMR_FED_PARTY
 		}
 		add_ideas = {
 			horse_race
@@ -222,8 +223,8 @@ MDL_create_dynamic_KAR = {
 		}
 		set_party_name = {
 			ideology = fascism
-			long_name = KAR_VASSAl_PARTY_NAME_LONG
-			name = KAR_VASSAl_PARTY_NAME
+			long_name = kAR_VASSAL_PARTY_NAME_LONG
+			name = KAR_VASSAL_PARTY_NAME
 		}
 		generate_character = {
 			token_base = KAR_khan_clone

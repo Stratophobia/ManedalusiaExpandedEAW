@@ -158,16 +158,10 @@ ideas = {
 			picture = MDL_imperial_electrics
 			allowed = { original_tag = MDL }
 			visible = { has_country_flag = MDL_grifo_takeover }
-			available = {
-				has_completed_focus = MDL_imperial_electronics
-			}
+			available = { has_completed_focus = MDL_imperial_electronics }
 
-			research_bonus = {
-				electronics = 0.25
-			}
-			modifier = {
-				consumer_goods_factor = -0.10
-			}
+			research_bonus = { electronics = 0.25 }
+			modifier = { consumer_goods_factor = -0.10 }
 			traits = { electronics_concern }
 		}
 
@@ -180,16 +174,12 @@ ideas = {
 					has_completed_focus = MDL_SAM10
 				}
 			}
-			research_bonus = {
-				industry = 0.15
-			}
+			research_bonus = { industry = 0.15 }
 			visible = {
 				NOT = { has_country_flag = MDL_grifo_takeover }
 			}
 			traits = { industrial_concern }
-			modifier = {
-				production_speed_buildings_factor = 0.05
-			}
+			modifier = { production_speed_buildings_factor = 0.05 }
 		}
 
 		MDL_refining_concern = {
@@ -202,38 +192,22 @@ ideas = {
 				}
 			}
 			traits = { refinery_concern }
-			modifier = {
-				production_speed_synthetic_refinery_factor = 0.05
-			}
+			modifier = { production_speed_synthetic_refinery_factor = 0.05 }
 			visible = {
 				NOT = { has_country_flag = MDL_grifo_takeover }
 			}
-			research_bonus = {
-				synth_resources = 0.15
-			}
+			research_bonus = { synth_resources = 0.25 }
 		}
 
 		MDL_electronics_concern = {
 			picture = MDL_electronics_concern
-			allowed = {
-				original_tag = MDL
-			}
-			research_bonus = {
-				electronics = 0.15
-			}
+			allowed = { original_tag = MDL }
+			research_bonus = { electronics = 0.15 }
 			visible = {
 				NOT = { has_country_flag = MDL_grifo_takeover }
 			}
 			traits = { electronics_concern }
-			available = {
-				OR = {
-					has_completed_focus = MDL_go_with_alneighzari
-					has_completed_focus = MDL_SAM04
-				}
-			}
-			modifier = {
-				production_factory_efficiency_gain_factor = 0.05
-			}
+			modifier = { production_factory_efficiency_gain_factor = 0.05 }
 		}
 	}
 

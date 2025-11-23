@@ -38,9 +38,9 @@ leader_traits = {
 		neutrality_drift = 0.01
 	}
 	MDL_subdued_senate = {
-		economy_cost_factor = -0.05
-		trade_laws_cost_factor = -0.05
-		mobilization_laws_cost_factor = -0.05
+		economy_cost_factor = -0.10
+		trade_laws_cost_factor = -0.10
+		mobilization_laws_cost_factor = -0.10
 		fascism_drift = 0.04
 	}
 	MDL_empowered_senate = {

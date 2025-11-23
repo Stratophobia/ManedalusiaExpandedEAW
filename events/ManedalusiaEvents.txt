@@ -1104,12 +1104,12 @@
 		option = {
 			name = manedalusia.38.a
 			MGY = { retire_character = MGY_shepser_of_manephis }
+			add_manpower = -50000
 			735 = {
 				remove_building = {
 					type = infrastructure
 					level = 1
 				}
-				add_manpower = -50000
 			}
 			remove_country_leader_trait = MDL_sayf_pretender
 		}
@@ -1582,7 +1582,6 @@
 				MGY = {
 					set_cosmetic_tag = MGY_FEDERATION
 					add_ideas = MDL_federation_member
-					set_politics = { ruling_party = neutrality }
 				}
 				MKS = {
 					generate_character = {
@@ -1607,7 +1606,6 @@
 							promote_leader = yes
 						}
 					}
-					set_politics = { ruling_party = neutrality }
 					set_party_name = {
 						ideology = neutrality
 						long_name = MDL_MKS_FED_PARTY_LONG
