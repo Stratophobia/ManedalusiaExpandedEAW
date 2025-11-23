@@ -231,9 +231,11 @@ characters={
 			}
 		}
 		scientist = {
-			available = { always = yes }
+			skills = {
+				specialization_air = 1
+				specialization_land = 1 
+			}
 			traits = { scientist_trait_electronics_specialist scientist_trait_bright }
-			skills = { specialization_land = 2 }
 		}
 	}
 	MDL_mehmet = {

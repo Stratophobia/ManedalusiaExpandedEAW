@@ -3,8 +3,6 @@ leader_traits = {
     type = land
     trait_type = personality_trait
 
-    allowed = { original_tag = MDL }
-
     modifier = { supply_consumption_factor = -0.15 }
     enable_ability = extra_suplies
 
@@ -15,8 +13,6 @@ leader_traits = {
   MDL_koltaliba_member_trait = {
     type = land
     trait_type = personality_trait
-
-    allowed = { original_tag = MDL }
 
     modifier = {
       special_forces_attack_factor = 0.05

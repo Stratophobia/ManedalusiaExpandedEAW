@@ -1037,9 +1037,9 @@ ideas = {
 		MDL_klugepilled = {
 			picture = MDL_klugepilled
 			equipment_bonus = {
-				air_equipment = {
-					build_cost_ic = -0.10
-				}
+				small_plane_airframe = { build_cost_ic = -0.10 instant = yes }
+				medium_plane_airframe = { build_cost_ic = -0.10 instant = yes }
+				large_plane_airframe = { build_cost_ic = -0.10 instant = yes }
 			}
 			modifier = {
 				air_ace_generation_chance_factor = 0.20

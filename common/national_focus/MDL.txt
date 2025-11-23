@@ -3890,6 +3890,8 @@ shared_focus = {
 	cost = 5
 	relative_position_id = MDL_senate_reconcile_maregypt
 	prerequisite = { focus = MDL_elite_army }
+	prerequisite = { focus = MDL_coltoba_naval_center }
+	prerequisite = { focus = MDL_joint_development }
 	prerequisite = { focus = MDL_federal_assembly }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_dream_of_a_federation"
@@ -4360,37 +4362,12 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_integrate_emirs"
 		custom_effect_tooltip = MDL_integrate_emirs_tt
 		hidden_effect = {
-			release_puppet = EMR
-			EMR = {
-				set_cosmetic_tag = { EMR_FEDERATION }
-				generate_character = {
-					token_base = MDL_elected_princes
-					name = MDL_elected_princes
-				}
-				set_portraits = {
-					character = MDL_elected_princes
-					civilian = {
-						large = "gfx/leaders/MDL/MDL_FED_generic.tga"
-					}
-				}
+			MDL_create_dynamic_EMR = yes
+			EMR = { 
 				add_ideas = MDL_federation_member
-				add_country_leader_role = {
-					character = MDL_elected_princes
-					country_leader = {
-						ideology = republicanism
-						expire = "1965.1.1"
-					}
-					promote_leader = yes
-				}
-				set_politics = {
-					ruling_party = neutrality
-				}
-				set_party_name = {
-					ideology = neutrality
-					long_name = MDL_EMR_FED_PARTY_LONG
-					name = MDL_EMR_FED_PARTY
-				}
+				set_cosmetic_tag = EMR_FEDERATION
 			}
+			release_puppet = EMR
 		}
 	}
 }
@@ -4425,7 +4402,14 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_balkanize_arabia"
 		custom_effect_tooltip = MDL_balkanize_arabia_tt
 		hidden_effect = {
+			MDL_create_dynamic_EMR = yes
+			EMR = { 
+				add_ideas = MDL_federation_member
+				set_cosmetic_tag = EMR_FEDERATION
+			}
 			release_puppet = EMR
+		}
+		hidden_effect = {
 			release_puppet = SDS
 			for_each_scope_loop = {
 				array = EMR.original_cores
@@ -4434,34 +4418,6 @@ shared_focus = {
 			SDS = {
 				add_ideas = MDL_federation_member
 				set_politics = { ruling_party = democratic }
-			}
-			EMR = {
-				generate_character = {
-					token_base = MDL_elected_princes
-					name = MDL_elected_princes
-				}
-				set_portraits = {
-					character = MDL_elected_princes
-					civilian = {
-						large = "gfx/leaders/MDL/MDL_FED_generic.tga"
-					}
-				}
-				set_cosmetic_tag = EMR_FEDERATION
-				add_ideas = MDL_federation_member
-				add_country_leader_role = {
-					character = MDL_elected_princes
-					country_leader = {
-						ideology = republicanism
-						expire = "1965.1.1"
-					}
-					promote_leader = yes
-				}
-				set_politics = { ruling_party = neutrality }
-				set_party_name = {
-					ideology = neutrality
-					long_name = MDL_EMR_FED_PARTY_LONG
-					name = MDL_EMR_FED_PARTY
-				}
 			}
 		}
 	}

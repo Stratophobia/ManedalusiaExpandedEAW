@@ -5,7 +5,6 @@ leader_traits = {
 		ai_focus_defense_factor = 0.75
 	}
 	MDL_council_unstable_trait = {
-		allowed = { always = yes }
 		ai_will_do = { factor = 0 }
 		stability_factor = -0.10
 	}

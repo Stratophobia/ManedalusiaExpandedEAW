@@ -738,10 +738,7 @@ MDL_holy_war_tab = {
     fire_only_once = yes
     cost = 0
     available = {
-      EQC = {
-        every_owned_state = { is_fully_controlled_by = ROOT }
-        has_capitulated = yes
-      }
+      EQC = { has_capitulated = yes }
     }
     complete_effect = {
       hidden_effect = { clr_country_flag = MDL_can_peaceout_new_mareland }
@@ -1611,7 +1608,7 @@ MDL_grifo_imperium_decisions_tab = {
               small="gfx/interface/ideas/Advisors/MDL/MDL_antonio_aviario.tga"
             }
             army = {
-              large = "gfx/leaders/MDL/MDL_antonio_aviario.tga"
+              large = "gfx/leaders/MDL/antonio_aviario.tga"
             }
           }
           add_country_leader_role = {

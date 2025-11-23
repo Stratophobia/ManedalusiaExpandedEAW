@@ -1,5 +1,5 @@
 ﻿l_english:
-###MAIN FOCUS###
+###STARTING TREE###
   MDL_gather_the_council:0 "Gather The Council"
   MDL_gather_the_council_desc:0 "Our independence was hard won, and has put us in an unenviable position. Caught between the titans of Abyssinia and Maregypt, we'll have to act fast and in lockstep to assure our continued existence. We shall gather the military council at once!"
   MDL_rally_militias:0 "Rally The Militias"
@@ -1427,7 +1427,7 @@
 ###FEDERAL ARMY TOOLTIPS###
   MDL_FA_recruit_2_tt:0 "The ponypower benefit from the §GFederal Army§! §YRecruitment Mission§! is increased to §Y4500§!."
   MDL_FA_recruit_3_tt:0 "The ponypower benefit from the §GFederal Army§! §YRecruitment Mission§! is increased to §Y6000§!."
-  MDL_integrate_abyssinia_tt:0 "@ABY Abyssinia will lose all claims to @MDL Manedalusian territories, as well as its core on @KLG Klugetown.\n\nWe will integrate @ABYB Abyssinia into the §GWestern Zebrican Federation§!."
+  MDL_integrate_abyssinia_tt:0 "@ABY Abyssinia will lose all claims to @MDL Manedalusian territories, as well as its core on @KLG Klugetown.\n\nWe will integrate @ABY Abyssinia into the §GWestern Zebrican Federation§!."
   MDL_integrate_klugetown_tt:0 "We will integrate @KLG Klugetown into the §GWestern Zebrican Federation§!."
   MDL_integrate_yemane_tt:0 "We will integrate @YMN Yemane into the §GWestern Zebrican Federation§!."
   MDL_integrate_donkeys_tt:0 "We will integrate the donkeys into the §GWestern Zebrican Federation§!."

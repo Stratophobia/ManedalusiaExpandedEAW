@@ -1,677 +1,730 @@
 MDL_set_init_templates = {
-  hidden_effect = {
-    delete_unit_template_and_units = { division_template = "Local Levy" }
-    delete_unit_template_and_units = { division_template = "Clawa Regiment" }
-    delete_unit_template_and_units = { division_template = "Crown Guard" }
-    delete_unit_template_and_units = { division_template = "Highlander Regiment" }
-    load_oob = "MDL_1007"
-  }
+	hidden_effect = {
+		delete_unit_template_and_units = { division_template = "Local Levy" }
+		delete_unit_template_and_units = { division_template = "Clawa Regiment" }
+		delete_unit_template_and_units = { division_template = "Crown Guard" }
+		delete_unit_template_and_units = { division_template = "Highlander Regiment" }
+		load_oob = "MDL_1007"
+	}
 }
 
 MDL_assign_general_staff_init = {
-  MDL_armil_khaldun = {
-    add_field_marshal_role = {
-      traits={ pony_race_trait trickster trait_unpredictable inspirational_leader }
-      skill=2
-      attack_skill=1
-      defense_skill=3
-      planning_skill=2
-      logistics_skill=1
-      desc = MDL_armil_khaldun_desc
-    }
-  } custom_effect_tooltip = MDL_khaldun_stats_tt
-  MDL_crimson_sayf = {
-    add_field_marshal_role = {
-      traits = { pony_race_trait harsh_leader infantry_leader }
-      skill=3
-      attack_skill=4
-      defense_skill=2
-      planning_skill=2
-      logistics_skill=2
-      desc = MDL_crimson_sayf_desc
-    }
-  } custom_effect_tooltip = MDL_sayf_stats_tt
-  MDL_moonstriker_laylah={
-    add_corps_commander_role = {
-      traits = { pony_race_trait organizer MDL_logistical_cantrips_trait skilled_staffer }
-      skill=2
-      attack_skill=1
-      defense_skill=3
-      planning_skill=2
-      logistics_skill=5
-      desc= MDL_moonstriker_laylah_desc
-    }
-  } custom_effect_tooltip = MDL_moonstriker_stats_tt
-  MDL_almanezor = {
-    add_corps_commander_role = {
-      traits = { pony_race_trait panzer_leader trait_reckless }
-      skill=2
-      attack_skill=4
-      defense_skill=1
-      planning_skill=3
-      logistics_skill=2
-      desc= MDL_almanezor_desc
-    }
-  } custom_effect_tooltip = MDL_almanezor_stats_tt
-  MDL_clover_breeze = {
-    add_corps_commander_role = {
-      traits = { pony_race_trait politically_connected air_force_commander }
-      skill=2
-      attack_skill=1
-      defense_skill=2
-      planning_skill=3
-      logistics_skill=1
-      desc = MDL_clover_breeze_desc
-    }
-  } custom_effect_tooltip = MDL_clover_breeze_stats_tt
+	MDL_armil_khaldun = {
+		add_field_marshal_role = {
+			traits={ pony_race_trait trickster trait_unpredictable inspirational_leader }
+			skill=2
+			attack_skill=1
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=1
+			desc = MDL_armil_khaldun_desc
+		}
+	} custom_effect_tooltip = MDL_khaldun_stats_tt
+	MDL_crimson_sayf = {
+		add_field_marshal_role = {
+			traits = { pony_race_trait harsh_leader infantry_leader }
+			skill=3
+			attack_skill=4
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			desc = MDL_crimson_sayf_desc
+		}
+	} custom_effect_tooltip = MDL_sayf_stats_tt
+	MDL_moonstriker_laylah={
+		add_corps_commander_role = {
+			traits = { pony_race_trait organizer MDL_logistical_cantrips_trait skilled_staffer }
+			skill=2
+			attack_skill=1
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=5
+			desc= MDL_moonstriker_laylah_desc
+		}
+	} custom_effect_tooltip = MDL_moonstriker_stats_tt
+	MDL_almanezor = {
+		add_corps_commander_role = {
+			traits = { pony_race_trait panzer_leader trait_reckless }
+			skill=2
+			attack_skill=4
+			defense_skill=1
+			planning_skill=3
+			logistics_skill=2
+			desc= MDL_almanezor_desc
+		}
+	} custom_effect_tooltip = MDL_almanezor_stats_tt
+	MDL_clover_breeze = {
+		add_corps_commander_role = {
+			traits = { pony_race_trait politically_connected air_force_commander }
+			skill=2
+			attack_skill=1
+			defense_skill=2
+			planning_skill=3
+			logistics_skill=1
+			desc = MDL_clover_breeze_desc
+		}
+	} custom_effect_tooltip = MDL_clover_breeze_stats_tt
 }
 
 MDL_create_dynamic_BAT = {
-  create_dynamic_country = {
-    original_tag = BAT
-    set_variable = { collaboration_formed_by = PREV }
-    set_temp_variable = { new_country = this }
+	create_dynamic_country = {
+		original_tag = BAT
+		set_variable = { collaboration_formed_by = PREV }
+		set_temp_variable = { new_country = this }
 
-    PREV = {
-      every_controlled_state = {
-        limit = { occupied_country_tag = BAT }
-        var:new_country = { transfer_state = PREV }
-      }
-      puppet = new_country
-    }
-    load_focus_tree = { tree = generic_zebra_focus }
-    set_capital = {
-      state = 712
-      remember_old_capital = no
-    }
-    set_party_name = {
-      ideology = fascism
-      long_name = BAT_VASSAL_NAME_LONG
-      name = BAT_VASSAL_NAME
-    }
-    set_party_name = {
-      ideology = neutrality
-      long_name = BAT_VASSAL_NAME_LONG
-      name = BAT_VASSAL_NAME
-    }
-    set_party_name = {
-      ideology = democratic
-      long_name = BAT_VASSAL_NAME_LONG
-      name = BAT_VASSAL_NAME
-    }
-    generate_character = {
-      token_base = BAT_purification_committee
-      name = BAT_purification_committee
-    }
-    set_portraits = {
-      character = BAT_purification_committee
-      civilian = {
-        large = "gfx/leaders/MDL/BAT_purification_committee.tga"
-      }
-    }
-    add_country_leader_role = {
-      character = BAT_purification_committee
-      country_leader = {
-        ideology = ultranationalism
-        expire = "1965.1.1.1"
-        id=-1
-      }
-      promote_leader = yes
-    }
-    add_country_leader_role = {
-      character = BAT_purification_committee
-      country_leader = {
-        ideology = theocracy_subideology
-        expire = "1965.1.1.1"
-        id=-1
-      }
-      promote_leader = yes
-    }
-    add_country_leader_role = {
-      character = BAT_purification_committee
-      country_leader = {
-        ideology = harmonic_theocracy
-        expire = "1965.1.1.1"
-        id=-1
-      }
-      promote_leader = yes
-    }
-    add_ideas = {
-      pony_race
-      poverty5
-      outdated_industry
-      lack_of_scientists2
-      better_science_base
-      civilian_economy
-    }
-    MDL = { BAT = { transfer_technology = yes } }
-    set_AI_strategies_on_every_possible_country_delayed = yes
-  }
+		PREV = {
+			every_controlled_state = {
+				limit = { occupied_country_tag = BAT }
+				var:new_country = { transfer_state = PREV }
+			}
+			puppet = new_country
+		}
+		load_focus_tree = { tree = generic_zebra_focus }
+		set_capital = {
+			state = 712
+			remember_old_capital = no
+		}
+		set_party_name = {
+			ideology = fascism
+			long_name = BAT_VASSAL_NAME_LONG
+			name = BAT_VASSAL_NAME
+		}
+		set_party_name = {
+			ideology = neutrality
+			long_name = BAT_VASSAL_NAME_LONG
+			name = BAT_VASSAL_NAME
+		}
+		set_party_name = {
+			ideology = democratic
+			long_name = BAT_VASSAL_NAME_LONG
+			name = BAT_VASSAL_NAME
+		}
+		generate_character = {
+			token_base = BAT_purification_committee
+			name = BAT_purification_committee
+		}
+		set_portraits = {
+			character = BAT_purification_committee
+			civilian = {
+				large = "gfx/leaders/MDL/BAT_purification_committee.tga"
+			}
+		}
+		add_country_leader_role = {
+			character = BAT_purification_committee
+			country_leader = {
+				ideology = ultranationalism
+				expire = "1965.1.1.1"
+				id=-1
+			}
+			promote_leader = yes
+		}
+		add_country_leader_role = {
+			character = BAT_purification_committee
+			country_leader = {
+				ideology = theocracy_subideology
+				expire = "1965.1.1.1"
+				id=-1
+			}
+			promote_leader = yes
+		}
+		add_country_leader_role = {
+			character = BAT_purification_committee
+			country_leader = {
+				ideology = harmonic_theocracy
+				expire = "1965.1.1.1"
+				id=-1
+			}
+			promote_leader = yes
+		}
+		add_ideas = {
+			pony_race
+			poverty5
+			outdated_industry
+			lack_of_scientists2
+			better_science_base
+			civilian_economy
+		}
+		MDL = { BAT = { transfer_technology = yes } }
+		set_AI_strategies_on_every_possible_country_delayed = yes
+	}
+}
+
+MDL_create_dynamic_EMR = {
+	create_dynamic_country = {
+		original_tag = EMR
+		set_variable = { collaboration_formed_by = PREV }
+		set_temp_variable = { new_country = this }
+		PREV = {
+			every_controlled_state = {
+				limit = { occupied_country_tag = EMR }
+				var:new_country = { transfer_state = PREV }
+			}
+			puppet = new_country
+		}
+		load_focus_tree = generic_zebra_focus
+		set_capital = {
+			state = 843
+			remember_old_capital = no
+		}
+		generate_character = {
+			token_base = MDL_elected_princes
+			name = MDL_elected_princes
+		}
+		set_portraits = {
+			character = MDL_elected_princes
+			civilian = {
+				large = "gfx/leaders/MDL/MDL_FED_generic.tga"
+			}
+		}
+		add_country_leader_role = {
+			character = MDL_elected_princes
+			country_leader = {
+				ideology = republicanism
+				expire = "1965.1.1"
+			}
+			promote_leader = yes
+		}
+		set_party_name = {
+			ideology = neutrality
+			long_name = MDL_EMR_FED_PARTY_LONG
+			name = MDL_EMR_FED_PARTY
+		}
+		add_ideas = {
+			horse_race
+			poverty5
+			outdated_industry
+			lack_of_scientists2
+			better_science_base
+			civilian_economy
+		}
+		MDL = { EMR = { transfer_technology = yes } }
+		set_AI_strategies_on_every_possible_country_delayed = yes
+	}
 }
 
 MDL_create_dynamic_KAR = {
-  create_dynamic_country = {
-    original_tag = KAR
-    set_variable = { collaboration_formed_by = PREV }
-    set_temp_variable = { new_country = this }
+	create_dynamic_country = {
+		original_tag = KAR
+		set_variable = { collaboration_formed_by = PREV }
+		set_temp_variable = { new_country = this }
 
-    PREV = {
-      every_controlled_state = {
-        limit = { occupied_country_tag = KAR }
-        var:new_country = { transfer_state = PREV }
-      }
-      puppet = new_country
-    }
-    load_focus_tree = { tree = generic_zebra_focus }
-    set_capital = {
-      state = 999
-      remember_old_capital = no
-    }
-    set_party_name = {
-      ideology = fascism
-      long_name = KAR_VASSAl_PARTY_NAME_LONG
-      name = KAR_VASSAl_PARTY_NAME
-    }
-    generate_character = {
-      token_base = KAR_khan_clone
-      name = KAR_khan_clone
-    }
-    set_portraits = {
-      character = KAR_khan_clone
-      civilian = {
-        large = "gfx/leaders/KAR/Kurstanbek_Khan.tga"
-      }
-    }
-    add_country_leader_role = {
-      character = KAR_khan_clone
-      country_leader = {
-        ideology = nazism
-        expire = "1965.1.1.1"
-        id=-1
-      }
-      promote_leader = yes
-    }
-    add_ideas = {
-      horse_race
-      poverty5
-      outdated_industry
-      lack_of_scientists2
-      better_science_base
-      civilian_economy
-    }
-    MDL = { KAR = { transfer_technology = yes } }
-    set_AI_strategies_on_every_possible_country_delayed = yes
-  }
+		PREV = {
+			every_controlled_state = {
+				limit = { occupied_country_tag = KAR }
+				var:new_country = { transfer_state = PREV }
+			}
+			puppet = new_country
+		}
+		load_focus_tree = generic_zebra_focus
+		set_capital = {
+			state = 999
+			remember_old_capital = no
+		}
+		set_party_name = {
+			ideology = fascism
+			long_name = KAR_VASSAl_PARTY_NAME_LONG
+			name = KAR_VASSAl_PARTY_NAME
+		}
+		generate_character = {
+			token_base = KAR_khan_clone
+			name = KAR_khan_clone
+		}
+		set_portraits = {
+			character = KAR_khan_clone
+			civilian = {
+				large = "gfx/leaders/KAR/Kurstanbek_Khan.tga"
+			}
+		}
+		add_country_leader_role = {
+			character = KAR_khan_clone
+			country_leader = {
+				ideology = nazism
+				expire = "1965.1.1.1"
+				id=-1
+			}
+			promote_leader = yes
+		}
+		add_ideas = {
+			horse_race
+			poverty5
+			outdated_industry
+			lack_of_scientists2
+			better_science_base
+			civilian_economy
+		}
+		MDL = { KAR = { transfer_technology = yes } }
+		set_AI_strategies_on_every_possible_country_delayed = yes
+	}
 }
 
 MDL_create_dynamic_MAZ = {
-  create_dynamic_country = {
-    original_tag = MAZ
-    set_variable = { collaboration_formed_by = PREV }
-    set_temp_variable = { new_country = this }
+	create_dynamic_country = {
+		original_tag = MAZ
+		set_variable = { collaboration_formed_by = PREV }
+		set_temp_variable = { new_country = this }
 
-    PREV = {
-      every_controlled_state = {
-        limit = { occupied_country_tag = MAZ }
-        var:new_country = { transfer_state = PREV }
-      }
-      puppet = new_country
-    }
-    load_focus_tree = { tree = generic_zebra_focus }
-    set_capital = {
-      state = 943
-      remember_old_capital = no
-    }
-    set_party_name = {
-      ideology = fascism
-      long_name = MDL_SAMIRA_PARTY_NAME_LONG
-      name = MDL_SAMIRA_PARTY_NAME
-    }
-    generate_character = {
-      token_base = MAZ_grandmistress_samira
-      name = MAZ_grandmistress_samira
-    }
-    set_portraits = {
-      character = MAZ_grandmistress_samira
-      civilian = {
-        large = "gfx/leaders/MDL/grandmistress_samira.tga"
-      }
-    }
-    add_country_leader_role = {
-      character = MAZ_grandmistress_samira
-      country_leader = {
-        expire = "1965.1.1"
-        ideology = holy_order_f
-        desc = MDL_grandmistress_samira_desc
-      }
-      promote_leader = yes 
-    }
-    add_ideas = {
-      zebra_race
-      poverty5
-      outdated_industry
-      lack_of_scientists2
-      better_science_base
-      civilian_economy
-    }
-    MDL = { MAZ = { transfer_technology = yes } }
-    set_AI_strategies_on_every_possible_country_delayed = yes
-  }
+		PREV = {
+			every_controlled_state = {
+				limit = { occupied_country_tag = MAZ }
+				var:new_country = { transfer_state = PREV }
+			}
+			puppet = new_country
+		}
+		load_focus_tree = { tree = generic_zebra_focus }
+		set_capital = {
+			state = 943
+			remember_old_capital = no
+		}
+		set_party_name = {
+			ideology = fascism
+			long_name = MDL_SAMIRA_PARTY_NAME_LONG
+			name = MDL_SAMIRA_PARTY_NAME
+		}
+		generate_character = {
+			token_base = MAZ_grandmistress_samira
+			name = MAZ_grandmistress_samira
+		}
+		set_portraits = {
+			character = MAZ_grandmistress_samira
+			civilian = {
+				large = "gfx/leaders/MDL/grandmistress_samira.tga"
+			}
+		}
+		add_country_leader_role = {
+			character = MAZ_grandmistress_samira
+			country_leader = {
+				expire = "1965.1.1"
+				ideology = holy_order_f
+				desc = MDL_grandmistress_samira_desc
+			}
+			promote_leader = yes
+		}
+		add_ideas = {
+			zebra_race
+			poverty5
+			outdated_industry
+			lack_of_scientists2
+			better_science_base
+			civilian_economy
+		}
+		MDL = { MAZ = { transfer_technology = yes } }
+		set_AI_strategies_on_every_possible_country_delayed = yes
+	}
 }
 
 MDL_create_dynamic_ABY = {
-  create_dynamic_country = {
-    original_tag = ABY
-    set_variable = { collaboration_formed_by = PREV }
-    set_temp_variable = { new_country = this }
+	create_dynamic_country = {
+		original_tag = ABY
+		set_variable = { collaboration_formed_by = PREV }
+		set_temp_variable = { new_country = this }
 
-    PREV = {
-      every_controlled_state = {
-        limit = { occupied_country_tag = ABY }
-        var:new_country = { transfer_state = PREV }
-      }
-      puppet = new_country
-    }
-    load_focus_tree = { tree = generic_zebra_focus }
-    set_capital = {
-      state = 775
-      remember_old_capital = no
-    }
-    set_party_name = {
-      ideology = neutrality
-      long_name = MDL_ABY_FED_PARTY_LONG
-      name = MDL_ABY_FED_PARTY
-    }
-    set_party_name = {
-      ideology = democratic
-      long_name = ABY_MDL_ADMIN_PARTY_NAME_LONG
-      name = ABY_MDL_ADMIN_PARTY_NAME
-    }
-    generate_character = {
-      token_base = MDL_abyssinia_assembly
-      name = MDL_abyssinia_assembly
-    }
-    set_portraits = {
-      character = MDL_abyssinia_assembly
-      army = {
-        large = "gfx/leaders/MDL/MDL_FED_generic.tga"
-      }
-    }
-    add_country_leader_role = {
-      character = MDL_abyssinia_assembly
-      country_leader = {
-        ideology = republicanism
-        expire = "1965.1.1.1"
-        id=-1
-      }
-      promote_leader = yes
-    }
-    add_country_leader_role = {
-      character = MDL_abyssinia_assembly
-      country_leader = {
-        ideology = harmonic_constitutionalism
-        expire = "1965.1.1.1"
-        id=-1
-      }
-      promote_leader = yes
-    }
-    add_ideas = {
-      cat_race
-      poverty5
-      outdated_industry
-      lack_of_scientists2
-      better_science_base
-      civilian_economy
-    }
-    MDL = { ABY = { transfer_technology = yes } }
-    set_AI_strategies_on_every_possible_country_delayed = yes
-  }
+		PREV = {
+			every_controlled_state = {
+				limit = { occupied_country_tag = ABY }
+				var:new_country = { transfer_state = PREV }
+			}
+			puppet = new_country
+		}
+		load_focus_tree = { tree = generic_zebra_focus }
+		set_capital = {
+			state = 775
+			remember_old_capital = no
+		}
+		set_party_name = {
+			ideology = neutrality
+			long_name = MDL_ABY_FED_PARTY_LONG
+			name = MDL_ABY_FED_PARTY
+		}
+		set_party_name = {
+			ideology = democratic
+			long_name = ABY_MDL_ADMIN_PARTY_NAME_LONG
+			name = ABY_MDL_ADMIN_PARTY_NAME
+		}
+		generate_character = {
+			token_base = MDL_abyssinia_assembly
+			name = MDL_abyssinia_assembly
+		}
+		set_portraits = {
+			character = MDL_abyssinia_assembly
+			army = {
+				large = "gfx/leaders/MDL/MDL_FED_generic.tga"
+			}
+		}
+		add_country_leader_role = {
+			character = MDL_abyssinia_assembly
+			country_leader = {
+				ideology = republicanism
+				expire = "1965.1.1.1"
+				id=-1
+			}
+			promote_leader = yes
+		}
+		add_country_leader_role = {
+			character = MDL_abyssinia_assembly
+			country_leader = {
+				ideology = harmonic_constitutionalism
+				expire = "1965.1.1.1"
+				id=-1
+			}
+			promote_leader = yes
+		}
+		add_ideas = {
+			cat_race
+			poverty5
+			outdated_industry
+			lack_of_scientists2
+			better_science_base
+			civilian_economy
+		}
+		MDL = { ABY = { transfer_technology = yes } }
+		set_AI_strategies_on_every_possible_country_delayed = yes
+	}
 }
 
 MDL_create_dynamic_MGY = {
-  create_dynamic_country = {
-    original_tag = MGY
-    set_variable = { collaboration_formed_by = PREV }
-    set_temp_variable = { new_country = this }
+	create_dynamic_country = {
+		original_tag = MGY
+		set_variable = { collaboration_formed_by = PREV }
+		set_temp_variable = { new_country = this }
 
-    PREV = {
-      every_controlled_state = {
-        limit = { occupied_country_tag = MGY }
-        var:new_country = { transfer_state = PREV }
-      }
-      puppet = new_country
-    }
-    load_focus_tree = { 
-      tree = generic_zebra_focus
-      keep_completed = yes		   
-    }
-    set_capital = {
-      state = 733
-      remember_old_capital = no
-    }
-    set_party_name = {
-      ideology = neutrality
-      long_name = MDL_MGY_FED_PARTY_LONG
-      name = MDL_MGY_FED_PARTY
-    }
-    set_party_name = {
-      ideology = democratic
-      long_name = MDL_MGY_DEMOCRATIC_PARTY_LONG
-      name = MDL_MGY_DEMOCRATIC_PARTY
-    }
-    generate_character = {
-      token_base = MDL_nomarchical_council
-      name = MDL_nomarchical_council
-    }
-    set_portraits = {
-      character = MDL_nomarchical_council
-      army = {
-        large = "gfx/leaders/MDL/nomarchy_council.tga"
-      }
-    }
-    add_country_leader_role = {
-      character = MDL_nomarchical_council
-      country_leader = {
-        ideology = republicanism
-        expire = "1965.1.1.1"
-        id=-1
-      }
-      promote_leader = yes
-    }
-    add_country_leader_role = {
-      character = MDL_nomarchical_council
-      country_leader = {
-        ideology = harmonic_constitutionalism
-        expire = "1965.1.1.1"
-        id=-1
-      }
-      promote_leader = yes
-    }
-    add_ideas = {
-      pony_race
-      poverty5
-      outdated_industry
-      lack_of_scientists2
-      better_science_base
-      civilian_economy
-    }
-    MDL = { MGY = { transfer_technology = yes } }
-    set_AI_strategies_on_every_possible_country_delayed = yes
-  }
+		PREV = {
+			every_controlled_state = {
+				limit = { occupied_country_tag = MGY }
+				var:new_country = { transfer_state = PREV }
+			}
+			puppet = new_country
+		}
+		load_focus_tree = {
+			tree = generic_zebra_focus
+			keep_completed = yes			
+		}
+		set_capital = {
+			state = 733
+			remember_old_capital = no
+		}
+		set_party_name = {
+			ideology = neutrality
+			long_name = MDL_MGY_FED_PARTY_LONG
+			name = MDL_MGY_FED_PARTY
+		}
+		set_party_name = {
+			ideology = democratic
+			long_name = MDL_MGY_DEMOCRATIC_PARTY_LONG
+			name = MDL_MGY_DEMOCRATIC_PARTY
+		}
+		generate_character = {
+			token_base = MDL_nomarchical_council
+			name = MDL_nomarchical_council
+		}
+		set_portraits = {
+			character = MDL_nomarchical_council
+			army = {
+				large = "gfx/leaders/MDL/nomarchy_council.tga"
+			}
+		}
+		add_country_leader_role = {
+			character = MDL_nomarchical_council
+			country_leader = {
+				ideology = republicanism
+				expire = "1965.1.1.1"
+				id=-1
+			}
+			promote_leader = yes
+		}
+		add_country_leader_role = {
+			character = MDL_nomarchical_council
+			country_leader = {
+				ideology = harmonic_constitutionalism
+				expire = "1965.1.1.1"
+				id=-1
+			}
+			promote_leader = yes
+		}
+		add_ideas = {
+			pony_race
+			poverty5
+			outdated_industry
+			lack_of_scientists2
+			better_science_base
+			civilian_economy
+		}
+		MDL = { MGY = { transfer_technology = yes } }
+		set_AI_strategies_on_every_possible_country_delayed = yes
+	}
 }
 
 MDL_create_dynamic_DRG = {
-  create_dynamic_country = {
-    original_tag = DRG
-    set_variable = { collaboration_formed_by = PREV }
-    set_temp_variable = { new_country = this }
+	create_dynamic_country = {
+		original_tag = DRG
+		set_variable = { collaboration_formed_by = PREV }
+		set_temp_variable = { new_country = this }
 
-    PREV = {
-      every_controlled_state = {
-        limit = { occupied_country_tag = DRG }
-        var:new_country = { transfer_state = PREV }
-      }
-      puppet = new_country
-    }
-    load_focus_tree = { 
-      tree = generic_zebra_focus
-      keep_completed = yes
-    }
-    set_capital = {
-      state = 7
-      remember_old_capital = no
-    }
-    set_party_name = {
-      ideology = democratic
-      long_name = MDL_DRG_EQS_NAME_LONG
-      name = MDL_DRG_EQS_NAME
-    }
-    generate_character = {
-      token_base = MDL_equestrian_command
-      name = MDL_equestrian_command
-    }
-    generate_character = {
-      token_base = MDL_equestrian_prov_parliament
-      name = MDL_equestrian_prov_parliament
-    }
-    set_portraits = {
-      character = MDL_equestrian_command
-      army = {
-        large = "gfx/leaders/MDL/MDL_equestrian_command.tga"
-      }
-    }
-    set_portraits = {
-      character = MDL_equestrian_prov_parliament
-      army = {
-        large = "gfx/leaders/MDL/MDL_FED_generic.tga"
-      }
-    }
-    add_country_leader_role = {
-      character = MDL_equestrian_command
-      country_leader = {
-        ideology = liberation_front
-        expire = "1965.1.1.1"
-        id=-1
-      }
-      promote_leader = yes
-    }
-    add_ideas = {
-      pony_race
-      proper_science_base
-      modern_society
-      no_lack_of_scientists
-      no_poverty
-    }
-    MDL = { DRG = { transfer_technology = yes } }
-    set_AI_strategies_on_every_possible_country_delayed = yes
-  }
+		PREV = {
+			every_controlled_state = {
+				limit = { occupied_country_tag = DRG }
+				var:new_country = { transfer_state = PREV }
+			}
+			puppet = new_country
+		}
+		load_focus_tree = {
+			tree = generic_zebra_focus
+			keep_completed = yes
+		}
+		set_capital = {
+			state = 7
+			remember_old_capital = no
+		}
+		set_party_name = {
+			ideology = democratic
+			long_name = MDL_DRG_EQS_NAME_LONG
+			name = MDL_DRG_EQS_NAME
+		}
+		generate_character = {
+			token_base = MDL_equestrian_command
+			name = MDL_equestrian_command
+		}
+		generate_character = {
+			token_base = MDL_equestrian_prov_parliament
+			name = MDL_equestrian_prov_parliament
+		}
+		set_portraits = {
+			character = MDL_equestrian_command
+			army = {
+				large = "gfx/leaders/MDL/MDL_equestrian_command.tga"
+			}
+		}
+		set_portraits = {
+			character = MDL_equestrian_prov_parliament
+			army = {
+				large = "gfx/leaders/MDL/MDL_FED_generic.tga"
+			}
+		}
+		add_country_leader_role = {
+			character = MDL_equestrian_command
+			country_leader = {
+				ideology = liberation_front
+				expire = "1965.1.1.1"
+				id=-1
+			}
+			promote_leader = yes
+		}
+		add_ideas = {
+			pony_race
+			proper_science_base
+			modern_society
+			no_lack_of_scientists
+			no_poverty
+		}
+		MDL = { DRG = { transfer_technology = yes } }
+		set_AI_strategies_on_every_possible_country_delayed = yes
+	}
 }
 
 MDL_elevate_virianthrax = {
-  generate_character = {
-    token_base = MDL_virianthrax
-    name = MDL_virianthrax
-  }
-  set_portraits = {
-    character = MDL_virianthrax
-    civilian={
-      large="gfx/leaders/MDL/virianthrax.tga"
-    }
-    army = {
-      large = "gfx/leaders/MDL/virianthrax.tga"
-    }
-  }
-  add_country_leader_role = {
-    character = MDL_virianthrax
-    country_leader = {
-      expire = "1965.1.1"
-      ideology = stratocracy
-    }
-    promote_leader = yes
-  }
+	generate_character = {
+		token_base = MDL_virianthrax
+		name = MDL_virianthrax
+	}
+	set_portraits = {
+		character = MDL_virianthrax
+		civilian={
+			large="gfx/leaders/MDL/virianthrax.tga"
+		}
+		army = {
+			large = "gfx/leaders/MDL/virianthrax.tga"
+		}
+	}
+	add_country_leader_role = {
+		character = MDL_virianthrax
+		country_leader = {
+			expire = "1965.1.1"
+			ideology = stratocracy
+		}
+		promote_leader = yes
+	}
 }
 
 #For Harmonic Crusade Path. Gradually remove Sun Madness effect
 MDL_reduce_sun_madness = {
-  if = {
-    limit = { has_idea = MDL_sunmad_0 }
-    swap_ideas = {
-      remove_idea = MDL_sunmad_0
-      add_idea = MDL_sunmad_1
-    }
-  }
-  else_if = {
-    limit = { has_idea = MDL_sunmad_1 }
-    swap_ideas = {
-      remove_idea = MDL_sunmad_1
-      add_idea = MDL_sunmad_2
-    }
-  }
-  else_if = {
-    limit = { has_idea = MDL_sunmad_2 }
-    swap_ideas = {
-      remove_idea = MDL_sunmad_2
-      add_idea = MDL_sunmad_3
-    }
-  }
-  else_if = {
-    limit = { has_idea = MDL_sunmad_3 }
-    remove_ideas = MDL_sunmad_3
-  }
+	if = {
+		limit = { has_idea = MDL_sunmad_0 }
+		swap_ideas = {
+			remove_idea = MDL_sunmad_0
+			add_idea = MDL_sunmad_1
+		}
+	}
+	else_if = {
+		limit = { has_idea = MDL_sunmad_1 }
+		swap_ideas = {
+			remove_idea = MDL_sunmad_1
+			add_idea = MDL_sunmad_2
+		}
+	}
+	else_if = {
+		limit = { has_idea = MDL_sunmad_2 }
+		swap_ideas = {
+			remove_idea = MDL_sunmad_2
+			add_idea = MDL_sunmad_3
+		}
+	}
+	else_if = {
+		limit = { has_idea = MDL_sunmad_3 }
+		remove_ideas = MDL_sunmad_3
+	}
 }
 
 MDL_djinn_SOL_setup = {
-  if = {
-    limit = {
-      NLR = { exists = yes }
-    }
-    add_opinion_modifier = {
-      target = NLR
-      modifier = MDL_djinn_opinion
-    }
-  }
-  add_opinion_modifier = {
-    target = EQS
-    modifier = MDL_djinn_opinion
-  }
-  if = {
-    limit = {
-      EQS = {
-        exists = yes
-        is_ai = yes
-      }     
-    }
-    EQS = { add_ideas = MDL_demon_of_the_outer_night }
-  }
-  if = {
-    limit = {
-      NLR = {
-        exists = yes
-        is_ai = yes
-      }
-    }
-    NLR = { add_ideas = MDL_demon_of_the_outer_night }
-  }
+	if = {
+		limit = {
+			NLR = { exists = yes }
+		}
+		add_opinion_modifier = {
+			target = NLR
+			modifier = MDL_djinn_opinion
+		}
+	}
+	add_opinion_modifier = {
+		target = EQS
+		modifier = MDL_djinn_opinion
+	}
+	if = {
+		limit = {
+			EQS = {
+				exists = yes
+				is_ai = yes
+			}		
+		}
+		EQS = { add_ideas = MDL_demon_of_the_outer_night }
+	}
+	if = {
+		limit = {
+			NLR = {
+				exists = yes
+				is_ai = yes
+			}
+		}
+		NLR = { add_ideas = MDL_demon_of_the_outer_night }
+	}
 }
 
 MDL_holy_war_autodo_military_focuses = {
-  if = {
-    limit = {
-      NOT = { has_completed_focus = MDL_army_stuff }
-    }
-    complete_national_focus = MDL_army_stuff
-  }
-  if = {
-    limit = {
-      NOT = { has_completed_focus = MDL_go_with_samira }
-    }
-    complete_national_focus = MDL_go_with_samira
-  }
-  if = {
-    limit = {
-      NOT = { has_completed_focus = MDL_modern_army_crash_course }
-    }
-    complete_national_focus = MDL_modern_army_crash_course
-  }
+	if = {
+		limit = {
+			NOT = { has_completed_focus = MDL_army_stuff }
+		}
+		complete_national_focus = MDL_army_stuff
+	}
+	if = {
+		limit = {
+			NOT = { has_completed_focus = MDL_go_with_samira }
+		}
+		complete_national_focus = MDL_go_with_samira
+	}
+	if = {
+		limit = {
+			NOT = { has_completed_focus = MDL_modern_army_crash_course }
+		}
+		complete_national_focus = MDL_modern_army_crash_course
+	}
 }
 
 MDL_get_all_resources_ABY_MGY = {
-  MGY = {
-    every_owned_state = {
-      limit = {
-        NOT = {
-          is_in_array = {
-            array = MDL_holy_mandate_resources
-            value = THIS
-          }
-        }
-      }
-      MGY = {
-        give_resource_rights = {
-          receiver = MDL
-          state = PREV
-        }
-        add_to_array = {
-          array = MDL_holy_mandate_resources
-          value = PREV
-        }
-      }
-    }
-  }
-  ABY = {
-    every_owned_state = {
-      limit = {
-        NOT = {
-          is_in_array = {
-            array = MDL_holy_mandate_resources
-            value = THIS
-          }
-        }
-      }
-      ABY = {
-        give_resource_rights = {
-          receiver = MDL
-          state = PREV
-        }
-        add_to_array = {
-          array = MDL_holy_mandate_resources
-          value = PREV
-        }
-      }
-    }
-  }
+	MGY = {
+		every_owned_state = {
+			limit = {
+				NOT = {
+					is_in_array = {
+						array = MDL_holy_mandate_resources
+						value = THIS
+					}
+				}
+			}
+			MGY = {
+				give_resource_rights = {
+					receiver = MDL
+					state = PREV
+				}
+				add_to_array = {
+					array = MDL_holy_mandate_resources
+					value = PREV
+				}
+			}
+		}
+	}
+	ABY = {
+		every_owned_state = {
+			limit = {
+				NOT = {
+					is_in_array = {
+						array = MDL_holy_mandate_resources
+						value = THIS
+					}
+				}
+			}
+			ABY = {
+				give_resource_rights = {
+					receiver = MDL
+					state = PREV
+				}
+				add_to_array = {
+					array = MDL_holy_mandate_resources
+					value = PREV
+				}
+			}
+		}
+	}
 }
 
 MDL_get_all_resources_BAT = {
-  BAT = {
-    every_owned_state = {
-      BAT = {
-        give_resource_rights = {
-          receiver = MDL
-          state = PREV
-        }
-      }
-    }
-  }
+	BAT = {
+		every_owned_state = {
+			BAT = {
+				give_resource_rights = {
+					receiver = MDL
+					state = PREV
+				}
+			}
+		}
+	}
 }
 
 #For Wingbardy War (All Main Paths)
 MDL_WNG_transfer_colonies = {
-  WNG = {
-    remove_state_claim = 1200
-    remove_state_claim = 784
-  }
-  if = {
-    limit = {
-      ABY = {
-        exists = yes
-        OR = {
-          is_in_faction_with = MDL
-          is_subject_of = MDL
-        }
-      }
-    }
-    WNG = {
-      every_owned_state = {
-        limit = { is_core_of = ABY }
-        ABY = { transfer_state = PREV }
-      }
-    }
-  }
-  else = {
-    WNG = {
-      every_owned_state = {
-        limit = { is_core_of = ABY }
-        MDL = { transfer_state = PREV }
-      }
-    }
-    ABY = {
-      every_owned_state = {
-        limit = { is_core_of = ABY }
-        MDL = { transfer_state = PREV }
-      }
-    }
-  }
+	WNG = {
+		remove_state_claim = 1200
+		remove_state_claim = 784
+	}
+	if = {
+		limit = {
+			ABY = {
+				exists = yes
+				OR = {
+					is_in_faction_with = MDL
+					is_subject_of = MDL
+				}
+			}
+		}
+		WNG = {
+			every_owned_state = {
+				limit = { is_core_of = ABY }
+				ABY = { transfer_state = PREV }
+			}
+		}
+	}
+	else = {
+		WNG = {
+			every_owned_state = {
+				limit = { is_core_of = ABY }
+				MDL = { transfer_state = PREV }
+			}
+		}
+		ABY = {
+			every_owned_state = {
+				limit = { is_core_of = ABY }
+				MDL = { transfer_state = PREV }
+			}
+		}
+	}
 }
 
 MDL_increase_conscription = {
@@ -692,7 +745,7 @@ MDL_increase_conscription = {
 		add_ideas = service_by_requirement
 	}
 	else_if = {
-    limit = { has_idea = service_by_requirement }
+		limit = { has_idea = service_by_requirement }
 		add_ideas = all_adults_serve
 	}
 	else = { add_manpower = 10000 }
@@ -700,230 +753,230 @@ MDL_increase_conscription = {
 
 #Grifo path only. heteronym setup
 MDL_grifo_setup_heteronym = {
-  random_list = {
-    1 = {
-      set_country_flag = MDL_grifo_modernist
-      add_ideas = MDL_grifo_modernist
-    }
-    1 = {
-      set_country_flag = MDL_grifo_socialite
-      add_ideas = MDL_grifo_socialite
-    }
-    1 = {
-      set_country_flag = MDL_grifo_naturalist
-      add_ideas = MDL_grifo_naturalist
-    }
-    1 = {
-      set_country_flag = MDL_grifo_romanticist
-      add_ideas = MDL_grifo_romanticist
-    }
-  }
+	random_list = {
+		1 = {
+			set_country_flag = MDL_grifo_modernist
+			add_ideas = MDL_grifo_modernist
+		}
+		1 = {
+			set_country_flag = MDL_grifo_socialite
+			add_ideas = MDL_grifo_socialite
+		}
+		1 = {
+			set_country_flag = MDL_grifo_naturalist
+			add_ideas = MDL_grifo_naturalist
+		}
+		1 = {
+			set_country_flag = MDL_grifo_romanticist
+			add_ideas = MDL_grifo_romanticist
+		}
+	}
 }
 
 MDL_grifo_dismiss_heteronyms = {
-  clr_country_flag = MDL_heteronyms_active
-  if = {
-    limit = { has_country_flag = MDL_grifo_modernist }
-    clr_country_flag = MDL_grifo_modernist
-    remove_ideas = MDL_grifo_modernist
-  }
-  else_if = {
-    limit = { has_country_flag = MDL_grifo_socialite }
-    clr_country_flag = MDL_grifo_socialite
-    remove_ideas = MDL_grifo_socialite
-  }
-  else_if = {
-    limit = { has_country_flag = MDL_grifo_naturalist }
-    clr_country_flag = MDL_grifo_naturalist
-    remove_ideas = MDL_grifo_naturalist
-  }
-  else = {
-    clr_country_flag = MDL_grifo_romanticist
-    remove_ideas = MDL_grifo_romanticist
-  }
+	clr_country_flag = MDL_heteronyms_active
+	if = {
+		limit = { has_country_flag = MDL_grifo_modernist }
+		clr_country_flag = MDL_grifo_modernist
+		remove_ideas = MDL_grifo_modernist
+	}
+	else_if = {
+		limit = { has_country_flag = MDL_grifo_socialite }
+		clr_country_flag = MDL_grifo_socialite
+		remove_ideas = MDL_grifo_socialite
+	}
+	else_if = {
+		limit = { has_country_flag = MDL_grifo_naturalist }
+		clr_country_flag = MDL_grifo_naturalist
+		remove_ideas = MDL_grifo_naturalist
+	}
+	else = {
+		clr_country_flag = MDL_grifo_romanticist
+		remove_ideas = MDL_grifo_romanticist
+	}
 }
 
 #Grifo path only. shuffle heteronym
 MDL_shuffle_grifo_heteronym = {
-  if = {
-    limit = { has_country_flag = MDL_grifo_modernist }
-    clr_country_flag = MDL_grifo_modernist
-    hidden_effect = { remove_ideas = MDL_grifo_modernist }
-    random_list = {
-      1 = {
-        set_country_flag = MDL_grifo_romanticist
-        add_ideas = MDL_grifo_romanticist
-      }
-      1 = {
-        set_country_flag = MDL_grifo_socialite
-        add_ideas = MDL_grifo_socialite
-      }
-      1 = {
-        set_country_flag = MDL_grifo_naturalist
-        add_ideas = MDL_grifo_naturalist
-      }
-    }
-  }
-  else_if = {
-    limit = { has_country_flag = MDL_grifo_romanticist }
-    clr_country_flag = MDL_grifo_romanticist
-    hidden_effect = { remove_ideas = MDL_grifo_romanticist }
-    random_list = {
-      1 = {
-        set_country_flag = MDL_grifo_modernist
-        add_ideas = MDL_grifo_modernist
-      }
-      1 = {
-        set_country_flag = MDL_grifo_socialite
-        add_ideas = MDL_grifo_socialite
-      }
-      1 = {
-        set_country_flag = MDL_grifo_naturalist
-        add_ideas = MDL_grifo_naturalist
-      }
-    }
-  }
-  else_if = {
-    limit = { has_country_flag = MDL_grifo_naturalist }
-    clr_country_flag = MDL_grifo_naturalist
-    hidden_effect = { remove_ideas = MDL_grifo_naturalist }
-    random_list = {
-      1 = {
-        set_country_flag = MDL_grifo_modernist
-        add_ideas = MDL_grifo_modernist
-      }
-      1 = {
-        set_country_flag = MDL_grifo_socialite
-        add_ideas = MDL_grifo_socialite
-      }
-      1 = {
-        set_country_flag = MDL_grifo_romanticist
-        add_ideas = MDL_grifo_romanticist
-      }
-    }
-  }
-  else = {
-    clr_country_flag = MDL_grifo_socialite
-    hidden_effect = { remove_ideas = MDL_grifo_socialite }
-    random_list = {
-      1 = {
-        set_country_flag = MDL_grifo_romanticist
-        add_ideas = MDL_grifo_romanticist
-      }
-      1 = {
-        set_country_flag = MDL_grifo_naturalist
-        add_ideas = MDL_grifo_naturalist
-      }
-      1 = {
-        set_country_flag = MDL_grifo_naturalist
-          add_ideas = MDL_grifo_naturalist
-      }
-    }
-  }
+	if = {
+		limit = { has_country_flag = MDL_grifo_modernist }
+		clr_country_flag = MDL_grifo_modernist
+		hidden_effect = { remove_ideas = MDL_grifo_modernist }
+		random_list = {
+			1 = {
+				set_country_flag = MDL_grifo_romanticist
+				add_ideas = MDL_grifo_romanticist
+			}
+			1 = {
+				set_country_flag = MDL_grifo_socialite
+				add_ideas = MDL_grifo_socialite
+			}
+			1 = {
+				set_country_flag = MDL_grifo_naturalist
+				add_ideas = MDL_grifo_naturalist
+			}
+		}
+	}
+	else_if = {
+		limit = { has_country_flag = MDL_grifo_romanticist }
+		clr_country_flag = MDL_grifo_romanticist
+		hidden_effect = { remove_ideas = MDL_grifo_romanticist }
+		random_list = {
+			1 = {
+				set_country_flag = MDL_grifo_modernist
+				add_ideas = MDL_grifo_modernist
+			}
+			1 = {
+				set_country_flag = MDL_grifo_socialite
+				add_ideas = MDL_grifo_socialite
+			}
+			1 = {
+				set_country_flag = MDL_grifo_naturalist
+				add_ideas = MDL_grifo_naturalist
+			}
+		}
+	}
+	else_if = {
+		limit = { has_country_flag = MDL_grifo_naturalist }
+		clr_country_flag = MDL_grifo_naturalist
+		hidden_effect = { remove_ideas = MDL_grifo_naturalist }
+		random_list = {
+			1 = {
+				set_country_flag = MDL_grifo_modernist
+				add_ideas = MDL_grifo_modernist
+			}
+			1 = {
+				set_country_flag = MDL_grifo_socialite
+				add_ideas = MDL_grifo_socialite
+			}
+			1 = {
+				set_country_flag = MDL_grifo_romanticist
+				add_ideas = MDL_grifo_romanticist
+			}
+		}
+	}
+	else = {
+		clr_country_flag = MDL_grifo_socialite
+		hidden_effect = { remove_ideas = MDL_grifo_socialite }
+		random_list = {
+			1 = {
+				set_country_flag = MDL_grifo_romanticist
+				add_ideas = MDL_grifo_romanticist
+			}
+			1 = {
+				set_country_flag = MDL_grifo_naturalist
+				add_ideas = MDL_grifo_naturalist
+			}
+			1 = {
+				set_country_flag = MDL_grifo_naturalist
+					add_ideas = MDL_grifo_naturalist
+			}
+		}
+	}
 }
 
 MDL_get_zeeb_tech = {
-  if = {
-    limit = {
-      NOT = { has_tech = tech_zebra_climate }
-    }
-    set_technology = { tech_zebra_climate = 1 }
-  }
-  else_if = {
-    limit = {
-      has_tech = tech_zebra_climate
-      NOT = { has_tech = tech_zebra_alchemy }
-    }
-    set_technology = { tech_zebra_alchemy = 1 }
-  }
-  else = {
-    set_technology = { tech_zebra_crafting = 1 }
-  }
+	if = {
+		limit = {
+			NOT = { has_tech = tech_zebra_climate }
+		}
+		set_technology = { tech_zebra_climate = 1 }
+	}
+	else_if = {
+		limit = {
+			has_tech = tech_zebra_climate
+			NOT = { has_tech = tech_zebra_alchemy }
+		}
+		set_technology = { tech_zebra_alchemy = 1 }
+	}
+	else = {
+		set_technology = { tech_zebra_crafting = 1 }
+	}
 }
 
 MDL_upgrade_zeeb_tech = {
-  if = {
-    limit = {
-      has_tech = tech_spirit_warriors
-      NOT = { has_tech = tech_spirit_warriors2 }
-    }
-    set_technology = {
-      tech_spirit_warriors2 = 1
-    }
-  }
-  else_if = {
-    limit = {
-      has_tech = tech_spirit_warriors2
-      NOT = { has_tech = tech_spirit_warriors3 }
-    }
-    if = {
-      limit = {
-        has_country_flag = MDL_samira_path
-        NOT = { has_completed_focus = MDL_SAM57 }
-      }
-      country_event = manedalusia.168
-    }
-    set_technology = {
-      tech_spirit_warriors3 = 1
-    }
-  }
-  else_if = {
-    limit = {
-      has_tech = tech_spirit_warriors3
-      NOT = { has_tech = tech_spirit_warriors4 }
-    }
-    set_technology = {
-      tech_spirit_warriors4 = 1
-    }
-  }
-  else_if = {
-    limit = {
-      has_tech = tech_spirit_warriors4
-      NOT = { has_tech = tech_spirit_warriors5 }
-    }
-    set_technology = {
-      tech_spirit_warriors5 = 1
-    }
-  }
-  else_if = {
-    limit = {
-      has_tech = tech_spirit_warriors5
-      NOT = { has_tech = tech_spirit_warriors6 }
-    }
-    set_technology = {
-      tech_spirit_warriors6 = 1
-    }
-    if = {
-      limit = {
-        has_country_flag = MDL_samira_path
-        NOT = { has_completed_focus = MDL_SAM57 }
-      }
-      country_event = manedalusia.171
-    }
-  }
-  else_if = {
-    limit = {
-      has_tech = tech_spirit_warriors6
-      NOT = { has_tech = zebra_steel_rituals }
-    }
-    set_technology = {
-      zebra_steel_rituals = 1
-    }
-  }
-  else_if = {
-    limit = {
-      has_tech = zebra_steel_rituals
-      NOT = { has_tech = zebra_bounded_weapons }
-    }
-    set_technology = {
-      zebra_bounded_weapons = 1
-    }
-  }
-  else = {
-    set_technology = {
-      zebra_warriors_of_new_age = 1
-    }
-  }
+	if = {
+		limit = {
+			has_tech = tech_spirit_warriors
+			NOT = { has_tech = tech_spirit_warriors2 }
+		}
+		set_technology = {
+			tech_spirit_warriors2 = 1
+		}
+	}
+	else_if = {
+		limit = {
+			has_tech = tech_spirit_warriors2
+			NOT = { has_tech = tech_spirit_warriors3 }
+		}
+		if = {
+			limit = {
+				has_country_flag = MDL_samira_path
+				NOT = { has_completed_focus = MDL_SAM57 }
+			}
+			country_event = manedalusia.168
+		}
+		set_technology = {
+			tech_spirit_warriors3 = 1
+		}
+	}
+	else_if = {
+		limit = {
+			has_tech = tech_spirit_warriors3
+			NOT = { has_tech = tech_spirit_warriors4 }
+		}
+		set_technology = {
+			tech_spirit_warriors4 = 1
+		}
+	}
+	else_if = {
+		limit = {
+			has_tech = tech_spirit_warriors4
+			NOT = { has_tech = tech_spirit_warriors5 }
+		}
+		set_technology = {
+			tech_spirit_warriors5 = 1
+		}
+	}
+	else_if = {
+		limit = {
+			has_tech = tech_spirit_warriors5
+			NOT = { has_tech = tech_spirit_warriors6 }
+		}
+		set_technology = {
+			tech_spirit_warriors6 = 1
+		}
+		if = {
+			limit = {
+				has_country_flag = MDL_samira_path
+				NOT = { has_completed_focus = MDL_SAM57 }
+			}
+			country_event = manedalusia.171
+		}
+	}
+	else_if = {
+		limit = {
+			has_tech = tech_spirit_warriors6
+			NOT = { has_tech = zebra_steel_rituals }
+		}
+		set_technology = {
+			zebra_steel_rituals = 1
+		}
+	}
+	else_if = {
+		limit = {
+			has_tech = zebra_steel_rituals
+			NOT = { has_tech = zebra_bounded_weapons }
+		}
+		set_technology = {
+			zebra_bounded_weapons = 1
+		}
+	}
+	else = {
+		set_technology = {
+			zebra_warriors_of_new_age = 1
+		}
+	}
 }
 
 MDL_upgrade_knights_technology = {
@@ -989,372 +1042,372 @@ MDL_upgrade_knights_technology = {
 }
 
 MDL_holy_war_gimp_all_empress_enemies = {
-  every_other_country = {
-    limit = {
-      is_ai = yes
-      OR = {
-        OR = {
-          has_cosmetic_tag = EQS_DEM1
-          original_tag = CHN
-          original_tag = LSP
-          original_tag = SCS
-          original_tag = STG
-          original_tag = CRY
-          original_tag = VAN
-        }
-        is_subject_of = CHN
-      }
-    }
-    add_ideas = MDL_holy_war_ai_debuff
-  }
+	every_other_country = {
+		limit = {
+			is_ai = yes
+			OR = {
+				OR = {
+					has_cosmetic_tag = EQS_DEM1
+					original_tag = CHN
+					original_tag = LSP
+					original_tag = SCS
+					original_tag = STG
+					original_tag = CRY
+					original_tag = VAN
+				}
+				is_subject_of = CHN
+			}
+		}
+		add_ideas = MDL_holy_war_ai_debuff
+	}
 }
 
 MDL_holy_war_gimp_the_republic = {
-  every_other_country = {
-    limit = {
-      is_ai = yes
-      has_cosmetic_tag = EQS_DEM1
-    }
-    if = {
-      limit = {
-        MDL = { is_ai = no }
-        NOT = { has_idea = MDL_holy_war_ai_debuff }
-      }
-      add_ideas = MDL_holy_war_ai_debuff
-    }
-  }
+	every_other_country = {
+		limit = {
+			is_ai = yes
+			has_cosmetic_tag = EQS_DEM1
+		}
+		if = {
+			limit = {
+				MDL = { is_ai = no }
+				NOT = { has_idea = MDL_holy_war_ai_debuff }
+			}
+			add_ideas = MDL_holy_war_ai_debuff
+		}
+	}
 }
 
 MDL_increase_samira_happiness = {
-  custom_effect_tooltip = MDL_increase_samira_happiness_tt
-  add_to_variable = {
-    var = MDL_samira_happiness_score
-    value = 1
-  }
+	custom_effect_tooltip = MDL_increase_samira_happiness_tt
+	add_to_variable = {
+		var = MDL_samira_happiness_score
+		value = 1
+	}
 }
 MDL_decrease_samira_happiness = {
-  if = {
-    limit = {
-      check_variable = { MDL_samira_happiness_score > 0 }
-    }
-    add_to_variable = {
-      var = MDL_samira_happiness_score
-      value = -1
-    }
-  }
+	if = {
+		limit = {
+			check_variable = { MDL_samira_happiness_score > 0 }
+		}
+		add_to_variable = {
+			var = MDL_samira_happiness_score
+			value = -1
+		}
+	}
 }
 
 MDL_switch_power_to_samira = {
-  if = {
-    limit = {
-      has_government = fascism
-      NOT = { has_completed_focus = MDL_SAM57 }
-    }
-    custom_effect_tooltip = MDL_samira_returns_to_power_tt
-    hidden_effect = {
-      set_politics = { ruling_party = neutrality }
-    }
-  }
+	if = {
+		limit = {
+			has_government = fascism
+			NOT = { has_completed_focus = MDL_SAM57 }
+		}
+		custom_effect_tooltip = MDL_samira_returns_to_power_tt
+		hidden_effect = {
+			set_politics = { ruling_party = neutrality }
+		}
+	}
 }
 
 MDL_damage_asabiyyah = {
-  random_list = {
-    1 = {
-      add_to_variable = {
-        var = MDL_trade_var
-        value = -0.10
-      }
-    }
-    1 = {
-      add_to_variable = {
-        var = MDL_production_var
-        value = -0.10
-      }
-    }
-    1 = {
-      add_to_variable = {
-        var = MDL_research_var
-        value = -0.10
-      }
-    }
-    1 = {
-      add_to_variable = {
-        var = MDL_org_var
-        value = -0.10
-      }
-    }
-    1 = {
-      add_to_variable = {
-        var = MDL_morale_var
-        value = -0.10
-      }
-    }
-    1 = {
-      add_to_variable = {
-        var = MDL_pp_var
-        value = -0.10
-      }
-    }
-    1 = {
-      add_to_variable = {
-        var = MDL_surrender_var
-        value = -0.10
-      }
-    }
-    1 = {
-      add_to_variable = {
-        var = MDL_war_var
-        value = -0.10
-      }
-    }
-    1 = {
-      add_to_variable = {
-        var = MDL_consoom_var
-        value = -0.10
-      }
-    }
-    1 = {
-      add_to_variable = {
-        var = MDL_economy_var
-        value = -0.10
-      }
-    }
-    1 = {
-      add_to_variable = {
-        var = MDL_tradelaw_var
-        value = -0.10
-      }
-    }
-    1 = {
-      add_to_variable = {
-        var = MDL_mobilization_var
-        value = -0.10
-      }
-    }
-    1 = {
-      add_to_variable = {
-        var = MDL_stability_var
-        value = -0.10
-      }
-    }
-  }
+	random_list = {
+		1 = {
+			add_to_variable = {
+				var = MDL_trade_var
+				value = -0.10
+			}
+		}
+		1 = {
+			add_to_variable = {
+				var = MDL_production_var
+				value = -0.10
+			}
+		}
+		1 = {
+			add_to_variable = {
+				var = MDL_research_var
+				value = -0.10
+			}
+		}
+		1 = {
+			add_to_variable = {
+				var = MDL_org_var
+				value = -0.10
+			}
+		}
+		1 = {
+			add_to_variable = {
+				var = MDL_morale_var
+				value = -0.10
+			}
+		}
+		1 = {
+			add_to_variable = {
+				var = MDL_pp_var
+				value = -0.10
+			}
+		}
+		1 = {
+			add_to_variable = {
+				var = MDL_surrender_var
+				value = -0.10
+			}
+		}
+		1 = {
+			add_to_variable = {
+				var = MDL_war_var
+				value = -0.10
+			}
+		}
+		1 = {
+			add_to_variable = {
+				var = MDL_consoom_var
+				value = -0.10
+			}
+		}
+		1 = {
+			add_to_variable = {
+				var = MDL_economy_var
+				value = -0.10
+			}
+		}
+		1 = {
+			add_to_variable = {
+				var = MDL_tradelaw_var
+				value = -0.10
+			}
+		}
+		1 = {
+			add_to_variable = {
+				var = MDL_mobilization_var
+				value = -0.10
+			}
+		}
+		1 = {
+			add_to_variable = {
+				var = MDL_stability_var
+				value = -0.10
+			}
+		}
+	}
 }
 
 MDL_level_up_mehmet_fight_level = {
-  custom_effect_tooltip = MDL_level_up_mehmet_fight_level_tt
-  hidden_effect = {
-    add_to_variable = {
-      var = MDL_mehmet_fight_level
-      value = 1
-    }
-  }
+	custom_effect_tooltip = MDL_level_up_mehmet_fight_level_tt
+	hidden_effect = {
+		add_to_variable = {
+			var = MDL_mehmet_fight_level
+			value = 1
+		}
+	}
 }
 
 MDL_fortify_arabian_border = {
-  custom_effect_tooltip = MDL_SAM41_tt
-  hidden_effect = {
-    827 = {
-      add_building_construction = {
-        type = bunker
-        level = 2
-        province = {
-          all_provinces = yes
-          limit_to_border = yes
-        }
-        instant_build = yes
-      }
-    }
-    828 = {
-      add_building_construction = {
-        type = bunker
-        level = 2
-        province = {
-          all_provinces = yes
-          limit_to_border = yes
-        }
-        instant_build = yes
-      }
-    }
-    812 = {
-      add_building_construction = {
-        type = bunker
-        level = 2
-        province = {
-          all_provinces = yes
-          limit_to_border = yes
-        }
-        instant_build = yes
-      }
-    }
-    799 = {
-      add_building_construction = {
-        type = bunker
-        level = 2
-        province = {
-          all_provinces = yes
-          limit_to_border = yes
-        }
-        instant_build = yes
-      }
-    }
-  }
+	custom_effect_tooltip = MDL_SAM41_tt
+	hidden_effect = {
+		827 = {
+			add_building_construction = {
+				type = bunker
+				level = 2
+				province = {
+					all_provinces = yes
+					limit_to_border = yes
+				}
+				instant_build = yes
+			}
+		}
+		828 = {
+			add_building_construction = {
+				type = bunker
+				level = 2
+				province = {
+					all_provinces = yes
+					limit_to_border = yes
+				}
+				instant_build = yes
+			}
+		}
+		812 = {
+			add_building_construction = {
+				type = bunker
+				level = 2
+				province = {
+					all_provinces = yes
+					limit_to_border = yes
+				}
+				instant_build = yes
+			}
+		}
+		799 = {
+			add_building_construction = {
+				type = bunker
+				level = 2
+				province = {
+					all_provinces = yes
+					limit_to_border = yes
+				}
+				instant_build = yes
+			}
+		}
+	}
 }
 
 MDL_invade_arabia = {
-  if = {
-    limit = { EMR = { exists = yes } }
-    declare_war_on = { type = annex_everything target = EMR }
-  }
-  if = {
-    limit = { SDS = { exists = yes } }
-    declare_war_on = { type = annex_everything target = SDS }
-  }
-  if = {
-    limit = { SDF = { exists = yes } }
-    declare_war_on = { type = annex_everything target = SDF }
-  }
-  if = {
-    limit = { SDL = { exists = yes } }
-    declare_war_on = { type = annex_everything target = SDL }
-  }
-  if = {
-    limit = { SDC = { exists = yes } }
-    declare_war_on = { type = annex_everything target = SDC }
-  }
+	if = {
+		limit = { EMR = { exists = yes } }
+		declare_war_on = { type = annex_everything target = EMR }
+	}
+	if = {
+		limit = { SDS = { exists = yes } }
+		declare_war_on = { type = annex_everything target = SDS }
+	}
+	if = {
+		limit = { SDF = { exists = yes } }
+		declare_war_on = { type = annex_everything target = SDF }
+	}
+	if = {
+		limit = { SDL = { exists = yes } }
+		declare_war_on = { type = annex_everything target = SDL }
+	}
+	if = {
+		limit = { SDC = { exists = yes } }
+		declare_war_on = { type = annex_everything target = SDC }
+	}
 }
 
 MDL_provide_starting_airforce = {
-  custom_effect_tooltip = MDL_provide_starting_airforce_tt
-  hidden_effect = {
-    if = {
-      limit = { has_dlc = "By Blood Alone" }
-      set_technology = {
-        iw_small_airframe = 1
-        iw_medium_airframe = 1
-        aa_lmg = 1
-        engines_1 = 1
-        early_bombs = 1
-      }
-      generic_early_fighter = yes
-      generic_early_tac_bomber = yes
-      add_equipment_to_stockpile = {
-        type = small_plane_airframe
-        amount = 50
-        producer = MDL
-        variant_name = "Early Fighter"
-      }
-    }
-    else = {
-      set_technology = {
-        early_fighter = 1
-        early_bomber = 1
-      }
-      add_equipment_to_stockpile = {
-        type = small_plane_airframe
-        amount = 75
-        producer = MDL
-      }
-    }
-  }
+	custom_effect_tooltip = MDL_provide_starting_airforce_tt
+	hidden_effect = {
+		if = {
+			limit = { has_dlc = "By Blood Alone" }
+			set_technology = {
+				iw_small_airframe = 1
+				iw_medium_airframe = 1
+				aa_lmg = 1
+				engines_1 = 1
+				early_bombs = 1
+			}
+			generic_early_fighter = yes
+			generic_early_tac_bomber = yes
+			add_equipment_to_stockpile = {
+				type = small_plane_airframe
+				amount = 50
+				producer = MDL
+				variant_name = "Early Fighter"
+			}
+		}
+		else = {
+			set_technology = {
+				early_fighter = 1
+				early_bomber = 1
+			}
+			add_equipment_to_stockpile = {
+				type = small_plane_airframe
+				amount = 75
+				producer = MDL
+			}
+		}
+	}
 }
 
 MDL_initiate_warplan_green = {
-  custom_effect_tooltip = MDL_warplan_green_tt
-  effect_tooltip = {
-    MGY = {
-      add_timed_idea = {
-        idea = MDL_destroyed_army
-        days = 360
-      }
-    }
-  }
-  declare_war_on = { type = annex_everything target = MGY }
-  hidden_effect = { set_country_flag = MDL_warplan_green_flag }
+	custom_effect_tooltip = MDL_warplan_green_tt
+	effect_tooltip = {
+		MGY = {
+			add_timed_idea = {
+				idea = MDL_destroyed_army
+				days = 360
+			}
+		}
+	}
+	declare_war_on = { type = annex_everything target = MGY }
+	hidden_effect = { set_country_flag = MDL_warplan_green_flag }
 }
 
 MDL_conclude_warplan_green = {
-  hidden_effect = {
-    if = {
-      limit = { has_country_flag = MDL_warplan_green_flag }
-      clr_country_flag = MDL_warplan_green_flag
-    }
-  }
+	hidden_effect = {
+		if = {
+			limit = { has_country_flag = MDL_warplan_green_flag }
+			clr_country_flag = MDL_warplan_green_flag
+		}
+	}
 }
 
 MDL_grant_init_ship_templates = {
-  custom_effect_tooltip = MDL_grant_init_ship_templates_tt
-  hidden_effect = {
-    if = {
-      limit = { has_dlc = "Man the Guns" }
-      set_technology = {
-		    early_ship_hull_submarine = 1
-        early_ship_hull_cruiser = 1
-		    early_ship_hull_light = 1
-        basic_ship_hull_light = 1
-		    coastal_defense_ships = 1
-		    basic_battery = 1
-		    basic_depth_charges = 1
-		    basic_torpedo = 1
-        basic_light_battery = 1
-      }
-      #SUBS
-	    create_equipment_variant = {
-		    name = "Waka Waka Class"
-		    type = ship_hull_submarine_1
-		    name_group = MDL_SS_HISTORICAL
-		    parent_version = 0
-		    modules = {
-			    fixed_ship_torpedo_slot = ship_torpedo_sub_1
-			    fixed_ship_engine_slot = sub_ship_engine_1
-			    rear_1_custom_slot = ship_mine_layer_sub
-		    }
-	    }
-      #DESTROYERS
-      create_equipment_variant = {
-		    name = "Salmon-Eater Class"	
-		    type = ship_hull_light_1
-		    name_group = MDL_DD_HISTORICAL
-		    parent_version = 0
-		    modules = {
-			    fixed_ship_battery_slot = ship_light_battery_1
-			    fixed_ship_anti_air_slot = ship_anti_air_1
-			    fixed_ship_fire_control_system_slot = ship_fire_control_system_0
-			    fixed_ship_radar_slot = ship_sonar_1
-			    fixed_ship_engine_slot = light_ship_engine_1
-			    fixed_ship_torpedo_slot = ship_torpedo_1
-			    mid_1_custom_slot = ship_torpedo_1
-			    rear_1_custom_slot = ship_depth_charge_1
-		    }
-	    }
-      create_equipment_variant = {
-	      name = "Flea Class"
-	      type = ship_hull_cruiser_coastal_defense_ship	
-	      name_group = MDL_CA_HISTORICAL
-	      parent_version = 0
-	      modules = {
-		      fixed_ship_battery_slot = ship_heavy_battery_1
-		      fixed_ship_anti_air_slot = ship_anti_air_1
-		      fixed_ship_fire_control_system_slot = ship_fire_control_system_0
-		      fixed_ship_radar_slot = empty
-		      fixed_ship_engine_slot = cruiser_ship_engine_1
-		      fixed_ship_secondaries_slot = ship_secondaries_1
-		      fixed_ship_armor_slot = ship_armor_cruiser_1
-		      front_1_custom_slot = ship_anti_air_1
-		      mid_1_custom_slot = ship_secondaries_1
-		      mid_2_custom_slot = ship_secondaries_1
-		      rear_1_custom_slot = ship_medium_battery_1
-	      }
-      }
-    }
-    else = {
-      hidden_effect = {
-        set_technology = {
-          early_light_cruiser = 1
-          early_submarine = 1
-        }
-      }
-    }
-  }
+	custom_effect_tooltip = MDL_grant_init_ship_templates_tt
+	hidden_effect = {
+		if = {
+			limit = { has_dlc = "Man the Guns" }
+			set_technology = {
+				early_ship_hull_submarine = 1
+				early_ship_hull_cruiser = 1
+				early_ship_hull_light = 1
+				basic_ship_hull_light = 1
+				coastal_defense_ships = 1
+				basic_battery = 1
+				basic_depth_charges = 1
+				basic_torpedo = 1
+				basic_light_battery = 1
+			}
+			#SUBS
+			create_equipment_variant = {
+				name = "Waka Waka Class"
+				type = ship_hull_submarine_1
+				name_group = MDL_SS_HISTORICAL
+				parent_version = 0
+				modules = {
+					fixed_ship_torpedo_slot = ship_torpedo_sub_1
+					fixed_ship_engine_slot = sub_ship_engine_1
+					rear_1_custom_slot = ship_mine_layer_sub
+				}
+			}
+			#DESTROYERS
+			create_equipment_variant = {
+				name = "Salmon-Eater Class"
+				type = ship_hull_light_1
+				name_group = MDL_DD_HISTORICAL
+				parent_version = 0
+				modules = {
+					fixed_ship_battery_slot = ship_light_battery_1
+					fixed_ship_anti_air_slot = ship_anti_air_1
+					fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+					fixed_ship_radar_slot = ship_sonar_1
+					fixed_ship_engine_slot = light_ship_engine_1
+					fixed_ship_torpedo_slot = ship_torpedo_1
+					mid_1_custom_slot = ship_torpedo_1
+					rear_1_custom_slot = ship_depth_charge_1
+				}
+			}
+			create_equipment_variant = {
+				name = "Flea Class"
+				type = ship_hull_cruiser_coastal_defense_ship
+				name_group = MDL_CA_HISTORICAL
+				parent_version = 0
+				modules = {
+					fixed_ship_battery_slot = ship_heavy_battery_1
+					fixed_ship_anti_air_slot = ship_anti_air_1
+					fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+					fixed_ship_radar_slot = empty
+					fixed_ship_engine_slot = cruiser_ship_engine_1
+					fixed_ship_secondaries_slot = ship_secondaries_1
+					fixed_ship_armor_slot = ship_armor_cruiser_1
+					front_1_custom_slot = ship_anti_air_1
+					mid_1_custom_slot = ship_secondaries_1
+					mid_2_custom_slot = ship_secondaries_1
+					rear_1_custom_slot = ship_medium_battery_1
+				}
+			}
+		}
+		else = {
+			hidden_effect = {
+				set_technology = {
+					early_light_cruiser = 1
+					early_submarine = 1
+				}
+			}
+		}
+	}
 }
 
 MDL_decrease_illiteracy = {

@@ -19,7 +19,6 @@ MDL_black_guard_steelworks_mio = {
     }
   }
   initial_trait = {
-    modifier = { land_bunker_effectiveness_factor = 0.10 }
     organization_modifier = { military_industrial_organization_funds_gain = 0.10 }
     equipment_bonus = {
       build_cost_ic = -0.15
@@ -238,7 +237,6 @@ MDL_office_of_artillery_mio = {
   }
   initial_trait = {
     limit_to_equipment_type = { artillery_equipment }
-    modifier = { land_bunker_effectiveness_factor = 0.10 }
     organization_modifier = { military_industrial_organization_funds_gain = 0.10 }
     equipment_bonus = {
       soft_attack = 0.05
@@ -252,9 +250,7 @@ MDL_hashm_koltaliba_org_mio = {
   icon = GFX_idea_MDL_hashm_koltaliba_org
 
   include = generic_infantry_equipment_organization
-
   research_bonus = 0.05
-
   allowed = {
     original_tag = MDL
     has_dlc = "Arms Against Tyranny"
@@ -265,7 +261,6 @@ MDL_hashm_koltaliba_org_mio = {
     }
   }
   initial_trait = {
-    modifier = { equipment_capture_factor = 0.15 }
     limit_to_equipment_type = { infantry_equipment }
     equipment_bonus = {
       breakthrough = 0.05
@@ -297,10 +292,8 @@ MDL_moonstriker_labs_mio = {
     owner = { has_completed_focus = MDL_alchemical_investment }
   }
   initial_trait = {
-    modifier = { equipment_capture_factor = 0.15 }
     limit_to_equipment_type = { magical_equipment }
     equipment_bonus = {
-      instant = yes
       ap_attack = 0.10
       soft_attack = 0.05
       hard_attack = 0.10
@@ -337,7 +330,6 @@ MDL_motorized_concern_mio = {
     organization_modifier = { military_industrial_organization_design_team_assign_cost = -0.5 }
     equipment_bonus = {
       maximum_speed = 0.10
-      maximum_speed = 0.05
     }
   }
 }
