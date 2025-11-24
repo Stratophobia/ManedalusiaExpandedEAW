@@ -152,60 +152,52 @@ MDL_create_dynamic_BAT = {
 	}
 }
 
-MDL_create_dynamic_EMR = {
+MDL_create_dynamic_MKS = {
 	create_dynamic_country = {
-		original_tag = EMR
+		original_tag = MKS
 		set_variable = { collaboration_formed_by = PREV }
 		set_temp_variable = { new_country = this }
 
 		PREV = {
 			every_controlled_state = {
-				limit = { occupied_country_tag = EMR }
+				limit = { occupied_country_tag = MKS }
 				var:new_country = { transfer_state = PREV }
 			}
 			puppet = new_country
 		}
-		load_focus_tree = { tree = generic_zebra_focus }
+		load_focus_tree = generic_zebra_focus
 		set_capital = {
-			state = 843
+			state = 766
 			remember_old_capital = no
 		}
 		set_party_name = {
 			ideology = neutrality
-			long_name = MDL_EMR_FED_PARTY_LONG
-			name = MDL_EMR_FED_PARTY
+			long_name = MDL_MKS_FED_PARTY_LONG
+			name = MDL_MKS_FED_PARTY
 		}
 		generate_character = {
-			token_base = MDL_elected_princes
-			name = MDL_elected_princes
+			token_base = MDL_ovingo_assembly
+			name = MDL_ovingo_assembly
 		}
 		if = {
-			limit = { has_character = MDL_elected_princes }
+			limit = { has_character = MDL_ovingo_assembly }
 			set_portraits = {
-				character = MDL_elected_princes
+				character = MDL_ovingo_assembly
 				civilian = {
 					large = "gfx/leaders/MDL/MDL_FED_generic.tga"
 				}
 			}
-			add_country_leader_role = {
-				character = MDL_elected_princes
-				country_leader = {
-					ideology = republicanism
-					expire = "1965.1.1"
+			MDL_ovingo_assembly = {
+				add_country_leader_role = {
+					country_leader = {
+						ideology = republicanism
+						expire = "1965.1.1.1"
+						id = -1
+					}
+					promote_leader = yes
 				}
-				promote_leader = yes
 			}
 		}
-		add_ideas = {
-			horse_race
-			poverty5
-			outdated_industry
-			lack_of_scientists2
-			better_science_base
-			civilian_economy
-		}
-		MDL = { EMR = { transfer_technology = yes } }
-		set_AI_strategies_on_every_possible_country_delayed = yes
 	}
 }
 
@@ -468,6 +460,41 @@ MDL_create_dynamic_MGY = {
 		}
 		MDL = { MGY = { transfer_technology = yes } }
 		set_AI_strategies_on_every_possible_country_delayed = yes
+	}
+}
+
+#This effect is meant to create a dynamic tag. For some reason,
+#it does not function for EMR exclusively. If a solution is found,
+#implement it.
+MDL_create_dynamic_EMR = {
+	EMR = {
+		load_focus_tree = { tree = generic_zebra_focus }
+		set_party_name = {
+			ideology = neutrality
+			long_name = MDL_EMR_FED_PARTY_LONG
+			name = MDL_EMR_FED_PARTY
+		}
+		generate_character = {
+			token_base = MDL_elected_princes
+			name = MDL_elected_princes
+		}
+		if = {
+			limit = { has_character = MDL_elected_princes }
+			set_portraits = {
+				character = MDL_elected_princes
+				civilian = {
+					large = "gfx/leaders/MDL/MDL_FED_generic.tga"
+				}
+			}
+			add_country_leader_role = {
+				character = MDL_elected_princes
+				country_leader = {
+					ideology = republicanism
+					expire = "1965.1.1"
+				}
+				promote_leader = yes
+			}
+		}
 	}
 }
 

@@ -4409,6 +4409,7 @@ shared_focus = {
 		custom_effect_tooltip = MDL_integrate_emirs_tt
 		hidden_effect = {
 			MDL_create_dynamic_EMR = yes
+			release_puppet = EMR
 			for_each_scope_loop = {
 				array = EMR.original_cores
 				remove_core_of = SDF
@@ -4416,7 +4417,6 @@ shared_focus = {
 				remove_core_of = SDC
 				remove_core_of = SDS
 			}
-			release_puppet = EMR
 			EMR = {
 				add_ideas = MDL_federation_member
 				set_cosmetic_tag = EMR_FEDERATION
@@ -7133,6 +7133,7 @@ shared_focus = {
 		add_ideas = MDL_corporativism_idea
 
 		decrease_poverty = yes
+		hidden_effect = { decrease_poverty = yes }#ALTER LATER
 		set_party_name = {
 			ideology = communism
 			long_name = MDL_GRIFO_PARTY_COMMIE_NAME_LONG

@@ -1578,39 +1578,15 @@
 				set_country_flag = have_regular_puppets
 				MDL_create_dynamic_MGY = yes
 				release_puppet = MGY
+				MDL_create_dynamic_MKS = yes
 				release_puppet = MKS
 				MGY = {
 					set_cosmetic_tag = MGY_FEDERATION
 					add_ideas = MDL_federation_member
 				}
 				MKS = {
-					generate_character = {
-						token_base = MDL_ovingo_assembly
-						name = MDL_ovingo_assembly
-					}
-					set_portraits = {
-						character = MDL_ovingo_assembly
-						civilian = {
-							large = "gfx/leaders/MDL/MDL_FED_generic.tga"
-						}
-					}
 					set_cosmetic_tag = MKS_FEDERATION
 					add_ideas = MDL_federation_member
-					MDL_ovingo_assembly = {
-						add_country_leader_role = {
-							country_leader = {
-								ideology = republicanism
-								expire = "1965.1.1.1"
-								id = -1
-							}
-							promote_leader = yes
-						}
-					}
-					set_party_name = {
-						ideology = neutrality
-						long_name = MDL_MKS_FED_PARTY_LONG
-						name = MDL_MKS_FED_PARTY
-					}
 				}
 			}
 		}
@@ -2669,40 +2645,23 @@
 						}
 					}
 				}
-				RIZ_moonstriker_laylah = {
-					set_portraits = {
-						army = {
-							large="gfx/leaders/MDL/moonstriker_sunglasses.tga"
-						}
-						civilian={
-							large="gfx/leaders/MDL/moonstriker_sunglasses.tga"
-							small="gfx/interface/ideas/Advisors/MDL/MDL_moonstriker_laylah_sunglasses.tga"
-						}
-					}
-				}
-				every_owned_state = {
-					limit = {
-						OR = {
-							is_in_array = { state_original_cores = MTA }
-							is_in_array = { state_original_cores = OSQ }
-							is_in_array = { state_original_cores = HMR }
-						}
-					}
+				for_each_scope_loop = {
+					array = MTA.original_cores
 					add_core_of = RIZ
 				}
-			}
-			hidden_effect = {
-				RIZ = {
-					load_focus_tree = {
-						tree = generic_zebra_focus
-					}
+				for_each_scope_loop = {
+					array = OSQ.original_cores
+					add_core_of = RIZ
 				}
+				for_each_scope_loop = {
+					array = HMR.original_cores
+					add_core_of = RIZ
+				}
+				RIZ = { load_focus_tree = generic_zebra_focus }
 				MDL = { RIZ = { transfer_technology = yes } }
 			}
 			release_puppet = RIZ
-			RIZ = {
-				add_ideas = RIZ_council_adaptation
-			}
+			RIZ = { add_ideas = RIZ_council_adaptation }
 		}
 	}
 
