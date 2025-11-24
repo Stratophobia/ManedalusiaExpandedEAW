@@ -103,38 +103,41 @@ MDL_create_dynamic_BAT = {
 			token_base = BAT_purification_committee
 			name = BAT_purification_committee
 		}
-		set_portraits = {
-			character = BAT_purification_committee
-			civilian = {
-				large = "gfx/leaders/MDL/BAT_purification_committee.tga"
+		if = {
+			limit = { has_character = BAT_purification_committee }
+			set_portraits = {
+				character = BAT_purification_committee
+				civilian = {
+					large = "gfx/leaders/MDL/BAT_purification_committee.tga"
+				}
 			}
-		}
-		add_country_leader_role = {
-			character = BAT_purification_committee
-			country_leader = {
-				ideology = ultranationalism
-				expire = "1965.1.1.1"
-				id=-1
+			add_country_leader_role = {
+				character = BAT_purification_committee
+				country_leader = {
+					ideology = ultranationalism
+					expire = "1965.1.1.1"
+					id=-1
+				}
+				promote_leader = yes
 			}
-			promote_leader = yes
-		}
-		add_country_leader_role = {
-			character = BAT_purification_committee
-			country_leader = {
-				ideology = theocracy_subideology
-				expire = "1965.1.1.1"
-				id=-1
+			add_country_leader_role = {
+				character = BAT_purification_committee
+				country_leader = {
+					ideology = theocracy_subideology
+					expire = "1965.1.1.1"
+					id=-1
+				}
+				promote_leader = yes
 			}
-			promote_leader = yes
-		}
-		add_country_leader_role = {
-			character = BAT_purification_committee
-			country_leader = {
-				ideology = harmonic_theocracy
-				expire = "1965.1.1.1"
-				id=-1
+			add_country_leader_role = {
+				character = BAT_purification_committee
+				country_leader = {
+					ideology = harmonic_theocracy
+					expire = "1965.1.1.1"
+					id=-1
+				}
+				promote_leader = yes
 			}
-			promote_leader = yes
 		}
 		add_ideas = {
 			pony_race
@@ -176,19 +179,22 @@ MDL_create_dynamic_EMR = {
 			token_base = MDL_elected_princes
 			name = MDL_elected_princes
 		}
-		set_portraits = {
-			character = MDL_elected_princes
-			civilian = {
-				large = "gfx/leaders/MDL/MDL_FED_generic.tga"
+		if = {
+			limit = { has_character = MDL_elected_princes }
+			set_portraits = {
+				character = MDL_elected_princes
+				civilian = {
+					large = "gfx/leaders/MDL/MDL_FED_generic.tga"
+				}
 			}
-		}
-		add_country_leader_role = {
-			character = MDL_elected_princes
-			country_leader = {
-				ideology = republicanism
-				expire = "1965.1.1"
+			add_country_leader_role = {
+				character = MDL_elected_princes
+				country_leader = {
+					ideology = republicanism
+					expire = "1965.1.1"
+				}
+				promote_leader = yes
 			}
-			promote_leader = yes
 		}
 		add_ideas = {
 			horse_race
@@ -230,20 +236,23 @@ MDL_create_dynamic_KAR = {
 			token_base = KAR_khan_clone
 			name = KAR_khan_clone
 		}
-		set_portraits = {
-			character = KAR_khan_clone
-			civilian = {
-				large = "gfx/leaders/KAR/Kurstanbek_Khan.tga"
+		if = {
+			limit = { has_character = KAR_khan_clone }
+			set_portraits = {
+				character = KAR_khan_clone
+				civilian = {
+					large = "gfx/leaders/KAR/Kurstanbek_Khan.tga"
+				}
 			}
-		}
-		add_country_leader_role = {
-			character = KAR_khan_clone
-			country_leader = {
-				ideology = nazism
-				expire = "1965.1.1.1"
-				id=-1
+			add_country_leader_role = {
+				character = KAR_khan_clone
+				country_leader = {
+					ideology = nazism
+					expire = "1965.1.1.1"
+					id=-1
+				}
+				promote_leader = yes
 			}
-			promote_leader = yes
 		}
 		add_ideas = {
 			horse_race
@@ -285,20 +294,23 @@ MDL_create_dynamic_MAZ = {
 			token_base = MAZ_grandmistress_samira
 			name = MAZ_grandmistress_samira
 		}
-		set_portraits = {
-			character = MAZ_grandmistress_samira
-			civilian = {
-				large = "gfx/leaders/MDL/grandmistress_samira.tga"
+		if = {
+			limit = { has_character = MAZ_grandmistress_samira }
+			set_portraits = {
+				character = MAZ_grandmistress_samira
+				civilian = {
+					large = "gfx/leaders/MDL/grandmistress_samira.tga"
+				}
 			}
-		}
-		add_country_leader_role = {
-			character = MAZ_grandmistress_samira
-			country_leader = {
-				expire = "1965.1.1"
-				ideology = holy_order_f
-				desc = MDL_grandmistress_samira_desc
+			add_country_leader_role = {
+				character = MAZ_grandmistress_samira
+				country_leader = {
+					expire = "1965.1.1"
+					ideology = holy_order_f
+					desc = MDL_grandmistress_samira_desc
+				}
+				promote_leader = yes
 			}
-			promote_leader = yes
 		}
 		add_ideas = {
 			zebra_race
@@ -345,29 +357,32 @@ MDL_create_dynamic_ABY = {
 			token_base = MDL_abyssinia_assembly
 			name = MDL_abyssinia_assembly
 		}
-		set_portraits = {
-			character = MDL_abyssinia_assembly
-			army = {
-				large = "gfx/leaders/MDL/MDL_FED_generic.tga"
+		if = {
+			limit = { has_character = MDL_abyssinia_assembly }
+			set_portraits = {
+				character = MDL_abyssinia_assembly
+				army = {
+					large = "gfx/leaders/MDL/MDL_FED_generic.tga"
+				}
 			}
-		}
-		add_country_leader_role = {
-			character = MDL_abyssinia_assembly
-			country_leader = {
-				ideology = republicanism
-				expire = "1965.1.1.1"
-				id=-1
+			add_country_leader_role = {
+				character = MDL_abyssinia_assembly
+				country_leader = {
+					ideology = republicanism
+					expire = "1965.1.1.1"
+					id=-1
+				}
+				promote_leader = yes
 			}
-			promote_leader = yes
-		}
-		add_country_leader_role = {
-			character = MDL_abyssinia_assembly
-			country_leader = {
-				ideology = harmonic_constitutionalism
-				expire = "1965.1.1.1"
-				id=-1
+			add_country_leader_role = {
+				character = MDL_abyssinia_assembly
+				country_leader = {
+					ideology = harmonic_constitutionalism
+					expire = "1965.1.1.1"
+					id=-1
+				}
+				promote_leader = yes
 			}
-			promote_leader = yes
 		}
 		add_ideas = {
 			cat_race
@@ -387,7 +402,6 @@ MDL_create_dynamic_MGY = {
 		original_tag = MGY
 		set_variable = { collaboration_formed_by = PREV }
 		set_temp_variable = { new_country = this }
-
 		PREV = {
 			every_controlled_state = {
 				limit = { occupied_country_tag = MGY }
@@ -417,29 +431,32 @@ MDL_create_dynamic_MGY = {
 			token_base = MDL_nomarchical_council
 			name = MDL_nomarchical_council
 		}
-		set_portraits = {
-			character = MDL_nomarchical_council
-			army = {
-				large = "gfx/leaders/MDL/nomarchy_council.tga"
+		if = {
+			limit = { has_character = MDL_nomarchical_council }
+			set_portraits = {
+				character = MDL_nomarchical_council
+				army = {
+					large = "gfx/leaders/MDL/nomarchy_council.tga"
+				}
 			}
-		}
-		add_country_leader_role = {
-			character = MDL_nomarchical_council
-			country_leader = {
-				ideology = republicanism
-				expire = "1965.1.1.1"
-				id=-1
+			add_country_leader_role = {
+				character = MDL_nomarchical_council
+				country_leader = {
+					ideology = republicanism
+					expire = "1965.1.1.1"
+					id=-1
+				}
+				promote_leader = yes
 			}
-			promote_leader = yes
-		}
-		add_country_leader_role = {
-			character = MDL_nomarchical_council
-			country_leader = {
-				ideology = harmonic_constitutionalism
-				expire = "1965.1.1.1"
-				id=-1
+			add_country_leader_role = {
+				character = MDL_nomarchical_council
+				country_leader = {
+					ideology = harmonic_constitutionalism
+					expire = "1965.1.1.1"
+					id=-1
+				}
+				promote_leader = yes
 			}
-			promote_leader = yes
 		}
 		add_ideas = {
 			pony_race
@@ -488,26 +505,32 @@ MDL_create_dynamic_DRG = {
 			token_base = MDL_equestrian_prov_parliament
 			name = MDL_equestrian_prov_parliament
 		}
-		set_portraits = {
-			character = MDL_equestrian_command
-			army = {
-				large = "gfx/leaders/MDL/MDL_equestrian_command.tga"
+		if = {
+			limit = { has_character = MDL_equestrian_command }
+			set_portraits = {
+				character = MDL_equestrian_command
+				army = {
+					large = "gfx/leaders/MDL/MDL_equestrian_command.tga"
+				}
+			}
+			add_country_leader_role = {
+				character = MDL_equestrian_command
+				country_leader = {
+					ideology = liberation_front
+					expire = "1965.1.1.1"
+					id=-1
+				}
+				promote_leader = yes
 			}
 		}
-		set_portraits = {
-			character = MDL_equestrian_prov_parliament
-			army = {
-				large = "gfx/leaders/MDL/MDL_FED_generic.tga"
+		if = {
+			limit = { has_character = MDL_equestrian_prov_parliament }
+			set_portraits = {
+				character = MDL_equestrian_prov_parliament
+				army = {
+					large = "gfx/leaders/MDL/MDL_FED_generic.tga"
+				}
 			}
-		}
-		add_country_leader_role = {
-			character = MDL_equestrian_command
-			country_leader = {
-				ideology = liberation_front
-				expire = "1965.1.1.1"
-				id=-1
-			}
-			promote_leader = yes
 		}
 		add_ideas = {
 			pony_race
@@ -526,22 +549,25 @@ MDL_elevate_virianthrax = {
 		token_base = MDL_virianthrax
 		name = MDL_virianthrax
 	}
-	set_portraits = {
-		character = MDL_virianthrax
-		civilian={
-			large="gfx/leaders/MDL/virianthrax.tga"
+	if = {
+		limit = { has_character = MDL_virianthrax }
+		set_portraits = {
+			character = MDL_virianthrax
+			civilian={
+				large="gfx/leaders/MDL/virianthrax.tga"
+			}
+			army = {
+				large = "gfx/leaders/MDL/virianthrax.tga"
+			}
 		}
-		army = {
-			large = "gfx/leaders/MDL/virianthrax.tga"
+		add_country_leader_role = {
+			character = MDL_virianthrax
+			country_leader = {
+				expire = "1965.1.1"
+				ideology = stratocracy
+			}
+			promote_leader = yes
 		}
-	}
-	add_country_leader_role = {
-		character = MDL_virianthrax
-		country_leader = {
-			expire = "1965.1.1"
-			ideology = stratocracy
-		}
-		promote_leader = yes
 	}
 }
 
