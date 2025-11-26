@@ -1479,6 +1479,7 @@
 ###MIRAGE TOOLTIPS###
   MDL_asabiyyah_tt:0 "§CThe penalties to§! §YConscription, Trade and Economy Law Cost§! §Cwill be removed from the§! §GAsabiyyah§! §Cspirit§!."
 ###SCRIPTED TRIGGER TOOLTIPS###
+  MDL_wingbardy_in_zebrica_tt:0 "§rWingbardian§! influence remains in Zebrica."
   ME_arabia_is_unified_tt:0 "Arabia has been unified"
   ME_equestria_is_lost_tt:0 "Equestria §Rhas fallen to the Djinn§!"
 ###OOB/TECH TREE TOOLTIPS###

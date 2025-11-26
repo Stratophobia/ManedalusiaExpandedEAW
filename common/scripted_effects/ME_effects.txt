@@ -1464,6 +1464,21 @@ MDL_grant_init_ship_templates = {
 	}
 }
 
+MDL_wingbardy_colonial_war_init = {
+	custom_effect_tooltip = MDL_war_with_wingbardy_tt
+	hidden_effect = { set_country_flag = MDL_war_with_wingbardy }
+	declare_war_on = { type = annex_everything target = WNG }
+	if = {
+		limit = {
+			ABY = {
+				exists = yes
+				is_subject_of = WNG
+			}
+		}
+		declare_war_on = { type = annex_everything target = ABY }
+	}
+}
+
 MDL_destroy_everything = {
 	set_building_level = {
 		type = infrastructure

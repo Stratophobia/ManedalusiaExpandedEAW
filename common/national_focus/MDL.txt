@@ -1427,30 +1427,12 @@ shared_focus = {
 		WNG = { has_civil_war = no }
 		has_war = no
 	}
-	bypass = {
-		AND = {
-			WNG = {
-				NOT = { owns_state = 784 }
-			}
-			ABY = { exists = no }
-		}
-	}
+	bypass = { MDL_wingbardy_in_zebrica = no }
 	prerequisite = { focus = MDL_conquer_abyssinia }
 	will_lead_to_war_with = WNG
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_drive_them_back"
-		hidden_effect = { set_country_flag = MDL_war_with_wingbardy }
-		custom_effect_tooltip = MDL_war_with_wingbardy_tt
-		declare_war_on = { type = annex_everything target = WNG }
-		if = {
-			limit = {
-				ABY = {
-					exists = yes
-					is_subject = yes
-				}
-			}
-			declare_war_on = { type = annex_everything target = ABY }
-		}
+		MDL_wingbardy_colonial_war_init = yes
 	}
 	search_filters = { FOCUS_FILTER_ANNEXATION }
 }
@@ -3999,19 +3981,16 @@ shared_focus = {
 	prerequisite = { focus = MDL_dream_of_a_federation }
 	available = {
 		OR = {
+			MDL_wingbardy_in_zebrica = yes
 			ABY = {
+				is_subject = no
 				exists = yes
 				has_civil_war = no
 			}
-			775 = { is_owned_and_controlled_by = WNG }
 		}
 	}
 	bypass = {
-		ABY = {
-			OR = {
-				has_war_with = ROOT
-			}
-		}
+		ABY = { has_war_with = ROOT }
 	}
 	will_lead_to_war_with = ABY
 	completion_reward = {
@@ -4025,20 +4004,7 @@ shared_focus = {
 			}
 			declare_war_on = { type = annex_everything target = ABY }
 		}
-		else = {
-			hidden_effect = { set_country_flag = MDL_war_with_wingbardy }
-			custom_effect_tooltip = MDL_war_with_wingbardy_tt
-			declare_war_on = { type = annex_everything target = WNG }
-			if = {
-				limit = {
-					ABY = {
-						exists = yes
-						is_subject = yes
-					}
-				}
-				declare_war_on = { type = annex_everything target = ABY }
-			}
-		}
+		else = { MDL_wingbardy_colonial_war_init = yes }
 	}
 }
 
@@ -4089,27 +4055,16 @@ shared_focus = {
 	prerequisite = { focus = MDL_integrate_klugetown }
 	prerequisite = { focus = MDL_integrate_abyssinia }
 	available = {
-		WNG = {
-			exists = yes
-			owns_state = 784
-			has_civil_war = no
-		}
-		ABY = {
-			exists = yes
-			is_in_faction_with = MDL
-		}
+		MDL_wingbardy_in_zebrica = yes
+		WNG = { has_civil_war = no }
+		ABY = { is_in_faction_with = MDL }
 	}
-	bypass = {
-		WNG = {
-			NOT = { owns_state = 784 }
-		}
-	}
+	bypass = { MDL_wingbardy_in_zebrica = no }
 	will_lead_to_war_with = WNG
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_liberate_purrsia"
-		hidden_effect = { set_country_flag = MDL_war_with_wingbardy }
-		custom_effect_tooltip = MDL_war_with_wingbardy_tt
-		declare_war_on = { type = annex_everything target = WNG }
+		MDL_wingbardy_colonial_war_init = yes
+
 		ABY = {#to make sure you have fucking land access
 			declare_war_on = { type = annex_everything target = WNG }
 		}
@@ -9205,32 +9160,13 @@ shared_focus = {
 	prerequisite = { focus = MDL_SAM22 }
 	available = {
 		has_government = neutrality
-		ABY = {
-			OR = {
-				exists = no
-				is_subject_of = WNG
-			}
-		}
+		MDL_wingbardy_in_zebrica = yes
 	}
-	bypass = {
-		ABY = { exists = no }
-		NOT = { 784 = { is_owned_and_controlled_by = WNG } }
-	}
+	bypass = { MDL_wingbardy_in_zebrica = no }
 	will_lead_to_war_with = WNG
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM44"
-		hidden_effect = { set_country_flag = MDL_war_with_wingbardy }
-		custom_effect_tooltip = MDL_war_with_wingbardy_tt
-		declare_war_on = { type = annex_everything target = WNG }
-		if = {
-			limit = {
-				ABY = {
-					exists = yes
-					is_subject = yes
-				}
-			}
-			declare_war_on = { type = annex_everything target = ABY }
-		}
+		MDL_wingbardy_colonial_war_init = yes
 	}
 }
 

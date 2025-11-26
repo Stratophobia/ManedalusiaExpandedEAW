@@ -26,6 +26,16 @@ MDL_has_set_path_rules = {
 	}
 }
 
+MDL_wingbardy_in_zebrica = {
+	custom_trigger_tooltip = {
+		tooltip = MDL_wingbardy_in_zebrica_tt
+		OR = {
+			WNG = { owns_state = 784 }
+			ABY = { is_subject_of = WNG }
+		}
+	}
+}
+
 ME_arabia_is_unified = {
 	custom_trigger_tooltip = {
 		tooltip = ME_arabia_is_unified_tt
