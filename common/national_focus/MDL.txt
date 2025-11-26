@@ -602,7 +602,6 @@ shared_focus = {
 	cost = 1
 	prerequisite = { focus = MDL_deal_with_the_madgriff }
 	mutually_exclusive = { focus = MDL_lean_on_legacy focus = MDL_try_for_harmony }
-	available = { always = no }#WIP
 
 	allow_branch={
 		if = {
@@ -756,7 +755,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = MDL_office_of_vice_and_virtue
 	prerequisite = { focus = MDL_office_of_vice_and_virtue }
-	cost = 5
+	cost = 4
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_prepare_righteous_reclamation"
 	}
@@ -769,7 +768,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = MDL_office_of_vice_and_virtue
 	prerequisite = { focus = MDL_office_of_vice_and_virtue }
-	cost = 5
+	cost = 4
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_a_holy_occupation_army"
 	}
@@ -788,6 +787,284 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_a_holy_occupation_army"
 		MDL_initiate_warplan_green = yes
+	}
+}
+
+shared_focus = {
+	id = MDL_MIRAGE_0_1
+	icon = GFX_goal_generic_political
+	x = -1
+	y = 1
+	relative_position_id = MDL_sack_hermetics_from_army
+	prerequisite = { focus = MDL_sack_hermetics_from_army }
+	cost = 5
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MDL_MIRAGE_0_1"
+	}
+}
+
+shared_focus = {
+	id = MDL_MIRAGE_0_2
+	icon = GFX_goal_generic_political
+	x = 1
+	y = 1
+	relative_position_id = MDL_a_holy_occupation_army
+	prerequisite = { focus = MDL_a_holy_occupation_army }
+	cost = 5
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MDL_MIRAGE_0_2"
+	}
+}
+
+shared_focus = {
+	id = MDL_MIRAGE_1_1
+	icon = GFX_goal_generic_political
+	x = -4
+	y = 1
+	relative_position_id = MDL_wage_war_upon_the_infidels
+	prerequisite = { focus = MDL_MIRAGE_0_1 }
+	prerequisite = { focus = MDL_wage_war_upon_the_infidels }
+	cost = 5
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MDL_MIRAGE_1_1"
+	}
+}
+
+shared_focus = {
+	id = MDL_MIRAGE_1_2
+	icon = GFX_goal_generic_political
+	x = -2
+	y = 1
+	relative_position_id = MDL_wage_war_upon_the_infidels
+	prerequisite = { focus = MDL_MIRAGE_0_1 }
+	prerequisite = { focus = MDL_wage_war_upon_the_infidels }
+	cost = 5
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MDL_MIRAGE_1_2"
+	}
+}
+
+shared_focus = {
+	id = MDL_proclaim_holy_communion
+	icon = GFX_goal_generic_political
+	x = 0
+	y = 1
+	cost = 2
+	relative_position_id = MDL_wage_war_upon_the_infidels
+	prerequisite = { focus = MDL_wage_war_upon_the_infidels }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MDL_proclaim_holy_communion"
+		set_cosmetic_tag = MDL_grand_sultanate
+	}
+}
+
+shared_focus = {
+	id = MDL_MIRAGE_1_3
+	icon = GFX_goal_generic_political
+	x = 2
+	y = 1
+	relative_position_id = MDL_wage_war_upon_the_infidels
+	prerequisite = { focus = MDL_wage_war_upon_the_infidels }
+	prerequisite = { focus = MDL_MIRAGE_0_2 }
+	cost = 5
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MDL_MIRAGE_1_3"
+	}
+}
+
+shared_focus = {
+	id = MDL_MIRAGE_1_4
+	icon = GFX_goal_generic_political
+	x = 4
+	y = 1
+	relative_position_id = MDL_wage_war_upon_the_infidels
+	prerequisite = { focus = MDL_wage_war_upon_the_infidels }
+	prerequisite = { focus = MDL_MIRAGE_0_2 }
+	cost = 5
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MDL_MIRAGE_1_4"
+	}
+}
+
+shared_focus = {
+	id = MDL_MIRAGE_2_1
+	icon = GFX_goal_generic_political
+	x = -1
+	y = 1
+	relative_position_id = MDL_MIRAGE_1_2
+	prerequisite = { focus = MDL_MIRAGE_1_1 }
+	prerequisite = { focus = MDL_MIRAGE_1_2 }
+	cost = 5
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MDL_MIRAGE_2_1"
+	}
+}
+
+shared_focus = {
+	id = MDL_MIRAGE_2_2
+	icon = GFX_goal_generic_political
+	x = 2
+	y = 1
+	relative_position_id = MDL_MIRAGE_1_2
+	prerequisite = { focus = MDL_MIRAGE_1_2 }
+	prerequisite = { focus = MDL_MIRAGE_1_3 }
+	cost = 5
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MDL_MIRAGE_2_1"
+	}
+}
+
+shared_focus = {
+	id = MDL_MIRAGE_2_3
+	icon = GFX_goal_generic_political
+	x = 1
+	y = 1
+	relative_position_id = MDL_MIRAGE_1_3
+	prerequisite = { focus = MDL_MIRAGE_1_3 }
+	prerequisite = { focus = MDL_MIRAGE_1_4 }
+	cost = 5
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MDL_MIRAGE_2_1"
+	}
+}
+
+shared_focus = {
+	id = MDL_MIRAGE_3_1
+	icon = GFX_goal_generic_political
+	x = 0
+	y = 2
+	relative_position_id = MDL_MIRAGE_1_1
+	prerequisite = { focus = MDL_MIRAGE_1_1 }
+	cost = 5
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MDL_MIRAGE_3_1"
+	}
+}
+
+shared_focus = {
+	id = MDL_set_capital_in_coltoba
+	icon = GFX_goal_generic_political
+	x = -1
+	y = 1
+	relative_position_id = MDL_MIRAGE_2_2
+	prerequisite = { focus = MDL_MIRAGE_2_2 }
+	mutually_exclusive = { focus = MDL_set_capital_in_klugetown }
+	cost = 2
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MDL_set_capital_in_coltoba"
+	}
+}
+
+shared_focus = {
+	id = MDL_set_capital_in_klugetown
+	icon = GFX_goal_generic_political
+	x = 1
+	y = 1
+	relative_position_id = MDL_MIRAGE_2_2
+	prerequisite = { focus = MDL_MIRAGE_2_2 }
+	mutually_exclusive = { focus = MDL_set_capital_in_coltoba }
+	cost = 2
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MDL_set_capital_in_klugetown"
+	}
+}
+
+shared_focus = {
+	id = MDL_MIRAGE_3_4
+	icon = GFX_goal_generic_political
+	x = 0
+	y = 2
+	relative_position_id = MDL_MIRAGE_1_4
+	prerequisite = { focus = MDL_MIRAGE_1_4 }
+	cost = 5
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MDL_MIRAGE_3_4"
+	}
+}
+
+shared_focus = {
+	id = MDL_MIRAGE_4_1
+	icon = GFX_goal_generic_political
+	x = 1
+	y = 1
+	relative_position_id = MDL_MIRAGE_3_1
+	prerequisite = { focus = MDL_MIRAGE_2_1 }
+	prerequisite = { focus = MDL_MIRAGE_3_1 }
+	cost = 5
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MDL_MIRAGE_4_1"
+	}
+}
+
+shared_focus = {
+	id = MDL_MIRAGE_4_2
+	icon = GFX_goal_generic_political
+	x = 1
+	y = 1
+	relative_position_id = MDL_set_capital_in_coltoba
+	prerequisite = {
+		focus = MDL_set_capital_in_coltoba
+		focus = MDL_set_capital_in_klugetown
+	}
+	cost = 5
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MDL_MIRAGE_4_2"
+	}
+}
+
+shared_focus = {
+	id = MDL_MIRAGE_4_3
+	icon = GFX_goal_generic_political
+	x = -1
+	y = 1
+	relative_position_id = MDL_MIRAGE_3_4
+	prerequisite = { focus = MDL_MIRAGE_2_3 }
+	prerequisite = { focus = MDL_MIRAGE_3_4 }
+	cost = 5
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MDL_MIRAGE_4_3"
+	}
+}
+
+shared_focus = {
+	id = MDL_MIRAGE_5_1
+	icon = GFX_goal_generic_political
+	x = -2
+	y = 1
+	cost = 2
+	relative_position_id = MDL_MIRAGE_4_2
+	prerequisite = { focus = MDL_MIRAGE_4_1 }
+	prerequisite = { focus = MDL_MIRAGE_4_2 }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MDL_MIRAGE_5_1"
+	}
+}
+
+shared_focus = {
+	id = MDL_MIRAGE_5_2
+	icon = GFX_goal_generic_political
+	x = 2
+	y = 1
+	cost = 2
+	relative_position_id = MDL_MIRAGE_4_2
+	prerequisite = { focus = MDL_MIRAGE_4_2 }
+	prerequisite = { focus = MDL_MIRAGE_4_3 }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MDL_MIRAGE_5_2"
+	}
+}
+
+shared_focus = {
+	id = MDL_MIRAGE_6_1
+	icon = GFX_goal_generic_political
+	x = 0
+	y = 2
+	cost = 2
+	relative_position_id = MDL_MIRAGE_4_2
+	prerequisite = { focus = MDL_MIRAGE_5_1 }
+	prerequisite = { focus = MDL_MIRAGE_5_2 }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MDL_MIRAGE_6_1"
 	}
 }
 
@@ -2504,9 +2781,7 @@ shared_focus = {
 			limit = { has_dlc = "Arms Against Tyranny" }
 			show_mio_tooltip = MDL_office_of_artillery_mio
 		}
-		else = {
-			show_ideas_tooltip = MDL_office_of_artillery
-		}
+		else = { show_ideas_tooltip = MDL_office_of_artillery }
 	}
 	search_filters = { FOCUS_FILTER_RESEARCH }
 }
@@ -2578,7 +2853,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_alchemical_investment"
 		if = {
-			limit = { has_completed_focus = MDL_a_holy_occupation_army }
+			limit = { has_completed_focus = MDL_sack_hermetics_from_army }
 			country_event = manedalusia.180
 		}
 		set_technology = { tech_synthetic_crystal_refinery = 1 }
@@ -2602,9 +2877,7 @@ shared_focus = {
 			limit = { has_dlc = "Arms Against Tyranny" }
 			show_mio_tooltip = MDL_moonstriker_labs_mio
 		}
-		else = {
-			show_ideas_tooltip = MDL_moonstriker_labs
-		}
+		else = { show_ideas_tooltip = MDL_moonstriker_labs }
 	}
 	search_filters = { FOCUS_FILTER_INDUSTRY }
 }
