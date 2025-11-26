@@ -5079,7 +5079,9 @@ shared_focus = {
 			set_variable = { MDL_tradelaw_var = 0 }
 			set_variable = { MDL_economy_var = 0 }
 			if = {
-				limit = { NOT = { has_country_flag = MDL_shield_doctrine_unlocked } }
+				limit = {
+					NOT = { has_country_flag = MDL_shield_doctrine_unlocked }
+				}
 				set_country_flag = MDL_shield_doctrine_unlocked
 			}
 		}
@@ -8045,7 +8047,7 @@ shared_focus = {
 
 shared_focus = {
 	id = MDL_restore_the_asabiyyah
-	icon = GFX_focus_restore_the_asabiyyah
+	icon = GFX_focus_MDL_restore_the_asabiyyah
 	x = 0
 	y = 1
 	cost = 6
