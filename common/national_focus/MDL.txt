@@ -721,7 +721,7 @@ shared_focus = {
 	icon = GFX_goal_generic_political
 	x = 10
 	y = 0
-	cost = 1
+	cost = 2
 
 	allow_branch = {
 		if = {
@@ -744,6 +744,10 @@ shared_focus = {
 	cost = 2
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_sack_hermetics_from_army"
+		add_power_balance_value = {
+			id = MDL_theological_bop
+			value = -0.10
+		}
 		country_event = manedalusia.179
 	}
 }
@@ -758,6 +762,26 @@ shared_focus = {
 	cost = 4
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_prepare_righteous_reclamation"
+		741 = {
+			add_building_construction = {
+				type = coastal_bunker
+				level = 1
+				province = 12234
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 1
+				province = 12234
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 2
+				province = 10280
+				instant_build = yes
+			}
+		}
 	}
 }
 
@@ -771,6 +795,7 @@ shared_focus = {
 	cost = 4
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_a_holy_occupation_army"
+		custom_effect_tooltip = MDL_a_holy_occupation_army_tt
 	}
 }
 
@@ -852,6 +877,11 @@ shared_focus = {
 	cost = 2
 	relative_position_id = MDL_wage_war_upon_the_infidels
 	prerequisite = { focus = MDL_wage_war_upon_the_infidels }
+	available = {
+		1208 = { is_owned_and_controlled_by = ROOT }
+		733 = { is_owned_and_controlled_by = ROOT }
+		775 = { is_owned_and_controlled_by = ROOT }
+	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_proclaim_holy_communion"
 		set_cosmetic_tag = MDL_grand_sultanate

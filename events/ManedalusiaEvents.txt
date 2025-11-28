@@ -4320,6 +4320,7 @@ traits = { griffon_race_trait substance_abuser armchair_general promising_genera
 		option = {
 			name = manedalusia.179.a
 			retire_character = MDL_moonstriker_laylah
+			hidden_effect = { set_country_flag = MDL_laylah_absent }
 		}
 	}
 

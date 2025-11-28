@@ -1333,6 +1333,9 @@ MDL_fiqh_decisions_tab = {
   MDL_favor_hermetics = {
     icon = GFX_decision_MDL_favor_hermetics
     allowed = { original_tag = MDL }
+		visible = {
+			NOT = { has_country_flag = MDL_mirage_path }
+		}
     cost = 100
     days_remove = 50
     remove_effect = {

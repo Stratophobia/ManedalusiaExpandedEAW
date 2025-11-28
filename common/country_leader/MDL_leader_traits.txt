@@ -10,7 +10,7 @@ leader_traits = {
 	}
 	MDL_sunset_fundamentalist = {
 		ai_will_do = { factor = 0 }
-		monthly_population = 0.1
+		monthly_population = 0.20
 		communism_drift = 0.01
 	}
 	MDL_sayf_pretender = {
