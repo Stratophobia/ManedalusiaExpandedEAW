@@ -4304,6 +4304,7 @@ shared_focus = {
 			MDL_create_dynamic_ABY = yes
 			release_puppet = ABY
 			ABY = {
+				set_politics = { ruling_party = neutrality }
 				remove_state_core = 1208
 				remove_state_claim = 1208
 
@@ -4544,9 +4545,7 @@ shared_focus = {
 					}
 					promote_leader = yes
 				}
-				set_politics = {
-					ruling_party = neutrality
-				}
+				set_politics = { ruling_party = neutrality }
 				set_party_name = {
 					ideology = neutrality
 					long_name = MDL_ASS_FED_PARTY_LONG
@@ -4564,9 +4563,7 @@ shared_focus = {
 						large = "gfx/leaders/MDL/MDL_FED_generic.tga"
 					}
 				}
-				load_focus_tree = {
-					tree = generic_zebra_focus
-				}
+				load_focus_tree = generic_zebra_focus
 				set_cosmetic_tag = ANS_FEDERATION
 				add_ideas = MDL_federation_member
 				add_country_leader_role = {
@@ -4577,9 +4574,7 @@ shared_focus = {
 					}
 					promote_leader = yes
 				}
-				set_politics = {
-					ruling_party = neutrality
-				}
+				set_politics = { ruling_party = neutrality }
 				set_party_name = {
 					ideology = neutrality
 					long_name = MDL_ANS_FED_PARTY_LONG
@@ -4646,6 +4641,7 @@ shared_focus = {
 				remove_core_of = SDS
 			}
 			EMR = {
+				set_politics = { ruling_party = neutrality }
 				add_ideas = MDL_federation_member
 				set_cosmetic_tag = EMR_FEDERATION
 			}

@@ -312,6 +312,7 @@ MDL_shield_doctrine_tab = {
       hidden_effect = {
         ZAR = {
           set_cosmetic_tag = ZAR_MDL_admin
+					set_politics = { ruling_party = democratic }
           load_focus_tree = {
             tree = generic_zebra_focus
           }
@@ -354,6 +355,7 @@ MDL_shield_doctrine_tab = {
       MDL_create_dynamic_MGY = yes
       hidden_effect = {
         MGY = {
+					set_politics = { ruling_party = democratic }
           load_focus_tree = { tree = generic_zebra_focus }
         }
       }
@@ -388,7 +390,10 @@ MDL_shield_doctrine_tab = {
         }
         release_puppet = BAT
       }
-      BAT = { set_cosmetic_tag = BAT_MDL_admin }
+      BAT = {
+				set_politics = { ruling_party = democratic }
+				set_cosmetic_tag = BAT_MDL_admin
+			}
     }
   }
   MDL_shield_puppet_ABY = {
@@ -402,13 +407,18 @@ MDL_shield_doctrine_tab = {
     cost = 25
     complete_effect = {
       country_event = manedalusia.91
-      MDL_create_dynamic_ABY = yes
-      every_owned_state = {
-        limit = { is_in_array = { state_original_cores = KLG } }
-        remove_core_of = ABY
-      }
-      ABY = { set_cosmetic_tag = ABY_MDL_admin }
-      hidden_effect = { release_puppet = ABY }
+      hidden_effect = {
+				MDL_create_dynamic_ABY = yes
+				every_owned_state = {
+					limit = { is_in_array = { state_original_cores = KLG } }
+					remove_core_of = ABY
+				}
+				release_puppet = ABY
+			}
+      ABY = {
+				set_politics = { ruling_party = democratic }
+				set_cosmetic_tag = ABY_MDL_admin
+			}
     }
   }
   MDL_shield_attack_KLG = {

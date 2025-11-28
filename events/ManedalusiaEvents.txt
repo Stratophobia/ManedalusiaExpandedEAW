@@ -1258,6 +1258,7 @@
 				release_puppet = KAR
 			}
 			KAR = {
+				set_politics = { ruling_party = fascism }
 				set_cosmetic_tag = KAR_VASSAL
 				add_ideas = MDL_KAR_shahdom
 			}
@@ -1311,6 +1312,7 @@
 				release_puppet = MAZ
 			}
 			MAZ = {
+				set_politics = { ruling_party = fascism }
 				set_cosmetic_tag = MAZ_VASSAL
 				add_ideas = MDL_MAZ_vassal
 			}
@@ -1378,10 +1380,12 @@
 
 		option = {
 			name = manedalusia.48.a
-			hidden_effect = { ZAI = { set_cosmetic_tag = ZAI_VASSAL } }
-			hidden_effect = { clr_country_flag = MDL_azir_war }
 			hidden_effect = {
+				clr_country_flag = MDL_azir_war
 				ZAI = {
+					set_cosmetic_tag = ZAI_VASSAL
+					load_focus_tree = generic_zebra_focus
+					set_politics = { ruling_party = fascism }	
 					add_country_leader_role = {
 						character = ZAI_tin_zinan
 						country_leader = {
@@ -1391,8 +1395,8 @@
 						promote_leader = yes
 					}
 				}
-				every_owned_state = {
-					limit = { is_core_of = CZR }
+				for_each_scope_loop = {
+					array = CZR.original_cores
 					add_core_of = ZAI
 				}
 				release_puppet = ZAI
@@ -1581,10 +1585,12 @@
 				MDL_create_dynamic_MKS = yes
 				release_puppet = MKS
 				MGY = {
+					set_politics = { ruling_party = neutrality }
 					set_cosmetic_tag = MGY_FEDERATION
 					add_ideas = MDL_federation_member
 				}
 				MKS = {
+					set_politics = { ruling_party = neutrality }
 					set_cosmetic_tag = MKS_FEDERATION
 					add_ideas = MDL_federation_member
 				}
@@ -1961,13 +1967,9 @@
 			name = manedalusia.67.a
 			hidden_effect = {
 				release_puppet = KLG
-				MGY = {
-					remove_state_claim = 1208
-				}
+				MGY = { remove_state_claim = 1208 }
 				KLG = {
-					load_focus_tree = {
-						tree = generic_zebra_focus
-					}
+					load_focus_tree = generic_zebra_focus
 					set_cosmetic_tag = KLG_FEDERATION
 					remove_ideas = {
 						KLG_mafia_rule
@@ -2661,7 +2663,10 @@
 				MDL = { RIZ = { transfer_technology = yes } }
 			}
 			release_puppet = RIZ
-			RIZ = { add_ideas = RIZ_council_adaptation }
+			RIZ = {
+				set_politics = { ruling_party = fascism }
+				add_ideas = RIZ_council_adaptation
+			}
 		}
 	}
 
@@ -2687,7 +2692,10 @@
 				}
 				release_puppet = BAT
 			}
-			BAT = { set_cosmetic_tag = BAT_crimson_vassal }
+			BAT = {
+				set_politics = { ruling_party = fascism }
+				set_cosmetic_tag = BAT_crimson_vassal
+			}
 		}
 	}
 
@@ -3550,18 +3558,19 @@ traits = { griffon_race_trait substance_abuser armchair_general promising_genera
 
 		option = {
 			name = manedalusia.140.a
-			hidden_effect = { MDL_create_dynamic_DRG = yes }
-			DRG = {
-				set_cosmetic_tag = DRG_EKS_war
-				add_ideas = MDL_ember
-			}
 			hidden_effect = {
+				MDL_create_dynamic_DRG = yes
+				release_puppet = DRG
 				for_each_scope_loop = {
 					array = EQS.original_cores
 					add_core_of = DRG
 				}
 			}
-			release_puppet = DRG
+			DRG = {
+				set_politics = { ruling_party = democratic }
+				set_cosmetic_tag = DRG_EKS_war
+				add_ideas = MDL_ember
+			}
 		}
 	}
 
