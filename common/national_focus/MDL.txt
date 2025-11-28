@@ -36,6 +36,38 @@ focus_tree = {
 	shared_focus = MDL_warplan_dragon
 }
 
+#SAMIRA HOPE EVENTS - DOCUMENTATION
+#
+#LIGHT SHINING IN DARKNESS:(1 Hope)
+#Freebie. Comes in chain on "Charting The New Course" focus.
+#
+#ZAHID DUEL CHAIN: (1 Hope)
+#In "Reform the Order" focus.
+#Required:
+#  - Mehmet fight level 1
+#
+#SAMIRA DUELS: (3 Hope in total)
+#On Chargers 3 and 6 of "Improve Koltaliba methods of warfare". Require level 2 and 3 fight level respectively.
+#
+#Spymaster Zahid (1 Hope):
+#"Masters of the Shadows" focus.
+#
+#ABYSSINIAN NOBLES (1 Hope):
+#"Deal With Abyssinian Nobility" focus.
+#
+#MEHMET BECOMES A TRUE LEADER (1 Hope):
+#"Unify the Railway System" focus, AFTER taking "A Truly Modern State"
+#
+#ON THE BREVITY OF LIFE (1 Hope):
+#Pick option "It is not that life is short. Rather, much of it is wasted."
+#
+#JEFFERSON REFERENCE (1 Hope)
+#Take "The Golden Coast" focus with at least hope level 8 and the best ending not locked (no tick of either "The Grandmistress' Burden" or "The Lingering Shadow")
+#
+#  MEHMET FIGHT LEVEL
+#  1: Freebie. "Assemble The Warrior Hosts"
+#  2: "New Methods of Warfare". Must be picked AFTER "Collaborate with Al-Neighzari"
+#  3: "Only The Toughest Among Us". Must be picked AFTER "A New Sun In West Zebrica".
 focus_tree = {
 	id = manedalusia_samira
 
@@ -736,7 +768,7 @@ shared_focus = {
 
 shared_focus = {
 	id = MDL_sack_hermetics_from_army
-	icon = GFX_goal_generic_political
+	icon = GFX_goal_HOL_council_communism
 	x = -2
 	y = 1
 	relative_position_id = MDL_office_of_vice_and_virtue
@@ -754,7 +786,7 @@ shared_focus = {
 
 shared_focus = {
 	id = MDL_prepare_righteous_reclamation
-	icon = GFX_goal_generic_political
+	icon = GFX_goal_HOL_council_communism
 	x = 0
 	y = 1
 	relative_position_id = MDL_office_of_vice_and_virtue
@@ -763,6 +795,12 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_prepare_righteous_reclamation"
 		741 = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
 			add_building_construction = {
 				type = coastal_bunker
 				level = 1
@@ -787,7 +825,7 @@ shared_focus = {
 
 shared_focus = {
 	id = MDL_a_holy_occupation_army
-	icon = GFX_goal_generic_political
+	icon = GFX_goal_HOL_council_communism
 	x = 2
 	y = 1
 	relative_position_id = MDL_office_of_vice_and_virtue
@@ -801,7 +839,7 @@ shared_focus = {
 
 shared_focus = {
 	id = MDL_wage_war_upon_the_infidels
-	icon = GFX_goal_generic_political
+	icon = GFX_goal_HOL_council_communism
 	x = 0
 	y = 1
 	relative_position_id = MDL_prepare_righteous_reclamation
@@ -871,7 +909,7 @@ shared_focus = {
 
 shared_focus = {
 	id = MDL_proclaim_holy_communion
-	icon = GFX_goal_generic_political
+	icon = GFX_goal_HOL_council_communism
 	x = 0
 	y = 1
 	cost = 2
@@ -903,16 +941,25 @@ shared_focus = {
 }
 
 shared_focus = {
-	id = MDL_MIRAGE_1_4
-	icon = GFX_goal_generic_political
+	id = MDL_take_over_klugetown
+	icon = GFX_goal_HOL_council_communism
 	x = 4
 	y = 1
 	relative_position_id = MDL_wage_war_upon_the_infidels
 	prerequisite = { focus = MDL_wage_war_upon_the_infidels }
 	prerequisite = { focus = MDL_MIRAGE_0_2 }
+	available = {
+		has_war = no
+		KLG = { exists_outside_sphere_of_influence = yes }
+	}
+	bypass = {
+		KLG = { exists_outside_sphere_of_influence = no }
+	}
 	cost = 5
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus MDL_MIRAGE_1_4"
+		log = "[GetDateText]: [Root.GetName]: Focus MDL_take_over_klugetown"
+		set_temp_variable = { wargoal_target = KLG }
+		expand_sphere_of_influence_to_wargoal_target = yes
 	}
 }
 
@@ -931,7 +978,7 @@ shared_focus = {
 }
 
 shared_focus = {
-	id = MDL_MIRAGE_2_2
+	id = MDL_a_nominal_sultanate
 	icon = GFX_goal_generic_political
 	x = 2
 	y = 1
@@ -951,7 +998,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = MDL_MIRAGE_1_3
 	prerequisite = { focus = MDL_MIRAGE_1_3 }
-	prerequisite = { focus = MDL_MIRAGE_1_4 }
+	prerequisite = { focus = MDL_take_over_klugetown }
 	cost = 5
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_MIRAGE_2_1"
@@ -976,26 +1023,55 @@ shared_focus = {
 	icon = GFX_goal_generic_political
 	x = -1
 	y = 1
-	relative_position_id = MDL_MIRAGE_2_2
-	prerequisite = { focus = MDL_MIRAGE_2_2 }
+	relative_position_id = MDL_a_nominal_sultanate
+	prerequisite = { focus = MDL_a_nominal_sultanate }
+	available = {
+		has_war = no
+	}
 	mutually_exclusive = { focus = MDL_set_capital_in_klugetown }
 	cost = 2
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_set_capital_in_coltoba"
+		add_stability = 0.05
+		741 = { add_manpower = 25000 }
 	}
 }
 
 shared_focus = {
 	id = MDL_set_capital_in_klugetown
-	icon = GFX_goal_generic_political
+	icon = GFX_goal_HOL_council_communism
 	x = 1
 	y = 1
-	relative_position_id = MDL_MIRAGE_2_2
-	prerequisite = { focus = MDL_MIRAGE_2_2 }
+	relative_position_id = MDL_a_nominal_sultanate
+	prerequisite = { focus = MDL_a_nominal_sultanate }
+	available = {
+		has_war = no
+		1208 = { is_owned_and_controlled_by = ROOT }
+
+	}
 	mutually_exclusive = { focus = MDL_set_capital_in_coltoba }
 	cost = 2
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_set_capital_in_klugetown"
+		build_railway = {
+			level = 2
+			start_province = 12234
+			target_province = 12386
+		}
+		set_capital = {
+			state = 1208
+			remember_old_capital = no
+		}
+		1208 = {
+			set_state_name = "MDL_state_new_mareakech"
+			add_manpower = 25000
+			if = {
+				limit = {
+					NOT = { is_core_of = MDL }
+				}
+				add_core_of = MDL
+			}
+		}
 	}
 }
 
@@ -1004,8 +1080,8 @@ shared_focus = {
 	icon = GFX_goal_generic_political
 	x = 0
 	y = 2
-	relative_position_id = MDL_MIRAGE_1_4
-	prerequisite = { focus = MDL_MIRAGE_1_4 }
+	relative_position_id = MDL_take_over_klugetown
+	prerequisite = { focus = MDL_take_over_klugetown }
 	cost = 5
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_MIRAGE_3_4"

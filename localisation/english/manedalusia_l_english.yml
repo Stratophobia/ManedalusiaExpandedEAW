@@ -277,10 +277,14 @@
   MDL_wage_war_upon_the_infidels_desc:0 "Both to retake what is rightfully ours and to assure the continued safety of the ash-shuhūd, Maregypt must be dealt with swiftly. We have prepared our forces accordingly, and we can only hope we can bog down their superior numbers with a steady defence."
   MDL_proclaim_holy_communion:0 "Proclaim The Holy Communion"
   MDL_proclaim_holy_communion_desc:0 "Having united large swathes of West Zebrica under the guiding light of Ash-Shahid, it has become clear that the state is no longer merely a representative of the Manedalusian people, but of all the faithful, and it's only right it restructures itself as such."
+  MDL_a_nominal_sultanate:0 "A Nominal Sultanate"
+  MDL_take_over_klugetown:0 "Cleanse The Heart Of Immorality"
+  MDL_take_over_klugetown_desc:0 "There is no greater hive of scum in all Zebrica, maybe even in the whole world, than the nexus of the West Zebrican desert. For the sake of us all, it is quintessential that the city-state is brought to heel, its mafia dislodged, and the wickedness of this den of vice brought to a merficul end."
+  MDL_a_nominal_sultanate_desc:0 "The House of Everleaf may have been extinguished, but their legacy must live on, and Manedalusia will be governed by a nominal Sultanate. In the absence of a true monarch, Ash-Shahid is our only rightful King, one who represents not merely Manedalusia, but all of His faithful."
   MDL_set_capital_in_coltoba:0 "Preserve The City Of Sunlight's Sanctity"
-  MDL_set_capital_in_coltoba_desc:0 "Our new territories must continue to be governed from the venerable city of Coltoba, as the ash-shuhūd have been since the dawn of the ancient Sultanate."
+  MDL_set_capital_in_coltoba_desc:0 "Our new territories must continue to be governed from the venerable city of Coltoba, as the ash-shuhūd have been since the dawn of the ancient Sultanate. This may slightly strain the administration and create animosity, but it is a sacrifice worth making to preserve Manedalusian sovereignty."
   MDL_set_capital_in_klugetown:0 "A Capital For All The Faithful"
-  MDL_set_capital_in_klugetown_desc:0 ""
+  MDL_set_capital_in_klugetown_desc:0 "Coltoba may be the capital of Manedalusia, but the ash-shuhūd have grown to a congregation of many different nations, of which Manedalusia is only a part. As all of the faithful are equal under the Watchful Eye of Ash-Shahid, a neutral capital must be established for all of West Zebrica, and with some renovation, Klugetown would be the perfect choice."
 ###SAYF'S GENOCIDE PATH###
   MDL_kill_them_all:0 "Our Last Stand"
   MDL_kill_them_all_desc:0 "This is it. The Army knows that this shall be our twilight. Coltoba burns, and by Ash-Shahid, Abyssinia will burn with us!"
@@ -1573,6 +1577,7 @@
 ###STATES###
   MDL_state_karthin:0 "Cartínia"
   MDL_state_new_karthin:0 "Nova Cartínia"
+  MDL_state_new_mareakech:0 "New Mareakech"
 ###WIP###
   MDL_WIP_tt:0 "§CThe Strands of Fate remain weakened along this road.§!"
 ###TNO QUOTES####
