@@ -508,29 +508,6 @@ ideas = {
 				industrial_capacity_dockyard = 0.05
 			}
 		}
-		MDL_grand_admiralty_idea = {
-			picture = MDL_grand_admiralty
-			modifier = {
-				experience_gain_navy = 0.1
-				naval_doctrine_cost_factor = -0.10
-			}
-		}
-		MDL_naval_depots_idea = {
-			picture = MDL_naval_depots_idea
-			modifier = {
-				naval_coordination = 0.05
-				navy_max_range_factor = 0.10
-				industrial_capacity_dockyard = 0.05
-				production_speed_dockyard_factor = 0.10
-			}
-		}
-		MDL_coffee_trade = {
-			picture = MDL_coffee_trade
-			modifier = {
-				navy_max_range_factor = 0.15
-				production_factory_max_efficiency_factor = 0.05
-			}
-		}
 		MDL_colthage_treaty = {
 			picture = MDL_colthage_treaty1
 			cancel = {
@@ -1082,6 +1059,12 @@ ideas = {
 				local_resources_factor = 0.05
 			}
 		}
+		MDL_public_morality_act_idea = {
+			picture = generic_purge
+			modifier = {
+				army_core_defence_factor = 0.05
+			}
+		}
 ###ULTRAMAR IDEAS###
 		MDL_ash_shuhud_resistance = {
 			picture = MDL_native_resistance
@@ -1150,12 +1133,6 @@ ideas = {
 			modifier = {
 				experience_gain_navy = 0.05
 				naval_doctrine_cost_factor = -0.10
-			}
-		}
-		MDL_naval_academy_idea = {
-			picture = MDL_naval_academy_idea
-			research_bonus = {
-				naval_equipment = 0.10
 			}
 		}
 		MDL_naval_projection_idea = {
@@ -1347,6 +1324,29 @@ ideas = {
 				trade_opinion_factor = 0.10
 				research_speed_factor = 0.05
 				production_factory_efficiency_gain_factor = 0.10
+			}
+		}
+###LEGACY NAVY IDEAS###
+		MDL_naval_academy_idea = {
+			picture = MDL_naval_academy_idea
+			research_bonus = {
+				naval_equipment = 0.10
+			}
+		}
+		MDL_grand_admiralty_idea = {
+			picture = MDL_grand_admiralty
+			modifier = {
+				experience_gain_navy = 0.1
+				naval_doctrine_cost_factor = -0.10
+			}
+		}
+		MDL_naval_depots_idea = {
+			picture = MDL_naval_depots_idea
+			modifier = {
+				naval_coordination = 0.05
+				navy_max_range_factor = 0.10
+				industrial_capacity_dockyard = 0.05
+				production_speed_dockyard_factor = 0.10
 			}
 		}
 	}

@@ -68,6 +68,20 @@ MDL_asabiyyah_modifier = {
 	war_support_factor = MDL_war_var
 }
 
+MDL_manedalusia_navy_modifier = {
+	icon = GFX_idea_MDL_asabiyyah
+	enable = { always = yes }
+
+	experience_gain_navy = MDL_experience_gain_navy
+	naval_doctrine_cost_factor = MDL_naval_doctrine_cost_factor
+	naval_coordination = MDL_naval_coordination
+	navy_max_range_factor = MDL_navy_max_range_factor
+	industrial_capacity_dockyard = MDL_industrial_capacity_dockyard
+	production_speed_dockyard_factor = MDL_production_speed_dockyard_factor
+	navy_max_range_factor = MDL_navy_max_range_factor
+	production_factory_max_efficiency_factor = MDL_production_factory_max_efficiency_factor
+}
+
 MDL_federal_army_modifier = {
   icon = GFX_idea_MDL_federal_army
   enable = { always = yes }

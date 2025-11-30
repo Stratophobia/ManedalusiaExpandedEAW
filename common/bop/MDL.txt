@@ -9,6 +9,8 @@ MDL_theological_bop = {
 		max = 0.22
 		modifier = {
 			stability_factor = 0.05
+			surrender_limit = 0.05
+			consumer_goods_factor = -0.05
 		}
 		on_activate = {
 			set_power_balance_gfx = {

@@ -287,6 +287,8 @@
   MDL_set_capital_in_coltoba_desc:0 "Our new territories must continue to be governed from the venerable city of Coltoba, as the ash-shuhūd have been since the dawn of the ancient Sultanate. This may slightly strain the administration and create animosity, but it is a sacrifice worth making to preserve Manedalusian sovereignty."
   MDL_set_capital_in_klugetown:0 "A Capital For All The Faithful"
   MDL_set_capital_in_klugetown_desc:0 "Coltoba may be the capital of Manedalusia, but the ash-shuhūd have grown to a congregation of many different nations, of which Manedalusia is only a part. As all of the faithful are equal under the Watchful Eye of Ash-Shahid, a neutral capital must be established for all of West Zebrica, and with some renovation, Klugetown would be the perfect choice."
+  MDL_a_prophecy_a_millenium_in_the_making:0 "A Prophecy A Millenium In The Making"
+  MDL_a_prophecy_a_millenium_in_the_making_desc:0 "For centuries the ash-shuhūd bid their time in Al-Manedalus, content to venture in pilgrimage to Mareakech while we awaited for the chance to find our own place in the Sun. By Ash-Shahid's grace, our patience has been rewarded, and we've been granted the opportunity to retake Arabia in His name for good. We will not let it go to waste."
 ###SAYF'S GENOCIDE PATH###
   MDL_kill_them_all:0 "Our Last Stand"
   MDL_kill_them_all_desc:0 "This is it. The Army knows that this shall be our twilight. Coltoba burns, and by Ash-Shahid, Abyssinia will burn with us!"
@@ -524,7 +526,7 @@
   MDL_military_industrial_council:0 "A Military Industrial Council"
   MDL_military_industrial_council_desc:0 "Cooperating with private industry can be difficult during peacetime, especially when the nation needs to quickly be put on a war footing. Military high command proposed the creation of the Majlis Tanmiyat as-Sinā'a Al-Askarīya, an advisory body with industry representatives that would allow us to more efficiently coordinate wartime production."
   MDL_citizen_guard:0 "Form the Haras Al-Muwātin"
-  MDL_citizen_guard_desc:0 "While law enforcement is simple enough in Coltoba and other cities, we have a vast countryside that also needs policing, which our armed forces can't do effectively. The Haras Al-Muwātin will be a body of rural law enforcement, drawn from locals with no criminal record and providing generous pay. Not only will this make law enforcement effective outside our urban centers, it will free up able bodied ponies from garrison duty for more pressing services."
+  MDL_citizen_guard_desc:0 "While law enforcement is simple enough in Coltoba and other cities, we have a vast countryside that also needs policing, which our armed forces can't do effectively. The Haras Al-Muwātin will be a body of rural law enforcement, drawn from locals and providing generous pay. Not only will this make law enforcement effective outside our urban centers, it will free up able bodied ponies from garrison duty."
   MDL_alchemical_investment:0 "Fund Alchemical Development"
   MDL_alchemical_investment_desc:0 "Moonstriker's personal laboratory has already produced promising prototypes for magical technology, as well as new techniques for synthetic magic crystal production. With this in mind, it's only right we endeavor to turn this passion project into a fully industrial development for the Manedalusian army."
   MDL_protect_the_skies:0 "Guard The Manedalusian Skies"
@@ -930,8 +932,6 @@
   MDL_golden_coast_idea:0 "The Golden Coast"
   MDL_golden_coast_idea_desc:0 "The title of Yqur Sapa was the result of mistranslation and cultural confusion; it's a bastardization of ancient Zonician which reached Manedalusia from a series of poorly translated letters from a Colthaginian trader, who greatly enjoyed his voyage to our homeland and affectionately named it the Golden Coast. As a celebration of our revitalization, we've graciously recognized this old moniker, and welcome visitors far and wide. You may travel the world, but nothing comes close to the Golden Coast!"
   MDL_naval_academy_idea:0 "Madrasat Al-Bahr Al-Manedalusiyyah"
-  MDL_coffee_trade:0 "The Coffee Current"
-  MDL_coffee_trade_desc:0 "The lush tropical climate of the island chain that runs from the southern coast of Equestria to Western Zebrica is ideal for growing coffee. Abyssinia and Wingbardy are its primary importers, but Manedalusian traders have sailed this particular route for centuries. With some clever investments, Manedalusia has reintegrated itself as a crucial part of this trading economy."
   MDL_grand_admiralty_idea:0 "Manedalusian Grand Admiralty"
   MDL_colthage_treaty:0 "The Green Bay Treaty"
   MDL_colthage_treaty_desc:0 "The Colthaginian Republic has signed a cooperative treaty with Manedalusia to allow Colthaginian industries to access markets in the Green Bay using the Manedalusian merchant fleet as a mediator, bypassing Hippogriffia's effective blockade of Colthage to the western trade routes."
@@ -970,6 +970,11 @@
   MDL_federal_assembly_2_desc:0 "Reformed from an advisory board into a fully realized legislative body, the Majlis Ash-Shūrā now gathers in Coltoba to govern the nation.\n\nGiven the militant nature of the Manedalusian assembly and the ties between public office and federal service, the majority of Majlis members are either former military personnel or public servants, with personal connections in the armed forces. As such, coordination between the military and the civilian government is efficient and seamless."
   MDL_federation_joint_development:0 "Joint Federal Development"
   MDL_federation_joint_development_desc:0 "To further industrialize and develop infrastructure in Zebrica, Manedalusia is now cooperating with other nations to chart and build a joint railway system."
+###NAVY DYNAMIC MODIFIER###
+  MDL_modify_navy_modifier_intro:0 "Modify §Y$MDL_manedalusia_navy_modifier$§! by"
+  MDL_modify_navy_mod_xp_doctrine_cost_tt:0 "$MDL_modify_navy_modifier_intro$\nexperience_gain_navy\nnaval_doctrine_cost_factor\n\n"
+  MDL_modify_navy_mod_depots_tt:0 "$MDL_modify_navy_modifier_intro$\nnaval_coordination\nnavy_max_range_factor\nindustrial_capacity_dockyard\nproduction_speed_dockyard_factor\n\n"
+  MDL_modify_navy_mod_coffee_trade_tt:0 "$MDL_modify_navy_modifier_intro$\nnavy_max_range_factor\nproduction_factory_max_efficiency_factor\n\n"
 ###SAMIRA IDEAS###
   MDL_sabotaged_supply:0 "Sabotaged Supply Lines"
   MDL_sabotaged_supply_desc:0 "§YThis §!§Cspirit§! §Ywill be removed once§! @MDL §GManedalusia§! §Yis beaten or we are no longer at§! §Rwar§! §Ywith them.§!"

@@ -750,7 +750,7 @@ shared_focus = {
 ###MIRAGE'S TREE###
 shared_focus = {
 	id = MDL_office_of_vice_and_virtue
-	icon = GFX_goal_generic_political
+	icon = GFX_goal_HOL_council_communism
 	x = 10
 	y = 0
 	cost = 2
@@ -763,6 +763,7 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_office_of_vice_and_virtue"
+		add_ideas = MDL_public_morality_act_idea
 	}
 }
 
@@ -881,7 +882,7 @@ shared_focus = {
 
 shared_focus = {
 	id = MDL_take_over_abyssinia
-	icon = GFX_goal_generic_political
+	icon = GFX_goal_HOL_council_communism
 	x = -4
 	y = 1
 	relative_position_id = MDL_wage_war_upon_the_infidels
@@ -991,7 +992,7 @@ shared_focus = {
 
 shared_focus = {
 	id = MDL_a_nominal_sultanate
-	icon = GFX_goal_generic_political
+	icon = GFX_goal_HOL_council_communism
 	x = 2
 	y = 1
 	relative_position_id = MDL_MIRAGE_1_2
@@ -1000,6 +1001,15 @@ shared_focus = {
 	cost = 5
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_MIRAGE_2_1"
+		custom_effect_tooltip = MDL_asabiyyah_alteration_tt
+		add_to_variable = {
+			var = MDL_pp_var
+			value = 0.05
+		}
+		add_to_variable = {
+			var = MDL_war_var
+			value = 0.10
+		}
 	}
 }
 
@@ -1032,20 +1042,25 @@ shared_focus = {
 
 shared_focus = {
 	id = MDL_set_capital_in_coltoba
-	icon = GFX_goal_generic_political
+	icon = GFX_goal_HOL_council_communism
 	x = -1
 	y = 1
 	relative_position_id = MDL_a_nominal_sultanate
 	prerequisite = { focus = MDL_a_nominal_sultanate }
-	available = {
-		has_war = no
-	}
+	available = { has_war = no }
 	mutually_exclusive = { focus = MDL_set_capital_in_klugetown }
 	cost = 2
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_set_capital_in_coltoba"
 		add_stability = 0.05
-		741 = { add_manpower = 25000 }
+		741 = {
+			add_manpower = 25000
+			set_building_level = {
+				type = infrastructure
+				level = 5
+				instant_build = yes
+			}
+		}
 	}
 }
 
@@ -1116,7 +1131,7 @@ shared_focus = {
 
 shared_focus = {
 	id = MDL_MIRAGE_4_2
-	icon = GFX_goal_generic_political
+	icon = GFX_goal_HOL_council_communism
 	x = 1
 	y = 1
 	relative_position_id = MDL_set_capital_in_coltoba
@@ -1173,8 +1188,8 @@ shared_focus = {
 }
 
 shared_focus = {
-	id = MDL_MIRAGE_6_1
-	icon = GFX_goal_generic_political
+	id = MDL_a_prophecy_a_millenium_in_the_making
+	icon = GFX_goal_HOL_council_communism
 	x = 0
 	y = 2
 	cost = 2
@@ -1182,7 +1197,8 @@ shared_focus = {
 	prerequisite = { focus = MDL_MIRAGE_5_1 }
 	prerequisite = { focus = MDL_MIRAGE_5_2 }
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus MDL_MIRAGE_6_1"
+		log = "[GetDateText]: [Root.GetName]: Focus MDL_a_prophecy_a_millenium_in_the_making"
+		MDL_invade_arabia = yes
 	}
 }
 
@@ -2219,6 +2235,12 @@ shared_focus = {
 	prerequisite = { focus = MDL_death_from_above }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_an_air_doctrine"
+		add_mastery_bonus = {
+			bonus = 0.25
+			days = 240
+			folder = air
+			name = MDL_an_air_doctrine
+		}
 		add_doctrine_cost_reduction = {
 			name = MDL_air_doc_buff
 			cost_reduction = 0.5
@@ -3277,15 +3299,14 @@ shared_focus = {
 		738 = { is_owned_and_controlled_by = ROOT }
 		740 = { is_owned_and_controlled_by = ROOT }
 	}
-
 	allow_branch = {
 		if = {
 			NOT = { has_country_flag = MDL_sunmad }
 		}
 	}
-
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_navy_stuff"
+		add_dynamic_modifier = { modifier = MDL_manedalusia_navy_modifier }
 		navy_experience = 25
 		741 = {
 			add_extra_state_shared_building_slots = 1
@@ -3544,7 +3565,10 @@ shared_focus = {
 	prerequisite = { focus = MDL_naval_patrols }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_grand_admiralty"
-		add_ideas = MDL_grand_admiralty_idea
+		custom_effect_tooltip = MDL_modify_navy_mod_xp_doctrine_cost_tt
+
+		add_to_variable = { MDL_experience_gain_navy = 0.1 }
+		add_to_variable = { MDL_naval_doctrine_cost_factor = -0.10 }
 	}
 	search_filters = { FOCUS_FILTER_NAVY_BONUS }
 }
@@ -3599,7 +3623,11 @@ shared_focus = {
 	prerequisite = { focus = MDL_naval_patrols }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_naval_depot_network"
-		add_ideas = MDL_naval_depots_idea
+		custom_effect_tooltip = MDL_modify_navy_mod_depots_tt
+		add_to_variable = { MDL_naval_coordination = 0.05 }
+		add_to_variable = { MDL_navy_max_range_factor = 0.10 }
+		add_to_variable = { MDL_industrial_capacity_dockyard = 0.05 }
+		add_to_variable = { MDL_production_speed_dockyard_factor = 0.10 }
 	}
 	search_filters = { FOCUS_FILTER_NAVY_BONUS }
 }
@@ -3676,12 +3704,11 @@ shared_focus = {
 	prerequisite = { focus = MDL_back_in_bussiness }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_coffee_current"
+		custom_effect_tooltip = MDL_modify_navy_mod_coffee_trade_tt
+		add_to_variable = { MDL_navy_max_range_factor = 0.15 }
+		add_to_variable = { MDL_production_factory_max_efficiency_factor = 0.05 }
 		custom_effect_tooltip = MDL_asabiyyah_alteration_tt
-		add_ideas = MDL_coffee_trade
-		add_to_variable = {
-			var = MDL_consoom
-			value = 0.05
-		}
+		add_to_variable = { MDL_consoom = 0.05 }
 	}
 	search_filters = { FOCUS_FILTER_INDUSTRY }
 }
