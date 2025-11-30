@@ -1131,7 +1131,7 @@ shared_focus = {
 
 shared_focus = {
 	id = MDL_MIRAGE_4_2
-	icon = GFX_goal_HOL_council_communism
+	icon = GFX_goal_generic_political
 	x = 1
 	y = 1
 	relative_position_id = MDL_set_capital_in_coltoba
@@ -3306,7 +3306,7 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_navy_stuff"
-		add_dynamic_modifier = { modifier = MDL_manedalusia_navy_modifier }
+		add_dynamic_modifier = { modifier = MDL_manedalusian_navy_modifier }
 		navy_experience = 25
 		741 = {
 			add_extra_state_shared_building_slots = 1
@@ -3521,7 +3521,10 @@ shared_focus = {
 	prerequisite = { focus = MDL_fleet_tech focus = MDL_coltoba_shipyards }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_grand_zoco"
-		add_ideas = MDL_grand_zoco_idea
+		custom_effect_tooltip = MDL_modify_navy_mod_grand_zoco_tt
+		add_to_variable = { MDL_trade_opinion_factor = 0.10 }
+		add_to_variable = { MDL_research_speed_factor = 0.05 }
+		add_to_variable = { MDL_production_factory_efficiency_gain_factor = 0.10 }
 		741 = {
 			add_extra_state_shared_building_slots = 2
 			add_building_construction = {
@@ -3550,6 +3553,12 @@ shared_focus = {
 			cost_reduction = 0.5
 			uses = 3
 			category = cat_trade_interdiction
+		}
+		add_mastery_bonus = {
+			bonus = 0.25
+			days = 240
+			folder = naval  
+			name = GRU_naval_doctrinal_reformation
 		}
 	}
 	search_filters = { FOCUS_FILTER_RESEARCH }

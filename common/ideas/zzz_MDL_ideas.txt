@@ -491,14 +491,6 @@ ideas = {
 				}
 			}
 		}
-		MDL_grand_zoco_idea = {
-			picture = MDL_grand_zoco_idea
-			modifier = {
-				trade_opinion_factor = 0.10
-				research_speed_factor = 0.05
-				production_factory_efficiency_gain_factor = 0.10
-			}
-		}
 		MDL_golden_coast_idea = {
 			picture = MDL_golden_coast
 			modifier = {
@@ -537,6 +529,12 @@ ideas = {
 				political_power_gain = 0.05
 				conscription_factor = 0.10
 				MONTHLY_POPULATION = -0.20
+			}
+		}
+		MDL_naval_academy_idea = {
+			picture = MDL_naval_academy_idea
+			research_bonus = {
+				naval_equipment = 0.10
 			}
 		}
 		MDL_gunpowder_empire_idea = {
@@ -1327,10 +1325,12 @@ ideas = {
 			}
 		}
 ###LEGACY NAVY IDEAS###
-		MDL_naval_academy_idea = {
-			picture = MDL_naval_academy_idea
-			research_bonus = {
-				naval_equipment = 0.10
+		MDL_grand_zoco_idea = {
+			picture = MDL_grand_zoco_idea
+			modifier = {
+				trade_opinion_factor = 0.10
+				research_speed_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.10
 			}
 		}
 		MDL_grand_admiralty_idea = {

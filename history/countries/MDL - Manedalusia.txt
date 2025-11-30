@@ -47,7 +47,8 @@ set_variable = { MDL_mobilization_var = 0.30 }
 set_variable = { MDL_stability_var = 0.10 }
 set_variable = { MDL_war_var = -0.05 }
 ###Navy Modifier Variables###
-set_variable = { MDL_experience_gain_navy = 0 }
+set_variable = { MDL_experience_gain_navy = 0.1 }
+#Later buffs, should always start at 0
 set_variable = { MDL_naval_doctrine_cost_factor = 0 }
 set_variable = { MDL_naval_coordination = 0 }
 set_variable = { MDL_navy_max_range_factor = 0 }
@@ -55,6 +56,9 @@ set_variable = { MDL_industrial_capacity_dockyard = 0 }
 set_variable = { MDL_production_speed_dockyard_factor = 0 }
 set_variable = { MDL_navy_max_range_factor = 0 }
 set_variable = { MDL_production_factory_max_efficiency_factor = 0 }
+set_variable = { MDL_trade_opinion_factor = 0 }
+set_variable = { research_speed_factor = 0 }
+set_variable = { production_factory_efficiency_gain_factor = 0 }
 
 #Federal Army variables on Game Start
 set_variable = { MDL_FA_special_forces_var = 0.25 }
