@@ -19,11 +19,11 @@ on_actions = {
 					}
 					#Adds up to 100
 					random_list = {
+						20 = { MDL = { set_country_flag = MDL_AI_VELVET } }
 						20 = { MDL = { set_country_flag = MDL_AI_CRIMSON_SULTAN } }
 						20 = { MDL = { set_country_flag = MDL_AI_SENATE } }
-            20 = { MDL = { set_country_flag = MDL_AI_VELVET } }
-            20 = { MDL = { set_country_flag = MDL_AI_ULTRAMAR } }
-            20 = { MDL = { set_country_flag = MDL_AI_SAMIRA } }
+						20 = { MDL = { set_country_flag = MDL_AI_ULTRAMAR } }
+						20 = { MDL = { set_country_flag = MDL_AI_SAMIRA } }
 					}
 				}
 			}
@@ -72,7 +72,7 @@ on_actions = {
         every_other_country = {
           limit = { is_in_faction_with = BAT }
           if = {
-            limit = { original_tag = ZAR }
+            limit = { is_subject_of = BAT }
             annex_country = { target = THIS }
           }
           if = {

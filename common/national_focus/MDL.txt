@@ -880,16 +880,28 @@ shared_focus = {
 }
 
 shared_focus = {
-	id = MDL_MIRAGE_1_1
+	id = MDL_take_over_abyssinia
 	icon = GFX_goal_generic_political
 	x = -4
 	y = 1
 	relative_position_id = MDL_wage_war_upon_the_infidels
 	prerequisite = { focus = MDL_MIRAGE_0_1 }
 	prerequisite = { focus = MDL_wage_war_upon_the_infidels }
+	available = {
+		has_war = no
+		ABY = {
+			has_civil_war = no
+			exists_outside_sphere_of_influence = yes
+		}
+	}
+	bypass = {
+		ABY = { exists_outside_sphere_of_influence = no }
+	}
 	cost = 5
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus MDL_MIRAGE_1_1"
+		log = "[GetDateText]: [Root.GetName]: Focus MDL_take_over_abyssinia"
+		set_temp_variable = { wargoal_target = ABY }
+		expand_sphere_of_influence_to_wargoal_target = yes
 	}
 }
 
@@ -969,7 +981,7 @@ shared_focus = {
 	x = -1
 	y = 1
 	relative_position_id = MDL_MIRAGE_1_2
-	prerequisite = { focus = MDL_MIRAGE_1_1 }
+	prerequisite = { focus = MDL_take_over_abyssinia }
 	prerequisite = { focus = MDL_MIRAGE_1_2 }
 	cost = 5
 	completion_reward = {
@@ -1010,8 +1022,8 @@ shared_focus = {
 	icon = GFX_goal_generic_political
 	x = 0
 	y = 2
-	relative_position_id = MDL_MIRAGE_1_1
-	prerequisite = { focus = MDL_MIRAGE_1_1 }
+	relative_position_id = MDL_take_over_abyssinia
+	prerequisite = { focus = MDL_take_over_abyssinia }
 	cost = 5
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_MIRAGE_3_1"
@@ -1294,7 +1306,6 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_holy_zeal"
 		custom_effect_tooltip = MDL_asabiyyah_alteration_tt
 		add_ideas = MDL_holy_zeal_idea
-
 		add_to_variable = {
 			var = MDL_war_var
 			value = 0.05
@@ -1320,15 +1331,7 @@ shared_focus = {
 	prerequisite = { focus = MDL_fortify_desert_pass }
 	available = { has_war = no }
 	bypass = {
-		OR = {
-			is_subject = yes
-			MGY = {
-				OR = {
-					exists = no
-					has_war_with = ROOT
-				}
-			}
-		}
+		MGY = { exists_outside_sphere_of_influence = no }
 	}
 	will_lead_to_war_with = MGY
 	completion_reward = {
@@ -1625,12 +1628,7 @@ shared_focus = {
 	relative_position_id = MDL_the_crimson_sultanate
 	cost = 3
 	bypass = {
-		YMN = {
-			OR = {
-				has_war_with = ROOT
-				exists = no
-			}
-		}
+		YMN = { exists_outside_sphere_of_influence = no }
 	}
 	prerequisite = { focus = MDL_the_crimson_sultanate }
 	will_lead_to_war_with = YMN
@@ -1649,18 +1647,8 @@ shared_focus = {
 	cost = 3
 	bypass = {
 		AND = {
-			ASS = {
-				OR = {
-					has_war_with = ROOT
-					exists = no
-				}
-			}
-			ANS = {
-				OR = {
-					has_war_with = ROOT
-					exists = no
-				}
-			}
+			ASS = { exists_outside_sphere_of_influence = no }
+			ANS = { exists_outside_sphere_of_influence = no }
 		}
 	}
 	relative_position_id = MDL_the_crimson_sultanate
@@ -1671,14 +1659,14 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_conquer_donkeys"
 		if = {
 			limit = { ASS = { exists = yes } }
-			declare_war_on = {#declare war on the owner of Assur
+			declare_war_on = {
 				type = annex_everything
 				target = ASS
 			}
 		}
 		if = {
 			limit = { ANS = { exists = yes } }
-			declare_war_on = {#and the owner of Anseruk
+			declare_war_on = {
 				type = annex_everything
 				target = ANS
 			}
@@ -1775,20 +1763,14 @@ shared_focus = {
 	prerequisite = { focus = MDL_the_crimson_sultanate }
 	available = {
 		ABY = {
-			exists = yes
 			has_civil_war = no
+			exists_outside_sphere_of_influence = yes
 		}
 	}
 	bypass = {
 		ABY = {
-			AND = {
-				has_civil_war = no
-				OR = {
-					has_war_with = ROOT
-					exists = no
-					is_subject = yes
-				}
-			}
+			has_civil_war = no
+			exists_outside_sphere_of_influence = no
 		}
 	}
 	will_lead_to_war_with = ABY
@@ -1828,12 +1810,7 @@ shared_focus = {
 	relative_position_id = MDL_the_crimson_sultanate
 	cost = 2
 	bypass = {
-		KLG = {
-			OR = {
-				has_war_with = ROOT
-				exists = no
-			}
-		}
+		KLG = { exists_outside_sphere_of_influence = no }
 	}
 	prerequisite = { focus = MDL_the_crimson_sultanate }
 	will_lead_to_war_with = KLG
@@ -1903,12 +1880,7 @@ shared_focus = {
 			}
 			country_event = manedalusia.53
 		}
-		else_if = {
-			limit = {
-				ABY = { has_government = fascism }
-			}
-			country_event = manedalusia.71
-		}
+		else = { country_event = manedalusia.71 }
 		ABY = { add_to_ROOT_potential_cores = yes }
 		hidden_effect = {
 			if = {
@@ -2059,9 +2031,9 @@ shared_focus = {
 	cost = 3
 	relative_position_id = MDL_annex_bats
 	available = {
-		owns_state = 999
-		owns_state = 811
-		owns_state = 1009
+		999 = { is_owned_and_controlled_by = ROOT }
+		811 = { is_owned_and_controlled_by = ROOT }
+		1009 = { is_owned_and_controlled_by = ROOT }
 	}
 	prerequisite = { focus = MDL_annex_bats }
 	completion_reward = {
@@ -2085,7 +2057,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_universal_caliphate"
 		effect_tooltip = { set_cosmetic_tag = MDL_caliphate }
-		country_event = { id = manedalusia.47 }
+		country_event = manedalusia.47
 	}
 	search_filters = { FOCUS_FILTER_POLITICAL }
 }
@@ -2192,7 +2164,10 @@ shared_focus = {
 	y = 2
 	relative_position_id = MDL_air_stuff
 	cost = 5
-	prerequisite = { focus = MDL_air_industry focus = MDL_radar }
+	prerequisite = {
+		focus = MDL_air_industry
+		focus = MDL_radar
+	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_death_from_above"
 		if = {
@@ -2409,13 +2384,11 @@ shared_focus = {
 	x = 20
 	y = 0
 	cost = 5
-
 	allow_branch = {
 		if = {
 			NOT = { has_country_flag = MDL_sunmad }
 		}
 	}
-
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_economy_stuff"
 		add_tech_bonus = {
@@ -2491,10 +2464,7 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_basic_education"
 		custom_effect_tooltip = GRI_education_tooltip
 		hidden_effect = {
-			country_event = {
-				id = manedalusia.181
-				days = 120
-			}
+			country_event = { id = manedalusia.181 days = 120 }
 		}
 	}
 }
@@ -2601,7 +2571,6 @@ shared_focus = {
 				instant_build = yes
 			}
 		}
-
 		decrease_poverty = yes
 	}
 	search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -2852,7 +2821,7 @@ shared_focus = {
 	prerequisite = { focus = MDL_go_with_alneighzari focus = MDL_go_with_samira }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_coltoba_institute_military_science"
-		country_event = { id = manedalusia.57 }
+		country_event = manedalusia.57
 		add_research_slot = 1
 		increase_science_base = yes
 

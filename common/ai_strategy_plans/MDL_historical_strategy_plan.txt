@@ -24,12 +24,11 @@ MDL_historical = {
 	}
 	abort = {
 		has_country_flag = MDL_AI_HOLY_WAR
-  }
+	}
 
-  ai_national_focuses = {
-    MDL_sultana_velvet
-    MDL_purchase_land_maregypt
-  }
+	ai_national_focuses = {
+		MDL_sultana_velvet
+	}
 
 	research = {
 	}
