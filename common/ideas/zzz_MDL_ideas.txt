@@ -453,12 +453,9 @@ ideas = {
 			}
 		}
 		MDL_merchant_fleet_idea = {
-			picture = MDL_merchant_fleet
+			picture = MDL_coltoba_shipyards1
 			equipment_bonus = {
-				convoy = {
-					instant = yes
-					build_cost_ic = -0.35
-				}
+				convoy = { instant = yes build_cost_ic = -0.35 }
 			}
 		}
 		MDL_coltoba_shipyards_idea = {
@@ -468,18 +465,23 @@ ideas = {
 				repair_speed_factor = 0.25
 			}
 			equipment_bonus = {
-				ship_hull_light = {
-					build_cost_ic = -0.35
-					instant = yes
-				}
-				ship_hull_cruiser = {
-					build_cost_ic = -0.35
-					instant = yes
-				}
-				ship_hull_submarine = {
-					build_cost_ic = -0.35
-					instant = yes
-				}
+				ship_hull_light = { build_cost_ic = -0.35 instant = yes }
+				ship_hull_cruiser = { build_cost_ic = -0.35 instant = yes }
+				ship_hull_submarine = { build_cost_ic = -0.35 instant = yes }
+			}
+		}
+		MDL_coltoba_shipyards_improved = {
+			name = MDL_coltoba_shipyards_idea
+			picture = MDL_coltoba_shipyards1
+			modifier = {
+				refit_speed = 0.20
+				repair_speed_factor = 0.25
+			}
+			equipment_bonus = {
+				convoy = { build_cost_ic = -0.35 instant = yes }
+				ship_hull_light = { build_cost_ic = -0.35 instant = yes }
+				ship_hull_cruiser = { build_cost_ic = -0.35 instant = yes }
+				ship_hull_submarine = { build_cost_ic = -0.35 instant = yes }
 			}
 		}
 		MDL_golden_coast_idea = {
