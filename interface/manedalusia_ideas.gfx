@@ -16,16 +16,8 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/MDL/MDL_destroyed_army.tga"
 	}
   SpriteType = {
-    name = "GFX_idea_MDL_naval_depots_idea"
-    texturefile = "gfx/interface/ideas/MDL/MDL_naval_depots_idea.tga"
-  }
-  SpriteType = {
     name = "GFX_idea_MDL_federation_joint_development"
     texturefile = "gfx/interface/ideas/MDL/MDL_federation_joint_development.tga"
-  }
-  SpriteType = {
-    name = "GFX_idea_MDL_grand_zoco_idea"
-    texturefile = "gfx/interface/ideas/MDL/MDL_grand_zoco_idea.tga"
   }
   SpriteType = {
     name = "GFX_idea_MDL_naval_academy_idea"
@@ -186,10 +178,6 @@ spriteTypes = {
   SpriteType = {
     name = "GFX_idea_MDL_tailspin_shipping"
     texturefile = "gfx/interface/ideas/MDL/MDL_tailspin_shipping.tga"
-  }
-  SpriteType = {
-    name = "GFX_idea_MDL_grand_admiralty"
-    texturefile = "gfx/interface/ideas/MDL/MDL_grand_admiralty.tga"
   }
   SpriteType = {
     name = "GFX_idea_MDL_federal_assembly"

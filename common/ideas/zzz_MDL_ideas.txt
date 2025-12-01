@@ -62,7 +62,6 @@ ideas = {
 		}
 		MDL_moonstriker_labs = {
 			picture = MDL_moonstriker_labs
-
 			allowed = { original_tag = MDL }
 			traits = { infantry_equipment_manufacturer }
 			available = { has_completed_focus = MDL_alchemical_investment }
@@ -84,12 +83,8 @@ ideas = {
 		}
 		MDL_motorized_concern = {
 			picture = MDL_motorized_concern
-			allowed = {
-				original_tag = MDL
-			}
-			research_bonus = {
-				motorized_equipment = 0.15
-			}
+			allowed = { original_tag = MDL }
+			research_bonus = { motorized_equipment = 0.15 }
 			visible = {
 				NOT = { has_country_flag = MDL_grifo_takeover }
 			}
@@ -191,128 +186,126 @@ ideas = {
 					has_completed_focus = MDL_SAM33
 				}
 			}
-			traits = { refinery_concern }
-			modifier = { production_speed_synthetic_refinery_factor = 0.05 }
-			visible = {
-				NOT = { has_country_flag = MDL_grifo_takeover }
-			}
-			research_bonus = { synth_resources = 0.25 }
-		}
-
-		MDL_electronics_concern = {
-			picture = MDL_electronics_concern
-			allowed = { original_tag = MDL }
-			research_bonus = { electronics = 0.15 }
-			visible = {
-				NOT = { has_country_flag = MDL_grifo_takeover }
-			}
-			traits = { electronics_concern }
-			modifier = { production_factory_efficiency_gain_factor = 0.05 }
-		}
-	}
-
-	aircraft_manufacturer = {
-		designer = yes
-
-		MDL_empyrean = {
-			picture = MDL_empyrean
-			allowed = { original_tag = MDL }
-			research_bonus = { air_equipment = 0.15 }
-			visible = {
-				NOT = { has_country_flag = MDL_grifo_takeover }
-			}
-			traits = { naval_aircraft_manufacturer }
-		}
-		MDL_sundrinker_airwings = {
-			picture = MDL_sundrinker_airwings
-			allowed = { original_tag = MDL }
-			visible = {
-				NOT = { has_country_flag = MDL_grifo_takeover }
-			}
-			available = { has_completed_focus = MDL_air_industry }
-			research_bonus = { air_equipment = 0.15 }
-			traits = { light_aircraft_manufacturer }
-		}
-		MDL_tailspin_shipping = {
-			picture = MDL_tailspin_shipping
-			allowed = { original_tag = MDL }
-			visible = {
-				NOT = { has_country_flag = MDL_grifo_takeover }
-			}
-			available = { has_completed_focus = MDL_air_industry }
-			research_bonus = { air_equipment = 0.15 }
-			traits = { CAS_manufacturer }
-		}
-		MDL_imperial_planes = {
-			picture = MDL_imperial_planes
-			allowed = { original_tag = MDL }
-			visible = { has_country_flag = MDL_grifo_takeover }
-			available = { has_completed_focus = MDL_imperial_plane_tech }
-			research_bonus = { air_equipment = 0.15 }
-			traits = { light_aircraft_manufacturer }
-		}
-	}
-
-	tank_manufacturer = {
-		MDL_black_guard_steelworks = {
-			picture = MDL_black_guard_steelworks
-			allowed = { original_tag = MDL }
-			visible = {
-				NOT = { has_country_flag = MDL_grifo_takeover }
-			}
-			equipment_bonus = {
-				mechanized_equipment = { build_cost_ic = -0.15 }
-			}
-			research_bonus = { armor = 0.15 }
-			traits = { heavy_tank_manufacturer }
-		}
-		MDL_imperial_tanks = {
-			picture = MDL_imperial_tanks
-			allowed = { original_tag = MDL }
-			visible = { has_country_flag = MDL_grifo_takeover }
-			available = { has_completed_focus = MDL_imperial_armor }
-			research_bonus = { armor = 0.15 }
-			traits = { heavy_tank_manufacturer }
-		}
-	}
-
-	naval_manufacturer = {
-		designer = yes
-
-		MDL_mercantile_league = {
-			picture = MDL_mercantile_league
-			allowed = { original_tag = MDL }
-			visible = {
-				NOT = { has_country_flag = MDL_grifo_takeover }
-			}
-			available = { any_controlled_state_is_coastal = yes }
-			modifier = { navy_max_range_factor = 0.10 }
-			research_bonus = { naval_equipment = 0.15 }
-			traits = { naval_manufacturer }
-			equipment_bonus = {
-				screen_ship = {
-					defense = -0.03
-					naval_speed = 0.15
-					instant = yes
+				traits = { refinery_concern }
+				modifier = { production_speed_synthetic_refinery_factor = 0.05 }
+				visible = {
+					NOT = { has_country_flag = MDL_grifo_takeover }
 				}
-				submarine = {
-					defense = -0.03
-					naval_speed = 0.15
-					instant = yes
+				research_bonus = { synth_resources = 0.25 }
+			}
+
+			MDL_electronics_concern = {
+				picture = MDL_electronics_concern
+				allowed = { original_tag = MDL }
+				research_bonus = { electronics = 0.15 }
+				visible = {
+					NOT = { has_country_flag = MDL_grifo_takeover }
+				}
+				traits = { electronics_concern }
+				modifier = { production_factory_efficiency_gain_factor = 0.05 }
+			}
+		}
+
+		aircraft_manufacturer = {
+			designer = yes
+
+			MDL_empyrean = {
+				picture = MDL_empyrean
+				allowed = { original_tag = MDL }
+				research_bonus = { air_equipment = 0.15 }
+				visible = {
+					NOT = { has_country_flag = MDL_grifo_takeover }
+				}
+				traits = { naval_aircraft_manufacturer }
+			}
+			MDL_sundrinker_airwings = {
+				picture = MDL_sundrinker_airwings
+				allowed = { original_tag = MDL }
+				visible = {
+					NOT = { has_country_flag = MDL_grifo_takeover }
+				}
+				available = { has_completed_focus = MDL_air_industry }
+				research_bonus = { air_equipment = 0.15 }
+				traits = { light_aircraft_manufacturer }
+			}
+			MDL_tailspin_shipping = {
+				picture = MDL_tailspin_shipping
+				allowed = { original_tag = MDL }
+				visible = {
+					NOT = { has_country_flag = MDL_grifo_takeover }
+				}
+				available = { has_completed_focus = MDL_air_industry }
+				research_bonus = { air_equipment = 0.15 }
+				traits = { CAS_manufacturer }
+			}
+			MDL_imperial_planes = {
+				picture = MDL_imperial_planes
+				allowed = { original_tag = MDL }
+				visible = { has_country_flag = MDL_grifo_takeover }
+				available = { has_completed_focus = MDL_imperial_plane_tech }
+				research_bonus = { air_equipment = 0.15 }
+				traits = { light_aircraft_manufacturer }
+			}
+		}
+
+		tank_manufacturer = {
+			MDL_black_guard_steelworks = {
+				picture = MDL_black_guard_steelworks
+				allowed = { original_tag = MDL }
+				visible = {
+					NOT = { has_country_flag = MDL_grifo_takeover }
+				}
+				equipment_bonus = {
+					mechanized_equipment = { build_cost_ic = -0.15 }
+				}
+				research_bonus = { armor = 0.15 }
+				traits = { heavy_tank_manufacturer }
+			}
+			MDL_imperial_tanks = {
+				picture = MDL_imperial_tanks
+				allowed = { original_tag = MDL }
+				visible = { has_country_flag = MDL_grifo_takeover }
+				available = { has_completed_focus = MDL_imperial_armor }
+				research_bonus = { armor = 0.15 }
+				traits = { heavy_tank_manufacturer }
+			}
+		}
+
+		naval_manufacturer = {
+			designer = yes
+
+			MDL_mercantile_league = {
+				picture = MDL_mercantile_league
+				allowed = { original_tag = MDL }
+				visible = {
+					NOT = { has_country_flag = MDL_grifo_takeover }
+				}
+				available = { any_controlled_state_is_coastal = yes }
+				modifier = { navy_max_range_factor = 0.10 }
+				research_bonus = { naval_equipment = 0.15 }
+				traits = { naval_manufacturer }
+				equipment_bonus = {
+					screen_ship = {
+						defense = -0.03
+						naval_speed = 0.15
+						instant = yes
+					}
+					submarine = {
+						defense = -0.03
+						naval_speed = 0.15
+						instant = yes
+					}
 				}
 			}
-		}
-		MDL_imperial_ships = {
-			picture = MDL_imperial_ships
-			allowed = { original_tag = MDL }
-			visible = { has_country_flag = MDL_grifo_takeover }
-			available = { has_completed_focus = MDL_imperial_shipyards }
-			research_bonus = {
-				naval_equipment = 0.08
+			MDL_imperial_ships = {
+				picture = MDL_imperial_ships
+				allowed = { original_tag = MDL }
+				visible = { has_country_flag = MDL_grifo_takeover }
+				available = { has_completed_focus = MDL_imperial_shipyards }
+				research_bonus = { naval_equipment = 0.08 }
+				traits = { naval_manufacturer }
 			}
-			traits = { naval_manufacturer }
 		}
-	}
 
 ###MANEDALUSIAN IDEAS###
 	country = {
@@ -383,9 +376,7 @@ ideas = {
 		}
 		MDL_magical_reloading = {
 			picture = MDL_magical_reloading
-			modifier = {
-				army_artillery_attack_factor = 0.15
-			}
+			modifier = { army_artillery_attack_factor = 0.15 }
 			equipment_bonus = {
 				artillery_equipment = {
 					soft_attack = 0.05
@@ -533,9 +524,7 @@ ideas = {
 		}
 		MDL_naval_academy_idea = {
 			picture = MDL_naval_academy_idea
-			research_bonus = {
-				naval_equipment = 0.10
-			}
+			research_bonus = { naval_equipment = 0.10 }
 		}
 		MDL_gunpowder_empire_idea = {
 			picture = MDL_gunpowder_empire1
@@ -562,8 +551,8 @@ ideas = {
 		MDL_qadi_vizier = {
 			picture = MDL_vizier_qadi
 			modifier = {
-					stability_factor = 0.05
-					consumer_goods_factor = -0.05
+				stability_factor = 0.05
+				consumer_goods_factor = -0.05
 			}
 		}
 		MDL_KAR_shahdom = {
@@ -575,15 +564,11 @@ ideas = {
 		}
 		MDL_MAZ_vassal = {
 			picture = MDL_MAZ_vassal
-			modifier = {
-				conscription_factor = -0.25
-			}
+			modifier = { conscription_factor = -0.25 }
 		}
 		RIZ_council_adaptation = {
 			picture = RIZ_council_adaptation
-			modifier = {
-				research_speed_factor = -0.10
-			}
+			modifier = { research_speed_factor = -0.10 }
 		}
 		MDL_bomber_pilots_idea = {
 			picture = FRA_army_of_aggression_focus
@@ -601,9 +586,7 @@ ideas = {
 		}
 		MDL_looting_abyssinia = {
 			picture = generic_purge
-			modifier = {
-				supply_consumption_factor = -0.50
-			}
+			modifier = { supply_consumption_factor = -0.50 }
 		}
 		MDL_abyssinian_genocide = {
 			picture = generic_purge
@@ -613,6 +596,7 @@ ideas = {
 				fascism_drift = 0.03
 			}
 		}
+###SENATE IDEAS###
 		MDL_federal_assembly_1 = {
 			picture = MDL_federal_assembly
 			modifier = {
@@ -680,11 +664,10 @@ ideas = {
 				political_power_gain = 0.05
 			}
 		}
+###VELVET IDEAS###
 		MDL_queen_morticia = {
 			picture = ABY_morticia
-			modifier = {
-				stability_factor = 0.10
-			}
+			modifier = { stability_factor = 0.10 }
 		}
 		MDL_paying_MGY = {
 			picture = MDL_paying_MGY
@@ -756,9 +739,7 @@ ideas = {
 		}
 		MDL_WNG_katren_accord_2 = {
 			picture = HUN_treaty_of_triannon
-			modifier = {
-				consumer_goods_factor = -0.10
-			}
+			modifier = { consumer_goods_factor = -0.10 }
 		}
 		MDL_never_slaves_again_idea_1 = {
 			picture = MDL_never_slaves_again
@@ -769,9 +750,7 @@ ideas = {
 		}
 		MDL_never_slaves_again_idea_2 = {
 			picture = MDL_never_slaves_again
-			modifier = {
-				army_core_defence_factor = 0.05
-			}
+			modifier = { army_core_defence_factor = 0.05 }
 		}
 		MDL_celebrating_victory = {
 			picture = ROM_king_carol_ii_hedonist
@@ -781,47 +760,13 @@ ideas = {
 				consumer_goods_factor = 0.1
 			}
 		}
-		MDL_sunmad_0 = {
-			picture = FRA_scw_intervention_republicans_focus
-			modifier = {
-				political_power_factor = -1.0
-				stability_factor = -0.40
-				army_morale_factor = -0.4
-			}
-		}
-		MDL_sunmad_1 = {
-			picture = FRA_scw_intervention_republicans_focus
-			modifier = {
-				political_power_factor = -0.75
-				stability_factor = -0.30
-				army_morale_factor = -0.3
-			}
-		}
-		MDL_sunmad_2 = {
-			picture = FRA_scw_intervention_republicans_focus
-			modifier = {
-				political_power_factor = -0.50
-				stability_factor = -0.20
-				army_morale_factor = -0.2
-			}
-		}
-		MDL_sunmad_3 = {
-			picture = FRA_scw_intervention_republicans_focus
-			modifier = {
-				political_power_factor = -0.25
-				stability_factor = -0.10
-				army_morale_factor = -0.1
-			}
-		}
 ###UNITED SULTANATE IDEAS###
 		MDL_aby_war_attack_idea = {
 			picture = generic_volunteer_expedition_bonus
 			cancel = {
 				NOT = { has_war_with = ABY }
 			}
-			modifier = {
-				supply_consumption_factor = -0.10
-			}
+			modifier = { supply_consumption_factor = -0.10 }
 			targeted_modifier = {
 				tag = ABY
 				attack_bonus_against = 0.05
@@ -832,9 +777,7 @@ ideas = {
 			cancel = {
 				NOT = { has_war_with = ABY }
 			}
-			modifier = {
-				army_morale_factor = 0.10
-			}
+			modifier = { army_morale_factor = 0.10 }
 			targeted_modifier = {
 				tag = ABY
 				defense_bonus_against = 0.05
@@ -843,9 +786,7 @@ ideas = {
 ###SAMIRA IDEAS###
 		MDL_national_census = {
 			picture = MDL_national_census
-			modifier = {
-				conscription = 0.01
-			}
+			modifier = { conscription = 0.01 }
 		}
 		MDL_meritocratic_sultanate_idea = {
 			picture = MDL_meritocratic_sultanate
@@ -925,6 +866,38 @@ ideas = {
 			}
 		}
 ###HOLY WAR IDEAS###
+		MDL_sunmad_0 = {
+			picture = FRA_scw_intervention_republicans_focus
+			modifier = {
+				political_power_factor = -1.0
+				stability_factor = -0.40
+				army_morale_factor = -0.4
+			}
+		}
+		MDL_sunmad_1 = {
+			picture = FRA_scw_intervention_republicans_focus
+			modifier = {
+				political_power_factor = -0.75
+				stability_factor = -0.30
+				army_morale_factor = -0.3
+			}
+		}
+		MDL_sunmad_2 = {
+			picture = FRA_scw_intervention_republicans_focus
+			modifier = {
+				political_power_factor = -0.50
+				stability_factor = -0.20
+				army_morale_factor = -0.2
+			}
+		}
+		MDL_sunmad_3 = {
+			picture = FRA_scw_intervention_republicans_focus
+			modifier = {
+				political_power_factor = -0.25
+				stability_factor = -0.10
+				army_morale_factor = -0.1
+			}
+		}
 		MDL_demon_of_the_outer_night = {
 			picture = MDL_demon
 			cancel = {
@@ -997,9 +970,7 @@ ideas = {
 		}
 		MDL_holy_mandate = {
 			picture = MDL_holy_mandate
-			modifier = {
-				autonomy_gain = -1
-			}
+			modifier = { autonomy_gain = -1 }
 			targeted_modifier = {
 				tag = MDL
 				cic_to_target_factor = 0.25
@@ -1014,6 +985,7 @@ ideas = {
 			}
 		}
 		MDL_rally_the_faithful_2 = {
+			name = MDL_rally_the_faithful_1
 			picture = MDL_rally_the_faithful
 			modifier = {
 				special_forces_cap = 0.50
@@ -1324,31 +1296,6 @@ ideas = {
 				production_factory_efficiency_gain_factor = 0.10
 			}
 		}
-###LEGACY NAVY IDEAS###
-		MDL_grand_zoco_idea = {
-			picture = MDL_grand_zoco_idea
-			modifier = {
-				trade_opinion_factor = 0.10
-				research_speed_factor = 0.05
-				production_factory_efficiency_gain_factor = 0.10
-			}
-		}
-		MDL_grand_admiralty_idea = {
-			picture = MDL_grand_admiralty
-			modifier = {
-				experience_gain_navy = 0.1
-				naval_doctrine_cost_factor = -0.10
-			}
-		}
-		MDL_naval_depots_idea = {
-			picture = MDL_naval_depots_idea
-			modifier = {
-				naval_coordination = 0.05
-				navy_max_range_factor = 0.10
-				industrial_capacity_dockyard = 0.05
-				production_speed_dockyard_factor = 0.10
-			}
-		}
 	}
 ###HIDDEN IDEAS###
 	hidden_ideas = {
@@ -1360,8 +1307,9 @@ ideas = {
 				training_time_army_factor = 0.75
 				industrial_capacity_factory = -0.90
 				political_power_factor = -0.90
+				army_org_factor = -0.99
 				army_morale_factor = -0.99
-				surrender_limit = -0.50
+				surrender_limit = -0.65
 			}
 			targeted_modifier = {
 				tag = EQS

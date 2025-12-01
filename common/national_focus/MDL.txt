@@ -3575,8 +3575,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_grand_admiralty"
 		custom_effect_tooltip = MDL_modify_navy_mod_xp_doctrine_cost_tt
-
-		add_to_variable = { MDL_experience_gain_navy = 0.1 }
+		add_to_variable = { MDL_experience_gain_navy = 0.10 }
 		add_to_variable = { MDL_naval_doctrine_cost_factor = -0.10 }
 	}
 	search_filters = { FOCUS_FILTER_NAVY_BONUS }
@@ -8491,6 +8490,7 @@ shared_focus = {
 	prerequisite = { focus = MDL_charting_new_course }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM03"
+		add_dynamic_modifier = { modifier = MDL_manedalusian_navy_modifier }
 		add_ideas = MDL_coltoba_shipyards_idea
 		741 = {
 			add_extra_state_shared_building_slots = 2
@@ -9145,11 +9145,14 @@ shared_focus = {
 	prerequisite = { focus = MDL_SAM20 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM27"
-		every_state = {
-			limit = { is_in_array = { state_original_cores = MKS } }
-			add_core_of = ROOT
-		}
+		custom_effect_tooltip = MDL_annex_ovingoland_tt
 		add_manpower = 50000
+		hidden_effect = {
+			for_each_scope_loop = {
+				array = MKS.original_cores
+				add_core_of = MDL
+			}
+		}
 	}
 }
 
@@ -9459,9 +9462,12 @@ shared_focus = {
 		focus = MDL_SAM35
 		focus = MDL_SAM36
 	}
+	available = { has_completed_focus = MDL_SAM03 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM40"
-		add_ideas = MDL_grand_admiralty_idea
+		custom_effect_tooltip = MDL_modify_navy_mod_xp_doctrine_cost_tt
+		add_to_variable = { MDL_experience_gain_navy = 0.10 }
+		add_to_variable = { MDL_naval_doctrine_cost_factor = -0.10 }
 	}
 }
 
@@ -9579,7 +9585,10 @@ shared_focus = {
 	prerequisite = { focus = MDL_SAM37 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM46"
-		add_ideas = MDL_grand_zoco_idea
+		custom_effect_tooltip = MDL_modify_navy_mod_grand_zoco_tt
+		add_to_variable = { MDL_trade_opinion_factor = 0.10 }
+		add_to_variable = { MDL_research_speed_factor = 0.05 }
+		add_to_variable = { MDL_production_factory_efficiency_gain_factor = 0.10 }
 		741 = {
 			add_extra_state_shared_building_slots = 2
 			add_building_construction = {
@@ -9730,7 +9739,11 @@ shared_focus = {
 	prerequisite = { focus = MDL_SAM40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM54"
-		add_ideas = MDL_naval_depots_idea
+		custom_effect_tooltip = MDL_modify_navy_mod_depots_tt
+		add_to_variable = { MDL_naval_coordination = 0.05 }
+		add_to_variable = { MDL_navy_max_range_factor = 0.10 }
+		add_to_variable = { MDL_industrial_capacity_dockyard = 0.05 }
+		add_to_variable = { MDL_production_speed_dockyard_factor = 0.10 }
 	}
 }
 
