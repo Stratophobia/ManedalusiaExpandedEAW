@@ -977,16 +977,26 @@ shared_focus = {
 }
 
 shared_focus = {
-	id = MDL_MIRAGE_2_1
-	icon = GFX_goal_generic_political
+	id = MDL_spread_faith_to_donkeys
+	icon = GFX_goal_HOL_council_communism
 	x = -1
 	y = 1
 	relative_position_id = MDL_MIRAGE_1_2
 	prerequisite = { focus = MDL_take_over_abyssinia }
 	prerequisite = { focus = MDL_MIRAGE_1_2 }
+	bypass = {
+		AND = {
+			ASS = { exists_outside_sphere_of_influence = no }
+			ANS = { exists_outside_sphere_of_influence = no }
+		}
+	}
 	cost = 5
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus MDL_MIRAGE_2_1"
+		log = "[GetDateText]: [Root.GetName]: Focus MDL_spread_faith_to_donkeys"
+		set_temp_variable = { wargoal_target = ASS }
+		expand_sphere_of_influence_to_wargoal_target = yes
+		set_temp_variable = { wargoal_target = ANS }
+		expand_sphere_of_influence_to_wargoal_target = yes
 	}
 }
 
@@ -1000,7 +1010,7 @@ shared_focus = {
 	prerequisite = { focus = MDL_MIRAGE_1_3 }
 	cost = 5
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus MDL_MIRAGE_2_1"
+		log = "[GetDateText]: [Root.GetName]: Focus MDL_spread_faith_to_donkeys"
 		custom_effect_tooltip = MDL_asabiyyah_alteration_tt
 		add_to_variable = {
 			var = MDL_pp_var
@@ -1014,16 +1024,21 @@ shared_focus = {
 }
 
 shared_focus = {
-	id = MDL_MIRAGE_2_3
-	icon = GFX_goal_generic_political
+	id = MDL_spread_faith_to_yemane
+	icon = GFX_goal_HOL_council_communism
 	x = 1
 	y = 1
 	relative_position_id = MDL_MIRAGE_1_3
 	prerequisite = { focus = MDL_MIRAGE_1_3 }
 	prerequisite = { focus = MDL_take_over_klugetown }
-	cost = 5
+	bypass = {
+		YMN = { exists_outside_sphere_of_influence = no }
+	}
+	cost = 4
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus MDL_MIRAGE_2_1"
+		log = "[GetDateText]: [Root.GetName]: Focus MDL_spread_faith_to_donkeys"
+		set_temp_variable = { wargoal_target = YMN }
+		expand_sphere_of_influence_to_wargoal_target = yes
 	}
 }
 
@@ -1046,6 +1061,7 @@ shared_focus = {
 	x = -1
 	y = 1
 	relative_position_id = MDL_a_nominal_sultanate
+	prerequisite = { focus = MDL_spread_faith_to_donkeys }
 	prerequisite = { focus = MDL_a_nominal_sultanate }
 	available = { has_war = no }
 	mutually_exclusive = { focus = MDL_set_capital_in_klugetown }
@@ -1071,6 +1087,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = MDL_a_nominal_sultanate
 	prerequisite = { focus = MDL_a_nominal_sultanate }
+	prerequisite = { focus = MDL_spread_faith_to_yemane }
 	available = {
 		has_war = no
 		1208 = { is_owned_and_controlled_by = ROOT }
@@ -1121,7 +1138,7 @@ shared_focus = {
 	x = 1
 	y = 1
 	relative_position_id = MDL_MIRAGE_3_1
-	prerequisite = { focus = MDL_MIRAGE_2_1 }
+	prerequisite = { focus = MDL_spread_faith_to_donkeys }
 	prerequisite = { focus = MDL_MIRAGE_3_1 }
 	cost = 5
 	completion_reward = {
@@ -1130,8 +1147,8 @@ shared_focus = {
 }
 
 shared_focus = {
-	id = MDL_MIRAGE_4_2
-	icon = GFX_goal_generic_political
+	id = MDL_a_prophecy_a_millenium_in_the_making
+	icon = GFX_goal_HOL_council_communism
 	x = 1
 	y = 1
 	relative_position_id = MDL_set_capital_in_coltoba
@@ -1139,9 +1156,22 @@ shared_focus = {
 		focus = MDL_set_capital_in_coltoba
 		focus = MDL_set_capital_in_klugetown
 	}
+	available = {
+		OR = {
+			is_neighbor_of = EMR
+			is_neighbor_of = SDF
+			is_neighbor_of = SDL
+			is_neighbor_of = SDC
+			is_neighbor_of = SDF
+		}
+	}
+	bypass = {
+		SDL = { all_original_cores_owned_by_ROOT = yes }
+	}
 	cost = 5
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus MDL_MIRAGE_4_2"
+		log = "[GetDateText]: [Root.GetName]: Focus MDL_a_prophecy_a_millenium_in_the_making"
+		MDL_invade_arabia = yes
 	}
 }
 
@@ -1151,7 +1181,7 @@ shared_focus = {
 	x = -1
 	y = 1
 	relative_position_id = MDL_MIRAGE_3_4
-	prerequisite = { focus = MDL_MIRAGE_2_3 }
+	prerequisite = { focus = MDL_spread_faith_to_yemane }
 	prerequisite = { focus = MDL_MIRAGE_3_4 }
 	cost = 5
 	completion_reward = {
@@ -1165,9 +1195,9 @@ shared_focus = {
 	x = -2
 	y = 1
 	cost = 2
-	relative_position_id = MDL_MIRAGE_4_2
+	relative_position_id = MDL_a_prophecy_a_millenium_in_the_making
 	prerequisite = { focus = MDL_MIRAGE_4_1 }
-	prerequisite = { focus = MDL_MIRAGE_4_2 }
+	prerequisite = { focus = MDL_a_prophecy_a_millenium_in_the_making }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_MIRAGE_5_1"
 	}
@@ -1179,8 +1209,8 @@ shared_focus = {
 	x = 2
 	y = 1
 	cost = 2
-	relative_position_id = MDL_MIRAGE_4_2
-	prerequisite = { focus = MDL_MIRAGE_4_2 }
+	relative_position_id = MDL_a_prophecy_a_millenium_in_the_making
+	prerequisite = { focus = MDL_a_prophecy_a_millenium_in_the_making }
 	prerequisite = { focus = MDL_MIRAGE_4_3 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_MIRAGE_5_2"
@@ -1188,17 +1218,16 @@ shared_focus = {
 }
 
 shared_focus = {
-	id = MDL_a_prophecy_a_millenium_in_the_making
-	icon = GFX_goal_HOL_council_communism
+	id = MDL_MIRAGE_6_1
+	icon = GFX_goal_generic_political
 	x = 0
 	y = 2
 	cost = 2
-	relative_position_id = MDL_MIRAGE_4_2
+	relative_position_id = MDL_a_prophecy_a_millenium_in_the_making
 	prerequisite = { focus = MDL_MIRAGE_5_1 }
 	prerequisite = { focus = MDL_MIRAGE_5_2 }
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus MDL_a_prophecy_a_millenium_in_the_making"
-		MDL_invade_arabia = yes
+		log = "[GetDateText]: [Root.GetName]: Focus MDL_MIRAGE_6_1"
 	}
 }
 
