@@ -1,1478 +1,1482 @@
 spriteTypes = {
-  SpriteType = {
-    name = "GFX_focus_MDL_abyssinian_auxilliaries"
-    textureFile = "gfx/interface/goals/MDL/MDL_abyssinian_auxilliaries.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_abyssinian_mines"
-    textureFile = "gfx/interface/goals/MDL/MDL_abyssinian_mines.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_advisory_senate"
-    textureFile = "gfx/interface/goals/MDL/MDL_advisory_senate.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_air_industry"
-    textureFile = "gfx/interface/goals/MDL/MDL_air_industry.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_air_stuff"
-    textureFile = "gfx/interface/goals/MDL/MDL_air_stuff.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_alchemical_investment"
-    textureFile = "gfx/interface/goals/MDL/MDL_alchemical_investment.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_all_hooves_on_deck"
-    textureFile = "gfx/interface/goals/MDL/MDL_all_hooves_on_deck.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_all_is_not_lost"
-    textureFile = "gfx/interface/goals/MDL/MDL_all_is_not_lost.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_an_air_doctrine"
-    textureFile = "gfx/interface/goals/MDL/MDL_an_air_doctrine.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_a_new_start"
-    textureFile = "gfx/interface/goals/MDL/MDL_a_new_start.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_annex_bats"
-    textureFile = "gfx/interface/goals/MDL/MDL_annex_bats.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_annex_maregypt"
-    textureFile = "gfx/interface/goals/MDL/MDL_annex_maregypt.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_annex_ovingoland"
-    textureFile = "gfx/interface/goals/MDL/MDL_annex_ovingoland.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_annex_riseia"
-    textureFile = "gfx/interface/goals/MDL/MDL_annex_riseia.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_annex_south"
-    textureFile = "gfx/interface/goals/MDL/MDL_annex_south.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_annex_west"
-    textureFile = "gfx/interface/goals/MDL/MDL_annex_west.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_army_stuff"
-    textureFile = "gfx/interface/goals/MDL/MDL_army_stuff.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_asabiyyah"
-    textureFile = "gfx/interface/goals/MDL/MDL_asabiyyah.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_ash_shahid_chosen"
-    textureFile = "gfx/interface/goals/MDL/MDL_ash_shahid_chosen.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_ask_HIP_for_help"
-    textureFile = "gfx/interface/goals/MDL/MDL_ask_HIP_for_help.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_attack_maregypt"
-    textureFile = "gfx/interface/goals/MDL/MDL_attack_maregypt.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_back_in_bussiness"
-    textureFile = "gfx/interface/goals/MDL/MDL_back_in_bussiness.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_balkanize_arabia"
-    textureFile = "gfx/interface/goals/MDL/MDL_balkanize_arabia.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_basic_education"
-    textureFile = "gfx/interface/goals/MDL/MDL_basic_education.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_begin_genocide_proper"
-    textureFile = "gfx/interface/goals/MDL/MDL_begin_genocide_proper.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_better_gear"
-    textureFile = "gfx/interface/goals/MDL/MDL_better_gear.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_better_guns"
-    textureFile = "gfx/interface/goals/MDL/MDL_better_guns.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_bigger_cannons"
-    textureFile = "gfx/interface/goals/MDL/MDL_bigger_cannons.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_bomber_pilots"
-    textureFile = "gfx/interface/goals/MDL/MDL_bomber_pilots.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_bring_our_ponies_home"
-    textureFile = "gfx/interface/goals/MDL/MDL_bring_our_ponies_home.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_bulwark_of_harmony"
-    textureFile = "gfx/interface/goals/MDL/MDL_bulwark_of_harmony.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_burn_manephis"
-    textureFile = "gfx/interface/goals/MDL/MDL_burn_manephis.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_capital_ships"
-    textureFile = "gfx/interface/goals/MDL/MDL_capital_ships.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_CES_victory_end"
-    textureFile = "gfx/interface/goals/MDL/MDL_CES_victory_end.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_CES_victory"
-    textureFile = "gfx/interface/goals/MDL/MDL_CES_victory.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_charting_new_course"
-    textureFile = "gfx/interface/goals/MDL/MDL_charting_new_course.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_citizen_guard"
-    textureFile = "gfx/interface/goals/MDL/MDL_citizen_guard.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_coffee_current"
-    textureFile = "gfx/interface/goals/MDL/MDL_coffee_current.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_colonial_administration"
-    textureFile = "gfx/interface/goals/MDL/MDL_colonial_administration.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_colonial_arms_production"
-    textureFile = "gfx/interface/goals/MDL/MDL_colonial_arms_production.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_colonial_industry"
-    textureFile = "gfx/interface/goals/MDL/MDL_colonial_industry.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_colonial_troops"
-    textureFile = "gfx/interface/goals/MDL/MDL_colonial_troops.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_colonial_university"
-    textureFile = "gfx/interface/goals/MDL/MDL_colonial_university.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_colthaginian_deal"
-    textureFile = "gfx/interface/goals/MDL/MDL_colthaginian_deal.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_coltoba_institute_military_science"
-    textureFile = "gfx/interface/goals/MDL/MDL_coltoba_institute_military_science.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_coltoba_naval_center"
-    textureFile = "gfx/interface/goals/MDL/MDL_coltoba_naval_center.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_coltoba_shipyards"
-    textureFile = "gfx/interface/goals/MDL/MDL_coltoba_shipyards.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_coltoba_university"
-    textureFile = "gfx/interface/goals/MDL/MDL_coltoba_university.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_conquer_abyssinia"
-    textureFile = "gfx/interface/goals/MDL/MDL_conquer_abyssinia.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_conquer_donkeys"
-    textureFile = "gfx/interface/goals/MDL/MDL_conquer_donkeys.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_conquer_klugetown"
-    textureFile = "gfx/interface/goals/MDL/MDL_conquer_klugetown.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_conquer_yemane"
-    textureFile = "gfx/interface/goals/MDL/MDL_conquer_yemane.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_core_coast"
-    textureFile = "gfx/interface/goals/MDL/MDL_core_coast.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_core_eastern_empire"
-    textureFile = "gfx/interface/goals/MDL/MDL_core_eastern_empire.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_core_klugetown"
-    textureFile = "gfx/interface/goals/MDL/MDL_core_klugetown.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_core_western_empire"
-    textureFile = "gfx/interface/goals/MDL/MDL_core_western_empire.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_crush_the_koltaliba"
-    textureFile = "gfx/interface/goals/MDL/MDL_crush_the_koltaliba.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_curtail_the_guilds"
-    textureFile = "gfx/interface/goals/MDL/MDL_curtail_the_guilds.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_death_from_above"
-    textureFile = "gfx/interface/goals/MDL/MDL_death_from_above.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_dragon_assault_corps"
-    textureFile = "gfx/interface/goals/MDL/MDL_dragon_assault_corps.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_dream_of_a_federation"
-    textureFile = "gfx/interface/goals/MDL/MDL_dream_of_a_federation.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_drive_them_back"
-    textureFile = "gfx/interface/goals/MDL/MDL_drive_them_back.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_economy_stuff"
-    textureFile = "gfx/interface/goals/MDL/MDL_economy_stuff.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_elect_qunsul"
-    textureFile = "gfx/interface/goals/MDL/MDL_elect_qunsul.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_elite_army"
-    textureFile = "gfx/interface/goals/MDL/MDL_elite_army.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_emergency_industry"
-    textureFile = "gfx/interface/goals/MDL/MDL_emergency_industry.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_empower_senate"
-    textureFile = "gfx/interface/goals/MDL/MDL_empower_senate.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_enforce_Jizya"
-    textureFile = "gfx/interface/goals/MDL/MDL_enforce_Jizya.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_equestrian_investment"
-    textureFile = "gfx/interface/goals/MDL/MDL_equestrian_investment.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_equestrian_tourism"
-    textureFile = "gfx/interface/goals/MDL/MDL_equestrian_tourism.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_even_sweeter_rides"
-    textureFile = "gfx/interface/goals/MDL/MDL_even_sweeter_rides.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_expand_harbors"
-    textureFile = "gfx/interface/goals/MDL/MDL_expand_harbors.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_expand_junnah_doctrine"
-    textureFile = "gfx/interface/goals/MDL/MDL_expand_junnah_doctrine.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_expand_markets"
-    textureFile = "gfx/interface/goals/MDL/MDL_expand_markets.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_expand_new_karthin_industrial_base"
-    textureFile = "gfx/interface/goals/MDL/MDL_expand_new_karthin_industrial_base.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_expeditionary_corps"
-    textureFile = "gfx/interface/goals/MDL/MDL_expeditionary_corps.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_falling_griff"
-    textureFile = "gfx/interface/goals/MDL/MDL_falling_griff.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_fast_shell_reloading"
-    textureFile = "gfx/interface/goals/MDL/MDL_fast_shell_reloading.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_federal_assembly"
-    textureFile = "gfx/interface/goals/MDL/MDL_federal_assembly.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_federal_constitution"
-    textureFile = "gfx/interface/goals/MDL/MDL_federal_constitution.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_fiqh_decisions"
-    textureFile = "gfx/interface/goals/MDL/MDL_fiqh_decisions.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_fleet_tech"
-    textureFile = "gfx/interface/goals/MDL/MDL_fleet_tech.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_forges_of_klugetown"
-    textureFile = "gfx/interface/goals/MDL/MDL_forges_of_klugetown.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_formalize_alliance"
-    textureFile = "gfx/interface/goals/MDL/MDL_formalize_alliance.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_fort_and_guns"
-    textureFile = "gfx/interface/goals/MDL/MDL_fort_and_guns.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_fortification_buildup"
-    textureFile = "gfx/interface/goals/MDL/MDL_fortification_buildup.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_fortify_coltoba"
-    textureFile = "gfx/interface/goals/MDL/MDL_fortify_coltoba.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_fortify_desert_pass"
-    textureFile = "gfx/interface/goals/MDL/MDL_fortify_desert_pass.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_fortress_manedalusia"
-    textureFile = "gfx/interface/goals/MDL/MDL_fortress_manedalusia.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_gather_the_council"
-    textureFile = "gfx/interface/goals/MDL/MDL_gather_the_council.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_general_staff"
-    textureFile = "gfx/interface/goals/MDL/MDL_general_staff.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_get_generals_in_line"
-    textureFile = "gfx/interface/goals/MDL/MDL_get_generals_in_line.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_get_some_gear"
-    textureFile = "gfx/interface/goals/MDL/MDL_get_some_gear.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_get_some_muscle"
-    textureFile = "gfx/interface/goals/MDL/MDL_get_some_muscle.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_get_the_king"
-    textureFile = "gfx/interface/goals/MDL/MDL_get_the_king.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_get_the_militias"
-    textureFile = "gfx/interface/goals/MDL/MDL_get_the_militias.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_get_the_spymasters"
-    textureFile = "gfx/interface/goals/MDL/MDL_get_the_spymasters.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_get_the_strays"
-    textureFile = "gfx/interface/goals/MDL/MDL_get_the_strays.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_golden_coast"
-    textureFile = "gfx/interface/goals/MDL/MDL_golden_coast.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_go_with_alneighzari"
-    textureFile = "gfx/interface/goals/MDL/MDL_go_with_alneighzari.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_go_with_samira"
-    textureFile = "gfx/interface/goals/MDL/MDL_go_with_samira.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_grand_admiralty"
-    textureFile = "gfx/interface/goals/MDL/MDL_grand_admiralty.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_grand_army_of_al_manedalus"
-    textureFile = "gfx/interface/goals/MDL/MDL_grand_army_of_al_manedalus.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_grand_colonial_railway"
-    textureFile = "gfx/interface/goals/MDL/MDL_grand_colonial_railway.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_grand_zoco"
-    textureFile = "gfx/interface/goals/MDL/MDL_grand_zoco.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_grant_rural_autonomy"
-    textureFile = "gfx/interface/goals/MDL/MDL_grant_rural_autonomy.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_green_bay_masters"
-    textureFile = "gfx/interface/goals/MDL/MDL_green_bay_masters.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_griffon_tech"
-    textureFile = "gfx/interface/goals/MDL/MDL_griffon_tech.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_grifo_imperium"
-    textureFile = "gfx/interface/goals/MDL/MDL_grifo_imperium.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_guilds_deal"
-    textureFile = "gfx/interface/goals/MDL/MDL_guilds_deal.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_gun_and_noose"
-    textureFile = "gfx/interface/goals/MDL/MDL_gun_and_noose.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_gunpowder_empire"
-    textureFile = "gfx/interface/goals/MDL/MDL_gunpowder_empire.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_heavy_air"
-    textureFile = "gfx/interface/goals/MDL/MDL_heavy_air.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_hold_in_arabian_sea"
-    textureFile = "gfx/interface/goals/MDL/MDL_hold_in_arabian_sea.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_holy_mandate_BAT"
-    textureFile = "gfx/interface/goals/MDL/MDL_holy_mandate_BAT.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_holy_mandates"
-    textureFile = "gfx/interface/goals/MDL/MDL_holy_mandates.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_holy_war_demobilize"
-    textureFile = "gfx/interface/goals/MDL/MDL_holy_war_demobilize.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_holy_war_stabilize_west_zebrica"
-    textureFile = "gfx/interface/goals/MDL/MDL_holy_war_stabilize_west_zebrica.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_holy_zeal"
-    textureFile = "gfx/interface/goals/MDL/MDL_holy_zeal.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_imams_deal"
-    textureFile = "gfx/interface/goals/MDL/MDL_imams_deal.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_imperial_admiralty"
-    textureFile = "gfx/interface/goals/MDL/MDL_imperial_admiralty.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_imperial_agriculture"
-    textureFile = "gfx/interface/goals/MDL/MDL_imperial_agriculture.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_imperial_air_doctrine"
-    textureFile = "gfx/interface/goals/MDL/MDL_imperial_air_doctrine.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_imperial_armor"
-    textureFile = "gfx/interface/goals/MDL/MDL_imperial_armor.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_imperial_autarky"
-    textureFile = "gfx/interface/goals/MDL/MDL_imperial_autarky.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_imperial_battleships"
-    textureFile = "gfx/interface/goals/MDL/MDL_imperial_battleships.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_imperial_carriers"
-    textureFile = "gfx/interface/goals/MDL/MDL_imperial_carriers.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_imperial_corporativism"
-    textureFile = "gfx/interface/goals/MDL/MDL_imperial_corporativism.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_imperial_diplo_corps"
-    textureFile = "gfx/interface/goals/MDL/MDL_imperial_diplo_corps.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_imperial_education"
-    textureFile = "gfx/interface/goals/MDL/MDL_imperial_education.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_imperial_electronics"
-    textureFile = "gfx/interface/goals/MDL/MDL_imperial_electronics.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_imperial_fighters"
-    textureFile = "gfx/interface/goals/MDL/MDL_imperial_fighters.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_imperial_heavy_fighters"
-    textureFile = "gfx/interface/goals/MDL/MDL_imperial_heavy_fighters.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_imperial_heavy_tanks"
-    textureFile = "gfx/interface/goals/MDL/MDL_imperial_heavy_tanks.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_imperial_investment"
-    textureFile = "gfx/interface/goals/MDL/MDL_imperial_investment.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_imperial_magic"
-    textureFile = "gfx/interface/goals/MDL/MDL_imperial_magic.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_imperial_naval_bombers"
-    textureFile = "gfx/interface/goals/MDL/MDL_imperial_naval_bombers.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_imperial_naval_projection"
-    textureFile = "gfx/interface/goals/MDL/MDL_imperial_naval_projection.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_imperial_navy"
-    textureFile = "gfx/interface/goals/MDL/MDL_imperial_navy.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_imperial_pilots"
-    textureFile = "gfx/interface/goals/MDL/MDL_imperial_pilots.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_imperial_plane_tech"
-    textureFile = "gfx/interface/goals/MDL/MDL_imperial_plane_tech.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_imperial_shipyards"
-    textureFile = "gfx/interface/goals/MDL/MDL_imperial_shipyards.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_imperial_spec_ops"
-    textureFile = "gfx/interface/goals/MDL/MDL_imperial_spec_ops.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_imperial_support_tech"
-    textureFile = "gfx/interface/goals/MDL/MDL_imperial_support_tech.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_imperial_synthetics"
-    textureFile = "gfx/interface/goals/MDL/MDL_imperial_synthetics.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_imperial_trade_network"
-    textureFile = "gfx/interface/goals/MDL/MDL_imperial_trade_network.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_industrial_council"
-    textureFile = "gfx/interface/goals/MDL/MDL_industrial_council.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_industrial_development_program"
-    textureFile = "gfx/interface/goals/MDL/MDL_industrial_development_program.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_industrial_union"
-    textureFile = "gfx/interface/goals/MDL/MDL_industrial_union.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_industry_of_karthin"
-    textureFile = "gfx/interface/goals/MDL/MDL_industry_of_karthin.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_integrate_abyssinia"
-    textureFile = "gfx/interface/goals/MDL/MDL_integrate_abyssinia.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_integrate_aquileia"
-    textureFile = "gfx/interface/goals/MDL/MDL_integrate_aquileia.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_integrate_asterion"
-    textureFile = "gfx/interface/goals/MDL/MDL_integrate_asterion.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_integrate_donkeys"
-    textureFile = "gfx/interface/goals/MDL/MDL_integrate_donkeys.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_integrate_emirs"
-    textureFile = "gfx/interface/goals/MDL/MDL_integrate_emirs.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_integrate_empire"
-    textureFile = "gfx/interface/goals/MDL/MDL_integrate_empire.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_integrate_greneclyf"
-    textureFile = "gfx/interface/goals/MDL/MDL_integrate_greneclyf.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_integrate_hillpones"
-    textureFile = "gfx/interface/goals/MDL/MDL_integrate_hillpones.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_integrate_karthin"
-    textureFile = "gfx/interface/goals/MDL/MDL_integrate_karthin.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_integrate_klugetown"
-    textureFile = "gfx/interface/goals/MDL/MDL_integrate_klugetown.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_integrate_macawia"
-    textureFile = "gfx/interface/goals/MDL/MDL_integrate_macawia.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_integrate_new_mareland"
-    textureFile = "gfx/interface/goals/MDL/MDL_integrate_new_mareland.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_integrate_north"
-    textureFile = "gfx/interface/goals/MDL/MDL_integrate_north.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_integrate_riverpones"
-    textureFile = "gfx/interface/goals/MDL/MDL_integrate_riverpones.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_integrate_southeast"
-    textureFile = "gfx/interface/goals/MDL/MDL_integrate_southeast.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_integrate_yemane"
-    textureFile = "gfx/interface/goals/MDL/MDL_integrate_yemane.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_into_arabia"
-    textureFile = "gfx/interface/goals/MDL/MDL_into_arabia.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_invest_in_changeling_reconstruction"
-    textureFile = "gfx/interface/goals/MDL/MDL_invest_in_changeling_reconstruction.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_it_is_done"
-    textureFile = "gfx/interface/goals/MDL/MDL_it_is_done.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_joint_development"
-    textureFile = "gfx/interface/goals/MDL/MDL_joint_development.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_karthinia_of_zebrica"
-    textureFile = "gfx/interface/goals/MDL/MDL_karthinia_of_zebrica.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_karthin_legions"
-    textureFile = "gfx/interface/goals/MDL/MDL_karthin_legions.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_khaldun_gambit"
-    textureFile = "gfx/interface/goals/MDL/MDL_khaldun_gambit.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_khaldun_takeover"
-    textureFile = "gfx/interface/goals/MDL/MDL_khaldun_takeover.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_kill_the_djinn"
-    textureFile = "gfx/interface/goals/MDL/MDL_kill_the_djinn.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_kill_them_all"
-    textureFile = "gfx/interface/goals/MDL/MDL_kill_them_all.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_king_of_arabia"
-    textureFile = "gfx/interface/goals/MDL/MDL_king_of_arabia.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_klugetown_economic_zone"
-    textureFile = "gfx/interface/goals/MDL/MDL_klugetown_economic_zone.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_koltaliba_commissars"
-    textureFile = "gfx/interface/goals/MDL/MDL_koltaliba_commissars.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_kom_marebo_oil"
-    textureFile = "gfx/interface/goals/MDL/MDL_kom_marebo_oil.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_lean_on_legacy"
-    textureFile = "gfx/interface/goals/MDL/MDL_lean_on_legacy.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_leverage_klugetown_airfield"
-    textureFile = "gfx/interface/goals/MDL/MDL_leverage_klugetown_airfield.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_liberate_abyssinia"
-    textureFile = "gfx/interface/goals/MDL/MDL_liberate_abyssinia.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_liberate_donkeys"
-    textureFile = "gfx/interface/goals/MDL/MDL_liberate_donkeys.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_liberate_emirs"
-    textureFile = "gfx/interface/goals/MDL/MDL_liberate_emirs.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_liberate_klugetown"
-    textureFile = "gfx/interface/goals/MDL/MDL_liberate_klugetown.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_liberate_purrsia"
-    textureFile = "gfx/interface/goals/MDL/MDL_liberate_purrsia.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_liberate_yemane"
-    textureFile = "gfx/interface/goals/MDL/MDL_liberate_yemane.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_long_road_to_mareakech"
-    textureFile = "gfx/interface/goals/MDL/MDL_long_road_to_mareakech.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_look_to_equestria"
-    textureFile = "gfx/interface/goals/MDL/MDL_look_to_equestria.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_look_to_our_roots"
-    textureFile = "gfx/interface/goals/MDL/MDL_look_to_our_roots.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_loot_the_countryside"
-    textureFile = "gfx/interface/goals/MDL/MDL_loot_the_countryside.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_lord_of_ultramar"
-    textureFile = "gfx/interface/goals/MDL/MDL_lord_of_ultramar.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_madgriff_in_the_harbor"
-    textureFile = "gfx/interface/goals/MDL/MDL_madgriff_in_the_harbor.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_magical_engines"
-    textureFile = "gfx/interface/goals/MDL/MDL_magical_engines.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_manedalusia_industrialism"
-    textureFile = "gfx/interface/goals/MDL/MDL_manedalusia_industrialism.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_manedalusia_infrastructure"
-    textureFile = "gfx/interface/goals/MDL/MDL_manedalusia_infrastructure.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_manedalusian_century"
-    textureFile = "gfx/interface/goals/MDL/MDL_manedalusian_century.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_manedalusian_industriousness"
-    textureFile = "gfx/interface/goals/MDL/MDL_manedalusian_industriousness.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_manedalusian_rangers"
-    textureFile = "gfx/interface/goals/MDL/MDL_manedalusian_rangers.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_manedalusian_sun"
-    textureFile = "gfx/interface/goals/MDL/MDL_manedalusian_sun.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_maregypt_infrastructure_expansion"
-    textureFile = "gfx/interface/goals/MDL/MDL_maregypt_infrastructure_expansion.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_marine_corps"
-    textureFile = "gfx/interface/goals/MDL/MDL_marine_corps.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_meet_with_crimson"
-    textureFile = "gfx/interface/goals/MDL/MDL_meet_with_crimson.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_mega_based_navy"
-    textureFile = "gfx/interface/goals/MDL/MDL_mega_based_navy.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_merchant_outposts"
-    textureFile = "gfx/interface/goals/MDL/MDL_merchant_outposts.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_militarize_EQS"
-    textureFile = "gfx/interface/goals/MDL/MDL_militarize_EQS.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_modern_army_crash_course"
-    textureFile = "gfx/interface/goals/MDL/MDL_modern_army_crash_course.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_monument_to_aaliyah"
-    textureFile = "gfx/interface/goals/MDL/MDL_monument_to_aaliyah.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_native_affairs"
-    textureFile = "gfx/interface/goals/MDL/MDL_native_affairs.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_naval_academy"
-    textureFile = "gfx/interface/goals/MDL/MDL_naval_academy.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_naval_air"
-    textureFile = "gfx/interface/goals/MDL/MDL_naval_air.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_naval_depot_network"
-    textureFile = "gfx/interface/goals/MDL/MDL_naval_depot_network.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_naval_patrols"
-    textureFile = "gfx/interface/goals/MDL/MDL_naval_patrols.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_navy_stuff"
-    textureFile = "gfx/interface/goals/MDL/MDL_navy_stuff.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_navy_war_games"
-    textureFile = "gfx/interface/goals/MDL/MDL_navy_war_games.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_neighle_infrastructure"
-    textureFile = "gfx/interface/goals/MDL/MDL_neighle_infrastructure.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_new_karthin_dockyards"
-    textureFile = "gfx/interface/goals/MDL/MDL_new_karthin_dockyards.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_nonstop_barrage"
-    textureFile = "gfx/interface/goals/MDL/MDL_nonstop_barrage.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_officialize_hisbas"
-    textureFile = "gfx/interface/goals/MDL/MDL_officialize_hisbas.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_our_finest_hour"
-    textureFile = "gfx/interface/goals/MDL/MDL_our_finest_hour.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_our_purpose_made_clear"
-    textureFile = "gfx/interface/goals/MDL/MDL_our_purpose_made_clear.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_overseas_dominion"
-    textureFile = "gfx/interface/goals/MDL/MDL_overseas_dominion.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_pacify_assur"
-    textureFile = "gfx/interface/goals/MDL/MDL_pacify_assur.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_pax_in_excelsior"
-    textureFile = "gfx/interface/goals/MDL/MDL_pax_in_excelsior.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_peace_in_our_time"
-    textureFile = "gfx/interface/goals/MDL/MDL_peace_in_our_time.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_persuade_hardliners"
-    textureFile = "gfx/interface/goals/MDL/MDL_persuade_hardliners.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_place_in_the_sun"
-    textureFile = "gfx/interface/goals/MDL/MDL_place_in_the_sun.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_pony_imperials"
-    textureFile = "gfx/interface/goals/MDL/MDL_pony_imperials.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_pony_synthesis"
-    textureFile = "gfx/interface/goals/MDL/MDL_pony_synthesis.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_project_excelsior"
-    textureFile = "gfx/interface/goals/MDL/MDL_project_excelsior.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_protect_the_skies"
-    textureFile = "gfx/interface/goals/MDL/MDL_protect_the_skies.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_purchase_land_maregypt"
-    textureFile = "gfx/interface/goals/MDL/MDL_purchase_land_maregypt.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_radar"
-    textureFile = "gfx/interface/goals/MDL/MDL_radar.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_rally_militias"
-    textureFile = "gfx/interface/goals/MDL/MDL_rally_militias.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_rally_the_faithful"
-    textureFile = "gfx/interface/goals/MDL/MDL_rally_the_faithful.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_reach_out_to_populists"
-    textureFile = "gfx/interface/goals/MDL/MDL_reach_out_to_populists.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_refining_contractor"
-    textureFile = "gfx/interface/goals/MDL/MDL_refining_contractor.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_reinstate_south_griffonia_society"
-    textureFile = "gfx/interface/goals/MDL/MDL_reinstate_south_griffonia_society.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_reliable_traders"
-    textureFile = "gfx/interface/goals/MDL/MDL_reliable_traders.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_religious_support"
-    textureFile = "gfx/interface/goals/MDL/MDL_religious_support.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_restore_grand_vizier"
-    textureFile = "gfx/interface/goals/MDL/MDL_restore_grand_vizier.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_restore_mareakech"
-    textureFile = "gfx/interface/goals/MDL/MDL_restore_mareakech.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_restore_merchant_fleet"
-    textureFile = "gfx/interface/goals/MDL/MDL_restore_merchant_fleet.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_restore_the_asabiyyah"
-    textureFile = "gfx/interface/goals/MDL/MDL_restore_the_asabiyyah.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_restoring_the_light"
-    textureFile = "gfx/interface/goals/MDL/MDL_restoring_the_light.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_reunify_homeland"
-    textureFile = "gfx/interface/goals/MDL/MDL_reunify_homeland.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_righteous_fury"
-    textureFile = "gfx/interface/goals/MDL/MDL_righteous_fury.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_rocket_research"
-    textureFile = "gfx/interface/goals/MDL/MDL_rocket_research.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_rural_charter"
-    textureFile = "gfx/interface/goals/MDL/MDL_rural_charter.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_rural_deal"
-    textureFile = "gfx/interface/goals/MDL/MDL_rural_deal.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_sack_mountain_temples"
-    textureFile = "gfx/interface/goals/MDL/MDL_sack_mountain_temples.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_SAM01"
-    textureFile = "gfx/interface/goals/MDL/MDL_SAM01.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_SAM02"
-    textureFile = "gfx/interface/goals/MDL/MDL_SAM02.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_SAM03"
-    textureFile = "gfx/interface/goals/MDL/MDL_SAM03.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_SAM04"
-    textureFile = "gfx/interface/goals/MDL/MDL_SAM04.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_SAM05"
-    textureFile = "gfx/interface/goals/MDL/MDL_SAM05.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_SAM06"
-    textureFile = "gfx/interface/goals/MDL/MDL_SAM06.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_SAM07"
-    textureFile = "gfx/interface/goals/MDL/MDL_SAM07.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_SAM08"
-    textureFile = "gfx/interface/goals/MDL/MDL_SAM08.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_SAM09"
-    textureFile = "gfx/interface/goals/MDL/MDL_SAM09.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_SAM10"
-    textureFile = "gfx/interface/goals/MDL/MDL_SAM10.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_SAM11"
-    textureFile = "gfx/interface/goals/MDL/MDL_SAM11.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_SAM12"
-    textureFile = "gfx/interface/goals/MDL/MDL_SAM12.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_SAM13"
-    textureFile = "gfx/interface/goals/MDL/MDL_SAM13.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_SAM14"
-    textureFile = "gfx/interface/goals/MDL/MDL_SAM14.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_SAM15"
-    textureFile = "gfx/interface/goals/MDL/MDL_SAM15.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_SAM16"
-    textureFile = "gfx/interface/goals/MDL/MDL_SAM16.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_SAM17"
-    textureFile = "gfx/interface/goals/MDL/MDL_SAM17.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_SAM18"
-    textureFile = "gfx/interface/goals/MDL/MDL_SAM18.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_SAM19"
-    textureFile = "gfx/interface/goals/MDL/MDL_SAM19.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_SAM20"
-    textureFile = "gfx/interface/goals/MDL/MDL_SAM20.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_SAM21"
-    textureFile = "gfx/interface/goals/MDL/MDL_SAM21.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_SAM22"
-    textureFile = "gfx/interface/goals/MDL/MDL_SAM22.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_SAM23"
-    textureFile = "gfx/interface/goals/MDL/MDL_SAM23.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_SAM24"
-    textureFile = "gfx/interface/goals/MDL/MDL_SAM24.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_SAM25"
-    textureFile = "gfx/interface/goals/MDL/MDL_SAM25.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_SAM26"
-    textureFile = "gfx/interface/goals/MDL/MDL_SAM26.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_SAM27"
-    textureFile = "gfx/interface/goals/MDL/MDL_SAM27.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_SAM28"
-    textureFile = "gfx/interface/goals/MDL/MDL_SAM28.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_SAM29"
-    textureFile = "gfx/interface/goals/MDL/MDL_SAM29.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_SAM30"
-    textureFile = "gfx/interface/goals/MDL/MDL_SAM30.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_SAM31"
-    textureFile = "gfx/interface/goals/MDL/MDL_SAM31.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_SAM32"
-    textureFile = "gfx/interface/goals/MDL/MDL_SAM32.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_SAM33"
-    textureFile = "gfx/interface/goals/MDL/MDL_SAM33.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_SAM34"
-    textureFile = "gfx/interface/goals/MDL/MDL_SAM34.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_SAM35"
-    textureFile = "gfx/interface/goals/MDL/MDL_SAM35.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_SAM36"
-    textureFile = "gfx/interface/goals/MDL/MDL_SAM36.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_SAM37"
-    textureFile = "gfx/interface/goals/MDL/MDL_SAM37.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_SAM38"
-    textureFile = "gfx/interface/goals/MDL/MDL_SAM38.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_SAM39"
-    textureFile = "gfx/interface/goals/MDL/MDL_SAM39.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_SAM40"
-    textureFile = "gfx/interface/goals/MDL/MDL_SAM40.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_SAM41"
-    textureFile = "gfx/interface/goals/MDL/MDL_SAM41.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_SAM42"
-    textureFile = "gfx/interface/goals/MDL/MDL_SAM42.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_SAM43"
-    textureFile = "gfx/interface/goals/MDL/MDL_SAM43.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_SAM44"
-    textureFile = "gfx/interface/goals/MDL/MDL_SAM44.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_SAM45"
-    textureFile = "gfx/interface/goals/MDL/MDL_SAM45.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_SAM46"
-    textureFile = "gfx/interface/goals/MDL/MDL_SAM46.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_SAM47"
-    textureFile = "gfx/interface/goals/MDL/MDL_SAM47.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_SAM48"
-    textureFile = "gfx/interface/goals/MDL/MDL_SAM48.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_SAM51"
-    textureFile = "gfx/interface/goals/MDL/MDL_SAM51.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_SAM52"
-    textureFile = "gfx/interface/goals/MDL/MDL_SAM52.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_SAM53"
-    textureFile = "gfx/interface/goals/MDL/MDL_SAM53.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_SAM54"
-    textureFile = "gfx/interface/goals/MDL/MDL_SAM54.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_SAM55"
-    textureFile = "gfx/interface/goals/MDL/MDL_SAM55.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_SAM56"
-    textureFile = "gfx/interface/goals/MDL/MDL_SAM56.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_SAM57"
-    textureFile = "gfx/interface/goals/MDL/MDL_SAM57.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_SAM58"
-    textureFile = "gfx/interface/goals/MDL/MDL_SAM58.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_SAM59"
-    textureFile = "gfx/interface/goals/MDL/MDL_SAM59.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_SAM60"
-    textureFile = "gfx/interface/goals/MDL/MDL_SAM60.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_SAM61"
-    textureFile = "gfx/interface/goals/MDL/MDL_SAM61.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_SAM62"
-    textureFile = "gfx/interface/goals/MDL/MDL_SAM62.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_SAM63"
-    textureFile = "gfx/interface/goals/MDL/MDL_SAM63.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_SAM64"
-    textureFile = "gfx/interface/goals/MDL/MDL_SAM64.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_SAM65"
-    textureFile = "gfx/interface/goals/MDL/MDL_SAM65.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_SAM66"
-    textureFile = "gfx/interface/goals/MDL/MDL_SAM66.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_SAM67"
-    textureFile = "gfx/interface/goals/MDL/MDL_SAM67.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_SAM68"
-    textureFile = "gfx/interface/goals/MDL/MDL_SAM68.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_SAM69"
-    textureFile = "gfx/interface/goals/MDL/MDL_SAM69.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_samira_as_general"
-    textureFile = "gfx/interface/goals/MDL/MDL_samira_as_general.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_sayf_takeover"
-    textureFile = "gfx/interface/goals/MDL/MDL_sayf_takeover.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_secure_klugetown"
-    textureFile = "gfx/interface/goals/MDL/MDL_secure_klugetown.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_secure_southeast"
-    textureFile = "gfx/interface/goals/MDL/MDL_secure_southeast.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_secure_starry_sea_islands"
-    textureFile = "gfx/interface/goals/MDL/MDL_secure_starry_sea_islands.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_senate_assumes_power"
-    textureFile = "gfx/interface/goals/MDL/MDL_senate_assumes_power.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_senate_building"
-    textureFile = "gfx/interface/goals/MDL/MDL_senate_building.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_senate_path"
-    textureFile = "gfx/interface/goals/MDL/MDL_senate_path.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_senate_reconcile_maregypt"
-    textureFile = "gfx/interface/goals/MDL/MDL_senate_reconcile_maregypt.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_southern_mercenaries"
-    textureFile = "gfx/interface/goals/MDL/MDL_southern_mercenaries.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_speartip_of_harmony"
-    textureFile = "gfx/interface/goals/MDL/MDL_speartip_of_harmony.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_special_forces_regimentation"
-    textureFile = "gfx/interface/goals/MDL/MDL_special_forces_regimentation.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_springtime_in_manedalusia"
-    textureFile = "gfx/interface/goals/MDL/MDL_springtime_in_manedalusia.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_starry_sea_corridor"
-    textureFile = "gfx/interface/goals/MDL/MDL_starry_sea_corridor.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_strike_thralls_of_darkness"
-    textureFile = "gfx/interface/goals/MDL/MDL_strike_thralls_of_darkness.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_subs_tech"
-    textureFile = "gfx/interface/goals/MDL/MDL_subs_tech.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_suffrage_and_army"
-    textureFile = "gfx/interface/goals/MDL/MDL_suffrage_and_army.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_sultana_velvet"
-    textureFile = "gfx/interface/goals/MDL/MDL_sultana_velvet.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_sun_flag_burn"
-    textureFile = "gfx/interface/goals/MDL/MDL_sun_flag_burn.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_sun_madness"
-    textureFile = "gfx/interface/goals/MDL/MDL_sun_madness.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_surf_and_rock_and_roll"
-    textureFile = "gfx/interface/goals/MDL/MDL_surf_and_rock_and_roll.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_sweet_ass_rides"
-    textureFile = "gfx/interface/goals/MDL/MDL_sweet_ass_rides.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_take_lands_in_lakes"
-    textureFile = "gfx/interface/goals/MDL/MDL_take_lands_in_lakes.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_the_bomb"
-    textureFile = "gfx/interface/goals/MDL/MDL_the_bomb.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_the_crimson_sultanate"
-    textureFile = "gfx/interface/goals/MDL/MDL_the_crimson_sultanate.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_thus_spoke_ash_shahid"
-    textureFile = "gfx/interface/goals/MDL/MDL_thus_spoke_ash_shahid.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_total_war"
-    textureFile = "gfx/interface/goals/MDL/MDL_total_war.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_triumph_of_the_federation"
-    textureFile = "gfx/interface/goals/MDL/MDL_triumph_of_the_federation.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_try_for_harmony"
-    textureFile = "gfx/interface/goals/MDL/MDL_try_for_harmony.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_try_for_socialism"
-    textureFile = "gfx/interface/goals/MDL/MDL_try_for_socialism.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_tungsten_trade"
-    textureFile = "gfx/interface/goals/MDL/MDL_tungsten_trade.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_universal_caliphate"
-    textureFile = "gfx/interface/goals/MDL/MDL_universal_caliphate.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_unstoppable_pilots"
-    textureFile = "gfx/interface/goals/MDL/MDL_unstoppable_pilots.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_urban_deal"
-    textureFile = "gfx/interface/goals/MDL/MDL_urban_deal.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_US_start_1_1"
-    textureFile = "gfx/interface/goals/MDL/MDL_US_start_1_1.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_US_start_2_1"
-    textureFile = "gfx/interface/goals/MDL/MDL_US_start_2_1.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_US_start_2_2"
-    textureFile = "gfx/interface/goals/MDL/MDL_US_start_2_2.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_US_start_2_3"
-    textureFile = "gfx/interface/goals/MDL/MDL_US_start_2_3.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_US_start_2_4"
-    textureFile = "gfx/interface/goals/MDL/MDL_US_start_2_4.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_US_start_3_1"
-    textureFile = "gfx/interface/goals/MDL/MDL_US_start_3_1.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_US_start_3_2"
-    textureFile = "gfx/interface/goals/MDL/MDL_US_start_3_2.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_US_start_3_3"
-    textureFile = "gfx/interface/goals/MDL/MDL_US_start_3_3.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_US_start_4_1"
-    textureFile = "gfx/interface/goals/MDL/MDL_US_start_4_1.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_veteran_army"
-    textureFile = "gfx/interface/goals/MDL/MDL_veteran_army.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_vice_and_virtue"
-    textureFile = "gfx/interface/goals/MDL/MDL_vice_and_virtue.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_warplan_conscription"
-    textureFile = "gfx/interface/goals/MDL/MDL_warplan_conscription.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_warplan_dragon"
-    textureFile = "gfx/interface/goals/MDL/MDL_warplan_dragon.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_warplan_green"
-    textureFile = "gfx/interface/goals/MDL/MDL_warplan_green.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_western_zebrican_hegemony"
-    textureFile = "gfx/interface/goals/MDL/MDL_western_zebrican_hegemony.tga"
-  }
-  SpriteType = {
-    name = "GFX_focus_MDL_work_with_guilds"
-    textureFile = "gfx/interface/goals/MDL/MDL_work_with_guilds.tga"
-  }
+	SpriteType = {
+		name = "GFX_focus_MDL_abyssinian_auxilliaries"
+		textureFile = "gfx/interface/goals/MDL/MDL_abyssinian_auxilliaries.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_abyssinian_mines"
+		textureFile = "gfx/interface/goals/MDL/MDL_abyssinian_mines.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_advisory_senate"
+		textureFile = "gfx/interface/goals/MDL/MDL_advisory_senate.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_air_industry"
+		textureFile = "gfx/interface/goals/MDL/MDL_air_industry.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_air_stuff"
+		textureFile = "gfx/interface/goals/MDL/MDL_air_stuff.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_alchemical_investment"
+		textureFile = "gfx/interface/goals/MDL/MDL_alchemical_investment.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_all_hooves_on_deck"
+		textureFile = "gfx/interface/goals/MDL/MDL_all_hooves_on_deck.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_all_is_not_lost"
+		textureFile = "gfx/interface/goals/MDL/MDL_all_is_not_lost.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_an_air_doctrine"
+		textureFile = "gfx/interface/goals/MDL/MDL_an_air_doctrine.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_a_new_start"
+		textureFile = "gfx/interface/goals/MDL/MDL_a_new_start.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_annex_bats"
+		textureFile = "gfx/interface/goals/MDL/MDL_annex_bats.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_annex_maregypt"
+		textureFile = "gfx/interface/goals/MDL/MDL_annex_maregypt.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_annex_ovingoland"
+		textureFile = "gfx/interface/goals/MDL/MDL_annex_ovingoland.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_annex_riseia"
+		textureFile = "gfx/interface/goals/MDL/MDL_annex_riseia.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_annex_south"
+		textureFile = "gfx/interface/goals/MDL/MDL_annex_south.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_annex_west"
+		textureFile = "gfx/interface/goals/MDL/MDL_annex_west.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_army_stuff"
+		textureFile = "gfx/interface/goals/MDL/MDL_army_stuff.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_asabiyyah"
+		textureFile = "gfx/interface/goals/MDL/MDL_asabiyyah.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_ash_shahid_chosen"
+		textureFile = "gfx/interface/goals/MDL/MDL_ash_shahid_chosen.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_ask_HIP_for_help"
+		textureFile = "gfx/interface/goals/MDL/MDL_ask_HIP_for_help.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_attack_maregypt"
+		textureFile = "gfx/interface/goals/MDL/MDL_attack_maregypt.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_back_in_bussiness"
+		textureFile = "gfx/interface/goals/MDL/MDL_back_in_bussiness.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_balkanize_arabia"
+		textureFile = "gfx/interface/goals/MDL/MDL_balkanize_arabia.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_basic_education"
+		textureFile = "gfx/interface/goals/MDL/MDL_basic_education.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_begin_genocide_proper"
+		textureFile = "gfx/interface/goals/MDL/MDL_begin_genocide_proper.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_better_gear"
+		textureFile = "gfx/interface/goals/MDL/MDL_better_gear.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_better_guns"
+		textureFile = "gfx/interface/goals/MDL/MDL_better_guns.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_bigger_cannons"
+		textureFile = "gfx/interface/goals/MDL/MDL_bigger_cannons.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_bomber_pilots"
+		textureFile = "gfx/interface/goals/MDL/MDL_bomber_pilots.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_bring_our_ponies_home"
+		textureFile = "gfx/interface/goals/MDL/MDL_bring_our_ponies_home.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_bulwark_of_harmony"
+		textureFile = "gfx/interface/goals/MDL/MDL_bulwark_of_harmony.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_burn_manephis"
+		textureFile = "gfx/interface/goals/MDL/MDL_burn_manephis.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_capital_ships"
+		textureFile = "gfx/interface/goals/MDL/MDL_capital_ships.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_CES_victory_end"
+		textureFile = "gfx/interface/goals/MDL/MDL_CES_victory_end.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_CES_victory"
+		textureFile = "gfx/interface/goals/MDL/MDL_CES_victory.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_charting_new_course"
+		textureFile = "gfx/interface/goals/MDL/MDL_charting_new_course.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_citizen_guard"
+		textureFile = "gfx/interface/goals/MDL/MDL_citizen_guard.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_coffee_current"
+		textureFile = "gfx/interface/goals/MDL/MDL_coffee_current.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_colonial_administration"
+		textureFile = "gfx/interface/goals/MDL/MDL_colonial_administration.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_colonial_arms_production"
+		textureFile = "gfx/interface/goals/MDL/MDL_colonial_arms_production.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_colonial_industry"
+		textureFile = "gfx/interface/goals/MDL/MDL_colonial_industry.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_colonial_troops"
+		textureFile = "gfx/interface/goals/MDL/MDL_colonial_troops.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_colonial_university"
+		textureFile = "gfx/interface/goals/MDL/MDL_colonial_university.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_colthaginian_deal"
+		textureFile = "gfx/interface/goals/MDL/MDL_colthaginian_deal.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_coltoba_institute_military_science"
+		textureFile = "gfx/interface/goals/MDL/MDL_coltoba_institute_military_science.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_coltoba_naval_center"
+		textureFile = "gfx/interface/goals/MDL/MDL_coltoba_naval_center.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_coltoba_shipyards"
+		textureFile = "gfx/interface/goals/MDL/MDL_coltoba_shipyards.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_coltoba_university"
+		textureFile = "gfx/interface/goals/MDL/MDL_coltoba_university.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_conquer_abyssinia"
+		textureFile = "gfx/interface/goals/MDL/MDL_conquer_abyssinia.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_conquer_donkeys"
+		textureFile = "gfx/interface/goals/MDL/MDL_conquer_donkeys.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_conquer_klugetown"
+		textureFile = "gfx/interface/goals/MDL/MDL_conquer_klugetown.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_conquer_yemane"
+		textureFile = "gfx/interface/goals/MDL/MDL_conquer_yemane.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_core_coast"
+		textureFile = "gfx/interface/goals/MDL/MDL_core_coast.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_core_eastern_empire"
+		textureFile = "gfx/interface/goals/MDL/MDL_core_eastern_empire.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_core_klugetown"
+		textureFile = "gfx/interface/goals/MDL/MDL_core_klugetown.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_core_western_empire"
+		textureFile = "gfx/interface/goals/MDL/MDL_core_western_empire.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_crush_the_koltaliba"
+		textureFile = "gfx/interface/goals/MDL/MDL_crush_the_koltaliba.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_curtail_the_guilds"
+		textureFile = "gfx/interface/goals/MDL/MDL_curtail_the_guilds.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_death_from_above"
+		textureFile = "gfx/interface/goals/MDL/MDL_death_from_above.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_dragon_assault_corps"
+		textureFile = "gfx/interface/goals/MDL/MDL_dragon_assault_corps.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_dream_of_a_federation"
+		textureFile = "gfx/interface/goals/MDL/MDL_dream_of_a_federation.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_drive_them_back"
+		textureFile = "gfx/interface/goals/MDL/MDL_drive_them_back.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_economy_stuff"
+		textureFile = "gfx/interface/goals/MDL/MDL_economy_stuff.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_elect_qunsul"
+		textureFile = "gfx/interface/goals/MDL/MDL_elect_qunsul.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_elite_army"
+		textureFile = "gfx/interface/goals/MDL/MDL_elite_army.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_emergency_industry"
+		textureFile = "gfx/interface/goals/MDL/MDL_emergency_industry.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_empower_senate"
+		textureFile = "gfx/interface/goals/MDL/MDL_empower_senate.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_enforce_Jizya"
+		textureFile = "gfx/interface/goals/MDL/MDL_enforce_Jizya.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_equestrian_investment"
+		textureFile = "gfx/interface/goals/MDL/MDL_equestrian_investment.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_equestrian_tourism"
+		textureFile = "gfx/interface/goals/MDL/MDL_equestrian_tourism.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_even_sweeter_rides"
+		textureFile = "gfx/interface/goals/MDL/MDL_even_sweeter_rides.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_expand_harbors"
+		textureFile = "gfx/interface/goals/MDL/MDL_expand_harbors.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_expand_junnah_doctrine"
+		textureFile = "gfx/interface/goals/MDL/MDL_expand_junnah_doctrine.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_expand_markets"
+		textureFile = "gfx/interface/goals/MDL/MDL_expand_markets.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_expand_new_karthin_industrial_base"
+		textureFile = "gfx/interface/goals/MDL/MDL_expand_new_karthin_industrial_base.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_expeditionary_corps"
+		textureFile = "gfx/interface/goals/MDL/MDL_expeditionary_corps.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_falling_griff"
+		textureFile = "gfx/interface/goals/MDL/MDL_falling_griff.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_fast_shell_reloading"
+		textureFile = "gfx/interface/goals/MDL/MDL_fast_shell_reloading.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_federal_assembly"
+		textureFile = "gfx/interface/goals/MDL/MDL_federal_assembly.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_federal_constitution"
+		textureFile = "gfx/interface/goals/MDL/MDL_federal_constitution.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_fiqh_decisions"
+		textureFile = "gfx/interface/goals/MDL/MDL_fiqh_decisions.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_fleet_tech"
+		textureFile = "gfx/interface/goals/MDL/MDL_fleet_tech.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_forges_of_klugetown"
+		textureFile = "gfx/interface/goals/MDL/MDL_forges_of_klugetown.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_formalize_alliance"
+		textureFile = "gfx/interface/goals/MDL/MDL_formalize_alliance.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_fort_and_guns"
+		textureFile = "gfx/interface/goals/MDL/MDL_fort_and_guns.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_fortification_buildup"
+		textureFile = "gfx/interface/goals/MDL/MDL_fortification_buildup.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_fortify_coltoba"
+		textureFile = "gfx/interface/goals/MDL/MDL_fortify_coltoba.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_fortify_desert_pass"
+		textureFile = "gfx/interface/goals/MDL/MDL_fortify_desert_pass.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_fortress_manedalusia"
+		textureFile = "gfx/interface/goals/MDL/MDL_fortress_manedalusia.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_gather_the_council"
+		textureFile = "gfx/interface/goals/MDL/MDL_gather_the_council.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_general_staff"
+		textureFile = "gfx/interface/goals/MDL/MDL_general_staff.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_get_generals_in_line"
+		textureFile = "gfx/interface/goals/MDL/MDL_get_generals_in_line.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_get_some_gear"
+		textureFile = "gfx/interface/goals/MDL/MDL_get_some_gear.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_get_some_muscle"
+		textureFile = "gfx/interface/goals/MDL/MDL_get_some_muscle.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_get_the_king"
+		textureFile = "gfx/interface/goals/MDL/MDL_get_the_king.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_get_the_militias"
+		textureFile = "gfx/interface/goals/MDL/MDL_get_the_militias.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_get_the_spymasters"
+		textureFile = "gfx/interface/goals/MDL/MDL_get_the_spymasters.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_get_the_strays"
+		textureFile = "gfx/interface/goals/MDL/MDL_get_the_strays.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_golden_coast"
+		textureFile = "gfx/interface/goals/MDL/MDL_golden_coast.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_go_with_alneighzari"
+		textureFile = "gfx/interface/goals/MDL/MDL_go_with_alneighzari.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_go_with_samira"
+		textureFile = "gfx/interface/goals/MDL/MDL_go_with_samira.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_grand_admiralty"
+		textureFile = "gfx/interface/goals/MDL/MDL_grand_admiralty.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_grand_army_of_al_manedalus"
+		textureFile = "gfx/interface/goals/MDL/MDL_grand_army_of_al_manedalus.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_grand_colonial_railway"
+		textureFile = "gfx/interface/goals/MDL/MDL_grand_colonial_railway.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_grand_zoco"
+		textureFile = "gfx/interface/goals/MDL/MDL_grand_zoco.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_grant_rural_autonomy"
+		textureFile = "gfx/interface/goals/MDL/MDL_grant_rural_autonomy.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_green_bay_masters"
+		textureFile = "gfx/interface/goals/MDL/MDL_green_bay_masters.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_griffon_tech"
+		textureFile = "gfx/interface/goals/MDL/MDL_griffon_tech.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_grifo_imperium"
+		textureFile = "gfx/interface/goals/MDL/MDL_grifo_imperium.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_guilds_deal"
+		textureFile = "gfx/interface/goals/MDL/MDL_guilds_deal.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_gun_and_noose"
+		textureFile = "gfx/interface/goals/MDL/MDL_gun_and_noose.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_gunpowder_empire"
+		textureFile = "gfx/interface/goals/MDL/MDL_gunpowder_empire.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_heavy_air"
+		textureFile = "gfx/interface/goals/MDL/MDL_heavy_air.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_hold_in_arabian_sea"
+		textureFile = "gfx/interface/goals/MDL/MDL_hold_in_arabian_sea.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_holy_mandate_BAT"
+		textureFile = "gfx/interface/goals/MDL/MDL_holy_mandate_BAT.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_holy_mandates"
+		textureFile = "gfx/interface/goals/MDL/MDL_holy_mandates.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_holy_war_demobilize"
+		textureFile = "gfx/interface/goals/MDL/MDL_holy_war_demobilize.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_holy_war_stabilize_west_zebrica"
+		textureFile = "gfx/interface/goals/MDL/MDL_holy_war_stabilize_west_zebrica.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_holy_zeal"
+		textureFile = "gfx/interface/goals/MDL/MDL_holy_zeal.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_imams_deal"
+		textureFile = "gfx/interface/goals/MDL/MDL_imams_deal.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_imperial_admiralty"
+		textureFile = "gfx/interface/goals/MDL/MDL_imperial_admiralty.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_imperial_agriculture"
+		textureFile = "gfx/interface/goals/MDL/MDL_imperial_agriculture.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_imperial_air_doctrine"
+		textureFile = "gfx/interface/goals/MDL/MDL_imperial_air_doctrine.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_imperial_armor"
+		textureFile = "gfx/interface/goals/MDL/MDL_imperial_armor.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_imperial_autarky"
+		textureFile = "gfx/interface/goals/MDL/MDL_imperial_autarky.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_imperial_battleships"
+		textureFile = "gfx/interface/goals/MDL/MDL_imperial_battleships.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_imperial_carriers"
+		textureFile = "gfx/interface/goals/MDL/MDL_imperial_carriers.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_imperial_corporativism"
+		textureFile = "gfx/interface/goals/MDL/MDL_imperial_corporativism.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_imperial_diplo_corps"
+		textureFile = "gfx/interface/goals/MDL/MDL_imperial_diplo_corps.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_imperial_education"
+		textureFile = "gfx/interface/goals/MDL/MDL_imperial_education.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_imperial_electronics"
+		textureFile = "gfx/interface/goals/MDL/MDL_imperial_electronics.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_imperial_fighters"
+		textureFile = "gfx/interface/goals/MDL/MDL_imperial_fighters.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_imperial_heavy_fighters"
+		textureFile = "gfx/interface/goals/MDL/MDL_imperial_heavy_fighters.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_imperial_heavy_tanks"
+		textureFile = "gfx/interface/goals/MDL/MDL_imperial_heavy_tanks.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_imperial_investment"
+		textureFile = "gfx/interface/goals/MDL/MDL_imperial_investment.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_imperial_magic"
+		textureFile = "gfx/interface/goals/MDL/MDL_imperial_magic.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_imperial_naval_bombers"
+		textureFile = "gfx/interface/goals/MDL/MDL_imperial_naval_bombers.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_imperial_naval_projection"
+		textureFile = "gfx/interface/goals/MDL/MDL_imperial_naval_projection.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_imperial_navy"
+		textureFile = "gfx/interface/goals/MDL/MDL_imperial_navy.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_imperial_pilots"
+		textureFile = "gfx/interface/goals/MDL/MDL_imperial_pilots.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_imperial_plane_tech"
+		textureFile = "gfx/interface/goals/MDL/MDL_imperial_plane_tech.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_imperial_shipyards"
+		textureFile = "gfx/interface/goals/MDL/MDL_imperial_shipyards.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_imperial_spec_ops"
+		textureFile = "gfx/interface/goals/MDL/MDL_imperial_spec_ops.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_imperial_support_tech"
+		textureFile = "gfx/interface/goals/MDL/MDL_imperial_support_tech.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_imperial_synthetics"
+		textureFile = "gfx/interface/goals/MDL/MDL_imperial_synthetics.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_imperial_trade_network"
+		textureFile = "gfx/interface/goals/MDL/MDL_imperial_trade_network.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_industrial_development_program"
+		textureFile = "gfx/interface/goals/MDL/MDL_industrial_development_program.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_industrial_union"
+		textureFile = "gfx/interface/goals/MDL/MDL_industrial_union.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_industry_of_karthin"
+		textureFile = "gfx/interface/goals/MDL/MDL_industry_of_karthin.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_integrate_abyssinia"
+		textureFile = "gfx/interface/goals/MDL/MDL_integrate_abyssinia.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_integrate_aquileia"
+		textureFile = "gfx/interface/goals/MDL/MDL_integrate_aquileia.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_integrate_asterion"
+		textureFile = "gfx/interface/goals/MDL/MDL_integrate_asterion.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_integrate_donkeys"
+		textureFile = "gfx/interface/goals/MDL/MDL_integrate_donkeys.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_integrate_emirs"
+		textureFile = "gfx/interface/goals/MDL/MDL_integrate_emirs.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_integrate_empire"
+		textureFile = "gfx/interface/goals/MDL/MDL_integrate_empire.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_integrate_greneclyf"
+		textureFile = "gfx/interface/goals/MDL/MDL_integrate_greneclyf.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_integrate_hillpones"
+		textureFile = "gfx/interface/goals/MDL/MDL_integrate_hillpones.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_integrate_karthin"
+		textureFile = "gfx/interface/goals/MDL/MDL_integrate_karthin.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_integrate_klugetown"
+		textureFile = "gfx/interface/goals/MDL/MDL_integrate_klugetown.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_integrate_macawia"
+		textureFile = "gfx/interface/goals/MDL/MDL_integrate_macawia.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_integrate_new_mareland"
+		textureFile = "gfx/interface/goals/MDL/MDL_integrate_new_mareland.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_integrate_north"
+		textureFile = "gfx/interface/goals/MDL/MDL_integrate_north.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_integrate_riverpones"
+		textureFile = "gfx/interface/goals/MDL/MDL_integrate_riverpones.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_integrate_southeast"
+		textureFile = "gfx/interface/goals/MDL/MDL_integrate_southeast.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_integrate_yemane"
+		textureFile = "gfx/interface/goals/MDL/MDL_integrate_yemane.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_into_arabia"
+		textureFile = "gfx/interface/goals/MDL/MDL_into_arabia.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_invest_in_changeling_reconstruction"
+		textureFile = "gfx/interface/goals/MDL/MDL_invest_in_changeling_reconstruction.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_it_is_done"
+		textureFile = "gfx/interface/goals/MDL/MDL_it_is_done.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_joint_development"
+		textureFile = "gfx/interface/goals/MDL/MDL_joint_development.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_karthinia_of_zebrica"
+		textureFile = "gfx/interface/goals/MDL/MDL_karthinia_of_zebrica.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_karthin_legions"
+		textureFile = "gfx/interface/goals/MDL/MDL_karthin_legions.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_khaldun_gambit"
+		textureFile = "gfx/interface/goals/MDL/MDL_khaldun_gambit.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_khaldun_takeover"
+		textureFile = "gfx/interface/goals/MDL/MDL_khaldun_takeover.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_kill_the_djinn"
+		textureFile = "gfx/interface/goals/MDL/MDL_kill_the_djinn.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_kill_them_all"
+		textureFile = "gfx/interface/goals/MDL/MDL_kill_them_all.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_king_of_arabia"
+		textureFile = "gfx/interface/goals/MDL/MDL_king_of_arabia.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_klugetown_economic_zone"
+		textureFile = "gfx/interface/goals/MDL/MDL_klugetown_economic_zone.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_koltaliba_commissars"
+		textureFile = "gfx/interface/goals/MDL/MDL_koltaliba_commissars.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_kom_marebo_oil"
+		textureFile = "gfx/interface/goals/MDL/MDL_kom_marebo_oil.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_lean_on_legacy"
+		textureFile = "gfx/interface/goals/MDL/MDL_lean_on_legacy.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_leverage_klugetown_airfield"
+		textureFile = "gfx/interface/goals/MDL/MDL_leverage_klugetown_airfield.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_liberate_abyssinia"
+		textureFile = "gfx/interface/goals/MDL/MDL_liberate_abyssinia.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_liberate_donkeys"
+		textureFile = "gfx/interface/goals/MDL/MDL_liberate_donkeys.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_liberate_emirs"
+		textureFile = "gfx/interface/goals/MDL/MDL_liberate_emirs.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_liberate_klugetown"
+		textureFile = "gfx/interface/goals/MDL/MDL_liberate_klugetown.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_liberate_purrsia"
+		textureFile = "gfx/interface/goals/MDL/MDL_liberate_purrsia.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_liberate_yemane"
+		textureFile = "gfx/interface/goals/MDL/MDL_liberate_yemane.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_long_road_to_mareakech"
+		textureFile = "gfx/interface/goals/MDL/MDL_long_road_to_mareakech.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_look_to_equestria"
+		textureFile = "gfx/interface/goals/MDL/MDL_look_to_equestria.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_look_to_our_roots"
+		textureFile = "gfx/interface/goals/MDL/MDL_look_to_our_roots.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_loot_the_countryside"
+		textureFile = "gfx/interface/goals/MDL/MDL_loot_the_countryside.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_lord_of_ultramar"
+		textureFile = "gfx/interface/goals/MDL/MDL_lord_of_ultramar.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_madgriff_in_the_harbor"
+		textureFile = "gfx/interface/goals/MDL/MDL_madgriff_in_the_harbor.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_magical_engines"
+		textureFile = "gfx/interface/goals/MDL/MDL_magical_engines.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_manedalusia_industrialism"
+		textureFile = "gfx/interface/goals/MDL/MDL_manedalusia_industrialism.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_manedalusia_infrastructure"
+		textureFile = "gfx/interface/goals/MDL/MDL_manedalusia_infrastructure.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_manedalusian_aeronautics"
+		textureFile = "gfx/interface/goals/MDL/MDL_manedalusian_aeronautics.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_manedalusian_century"
+		textureFile = "gfx/interface/goals/MDL/MDL_manedalusian_century.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_manedalusian_industriousness"
+		textureFile = "gfx/interface/goals/MDL/MDL_manedalusian_industriousness.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_manedalusian_rangers"
+		textureFile = "gfx/interface/goals/MDL/MDL_manedalusian_rangers.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_manedalusian_sun"
+		textureFile = "gfx/interface/goals/MDL/MDL_manedalusian_sun.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_maregypt_infrastructure_expansion"
+		textureFile = "gfx/interface/goals/MDL/MDL_maregypt_infrastructure_expansion.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_marine_corps"
+		textureFile = "gfx/interface/goals/MDL/MDL_marine_corps.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_meet_with_crimson"
+		textureFile = "gfx/interface/goals/MDL/MDL_meet_with_crimson.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_mega_based_navy"
+		textureFile = "gfx/interface/goals/MDL/MDL_mega_based_navy.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_merchant_outposts"
+		textureFile = "gfx/interface/goals/MDL/MDL_merchant_outposts.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_militarize_EQS"
+		textureFile = "gfx/interface/goals/MDL/MDL_militarize_EQS.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_military_industrial_council"
+		textureFile = "gfx/interface/goals/MDL/MDL_military_industrial_council.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_modern_army_crash_course"
+		textureFile = "gfx/interface/goals/MDL/MDL_modern_army_crash_course.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_monument_to_aaliyah"
+		textureFile = "gfx/interface/goals/MDL/MDL_monument_to_aaliyah.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_native_affairs"
+		textureFile = "gfx/interface/goals/MDL/MDL_native_affairs.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_naval_academy"
+		textureFile = "gfx/interface/goals/MDL/MDL_naval_academy.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_naval_air"
+		textureFile = "gfx/interface/goals/MDL/MDL_naval_air.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_naval_depot_network"
+		textureFile = "gfx/interface/goals/MDL/MDL_naval_depot_network.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_naval_patrols"
+		textureFile = "gfx/interface/goals/MDL/MDL_naval_patrols.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_navy_stuff"
+		textureFile = "gfx/interface/goals/MDL/MDL_navy_stuff.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_navy_war_games"
+		textureFile = "gfx/interface/goals/MDL/MDL_navy_war_games.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_neighle_infrastructure"
+		textureFile = "gfx/interface/goals/MDL/MDL_neighle_infrastructure.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_new_karthin_dockyards"
+		textureFile = "gfx/interface/goals/MDL/MDL_new_karthin_dockyards.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_nonstop_barrage"
+		textureFile = "gfx/interface/goals/MDL/MDL_nonstop_barrage.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_officialize_hisbas"
+		textureFile = "gfx/interface/goals/MDL/MDL_officialize_hisbas.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_our_finest_hour"
+		textureFile = "gfx/interface/goals/MDL/MDL_our_finest_hour.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_our_purpose_made_clear"
+		textureFile = "gfx/interface/goals/MDL/MDL_our_purpose_made_clear.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_overseas_dominion"
+		textureFile = "gfx/interface/goals/MDL/MDL_overseas_dominion.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_pacify_assur"
+		textureFile = "gfx/interface/goals/MDL/MDL_pacify_assur.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_pax_in_excelsior"
+		textureFile = "gfx/interface/goals/MDL/MDL_pax_in_excelsior.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_peace_in_our_time"
+		textureFile = "gfx/interface/goals/MDL/MDL_peace_in_our_time.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_persuade_hardliners"
+		textureFile = "gfx/interface/goals/MDL/MDL_persuade_hardliners.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_place_in_the_sun"
+		textureFile = "gfx/interface/goals/MDL/MDL_place_in_the_sun.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_pony_imperials"
+		textureFile = "gfx/interface/goals/MDL/MDL_pony_imperials.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_pony_synthesis"
+		textureFile = "gfx/interface/goals/MDL/MDL_pony_synthesis.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_project_excelsior"
+		textureFile = "gfx/interface/goals/MDL/MDL_project_excelsior.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_protect_the_skies"
+		textureFile = "gfx/interface/goals/MDL/MDL_protect_the_skies.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_purchase_land_maregypt"
+		textureFile = "gfx/interface/goals/MDL/MDL_purchase_land_maregypt.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_radar"
+		textureFile = "gfx/interface/goals/MDL/MDL_radar.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_rally_militias"
+		textureFile = "gfx/interface/goals/MDL/MDL_rally_militias.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_rally_the_faithful"
+		textureFile = "gfx/interface/goals/MDL/MDL_rally_the_faithful.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_reach_out_to_populists"
+		textureFile = "gfx/interface/goals/MDL/MDL_reach_out_to_populists.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_refining_contractor"
+		textureFile = "gfx/interface/goals/MDL/MDL_refining_contractor.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_reinstate_south_griffonia_society"
+		textureFile = "gfx/interface/goals/MDL/MDL_reinstate_south_griffonia_society.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_reliable_traders"
+		textureFile = "gfx/interface/goals/MDL/MDL_reliable_traders.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_religious_support"
+		textureFile = "gfx/interface/goals/MDL/MDL_religious_support.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_restore_grand_vizier"
+		textureFile = "gfx/interface/goals/MDL/MDL_restore_grand_vizier.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_restore_mareakech"
+		textureFile = "gfx/interface/goals/MDL/MDL_restore_mareakech.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_restore_merchant_fleet"
+		textureFile = "gfx/interface/goals/MDL/MDL_restore_merchant_fleet.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_restore_the_asabiyyah"
+		textureFile = "gfx/interface/goals/MDL/MDL_restore_the_asabiyyah.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_restoring_the_light"
+		textureFile = "gfx/interface/goals/MDL/MDL_restoring_the_light.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_reunify_homeland"
+		textureFile = "gfx/interface/goals/MDL/MDL_reunify_homeland.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_righteous_fury"
+		textureFile = "gfx/interface/goals/MDL/MDL_righteous_fury.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_rocket_research"
+		textureFile = "gfx/interface/goals/MDL/MDL_rocket_research.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_rural_charter"
+		textureFile = "gfx/interface/goals/MDL/MDL_rural_charter.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_rural_deal"
+		textureFile = "gfx/interface/goals/MDL/MDL_rural_deal.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_sack_mountain_temples"
+		textureFile = "gfx/interface/goals/MDL/MDL_sack_mountain_temples.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_SAM01"
+		textureFile = "gfx/interface/goals/MDL/MDL_SAM01.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_SAM02"
+		textureFile = "gfx/interface/goals/MDL/MDL_SAM02.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_SAM03"
+		textureFile = "gfx/interface/goals/MDL/MDL_SAM03.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_SAM04"
+		textureFile = "gfx/interface/goals/MDL/MDL_SAM04.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_SAM05"
+		textureFile = "gfx/interface/goals/MDL/MDL_SAM05.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_SAM06"
+		textureFile = "gfx/interface/goals/MDL/MDL_SAM06.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_SAM07"
+		textureFile = "gfx/interface/goals/MDL/MDL_SAM07.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_SAM08"
+		textureFile = "gfx/interface/goals/MDL/MDL_SAM08.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_SAM09"
+		textureFile = "gfx/interface/goals/MDL/MDL_SAM09.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_SAM10"
+		textureFile = "gfx/interface/goals/MDL/MDL_SAM10.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_SAM11"
+		textureFile = "gfx/interface/goals/MDL/MDL_SAM11.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_SAM12"
+		textureFile = "gfx/interface/goals/MDL/MDL_SAM12.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_SAM13"
+		textureFile = "gfx/interface/goals/MDL/MDL_SAM13.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_SAM14"
+		textureFile = "gfx/interface/goals/MDL/MDL_SAM14.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_SAM15"
+		textureFile = "gfx/interface/goals/MDL/MDL_SAM15.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_SAM16"
+		textureFile = "gfx/interface/goals/MDL/MDL_SAM16.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_SAM17"
+		textureFile = "gfx/interface/goals/MDL/MDL_SAM17.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_SAM18"
+		textureFile = "gfx/interface/goals/MDL/MDL_SAM18.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_SAM19"
+		textureFile = "gfx/interface/goals/MDL/MDL_SAM19.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_SAM20"
+		textureFile = "gfx/interface/goals/MDL/MDL_SAM20.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_SAM21"
+		textureFile = "gfx/interface/goals/MDL/MDL_SAM21.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_SAM22"
+		textureFile = "gfx/interface/goals/MDL/MDL_SAM22.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_SAM23"
+		textureFile = "gfx/interface/goals/MDL/MDL_SAM23.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_SAM24"
+		textureFile = "gfx/interface/goals/MDL/MDL_SAM24.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_SAM25"
+		textureFile = "gfx/interface/goals/MDL/MDL_SAM25.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_SAM26"
+		textureFile = "gfx/interface/goals/MDL/MDL_SAM26.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_SAM27"
+		textureFile = "gfx/interface/goals/MDL/MDL_SAM27.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_SAM28"
+		textureFile = "gfx/interface/goals/MDL/MDL_SAM28.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_SAM29"
+		textureFile = "gfx/interface/goals/MDL/MDL_SAM29.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_SAM30"
+		textureFile = "gfx/interface/goals/MDL/MDL_SAM30.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_SAM31"
+		textureFile = "gfx/interface/goals/MDL/MDL_SAM31.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_SAM32"
+		textureFile = "gfx/interface/goals/MDL/MDL_SAM32.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_SAM33"
+		textureFile = "gfx/interface/goals/MDL/MDL_SAM33.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_SAM34"
+		textureFile = "gfx/interface/goals/MDL/MDL_SAM34.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_SAM35"
+		textureFile = "gfx/interface/goals/MDL/MDL_SAM35.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_SAM36"
+		textureFile = "gfx/interface/goals/MDL/MDL_SAM36.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_SAM37"
+		textureFile = "gfx/interface/goals/MDL/MDL_SAM37.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_SAM38"
+		textureFile = "gfx/interface/goals/MDL/MDL_SAM38.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_SAM39"
+		textureFile = "gfx/interface/goals/MDL/MDL_SAM39.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_SAM40"
+		textureFile = "gfx/interface/goals/MDL/MDL_SAM40.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_SAM41"
+		textureFile = "gfx/interface/goals/MDL/MDL_SAM41.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_SAM42"
+		textureFile = "gfx/interface/goals/MDL/MDL_SAM42.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_SAM43"
+		textureFile = "gfx/interface/goals/MDL/MDL_SAM43.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_SAM44"
+		textureFile = "gfx/interface/goals/MDL/MDL_SAM44.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_SAM45"
+		textureFile = "gfx/interface/goals/MDL/MDL_SAM45.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_SAM46"
+		textureFile = "gfx/interface/goals/MDL/MDL_SAM46.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_SAM47"
+		textureFile = "gfx/interface/goals/MDL/MDL_SAM47.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_SAM48"
+		textureFile = "gfx/interface/goals/MDL/MDL_SAM48.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_SAM51"
+		textureFile = "gfx/interface/goals/MDL/MDL_SAM51.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_SAM52"
+		textureFile = "gfx/interface/goals/MDL/MDL_SAM52.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_SAM53"
+		textureFile = "gfx/interface/goals/MDL/MDL_SAM53.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_SAM54"
+		textureFile = "gfx/interface/goals/MDL/MDL_SAM54.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_SAM55"
+		textureFile = "gfx/interface/goals/MDL/MDL_SAM55.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_SAM56"
+		textureFile = "gfx/interface/goals/MDL/MDL_SAM56.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_SAM57"
+		textureFile = "gfx/interface/goals/MDL/MDL_SAM57.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_SAM58"
+		textureFile = "gfx/interface/goals/MDL/MDL_SAM58.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_SAM59"
+		textureFile = "gfx/interface/goals/MDL/MDL_SAM59.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_SAM60"
+		textureFile = "gfx/interface/goals/MDL/MDL_SAM60.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_SAM61"
+		textureFile = "gfx/interface/goals/MDL/MDL_SAM61.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_SAM62"
+		textureFile = "gfx/interface/goals/MDL/MDL_SAM62.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_SAM63"
+		textureFile = "gfx/interface/goals/MDL/MDL_SAM63.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_SAM64"
+		textureFile = "gfx/interface/goals/MDL/MDL_SAM64.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_SAM65"
+		textureFile = "gfx/interface/goals/MDL/MDL_SAM65.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_SAM66"
+		textureFile = "gfx/interface/goals/MDL/MDL_SAM66.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_SAM67"
+		textureFile = "gfx/interface/goals/MDL/MDL_SAM67.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_SAM68"
+		textureFile = "gfx/interface/goals/MDL/MDL_SAM68.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_SAM69"
+		textureFile = "gfx/interface/goals/MDL/MDL_SAM69.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_samira_as_general"
+		textureFile = "gfx/interface/goals/MDL/MDL_samira_as_general.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_sayf_takeover"
+		textureFile = "gfx/interface/goals/MDL/MDL_sayf_takeover.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_secure_klugetown"
+		textureFile = "gfx/interface/goals/MDL/MDL_secure_klugetown.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_secure_southeast"
+		textureFile = "gfx/interface/goals/MDL/MDL_secure_southeast.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_secure_starry_sea_islands"
+		textureFile = "gfx/interface/goals/MDL/MDL_secure_starry_sea_islands.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_senate_assumes_power"
+		textureFile = "gfx/interface/goals/MDL/MDL_senate_assumes_power.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_senate_building"
+		textureFile = "gfx/interface/goals/MDL/MDL_senate_building.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_senate_path"
+		textureFile = "gfx/interface/goals/MDL/MDL_senate_path.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_senate_reconcile_maregypt"
+		textureFile = "gfx/interface/goals/MDL/MDL_senate_reconcile_maregypt.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_southern_mercenaries"
+		textureFile = "gfx/interface/goals/MDL/MDL_southern_mercenaries.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_speartip_of_harmony"
+		textureFile = "gfx/interface/goals/MDL/MDL_speartip_of_harmony.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_special_forces_regimentation"
+		textureFile = "gfx/interface/goals/MDL/MDL_special_forces_regimentation.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_springtime_in_manedalusia"
+		textureFile = "gfx/interface/goals/MDL/MDL_springtime_in_manedalusia.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_starry_sea_corridor"
+		textureFile = "gfx/interface/goals/MDL/MDL_starry_sea_corridor.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_strike_thralls_of_darkness"
+		textureFile = "gfx/interface/goals/MDL/MDL_strike_thralls_of_darkness.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_subs_tech"
+		textureFile = "gfx/interface/goals/MDL/MDL_subs_tech.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_suffrage_and_army"
+		textureFile = "gfx/interface/goals/MDL/MDL_suffrage_and_army.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_sultana_velvet"
+		textureFile = "gfx/interface/goals/MDL/MDL_sultana_velvet.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_sun_flag_burn"
+		textureFile = "gfx/interface/goals/MDL/MDL_sun_flag_burn.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_sun_madness"
+		textureFile = "gfx/interface/goals/MDL/MDL_sun_madness.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_surf_and_rock_and_roll"
+		textureFile = "gfx/interface/goals/MDL/MDL_surf_and_rock_and_roll.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_sweet_ass_rides"
+		textureFile = "gfx/interface/goals/MDL/MDL_sweet_ass_rides.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_take_lands_in_lakes"
+		textureFile = "gfx/interface/goals/MDL/MDL_take_lands_in_lakes.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_the_bomb"
+		textureFile = "gfx/interface/goals/MDL/MDL_the_bomb.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_the_crimson_sultanate"
+		textureFile = "gfx/interface/goals/MDL/MDL_the_crimson_sultanate.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_thus_spoke_ash_shahid"
+		textureFile = "gfx/interface/goals/MDL/MDL_thus_spoke_ash_shahid.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_total_war"
+		textureFile = "gfx/interface/goals/MDL/MDL_total_war.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_triumph_of_the_federation"
+		textureFile = "gfx/interface/goals/MDL/MDL_triumph_of_the_federation.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_try_for_harmony"
+		textureFile = "gfx/interface/goals/MDL/MDL_try_for_harmony.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_try_for_socialism"
+		textureFile = "gfx/interface/goals/MDL/MDL_try_for_socialism.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_tungsten_trade"
+		textureFile = "gfx/interface/goals/MDL/MDL_tungsten_trade.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_universal_caliphate"
+		textureFile = "gfx/interface/goals/MDL/MDL_universal_caliphate.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_unstoppable_pilots"
+		textureFile = "gfx/interface/goals/MDL/MDL_unstoppable_pilots.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_urban_deal"
+		textureFile = "gfx/interface/goals/MDL/MDL_urban_deal.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_US_start_1_1"
+		textureFile = "gfx/interface/goals/MDL/MDL_US_start_1_1.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_US_start_2_1"
+		textureFile = "gfx/interface/goals/MDL/MDL_US_start_2_1.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_US_start_2_2"
+		textureFile = "gfx/interface/goals/MDL/MDL_US_start_2_2.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_US_start_2_3"
+		textureFile = "gfx/interface/goals/MDL/MDL_US_start_2_3.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_US_start_2_4"
+		textureFile = "gfx/interface/goals/MDL/MDL_US_start_2_4.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_US_start_3_1"
+		textureFile = "gfx/interface/goals/MDL/MDL_US_start_3_1.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_US_start_3_2"
+		textureFile = "gfx/interface/goals/MDL/MDL_US_start_3_2.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_US_start_3_3"
+		textureFile = "gfx/interface/goals/MDL/MDL_US_start_3_3.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_US_start_4_1"
+		textureFile = "gfx/interface/goals/MDL/MDL_US_start_4_1.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_veteran_army"
+		textureFile = "gfx/interface/goals/MDL/MDL_veteran_army.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_vice_and_virtue"
+		textureFile = "gfx/interface/goals/MDL/MDL_vice_and_virtue.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_warplan_conscription"
+		textureFile = "gfx/interface/goals/MDL/MDL_warplan_conscription.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_warplan_dragon"
+		textureFile = "gfx/interface/goals/MDL/MDL_warplan_dragon.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_warplan_green"
+		textureFile = "gfx/interface/goals/MDL/MDL_warplan_green.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_western_zebrican_hegemony"
+		textureFile = "gfx/interface/goals/MDL/MDL_western_zebrican_hegemony.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MDL_work_with_guilds"
+		textureFile = "gfx/interface/goals/MDL/MDL_work_with_guilds.tga"
+	}
 }

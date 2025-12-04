@@ -48,11 +48,9 @@ MDL_colonial_admin = {
 MDL_asabiyyah_modifier = {
 	icon = GFX_idea_MDL_asabiyyah
 	enable = { always = yes }
-
 	remove_trigger = {
 		NOT = { has_country_flag = MDL_asabiyyah_unlocked }
 	}
-
 	trade_opinion_factor = MDL_trade_var
 	production_factory_max_efficiency_factor = MDL_production_var
 	research_speed_factor = MDL_research_var
@@ -66,10 +64,21 @@ MDL_asabiyyah_modifier = {
 	mobilization_laws_cost_factor = MDL_mobilization_var
 	stability_factor = MDL_stability_var
 	war_support_factor = MDL_war_var
+	air_strategic_bomber_bombing_factor = MDL_air_strategic_bomber_bombing_factor
+	air_accidents_factor = MDL_air_accidents_factor
+	air_night_penalty = MDL_air_night_penalty
+	air_weather_penalty = MDL_air_weather_penalty
+	air_ace_generation_chance_factor = MDL_air_ace_generation_chance_factor
+	experience_gain_air = MDL_experience_gain_air
+	compliance_growth = MDL_compliance_growth
+	conscription = MDL_conscription_var
+	production_speed_buildings_factor = MDL_production_speed_buildings_factor
+	production_factory_efficiency_gain_factor = MDL_asabiyyah_production_factory_efficiency_gain_factor
+	industrial_capacity_factory = MDL_industrial_capacity_factory
 }
 
 MDL_manedalusian_navy_modifier = {
-	icon = GFX_idea_MDL_asabiyyah
+	icon = GFX_idea_MDL_manedalusian_navy_modifier
 	enable = { always = yes }
 
 	experience_gain_navy = MDL_experience_gain_navy
@@ -82,16 +91,17 @@ MDL_manedalusian_navy_modifier = {
 	trade_opinion_factor = MDL_trade_opinion_factor
 	research_speed_factor = MDL_research_speed_factor
 	production_factory_efficiency_gain_factor = MDL_production_factory_efficiency_gain_factor
+	production_speed_coastal_bunker_factor = MDL_production_speed_coastal_bunker_factor
+	amphibious_invasion = MDL_amphibious_invasion
+	naval_invasion_capacity = MDL_naval_invasion_capacity
 }
 
 MDL_federal_army_modifier = {
   icon = GFX_idea_MDL_federal_army
   enable = { always = yes }
-
   remove_trigger = {
     NOT = { has_country_flag = MDL_federal_army_unlocked }
   }
-
   special_forces_cap = MDL_FA_special_forces_var
   army_attack_factor = MDL_FA_attack_var
   army_defence_factor = MDL_FA_defence_var

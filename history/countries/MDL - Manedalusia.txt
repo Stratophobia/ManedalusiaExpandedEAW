@@ -46,6 +46,19 @@ set_variable = { MDL_tradelaw_var = 0.30 }
 set_variable = { MDL_mobilization_var = 0.30 }
 set_variable = { MDL_stability_var = 0.10 }
 set_variable = { MDL_war_var = -0.05 }
+
+set_variable = { air_strategic_bomber_bombing_factor = 0 }
+set_variable = { air_accidents_factor = 0 }
+set_variable = { air_night_penalty = 0 }
+set_variable = { air_weather_penalty = 0 }
+set_variable = { air_ace_generation_chance_factor = 0 }
+set_variable = { experience_gain_air = 0 }
+set_variable = { MDL_compliance_growth = 0 }
+set_variable = { MDL_conscription_var = 0 }
+set_variable = { MDL_production_speed_buildings_factor = 0 }
+set_variable = { MDL_asabiyyah_production_factory_efficiency_gain_factor = 0 }
+set_variable = { MDL_industrial_capacity_factory = 0 }
+
 ###Navy Modifier Variables###
 set_variable = { MDL_experience_gain_navy = 0.1 }
 #Later buffs, should always start at 0
@@ -54,11 +67,13 @@ set_variable = { MDL_naval_coordination = 0 }
 set_variable = { MDL_navy_max_range_factor = 0 }
 set_variable = { MDL_industrial_capacity_dockyard = 0 }
 set_variable = { MDL_production_speed_dockyard_factor = 0 }
-set_variable = { MDL_navy_max_range_factor = 0 }
 set_variable = { MDL_production_factory_max_efficiency_factor = 0 }
 set_variable = { MDL_trade_opinion_factor = 0 }
 set_variable = { research_speed_factor = 0 }
 set_variable = { production_factory_efficiency_gain_factor = 0 }
+set_variable = { MDL_production_speed_coastal_bunker_factor = 0 }
+set_variable = { MDL_amphibious_invasion = 0 }
+set_variable = { MDL_naval_invasion_capacity = 0 }
 
 #Federal Army variables on Game Start
 set_variable = { MDL_FA_special_forces_var = 0.25 }

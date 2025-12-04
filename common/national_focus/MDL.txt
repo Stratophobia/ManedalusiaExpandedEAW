@@ -36,38 +36,6 @@ focus_tree = {
 	shared_focus = MDL_warplan_dragon
 }
 
-#SAMIRA HOPE EVENTS - DOCUMENTATION
-#
-#LIGHT SHINING IN DARKNESS:(1 Hope)
-#Freebie. Comes in chain on "Charting The New Course" focus.
-#
-#ZAHID DUEL CHAIN: (1 Hope)
-#In "Reform the Order" focus.
-#Required:
-#  - Mehmet fight level 1
-#
-#SAMIRA DUELS: (3 Hope in total)
-#On Chargers 3 and 6 of "Improve Koltaliba methods of warfare". Require level 2 and 3 fight level respectively.
-#
-#Spymaster Zahid (1 Hope):
-#"Masters of the Shadows" focus.
-#
-#ABYSSINIAN NOBLES (1 Hope):
-#"Deal With Abyssinian Nobility" focus.
-#
-#MEHMET BECOMES A TRUE LEADER (1 Hope):
-#"Unify the Railway System" focus, AFTER taking "A Truly Modern State"
-#
-#ON THE BREVITY OF LIFE (1 Hope):
-#Pick option "It is not that life is short. Rather, much of it is wasted."
-#
-#JEFFERSON REFERENCE (1 Hope)
-#Take "The Golden Coast" focus with at least hope level 8 and the best ending not locked (no tick of either "The Grandmistress' Burden" or "The Lingering Shadow")
-#
-#  MEHMET FIGHT LEVEL
-#  1: Freebie. "Assemble The Warrior Hosts"
-#  2: "New Methods of Warfare". Must be picked AFTER "Collaborate with Al-Neighzari"
-#  3: "Only The Toughest Among Us". Must be picked AFTER "A New Sun In West Zebrica".
 focus_tree = {
 	id = manedalusia_samira
 
@@ -1159,7 +1127,7 @@ shared_focus = {
 	available = {
 		OR = {
 			is_neighbor_of = EMR
-			is_neighbor_of = SDF
+			is_neighbor_of = SDS
 			is_neighbor_of = SDL
 			is_neighbor_of = SDC
 			is_neighbor_of = SDF
@@ -2111,7 +2079,7 @@ shared_focus = {
 shared_focus = {
 	id = MDL_air_stuff
 	icon = GFX_focus_MDL_air_stuff
-	x = 41
+	x = 42
 	y = 0
 	cost = 5
 
@@ -2158,6 +2126,26 @@ shared_focus = {
 		}
 	}
 	search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_AIRFORCE_BONUS }
+}
+
+shared_focus = {
+	id = MDL_heavy_air
+	icon = GFX_focus_MDL_heavy_air
+	x = -1
+	y = 1
+	relative_position_id = MDL_air_industry
+	prerequisite = { focus = MDL_air_industry }
+	cost = 5
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MDL_heavy_air"
+		add_tech_bonus = {
+			name = fighter_bonus
+			bonus = 1.0
+			uses = 2
+			category = cat_heavy_fighter
+		}
+	}
+	search_filters = { FOCUS_FILTER_RESEARCH }
 }
 
 shared_focus = {
@@ -2255,13 +2243,70 @@ shared_focus = {
 }
 
 shared_focus = {
+	id = MDL_naval_air
+	icon = GFX_focus_MDL_naval_air
+	x = 1
+	y = 1
+	relative_position_id = MDL_radar
+	prerequisite = { focus = MDL_radar }
+	cost = 5
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MDL_naval_air"
+		if = {
+			limit = { has_dlc = "By Blood Alone" }
+			set_technology = {
+				early_bombs = 1
+				air_torpedoe_1 = 1
+			}
+		}
+		else = {
+			if = {
+				limit = { NOT = { has_tech = naval_bomber1 } }
+				set_technology = { naval_bomber1 = 1 }
+			}
+		}
+		add_tech_bonus = {
+			name = MDL_naval_air
+			bonus = 1.0
+			uses = 2
+			category = naval_bomber
+		}
+	}
+	search_filters = { FOCUS_FILTER_RESEARCH }
+}
+
+shared_focus = {
+	id = MDL_rocket_research
+	icon = GFX_focus_MDL_rocket_research
+	x = 0
+	y = 1
+	relative_position_id = MDL_heavy_air
+	cost = 5
+	prerequisite = { focus = MDL_heavy_air }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MDL_rocket_research"
+		add_tech_bonus = {
+			name = rocketry
+			bonus = 3.0
+			uses = 1
+			category = rocketry
+		}
+	}
+	search_filters = { FOCUS_FILTER_RESEARCH }
+}
+
+shared_focus = {
 	id = MDL_an_air_doctrine
 	icon = GFX_focus_MDL_an_air_doctrine
 	x = 0
 	y = 1
 	relative_position_id = MDL_death_from_above
 	cost = 5
-	prerequisite = { focus = MDL_death_from_above }
+	prerequisite = {
+		focus = MDL_heavy_air
+		focus = MDL_death_from_above
+		focus = MDL_naval_air
+	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_an_air_doctrine"
 		add_mastery_bonus = {
@@ -2291,11 +2336,17 @@ shared_focus = {
 	y = 1
 	relative_position_id = MDL_an_air_doctrine
 	cost = 5
-	prerequisite = { focus = MDL_an_air_doctrine }
+	prerequisite = {
+		focus = MDL_an_air_doctrine
+		focus = MDL_manedalusian_aeronautics
+	}
 	mutually_exclusive = { focus = MDL_bomber_pilots }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_unstoppable_pilots"
-		add_ideas = MDL_unstoppable_pilots_idea
+		custom_effect_tooltip = MDL_modify_asabiyyah_based_pilots_tt
+		add_to_variable = { MDL_air_night_penalty = -0.30 }
+		add_to_variable = { MDL_air_weather_penalty = -0.30 }
+
 		add_power_balance_value = {
 			id = MDL_theological_bop
 			value = 0.05
@@ -2311,11 +2362,16 @@ shared_focus = {
 	y = 1
 	relative_position_id = MDL_an_air_doctrine
 	cost = 5
-	prerequisite = { focus = MDL_an_air_doctrine }
+	prerequisite = {
+		focus = MDL_rocket_research
+		focus = MDL_an_air_doctrine
+	}
 	mutually_exclusive = { focus = MDL_unstoppable_pilots }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_bomber_pilots"
-		add_ideas = MDL_bomber_pilots_idea
+		custom_effect_tooltip = MDL_modify_asabiyyah_bomb_pilots_tt
+		add_to_variable = { MDL_air_strategic_bomber_bombing_factor = 0.2 }
+		add_to_variable = { MDL_air_accidents_factor = -0.20 }
 		add_power_balance_value = {
 			id = MDL_theological_bop
 			value = -0.05
@@ -2325,82 +2381,19 @@ shared_focus = {
 }
 
 shared_focus = {
-	id = MDL_rocket_research
-	icon = GFX_focus_MDL_rocket_research
+	id = MDL_manedalusian_aeronautics
+	icon = GFX_focus_MDL_manedalusian_aeronautics
 	x = 0
-	y = 2
-	relative_position_id = MDL_an_air_doctrine
-	cost = 5
-	available = {
-		OR = {
-			has_idea = modern_society
-			has_idea = outdated_industry
-		}
-	}
-	prerequisite = { focus = MDL_bomber_pilots focus = MDL_unstoppable_pilots }
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus MDL_rocket_research"
-		add_tech_bonus = {
-			name = rocketry
-			bonus = 3.0
-			uses = 1
-			category = rocketry
-		}
-	}
-	search_filters = { FOCUS_FILTER_RESEARCH }
-}
-
-shared_focus = {
-	id = MDL_naval_air
-	icon = GFX_focus_MDL_naval_air
-	x = 1
 	y = 1
-	relative_position_id = MDL_rocket_research
-	prerequisite = { focus = MDL_rocket_research }
-	cost = 5
+	relative_position_id = MDL_naval_air
+	prerequisite = { focus = MDL_naval_air }
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus MDL_naval_air"
-		if = {
-			limit = { has_dlc = "By Blood Alone" }
-			set_technology = {
-				early_bombs = 1
-				air_torpedoe_1 = 1
-			}
-		}
-		else = {
-			if = {
-				limit = { NOT = { has_tech = naval_bomber1 } }
-				set_technology = { naval_bomber1 = 1 }
-			}
-		}
-		add_tech_bonus = {
-			name = MDL_naval_air
-			bonus = 1.0
-			uses = 2
-			category = naval_bomber
-		}
+		log = "[GetDateText]: [Root.GetName]: Focus MDL_manedalusian_aeronautics"
+		custom_effect_tooltip = MDL_modify_asabiyyah_aeronautics_tt
+		add_to_variable = { MDL_air_ace_generation_chance_factor = 0.10 }
+		add_to_variable = { MDL_experience_gain_air = 0.10 }
 	}
-	search_filters = { FOCUS_FILTER_RESEARCH }
-}
-
-shared_focus = {
-	id = MDL_heavy_air
-	icon = GFX_focus_MDL_heavy_air
-	x = -1
-	y = 1
-	relative_position_id = MDL_rocket_research
-	prerequisite = { focus = MDL_rocket_research }
-	cost = 5
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus MDL_heavy_air"
-		add_tech_bonus = {
-			name = fighter_bonus
-			bonus = 1.0
-			uses = 2
-			category = cat_heavy_fighter
-		}
-	}
-	search_filters = { FOCUS_FILTER_RESEARCH }
+	search_filters = { FOCUS_FILTER_ARMY_BONUS }
 }
 
 shared_focus = {
@@ -2408,10 +2401,13 @@ shared_focus = {
 	icon = GFX_focus_MDL_the_bomb
 	x = 0
 	y = 2
-	relative_position_id = MDL_rocket_research
+	relative_position_id = MDL_an_air_doctrine
 	cost = 10.30
 	available = { has_idea = modern_society }
-	prerequisite = { focus = MDL_naval_air focus = MDL_heavy_air }
+	prerequisite = {
+		focus = MDL_bomber_pilots
+		focus = MDL_unstoppable_pilots
+	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_the_bomb"
 		add_breakthrough_progress = {
@@ -3010,7 +3006,7 @@ shared_focus = {
 
 shared_focus = {
 	id = MDL_military_industrial_council
-	icon = GFX_focus_MDL_industrial_council
+	icon = GFX_focus_MDL_military_industrial_council
 	cost = 5
 	x = 1
 	y = 1
@@ -3021,7 +3017,10 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_military_industrial_council"
-		add_ideas = MDL_industrial_council
+		custom_effect_tooltip = MDL_modify_asabiyyah_mil_industrial_tt
+		add_to_variable = { MDL_production_speed_buildings_factor = 0.10 }
+		add_to_variable = { MDL_asabiyyah_production_factory_efficiency_gain_factor = 0.10 }
+		add_to_variable = { MDL_industrial_capacity_factory = 0.10 }
 	}
 	search_filters = { FOCUS_FILTER_INDUSTRY }
 }
@@ -3100,7 +3099,10 @@ shared_focus = {
 			limit = { NOT = { has_tech = tech_military_police } }
 			set_technology = { tech_military_police = 1 }
 		}
-		add_ideas = MDL_citizen_guard_idea
+		custom_effect_tooltip = MDL_modify_asabiyyah_citizen_guard_tt
+		add_to_variable = { MDL_conscription_var = 0.015 }
+		add_to_variable = { MDL_stability_var = 0.05 }
+		add_to_variable = { MDL_compliance_growth = 0.10 }
 	}
 	search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_STABILITY FOCUS_FILTER_MANPOWER}
 }
@@ -3360,6 +3362,8 @@ shared_focus = {
 	prerequisite = { focus = MDL_navy_stuff }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_expand_markets"
+		custom_effect_tooltip = MDL_modify_navy_mod_markets_tt
+		add_to_variable = { MDL_trade_opinion_factor = 0.10 }
 		country_event = { days = 5 id = manedalusia.27 }
 		741 = {
 			add_extra_state_shared_building_slots = 1
@@ -3580,6 +3584,9 @@ shared_focus = {
 	prerequisite = { focus = MDL_navy_stuff }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_naval_patrols"
+		custom_effect_tooltip = MDL_modify_navy_mod_coastal_bunkers_tt
+
+		add_to_variable = { MDL_production_speed_coastal_bunker_factor = 0.50 }
 		add_doctrine_cost_reduction = {
 			name = MDL_naval_patrols
 			cost_reduction = 0.5
@@ -3682,6 +3689,9 @@ shared_focus = {
 	prerequisite = { focus = MDL_grand_admiralty focus = MDL_naval_depot_network }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_marine_corps"
+		custom_effect_tooltip = MDL_modify_navy_mod_marines_tt
+		add_to_variable = { MDL_amphibious_invasion = 0.25 }
+		add_to_variable = { MDL_naval_invasion_capacity = 5 }
 		add_tech_bonus = {
 			name = MDL_marine_corps
 			bonus = 2.0
@@ -3689,7 +3699,7 @@ shared_focus = {
 			category = marine_tech
 		}
 	}
-	search_filters = { FOCUS_FILTER_RESEARCH }
+	search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_NAVY_BONUS }
 }
 
 shared_focus = {
@@ -3804,6 +3814,9 @@ shared_focus = {
 	prerequisite = { focus = MDL_reliable_traders focus = MDL_coffee_current }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_merchant_outposts"
+		custom_effect_tooltip = MDL_modify_navy_mod_merchant_outposts_tt
+		add_to_variable = { MDL_trade_opinion_factor = 0.05 }
+		add_to_variable = { MDL_production_factory_efficiency_gain_factor = 0.05 }
 		add_offsite_building = { type = industrial_complex level = 3 }
 		add_offsite_building = { type = arms_factory level = 1 }
 		add_offsite_building = { type = dockyard level = 1 }

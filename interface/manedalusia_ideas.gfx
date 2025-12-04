@@ -240,14 +240,6 @@ spriteTypes = {
     texturefile="gfx/interface/ideas/MDL/MDL_jizya.tga"
   }
   SpriteType = {
-    name="GFX_idea_MDL_citizen_guard1"
-    texturefile="gfx/interface/ideas/MDL/MDL_citizen_guard.tga"
-  }
-  SpriteType = {
-    name="GFX_idea_MDL_industrial_council"
-    texturefile="gfx/interface/ideas/MDL/MDL_industrial_council.tga"
-  }
-  SpriteType = {
     name="GFX_idea_MDL_koltaliba_regimentation"
     texturefile="gfx/interface/ideas/MDL/MDL_koltaliba_regimentation.tga"
   }
@@ -278,6 +270,10 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_idea_MDL_holy_zeal_idea"
 		texturefile = "gfx/interface/ideas/MDL/MDL_holy_zeal_idea.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_MDL_manedalusian_navy_modifier"
+		texturefile = "gfx/interface/ideas/MDL/MDL_manedalusian_navy_modifier.tga"
 	}
 	SpriteType = {
 		name = "GFX_idea_MDL_asabiyyah"

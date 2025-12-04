@@ -50,8 +50,8 @@ leader_traits = {
 		democratic_drift = 0.04
 	}
 	MDL_military_academy = {
-		air_doctrine_cost_factor = -0.05
-		naval_doctrine_cost_factor = -0.05
+		air_doctrine_cost_factor = -0.10
+		naval_doctrine_cost_factor = -0.10
 		new_mobile_warfare_mastery_gain_factor = 0.1
 		superior_firepower_mastery_gain_factor = 0.1
 		grand_battleplan_mastery_gain_factor = 0.1

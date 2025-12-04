@@ -418,22 +418,6 @@ ideas = {
 				special_forces_training_time_factor = 0.2
 			}
 		}
-		MDL_industrial_council = {
-			picture = MDL_industrial_council
-			modifier = {
-				production_speed_buildings_factor = 0.10
-				production_factory_efficiency_gain_factor = 0.05
-				industrial_capacity_factory = 0.05
-			}
-		}
-		MDL_citizen_guard_idea = {
-			picture = MDL_citizen_guard1
-			modifier = {
-				conscription = 0.015
-				stability_factor = 0.05
-				compliance_growth = 0.10
-			}
-		}
 		MDL_streamlined_tank_production = {
 			picture = MDL_streamlined_tank_production
 			equipment_bonus = {
@@ -571,20 +555,6 @@ ideas = {
 		RIZ_council_adaptation = {
 			picture = RIZ_council_adaptation
 			modifier = { research_speed_factor = -0.10 }
-		}
-		MDL_bomber_pilots_idea = {
-			picture = FRA_army_of_aggression_focus
-			modifier = {
-				air_strategic_bomber_bombing_factor = 0.15
-				air_accidents_factor = -0.10
-			}
-		}
-		MDL_unstoppable_pilots_idea = {
-			picture = FRA_army_of_aggression_focus
-			modifier = {
-				air_night_penalty = -0.30
-				air_weather_penalty = -0.30
-			}
 		}
 		MDL_looting_abyssinia = {
 			picture = generic_purge
@@ -751,6 +721,7 @@ ideas = {
 			}
 		}
 		MDL_never_slaves_again_idea_2 = {
+			name = MDL_never_slaves_again_idea_1
 			picture = MDL_never_slaves_again
 			modifier = { army_core_defence_factor = 0.05 }
 		}
