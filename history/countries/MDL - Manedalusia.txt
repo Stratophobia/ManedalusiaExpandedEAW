@@ -58,6 +58,9 @@ set_variable = { MDL_conscription_var = 0 }
 set_variable = { MDL_production_speed_buildings_factor = 0 }
 set_variable = { MDL_asabiyyah_production_factory_efficiency_gain_factor = 0 }
 set_variable = { MDL_industrial_capacity_factory = 0 }
+set_variable = { MDL_special_forces_cap = 0 }
+set_variable = { MDL_special_forces_attack_factor = 0 }
+set_variable = { MDL_special_forces_defence_factor = 0 }
 
 ###Navy Modifier Variables###
 set_variable = { MDL_experience_gain_navy = 0.1 }

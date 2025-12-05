@@ -282,7 +282,6 @@ shared_focus = {
 	prerequisite = { focus = MDL_lean_on_legacy }
 	mutually_exclusive = { focus = MDL_ash_shahid_chosen focus = MDL_senate_path }
 	available = { always = no }#WIP
-
 	allow_branch = {
 		if = {
 			NOT = {
@@ -602,6 +601,7 @@ shared_focus = {
 	cost = 1
 	prerequisite = { focus = MDL_deal_with_the_madgriff }
 	mutually_exclusive = { focus = MDL_lean_on_legacy focus = MDL_try_for_harmony }
+	available = { always = no }#WIP
 
 	allow_branch={
 		if = {
@@ -2088,6 +2088,7 @@ shared_focus = {
 			NOT = { has_country_flag = MDL_sunmad }
 		}
 	}
+	available = { owns_state = 741 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_air_stuff"
 		add_political_power = -75
@@ -2126,26 +2127,6 @@ shared_focus = {
 		}
 	}
 	search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_AIRFORCE_BONUS }
-}
-
-shared_focus = {
-	id = MDL_heavy_air
-	icon = GFX_focus_MDL_heavy_air
-	x = -1
-	y = 1
-	relative_position_id = MDL_air_industry
-	prerequisite = { focus = MDL_air_industry }
-	cost = 5
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus MDL_heavy_air"
-		add_tech_bonus = {
-			name = fighter_bonus
-			bonus = 1.0
-			uses = 2
-			category = cat_heavy_fighter
-		}
-	}
-	search_filters = { FOCUS_FILTER_RESEARCH }
 }
 
 shared_focus = {
@@ -2188,6 +2169,26 @@ shared_focus = {
 		}
 	}
 	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+}
+
+shared_focus = {
+	id = MDL_heavy_air
+	icon = GFX_focus_MDL_heavy_air
+	x = -1
+	y = 1
+	relative_position_id = MDL_air_industry
+	prerequisite = { focus = MDL_air_industry }
+	cost = 5
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus MDL_heavy_air"
+		add_tech_bonus = {
+			name = fighter_bonus
+			bonus = 1.0
+			uses = 2
+			category = cat_heavy_fighter
+		}
+	}
+	search_filters = { FOCUS_FILTER_RESEARCH }
 }
 
 shared_focus = {
@@ -2385,6 +2386,7 @@ shared_focus = {
 	icon = GFX_focus_MDL_manedalusian_aeronautics
 	x = 0
 	y = 1
+	cost = 5
 	relative_position_id = MDL_naval_air
 	prerequisite = { focus = MDL_naval_air }
 	completion_reward = {
@@ -2578,8 +2580,7 @@ shared_focus = {
 	cost = 5
 	relative_position_id = MDL_economy_stuff
 	available = {
-		owns_state = 738
-		owns_state = 740
+		MDL = { all_original_cores_owned_by_ROOT = yes }
 	}
 	prerequisite = { focus = MDL_economy_stuff }
 	completion_reward = {
@@ -2678,9 +2679,7 @@ shared_focus = {
 	x = -3
 	y = 1
 	available = {
-		741 = { is_owned_and_controlled_by = ROOT }
-		738 = { is_owned_and_controlled_by = ROOT }
-		740 = { is_owned_and_controlled_by = ROOT }
+		MDL = { all_original_cores_owned_by_ROOT = yes }
 	}
 	relative_position_id = MDL_economy_stuff
 	prerequisite = { focus = MDL_economy_stuff }
@@ -2947,9 +2946,7 @@ shared_focus = {
 	relative_position_id = MDL_sweet_ass_rides
 	prerequisite = { focus = MDL_sweet_ass_rides }
 	available = {
-		741 = { is_owned_and_controlled_by = ROOT }
-		740 = { is_owned_and_controlled_by = ROOT }
-		738 = { is_owned_and_controlled_by = ROOT }
+		MDL = { all_original_cores_owned_by_ROOT = yes }
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_even_sweeter_rides"
@@ -3116,13 +3113,15 @@ shared_focus = {
 	relative_position_id = MDL_better_guns
 	prerequisite = { focus = MDL_better_guns }
 	available = {
-		741 = { is_owned_and_controlled_by = ROOT }
-		740 = { is_owned_and_controlled_by = ROOT }
-		738 = { is_owned_and_controlled_by = ROOT }
+		MDL = { all_original_cores_owned_by_ROOT = yes }
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_manedalusian_rangers"
-		add_ideas = MDL_manedalusian_rangers_idea
+		custom_effect_tooltip = MDL_modify_asabiyyah_rangers_tt
+		add_to_variable = { MDL_special_forces_cap = 0.15 }
+		add_to_variable = { MDL_special_forces_attack_factor = 0.10 }
+		add_to_variable = { MDL_special_forces_defence_factor = 0.10 }
+
 		if = {
 			limit = { has_dlc = "Arms Against Tyranny" }
 			add_doctrine_cost_reduction = {
@@ -3163,21 +3162,21 @@ shared_focus = {
 		741 = {
 			add_building_construction = {
 				type = anti_air_building
-				level = 1
+				level = 2
 				instant_build = yes
 			}
 		}
 		740 = {
 			add_building_construction = {
 				type = anti_air_building
-				level = 1
+				level = 2
 				instant_build = yes
 			}
 		}
 		738 = {
 			add_building_construction = {
 				type = anti_air_building
-				level = 1
+				level = 2
 				instant_build = yes
 			}
 		}
@@ -3313,7 +3312,11 @@ shared_focus = {
 			}
 			country_event = manedalusia.145
 		}
-		add_ideas = MDL_grand_army
+		custom_effect_tooltip = MDL_modify_asabiyyah_grand_army_tt
+		add_to_variable = { MDL_max_command_power = 10 }
+		add_to_variable = { MDL_command_power_gain = 0.05 }
+		add_to_variable = { MDL_experience_gain_army = 0.01 }
+		add_to_variable = { MDL_land_doctrine_cost_factor = -0.10 }
 	}
 	search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_BONUS }
 }
@@ -3326,9 +3329,7 @@ shared_focus = {
 	x = 25
 	y = 6
 	available = {
-		741 = { is_owned_and_controlled_by = ROOT }
-		738 = { is_owned_and_controlled_by = ROOT }
-		740 = { is_owned_and_controlled_by = ROOT }
+		MDL = { all_original_cores_owned_by_ROOT = yes }
 	}
 	allow_branch = {
 		if = {
@@ -10007,7 +10008,11 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM65"
 		add_war_support = 0.10
 		army_experience = 15
-		add_ideas = MDL_grand_army
+		custom_effect_tooltip = MDL_modify_asabiyyah_grand_army_tt
+		add_to_variable = { MDL_max_command_power = 10 }
+		add_to_variable = { MDL_command_power_gain = 0.05 }
+		add_to_variable = { MDL_experience_gain_army = 0.01 }
+		add_to_variable = { MDL_land_doctrine_cost_factor = -0.10 }
 	}
 }
 
@@ -10046,7 +10051,11 @@ shared_focus = {
 			category = cat_grand_battle_plan
 			category = cat_mass_assault
 		}
-		add_ideas = MDL_grand_army
+		custom_effect_tooltip = MDL_modify_asabiyyah_grand_army_tt
+		add_to_variable = { MDL_max_command_power = 10 }
+		add_to_variable = { MDL_command_power_gain = 0.05 }
+		add_to_variable = { MDL_experience_gain_army = 0.01 }
+		add_to_variable = { MDL_land_doctrine_cost_factor = -0.10 }
 	}
 }
 

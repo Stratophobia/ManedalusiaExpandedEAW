@@ -352,13 +352,6 @@ ideas = {
 				army_morale_factor = 0.05
 			}
 		}
-		MDL_manedalusian_industrious_pride = {
-			picture = MDL_industrious_pride
-			equipment_bonus = {
-				artillery_equipment = { build_cost_ic = -0.05 instant = yes }
-				infantry_equipment = { build_cost_ic = -0.1 instant = yes }
-			}
-		}
 		MDL_place_in_the_sun_idea = {
 			picture = MDL_place_in_the_sun_idea
 			modifier = {
@@ -372,33 +365,6 @@ ideas = {
 			modifier = {
 				stability_factor = -0.10
 				political_power_factor = -0.10
-			}
-		}
-		MDL_magical_reloading = {
-			picture = MDL_magical_reloading
-			modifier = { army_artillery_attack_factor = 0.15 }
-			equipment_bonus = {
-				artillery_equipment = {
-					soft_attack = 0.05
-					hard_attack = 0.05
-					build_cost_ic = 0.05
-					instant = yes
-				}
-			}
-		}
-		MDL_magical_engines = {
-			picture = MDL_magical_engines
-			equipment_bonus = {
-				motorized_equipment = {
-					reliability = 0.25
-					build_cost_ic = -0.10
-					instant = yes
-				}
-				mechanized_equipment = {
-					reliability = 0.25
-					build_cost_ic = -0.10
-					instant = yes
-				}
 			}
 		}
 		MDL_koltaliba_commissars_idea = {
@@ -416,24 +382,6 @@ ideas = {
 				heat_attrition_factor = -0.15
 				special_forces_out_of_supply_factor = -0.15
 				special_forces_training_time_factor = 0.2
-			}
-		}
-		MDL_streamlined_tank_production = {
-			picture = MDL_streamlined_tank_production
-			equipment_bonus = {
-				mechanized_equipment = {
-					maximum_speed = 0.1
-					build_cost_ic = -0.10
-					instant = yes
-				}
-			}
-		}
-		MDL_manedalusian_rangers_idea = {
-			picture = MDL_manedalusian_rangers_idea
-			modifier = {
-				special_forces_cap = 0.15
-				special_forces_attack_factor = 0.10
-				special_forces_defence_factor = 0.10
 			}
 		}
 		MDL_merchant_fleet_idea = {
@@ -489,15 +437,6 @@ ideas = {
 				political_power_gain = 0.05
 				consumer_goods_factor = -0.05
 				production_factory_efficiency_gain_factor = 0.05
-			}
-		}
-		MDL_grand_army = {
-			picture = GRI_hat
-			modifier = {
-				max_command_power = 10
-				command_power_gain = 0.05
-				experience_gain_army = 0.01
-				land_doctrine_cost_factor = -0.10
 			}
 		}
 		MDL_jizya_idea = {
@@ -1267,6 +1206,51 @@ ideas = {
 				trade_opinion_factor = 0.10
 				research_speed_factor = 0.05
 				production_factory_efficiency_gain_factor = 0.10
+			}
+		}
+###EQUIPMENT BONUS IDEAS###
+		MDL_manedalusian_industrious_pride = {
+			picture = MDL_industrious_pride
+			equipment_bonus = {
+				artillery_equipment = { build_cost_ic = -0.05 instant = yes }
+				infantry_equipment = { build_cost_ic = -0.1 instant = yes }
+			}
+		}
+		MDL_magical_reloading = {
+			picture = MDL_magical_reloading
+			modifier = { army_artillery_attack_factor = 0.15 }
+			equipment_bonus = {
+				artillery_equipment = {
+					soft_attack = 0.05
+					hard_attack = 0.05
+					build_cost_ic = 0.05
+					instant = yes
+				}
+			}
+		}
+		MDL_magical_engines = {
+			picture = MDL_magical_engines
+			equipment_bonus = {
+				motorized_equipment = {
+					reliability = 0.25
+					build_cost_ic = -0.10
+					instant = yes
+				}
+				mechanized_equipment = {
+					reliability = 0.25
+					build_cost_ic = -0.10
+					instant = yes
+				}
+			}
+		}
+		MDL_streamlined_tank_production = {
+			picture = MDL_streamlined_tank_production
+			equipment_bonus = {
+				mechanized_equipment = {
+					maximum_speed = 0.1
+					build_cost_ic = -0.10
+					instant = yes
+				}
 			}
 		}
 	}

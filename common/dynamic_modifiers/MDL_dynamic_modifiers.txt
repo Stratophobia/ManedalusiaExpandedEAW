@@ -75,6 +75,13 @@ MDL_asabiyyah_modifier = {
 	production_speed_buildings_factor = MDL_production_speed_buildings_factor
 	production_factory_efficiency_gain_factor = MDL_asabiyyah_production_factory_efficiency_gain_factor
 	industrial_capacity_factory = MDL_industrial_capacity_factory
+	special_forces_cap = MDL_special_forces_cap
+	special_forces_attack_factor = MDL_special_forces_attack_factor
+	special_forces_defence_factor = MDL_special_forces_defence_factor
+	max_command_power = MDL_max_command_power
+	command_power_gain = MDL_command_power_gain
+	experience_gain_army = MDL_experience_gain_army
+	land_doctrine_cost_factor = MDL_land_doctrine_cost_factor
 }
 
 MDL_manedalusian_navy_modifier = {
