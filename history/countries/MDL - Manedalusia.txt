@@ -19,6 +19,7 @@ add_ideas = {
 	poor_science_base
 	lack_of_scientists2
 	poverty4
+	closed_economy
 
 	MDL_humbled_sultanate
 	MDL_madgriff_in_the_harbor
@@ -29,6 +30,7 @@ set_power_balance = {
   set_value = 0
 }
 
+set_country_flag = trade_laws_blocked
 set_country_flag = has_custom_advisors
 set_country_flag = MDL_asabiyyah_unlocked
 add_dynamic_modifier = { modifier = MDL_asabiyyah_modifier }

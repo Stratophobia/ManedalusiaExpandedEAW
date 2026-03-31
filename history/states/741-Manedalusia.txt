@@ -17,7 +17,6 @@ state={
 			dockyard = 1
 			12234 = {
 				landmark_university_of_coltoba = 1
-				landmark_coltoba_palace = 1
 				naval_base = 2
 			}
 		}

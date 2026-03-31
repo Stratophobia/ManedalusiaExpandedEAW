@@ -1,6 +1,6 @@
 local FILETYPE = arg[1]
-local SPRITEPATH = arg[2]
-local TAG = arg[3]
+local TAG = arg[2]
+local SPRITEPATH = arg[3]
 
 local function fetchAllSprites(dirpath)
 	local sprites = {}
@@ -22,14 +22,25 @@ local function fetchAllSprites(dirpath)
 	return sprites
 end
 
-local function createSpriteEntry(tag, filename)
+local function createSpriteEntry(filename)
 	local spritedef = string.format(
 [[
 	SpriteType = {
 		name = "GFX_focus_%s"
-		textureFile = "gfx/interface/goals/%s/%s.tga"
+		textureFile = "%s%s.tga"
 	}
-]], filename, tag, filename)
+]], filename, SPRITEPATH, filename)
+	return spritedef
+end
+
+local function createIdeaSpriteEntry(filename)
+	local spritedef = string.format(
+[[
+	SpriteType = {
+		name = "GFX_idea_%s"
+		textureFile = "%s%s.tga"
+	}
+]], filename, SPRITEPATH, filename)
 	return spritedef
 end
 
@@ -77,13 +88,18 @@ local function generateGFXFile(tag, sprites)
 		filename = "focus_" .. tag .. ".gfx"
 	elseif (FILETYPE == "shine") then
 		filename = "focus_" .. tag .. "_shine.gfx"
+	elseif (FILETYPE == "ideas") then
+		filename = "eaw_" .. tag .. ".gfx"
 	end
 	local file = io.open(filename, "w")
+	if not file then return end
 
 	file:write("spriteTypes = {\n")
 	for _, sprite in ipairs(sprites) do
 		if (FILETYPE == "focus") then
-			file:write(createSpriteEntry(tag, sprite))
+			file:write(createSpriteEntry(sprite))
+		elseif (FILETYPE == "ideas") then
+			file:write(createIdeaSpriteEntry(sprite))
 		elseif (FILETYPE == "shine") then
 			file:write(createSpriteShineEntry(tag, sprite))
 		end

@@ -159,12 +159,10 @@ shared_focus = {
 	prerequisite = { focus = MDL_deal_with_the_madgriff }
 	mutually_exclusive = { focus = MDL_try_for_harmony focus = MDL_try_for_socialism }
 	allow_branch={
-		if = {
-			NOT = {
-				OR = {
-					has_completed_focus = MDL_try_for_harmony
-					has_completed_focus = MDL_try_for_socialism
-				}
+		NOT = {
+			OR = {
+				has_completed_focus = MDL_try_for_harmony
+				has_completed_focus = MDL_try_for_socialism
 			}
 		}
 	}
@@ -172,13 +170,7 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_lean_on_legacy"
 		add_political_power = 25
 		add_popularity = { ideology = neutrality popularity = 0.05 }
-		hidden_effect = {#collapse focus tree
-			load_focus_tree={
-				tree = manedalusia_start
-				keep_completed = yes
-			}
-			mark_focus_tree_layout_dirty = yes
-		}
+		hidden_effect = { mark_focus_tree_layout_dirty = yes }
 	}
 	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
 }
@@ -198,27 +190,19 @@ shared_focus = {
 	prerequisite = { focus = MDL_lean_on_legacy }
 	mutually_exclusive = { focus = MDL_khaldun_gambit focus = MDL_senate_path }
 	allow_branch = {
-		if = {
-			NOT = {
-				OR = {
-					has_completed_focus = MDL_try_for_harmony
-					has_completed_focus = MDL_try_for_socialism
-					has_completed_focus = MDL_khaldun_gambit
-					has_completed_focus = MDL_senate_path
-				}
+		NOT = {
+			OR = {
+				has_completed_focus = MDL_try_for_harmony
+				has_completed_focus = MDL_try_for_socialism
+				has_completed_focus = MDL_khaldun_gambit
+				has_completed_focus = MDL_senate_path
 			}
 		}
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_ash_shahid_chosen"
 		country_event = manedalusia.6
-		hidden_effect = {
-			load_focus_tree={
-				tree=manedalusia_start
-				keep_completed = yes
-			}
-			mark_focus_tree_layout_dirty = yes
-		}
+		hidden_effect = { mark_focus_tree_layout_dirty = yes }
 	}
 	search_filters = { FOCUS_FILTER_POLITICAL }
 }
@@ -283,14 +267,12 @@ shared_focus = {
 	mutually_exclusive = { focus = MDL_ash_shahid_chosen focus = MDL_senate_path }
 	available = { always = no }#WIP
 	allow_branch = {
-		if = {
-			NOT = {
-				OR = {
-					has_completed_focus = MDL_try_for_harmony
-					has_completed_focus = MDL_try_for_socialism
-					has_completed_focus = MDL_ash_shahid_chosen
-					has_completed_focus = MDL_senate_path
-				}
+		NOT = {
+			OR = {
+				has_completed_focus = MDL_try_for_harmony
+				has_completed_focus = MDL_try_for_socialism
+				has_completed_focus = MDL_ash_shahid_chosen
+				has_completed_focus = MDL_senate_path
 			}
 		}
 	}
@@ -298,13 +280,7 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_khaldun_gambit"
 		custom_effect_tooltip = MDL_WIP_tt
 		country_event = manedalusia.9
-		hidden_effect = {
-			load_focus_tree={
-				tree = manedalusia_start
-				keep_completed = yes
-			}
-			mark_focus_tree_layout_dirty = yes
-		}
+		hidden_effect = { mark_focus_tree_layout_dirty = yes }
 	}
 	search_filters = { FOCUS_FILTER_POLITICAL }
 }
@@ -370,16 +346,13 @@ shared_focus = {
 	cost = 1
 	prerequisite = { focus = MDL_lean_on_legacy }
 	mutually_exclusive = { focus = MDL_ash_shahid_chosen focus = MDL_khaldun_gambit }
-
 	allow_branch = {
-		if = {
-			NOT = {
-				OR = {
-					has_completed_focus = MDL_try_for_harmony
-					has_completed_focus = MDL_try_for_socialism
-					has_completed_focus = MDL_ash_shahid_chosen
-					has_completed_focus = MDL_khaldun_gambit
-				}
+		NOT = {
+			OR = {
+				has_completed_focus = MDL_try_for_harmony
+				has_completed_focus = MDL_try_for_socialism
+				has_completed_focus = MDL_ash_shahid_chosen
+				has_completed_focus = MDL_khaldun_gambit
 			}
 		}
 	}
@@ -390,13 +363,7 @@ shared_focus = {
 			value = 0.05
 		}
 		country_event = manedalusia.13
-		hidden_effect={
-			load_focus_tree = {
-				tree=manedalusia_start
-				keep_completed = yes
-			}
-			mark_focus_tree_layout_dirty = yes
-		}
+		hidden_effect = { mark_focus_tree_layout_dirty = yes }
 	}
 	search_filters = { FOCUS_FILTER_POLITICAL }
 }
@@ -466,12 +433,10 @@ shared_focus = {
 	prerequisite = { focus = MDL_deal_with_the_madgriff }
 	mutually_exclusive = { focus = MDL_lean_on_legacy focus = MDL_try_for_socialism }
 	allow_branch={
-		if = {
-			NOT = {
-				OR = {
-					has_completed_focus = MDL_lean_on_legacy
-					has_completed_focus = MDL_try_for_socialism
-				}
+		NOT = {
+			OR = {
+				has_completed_focus = MDL_lean_on_legacy
+				has_completed_focus = MDL_try_for_socialism
 			}
 		}
 	}
@@ -483,13 +448,7 @@ shared_focus = {
 		}
 		add_political_power = -10
 		add_popularity = { ideology = democratic popularity = 0.05 }
-		hidden_effect = {#collapse focus tree
-			load_focus_tree={
-				tree = manedalusia_start
-				keep_completed = yes
-			}
-			mark_focus_tree_layout_dirty = yes
-		}
+		hidden_effect = { mark_focus_tree_layout_dirty = yes }
 	}
 	search_filters = { FOCUS_FILTER_POLITICAL }
 }
@@ -601,15 +560,11 @@ shared_focus = {
 	cost = 1
 	prerequisite = { focus = MDL_deal_with_the_madgriff }
 	mutually_exclusive = { focus = MDL_lean_on_legacy focus = MDL_try_for_harmony }
-	available = { always = no }#WIP
-
-	allow_branch={
-		if = {
-			NOT = {
-				OR = {
-					has_completed_focus = MDL_try_for_harmony
-					has_completed_focus = MDL_lean_on_legacy
-				}
+	allow_branch = {
+		NOT = {
+			OR = {
+				has_completed_focus = MDL_try_for_harmony
+				has_completed_focus = MDL_lean_on_legacy
 			}
 		}
 	}
@@ -621,13 +576,7 @@ shared_focus = {
 		}
 		add_political_power = -10
 		add_popularity = { ideology = communism popularity = 0.05 }
-		hidden_effect = {
-			load_focus_tree={
-				tree = manedalusia_start
-				keep_completed = yes
-			}
-			mark_focus_tree_layout_dirty = yes
-		}
+		hidden_effect = { mark_focus_tree_layout_dirty = yes }
 	}
 	search_filters = { FOCUS_FILTER_POLITICAL }
 }
