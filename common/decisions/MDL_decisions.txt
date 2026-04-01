@@ -19,51 +19,6 @@ MDL_debug_tab_general = {
   }
 }
 
-MDL_debug_tab_samira = {
-  MDL_debug_samira_happiness_low = {
-    visible = { is_debug = yes }
-    complete_effect = {
-      set_variable = { MDL_samira_happiness_score = 0 }
-    }
-  }
-  MDL_debug_samira_happiness_medium = {
-    visible = { is_debug = yes }
-    complete_effect = {
-      set_variable = { MDL_samira_happiness_score = 5 }
-    }
-  }
-  MDL_debug_samira_happiness_high = {
-    visible = { is_debug = yes }
-    complete_effect = {
-      set_variable = { MDL_samira_happiness_score = 10 }
-    }
-  }
-  MDL_debug_samira_happiness_max = {
-    visible = { is_debug = yes }
-    complete_effect = {
-      set_variable = { MDL_samira_happiness_score = 13 }
-    }
-  }
-  MDL_debug_set_mehmet_fight_1 = {
-    visible = { is_debug = yes }
-    complete_effect = {
-      set_variable = { MDL_mehmet_fight_level = 1 }
-    }
-  }
-  MDL_debug_set_mehmet_fight_2 = {
-    visible = { is_debug = yes }
-    complete_effect = {
-      set_variable = { MDL_mehmet_fight_level = 2 }
-    }
-  }
-  MDL_debug_set_mehmet_fight_3 = {
-    visible = { is_debug = yes }
-    complete_effect = {
-      set_variable = { MDL_mehmet_fight_level = 3 }
-    }
-  }
-}
-
 foreign_politics = {
   MDL_colthage_treaty_decision = {
     allowed = { original_tag = MDL }

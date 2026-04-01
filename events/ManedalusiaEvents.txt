@@ -2491,6 +2491,7 @@ country_event = {#Grifo takes over
 	option = {
 		name = manedalusia.90.a
 		add_political_power = -300
+		clr_country_flag = trade_laws_blocked
 		retire_character = MDL_armil_khaldun
 		retire_character = MDL_crimson_sayf
 		retire_character = MDL_moonstriker_laylah
@@ -2499,8 +2500,10 @@ country_event = {#Grifo takes over
 
 		set_politics = { ruling_party = fascism }
 		remove_ideas = MDL_madgriff_in_the_harbor
-		remove_ideas = MDL_humbled_sultanate
-		add_ideas = MDL_ash_shuhud_resistance
+		swap_ideas = {
+			remove_idea = MDL_humbled_sultanate
+			add_idea = MDL_ash_shuhud_resistance
+		}
 		remove_power_balance = { id = MDL_theological_bop }
 		custom_effect_tooltip = MDL_batshit_insane_tree_loaded_tt
 		custom_effect_tooltip = MDL_grifo_tree_loaded_tt
@@ -2508,14 +2511,7 @@ country_event = {#Grifo takes over
 			set_country_flag = MDL_grifo_takeover
 			set_country_flag = MDL_laylah_absent
 			MDL_grant_init_ship_templates = yes
-			if = {
-				limit = { NOT = { has_dlc = "Man the Guns" } }
-				load_oob = "MDL_grifo_fleet_legacy"
-			}
-			if = {
-				limit = { has_dlc = "Man the Guns" }
-				load_oob = "MDL_grifo_fleet"
-			}
+			load_oob = "MDL_grifo_fleet"
 		}
 		hidden_effect = {
 			clr_country_flag = MDL_asabiyyah_unlocked

@@ -3680,15 +3680,9 @@ shared_focus = {
 	prerequisite = { focus = MDL_navy_stuff }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_back_in_bussiness"
-		navy_experience = 10
-		army_experience = 10
-		741 = {
-			add_extra_state_shared_building_slots = 1
-			add_building_construction = {
-				type = arms_factory
-				level = 1
-				instant_build = yes
-			}
+		swap_ideas = {
+			remove_idea = closed_economy
+			add_idea = MDL_mercantilism_idea
 		}
 	}
 	search_filters = { FOCUS_FILTER_INDUSTRY }

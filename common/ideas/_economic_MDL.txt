@@ -1,0 +1,24 @@
+ideas = {
+	trade_laws = {
+		law = yes
+		use_list_view = yes
+		MDL_mercantilism_idea = {
+			picture = MDL_mercantilism_idea
+			allowed = { always = no }
+			allowed_to_remove = { always = no }
+			removal_cost = -1
+			visible = { has_idea = MDL_mercantilism_idea }
+			modifier = {
+				min_export = 0.25
+				industrial_capacity_factory = 0.15
+				industrial_capacity_dockyard = 0.15
+				production_speed_buildings_factor = 0.15
+				research_speed_factor = 0.10
+				trade_opinion_factor = 0.30
+				civilian_intel_to_others = 25.0
+				navy_intel_to_others = 0.0
+				cic_construction_boost = 0.05
+			}
+		}
+	}
+}
