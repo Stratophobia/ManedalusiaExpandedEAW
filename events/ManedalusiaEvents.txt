@@ -192,7 +192,10 @@ country_event = {# The Manedalusia Coup
 		release = MDL
 		MDL = { change_tag_from = ROOT }
 		hidden_effect = {
-			MDL = { MDL_set_init_templates = yes }
+			MDL = {
+				MDL_set_init_templates = yes
+				set_variable = { eaw_welcome_screen = 1 }
+			}
 		}
 	}
 }

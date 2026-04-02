@@ -416,15 +416,7 @@ ideas = {
 				ship_hull_submarine = { build_cost_ic = -0.35 instant = yes }
 			}
 		}
-		MDL_golden_coast_idea = {
-			picture = MDL_golden_coast
-			modifier = {
-				political_power_factor = 0.05
-				MONTHLY_POPULATION = 0.20
-				industrial_capacity_factory = 0.05
-				industrial_capacity_dockyard = 0.05
-			}
-		}
+
 		MDL_colthage_treaty = {
 			picture = MDL_colthage_treaty1
 			cancel = {

@@ -1,4 +1,10 @@
 ###TODO###
+- Fix broken localisation for capitulation.
 - Make proper traits and reworked modifiers for advisors
-- Rework Golden Coast idea into state mod
 - Rework all coring
+- Expand upon the theological BoP (more decisions, granular buffs, etc)
+
+###ICONS###
+MDL_humbled_sultanate
+MDL_madgriff_in_the_harbor
+MDL_golden_coast_modifier

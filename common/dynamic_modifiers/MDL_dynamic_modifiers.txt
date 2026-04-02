@@ -57,50 +57,65 @@ MDL_manedalusian_navy_modifier = {
 }
 
 MDL_federal_army_modifier = {
-  icon = GFX_idea_MDL_federal_army
-  enable = { always = yes }
-  remove_trigger = {
-    NOT = { has_country_flag = MDL_federal_army_unlocked }
-  }
-  special_forces_cap = MDL_FA_special_forces_var
-  army_attack_factor = MDL_FA_attack_var
-  army_defence_factor = MDL_FA_defence_var
-  air_superiority_bonus_in_combat = MDL_FA_air_var
-  army_speed_factor = MDL_FA_speed_var
-  naval_invasion_prep_speed = MDL_FA_nav_var 
-  breakthrough_factor = MDL_FA_smash_var
-  dont_lose_dig_in_on_attack = MDL_FA_dig_in_var
+	icon = GFX_idea_MDL_federal_army
+	enable = { always = yes }
+	remove_trigger = {
+	  NOT = { has_country_flag = MDL_federal_army_unlocked }
+	}
+	special_forces_cap = MDL_FA_special_forces_var
+	army_attack_factor = MDL_FA_attack_var
+	army_defence_factor = MDL_FA_defence_var
+	air_superiority_bonus_in_combat = MDL_FA_air_var
+	army_speed_factor = MDL_FA_speed_var
+	naval_invasion_prep_speed = MDL_FA_nav_var 
+	breakthrough_factor = MDL_FA_smash_var
+	dont_lose_dig_in_on_attack = MDL_FA_dig_in_var
 }
 
 MDL_military_governorate = {
-  icon = GFX_modifiers_MDL_military_governorate
-  enable = { always = yes }
-  remove_trigger = {
-    owner = {
-      NOT = { original_tag = MDL }
-    }
-  }
-  compliance_growth = 0.15
-  resistance_growth = -0.50
-  resistance_target = -0.50
-  resistance_decay = 0.40
-  state_resources_factor = 0.5
+	icon = GFX_modifiers_MDL_military_governorate
+	enable = { always = yes }
+	remove_trigger = {
+		owner = {
+			NOT = { original_tag = MDL }
+		}
+	}
+	compliance_growth = 0.15
+	resistance_growth = -0.50
+	resistance_target = -0.50
+	resistance_decay = 0.40
+	state_resources_factor = 0.5
+}
+
+MDL_golden_coast_modifier = {
+	icon = GFX_modifiers_MDL_sultanate_province
+	enable = { always = yes }
+	remove_trigger = {
+		owner = {
+			NOT = { original_tag = MDL }
+		}
+	}
+	local_resources_factor = 0.30
+	local_building_slots = 2
+	local_factory_energy_consumption = -0.2
+	local_org_regain = 0.25
+	local_manpower = 0.15
 }
 
 MDL_sultanate_province = {
-  icon = GFX_modifiers_MDL_sultanate_province
-  enable = { always = yes }
-  remove_trigger = {
-    owner = {
-      NOT = { original_tag = MDL }
-    }
-  }
-  compliance_growth = 0.25
-  resistance_growth = -0.25
-  resistance_target = -0.25
-  resistance_decay = 0.25
-  state_resources_factor = 0.10
-  local_factories = 0.20
+	icon = GFX_modifiers_MDL_sultanate_province
+	enable = { always = yes }
+	remove_trigger = {
+		owner = {
+			NOT = { original_tag = MDL }
+		}
+	}
+	compliance_growth = 0.25
+	resistance_growth = -0.25
+	resistance_target = -0.25
+	resistance_decay = 0.25
+	state_resources_factor = 0.10
+	local_factories = 0.20
 }
 
 MDL_colonial_admin = {

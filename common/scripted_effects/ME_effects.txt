@@ -1341,6 +1341,7 @@ MDL_provide_starting_airforce = {
 				aa_lmg = 1
 				engines_1 = 1
 				early_bombs = 1
+				popup = no
 			}
 			generic_early_fighter = yes
 			generic_early_tac_bomber = yes
@@ -1484,5 +1485,25 @@ MDL_destroy_everything = {
 		type = industrial_complex
 		level = 0
 		instant_build = yes
+	}
+}
+
+MDL_grant_golden_coast_state_mod = {
+	custom_effect_tooltip = MDL_grant_golden_coast_state_mod_tt
+	effect_tooltip = {
+		add_dynamic_modifier = { modifier = MDL_golden_coast_modifier }
+		add_extra_state_shared_building_slots = 1
+		add_manpower = 150000
+		add_resource = { type = steel amount = 5 }
+	}
+	for_each_scope_loop = {
+		array = MDL.original_cores
+		if = {
+			limit = { impassable = no }
+			add_dynamic_modifier = { modifier = MDL_golden_coast_modifier }
+			add_extra_state_shared_building_slots = 1
+			add_manpower = 150000
+			add_resource = { type = steel amount = 5 }
+		}
 	}
 }
