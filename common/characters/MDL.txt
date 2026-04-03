@@ -1,4 +1,4 @@
-characters={
+characters = {
 	MDL_transitional_military_council={
 		name=MDL_transitional_military_council
 		portraits={
@@ -124,24 +124,31 @@ characters={
 		}
 	}
 	MDL_moonstriker_laylah = {
-		name=MDL_moonstriker_laylah
-		gender=female
-		portraits={
-			civilian={
-				large="gfx/leaders/MDL/moonstriker.tga"
-				small="gfx/interface/ideas/Advisors/MDL/MDL_moonstriker_laylah.tga"
+		name = MDL_moonstriker_laylah
+		gender = female
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MDL/moonstriker.tga"
+				small = "gfx/interface/ideas/Advisors/MDL/MDL_moonstriker_laylah.tga"
 			}
-			army={
-				large="gfx/leaders/MDL/moonstriker.tga"
+			army = {
+				large = "gfx/leaders/MDL/moonstriker.tga"
 			}
 		}
-		advisor={
+		advisor = {
 			slot = high_command
 			cost = 150
 			idea_token = MDL_moonstriker_laylah
 			allowed = {original_tag = MDL }
-			traits = { army_logistics_3 }
-			available = { always = yes }
+			traits = { MDL_alchemist_trait }
+			available = {
+				NOT = {
+					has_country_leader = {
+						character = MDL_moonstriker_laylah
+						ruling_only = yes
+					}
+				}
+			}
 		}
 		scientist = {
 			traits = { scientist_trait_fast_learner }
@@ -169,8 +176,8 @@ characters={
 		}
 	}
 	MDL_zahid = {
-		name=MDL_zahid
-		gender=male
+		name = MDL_zahid
+		gender = male
 		portraits={
 			civilian = {
 				large="gfx/leaders/MDL/zahid.tga"
@@ -180,10 +187,20 @@ characters={
 				large="gfx/leaders/MDL/zahid.tga"
 			}
 		}
+		advisor = {
+			slot = political_advisor
+			idea_token = MDL_zahid
+			allowed = {
+				original_tag = MDL
+				has_dlc = "La Resistance"
+			}
+			available = { has_intelligence_agency = yes }
+			traits = { head_of_intelligence }
+		}
 	}
 	MDL_grandmistress_samira = {
-		name=MDL_grandmistress_samira
-		gender=female
+		name = MDL_grandmistress_samira
+		gender = female
 		portraits = {
 			civilian = {
 				large="gfx/leaders/MDL/grandmistress_samira.tga"
@@ -198,16 +215,15 @@ characters={
 			cost = 100
 			idea_token = MDL_grandmistress_samira
 			allowed = { original_tag = MDL }
-			traits = { army_infantry_1 army_commando_2 }
-			available = { has_completed_focus = MDL_go_with_alneighzari }
-			visible = {
+			available = {
 				NOT = {
-					OR = {
-						has_country_flag = MDL_samira_country_leader
-						has_completed_focus = MDL_go_with_samira
+					has_country_leader = {
+						character = MDL_grandmistress_samira
+						ruling_only = yes
 					}
 				}
 			}
+			traits = { MDL_koltaliba_leader_trait }
 		}
 	}
 	MDL_alneighzari = {
@@ -223,12 +239,6 @@ characters={
 			idea_token = MDL_alneighzari
 			allowed = { original_tag = MDL }
 			traits = { unhindered_s }
-			available = {
-				OR = {
-					has_completed_focus = MDL_go_with_samira
-					has_completed_focus = MDL_SAM04
-				}
-			}
 		}
 		scientist = {
 			skills = {
@@ -327,17 +337,17 @@ characters={
 	}
 	MDL_qadi_of_coltoba = {
 		name = MDL_qadi_of_coltoba
-		portraits={
-			civilian={
-				large="gfx/leaders/MDL/qadi.tga"
-				small="gfx/interface/ideas/Advisors/MDL/MDL_qadi.tga"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MDL/qadi.tga"
+				small = "gfx/interface/ideas/Advisors/MDL/MDL_qadi.tga"
 			}
 		}
-		advisor={
-			slot=political_advisor
-			idea_token=MDL_qadi_of_coltoba
+		advisor = {
+			slot = political_advisor
+			idea_token = MDL_qadi_of_coltoba
 			available = { always = yes }
-			traits = { popular_figurehead }
+			traits = { MDL_qadi_trait }
 		}
 	}
 	MDL_emerald_bargain = {
@@ -435,7 +445,13 @@ characters={
 			idea_token=MDL_pacific_sunset
 			cost = 150
 			allowed = { always = yes }
-			available = { NOT = { has_government = democratic } }
+			available = {
+				NOT = { has_government = democratic }
+			}
+			modifier = {
+				non_core_manpower = 0.03
+				resistance_damage_to_garrison = 0.30
+			}
 			traits = { prince_of_terror }
 		}
 	}

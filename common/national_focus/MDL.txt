@@ -1382,8 +1382,8 @@ shared_focus = {
 		every_owned_state = {
 			limit = {
 				is_in_array = { state_original_cores = MGY }
-				add_core_of = ROOT
 			}
+			add_core_of = ROOT
 		}
 	}
 	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER }
