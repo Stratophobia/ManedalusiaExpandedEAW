@@ -9,7 +9,7 @@ MDL_alternate_velvet = {
 	enable = {
 
 		OR = {
-      has_country_flag = MDL_AI_CRIMSON_SULTAN
+			has_country_flag = MDL_AI_CRIMSON_SULTAN
 			has_game_rule = {
 				rule = MDL_ai_behavior
 				option = MDL_CRIMSON_SULTAN
@@ -21,7 +21,7 @@ MDL_alternate_velvet = {
 	}
 
 	ai_national_focuses = {
-    MDL_ash_shahid_chosen
+		MDL_ash_shahid_chosen
 	}
 
 	research = {
@@ -59,7 +59,7 @@ MDL_alternate_senate = {
 
 	enable = {
 		OR = {
-      has_country_flag = MDL_AI_SENATE
+			has_country_flag = MDL_AI_SENATE
 			has_game_rule = {
 				rule = MDL_ai_behavior
 				option = MDL_SENATE
@@ -71,7 +71,7 @@ MDL_alternate_senate = {
 	}
 
 	ai_national_focuses = {
-    MDL_senate_assumes_power
+		MDL_senate_assumes_power
 	}
 
 	research = {
@@ -110,7 +110,7 @@ MDL_alternate_ultramar = {
 	enable = {
 
 		OR = {
-      has_country_flag = MDL_AI_ULTRAMAR
+			has_country_flag = MDL_AI_ULTRAMAR
 			has_game_rule = {
 				rule = MDL_ai_behavior
 				option = MDL_ULTRAMAR
@@ -159,7 +159,7 @@ MDL_alternate_holy_war = {
 	}
 
 	enable = {
-    has_country_flag = MDL_AI_HOLY_WAR
+		has_country_flag = MDL_AI_HOLY_WAR
 	}
 	abort = {
 		

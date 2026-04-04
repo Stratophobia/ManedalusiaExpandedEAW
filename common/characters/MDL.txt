@@ -26,11 +26,22 @@ characters = {
 		country_leader={
 			desc=MDL_velvet_qamar_desc
 			ideology=harmonic_theocracy
-			traits = {
-				MDL_muftia_trait
-			}
+			traits = { MDL_muftia_trait }
 			expire="1965.1.1.1"
 			id=-1
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = MDL_velvet_qamar
+			available = {
+				NOT = {
+					has_country_leader = {
+						character = MDL_velvet_qamar
+						ruling_only = yes
+					}
+				}
+			}
+			traits = { MDL_muftia_trait }
 		}
 	}
 	MDL_sunset_mirage={
@@ -346,7 +357,14 @@ characters = {
 		advisor = {
 			slot = political_advisor
 			idea_token = MDL_qadi_of_coltoba
-			available = { always = yes }
+			available = {
+				NOT = {
+					has_country_leader = {
+						character = MDL_qadi_of_coltoba
+						ruling_only = yes
+					}
+				}
+			}
 			traits = { MDL_qadi_trait }
 		}
 	}

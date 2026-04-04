@@ -1,0 +1,310 @@
+spriteTypes = {
+	SpriteType = {
+		name = "GFX_idea_MDL_aaliyah_monument"
+		textureFile = "gfx/interface/ideas/MDL/MDL_aaliyah_monument.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_MDL_abyssinian_auxilliaries"
+		textureFile = "gfx/interface/ideas/MDL/MDL_abyssinian_auxilliaries.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_MDL_asabiyyah"
+		textureFile = "gfx/interface/ideas/MDL/MDL_asabiyyah.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_MDL_black_guard_steelworks"
+		textureFile = "gfx/interface/ideas/MDL/MDL_black_guard_steelworks.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_MDL_bulwark_of_harmony_idea"
+		textureFile = "gfx/interface/ideas/MDL/MDL_bulwark_of_harmony_idea.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_MDL_colthage_treaty"
+		textureFile = "gfx/interface/ideas/MDL/MDL_colthage_treaty.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_MDL_coltoba_city"
+		textureFile = "gfx/interface/ideas/MDL/MDL_coltoba_city.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_MDL_coltoba_shipyards"
+		textureFile = "gfx/interface/ideas/MDL/MDL_coltoba_shipyards.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_MDL_demon"
+		textureFile = "gfx/interface/ideas/MDL/MDL_demon.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_MDL_destroyed_army"
+		textureFile = "gfx/interface/ideas/MDL/MDL_destroyed_army.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_MDL_dominion_of_ultramar"
+		textureFile = "gfx/interface/ideas/MDL/MDL_dominion_of_ultramar.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_MDL_electronics_concern"
+		textureFile = "gfx/interface/ideas/MDL/MDL_electronics_concern.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_MDL_ember"
+		textureFile = "gfx/interface/ideas/MDL/MDL_ember.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_MDL_empyrean"
+		textureFile = "gfx/interface/ideas/MDL/MDL_empyrean.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_MDL_expeditionary_corps"
+		textureFile = "gfx/interface/ideas/MDL/MDL_expeditionary_corps.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_MDL_federal_army"
+		textureFile = "gfx/interface/ideas/MDL/MDL_federal_army.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_MDL_federal_assembly"
+		textureFile = "gfx/interface/ideas/MDL/MDL_federal_assembly.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_MDL_federal_constitution"
+		textureFile = "gfx/interface/ideas/MDL/MDL_federal_constitution.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_MDL_federation_joint_development"
+		textureFile = "gfx/interface/ideas/MDL/MDL_federation_joint_development.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_MDL_federation_member"
+		textureFile = "gfx/interface/ideas/MDL/MDL_federation_member.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_MDL_golden_coast"
+		textureFile = "gfx/interface/ideas/MDL/MDL_golden_coast.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_MDL_gunpowder_empire_idea"
+		textureFile = "gfx/interface/ideas/MDL/MDL_gunpowder_empire_idea.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_MDL_hashm_koltaliba_org"
+		textureFile = "gfx/interface/ideas/MDL/MDL_hashm_koltaliba_org.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_MDL_HIP_supplies"
+		textureFile = "gfx/interface/ideas/MDL/MDL_HIP_supplies.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_MDL_holy_fleet"
+		textureFile = "gfx/interface/ideas/MDL/MDL_holy_fleet.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_MDL_holy_fury"
+		textureFile = "gfx/interface/ideas/MDL/MDL_holy_fury.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_MDL_holy_mandate"
+		textureFile = "gfx/interface/ideas/MDL/MDL_holy_mandate.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_MDL_holy_zeal_idea"
+		textureFile = "gfx/interface/ideas/MDL/MDL_holy_zeal_idea.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_MDL_humbled_sultanate"
+		textureFile = "gfx/interface/ideas/MDL/MDL_humbled_sultanate.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_MDL_imperial_agri"
+		textureFile = "gfx/interface/ideas/MDL/MDL_imperial_agri.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_MDL_imperial_arms"
+		textureFile = "gfx/interface/ideas/MDL/MDL_imperial_arms.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_MDL_imperial_construction"
+		textureFile = "gfx/interface/ideas/MDL/MDL_imperial_construction.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_MDL_imperial_electrics"
+		textureFile = "gfx/interface/ideas/MDL/MDL_imperial_electrics.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_MDL_imperial_planes"
+		textureFile = "gfx/interface/ideas/MDL/MDL_imperial_planes.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_MDL_imperial_railway"
+		textureFile = "gfx/interface/ideas/MDL/MDL_imperial_railway.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_MDL_imperial_ships"
+		textureFile = "gfx/interface/ideas/MDL/MDL_imperial_ships.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_MDL_imperial_tanks"
+		textureFile = "gfx/interface/ideas/MDL/MDL_imperial_tanks.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_MDL_industrial_concern_1"
+		textureFile = "gfx/interface/ideas/MDL/MDL_industrial_concern_1.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_MDL_jizya"
+		textureFile = "gfx/interface/ideas/MDL/MDL_jizya.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_MDL_KAR_shahdom"
+		textureFile = "gfx/interface/ideas/MDL/MDL_KAR_shahdom.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_MDL_klugepilled"
+		textureFile = "gfx/interface/ideas/MDL/MDL_klugepilled.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_MDL_koltaliba_rule"
+		textureFile = "gfx/interface/ideas/MDL/MDL_koltaliba_rule.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_MDL_madgriff_in_the_harbor"
+		textureFile = "gfx/interface/ideas/MDL/MDL_madgriff_in_the_harbor.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_MDL_magical_engines"
+		textureFile = "gfx/interface/ideas/MDL/MDL_magical_engines.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_MDL_magical_reloading"
+		textureFile = "gfx/interface/ideas/MDL/MDL_magical_reloading.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_MDL_manedalusian_industrious_pride"
+		textureFile = "gfx/interface/ideas/MDL/MDL_manedalusian_industrious_pride.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_MDL_manedalusian_navy_modifier"
+		textureFile = "gfx/interface/ideas/MDL/MDL_manedalusian_navy_modifier.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_MDL_MAZ_vassal"
+		textureFile = "gfx/interface/ideas/MDL/MDL_MAZ_vassal.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_MDL_mercantile_league"
+		textureFile = "gfx/interface/ideas/MDL/MDL_mercantile_league.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_MDL_mercantilism_idea"
+		textureFile = "gfx/interface/ideas/MDL/MDL_mercantilism_idea.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_MDL_merchant_fleet"
+		textureFile = "gfx/interface/ideas/MDL/MDL_merchant_fleet.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_MDL_meritocratic_sultanate"
+		textureFile = "gfx/interface/ideas/MDL/MDL_meritocratic_sultanate.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_MDL_moonstriker_labs"
+		textureFile = "gfx/interface/ideas/MDL/MDL_moonstriker_labs.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_MDL_moonstriker_vizier"
+		textureFile = "gfx/interface/ideas/MDL/MDL_moonstriker_vizier.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_MDL_motorized_concern"
+		textureFile = "gfx/interface/ideas/MDL/MDL_motorized_concern.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_MDL_national_census"
+		textureFile = "gfx/interface/ideas/MDL/MDL_national_census.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_MDL_native_resistance"
+		textureFile = "gfx/interface/ideas/MDL/MDL_native_resistance.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_MDL_naval_academy"
+		textureFile = "gfx/interface/ideas/MDL/MDL_naval_academy.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_MDL_naval_depots_idea"
+		textureFile = "gfx/interface/ideas/MDL/MDL_naval_depots_idea.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_MDL_never_slaves_again"
+		textureFile = "gfx/interface/ideas/MDL/MDL_never_slaves_again.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_MDL_nonstop_barrage"
+		textureFile = "gfx/interface/ideas/MDL/MDL_nonstop_barrage.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_MDL_office_of_artillery"
+		textureFile = "gfx/interface/ideas/MDL/MDL_office_of_artillery.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_MDL_paying_MGY"
+		textureFile = "gfx/interface/ideas/MDL/MDL_paying_MGY.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_MDL_place_in_the_sun"
+		textureFile = "gfx/interface/ideas/MDL/MDL_place_in_the_sun.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_MDL_pony_synthesis"
+		textureFile = "gfx/interface/ideas/MDL/MDL_pony_synthesis.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_MDL_qunsul"
+		textureFile = "gfx/interface/ideas/MDL/MDL_qunsul.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_MDL_rally_the_faithful"
+		textureFile = "gfx/interface/ideas/MDL/MDL_rally_the_faithful.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_MDL_refining_concern"
+		textureFile = "gfx/interface/ideas/MDL/MDL_refining_concern.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_MDL_RIZ_council_adaptation"
+		textureFile = "gfx/interface/ideas/MDL/MDL_RIZ_council_adaptation.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_MDL_sabotage"
+		textureFile = "gfx/interface/ideas/MDL/MDL_sabotage.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_MDL_speartip_of_harmony"
+		textureFile = "gfx/interface/ideas/MDL/MDL_speartip_of_harmony.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_MDL_spec_ops"
+		textureFile = "gfx/interface/ideas/MDL/MDL_spec_ops.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_MDL_spymasters"
+		textureFile = "gfx/interface/ideas/MDL/MDL_spymasters.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_MDL_starry_sea_corridor"
+		textureFile = "gfx/interface/ideas/MDL/MDL_starry_sea_corridor.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_MDL_streamlined_tank_production"
+		textureFile = "gfx/interface/ideas/MDL/MDL_streamlined_tank_production.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_MDL_sundrinker_airwings"
+		textureFile = "gfx/interface/ideas/MDL/MDL_sundrinker_airwings.tga"
+	}
+	SpriteType = {
+		name = "GFX_idea_MDL_tailspin_shipping"
+		textureFile = "gfx/interface/ideas/MDL/MDL_tailspin_shipping.tga"
+	}
+}

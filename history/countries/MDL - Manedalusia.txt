@@ -30,6 +30,7 @@ set_power_balance = {
   id = MDL_theological_bop
   set_value = 0
 }
+set_variable = { MDL_theology_drift_cost_var = 50 }
 
 set_country_flag = trade_laws_blocked
 set_country_flag = has_custom_advisors
@@ -50,6 +51,11 @@ set_variable = { MDL_mobilization_var = 0.30 }
 set_variable = { MDL_stability_var = 0.10 }
 set_variable = { MDL_war_var = -0.05 }
 
+set_variable = { MDL_special_forces_training_time_factor = 0 }
+set_variable = { MDL_special_forces_out_of_supply_factor = 0 }
+set_variable = { MDL_heat_attrition_factor = 0 }
+set_variable = { special_forces_no_supply_grace = 0 }
+set_variable = { MDL_supply_consumption_factor = 0 }
 set_variable = { MDL_air_strategic_bomber_bombing_factor = 0 }
 set_variable = { MDL_air_accidents_factor = 0 }
 set_variable = { MDL_air_night_penalty = 0 }

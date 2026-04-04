@@ -748,7 +748,7 @@ ABY_noble_decision_category = {
 		activation = {
 			always = no
 		}
-        days_mission_timeout = 90
+				days_mission_timeout = 90
 		fire_only_once = no
 		is_good = no
 		available = {
@@ -770,7 +770,7 @@ ABY_noble_decision_category = {
 		}
 		timeout_effect = {
 			country_event = abyssinia.40
-        }
+				}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision ABY_nobles_elect_catrina"
 			add_political_power = 25
@@ -781,7 +781,7 @@ ABY_noble_decision_category = {
 		activation = {
 			always = no
 		}
-        days_mission_timeout = 90
+				days_mission_timeout = 90
 		fire_only_once = no
 		is_good = no
 		available = {
@@ -804,7 +804,7 @@ ABY_noble_decision_category = {
 		}
 		timeout_effect = {
 			country_event = abyssinia.126
-        }
+				}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision ABY_nobles_elect_clawomons"
 			add_political_power = 25
@@ -882,7 +882,7 @@ ABY_noble_decision_category = {
 				is_owned_by = ROOT
 			}
 		}
-        targets = { 1200 1201 771 772 773 774 776 777 778 779 780 782 783 784 785 786 738 740 741 }
+				targets = { 1200 1201 771 772 773 774 776 777 778 779 780 782 783 784 785 786 738 740 741 }
 		
 		on_map_mode = map_and_decisions_view
 		
@@ -1082,7 +1082,7 @@ ABY_noble_decision_category = {
 				is_owned_by = ROOT
 			}
 		}
-        targets = { 1200 1201 771 772 773 774 776 777 778 779 780 782 783 784 785 786 738 740 741 }
+				targets = { 1200 1201 771 772 773 774 776 777 778 779 780 782 783 784 785 786 738 740 741 }
 		
 		on_map_mode = map_and_decisions_view
 		
@@ -1266,7 +1266,7 @@ ABY_noble_decision_category = {
 				is_owned_by = ROOT
 			}
 		}
-        targets = { 1200 1201 771 772 773 774 776 777 778 779 780 782 783 784 785 786 738 740 741 }
+				targets = { 1200 1201 771 772 773 774 776 777 778 779 780 782 783 784 785 786 738 740 741 }
 		
 		on_map_mode = map_and_decisions_view
 		
@@ -1462,7 +1462,7 @@ ABY_noble_decision_category = {
 				is_owned_by = ROOT
 			}
 		}
-        targets = { 1200 1201 771 772 773 774 776 777 778 779 780 782 783 784 785 786 738 740 741 }
+				targets = { 1200 1201 771 772 773 774 776 777 778 779 780 782 783 784 785 786 738 740 741 }
 		
 		fire_only_once = yes
 		
@@ -1609,7 +1609,7 @@ ABY_noble_decision_category = {
 				is_owned_by = ROOT
 			}
 		}
-        targets = { 773 779 782 783 784 786 738 740 741 }
+				targets = { 773 779 782 783 784 786 738 740 741 }
 		
 		on_map_mode = map_and_decisions_view
 		
@@ -1715,7 +1715,7 @@ ABY_noble_decision_category = {
 				is_owned_by = ROOT
 			}
 		}
-        targets = { 1200 1201 771 772 773 774 776 777 778 779 780 782 783 784 785 786 738 740 741 }
+				targets = { 1200 1201 771 772 773 774 776 777 778 779 780 782 783 784 785 786 738 740 741 }
 		
 		on_map_mode = map_and_decisions_view
 		
@@ -1905,7 +1905,7 @@ ABY_noble_decision_category = {
 				is_owned_by = ROOT
 			}
 		}
-        targets = { 1200 1201 771 772 773 774 776 777 778 779 780 782 783 784 785 786 738 740 741 }
+				targets = { 1200 1201 771 772 773 774 776 777 778 779 780 782 783 784 785 786 738 740 741 }
 		
 		on_map_mode = map_and_decisions_view
 		
@@ -2083,7 +2083,7 @@ ABY_noble_decision_category = {
 				is_owned_by = ROOT
 			}
 		}
-        targets = { 1200 1201 771 772 773 774 776 777 778 779 780 782 783 784 785 786 738 740 741 }
+				targets = { 1200 1201 771 772 773 774 776 777 778 779 780 782 783 784 785 786 738 740 741 }
 		
 		on_map_mode = map_and_decisions_view
 
@@ -2684,7 +2684,7 @@ ABY_manedalusia_category = {
 				has_country_flag = ABY_MDL_crushed
 			}
 		}
-        days_mission_timeout = 100
+				days_mission_timeout = 100
 		fire_only_once = no
 		is_good = no
 		available = {
@@ -2725,14 +2725,14 @@ ABY_manedalusia_category = {
 			}
 		}
 		timeout_effect = {
-      if = {
-        limit = { MDL = { has_country_flag = MDL_genocide } }
-        country_event = manedalusia.59
-      }
-      else = {
-			  country_event = abyssinia.45
-      }
-    }
+			if = {
+				limit = { MDL = { has_country_flag = MDL_genocide } }
+				country_event = manedalusia.59
+			}
+			else = {
+				country_event = abyssinia.45
+			}
+		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision ABY_al_manedalus_awaken"
 			
@@ -2889,10 +2889,10 @@ ABY_mercenaries_category = {
 			log = "[GetDateText]: [Root.GetName]: Decision ABY_dragon_mercs"
 			custom_effect_tooltip = ABY_dragon_mercs_tt
 			hidden_effect = {
-			    set_technology = {
+					set_technology = {
 					popup = no
-				    dragons_light = 1
-			    }
+						dragons_light = 1
+					}
 				add_equipment_to_stockpile = {
 					type = dragon_equipment_0
 					amount = 250
@@ -3006,9 +3006,9 @@ ABY_abyssinian_empire_category = {
 		cost = 100
 		days_remove = 90
 
-        ai_will_do = {
+				ai_will_do = {
 			factor = 5
-        }
+				}
 		cancel_trigger = {
 			has_war = yes
 		}
@@ -3046,7 +3046,7 @@ ABY_abyssinian_empire_category = {
 				target = FROM
 				transfer_troops = no
 			}
-        }
+				}
 	}
 	ABY_establish_gov = {
 		icon = jachs_drawer
@@ -3058,9 +3058,9 @@ ABY_abyssinian_empire_category = {
 		days_remove = 30
 		fire_only_once = yes
 
-        ai_will_do = {
+				ai_will_do = {
 			factor = 40
-        }
+				}
 		cancel_trigger = {
 			has_war = yes
 		}
@@ -3126,7 +3126,7 @@ ABY_abyssinian_empire_category = {
 					}
 				}
 			}
-        }
+				}
 	}
 	ABY_guarantee_league = {
 		icon = crossed_swords
@@ -3204,9 +3204,9 @@ ABY_abyssinian_empire_category = {
 		cost = 50
 		fire_only_once = yes
 
-        ai_will_do = {
+				ai_will_do = {
 			factor = 0
-        }
+				}
 		targets = { ALO TIM SON MSH MSS MAZ ZEL ZWA ZUG HAY HYE }
 		targets_dynamic = yes
 		target_non_existing = no
@@ -4013,9 +4013,9 @@ ABY_slave_revolt_cat = {
 			custom_effect_tooltip = ABY_raise_unit_tooltip
 			hidden_effect = {
 				if = {
-				    limit = { 
-			            NOT = { 
-						    has_template = "Rebellious Slaves"
+						limit = { 
+									NOT = { 
+								has_template = "Rebellious Slaves"
 						}
 					}
 					division_template = {
@@ -4248,7 +4248,7 @@ ABY_parliament_cat = {
 		activation = {
 			always = no
 		}
-        days_mission_timeout = 365
+				days_mission_timeout = 365
 		fire_only_once = yes
 		is_good = no
 		available = {
@@ -4268,7 +4268,7 @@ ABY_parliament_cat = {
 			add_popularity = { ideology = communism popularity = -0.1 }
 			add_stability = -0.1
 			ABY_apf_opposes = yes
-        }
+				}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision ABY_hire_apf_advisor"
 			add_stability = 0.1
@@ -4285,7 +4285,7 @@ ABY_parliament_cat = {
 		activation = {
 			always = no
 		}
-        days_mission_timeout = 1095
+				days_mission_timeout = 1095
 		fire_only_once = no
 		is_good = yes
 		available = {
@@ -4296,7 +4296,7 @@ ABY_parliament_cat = {
 			ABY_provincial_elections = yes
 			custom_effect_tooltip = ABY_provincial_elections_tt
 			activate_mission = ABY_provincial_elections
-        }
+				}
 		complete_effect = {
 			
 			
@@ -4443,9 +4443,9 @@ foreign_politics = {
 		days_remove = 30
 		fire_only_once = yes
 
-        ai_will_do = {
+				ai_will_do = {
 			factor = 0
-        }
+				}
 		target_array = neighbors
 		targets_dynamic = yes
 		target_non_existing = no
@@ -4490,10 +4490,10 @@ foreign_politics = {
 					}
 				}
 				add_ai_strategy = {
-                    type = prepare_for_war
-                    id = FROM
-                    value = 1000
-                }
+										type = prepare_for_war
+										id = FROM
+										value = 1000
+								}
 				FROM = {
 					add_ai_strategy = {
 						type = prepare_for_war
@@ -4521,10 +4521,10 @@ foreign_politics = {
 					}
 				}
 				add_ai_strategy = {
-                    type = prepare_for_war
-                    id = FROM
-                    value = -1000
-                }
+										type = prepare_for_war
+										id = FROM
+										value = -1000
+								}
 				FROM = {
 					add_ai_strategy = {
 						type = prepare_for_war
@@ -4676,9 +4676,9 @@ ABY_integration_decisions = {
 		days_remove = 90
 		fire_only_once = yes
 
-        ai_will_do = {
+				ai_will_do = {
 			factor = 5
-        }
+				}
 		cancel_trigger = {
 			has_war = yes
 		}
@@ -4716,7 +4716,7 @@ ABY_integration_decisions = {
 				target = FROM
 				transfer_troops = no
 			}
-        }
+				}
 	}
 	ABY_integrate_country = {
 		icon = jachs_drawer
@@ -4727,9 +4727,9 @@ ABY_integration_decisions = {
 		cost = 75
 		fire_only_once = yes
 
-        ai_will_do = {
+				ai_will_do = {
 			factor = 40
-        }
+				}
 		targets = { MGY ANS ASS YMN MDL KLG MKS }
 		targets_dynamic = yes
 		target_non_existing = yes
@@ -4797,6 +4797,6 @@ ABY_integration_decisions = {
 					}
 				}
 			}
-        }
+				}
 	}
 }

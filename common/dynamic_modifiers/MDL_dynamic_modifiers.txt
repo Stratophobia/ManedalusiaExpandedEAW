@@ -9,6 +9,7 @@ MDL_asabiyyah_modifier = {
 	research_speed_factor = MDL_research_var
 	army_org_factor = MDL_org_var
 	army_morale_factor = MDL_morale_var
+	supply_consumption_factor = MDL_supply_consumption_factor
 	surrender_limit = MDL_surrender_var
 	consumer_goods_factor = MDL_consoom_var
 	political_power_gain = MDL_pp_var
@@ -16,6 +17,10 @@ MDL_asabiyyah_modifier = {
 	mobilization_laws_cost_factor = MDL_mobilization_var
 	stability_factor = MDL_stability_var
 	war_support_factor = MDL_war_var
+	special_forces_no_supply_grace = MDL_special_forces_no_supply_grace
+	heat_attrition_factor = MDL_heat_attrition_factor
+	special_forces_out_of_supply_factor = MDL_special_forces_out_of_supply_factor
+	special_forces_training_time_factor = MDL_special_forces_training_time_factor
 	air_strategic_bomber_bombing_factor = MDL_air_strategic_bomber_bombing_factor
 	air_accidents_factor = MDL_air_accidents_factor
 	air_night_penalty = MDL_air_night_penalty
@@ -59,7 +64,7 @@ MDL_federal_army_modifier = {
 	icon = GFX_idea_MDL_federal_army
 	enable = { always = yes }
 	remove_trigger = {
-	  NOT = { has_country_flag = MDL_federal_army_unlocked }
+		NOT = { has_country_flag = MDL_federal_army_unlocked }
 	}
 	special_forces_cap = MDL_FA_special_forces_var
 	army_attack_factor = MDL_FA_attack_var
@@ -122,8 +127,8 @@ MDL_colonial_admin = {
 	enable = { always = yes }
 	remove_trigger = {
 		owner = {
-		  NOT = { original_tag = MDL }
-	  }
+			NOT = { original_tag = MDL }
+		}
 	}
 	compliance_growth = 0.25
 	resistance_growth = -0.25

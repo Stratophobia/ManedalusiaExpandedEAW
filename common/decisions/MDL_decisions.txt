@@ -1,368 +1,339 @@
 MDL_debug_tab_general = {
-  MDL_debug_starting_tree = {
-    visible = { is_debug = yes }
-    complete_effect = { load_focus_tree = manedalusia_start }
-  }
-  MDL_debug_main_tree = {
-    visible = { is_debug = yes }
-    complete_effect = { load_focus_tree = manedalusia_main }
-  }
+	MDL_debug_starting_tree = {
+		visible = { is_debug = yes }
+		complete_effect = { load_focus_tree = manedalusia_start }
+	}
+	MDL_debug_main_tree = {
+		visible = { is_debug = yes }
+		complete_effect = { load_focus_tree = manedalusia_main }
+	}
 #  MDL_debug_ultramar_tree = {
-#    visible = { is_debug = yes }
-#    complete_effect = {
+#		 visible = { is_debug = yes }
+#		 complete_effect = {
 #
-#    }
+#		 }
 #  }
-  MDL_debug_samira_tree = {
-    visible = { is_debug = yes }
-    complete_effect = { load_focus_tree = manedalusia_samira }
-  }
+	MDL_debug_samira_tree = {
+		visible = { is_debug = yes }
+		complete_effect = { load_focus_tree = manedalusia_samira }
+	}
 }
 
 foreign_politics = {
-  MDL_colthage_treaty_decision = {
-    allowed = { original_tag = MDL }
-    icon = ger_mefo_bills
-    targets = { CTH }
-    available = {
-      NOT = { has_idea = MDL_colthage_treaty }
-      CTH = { exists = yes }
-    }
-    visible = {
-      has_completed_focus = MDL_colthaginian_deal
-      NOT = { has_country_flag = MDL_cant_prompt_CTH }
-      NOT = { has_idea = MDL_colthage_treaty }
-    }
-    cost = 25
-
-    complete_effect = {
-      log = "[GetDateText]: [Root.GetName]: Decision MDL_colthage_treaty_decision"
-      hidden_effect = { set_country_flag = MDL_cant_prompt_CTH }
-      CTH = {
-        country_event = { id = manedalusia.35 days = 3 }
-      }
-    }
-  }
+	MDL_colthage_treaty_decision = {
+		allowed = { original_tag = MDL }
+		icon = ger_mefo_bills
+		targets = { CTH }
+		available = {
+			NOT = { has_idea = MDL_colthage_treaty }
+			CTH = { exists = yes }
+		}
+		visible = {
+			has_completed_focus = MDL_colthaginian_deal
+			NOT = { has_country_flag = MDL_cant_prompt_CTH }
+			NOT = { has_idea = MDL_colthage_treaty }
+		}
+		cost = 25
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision MDL_colthage_treaty_decision"
+			hidden_effect = { set_country_flag = MDL_cant_prompt_CTH }
+			CTH = {
+				country_event = { id = manedalusia.35 days = 3 }
+			}
+		}
+	}
 }
 
 political_actions = {
-  MDL_guide_to_ash_shuhud = {
-    allowed = { original_tag = MDL }
-    icon = MDL_eye
-    cost = 0
-    fire_only_once = yes
+	MDL_guide_to_ash_shuhud = {
+		allowed = { original_tag = MDL }
+		icon = MDL_eye
+		cost = 0
+		fire_only_once = yes
 
-    visible = {
-      is_ai = no
-      NOT = {
-        OR = {
-          has_country_flag = MDL_genocide
-          has_country_flag = MDL_grifo_takeover
-        }
-      }
-    }
-    complete_effect = {
+		visible = {
+			is_ai = no
+			NOT = {
+				OR = {
+					has_country_flag = MDL_genocide
+					has_country_flag = MDL_grifo_takeover
+				}
+			}
+		}
+		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision MDL_guide_to_ash_shuhud"
-      country_event = manedalusia.64
-    }
-  }
+			country_event = manedalusia.64
+		}
+	}
 }
 
 MDL_koltaliba_tab = {
-  MDL_put_zahid_in_charge = {
-    icon = GFX_decision_jachs_drawer
-    visible = {
-      NOT = { has_government = fascism }
-      NOT = { has_completed_focus = MDL_SAM57 }
-    }
+	MDL_put_zahid_in_charge = {
+		icon = GFX_decision_jachs_drawer
+		visible = {
+			NOT = { has_government = fascism }
+			NOT = { has_completed_focus = MDL_SAM57 }
+		}
 
-    cost = 0
-    complete_effect = {
-      set_politics = { ruling_party = fascism }
-      add_ideas = MDL_spymasters_rule
-      hidden_effect = {
-        every_other_country = {
-          limit = { is_subject_of = ROOT }
-          set_politics = { ruling_party = fascism }
-        }
-      }
-    }
-  }
-  MDL_put_samira_in_charge = {
-    icon = GFX_decision_jachs_drawer
-    visible = {
-      has_government = fascism
-      has_completed_focus = MDL_SAM43
-      NOT = { has_completed_focus = MDL_SAM57 }
-    }
-    cost = 0
-    complete_effect = {
-      set_politics = { ruling_party = neutrality }
-      hidden_effect = {
-        every_other_country = {
-          limit = { is_subject_of = ROOT }
-          set_politics = { ruling_party = neutrality }
-        }
-      }
-    }
-  }
+		cost = 0
+		complete_effect = {
+			set_politics = { ruling_party = fascism }
+			add_ideas = MDL_spymasters_rule
+			hidden_effect = {
+				every_other_country = {
+					limit = { is_subject_of = ROOT }
+					set_politics = { ruling_party = fascism }
+				}
+			}
+		}
+	}
+	MDL_put_samira_in_charge = {
+		icon = GFX_decision_jachs_drawer
+		visible = {
+			has_government = fascism
+			has_completed_focus = MDL_SAM43
+			NOT = { has_completed_focus = MDL_SAM57 }
+		}
+		cost = 0
+		complete_effect = {
+			set_politics = { ruling_party = neutrality }
+			hidden_effect = {
+				every_other_country = {
+					limit = { is_subject_of = ROOT }
+					set_politics = { ruling_party = neutrality }
+				}
+			}
+		}
+	}
 
-  MDL_sabotage_enemies = {
-    icon = GFX_decision_infiltrate_state
-    cost = 25
-    modifier = {
-      army_morale_factor = -0.15
-      surrender_limit = -0.35
-      army_speed_factor = -0.05
-    }
-    days_remove = 75
-    visible = {
-      has_war = yes
-    }
+	MDL_sabotage_enemies = {
+		icon = GFX_decision_infiltrate_state
+		cost = 25
+		modifier = {
+			army_morale_factor = -0.15
+			surrender_limit = -0.35
+			army_speed_factor = -0.05
+		}
+		days_remove = 75
+		visible = { has_war = yes }
 
-    cancel_trigger = {
-      OR = {
-        has_war = no
-      }
-    }
-    remove_effect = {
-      every_enemy_country = {
-        add_ideas = MDL_sabotaged_supply
-      }
-    }
-  }
+		cancel_trigger = {
+			OR = { has_war = no }
+		}
+		remove_effect = {
+			every_enemy_country = { add_ideas = MDL_sabotaged_supply }
+		}
+	}
 
-  MDL_research_spirit_warrior_tech = {
+	MDL_research_spirit_warrior_tech = {
 		icon = crossed_swords
-
 		cost = 50
 		days_remove = 150
 		modifier = {
 			research_speed_factor = -0.05
 			consumer_goods_factor = 0.05
 		}
-
 		visible = {
-      has_completed_focus = MDL_SAM13
+			has_completed_focus = MDL_SAM13
 			NOT = { has_tech = zebra_warriors_of_new_age }
 		}
-
-		ai_will_do = {
-			factor = 50
-		}
-		
-		remove_effect = {
-		  MDL_upgrade_zeeb_tech = yes
-		}
+		ai_will_do = { factor = 50 }
+		remove_effect = { MDL_upgrade_zeeb_tech = yes }
 	}
 
-  MDL_research_zeeb_starter_tech = {
+	MDL_research_zeeb_starter_tech = {
 		icon = GFX_decision_zebra_charger
-
 		cost = 50
 		days_remove = 150
 		modifier = {
 			research_speed_factor = -0.05
 			consumer_goods_factor = 0.05
 		}
-
 		visible = {
-      has_completed_focus = MDL_SAM13
+			has_completed_focus = MDL_SAM13
 			NOT = { has_tech = tech_zebra_crafting }
 		}
-
-		ai_will_do = {
-			factor = 50
-		}
-		
+		ai_will_do = { factor = 50 }
 		remove_effect = {
-		  MDL_get_zeeb_tech = yes
+			MDL_get_zeeb_tech = yes
 		}
 	}
 
-  MDL_samira_stress_mission = {
-    allowed = { original_tag = MDL }
-    visible = {
-      NOT = { has_country_flag = MDL_samira_stress_resolved }
-      NOT = { has_government = fascism }
-      has_completed_focus = MDL_charting_new_course
-    }
-
-    is_good = no
-
-    available = { always = no }
-
-    activation = {
-      AND = {
-        has_country_flag = MDL_samira_path
-        NOT = { has_country_flag = MDL_samira_stress_resolved }
-        has_country_flag = MDL_samira_path
-        has_completed_focus = MDL_charting_new_course
-        has_government = neutrality
-      }
-    }
-
-    cancel_trigger = {
-      OR = {
-        has_country_flag = MDL_samira_stress_resolved
-        has_government = fascism
-      }
-    }
-
-    days_mission_timeout = 200
-
-    timeout_effect = {
-      custom_effect_tooltip = MDL_decrease_samira_happiness_tt
-      MDL_decrease_samira_happiness = yes
-      hidden_effect = {
-        if = {
-          limit = { NOT = { has_country_flag = MDL_max_hope_locked } }
-        }
-        set_country_flag = MDL_max_hope_locked
-      }
-    }
-  }
-  MDL_zahid_power_mission = {
-    visible = {
-      has_government = fascism
-      NOT = { has_country_flag = MDL_zahid_power_mission_nullified }
-    }
-    is_good = no
-    available = { always = no }
-    activation = {
-      has_government = fascism
-      has_country_flag = MDL_samira_path
-      NOT = { has_country_flag = MDL_zahid_power_mission_nullified }
-    }
-    cancel_trigger = {
-      OR = {
-        has_country_flag = MDL_zahid_power_mission_nullified
-        has_government = neutrality
-      }
-    }
-    days_mission_timeout = 200
-    timeout_effect = {
-      custom_effect_tooltip = MDL_decrease_samira_happiness_tt
-      custom_effect_tooltip = MDL_damage_asabiyyah_tt
-      MDL_decrease_samira_happiness = yes
-      hidden_effect = {
-        MDL_damage_asabiyyah = yes
-        if = {
-          limit = { NOT = { has_country_flag = MDL_max_hope_locked } }
-        }
-        set_country_flag = MDL_max_hope_locked
-      }
-    }
-  }
+	MDL_samira_stress_mission = {
+		allowed = { original_tag = MDL }
+		visible = {
+			NOT = { has_country_flag = MDL_samira_stress_resolved }
+			NOT = { has_government = fascism }
+			has_completed_focus = MDL_charting_new_course
+		}
+		is_good = no
+		available = { always = no }
+		activation = {
+			AND = {
+				has_country_flag = MDL_samira_path
+				NOT = { has_country_flag = MDL_samira_stress_resolved }
+				has_country_flag = MDL_samira_path
+				has_completed_focus = MDL_charting_new_course
+				has_government = neutrality
+			}
+		}
+		cancel_trigger = {
+			OR = {
+				has_country_flag = MDL_samira_stress_resolved
+				has_government = fascism
+			}
+		}
+		days_mission_timeout = 200
+		timeout_effect = {
+			custom_effect_tooltip = MDL_decrease_samira_happiness_tt
+			MDL_decrease_samira_happiness = yes
+			hidden_effect = {
+				if = {
+					limit = { NOT = { has_country_flag = MDL_max_hope_locked } }
+				}
+				set_country_flag = MDL_max_hope_locked
+			}
+		}
+	}
+	MDL_zahid_power_mission = {
+		visible = {
+			has_government = fascism
+			NOT = { has_country_flag = MDL_zahid_power_mission_nullified }
+		}
+		is_good = no
+		available = { always = no }
+		activation = {
+			has_government = fascism
+			has_country_flag = MDL_samira_path
+			NOT = { has_country_flag = MDL_zahid_power_mission_nullified }
+		}
+		cancel_trigger = {
+			OR = {
+				has_country_flag = MDL_zahid_power_mission_nullified
+				has_government = neutrality
+			}
+		}
+		days_mission_timeout = 200
+		timeout_effect = {
+			custom_effect_tooltip = MDL_decrease_samira_happiness_tt
+			custom_effect_tooltip = MDL_damage_asabiyyah_tt
+			MDL_decrease_samira_happiness = yes
+			hidden_effect = {
+				MDL_damage_asabiyyah = yes
+				if = {
+					limit = { NOT = { has_country_flag = MDL_max_hope_locked } }
+				}
+				set_country_flag = MDL_max_hope_locked
+			}
+		}
+	}
 }
 
 MDL_shield_doctrine_tab = {
-  MDL_shield_puppet_ZAR = {
-    icon = GFX_decision_MDL_shield_puppet_ZAR
-    visible = {
-      ZAR = { exists = no }
-      owns_state = 747
-    }
-    complete_effect = {
-      hidden_effect = {
-        ZAR = {
-          set_cosmetic_tag = ZAR_MDL_admin
+	MDL_shield_puppet_ZAR = {
+		icon = GFX_decision_MDL_shield_puppet_ZAR
+		visible = {
+			ZAR = { exists = no }
+			owns_state = 747
+		}
+		complete_effect = {
+			hidden_effect = {
+				ZAR = {
+					set_cosmetic_tag = ZAR_MDL_admin
 					set_politics = { ruling_party = democratic }
-          load_focus_tree = {
-            tree = generic_zebra_focus
-          }
-        }
-      }
-      release_puppet = ZAR
-    }
-  }
-  MDL_shield_attack_BAT = {
-    icon = GFX_decision_MDL_attack_BAT
-    available = { has_war = no }
-    fire_only_once = yes
-    visible = {
-      has_country_flag = MDL_shield_doctrine_unlocked
-      has_country_flag = MDL_velvet_path
-      BAT = {
-        exists = yes
-        has_government = fascism
-        is_in_faction = no
-      }
-    }
-    days_remove = 50
-    remove_effect = {
-      create_wargoal = {
-        type = puppet_wargoal_focus
-        target = BAT
-      }
-    }
-  }
-  MDL_shield_puppet_MGY = {
-    icon = GFX_decision_MDL_shield_puppet_MGY
-    ai_will_do = { factor = 300 }
-    visible = {
-      has_country_flag = MDL_shield_doctrine_unlocked
-      MGY = { exists = no }
-      735 = { is_owned_and_controlled_by = ROOT }
-    }
-    cost = 25
-    complete_effect = {
-      MDL_create_dynamic_MGY = yes
-      hidden_effect = {
-        MGY = {
+					load_focus_tree = { tree = generic_zebra_focus }
+				}
+			}
+			release_puppet = ZAR
+		}
+	}
+	MDL_shield_attack_BAT = {
+		icon = GFX_decision_MDL_attack_BAT
+		available = { has_war = no }
+		fire_only_once = yes
+		visible = {
+			has_country_flag = MDL_shield_doctrine_unlocked
+			has_country_flag = MDL_velvet_path
+			BAT = {
+				exists = yes
+				has_government = fascism
+				is_in_faction = no
+			}
+		}
+		days_remove = 50
+		remove_effect = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = BAT
+			}
+		}
+	}
+	MDL_shield_puppet_MGY = {
+		icon = GFX_decision_MDL_shield_puppet_MGY
+		ai_will_do = { factor = 300 }
+		visible = {
+			has_country_flag = MDL_shield_doctrine_unlocked
+			MGY = { exists = no }
+			735 = { is_owned_and_controlled_by = ROOT }
+		}
+		cost = 25
+		complete_effect = {
+			MDL_create_dynamic_MGY = yes
+			hidden_effect = {
+				MGY = {
 					set_politics = { ruling_party = democratic }
-          load_focus_tree = { tree = generic_zebra_focus }
-        }
-      }
-      MGY = { set_cosmetic_tag = MGY_MDL_admin }
-      every_owned_state = {
-        limit = { is_in_array = { state_original_cores = MKS } }
-        add_core_of = MGY
-      }
-      release_puppet = MGY
-    }
-  }
-  MDL_shield_puppet_BAT = {
-    icon = GFX_decision_MDL_shield_puppet_BAT
-    available = { has_war = no }
-    ai_will_do = { factor = 300 }
-    visible = {
-      has_country_flag = MDL_shield_doctrine_unlocked
-      BAT = { exists = no }
-      712 = { is_owned_and_controlled_by = ROOT }
-    }
-    cost = 25
-    complete_effect = {
-      hidden_effect = {
-        MDL_create_dynamic_BAT = yes
-        for_each_scope_loop = {
-          array = WAR.original_cores
-          add_core_of = BAT
-        }
-        for_each_scope_loop = {
-          array = TBK.original_cores
-          add_core_of = BAT
-        }
-        release_puppet = BAT
-      }
-      BAT = {
+					load_focus_tree = { tree = generic_zebra_focus }
+				}
+			}
+			MGY = { set_cosmetic_tag = MGY_MDL_admin }
+			every_owned_state = {
+				limit = { is_in_array = { state_original_cores = MKS } }
+				add_core_of = MGY
+			}
+			release_puppet = MGY
+		}
+	}
+	MDL_shield_puppet_BAT = {
+		icon = GFX_decision_MDL_shield_puppet_BAT
+		available = { has_war = no }
+		ai_will_do = { factor = 300 }
+		visible = {
+			has_country_flag = MDL_shield_doctrine_unlocked
+			BAT = { exists = no }
+			712 = { is_owned_and_controlled_by = ROOT }
+		}
+		cost = 25
+		complete_effect = {
+			hidden_effect = {
+				MDL_create_dynamic_BAT = yes
+				for_each_scope_loop = {
+					array = WAR.original_cores
+					add_core_of = BAT
+				}
+				for_each_scope_loop = {
+					array = TBK.original_cores
+					add_core_of = BAT
+				}
+				release_puppet = BAT
+			}
+			BAT = {
 				set_politics = { ruling_party = democratic }
 				set_cosmetic_tag = BAT_MDL_admin
 			}
-    }
-  }
-  MDL_shield_puppet_ABY = {
-    icon = GFX_decision_MDL_shield_puppet_ABY
-    ai_will_do = { factor = 300 }
-    visible = {
-      has_country_flag = MDL_shield_doctrine_unlocked
-      ABY = { exists = no }
-      775 = { is_owned_and_controlled_by = ROOT }
-    }
-    cost = 25
-    complete_effect = {
-      country_event = manedalusia.91
-      hidden_effect = {
+		}
+	}
+	MDL_shield_puppet_ABY = {
+		icon = GFX_decision_MDL_shield_puppet_ABY
+		ai_will_do = { factor = 300 }
+		visible = {
+			 has_country_flag = MDL_shield_doctrine_unlocked
+			ABY = { exists = no }
+			775 = { is_owned_and_controlled_by = ROOT }
+		}
+		cost = 25
+		complete_effect = {
+			country_event = manedalusia.91
+			hidden_effect = {
 				MDL_create_dynamic_ABY = yes
 				every_owned_state = {
 					limit = { is_in_array = { state_original_cores = KLG } }
@@ -370,1923 +341,1900 @@ MDL_shield_doctrine_tab = {
 				}
 				release_puppet = ABY
 			}
-      ABY = {
+			ABY = {
 				set_politics = { ruling_party = democratic }
 				set_cosmetic_tag = ABY_MDL_admin
 			}
-    }
-  }
-  MDL_shield_attack_KLG = {
-    icon = GFX_decision_MDL_shield_attack_KLG
-    available = { has_war = no }
-    fire_only_once = yes
-    visible = {
-      has_country_flag = MDL_shield_doctrine_unlocked
-      has_country_flag = MDL_velvet_path
-      KLG = { exists = yes }
-      ABY = { is_subject_of = MDL }
-      MGY = { is_subject_of = MDL }
-    }
-    days_remove = 50
-    remove_effect = {
-      create_wargoal = {
-        type = annex_everything
-        target = KLG
-      }
-    }
-  }
-  MDL_shield_integrate_KLG = {
-    icon = GFX_decision_MDL_shield_integrate_KLG
-    visible = {
-      has_country_flag = MDL_shield_doctrine_unlocked
-      has_country_flag = MDL_velvet_path
-      KLG = { exists = no }
-      owns_state = 1208
-    }
-    cost = 25
-    fire_only_once = yes
-    complete_effect = {
-      1208 = { add_core_of = MDL }
-    }
-  }
-  MDL_recognize_SDS = {
-    icon = eng_trade_unions_support
-    visible = {
-      SDS = {
-        exists = yes
-        is_subject = no
-        has_government = democratic
-      }
-    }
-    cost = 30
-    fire_only_once = yes
-    available = { has_war = no }
-    complete_effect = {
-      SDS = { country_event = { id = manedalusia.128 days = 2 } }
-    }
-  }
+		}
+	}
+	MDL_shield_attack_KLG = {
+		icon = GFX_decision_MDL_shield_attack_KLG
+		available = { has_war = no }
+		fire_only_once = yes
+		visible = {
+			has_country_flag = MDL_shield_doctrine_unlocked
+			has_country_flag = MDL_velvet_path
+			KLG = { exists = yes }
+			ABY = { is_subject_of = MDL }
+			MGY = { is_subject_of = MDL }
+		}
+		days_remove = 50
+		remove_effect = {
+			create_wargoal = {
+				type = annex_everything
+				target = KLG
+			}
+		}
+	}
+	MDL_shield_integrate_KLG = {
+		icon = GFX_decision_MDL_shield_integrate_KLG
+		visible = {
+			has_country_flag = MDL_shield_doctrine_unlocked
+			has_country_flag = MDL_velvet_path
+			KLG = { exists = no }
+			owns_state = 1208
+		}
+		cost = 25
+		fire_only_once = yes
+		complete_effect = {
+			1208 = { add_core_of = MDL }
+		}
+	}
+	MDL_recognize_SDS = {
+		icon = eng_trade_unions_support
+		visible = {
+			SDS = {
+				exists = yes
+				is_subject = no
+				has_government = democratic
+			}
+		}
+		cost = 30
+		fire_only_once = yes
+		available = { has_war = no }
+		complete_effect = {
+			SDS = { country_event = { id = manedalusia.128 days = 2 } }
+		}
+	}
 
-  MDL_katren_accord = {
-    icon = GFX_decision_MDL_katren_accord
-    visible = {
-      WNG = {
-        exists = yes
-        has_civil_war = no
-        owns_state = 1200
-      }
-      ABY = {
-        exists = yes
-        is_subject_of = ROOT
-      }
-    }
-    available = { has_war = no }
-    fire_only_once = yes
-    cost = 100
-    complete_effect = {
-      WNG = { country_event = { id = manedalusia.124 days = 2 } }
-    }
-  }
-  MDL_transfer_to_ABY = {
-    available = { has_war = no }
-    targets = { ASS ANS }
-    visible = {
-      ABY = { is_subject_of = ROOT }
-      NOT = { country_exists = FROM }
-      any_occupied_country = { tag = FROM }
-    }
-    targets_dynamic = yes
-    target_non_existing = yes
-    target_trigger = {
-      FROM = {
-        OR = {
-          original_tag = ASS
-          original_tag = ANS
-        }
-      }
-    }
-    complete_effect = {
-      every_owned_state = {
-        limit = { is_in_array = { state_original_cores = FROM } }
-        add_core_of = ABY
-        ABY = {
-          transfer_state = PREV
-        }
-      }
-      if = {
-        limit = {
-          MGY = { owns_state = 956 }
-          ABY = {
-            owns_state = 810
-            owns_state = 790
-          }
-        }
-        country_event = { id = manedalusia.72 days = 2 }
-      }
-    }
-  }
-  MDL_transfer_to_MGY = {
-    available = { has_war = no }
-    targets = { YMN }
-    visible = {
-      MGY = { is_subject_of = ROOT }
-      NOT = { country_exists = FROM }
-      any_occupied_country = { tag = FROM }
-    }
-    targets_dynamic = yes
-    target_non_existing = yes
-    target_trigger = {
-      FROM = {
-        OR = {
-          original_tag = YMN
-        }
-      }
-    }
-    complete_effect = {
-      every_owned_state = {
-        limit = { is_in_array = { state_original_cores = FROM } }
-        add_core_of = MGY
-        MGY = {
-          transfer_state = PREV
-          give_resource_rights = {
-            receiver = MDL
-            state = PREV
-          }
-        }
-      }
-      if = {
-        limit = {
-          MGY = { owns_state = 956 }
-          ABY = {
-            owns_state = 810
-            owns_state = 790
-          }
-        }
-        country_event = { id = manedalusia.72 days = 2 }
-      }
-    }
-  }
+	MDL_katren_accord = {
+		icon = GFX_decision_MDL_katren_accord
+		visible = {
+			WNG = {
+				exists = yes
+				has_civil_war = no
+				owns_state = 1200
+			}
+			ABY = {
+				exists = yes
+				is_subject_of = ROOT
+			}
+		}
+		available = { has_war = no }
+		fire_only_once = yes
+		cost = 100
+		complete_effect = {
+			WNG = { country_event = { id = manedalusia.124 days = 2 } }
+		}
+	}
+	MDL_transfer_to_ABY = {
+		available = { has_war = no }
+		targets = { ASS ANS }
+		visible = {
+			ABY = { is_subject_of = ROOT }
+			NOT = { country_exists = FROM }
+			any_occupied_country = { tag = FROM }
+		}
+		targets_dynamic = yes
+		target_non_existing = yes
+		target_trigger = {
+			FROM = {
+				OR = {
+					original_tag = ASS
+					original_tag = ANS
+				}
+			}
+		}
+		complete_effect = {
+			every_owned_state = {
+				limit = { is_in_array = { state_original_cores = FROM } }
+				add_core_of = ABY
+				ABY = { transfer_state = PREV }
+			}
+			if = {
+				limit = {
+					MGY = { owns_state = 956 }
+					ABY = {
+						owns_state = 810
+						owns_state = 790
+					}
+				}
+				country_event = { id = manedalusia.72 days = 2 }
+			}
+		}
+	}
+	MDL_transfer_to_MGY = {
+		available = { has_war = no }
+		targets = { YMN }
+		visible = {
+			MGY = { is_subject_of = ROOT }
+			NOT = { country_exists = FROM }
+			any_occupied_country = { tag = FROM }
+		}
+		targets_dynamic = yes
+		target_non_existing = yes
+		target_trigger = {
+			FROM = {
+				OR = { original_tag = YMN }
+			}
+		}
+		complete_effect = {
+			every_owned_state = {
+				limit = { is_in_array = { state_original_cores = FROM } }
+				add_core_of = MGY
+				MGY = {
+					transfer_state = PREV
+					give_resource_rights = {
+						receiver = MDL
+						state = PREV
+					}
+				}
+			}
+			if = {
+				limit = {
+					MGY = { owns_state = 956 }
+					ABY = {
+						owns_state = 810
+						owns_state = 790
+					}
+				}
+				country_event = { id = manedalusia.72 days = 2 }
+			}
+		}
+	}
 }
 
 MDL_holy_war_tab = {
-  MDL_declare_victory_holy_war = {
-    icon = crossed_swords
-    fire_only_once = yes
-    visible = {
-      has_completed_focus = MDL_kill_the_djinn
-    }
-    available = {
-      3 = { is_owned_and_controlled_by = DRG }
-      has_war = no
-    }
-    cost = 0
-    complete_effect = {
-      hidden_effect = { set_country_flag = MDL_holy_war_won }
-      country_event = manedalusia.141
-    }
-  }
+	MDL_declare_victory_holy_war = {
+		icon = crossed_swords
+		fire_only_once = yes
+		visible = { has_completed_focus = MDL_kill_the_djinn }
+		available = {
+			3 = { is_owned_and_controlled_by = DRG }
+			has_war = no
+		}
+		cost = 0
+		complete_effect = {
+			hidden_effect = { set_country_flag = MDL_holy_war_won }
+			country_event = manedalusia.141
+		}
+	}
 
-  MDL_transfer_to_DRG = {
-    cost = 0
-    visible = {
-      has_completed_focus = MDL_warplan_dragon
-      any_occupied_country = {
-        OR = {
-          tag = EQS
-          tag = NLR
-        }
-      }
-    }
-    available = {
-      has_war = no
-    }
-    complete_effect = {
-      every_owned_state = {
-        limit = { is_in_array = { state_original_cores = EQS } }
-        if = {
-          limit = {
-            NOT = { is_core_of = DRG }
-          }
-          add_core_of = DRG
-        }
-        DRG = { transfer_state = PREV }
-      }
-    }
-  }
-  MDL_support_CES = {
-    cost = 10
-    icon = eng_trade_unions_support
-    visible = {
-      NOT = { has_country_flag = MDL_CES_rejected }
-      NOT = { has_guaranteed = CES }
-      CES = {
-        exists = yes
-        has_government = democratic
-        NOT = { has_completed_focus = CES_solar_1_1 }
-      }
-    }
-    available = { has_war = no }
-    complete_effect = {
-      CES = { country_event = { id = manedalusia.120 days = 1 } }
-    }
-  }
+	MDL_transfer_to_DRG = {
+		cost = 0
+		visible = {
+			has_completed_focus = MDL_warplan_dragon
+			any_occupied_country = {
+				OR = {
+					tag = EQS
+					tag = NLR
+				}
+			}
+		}
+		available = { has_war = no }
+		complete_effect = {
+			every_owned_state = {
+				limit = { is_in_array = { state_original_cores = EQS } }
+				if = {
+					limit = {
+						NOT = { is_core_of = DRG }
+					}
+					add_core_of = DRG
+				}
+				DRG = { transfer_state = PREV }
+			}
+		}
+	}
+	MDL_support_CES = {
+		cost = 10
+		icon = eng_trade_unions_support
+		visible = {
+			NOT = { has_country_flag = MDL_CES_rejected }
+			NOT = { has_guaranteed = CES }
+			CES = {
+				exists = yes
+				has_government = democratic
+				NOT = { has_completed_focus = CES_solar_1_1 }
+			}
+		}
+		available = { has_war = no }
+		complete_effect = {
+			CES = { country_event = { id = manedalusia.120 days = 1 } }
+		}
+	}
 
-  MDL_seize_summer_islands = {
-    icon = GFX_decision_infiltrate_state
-    available = {
-      1195 = {
-        owner = {
-          has_war = yes
-          OR = {
-            original_tag = EQS
-            original_tag = NLR
-          }
-        }
-      }
-      1196 = { is_owned_and_controlled_by = ROOT }
-      1193 = { is_owned_and_controlled_by = ROOT }
-    }
-    cost = 0
-    visible = {
-      OR = {
-        EQS = { owns_state = 1195 }
-        NLR = { owns_state = 1195 }
-      }
-      OR = {
-        owns_state = 1193
-        owns_state = 1196
-      }
-    }
-    complete_effect = {
-      1195 = {
-        owner = { country_event = manedalusia.119 }
-      }
-      MDL = { transfer_state = 1195 }
-    }
-  }
+	MDL_seize_summer_islands = {
+		icon = GFX_decision_infiltrate_state
+		available = {
+			1195 = {
+				owner = {
+					has_war = yes
+					OR = {
+						original_tag = EQS
+						original_tag = NLR
+					}
+				}
+			}
+			1196 = { is_owned_and_controlled_by = ROOT }
+			1193 = { is_owned_and_controlled_by = ROOT }
+		}
+		cost = 0
+		visible = {
+			OR = {
+				EQS = { owns_state = 1195 }
+				NLR = { owns_state = 1195 }
+			}
+			OR = {
+				owns_state = 1193
+				owns_state = 1196
+			}
+		}
+		complete_effect = {
+			1195 = {
+				owner = { country_event = manedalusia.119 }
+			}
+			MDL = { transfer_state = 1195 }
+		}
+	}
 
-  MDL_befriend_breakaway = {
-    fire_only_once = yes
-    cost = 75
-    cancel_trigger = {
-      NOT = { country_exists = FROM }
-      has_war_with = FROM
-    }
+	MDL_befriend_breakaway = {
+		fire_only_once = yes
+		cost = 75
+		cancel_trigger = {
+			NOT = { country_exists = FROM }
+			has_war_with = FROM
+		}
 
-    targets = { LSP SCS STG }
-    targets_dynamic = yes
-    target_non_existing = no
-    target_trigger = {
-      FROM = {
-        OR = {
-          original_tag = LSP
-          original_tag = SCS
-          original_tag = STG
-        }
-      }
-    }
+		targets = { LSP SCS STG }
+		targets_dynamic = yes
+		target_non_existing = no
+		target_trigger = {
+			FROM = {
+				OR = {
+					original_tag = LSP
+					original_tag = SCS
+					original_tag = STG
+				}
+			}
+		}
+		visible = {
+			has_completed_focus = MDL_secure_starry_sea_islands
+			FROM = {
+				exists = yes
+				NOT = {
+					OR = {
+						is_in_faction_with = EQS
+						is_in_faction_with = NLR
+					}
+				}
+			}
+		}
+		complete_effect = {
+			add_opinion_modifier = { target = FROM modifier = MDL_holy_shield_ally }
+			FROM = { add_opinion_modifier = { target = MDL modifier = MDL_holy_shield_ally } }
+		}
+	}
 
+	MDL_operation_sundown = {
+		icon = crossed_swords
+		visible = {
+			BAT = { is_subject_of = ROOT }
+			EQC = {
+				OR = {
+					is_in_faction_with = EQS
+					is_in_faction_with = NLR
+				}
+			}
+		}
+		available = { has_war = no }
+		fire_only_once = yes
+		cost = 10
+		days_remove = 30
+		remove_effect = {
+			custom_effect_tooltip = MDL_operation_sundown_tt
+			hidden_effect = { set_country_flag = MDL_can_peaceout_new_mareland }
+			declare_war_on = {
+				type = annex_everything
+				target = EQC
+			}
+		}
+	}
 
-    visible = {
-      has_completed_focus = MDL_secure_starry_sea_islands
-      FROM = {
-        exists = yes
-        NOT = {
-          OR = {
-            is_in_faction_with = EQS
-            is_in_faction_with = NLR
-          }
-        }
-      }
-    }
+	MDL_peaceout_new_mareland = {
+		icon = GFX_decision_infiltrate_state
+		visible = {
+			has_country_flag = MDL_can_peaceout_new_mareland
+			OR = {
+				has_war_with = EQS
+				has_war_with = NLR
+				has_war_with = CHN
+			}
+		}
+		fire_only_once = yes
+		cost = 0
+		available = {
+			EQC = { has_capitulated = yes }
+		}
+		complete_effect = {
+			hidden_effect = { clr_country_flag = MDL_can_peaceout_new_mareland }
+			every_other_country = {
+				limit = { is_in_faction_with = EQC }
+				if = {
+					limit = { is_subject_of = EQC }
+					annex_country = { target = THIS }
+				}
+				if = {
+					limit = {
+						MDL = { NOT = { has_country_flag = MDL_can_peaceout_in_starry_sea } }
+					}
+					white_peace = ROOT
+				}
+			}
+		}
+	}
 
-    complete_effect = {
-      add_opinion_modifier = { target = FROM modifier = MDL_holy_shield_ally }
-      FROM = { add_opinion_modifier = { target = MDL modifier = MDL_holy_shield_ally } }
-    }
-  }
+	MDL_peaceout_starry_sea = {
+		icon = GFX_decision_infiltrate_state
+		visible = {
+			has_completed_focus = MDL_expand_junnah_doctrine
+			has_country_flag = MDL_can_peaceout_in_starry_sea
+			OR = {
+				has_war_with = EQS
+				has_war_with = NLR
+			}
+		}
+		fire_only_once = yes
+		cost = 0
+		available = {
+			1193 = { is_fully_controlled_by = ROOT }
+			1194 = { is_fully_controlled_by = ROOT }
+			PCB = { has_capitulated = yes }
+		}
+		complete_effect = {
+			hidden_effect = { clr_country_flag = MDL_can_peaceout_in_starry_sea }
+			every_other_country = {
+				limit = { is_in_faction_with = PCB}
+				if = {
+					limit = { is_subject_of = PCB }
+					annex_country = { target = THIS }
+				}
+				if = {
+					limit = {
+						MDL = { NOT = { has_country_flag = MDL_can_peaceout_new_mareland } }
+					}
+					white_peace = ROOT
+				}
+			}
+			annex_country = { target = PCB }
+		}
+	}
 
-  MDL_operation_sundown = {
-    icon = crossed_swords
-    visible = {
-      BAT = { is_subject_of = ROOT }
-      EQC = {
-        OR = {
-          is_in_faction_with = EQS
-          is_in_faction_with = NLR
-        }
-      }
-    }
-    available = { has_war = no }
-    fire_only_once = yes
-    cost = 10
-    days_remove = 30
-    remove_effect = {
-      custom_effect_tooltip = MDL_operation_sundown_tt
-      hidden_effect = { set_country_flag = MDL_can_peaceout_new_mareland }
-      declare_war_on = {
-        type = annex_everything
-        target = EQC
-      }
-    }
-  }
-
-  MDL_peaceout_new_mareland = {
-    icon = GFX_decision_infiltrate_state
-    visible = {
-      has_country_flag = MDL_can_peaceout_new_mareland
-      OR = {
-        has_war_with = EQS
-        has_war_with = NLR
-        has_war_with = CHN
-      }
-    }
-    fire_only_once = yes
-    cost = 0
-    available = {
-      EQC = { has_capitulated = yes }
-    }
-    complete_effect = {
-      hidden_effect = { clr_country_flag = MDL_can_peaceout_new_mareland }
-      every_other_country = {
-        limit = { is_in_faction_with = EQC }
-        if = {
-          limit = { is_subject_of = EQC }
-          annex_country = { target = THIS }
-        }
-        if = {
-          limit = {
-            MDL = { NOT = { has_country_flag = MDL_can_peaceout_in_starry_sea } }
-          }
-          white_peace = ROOT
-        }
-      }
-    }
-  }
-
-  MDL_peaceout_starry_sea = {
-    icon = GFX_decision_infiltrate_state
-    visible = {
-      has_completed_focus = MDL_expand_junnah_doctrine
-      has_country_flag = MDL_can_peaceout_in_starry_sea
-      OR = {
-        has_war_with = EQS
-        has_war_with = NLR
-      }
-    }
-    fire_only_once = yes
-    cost = 0
-    available = {
-      1193 = { is_fully_controlled_by = ROOT }
-      1194 = { is_fully_controlled_by = ROOT }
-      PCB = { has_capitulated = yes }
-    }
-    complete_effect = {
-      hidden_effect = { clr_country_flag = MDL_can_peaceout_in_starry_sea }
-      every_other_country = {
-        limit = { is_in_faction_with = PCB}
-        if = {
-          limit = { is_subject_of = PCB }
-          annex_country = { target = THIS }
-        }
-        if = {
-          limit = {
-            MDL = { NOT = { has_country_flag = MDL_can_peaceout_new_mareland } }
-          }
-          white_peace = ROOT
-        }
-      }
-      annex_country = { target = PCB }
-    }
-  }
-
-  MDL_starry_sea_mil_gov = {
-    icon = jachs_drawer
-    fire_only_once = yes
-    cost = 25
-
-    cancel_trigger = {
-      country_exists = FROM
-    }
-
-    targets = { DRG PCB MER EQC }
-    targets_dynamic = yes
-    target_non_existing = yes
-    target_trigger = {
-      FROM = {
-        OR = {
-          original_tag = DRG
-          original_tag = PCB
-          original_tag = MER
-          original_tag = EQC
-        }
-      }
-    }
-
-    visible = {
-      NOT = { country_exists = FROM }
-      any_occupied_country = { tag = FROM }
-    }
-    complete_effect = {
-      every_owned_state = {
-        limit = {
-          is_core_of = FROM
-          NOT = {
-            has_dynamic_modifier = { modifier = MDL_military_governorate }
-          }
-        }
-        add_dynamic_modifier = { modifier = MDL_military_governorate }
-      }
-    }
-  }
+	MDL_starry_sea_mil_gov = {
+		icon = jachs_drawer
+		fire_only_once = yes
+		cost = 25
+		cancel_trigger = { country_exists = FROM }
+		targets = { DRG PCB MER EQC }
+		targets_dynamic = yes
+		target_non_existing = yes
+		target_trigger = {
+			FROM = {
+				OR = {
+					original_tag = DRG
+					original_tag = PCB
+					original_tag = MER
+					original_tag = EQC
+				}
+			}
+		}
+		visible = {
+			NOT = { country_exists = FROM }
+			any_occupied_country = { tag = FROM }
+		}
+		complete_effect = {
+			every_owned_state = {
+				limit = {
+					is_core_of = FROM
+					NOT = {
+						has_dynamic_modifier = { modifier = MDL_military_governorate }
+					}
+				}
+				add_dynamic_modifier = { modifier = MDL_military_governorate }
+			}
+		}
+	}
 }
 
 MDL_republican_war_decisions_tab = {
-  MDL_recruit_new_soldiers = {
-    icon = GFX_decision_MDL_recruit_new_soldiers
-    allowed = { original_tag = MDL }
-    visible = { has_country_flag = MDL_federal_army_unlocked }
-    available = { always = no }
+	MDL_recruit_new_soldiers = {
+		icon = GFX_decision_MDL_recruit_new_soldiers
+		allowed = { original_tag = MDL }
+		visible = { has_country_flag = MDL_federal_army_unlocked }
+		available = { always = no }
+		days_mission_timeout = 30
+		is_good = yes
+		activation = { has_country_flag = MDL_federal_army_unlocked }
 
-    days_mission_timeout = 30
-
-    is_good = yes
-
-    activation = { has_country_flag = MDL_federal_army_unlocked }
-
-    timeout_effect = {
-      if = {
-        limit = { has_country_flag = MDL_FA_recruit_1 }
-        add_manpower = 3000
-      }
-      if = {
-        limit = { has_country_flag = MDL_FA_recruit_2 }
-        add_manpower = 4500
-      }
-      if = {
-        limit = { has_country_flag = MDL_FA_recruit_3 }
-        add_manpower = 6000
-      }
-    }
-  }
-  MDL_cut_out_bloat_in_army = {
+		timeout_effect = {
+			if = {
+				limit = { has_country_flag = MDL_FA_recruit_1 }
+				add_manpower = 3000
+			}
+			if = {
+				limit = { has_country_flag = MDL_FA_recruit_2 }
+				add_manpower = 4500
+			}
+			if = {
+				limit = { has_country_flag = MDL_FA_recruit_3 }
+				add_manpower = 6000
+			}
+		}
+	}
+	MDL_cut_out_bloat_in_army = {
 		icon = GFX_decision_MDL_cut_out_bloat_in_army
-    visible = { has_country_flag = MDL_federal_army_unlocked }
-    cost = 25
-    days_remove = 30
-
-    remove_effect = {
-      if = {
-        limit = { has_country_flag = MDL_FA_recruit_1 }
-        add_manpower = -3000
-      }
-      else_if = {
-        limit = { has_country_flag = MDL_FA_recruit_2 }
-        add_manpower = -5000
-      }
-      else = {
-        add_manpower = -6500
-      }
-      add_command_power = 10
-      army_experience = 30
-      navy_experience = 30
-      air_experience = 30
-    }
-  }
-  MDL_abyssinia_fed_army_buff = {
-    icon = GFX_decision_MDL_abyssinia_fed_army_buff
-    visible = { has_country_flag = MDL_federal_army_unlocked }
-    available = {
-      has_completed_focus = MDL_integrate_abyssinia
-      ABY = {
-        exists = yes
-        is_in_faction_with = MDL
-      }
-    }
-    fire_only_once = yes
-    custom_cost_trigger = {
-      check_variable = {
-        var = army_experience
-        value = 20
-        compare = greater_than_or_equals
-      }
+		visible = { has_country_flag = MDL_federal_army_unlocked }
+		cost = 25
+		days_remove = 30
+		remove_effect = {
+			if = {
+				limit = { has_country_flag = MDL_FA_recruit_1 }
+				add_manpower = -3000
+			}
+			else_if = {
+				limit = { has_country_flag = MDL_FA_recruit_2 }
+				add_manpower = -5000
+			}
+			else = { add_manpower = -6500 }
+			add_command_power = 10
+			army_experience = 30
+			navy_experience = 30
+			air_experience = 30
 		}
-    custom_cost_text = decision_cost_army_xp_20
-    days_remove = 30
-    complete_effect = {
-      hidden_effect = { army_experience = -20 }
-    }
-    remove_effect = {
-      custom_effect_tooltip = MDL_abyssinia_fed_army_buff_tt
-      add_to_variable = {
-        var = MDL_FA_special_forces_var
-        value = 0.25
-      }
-      add_to_variable = {
-        var = MDL_FA_attack_var
-        value = 0.05
-      }
-      add_to_variable = {
-        var = MDL_FA_defence_var
-        value = 0.05
-      }
-      add_to_variable = {
-        var = MDL_FA_speed_var
-        value = 0.10
-      }
-    }
-  }
-  MDL_klugetown_fed_army_buff = {
+	}
+	MDL_abyssinia_fed_army_buff = {
+		icon = GFX_decision_MDL_abyssinia_fed_army_buff
+		visible = { has_country_flag = MDL_federal_army_unlocked }
+		available = {
+			has_completed_focus = MDL_integrate_abyssinia
+			ABY = {
+				exists = yes
+				is_in_faction_with = MDL
+			}
+		}
+		fire_only_once = yes
+		custom_cost_trigger = {
+			check_variable = {
+				var = army_experience
+				value = 20
+				compare = greater_than_or_equals
+			}
+		}
+		custom_cost_text = decision_cost_army_xp_20
+		days_remove = 30
+		complete_effect = {
+			hidden_effect = { army_experience = -20 }
+		}
+		remove_effect = {
+			custom_effect_tooltip = MDL_abyssinia_fed_army_buff_tt
+			add_to_variable = {
+				var = MDL_FA_special_forces_var
+				value = 0.25
+			}
+			add_to_variable = {
+				var = MDL_FA_attack_var
+				value = 0.05
+			}
+			add_to_variable = {
+				var = MDL_FA_defence_var
+				value = 0.05
+			}
+			add_to_variable = {
+				var = MDL_FA_speed_var
+				value = 0.10
+			}
+		}
+	}
+	MDL_klugetown_fed_army_buff = {
 		icon = GFX_decision_MDL_klugetown_fed_army_buff
-    visible = { has_country_flag = MDL_federal_army_unlocked }
-    available = {
-      has_completed_focus = MDL_integrate_klugetown
-      KLG = {
-        exists = yes
-        is_in_faction_with = MDL
-      }
-    }
-    fire_only_once = yes
-    custom_cost_trigger = {	
-      check_variable = {
-        var = army_experience
-        value = 20
-        compare = greater_than_or_equals
-      }
+		visible = { has_country_flag = MDL_federal_army_unlocked }
+		available = {
+			has_completed_focus = MDL_integrate_klugetown
+			KLG = {
+				exists = yes
+				is_in_faction_with = MDL
+			}
 		}
-    custom_cost_text = decision_cost_army_xp_20
+		fire_only_once = yes
+		custom_cost_trigger = {	
+			check_variable = {
+				var = army_experience
+				value = 20
+				compare = greater_than_or_equals
+			}
+		}
+		custom_cost_text = decision_cost_army_xp_20
 
-    days_remove = 30
-    complete_effect = {
-      hidden_effect = { army_experience = -20 }
-    }
-    remove_effect = {
-      custom_effect_tooltip = MDL_klugetown_fed_army_buff_tt
-      add_doctrine_cost_reduction = {
-			  name = klg_buff
-			  cost_reduction = 0.5
-			  uses = 1
-			  category = air_doctrine
-		  }
-      add_to_variable = {
-        var = MDL_FA_special_forces_var
-        value = 0.25
-      }
-      add_to_variable = {
-        var = MDL_FA_attack_var
-        value = 0.05
-      }
-      add_to_variable = {
-        var = MDL_FA_defence_var
-        value = 0.05
-      }
-      add_to_variable = {
-        var = MDL_FA_air_var
-        value = 0.1
-      }
-    }
-  }
-  MDL_donkey_fed_army_buff = {
+		days_remove = 30
+		complete_effect = {
+			hidden_effect = { army_experience = -20 }
+		}
+		remove_effect = {
+			custom_effect_tooltip = MDL_klugetown_fed_army_buff_tt
+			add_doctrine_cost_reduction = {
+				name = klg_buff
+				cost_reduction = 0.5
+				uses = 1
+				category = air_doctrine
+			}
+			add_to_variable = {
+				var = MDL_FA_special_forces_var
+				value = 0.25
+			}
+			add_to_variable = {
+				var = MDL_FA_attack_var
+				value = 0.05
+			}
+			add_to_variable = {
+				var = MDL_FA_defence_var
+				value = 0.05
+			}
+			add_to_variable = {
+				var = MDL_FA_air_var
+				value = 0.1
+			}
+		}
+	}
+	MDL_donkey_fed_army_buff = {
 		icon = GFX_decision_MDL_donkey_fed_army_buff
-    visible = { has_country_flag = MDL_federal_army_unlocked }
-    available = {
-      has_completed_focus = MDL_integrate_donkeys
-      OR = {
-        ASS = {
-          exists = yes
-          is_in_faction_with = MDL
-        }
-        ANS = {
-          exists = yes
-          is_in_faction_with = MDL
-        }
-      }
-    }
-    fire_only_once = yes
-    custom_cost_trigger = {
-      check_variable = {
-        var = army_experience
-        value = 20
-        compare = greater_than_or_equals
-      }
+		visible = { has_country_flag = MDL_federal_army_unlocked }
+		available = {
+			has_completed_focus = MDL_integrate_donkeys
+			OR = {
+				ASS = {
+					exists = yes
+					is_in_faction_with = MDL
+				}
+				ANS = {
+					exists = yes
+					is_in_faction_with = MDL
+				}
+			}
 		}
-    custom_cost_text = decision_cost_army_xp_20
-
-    days_remove = 30
-    complete_effect = {
-      hidden_effect = { army_experience = -20 }
-    }
-    remove_effect = {
-      custom_effect_tooltip = MDL_donkey_fed_army_buff_tt
-      add_to_variable = {
-        var = MDL_FA_special_forces_var
-        value = 0.25
-      }
-      add_to_variable = {
-        var = MDL_FA_attack_var
-        value = 0.05
-      }
-      add_to_variable = {
-        var = MDL_FA_defence_var
-        value = 0.05
-      }
-      set_variable = { MDL_FA_dig_in_var = 1 }
-    }
-  }
-  MDL_yemane_fed_army_buff = {
+		fire_only_once = yes
+		custom_cost_trigger = {
+			check_variable = {
+				var = army_experience
+				value = 20
+				compare = greater_than_or_equals
+			}
+		}
+		custom_cost_text = decision_cost_army_xp_20
+		days_remove = 30
+		complete_effect = {
+			hidden_effect = { army_experience = -20 }
+		}
+		remove_effect = {
+			custom_effect_tooltip = MDL_donkey_fed_army_buff_tt
+			add_to_variable = {
+				var = MDL_FA_special_forces_var
+				value = 0.25
+			}
+			add_to_variable = {
+				var = MDL_FA_attack_var
+				value = 0.05
+			}
+			add_to_variable = {
+				var = MDL_FA_defence_var
+				value = 0.05
+			}
+			set_variable = { MDL_FA_dig_in_var = 1 }
+		}
+	}
+	MDL_yemane_fed_army_buff = {
 		icon = GFX_decision_MDL_yemane_fed_army_buff
-    visible = { has_country_flag = MDL_federal_army_unlocked }
-    available = {
-      has_completed_focus = MDL_integrate_yemane
-      YMN = {
-        exists = yes
-        is_in_faction_with = MDL
-      }
-    }
-    fire_only_once = yes
-    custom_cost_trigger = {
-      check_variable = {
-        var = army_experience
-        value = 20
-        compare = greater_than_or_equals
-      }
+		visible = { has_country_flag = MDL_federal_army_unlocked }
+		available = {
+			has_completed_focus = MDL_integrate_yemane
+			YMN = {
+				exists = yes
+				is_in_faction_with = MDL
+			}
 		}
-    custom_cost_text = decision_cost_army_xp_20
-
-    days_remove = 30
-    complete_effect = {
-      hidden_effect = { army_experience = -20 }
-    }
-    remove_effect = {
-      custom_effect_tooltip = MDL_yemane_fed_army_buff_tt
-      add_to_variable = {
-        var = MDL_FA_special_forces_var
-        value = 0.25
-      }
-      add_to_variable = {
-        var = MDL_FA_attack_var
-        value = 0.05
-      }
-      add_to_variable = {
-        var = MDL_FA_defence_var
-        value = 0.05
-      }
-      add_to_variable = {
-        var = MDL_FA_nav_var
-        value = 1.0
-      }
-    }
-  }
-  MDL_knights_fed_army_buff = {
+		fire_only_once = yes
+		custom_cost_trigger = {
+			check_variable = {
+				var = army_experience
+				value = 20
+				compare = greater_than_or_equals
+			}
+		}
+		custom_cost_text = decision_cost_army_xp_20
+		days_remove = 30
+		complete_effect = {
+			hidden_effect = { army_experience = -20 }
+		}
+		remove_effect = {
+			custom_effect_tooltip = MDL_yemane_fed_army_buff_tt
+			add_to_variable = {
+				var = MDL_FA_special_forces_var
+				value = 0.25
+			}
+			add_to_variable = {
+				var = MDL_FA_attack_var
+				value = 0.05
+			}
+			add_to_variable = {
+				var = MDL_FA_defence_var
+				value = 0.05
+			}
+			add_to_variable = {
+				var = MDL_FA_nav_var
+				value = 1.0
+			}
+		}
+	}
+	MDL_knights_fed_army_buff = {
 		icon = GFX_decision_MDL_knights_fed_army_buff
-    visible = { has_country_flag = MDL_federal_army_unlocked }
-    available = {
-      has_completed_focus = MDL_liberate_purrsia
-      ABY = {
-        exists = yes
-        is_in_faction_with = MDL
-        owns_state = 1200
-        owns_state = 784
-      }
-    }
-    fire_only_once = yes
-    custom_cost_trigger = {
-      check_variable = {
-        var = army_experience
-        value = 20
-        compare = greater_than_or_equals
-      }
+		visible = { has_country_flag = MDL_federal_army_unlocked }
+		available = {
+			has_completed_focus = MDL_liberate_purrsia
+			ABY = {
+				exists = yes
+				is_in_faction_with = MDL
+				owns_state = 1200
+				owns_state = 784
+			}
 		}
-    custom_cost_text = decision_cost_army_xp_20
+		fire_only_once = yes
+		custom_cost_trigger = {
+			check_variable = {
+				var = army_experience
+				value = 20
+				compare = greater_than_or_equals
+			}
+		}
+		custom_cost_text = decision_cost_army_xp_20
 
-    days_remove = 30
-    complete_effect = {
-      hidden_effect = { army_experience = -20 }
-    }
-    remove_effect = {
-      custom_effect_tooltip = MDL_knights_fed_army_buff_tt
-      add_to_variable = {
-        var = MDL_FA_special_forces_var
-        value = 0.25
-      }
-      add_to_variable = {
-        var = MDL_FA_attack_var
-        value = 0.05
-      }
-      add_to_variable = {
-        var = MDL_FA_defence_var
-        value = 0.05
-      }
-      add_to_variable = {
-        var = MDL_FA_smash_var
-        value = 0.3
-      }
-      hidden_effect = {
-			  set_technology = { tech_knights = 1 }
-			  load_oob = "MDL_Freecorps"
-		  }
-    }
-  }
+		days_remove = 30
+		complete_effect = {
+			hidden_effect = { army_experience = -20 }
+		}
+		remove_effect = {
+			custom_effect_tooltip = MDL_knights_fed_army_buff_tt
+			add_to_variable = {
+				var = MDL_FA_special_forces_var
+				value = 0.25
+			}
+			add_to_variable = {
+				var = MDL_FA_attack_var
+				value = 0.05
+			}
+			add_to_variable = {
+				var = MDL_FA_defence_var
+				value = 0.05
+			}
+			add_to_variable = {
+				var = MDL_FA_smash_var
+				value = 0.3
+			}
+			hidden_effect = {
+				set_technology = { tech_knights = 1 }
+				load_oob = "MDL_Freecorps"
+			}
+		}
+	}
 }
 
 MDL_crimson_war_tab = {
-  MDL_crimson_war_riseia = {
-    icon = GFX_decision_infiltrate_state
-    available = { 956 = { is_owned_and_controlled_by = ROOT } }
-    fire_only_once = yes
-    cost = 25
-    days_remove = 30
-    remove_effect = {
-      if = {
-        limit = { HMR = { exists = yes } }
-        declare_war_on = { type = annex_everything target = HMR }
-      }
-      if = {
-        limit = { MTA = { exists = yes } }
-        declare_war_on = { type = annex_everything target = MTA }
-      }
-      if = {
-        limit = { OSQ = { exists = yes } }
-        declare_war_on = { type = annex_everything target = OSQ }
-      }
-    }
-  }
-  MDL_crimson_war_great_lakes = {
-    icon = GFX_decision_infiltrate_state
-    fire_only_once = yes
-    cost = 25
-    days_remove = 30
-
-    remove_effect = {
-      if = {
-        limit = { ALO = { exists = yes } }
-        declare_war_on = { type = annex_everything target = ALO }
-      }
-      if = {
-        limit = { TIM = { exists = yes } }
-        declare_war_on = { type = annex_everything target = TIM }
-      }
-      if = {
-        limit = { REE = { exists = yes } }
-        declare_war_on = { type = annex_everything target = REE }
-      }
-      if = {
-        limit = { MSH = { exists = yes } }
-        declare_war_on = { type = annex_everything target = MSH }
-      }
-      if = {
-        limit = { SON = { exists = yes } }
-        declare_war_on = { type = annex_everything target = SON }
-      }
-      if = {
-        limit = { MAZ = { exists = yes } }
-        declare_war_on = { type = annex_everything target = MAZ }
-      }
-      if = {
-        limit = { ZWA = { exists = yes } }
-        declare_war_on = { type = annex_everything target = ZWA }
-      }
-      if = {
-        limit = { ZUG = { exists = yes } }
-        declare_war_on = { type = annex_everything target = ZUG }
-      }
-      if = {
-        limit = { ZEL = { exists = yes } }
-        declare_war_on = { type = annex_everything target = ZEL }
-      }
-      if = {
-        limit = { HAY = { exists = yes } }
-        declare_war_on = { type = annex_everything target = HAY }
-      }
-      if = {
-        limit = { MSS = { exists = yes } }
-        declare_war_on = { type = annex_everything target = MSS }
-      }
-    }
-  }
-  MDL_crimson_war_bats = {
-    icon = GFX_decision_infiltrate_state
-    visible = {
-      BAT = {
-        exists = yes
-        is_subject = no
-        is_in_faction = no
-      }
-    }
-    fire_only_once = yes
-    cost = 25
-    days_remove = 30
-
-    remove_effect = {
-      if = {
-        limit = { BAT = { exists = yes } }
-        declare_war_on = { type = annex_everything target = BAT }
-      }
-    }
-  }
-  MDL_crimson_war_zar_puppet = {
-    visible = {
-      ZAR = { exists = no }
-      owns_state = 755
-    }
-    cost = 25
-    fire_only_once = yes
-    days_remove = 10
-    remove_effect = {
-      hidden_effect = {
-        ZAR = {
-          load_focus_tree = {
-            tree = generic_zebra_focus
-          }
-        }
-      }
-      ZAR = { set_cosmetic_tag = ZAR_VASSAL }
-      release_puppet = ZAR
-    }
-  }
-  MDL_crimson_war_hestraya = {
-    icon = GFX_decision_infiltrate_state
-    available = {
-      868 = { is_owned_and_controlled_by = ROOT }
-    }
-    fire_only_once = yes
-    cost = 25
-    days_remove = 30
-    remove_effect = {
-      if = {
-        limit = { KAR = { exists = yes } }
-        declare_war_on = { type = annex_everything target = KAR }
-      }
-      if = {
-        limit = { AES = { exists = yes } }
-        declare_war_on = { type = annex_everything target = AES }
-      }
-      if = {
-        limit = { MTO = { exists = yes } }
-        declare_war_on = { type = annex_everything target = MTO }
-      }
-    }
-  }
+	MDL_crimson_war_riseia = {
+		icon = GFX_decision_infiltrate_state
+		available = { 956 = { is_owned_and_controlled_by = ROOT } }
+		fire_only_once = yes
+		cost = 25
+		days_remove = 30
+		remove_effect = {
+			if = {
+				limit = { HMR = { exists = yes } }
+				declare_war_on = { type = annex_everything target = HMR }
+			}
+			if = {
+				limit = { MTA = { exists = yes } }
+				declare_war_on = { type = annex_everything target = MTA }
+			}
+			if = {
+				limit = { OSQ = { exists = yes } }
+				declare_war_on = { type = annex_everything target = OSQ }
+			}
+		}
+	}
+	MDL_crimson_war_great_lakes = {
+		icon = GFX_decision_infiltrate_state
+		fire_only_once = yes
+		cost = 25
+		days_remove = 30
+		remove_effect = {
+			if = {
+				limit = { ALO = { exists = yes } }
+				declare_war_on = { type = annex_everything target = ALO }
+			}
+			if = {
+				limit = { TIM = { exists = yes } }
+				declare_war_on = { type = annex_everything target = TIM }
+			}
+			if = {
+				limit = { REE = { exists = yes } }
+				declare_war_on = { type = annex_everything target = REE }
+			}
+			if = {
+				limit = { MSH = { exists = yes } }
+				declare_war_on = { type = annex_everything target = MSH }
+			}
+			if = {
+				limit = { SON = { exists = yes } }
+				declare_war_on = { type = annex_everything target = SON }
+			}
+			if = {
+				limit = { MAZ = { exists = yes } }
+				declare_war_on = { type = annex_everything target = MAZ }
+			}
+			if = {
+				limit = { ZWA = { exists = yes } }
+				declare_war_on = { type = annex_everything target = ZWA }
+			}
+			if = {
+				limit = { ZUG = { exists = yes } }
+				declare_war_on = { type = annex_everything target = ZUG }
+			}
+			if = {
+				limit = { ZEL = { exists = yes } }
+				declare_war_on = { type = annex_everything target = ZEL }
+			}
+			if = {
+				limit = { HAY = { exists = yes } }
+				declare_war_on = { type = annex_everything target = HAY }
+			}
+			if = {
+				limit = { MSS = { exists = yes } }
+				declare_war_on = { type = annex_everything target = MSS }
+			}
+		}
+	}
+	MDL_crimson_war_bats = {
+		icon = GFX_decision_infiltrate_state
+		visible = {
+			BAT = {
+				exists = yes
+				is_subject = no
+				is_in_faction = no
+			}
+		}
+		fire_only_once = yes
+		cost = 25
+		days_remove = 30
+		remove_effect = {
+			if = {
+				limit = { BAT = { exists = yes } }
+				declare_war_on = { type = annex_everything target = BAT }
+			}
+		}
+	}
+	MDL_crimson_war_zar_puppet = {
+		visible = {
+			ZAR = { exists = no }
+			owns_state = 755
+		}
+		cost = 25
+		fire_only_once = yes
+		days_remove = 10
+		remove_effect = {
+			hidden_effect = {
+				ZAR = {
+					load_focus_tree = { tree = generic_zebra_focus }
+				}
+			}
+			ZAR = { set_cosmetic_tag = ZAR_VASSAL }
+			release_puppet = ZAR
+		}
+	}
+	MDL_crimson_war_hestraya = {
+		icon = GFX_decision_infiltrate_state
+		available = {
+			868 = { is_owned_and_controlled_by = ROOT }
+		}
+		fire_only_once = yes
+		cost = 25
+		days_remove = 30
+		remove_effect = {
+			if = {
+				limit = { KAR = { exists = yes } }
+				declare_war_on = { type = annex_everything target = KAR }
+			}
+			if = {
+				limit = { AES = { exists = yes } }
+				declare_war_on = { type = annex_everything target = AES }
+			}
+			if = {
+				limit = { MTO = { exists = yes } }
+				declare_war_on = { type = annex_everything target = MTO }
+			}
+		}
+	}
 }
 
 MDL_wingbardy_war_tab = {
-  MDL_wingbardy_war_mission = {
-    allowed = { original_tag = MDL }
-    visible = { has_country_flag = MDL_war_with_wingbardy }
-    is_good = yes
-    available = { always = no }
-    activation = {
-      AND = {
-        has_country_flag = MDL_war_with_wingbardy
-        NOT = { 1200 = { is_controlled_by = WNG } }
-        NOT = { 784 = { is_controlled_by = WNG } }
-      }
-    }
-    cancel_trigger = {
-      OR = {
-        1200 = { is_controlled_by = WNG }
-        784 = { is_controlled_by = WNG }
-      }
-    }
-    days_mission_timeout = 45
-    timeout_effect = {
-      country_event = { id = manedalusia.43 }
-    }
-  }
+	MDL_wingbardy_war_mission = {
+		allowed = { original_tag = MDL }
+		visible = { has_country_flag = MDL_war_with_wingbardy }
+		is_good = yes
+		available = { always = no }
+		activation = {
+			AND = {
+				has_country_flag = MDL_war_with_wingbardy
+				NOT = { 1200 = { is_controlled_by = WNG } }
+				NOT = { 784 = { is_controlled_by = WNG } }
+			}
+		}
+		cancel_trigger = {
+			OR = {
+				1200 = { is_controlled_by = WNG }
+				784 = { is_controlled_by = WNG }
+			}
+		}
+		days_mission_timeout = 45
+		timeout_effect = {
+			country_event = { id = manedalusia.43 }
+		}
+	}
 }
 
 MDL_fiqh_decisions_tab = {
-  MDL_debug_traditionalists = {
-    visible = { is_debug = yes }
-    complete_effect = {
-      add_power_balance_value = {
-			  id = MDL_theological_bop
-			  value = -0.15
-		  }
-    }
-  }
-  MDL_debug_hermetics = {
-    visible = { is_debug = yes }
-    complete_effect = {
-      add_power_balance_value = {
-			  id = MDL_theological_bop
-			  value = 0.15
-		  }
-    }
-  }
-  MDL_favor_traditionalists = {
-    icon = GFX_decision_MDL_favor_traditionalists
-    allowed = { original_tag = MDL }
-    cost = 100
-    days_remove = 50
-    remove_effect = {
-      add_power_balance_value = {
-        id = MDL_theological_bop
-        value = -0.10
-      }
-    }
-  }
-  MDL_favor_hermetics = {
-    icon = GFX_decision_MDL_favor_hermetics
-    allowed = { original_tag = MDL }
+	MDL_debug_traditionalists = {
+		visible = { is_debug = yes }
+		complete_effect = {
+			add_power_balance_value = {
+				id = MDL_theological_bop
+				value = -0.15
+			}
+		}
+	}
+	MDL_debug_hermetics = {
+		visible = { is_debug = yes }
+		complete_effect = {
+			add_power_balance_value = {
+				id = MDL_theological_bop
+				value = 0.15
+			}
+		}
+	}
+	MDL_favor_traditionalists = {
+		icon = GFX_decision_MDL_favor_traditionalists
+		allowed = { original_tag = MDL }
+		cost = var:MDL_theology_drift_cost_var
+		days_remove = 50
+		remove_effect = {
+			add_power_balance_value = {
+				id = MDL_theological_bop
+				value = -0.10
+			}
+		}
+	}
+	MDL_favor_hermetics = {
+		icon = GFX_decision_MDL_favor_hermetics
+		allowed = { original_tag = MDL }
 		visible = {
 			NOT = { has_country_flag = MDL_mirage_path }
 		}
-    cost = 100
-    days_remove = 50
-    remove_effect = {
-      add_power_balance_value = {
-        id = MDL_theological_bop
-        value = 0.10
-      }
-    }
-  }
-  MDL_fiqh_1 = {#natural causality
-    icon = GFX_decision_MDL_fiqh_1
-    allowed = { original_tag = MDL }
-    cost = 50
-    fire_only_once = yes
-    complete_effect = {
-      country_event = manedalusia.30
-    }
-  }
-  MDL_fiqh_2 = {#the princesses
-    icon = GFX_decision_MDL_fiqh_2
-    allowed = { original_tag = MDL }
-    cost = 50
-    fire_only_once = yes
-    complete_effect = {
-      country_event = manedalusia.31
-    }
-  }
-  MDL_fiqh_3 = {#qadi authority
-    icon = GFX_decision_MDL_fiqh_3
-    allowed = { original_tag = MDL }
-    cost = 50
-    fire_only_once = yes
-    complete_effect = {
-      country_event = manedalusia.32
-    }
-  }
-  MDL_fiqh_4 = {#kalam
-    icon = GFX_decision_MDL_fiqh_4
-    allowed = { original_tag = MDL }
-    cost = 50
-    fire_only_once = yes
-    complete_effect = {
-      country_event = manedalusia.33
-    }
-  }
-  MDL_fiqh_5 = {#free will
-    icon = GFX_decision_MDL_fiqh_5
-    allowed = { original_tag = MDL }
-    cost = 50
-    fire_only_once = yes
-    complete_effect = {
-      country_event = manedalusia.34
-    }
-  }
+		cost = var:MDL_theology_drift_cost_var
+		days_remove = 50
+		remove_effect = {
+			add_power_balance_value = {
+				id = MDL_theological_bop
+				value = 0.10
+			}
+		}
+	}
+	MDL_fiqh_1 = {#natural causality
+		icon = GFX_decision_MDL_fiqh_1
+		allowed = { original_tag = MDL }
+		cost = 50
+		available = { has_country_flag = MDL_fiqh_decisions_unlocked }
+		fire_only_once = yes
+		complete_effect = {
+			country_event = manedalusia.30
+		}
+	}
+	MDL_fiqh_2 = {#the princesses
+		icon = GFX_decision_MDL_fiqh_2
+		allowed = { original_tag = MDL }
+		cost = 50
+		available = { has_country_flag = MDL_fiqh_decisions_unlocked }
+		fire_only_once = yes
+		complete_effect = {
+			country_event = manedalusia.31
+		}
+	}
+	MDL_fiqh_3 = {#qadi authority
+		icon = GFX_decision_MDL_fiqh_3
+		allowed = { original_tag = MDL }
+		cost = 50
+		available = { has_country_flag = MDL_fiqh_decisions_unlocked }
+		fire_only_once = yes
+		complete_effect = {
+			country_event = manedalusia.32
+		}
+	}
+	MDL_fiqh_4 = {#kalam
+		icon = GFX_decision_MDL_fiqh_4
+		allowed = { original_tag = MDL }
+		cost = 50
+		available = { has_country_flag = MDL_fiqh_decisions_unlocked }
+		fire_only_once = yes
+		complete_effect = {
+			country_event = manedalusia.33
+		}
+	}
+	MDL_fiqh_5 = {#free will
+		icon = GFX_decision_MDL_fiqh_5
+		allowed = { original_tag = MDL }
+		cost = 50
+		available = { has_country_flag = MDL_fiqh_decisions_unlocked }
+		fire_only_once = yes
+		complete_effect = {
+			country_event = manedalusia.34
+		}
+	}
 }
 
 MDL_grifo_imperium_decisions_tab = {
 
-  MDL_ultramar_secure_new_mareland = {
-    icon = griffon_claw
-    fire_only_once = yes
-    targets = { EQC }
-    target_trigger = {
-      FROM = { original_tag = EQC }
-    }
-    visible = {
-      has_country_flag = MDL_imperium_restored
-      has_war_with = EQC
-    }
-    available = {
-      EQC = { has_capitulated = yes }
-      356 = {
-        controller = {
-          OR = {
-            tag = ROOT
-            is_ally_with = ROOT
-          }
-        }
-      }
-      362 = {
-        controller = {
-          OR = {
-            tag = ROOT
-            is_ally_with = ROOT
-          }
-        }
-      }
-    }
-    complete_effect = {
-      if = {
-        limit = {
-          FROM = { is_subject = yes }
-        }
-        FROM = {
-          overlord = {
-            country_event = { id = manedalusia.70 days = 1 }
-          }
-        }
-      }
-      else_if = {
-        limit = {
-          FROM = {
-            is_in_faction = yes
-            is_faction_leader = no
-          }
-        }
-        every_enemy_country = {
-          limit = {
-            is_in_faction_with = FROM
-            is_faction_leader = yes
-          }
-          country_event = { id = manedalusia.70 hours = 2 }
-        }
-      }
-    }
-  }
-
-  MDL_restore_eternal_city = {
-    visible = { has_country_flag = MDL_imperium_decisions_unlocked }
-    available = {
-      371 = { is_owned_and_controlled_by = ROOT }
-      has_war = no
-    }
-    highlight_states = {
-      highlight_state_targets = { state = 371 }
-    }
-    fire_only_once = yes
-    cost = 25
-    complete_effect = {
-      country_event = manedalusia.108
-      set_capital = {
-        state = 371
-        remember_old_capital = no 
-      }
-      add_state_core = 371
-    }
-  }
-
-  MDL_puppet_EQC = {
-    cost = 25
-    fire_only_once = yes
-    visible = {
-      has_country_flag = MDL_imperium_decisions_unlocked
-      has_country_flag = MDL_imperium_restored
-    }
-    available = {
-      356 = { is_owned_and_controlled_by = ROOT }
-      EQC = { exists = no }
-    }
-    highlight_states = {
-      highlight_state_targets = { state = 356 }
-    }
-    complete_effect = {
-      hidden_effect = {
-        EQC = {
-          load_focus_tree = generic_griffon_focus
-          generate_character = {
-            token_base = EQC_rosa_branca
-            name = EQC_rosa_branca
-          }
-          set_portraits = {
-            character = EQC_rosa_branca
-            civilian = {
-              large = "gfx/leaders/MDL/rosa_branca.tga"
-              small="gfx/interface/ideas/Advisors/MDL/MDL_rosa_branca.tga"
-            }
-            army = {
-              large = "gfx/leaders/MDL/rosa_branca.tga"
-            }
-          }
-          add_country_leader_role = {
-            character = EQC_rosa_branca
-              country_leader={
-              ideology=esotericism
-              expire="1965.1.1.1"
-              id=-1
-            }
-            promote_leader = yes
-          }
-          set_party_name = {
-            ideology = fascism
-            long_name = EQC_GRIFO_PARTY_NAME_LONG
-            name = EQC_GRIFO_PARTY_NAME
-          }
-        }
-      }
-      EQC = { set_cosmetic_tag = EQC_sacro_imperio }
-      release_puppet = EQC
-    }
-  }
-
-  MDL_puppet_MIT = {
-    cost = 25
-    fire_only_once = yes
-    visible = {
-      has_country_flag = MDL_imperium_decisions_unlocked
-      has_country_flag = MDL_imperium_restored
-    }
-    available = {
-      386 = { is_owned_and_controlled_by = ROOT }
-      MIT = { exists = no }
-    }
-    highlight_states = {
-      highlight_state_targets = { state = 386 }
-    }
-    complete_effect = {
-      hidden_effect = {
-        MIT = {
-          load_focus_tree = generic_griffon_focus
-          generate_character = {
-            token_base = MIT_alexandre_de_aguilar
-            name = MIT_alexandre_de_aguilar
-          }
-          set_portraits = {
-            character = MIT_alexandre_de_aguilar
-            civilian = {
-              large = "gfx/leaders/MDL/alexandre_de_aguilar.tga"
-            }
-            army = {
-              large = "gfx/leaders/MDL/alexandre_de_aguilar.tga"
-            }
-          }
-          add_country_leader_role = {
-            character = MIT_alexandre_de_aguilar
-            country_leader={
-              ideology=stratocracy
-              expire="1965.1.1.1"
-              id=-1
-            }
-            promote_leader = yes
-          }
-          set_party_name = {
-            ideology = fascism
-            long_name = MIT_GRIFO_PARTY_NAME_LONG
-            name = MIT_GRIFO_PARTY_NAME
-          }
-        }
-        every_owned_state = {
-          limit = {
-            NOT = { is_in_array = { state_original_cores = MIT } }
-          }
-          remove_core_of = MIT
-        }
-      }
-      MIT = { set_cosmetic_tag = MIT_sacro_imperio }
-      release_puppet = MIT
-    }
-  }
-
-  MDL_puppet_MCW = {
-    cost = 25
-    fire_only_once = yes
-    visible = {
-      has_country_flag = MDL_imperium_decisions_unlocked
-      has_country_flag = MDL_imperium_restored
-    }
-    available = {
-      721 = { is_owned_and_controlled_by = ROOT }
-      MCW = { exists = no }
-    }
-    highlight_states = {
-      highlight_state_targets = { state = 721 }
-    }
-
-    complete_effect = {
-      hidden_effect = {
-        every_owned_state = {
-          limit = {
-            NOT = { is_in_array = { state_original_cores = MCW } }
-          }
-          remove_core_of = MCW
-        }
-        MCW = {
-          load_focus_tree = generic_griffon_focus
-          generate_character = {
-            token_base = MCW_antonio_aviario
-            name = MCW_antonio_aviario
-          }
-          set_portraits = {
-            character = MCW_antonio_aviario
-            civilian = {
-              large = "gfx/leaders/MDL/antonio_aviario.tga"
-              small="gfx/interface/ideas/Advisors/MDL/MDL_antonio_aviario.tga"
-            }
-            army = {
-              large = "gfx/leaders/MDL/antonio_aviario.tga"
-            }
-          }
-          add_country_leader_role = {
-            character=MCW_antonio_aviario
-            country_leader={
-			        ideology=falangism
-		          expire="1965.1.1.1"
-		          id=-1
-            }
-            promote_leader = yes
-          }
-          set_party_name = {
-            ideology = fascism
-            long_name = MCW_GRIFO_PARTY_NAME_LONG
-            name = MCW_GRIFO_PARTY_NAME
-          }
-        }
-      }
-      MCW = { set_cosmetic_tag = MCW_sacro_imperio }
-      release_puppet = MCW
-    }
-  }
-
-  MDL_puppet_NCH = {
-    cost = 25
-    fire_only_once = yes
-    visible = {
-      has_country_flag = MDL_imperium_decisions_unlocked
-      has_country_flag = MDL_imperium_restored
-    }
-    available = {
-      670 = { is_owned_and_controlled_by = ROOT }
-      NCH = { exists = no }
-    }
-    highlight_states = {
-      highlight_state_targets = { state = 670 }
-    }
-
-    complete_effect = {
-      hidden_effect = {
-        every_owned_state = {
-          limit = {
-            NOT = { is_in_array = { state_original_cores = NCH } }
-          }
-          remove_core_of = NCH
-        }
-        NCH = { load_focus_tree = generic_griffon_focus }
-      }
-      NCH = { set_cosmetic_tag = NCH_sacro_imperio }
-      release_puppet = NCH
-    }
-  }
-
-  MDL_puppet_FAT = {
-    cost = 25
-    fire_only_once = yes
-    visible = {
-      has_country_flag = MDL_imperium_decisions_unlocked
-      has_country_flag = MDL_imperium_restored
-    }
-    available = {
-      485 = { is_owned_and_controlled_by = ROOT }
-      FAT = { exists = no }
-    }
-    highlight_states = {
-			highlight_state_targets = { state = 485 }
-    }
-    complete_effect = {
-      hidden_effect = {
-        MDL_imperial_council_FAT = { set_nationality = FAT }
-        FAT = {
-          load_focus_tree = generic_griffon_focus
-          add_country_leader_role = {
-            character=MDL_imperial_council_FAT
-            country_leader={
-			        ideology=esotericism
-		          expire="1965.1.1.1"
-		          id=-1
-            }
-            promote_leader = yes
-          }
-          set_party_name = {
-            ideology = fascism
-            long_name = FAT_GRIFO_PARTY_NAME_LONG
-            name = FAT_GRIFO_PARTY_NAME
-          }
-        }
-        every_owned_state = {
-          limit = {
-            OR = {
-              is_in_array = { state_original_cores = FAT }
-              is_in_array = { state_original_cores = VED }
-              is_in_array = { state_original_cores = SRS }
-              is_in_array = { state_original_cores = NTR }
-              is_in_array = { state_original_cores = MNC }
-              is_in_array = { state_original_cores = HAU }
-            }
-          }
-          add_core_of = FAT
-        }
-        every_owned_state = {
-          limit = {
-            NOT = {
-              OR = {
-                is_in_array = { state_original_cores = FAT }
-                is_in_array = { state_original_cores = VED }
-                is_in_array = { state_original_cores = SRS }
-                is_in_array = { state_original_cores = NTR }
-                is_in_array = { state_original_cores = MNC }
-                is_in_array = { state_original_cores = HAU }
-              }
-            }
-          }
-          remove_core_of = FAT
-        }
-      }
-      FAT = { set_cosmetic_tag = FAT_sacro_imperio }
-      release_puppet = FAT
-    }
-  }
-
-  MDL_puppet_GRU = {
-    cost = 25
-    fire_only_once = yes
-    visible = {
-      has_country_flag = MDL_imperium_decisions_unlocked
-      has_country_flag = MDL_imperium_restored
-    }
-    available = {
-      512 = { is_owned_and_controlled_by = ROOT }
-      GRU = { exists = no }
-    }
-    highlight_states = {
-			highlight_state_targets = { state = 512 }
-    }
-    complete_effect = {
-      hidden_effect = {
-        MDL_imperial_council_GRU = { set_nationality = GRU }
-        GRU = {
-          load_focus_tree = generic_griffon_focus
-          add_country_leader_role = {
-            character=MDL_imperial_council_GRU
-            country_leader={
-			        ideology=esotericism
-		          expire="1965.1.1.1"
-		          id=-1
-            }
-            promote_leader = yes
-          }
-          set_party_name = {
-            ideology = fascism
-            long_name = GRU_GRIFO_PARTY_NAME_LONG
-            name = GRU_GRIFO_PARTY_NAME
-          }
-        }
-        every_owned_state = {
-          limit = {
-            OR = {
-              is_in_array = { state_original_cores = GRU }
-              is_in_array = { state_original_cores = LUS }
-              is_in_array = { state_original_cores = GRW }
-              is_in_array = { state_original_cores = BRF }
-              is_in_array = { state_original_cores = GRY }
-              is_in_array = { state_original_cores = ZES }
-              is_in_array = { state_original_cores = OLV }
-              is_in_array = { state_original_cores = BAR }
-            }
-          }
-          add_core_of = GRU
-        }
-        every_owned_state = {
-          limit = {
-            NOT = {
-              OR = {
-                is_in_array = { state_original_cores = GRU }
-                is_in_array = { state_original_cores = LUS }
-                is_in_array = { state_original_cores = GRW }
-                is_in_array = { state_original_cores = BRF }
-                is_in_array = { state_original_cores = GRY }
-                is_in_array = { state_original_cores = ZES }
-                is_in_array = { state_original_cores = OLV }
-                is_in_array = { state_original_cores = BAR }
-              }
-            }
-          }
-          remove_core_of = GRU
-        }
-      }
-      GRU = { set_cosmetic_tag = GRU_sacro_imperio }
-      release_puppet = GRU
-    }
-  }
-
-  MDL_puppet_GRI = {
-    cost = 25
-    fire_only_once = yes
-    visible = {
-      has_country_flag = MDL_imperium_decisions_unlocked
-      has_country_flag = MDL_imperium_restored
-    }
-    available = {
-      382 = { is_owned_and_controlled_by = ROOT }
-      GRI = { exists = no }
-    }
-    highlight_states = {
-			highlight_state_targets = { state = 382 }
-    }
-    complete_effect = {
-      hidden_effect = {
-        MDL_imperial_council_GRI = { set_nationality = GRI }
-        GRI = {
-          load_focus_tree = generic_griffon_focus
-          if = {
-            limit = { has_idea = GRI_grover_vi }
-            remove_ideas = GRI_grover_vi
-          }
-          add_country_leader_role = {
-            character=MDL_imperial_council_GRI
-            country_leader={
-			        ideology=esotericism
-		          expire="1965.1.1.1"
-		          id=-1
-            }
-            promote_leader = yes
-          }
-          set_party_name = {
-            ideology = fascism
-            long_name = GRI_GRIFO_PARTY_NAME_LONG
-            name = GRI_GRIFO_PARTY_NAME
-          }
-        }
-        every_owned_state = {
-          limit = {
-            OR = {
-              is_in_array = { state_original_cores = GRI }
-              is_in_array = { state_original_cores = STW }
-              is_in_array = { state_original_cores = BRZ }
-              is_in_array = { state_original_cores = ANG }
-              is_in_array = { state_original_cores = KAT }
-              is_in_array = { state_original_cores = FEA }
-              is_in_array = { state_original_cores = PYT }
-              is_in_array = { state_original_cores = ROU }
-              is_in_array = { state_original_cores = TRD }
-              is_in_array = { state_original_cores = YAL }
-              is_in_array = { state_original_cores = EYR }
-            }
-          }
-          add_core_of = GRI
-        }
-        every_owned_state = {
-          limit = {
-            NOT = {
-              OR = {
-                is_in_array = { state_original_cores = GRI }
-                is_in_array = { state_original_cores = STW }
-                is_in_array = { state_original_cores = BRZ }
-                is_in_array = { state_original_cores = ANG }
-                is_in_array = { state_original_cores = KAT }
-                is_in_array = { state_original_cores = FEA }
-                is_in_array = { state_original_cores = PYT }
-                is_in_array = { state_original_cores = ROU }
-                is_in_array = { state_original_cores = TRD }
-                is_in_array = { state_original_cores = YAL }
-                is_in_array = { state_original_cores = EYR }
-              }
-            }
-          }
-          remove_core_of = GRI
-        }
-      }
-      GRI = { set_cosmetic_tag = GRI_sacro_imperio }
-      release_puppet = GRI
-    }
-  }
-
-MDL_puppet_FIR = {
-    cost = 25
-    fire_only_once = yes
-    visible = {
-      has_country_flag = MDL_imperium_decisions_unlocked
-      has_country_flag = MDL_imperium_restored
-    }
-    available = {
-      454 = { is_owned_and_controlled_by = ROOT }
-      FIR = { exists = no }
-    }
-    highlight_states = {
-			highlight_state_targets = { state = 454 }
-    }
-    complete_effect = {
-      hidden_effect = {
-        MDL_imperial_council_FIR = { set_nationality = FIR }
-        FIR = {
-          load_focus_tree = generic_griffon_focus
-          add_country_leader_role = {
-            character=MDL_imperial_council_FIR
-            country_leader={
-			        ideology=esotericism
-		          expire="1965.1.1.1"
-		          id=-1
-            }
-            promote_leader = yes
-          }
-          set_party_name = {
-            ideology = fascism
-            long_name = FIR_GRIFO_PARTY_NAME_LONG
-            name = FIR_GRIFO_PARTY_NAME
-          }
-        }
-        every_owned_state = {
-          limit = {
-            OR = {
-              is_in_array = { state_original_cores = FIR }
-              is_in_array = { state_original_cores = WAT }
-              is_in_array = { state_original_cores = FBK }
-            }
-          }
-          add_core_of = FIR
-        }
-        every_owned_state = {
-          limit = {
-            NOT = {
-              OR = {
-                is_in_array = { state_original_cores = FIR }
-                is_in_array = { state_original_cores = WAT }
-                is_in_array = { state_original_cores = FBK }
-              }
-            }
-          }
-          remove_core_of = FIR
-        }
-      }
-      FIR = { set_cosmetic_tag = FIR_sacro_imperio }
-      release_puppet = FIR
-    }
-  }
-
-MDL_puppet_RIV = {
-    cost = 25
-    fire_only_once = yes
-    visible = {
-      has_country_flag = MDL_imperium_decisions_unlocked
-      has_country_flag = MDL_imperium_restored
-    }
-    available = {
-      619 = { is_owned_and_controlled_by = ROOT }
-      RIV = { exists = no }
-    }
-    highlight_states = {
-			highlight_state_targets = { state = 619 }
-    }
-    complete_effect = {
-      hidden_effect = {
-        MDL_imperial_council_RIV = { set_nationality = RIV }
-        RIV = {
-          load_focus_tree = generic_griffon_focus
-          add_country_leader_role = {
-            character=MDL_imperial_council_RIV
-            country_leader={
-			        ideology=esotericism
-		          expire="1965.1.1.1"
-		          id=-1
-            }
-            promote_leader = yes
-          }
-          set_party_name = {
-            ideology = fascism
-            long_name = RIV_GRIFO_PARTY_NAME_LONG
-            name = RIV_GRIFO_PARTY_NAME
-          }
-        }
-        every_owned_state = {
-          limit = {
-            OR = {
-              is_in_array = { state_original_cores = RIV }
-              is_in_array = { state_original_cores = HLQ }
-              is_in_array = { state_original_cores = LNS }
-              is_in_array = { state_original_cores = DMT }
-              is_in_array = { state_original_cores = DEP }
-              is_in_array = { state_original_cores = LCT }
-              is_in_array = { state_original_cores = BAK }
-              is_in_array = { state_original_cores = WIT }
-              is_in_array = { state_original_cores = FRE }
-              is_in_array = { state_original_cores = NIM }
-            }
-          }
-          add_core_of = RIV
-        }
-        every_owned_state = {
-          limit = {
-            NOT = {
-              OR = {
-                is_in_array = { state_original_cores = RIV }
-                is_in_array = { state_original_cores = HLQ }
-                is_in_array = { state_original_cores = LNS }
-                is_in_array = { state_original_cores = DMT }
-                is_in_array = { state_original_cores = DEP }
-                is_in_array = { state_original_cores = LCT }
-                is_in_array = { state_original_cores = BAK }
-                is_in_array = { state_original_cores = WIT }
-                is_in_array = { state_original_cores = FRE }
-                is_in_array = { state_original_cores = NIM }
-              }
-            }
-          }
-          remove_core_of = RIV
-        }
-      }
-      RIV = { set_cosmetic_tag = RIV_sacro_imperio }
-      release_puppet = RIV
-    }
-  }
-
-  MDL_puppet_JER = {
-    cost = 25
-    fire_only_once = yes
-    visible = {
-      has_country_flag = MDL_imperium_decisions_unlocked
-      has_country_flag = MDL_imperium_restored
-    }
-    available = {
-      377 = { is_owned_and_controlled_by = ROOT }
-      JER = { exists = no }
-    }
-    highlight_states = {
-			highlight_state_targets = { state = 377 }
-    }
-    complete_effect = {
-      hidden_effect = {
-        MDL_imperial_council_JER = { set_nationality = JER }
-        JER = {
-          load_focus_tree = generic_griffon_focus
-          add_country_leader_role = {
-            character=MDL_imperial_council_JER
-            country_leader={
-			        ideology=esotericism
-		          expire="1965.1.1.1"
-		          id=-1
-            }
-            promote_leader = yes
-          }
-          set_party_name = {
-            ideology = fascism
-            long_name = JER_GRIFO_PARTY_NAME_LONG
-            name = JER_GRIFO_PARTY_NAME
-          }
-        }
-        every_owned_state = {
-          limit = {
-            OR = {
-              is_in_array = { state_original_cores = JER }
-              is_in_array = { state_original_cores = JFT }
-              is_in_array = { state_original_cores = VIN }
-              is_in_array = { state_original_cores = JRR }
-              is_in_array = { state_original_cores = AET }
-              is_in_array = { state_original_cores = HEL }
-              is_in_array = { state_original_cores = AVI }
-              is_in_array = { state_original_cores = ERI }
-              is_in_array = { state_original_cores = FLO }
-              is_in_array = { state_original_cores = POM }
-              is_in_array = { state_original_cores = FEZ }
-              is_in_array = { state_original_cores = JEB }
-            }
-          }
-          add_core_of = JER
-        }
-        every_owned_state = {
-          limit = {
-            NOT = {
-              OR = {
-                is_in_array = { state_original_cores = JER }
-                is_in_array = { state_original_cores = JFT }
-                is_in_array = { state_original_cores = VIN }
-                is_in_array = { state_original_cores = JRR }
-                is_in_array = { state_original_cores = AET }
-                is_in_array = { state_original_cores = HEL }
-                is_in_array = { state_original_cores = AVI }
-                is_in_array = { state_original_cores = ERI }
-                is_in_array = { state_original_cores = FLO }
-                is_in_array = { state_original_cores = POM }
-                is_in_array = { state_original_cores = FEZ }
-                is_in_array = { state_original_cores = JEB }
-              }
-            }
-          }
-          remove_core_of = JER
-        }
-      }
-      JER = { set_cosmetic_tag = JER_sacro_imperio }
-      release_puppet = JER
-    }
-  }
-
-  MDL_transfer_to_FAT = {
-    icon = jachs_drawer
-    cost = 0
-    targets = { VED HAU SRS NTR MNC }
-    visible = {
-      has_country_flag = MDL_imperium_decisions_unlocked
-      has_country_flag = MDL_imperium_restored
-      FAT = { is_subject_of = ROOT }
-      NOT = { country_exists = FROM }
-      any_occupied_country = { tag = FROM }
-    }
-    targets_dynamic = yes
-    target_non_existing = yes
-    target_trigger = {
-      FROM = {
-          OR = {
-              original_tag = VED
-              original_tag = HAU
-              original_tag = SRS
-              original_tag = NTR
-              original_tag = MNC
-            }
-          }
+	MDL_ultramar_secure_new_mareland = {
+		icon = griffon_claw
+		fire_only_once = yes
+		targets = { EQC }
+		target_trigger = {
+			FROM = { original_tag = EQC }
 		}
-    complete_effect = {
-      every_owned_state = {
-        limit = { is_in_array = { state_original_cores = FROM } }
-        add_core_of = FAT
-        FAT = { transfer_state = PREV }
-      }
-    }
-  }
-
-  MDL_transfer_to_GRU = {
-    icon = jachs_drawer
-    cost = 0
-    targets = { LUS GRW BRF GRY ZES BAR OLV }
-    visible = {
-      has_country_flag = MDL_imperium_decisions_unlocked
-      has_country_flag = MDL_imperium_restored
-      GRU = { is_subject_of = ROOT }
-      NOT = { country_exists = FROM }
-      any_occupied_country = { tag = FROM }
-    }
-    targets_dynamic = yes
-    target_non_existing = yes
-    target_trigger = {
-      FROM = {
-          OR = {
-              original_tag = LUS
-              original_tag = GRW
-              original_tag = BRF
-              original_tag = GRY
-              original_tag = ZES
-              original_tag = OLV
-              original_tag = BAR
-            }
-          }
+		visible = {
+			has_country_flag = MDL_imperium_restored
+			has_war_with = EQC
 		}
-    complete_effect = {
-      every_owned_state = {
-        limit = { is_in_array = { state_original_cores = FROM } }
-        add_core_of = GRU
-        GRU = { transfer_state = PREV }
-      }
-    }
-  }
-
-  MDL_transfer_to_RIV = {
-    icon = jachs_drawer
-    cost = 0
-    targets = { HLQ LNS DEP DMT BAK LCT WIT FRE NIM }
-    visible = {
-      has_country_flag = MDL_imperium_decisions_unlocked
-      has_country_flag = MDL_imperium_restored
-      RIV = { is_subject_of = ROOT }
-      NOT = { country_exists = FROM }
-      any_occupied_country = { tag = FROM }
-    }
-    targets_dynamic = yes
-    target_non_existing = yes
-    target_trigger = {
-      FROM = {
-          OR = {
-              original_tag = HLQ
-              original_tag = LNS
-              original_tag = DEP
-              original_tag = DMT
-              original_tag = BAK
-              original_tag = LCT
-              original_tag = WIT
-              original_tag = FRE
-              original_tag = NIM
-            }
-          }
-		}
-    complete_effect = {
-      every_owned_state = {
-        limit = { is_in_array = { state_original_cores = FROM } }
-        add_core_of = RIV
-        RIV = { transfer_state = PREV }
-      }
-    }
-  }
-
-  MDL_transfer_to_GRI = {
-    icon = jachs_drawer
-    cost = 0
-    targets = { STW FEA BRZ KAT ANG YAL ROU PYT TRD EYR }
-    visible = {
-      has_country_flag = MDL_imperium_decisions_unlocked
-      has_country_flag = MDL_imperium_restored
-      GRI = { is_subject_of = ROOT }
-      NOT = { country_exists = FROM }
-      any_occupied_country = { tag = FROM }
-    }
-    targets_dynamic = yes
-    target_non_existing = yes
-    target_trigger = {
-      FROM = {
-          OR = {
-              original_tag = STW
-              original_tag = FEA
-              original_tag = BRZ
-              original_tag = KAT
-              original_tag = ANG
-              original_tag = YAL
-              original_tag = ROU
-              original_tag = PYT
-              original_tag = TRD
-              original_tag = EYR
-            }
-          }
-		}
-    complete_effect = {
-      every_owned_state = {
-        limit = { is_in_array = { state_original_cores = FROM } }
-        add_core_of = GRI
-        GRI = { transfer_state = PREV }
-      }
-    }
-  }
-
-  MDL_transfer_to_FIR = {
-    icon = jachs_drawer
-    cost = 0
-    targets = { WAT FBK HLR DED }
-    visible = {
-      has_country_flag = MDL_imperium_decisions_unlocked
-      has_country_flag = MDL_imperium_restored
-      FIR = { is_subject_of = ROOT }
-      NOT = { country_exists = FROM }
-      any_occupied_country = { tag = FROM }
-    }
-    targets_dynamic = yes
-    target_non_existing = yes
-    target_trigger = {
-      FROM = {
-          OR = {
-              original_tag = WAT
-              original_tag = FBK
-              original_tag = HLR
-              original_tag = DED
-            }
-          }
-		}
-    complete_effect = {
-      every_owned_state = {
-        limit = { is_in_array = { state_original_cores = FROM } }
-        add_core_of = FIR
-        FIR = { transfer_state = PREV }
-      }
-    }
-  }
-
-  MDL_transfer_to_JER = {
-    icon = jachs_drawer
-    cost = 0
-    targets = { AVI ERI JEB JFT JRR VIN AET HEL FLO POM FEZ }
-    visible = {
-      has_country_flag = MDL_imperium_decisions_unlocked
-      has_country_flag = MDL_imperium_restored
-      JER = { is_subject_of = ROOT }
-      NOT = { country_exists = FROM }
-      any_occupied_country = { tag = FROM }
-    }
-    targets_dynamic = yes
-    target_non_existing = yes
-    target_trigger = {
-			FROM = {
-				OR = {
-          original_tag = AVI
-          original_tag = ERI
-          original_tag = JER
-          original_tag = JEB
-          original_tag = JFT
-          original_tag = JRR
-          original_tag = VIN
-          original_tag = AET
-          original_tag = HEL
-          original_tag = FLO
-          original_tag = POM
-          original_tag = FEZ
+		available = {
+			EQC = { has_capitulated = yes }
+			356 = {
+				controller = {
+					OR = {
+						tag = ROOT
+						is_ally_with = ROOT
+					}
+				}
+			}
+			362 = {
+				controller = {
+					OR = {
+						tag = ROOT
+						is_ally_with = ROOT
+					}
 				}
 			}
 		}
-    target_root_trigger = {
+		complete_effect = {
+			if = {
+				limit = {
+					FROM = { is_subject = yes }
+				}
+				FROM = {
+					overlord = {
+						country_event = { id = manedalusia.70 days = 1 }
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					FROM = {
+						is_in_faction = yes
+						is_faction_leader = no
+					}
+				}
+				every_enemy_country = {
+					limit = {
+						is_in_faction_with = FROM
+						is_faction_leader = yes
+					}
+					country_event = { id = manedalusia.70 hours = 2 }
+				}
+			}
+		}
+	}
+
+	MDL_restore_eternal_city = {
+		visible = { has_country_flag = MDL_imperium_decisions_unlocked }
+		available = {
+			371 = { is_owned_and_controlled_by = ROOT }
+			has_war = no
+		}
+		highlight_states = {
+			highlight_state_targets = { state = 371 }
+		}
+		fire_only_once = yes
+		cost = 25
+		complete_effect = {
+			country_event = manedalusia.108
+			set_capital = {
+				state = 371
+				remember_old_capital = no 
+			}
+			add_state_core = 371
+		}
+	}
+
+	MDL_puppet_EQC = {
+		cost = 25
+		fire_only_once = yes
+		visible = {
+			has_country_flag = MDL_imperium_decisions_unlocked
+			has_country_flag = MDL_imperium_restored
+		}
+		available = {
+			356 = { is_owned_and_controlled_by = ROOT }
+			EQC = { exists = no }
+		}
+		highlight_states = {
+			highlight_state_targets = { state = 356 }
+		}
+		complete_effect = {
+			hidden_effect = {
+				EQC = {
+					load_focus_tree = generic_griffon_focus
+					generate_character = {
+						token_base = EQC_rosa_branca
+						name = EQC_rosa_branca
+					}
+					set_portraits = {
+						character = EQC_rosa_branca
+						civilian = {
+							large = "gfx/leaders/MDL/rosa_branca.tga"
+							small="gfx/interface/ideas/Advisors/MDL/MDL_rosa_branca.tga"
+						}
+						army = {
+							large = "gfx/leaders/MDL/rosa_branca.tga"
+						}
+					}
+					add_country_leader_role = {
+						character = EQC_rosa_branca
+							country_leader={
+							ideology=esotericism
+							expire="1965.1.1.1"
+							id=-1
+						}
+						promote_leader = yes
+					}
+					set_party_name = {
+						ideology = fascism
+						long_name = EQC_GRIFO_PARTY_NAME_LONG
+						name = EQC_GRIFO_PARTY_NAME
+					}
+				}
+			}
+			EQC = { set_cosmetic_tag = EQC_sacro_imperio }
+			release_puppet = EQC
+		}
+	}
+
+	MDL_puppet_MIT = {
+		cost = 25
+		fire_only_once = yes
+		visible = {
+			has_country_flag = MDL_imperium_decisions_unlocked
+			has_country_flag = MDL_imperium_restored
+		}
+		available = {
+			386 = { is_owned_and_controlled_by = ROOT }
+			MIT = { exists = no }
+		}
+		highlight_states = {
+			highlight_state_targets = { state = 386 }
+		}
+		complete_effect = {
+			hidden_effect = {
+				MIT = {
+					load_focus_tree = generic_griffon_focus
+					generate_character = {
+						token_base = MIT_alexandre_de_aguilar
+						name = MIT_alexandre_de_aguilar
+					}
+					set_portraits = {
+						character = MIT_alexandre_de_aguilar
+						civilian = {
+							large = "gfx/leaders/MDL/alexandre_de_aguilar.tga"
+						}
+						army = {
+							large = "gfx/leaders/MDL/alexandre_de_aguilar.tga"
+						}
+					}
+					add_country_leader_role = {
+						character = MIT_alexandre_de_aguilar
+						country_leader={
+							ideology=stratocracy
+							expire="1965.1.1.1"
+							id=-1
+						}
+						promote_leader = yes
+					}
+					set_party_name = {
+						ideology = fascism
+						long_name = MIT_GRIFO_PARTY_NAME_LONG
+						name = MIT_GRIFO_PARTY_NAME
+					}
+				}
+				every_owned_state = {
+					limit = {
+						NOT = { is_in_array = { state_original_cores = MIT } }
+					}
+					remove_core_of = MIT
+				}
+			}
+			MIT = { set_cosmetic_tag = MIT_sacro_imperio }
+			release_puppet = MIT
+		}
+	}
+
+	MDL_puppet_MCW = {
+		cost = 25
+		fire_only_once = yes
+		visible = {
+			has_country_flag = MDL_imperium_decisions_unlocked
+			has_country_flag = MDL_imperium_restored
+		}
+		available = {
+			721 = { is_owned_and_controlled_by = ROOT }
+			MCW = { exists = no }
+		}
+		highlight_states = {
+			highlight_state_targets = { state = 721 }
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				every_owned_state = {
+					limit = {
+						NOT = { is_in_array = { state_original_cores = MCW } }
+					}
+					remove_core_of = MCW
+				}
+				MCW = {
+					load_focus_tree = generic_griffon_focus
+					generate_character = {
+						token_base = MCW_antonio_aviario
+						name = MCW_antonio_aviario
+					}
+					set_portraits = {
+						character = MCW_antonio_aviario
+						civilian = {
+							large = "gfx/leaders/MDL/antonio_aviario.tga"
+							small="gfx/interface/ideas/Advisors/MDL/MDL_antonio_aviario.tga"
+						}
+						army = {
+							large = "gfx/leaders/MDL/antonio_aviario.tga"
+						}
+					}
+					add_country_leader_role = {
+						character=MCW_antonio_aviario
+						country_leader={
+							ideology=falangism
+							expire="1965.1.1.1"
+							id=-1
+						}
+						promote_leader = yes
+					}
+					set_party_name = {
+						ideology = fascism
+						long_name = MCW_GRIFO_PARTY_NAME_LONG
+						name = MCW_GRIFO_PARTY_NAME
+					}
+				}
+			}
+			MCW = { set_cosmetic_tag = MCW_sacro_imperio }
+			release_puppet = MCW
+		}
+	}
+
+	MDL_puppet_NCH = {
+		cost = 25
+		fire_only_once = yes
+		visible = {
+			has_country_flag = MDL_imperium_decisions_unlocked
+			has_country_flag = MDL_imperium_restored
+		}
+		available = {
+			670 = { is_owned_and_controlled_by = ROOT }
+			NCH = { exists = no }
+		}
+		highlight_states = {
+			highlight_state_targets = { state = 670 }
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				every_owned_state = {
+					limit = {
+						NOT = { is_in_array = { state_original_cores = NCH } }
+					}
+					remove_core_of = NCH
+				}
+				NCH = { load_focus_tree = generic_griffon_focus }
+			}
+			NCH = { set_cosmetic_tag = NCH_sacro_imperio }
+			release_puppet = NCH
+		}
+	}
+
+	MDL_puppet_FAT = {
+		cost = 25
+		fire_only_once = yes
+		visible = {
+			has_country_flag = MDL_imperium_decisions_unlocked
+			has_country_flag = MDL_imperium_restored
+		}
+		available = {
+			485 = { is_owned_and_controlled_by = ROOT }
+			FAT = { exists = no }
+		}
+		highlight_states = {
+			highlight_state_targets = { state = 485 }
+		}
+		complete_effect = {
+			hidden_effect = {
+				MDL_imperial_council_FAT = { set_nationality = FAT }
+				FAT = {
+					load_focus_tree = generic_griffon_focus
+					add_country_leader_role = {
+						character=MDL_imperial_council_FAT
+						country_leader={
+							ideology=esotericism
+							expire="1965.1.1.1"
+							id=-1
+						}
+						promote_leader = yes
+					}
+					set_party_name = {
+						ideology = fascism
+						long_name = FAT_GRIFO_PARTY_NAME_LONG
+						name = FAT_GRIFO_PARTY_NAME
+					}
+				}
+				every_owned_state = {
+					limit = {
+						OR = {
+							is_in_array = { state_original_cores = FAT }
+							is_in_array = { state_original_cores = VED }
+							is_in_array = { state_original_cores = SRS }
+							is_in_array = { state_original_cores = NTR }
+							is_in_array = { state_original_cores = MNC }
+							is_in_array = { state_original_cores = HAU }
+						}
+					}
+					add_core_of = FAT
+				}
+				every_owned_state = {
+					limit = {
+						NOT = {
+							OR = {
+								is_in_array = { state_original_cores = FAT }
+								is_in_array = { state_original_cores = VED }
+								is_in_array = { state_original_cores = SRS }
+								is_in_array = { state_original_cores = NTR }
+								is_in_array = { state_original_cores = MNC }
+								is_in_array = { state_original_cores = HAU }
+							}
+						}
+					}
+					remove_core_of = FAT
+				}
+			}
+			FAT = { set_cosmetic_tag = FAT_sacro_imperio }
+			release_puppet = FAT
+		}
+	}
+
+	MDL_puppet_GRU = {
+		cost = 25
+		fire_only_once = yes
+		visible = {
+			has_country_flag = MDL_imperium_decisions_unlocked
+			has_country_flag = MDL_imperium_restored
+		}
+		available = {
+			512 = { is_owned_and_controlled_by = ROOT }
+			GRU = { exists = no }
+		}
+		highlight_states = {
+			highlight_state_targets = { state = 512 }
+		}
+		complete_effect = {
+			hidden_effect = {
+				MDL_imperial_council_GRU = { set_nationality = GRU }
+				GRU = {
+					load_focus_tree = generic_griffon_focus
+					add_country_leader_role = {
+						character=MDL_imperial_council_GRU
+						country_leader={
+							ideology=esotericism
+							expire="1965.1.1.1"
+							id=-1
+						}
+						promote_leader = yes
+					}
+					set_party_name = {
+						ideology = fascism
+						long_name = GRU_GRIFO_PARTY_NAME_LONG
+						name = GRU_GRIFO_PARTY_NAME
+					}
+				}
+				every_owned_state = {
+					limit = {
+						OR = {
+							is_in_array = { state_original_cores = GRU }
+							is_in_array = { state_original_cores = LUS }
+							is_in_array = { state_original_cores = GRW }
+							is_in_array = { state_original_cores = BRF }
+							is_in_array = { state_original_cores = GRY }
+							is_in_array = { state_original_cores = ZES }
+							is_in_array = { state_original_cores = OLV }
+							is_in_array = { state_original_cores = BAR }
+						}
+					}
+					add_core_of = GRU
+				}
+				every_owned_state = {
+					limit = {
+						NOT = {
+							OR = {
+								is_in_array = { state_original_cores = GRU }
+								is_in_array = { state_original_cores = LUS }
+								is_in_array = { state_original_cores = GRW }
+								is_in_array = { state_original_cores = BRF }
+								is_in_array = { state_original_cores = GRY }
+								is_in_array = { state_original_cores = ZES }
+								is_in_array = { state_original_cores = OLV }
+								is_in_array = { state_original_cores = BAR }
+							}
+						}
+					}
+					remove_core_of = GRU
+				}
+			}
+			GRU = { set_cosmetic_tag = GRU_sacro_imperio }
+			release_puppet = GRU
+		}
+	}
+
+	MDL_puppet_GRI = {
+		cost = 25
+		fire_only_once = yes
+		visible = {
+			has_country_flag = MDL_imperium_decisions_unlocked
+			has_country_flag = MDL_imperium_restored
+		}
+		available = {
+			382 = { is_owned_and_controlled_by = ROOT }
+			GRI = { exists = no }
+		}
+		highlight_states = {
+			highlight_state_targets = { state = 382 }
+		}
+		complete_effect = {
+			hidden_effect = {
+				MDL_imperial_council_GRI = { set_nationality = GRI }
+				GRI = {
+					load_focus_tree = generic_griffon_focus
+					if = {
+						limit = { has_idea = GRI_grover_vi }
+						remove_ideas = GRI_grover_vi
+					}
+					add_country_leader_role = {
+						character=MDL_imperial_council_GRI
+						country_leader={
+							ideology=esotericism
+							expire="1965.1.1.1"
+							id=-1
+						}
+						promote_leader = yes
+					}
+					set_party_name = {
+						ideology = fascism
+						long_name = GRI_GRIFO_PARTY_NAME_LONG
+						name = GRI_GRIFO_PARTY_NAME
+					}
+				}
+				every_owned_state = {
+					limit = {
+						OR = {
+							is_in_array = { state_original_cores = GRI }
+							is_in_array = { state_original_cores = STW }
+							is_in_array = { state_original_cores = BRZ }
+							is_in_array = { state_original_cores = ANG }
+							is_in_array = { state_original_cores = KAT }
+							is_in_array = { state_original_cores = FEA }
+							is_in_array = { state_original_cores = PYT }
+							is_in_array = { state_original_cores = ROU }
+							is_in_array = { state_original_cores = TRD }
+							is_in_array = { state_original_cores = YAL }
+							is_in_array = { state_original_cores = EYR }
+						}
+					}
+					add_core_of = GRI
+				}
+				every_owned_state = {
+					limit = {
+						NOT = {
+							OR = {
+								is_in_array = { state_original_cores = GRI }
+								is_in_array = { state_original_cores = STW }
+								is_in_array = { state_original_cores = BRZ }
+								is_in_array = { state_original_cores = ANG }
+								is_in_array = { state_original_cores = KAT }
+								is_in_array = { state_original_cores = FEA }
+								is_in_array = { state_original_cores = PYT }
+								is_in_array = { state_original_cores = ROU }
+								is_in_array = { state_original_cores = TRD }
+								is_in_array = { state_original_cores = YAL }
+								is_in_array = { state_original_cores = EYR }
+							}
+						}
+					}
+					remove_core_of = GRI
+				}
+			}
+			GRI = { set_cosmetic_tag = GRI_sacro_imperio }
+			release_puppet = GRI
+		}
+	}
+
+	MDL_puppet_FIR = {
+		cost = 25
+		fire_only_once = yes
+		visible = {
+			has_country_flag = MDL_imperium_decisions_unlocked
+			has_country_flag = MDL_imperium_restored
+		}
+		available = {
+			454 = { is_owned_and_controlled_by = ROOT }
+			FIR = { exists = no }
+		}
+		highlight_states = {
+			highlight_state_targets = { state = 454 }
+		}
+		complete_effect = {
+			hidden_effect = {
+				MDL_imperial_council_FIR = { set_nationality = FIR }
+				FIR = {
+					load_focus_tree = generic_griffon_focus
+					add_country_leader_role = {
+						character=MDL_imperial_council_FIR
+						country_leader={
+							ideology=esotericism
+							expire="1965.1.1.1"
+							id=-1
+						}
+						promote_leader = yes
+					}
+					set_party_name = {
+						ideology = fascism
+						long_name = FIR_GRIFO_PARTY_NAME_LONG
+						name = FIR_GRIFO_PARTY_NAME
+					}
+				}
+				every_owned_state = {
+					limit = {
+						OR = {
+							is_in_array = { state_original_cores = FIR }
+							is_in_array = { state_original_cores = WAT }
+							is_in_array = { state_original_cores = FBK }
+						}
+					}
+					add_core_of = FIR
+				}
+				every_owned_state = {
+					limit = {
+						NOT = {
+							OR = {
+								is_in_array = { state_original_cores = FIR }
+								is_in_array = { state_original_cores = WAT }
+								is_in_array = { state_original_cores = FBK }
+							}
+						}
+					}
+					remove_core_of = FIR
+				}
+			}
+			FIR = { set_cosmetic_tag = FIR_sacro_imperio }
+			release_puppet = FIR
+		}
+	}
+
+	MDL_puppet_RIV = {
+		cost = 25
+		fire_only_once = yes
+		visible = {
+			has_country_flag = MDL_imperium_decisions_unlocked
+			has_country_flag = MDL_imperium_restored
+		}
+		available = {
+			619 = { is_owned_and_controlled_by = ROOT }
+			RIV = { exists = no }
+		}
+		highlight_states = {
+			highlight_state_targets = { state = 619 }
+		}
+		complete_effect = {
+			hidden_effect = {
+				MDL_imperial_council_RIV = { set_nationality = RIV }
+				RIV = {
+					load_focus_tree = generic_griffon_focus
+					add_country_leader_role = {
+						character=MDL_imperial_council_RIV
+						country_leader={
+							ideology=esotericism
+							expire="1965.1.1.1"
+							id=-1
+						}
+						promote_leader = yes
+					}
+					set_party_name = {
+						ideology = fascism
+						long_name = RIV_GRIFO_PARTY_NAME_LONG
+						name = RIV_GRIFO_PARTY_NAME
+					}
+				}
+				every_owned_state = {
+					limit = {
+						OR = {
+							is_in_array = { state_original_cores = RIV }
+							is_in_array = { state_original_cores = HLQ }
+							is_in_array = { state_original_cores = LNS }
+							is_in_array = { state_original_cores = DMT }
+							is_in_array = { state_original_cores = DEP }
+							is_in_array = { state_original_cores = LCT }
+							is_in_array = { state_original_cores = BAK }
+							is_in_array = { state_original_cores = WIT }
+							is_in_array = { state_original_cores = FRE }
+							is_in_array = { state_original_cores = NIM }
+						}
+					}
+					add_core_of = RIV
+				}
+				every_owned_state = {
+					limit = {
+						NOT = {
+							OR = {
+								is_in_array = { state_original_cores = RIV }
+								is_in_array = { state_original_cores = HLQ }
+								is_in_array = { state_original_cores = LNS }
+								is_in_array = { state_original_cores = DMT }
+								is_in_array = { state_original_cores = DEP }
+								is_in_array = { state_original_cores = LCT }
+								is_in_array = { state_original_cores = BAK }
+								is_in_array = { state_original_cores = WIT }
+								is_in_array = { state_original_cores = FRE }
+								is_in_array = { state_original_cores = NIM }
+							}
+						}
+					}
+					remove_core_of = RIV
+				}
+			}
+			RIV = { set_cosmetic_tag = RIV_sacro_imperio }
+			release_puppet = RIV
+		}
+	}
+
+	MDL_puppet_JER = {
+		cost = 25
+		fire_only_once = yes
+		visible = {
+			has_country_flag = MDL_imperium_decisions_unlocked
+			has_country_flag = MDL_imperium_restored
+		}
+		available = {
+			377 = { is_owned_and_controlled_by = ROOT }
+			JER = { exists = no }
+		}
+		highlight_states = {
+			highlight_state_targets = { state = 377 }
+		}
+		complete_effect = {
+			hidden_effect = {
+				MDL_imperial_council_JER = { set_nationality = JER }
+				JER = {
+					load_focus_tree = generic_griffon_focus
+					add_country_leader_role = {
+						character=MDL_imperial_council_JER
+						country_leader = {
+							ideology=esotericism
+							expire="1965.1.1.1"
+							id=-1
+						}
+						promote_leader = yes
+					}
+					set_party_name = {
+						ideology = fascism
+						long_name = JER_GRIFO_PARTY_NAME_LONG
+						name = JER_GRIFO_PARTY_NAME
+					}
+				}
+				every_owned_state = {
+					limit = {
+						OR = {
+							is_in_array = { state_original_cores = JER }
+							is_in_array = { state_original_cores = JFT }
+							is_in_array = { state_original_cores = VIN }
+							is_in_array = { state_original_cores = JRR }
+							is_in_array = { state_original_cores = AET }
+							is_in_array = { state_original_cores = HEL }
+							is_in_array = { state_original_cores = AVI }
+							is_in_array = { state_original_cores = ERI }
+							is_in_array = { state_original_cores = FLO }
+							is_in_array = { state_original_cores = POM }
+							is_in_array = { state_original_cores = FEZ }
+							is_in_array = { state_original_cores = JEB }
+						}
+					}
+					add_core_of = JER
+				}
+				every_owned_state = {
+					limit = {
+						NOT = {
+							OR = {
+								is_in_array = { state_original_cores = JER }
+								is_in_array = { state_original_cores = JFT }
+								is_in_array = { state_original_cores = VIN }
+								is_in_array = { state_original_cores = JRR }
+								is_in_array = { state_original_cores = AET }
+								is_in_array = { state_original_cores = HEL }
+								is_in_array = { state_original_cores = AVI }
+								is_in_array = { state_original_cores = ERI }
+								is_in_array = { state_original_cores = FLO }
+								is_in_array = { state_original_cores = POM }
+								is_in_array = { state_original_cores = FEZ }
+								is_in_array = { state_original_cores = JEB }
+							}
+						}
+					}
+					remove_core_of = JER
+				}
+			}
+			JER = { set_cosmetic_tag = JER_sacro_imperio }
+			release_puppet = JER
+		}
+	}
+
+	MDL_transfer_to_FAT = {
+		icon = jachs_drawer
+		cost = 0
+		targets = { VED HAU SRS NTR MNC }
+		visible = {
+			has_country_flag = MDL_imperium_decisions_unlocked
+			has_country_flag = MDL_imperium_restored
+			FAT = { is_subject_of = ROOT }
+			NOT = { country_exists = FROM }
+			any_occupied_country = { tag = FROM }
+		}
+		targets_dynamic = yes
+		target_non_existing = yes
+		target_trigger = {
+			FROM = {
+				OR = {
+					original_tag = VED
+					original_tag = HAU
+					original_tag = SRS
+					original_tag = NTR
+					original_tag = MNC
+				}
+			}
+		}
+		complete_effect = {
+			every_owned_state = {
+				limit = { is_in_array = { state_original_cores = FROM } }
+				add_core_of = FAT
+				FAT = { transfer_state = PREV }
+			}
+		}
+	}
+
+	MDL_transfer_to_GRU = {
+		icon = jachs_drawer
+		cost = 0
+		targets = { LUS GRW BRF GRY ZES BAR OLV }
+		visible = {
+			has_country_flag = MDL_imperium_decisions_unlocked
+			has_country_flag = MDL_imperium_restored
+			GRU = { is_subject_of = ROOT }
+			NOT = { country_exists = FROM }
+			any_occupied_country = { tag = FROM }
+		}
+		targets_dynamic = yes
+		target_non_existing = yes
+		target_trigger = {
+			FROM = {
+				OR = {
+					original_tag = LUS
+					original_tag = GRW
+					original_tag = BRF
+					original_tag = GRY
+					original_tag = ZES
+					original_tag = OLV
+					original_tag = BAR
+				}
+			}
+		}
+		complete_effect = {
+			every_owned_state = {
+				limit = { is_in_array = { state_original_cores = FROM } }
+				add_core_of = GRU
+				GRU = { transfer_state = PREV }
+			}
+		}
+	}
+
+	MDL_transfer_to_RIV = {
+		icon = jachs_drawer
+		cost = 0
+		targets = { HLQ LNS DEP DMT BAK LCT WIT FRE NIM }
+		visible = {
+			has_country_flag = MDL_imperium_decisions_unlocked
+			has_country_flag = MDL_imperium_restored
+			RIV = { is_subject_of = ROOT }
+			NOT = { country_exists = FROM }
+			any_occupied_country = { tag = FROM }
+		}
+		targets_dynamic = yes
+		target_non_existing = yes
+		target_trigger = {
+			FROM = {
+				OR = {
+					original_tag = HLQ
+					original_tag = LNS
+					original_tag = DEP
+					original_tag = DMT
+					original_tag = BAK
+					original_tag = LCT
+					original_tag = WIT
+					original_tag = FRE
+					original_tag = NIM
+				}
+			}
+		}
+		complete_effect = {
+			every_owned_state = {
+				limit = { is_in_array = { state_original_cores = FROM } }
+				add_core_of = RIV
+				RIV = { transfer_state = PREV }
+			}
+		}
+	}
+
+	MDL_transfer_to_GRI = {
+		icon = jachs_drawer
+		cost = 0
+		targets = { STW FEA BRZ KAT ANG YAL ROU PYT TRD EYR }
+		visible = {
+			has_country_flag = MDL_imperium_decisions_unlocked
+			has_country_flag = MDL_imperium_restored
+			GRI = { is_subject_of = ROOT }
+			NOT = { country_exists = FROM }
+			any_occupied_country = { tag = FROM }
+		}
+		targets_dynamic = yes
+		target_non_existing = yes
+		target_trigger = {
+			FROM = {
+				OR = {
+					original_tag = STW
+					original_tag = FEA
+					original_tag = BRZ
+					original_tag = KAT
+					original_tag = ANG
+					original_tag = YAL
+					original_tag = ROU
+					original_tag = PYT
+					original_tag = TRD
+					original_tag = EYR
+				}
+			}
+		}
+		complete_effect = {
+			every_owned_state = {
+				limit = { is_in_array = { state_original_cores = FROM } }
+				add_core_of = GRI
+				GRI = { transfer_state = PREV }
+			}
+		}
+	}
+
+	MDL_transfer_to_FIR = {
+		icon = jachs_drawer
+		cost = 0
+		targets = { WAT FBK HLR DED }
+		visible = {
+			has_country_flag = MDL_imperium_decisions_unlocked
+			has_country_flag = MDL_imperium_restored
+			FIR = { is_subject_of = ROOT }
+			NOT = { country_exists = FROM }
+			any_occupied_country = { tag = FROM }
+		}
+		targets_dynamic = yes
+		target_non_existing = yes
+		target_trigger = {
+			FROM = {
+				OR = {
+					original_tag = WAT
+					original_tag = FBK
+					original_tag = HLR
+					original_tag = DED
+				}
+			}
+		}
+		complete_effect = {
+			every_owned_state = {
+				limit = { is_in_array = { state_original_cores = FROM } }
+				add_core_of = FIR
+				FIR = { transfer_state = PREV }
+			}
+		}
+	}
+
+	MDL_transfer_to_JER = {
+		icon = jachs_drawer
+		cost = 0
+		targets = { AVI ERI JEB JFT JRR VIN AET HEL FLO POM FEZ }
+		visible = {
+			has_country_flag = MDL_imperium_decisions_unlocked
+			has_country_flag = MDL_imperium_restored
+			JER = { is_subject_of = ROOT }
+			NOT = { country_exists = FROM }
+			any_occupied_country = { tag = FROM }
+		}
+		targets_dynamic = yes
+		target_non_existing = yes
+		target_trigger = {
+			FROM = {
+				OR = {
+					original_tag = AVI
+					original_tag = ERI
+					original_tag = JER
+					original_tag = JEB
+					original_tag = JFT
+					original_tag = JRR
+					original_tag = VIN
+					original_tag = AET
+					original_tag = HEL
+					original_tag = FLO
+					original_tag = POM
+					original_tag = FEZ
+				}
+			}
+		}
+		target_root_trigger = {
 			NOT = { has_war_with = FROM }
 		}
-    complete_effect = {
-      every_owned_state = {
-        limit = { is_in_array = { state_original_cores = FROM } }
-        add_core_of = JER
-        JER = { transfer_state = PREV }
-      }
-    }
-  }
+		complete_effect = {
+			every_owned_state = {
+				limit = { is_in_array = { state_original_cores = FROM } }
+				add_core_of = JER
+				JER = { transfer_state = PREV }
+			}
+		}
+	}
 
 	MDL_research_knights_tech = {
 		icon = griffon
@@ -2303,19 +2251,15 @@ MDL_puppet_RIV = {
 			}
 		}
 		visible = {
-      has_completed_focus = MDL_griffon_tech
+			has_completed_focus = MDL_griffon_tech
 			NOT = { has_tech = tech_knights_c }
 		}
 
-		ai_will_do = {
-			factor = 50
-		}
+		ai_will_do = { factor = 50 }
 		
-		remove_effect = {
-			MDL_upgrade_knights_technology = yes
-		}
+		remove_effect = { MDL_upgrade_knights_technology = yes }
 	}
-  MDL_research_enchanted_tools_tech = {
+	MDL_research_enchanted_tools_tech = {
 		icon = griffon
 
 		cost = 50
@@ -2324,7 +2268,7 @@ MDL_puppet_RIV = {
 			research_speed_factor = -0.05
 			consumer_goods_factor = 0.05
 		}
-    visible = { has_completed_focus = MDL_griffon_tech }
+		visible = { has_completed_focus = MDL_griffon_tech }
 		available = {
 			NOT = { has_decision = MDL_research_knights_tech }
 		}
@@ -2340,58 +2284,58 @@ MDL_puppet_RIV = {
 	}
 
 	MDL_kill_RIV = {
-    icon = crossed_swords
-    cost = 25
-    cancel_trigger = {
-      OR = {
-        has_war_with = FROM
-        NOT = { country_exists = FROM }
-      }
-    }
-    targets = { HLQ LNS LSM LSC DEP DMT LCT RIV BAK FRE NIM WIT }
-    targets_dynamic = yes
-    target_non_existing = no
-    target_trigger = {
+		icon = crossed_swords
+		cost = 25
+		cancel_trigger = {
+			OR = {
+				has_war_with = FROM
+				NOT = { country_exists = FROM }
+			}
+		}
+		targets = { HLQ LNS LSM LSC DEP DMT LCT RIV BAK FRE NIM WIT }
+		targets_dynamic = yes
+		target_non_existing = no
+		target_trigger = {
 			FROM = {
 				OR = {
-          original_tag = HLQ
-          original_tag = LNS
-          original_tag = LSM
-          original_tag = LSC
-          original_tag = DEP
-          original_tag = DMT
-          original_tag = LCT
-          original_tag = RIV
-          original_tag = BAK
-          original_tag = FRE
-          original_tag = NIM
-          original_tag = WIT
+					original_tag = HLQ
+					original_tag = LNS
+					original_tag = LSM
+					original_tag = LSC
+					original_tag = DEP
+					original_tag = DMT
+					original_tag = LCT
+					original_tag = RIV
+					original_tag = BAK
+					original_tag = FRE
+					original_tag = NIM
+					original_tag = WIT
 				}
 			}
 		}
-    target_root_trigger = {
+		target_root_trigger = {
 			NOT = { has_war_with = FROM }
 		}
 		days_remove = 50
-    visible = {
-      has_country_flag = MDL_imperium_decisions_unlocked
-      has_country_flag = MDL_imperium_restored
-      FROM = { NOT = { is_subject_of = ROOT } }
+		visible = {
+			has_country_flag = MDL_imperium_decisions_unlocked
+			has_country_flag = MDL_imperium_restored
+			FROM = { NOT = { is_subject_of = ROOT } }
 			country_exists = FROM
-      OR = {
-        is_neighbor_of = FROM
-        AND = {
-          GRU = { is_subject_of = ROOT }
-          GRU = { is_neighbor_of = FROM }
-        }
-        AND = {
-          GRI = { is_subject_of = ROOT }
-          GRI = { is_neighbor_of = FROM }
-        }
-      }
-      NOT = { has_war_with = FROM }
-    }
-    complete_effect = {
+			OR = {
+				is_neighbor_of = FROM
+				AND = {
+					GRU = { is_subject_of = ROOT }
+					GRU = { is_neighbor_of = FROM }
+				}
+				AND = {
+					GRI = { is_subject_of = ROOT }
+					GRI = { is_neighbor_of = FROM }
+				}
+			}
+			NOT = { has_war_with = FROM }
+		}
+		complete_effect = {
 			add_ai_strategy = {
 				type = prepare_for_war
 				id = FROM
@@ -2404,9 +2348,9 @@ MDL_puppet_RIV = {
 					value = 1000
 				}
 			}
-    }
-    remove_effect = {
-		  declare_war_on = { type = annex_everything target = FROM }
+		}
+		remove_effect = {
+			declare_war_on = { type = annex_everything target = FROM }
 			add_ai_strategy = {
 				type = prepare_for_war
 				id = FROM
@@ -2419,55 +2363,55 @@ MDL_puppet_RIV = {
 					value = -1000
 				}
 			}
-    }
-  }
+		}
+	}
 
 	MDL_kill_GRU = {
-    icon = crossed_swords
-    cost = 25
-    cancel_trigger = {
-      OR = {
-        has_war_with = FROM
-        NOT = { country_exists = FROM }
-      }
-    }
-    targets = { LUS GRW BRF GRY GRU ZES OLV BAR }
-    targets_dynamic = yes
-    target_non_existing = no
-    target_trigger = {
+		icon = crossed_swords
+		cost = 25
+		cancel_trigger = {
+			OR = {
+				has_war_with = FROM
+				NOT = { country_exists = FROM }
+			}
+		}
+		targets = { LUS GRW BRF GRY GRU ZES OLV BAR }
+		targets_dynamic = yes
+		target_non_existing = no
+		target_trigger = {
 			FROM = {
 				OR = {
-          original_tag = LUS
-          original_tag = GRW
-          original_tag = BRF
-          original_tag = GRY
-          original_tag = GRU
-          original_tag = ZES
-          original_tag = OLV
-          original_tag = BAR
+					original_tag = LUS
+					original_tag = GRW
+					original_tag = BRF
+					original_tag = GRY
+					original_tag = GRU
+					original_tag = ZES
+					original_tag = OLV
+					original_tag = BAR
 				}
 			}
 		}
-    target_root_trigger = {
+		target_root_trigger = {
 			NOT = { has_war_with = FROM }
 		}
 		days_remove = 50
 
-    visible = {
-      has_country_flag = MDL_imperium_decisions_unlocked
-      has_country_flag = MDL_imperium_restored
-      FROM = { NOT = { is_subject_of = ROOT } }
+		visible = {
+			has_country_flag = MDL_imperium_decisions_unlocked
+			has_country_flag = MDL_imperium_restored
+			FROM = { NOT = { is_subject_of = ROOT } }
 			country_exists = FROM
-      OR = {
-        is_neighbor_of = FROM
-        AND = {
-          GRU = { is_subject_of = ROOT }
-          GRU = { is_neighbor_of = FROM }
-        }
-      }
-      NOT = { has_war_with = FROM }
-    }
-    complete_effect = {
+			OR = {
+				is_neighbor_of = FROM
+				AND = {
+					GRU = { is_subject_of = ROOT }
+					GRU = { is_neighbor_of = FROM }
+				}
+			}
+			NOT = { has_war_with = FROM }
+		}
+		complete_effect = {
 			add_ai_strategy = {
 				type = prepare_for_war
 				id = FROM
@@ -2480,9 +2424,9 @@ MDL_puppet_RIV = {
 					value = 1000
 				}
 			}
-    }
-    remove_effect = {
-		  declare_war_on = { type = annex_everything target = FROM }
+		}
+		remove_effect = {
+			declare_war_on = { type = annex_everything target = FROM }
 			add_ai_strategy = {
 				type = prepare_for_war
 				id = FROM
@@ -2495,589 +2439,59 @@ MDL_puppet_RIV = {
 					value = -1000
 				}
 			}
-    }
-  }
+		}
+	}
 
 
 	MDL_kill_FAT = {
-    icon = crossed_swords
-    cost = 25
-    cancel_trigger = {
-      OR = {
-        has_war_with = FROM
-        NOT = { country_exists = FROM }
-      }
-    }
-    targets = { FAT VED SRS HAU NTR MNC DED HLR }
-    targets_dynamic = yes
-    target_non_existing = no
-    target_trigger = {
-			FROM = {
-				OR = {
-          original_tag = FAT
-          original_tag = VED
-          original_tag = SRS
-          original_tag = HAU
-          original_tag = NTR
-          original_tag = MNC
-          original_tag = DED
-          original_tag = HLR
-				}
-			}
-		}
-    target_root_trigger = {
-			NOT = { has_war_with = FROM }
-		}
-		days_remove = 50
-
-    visible = {
-      has_country_flag = MDL_imperium_decisions_unlocked
-      has_country_flag = MDL_imperium_restored
-      FROM = { NOT = { is_subject_of = ROOT } }
-			country_exists = FROM
-      OR = {
-        is_neighbor_of = FROM
-        AND = {
-          FAT = { is_subject_of = ROOT }
-          FAT = { is_neighbor_of = FROM }
-        }
-        AND = {
-          GRI = { is_subject_of = ROOT }
-          GRI = { is_neighbor_of = FROM }
-        }
-      }
-      NOT = { has_war_with = FROM }
-    }
-    complete_effect = {
-			add_ai_strategy = {
-				type = prepare_for_war
-				id = FROM
-				value = 1000
-			}
-			FROM = {
-				add_ai_strategy = {
-					type = prepare_for_war
-					id = ROOT
-					value = 1000
-				}
-			}
-    }
-    remove_effect = {
-		  declare_war_on = { type = annex_everything target = FROM }
-			add_ai_strategy = {
-				type = prepare_for_war
-				id = FROM
-				value = -1000
-			}
-			FROM = {
-				add_ai_strategy = {
-					type = prepare_for_war
-					id = ROOT
-					value = -1000
-				}
-			}
-    }
-  }
-
-  MDL_kill_GRI = {
-    icon = crossed_swords
-    cost = 25
-    cancel_trigger = {
-      OR = {
-        has_war_with = FROM
-        NOT = { country_exists = FROM }
-      }
-    }
-    targets = { GRI STW FEA BRZ ROU PYT KAT ANG YAL GRI EYR }
-    targets_dynamic = yes
-    target_non_existing = no
-    target_trigger = {
-			FROM = {
-				OR = {
-          original_tag = GRI
-          original_tag = STW
-          original_tag = FEA
-          original_tag = BRZ
-          original_tag = ROU
-          original_tag = PYT
-          original_tag = KAT
-          original_tag = ANG
-          original_tag = YAL
-          original_tag = GRI
-          original_tag = EYR
-				}
-			}
-		}
-    target_root_trigger = {
-			NOT = { has_war_with = FROM }
-		}
-		days_remove = 50
-
-    visible = {
-      has_country_flag = MDL_imperium_decisions_unlocked
-      has_country_flag = MDL_imperium_restored
-      FROM = { NOT = { is_subject_of = ROOT } }
-			country_exists = FROM
-      OR = {
-        is_neighbor_of = FROM
-        AND = {
-          GRI = { is_subject_of = ROOT }
-          GRI = { is_neighbor_of = FROM }
-        }
-        AND = {
-          JER = { is_subject_of = ROOT }
-          JER = { is_neighbor_of = FROM }
-        }
-      }
-      NOT = { has_war_with = FROM }
-    }
-    complete_effect = {
-			add_ai_strategy = {
-				type = prepare_for_war
-				id = FROM
-				value = 1000
-			}
-			FROM = {
-				add_ai_strategy = {
-					type = prepare_for_war
-					id = ROOT
-					value = 1000
-				}
-			}
-    }
-    remove_effect = {
-		  declare_war_on = { type = annex_everything target = FROM }
-			add_ai_strategy = {
-				type = prepare_for_war
-				id = FROM
-				value = -1000
-			}
-			FROM = {
-				add_ai_strategy = {
-					type = prepare_for_war
-					id = ROOT
-					value = -1000
-				}
-			}
-    }
-  }
-
-  MDL_kill_MCW = {
-    icon = crossed_swords
-    cost = 25
-    cancel_trigger = {
-      OR = {
-        has_war_with = FROM
-        NOT = { country_exists = FROM }
-      }
-    }
-    targets = { MCW }
-    targets_dynamic = yes
-    target_non_existing = no
-    target_trigger = {
-			FROM = {
-				OR = {
-          original_tag = MCW
-				}
-			}
-		}
-    target_root_trigger = {
-			NOT = { has_war_with = FROM }
-		}
-		days_remove = 50
-
-    visible = {
-      has_country_flag = MDL_imperium_decisions_unlocked
-      has_country_flag = MDL_imperium_restored
-      FROM = { NOT = { is_subject_of = ROOT } }
-			country_exists = FROM
-      OR = {
-        is_neighbor_of = FROM
-        MIT = { is_subject_of = ROOT }
-      }
-      NOT = { has_war_with = FROM }
-    }
-    complete_effect = {
-			add_ai_strategy = {
-				type = prepare_for_war
-				id = FROM
-				value = 1000
-			}
-			FROM = {
-				add_ai_strategy = {
-					type = prepare_for_war
-					id = ROOT
-					value = 1000
-				}
-			}
-    }
-    remove_effect = {
-		  declare_war_on = { type = annex_everything target = FROM }
-			add_ai_strategy = {
-				type = prepare_for_war
-				id = FROM
-				value = -1000
-			}
-			FROM = {
-				add_ai_strategy = {
-					type = prepare_for_war
-					id = ROOT
-					value = -1000
-				}
-			}
-    }
-  }
-
-  MDL_kill_NCH = {
-    icon = crossed_swords
-    cost = 25
-    cancel_trigger = {
-      OR = {
-        has_war_with = FROM
-        NOT = { country_exists = FROM }
-      }
-    }
-    targets = { NCH }
-    targets_dynamic = yes
-    target_non_existing = no
-    target_trigger = {
-			FROM = {
-				OR = {
-          original_tag = NCH
-				}
-			}
-		}
-    target_root_trigger = {
-			NOT = { has_war_with = FROM }
-		}
-		days_remove = 50
-
-    visible = {
-      has_country_flag = MDL_imperium_decisions_unlocked
-      has_country_flag = MDL_imperium_restored
-      FROM = { NOT = { is_subject_of = ROOT } }
-			country_exists = FROM
-      OR = {
-        is_neighbor_of = FROM
-        AND = {
-          FIR = { is_subject_of = ROOT }
-          FBK = { exists = no }
-        }
-      }
-      NOT = { has_war_with = FROM }
-    }
-    complete_effect = {
-			add_ai_strategy = {
-				type = prepare_for_war
-				id = FROM
-				value = 1000
-			}
-			FROM = {
-				add_ai_strategy = {
-					type = prepare_for_war
-					id = ROOT
-					value = 1000
-				}
-			}
-    }
-    remove_effect = {
-		  declare_war_on = { type = annex_everything target = FROM }
-			add_ai_strategy = {
-				type = prepare_for_war
-				id = FROM
-				value = -1000
-			}
-			FROM = {
-				add_ai_strategy = {
-					type = prepare_for_war
-					id = ROOT
-					value = -1000
-				}
-			}
-    }
-  }
-
-  MDL_kill_FIR = {
-    icon = crossed_swords
-    cost = 25
-    cancel_trigger = {
-      OR = {
-        has_war_with = FROM
-        NOT = { country_exists = FROM }
-      }
-    }
-    targets = { FIR WAT FBK HLR DED }
-    targets_dynamic = yes
-    target_non_existing = no
-    target_trigger = {
-			FROM = {
-				OR = {
-          original_tag = FIR
-          original_tag = WAT
-          original_tag = FBK
-          original_tag = HLR
-          original_tag = DED
-				}
-			}
-		}
-    target_root_trigger = {
-			NOT = { has_war_with = FROM }
-		}
-		days_remove = 50
-
-    visible = {
-      has_country_flag = MDL_imperium_decisions_unlocked
-      has_country_flag = MDL_imperium_restored
-      FROM = { NOT = { is_subject_of = ROOT } }
-			country_exists = FROM
-      OR = {
-        is_neighbor_of = FROM
-        AND = {
-          FIR = { is_subject_of = ROOT }
-          FIR = { is_neighbor_of = FROM }
-        }
-        AND = {
-          GRI = { is_subject_of = ROOT }
-          GRI = { is_neighbor_of = FROM }
-        }
-        AND = {
-          RIV = { is_subject_of = ROOT }
-          RIV = { is_neighbor_of = FROM }
-        }
-      }
-      NOT = { has_war_with = FROM }
-    }
-    complete_effect = {
-			add_ai_strategy = {
-				type = prepare_for_war
-				id = FROM
-				value = 1000
-			}
-			FROM = {
-				add_ai_strategy = {
-					type = prepare_for_war
-					id = ROOT
-					value = 1000
-				}
-			}
-    }
-    remove_effect = {
-		  declare_war_on = { type = annex_everything target = FROM }
-			add_ai_strategy = {
-				type = prepare_for_war
-				id = FROM
-				value = -1000
-			}
-			FROM = {
-				add_ai_strategy = {
-					type = prepare_for_war
-					id = ROOT
-					value = -1000
-				}
-			}
-    }
-  }
-
-  MDL_kill_JER = {
-    icon = crossed_swords
-    cost = 25
-    cancel_trigger = {
-      OR = {
-        has_war_with = FROM
-        NOT = { country_exists = FROM }
-      }
-    }
-    targets = { AVI ERI JER JEB JFT JRR VIN AET HEL FLO POM FEZ }
-    targets_dynamic = yes
-    target_non_existing = no
-    target_trigger = {
-			FROM = {
-				OR = {
-          original_tag = AVI
-          original_tag = ERI
-          original_tag = JER
-          original_tag = JEB
-          original_tag = JFT
-          original_tag = JRR
-          original_tag = VIN
-          original_tag = AET
-          original_tag = HEL
-          original_tag = FLO
-          original_tag = POM
-          original_tag = FEZ
-				}
-			}
-		}
-    target_root_trigger = {
-			NOT = { has_war_with = FROM }
-		}
-		days_remove = 50
-
-    visible = {
-      has_country_flag = MDL_imperium_decisions_unlocked
-      has_country_flag = MDL_imperium_restored
-      FROM = { NOT = { is_subject_of = ROOT } }
-			country_exists = FROM
-      OR = {
-        is_neighbor_of = FROM
-        AND = {
-          JER = { is_subject_of = ROOT }
-          JER = { is_neighbor_of = FROM }
-        }
-      }
-      NOT = { has_war_with = FROM }
-    }
-    complete_effect = {
-			add_ai_strategy = {
-				type = prepare_for_war
-				id = FROM
-				value = 1000
-			}
-			FROM = {
-				add_ai_strategy = {
-					type = prepare_for_war
-					id = ROOT
-					value = 1000
-				}
-			}
-    }
-    remove_effect = {
-		  declare_war_on = { type = annex_everything target = FROM }
-			add_ai_strategy = {
-				type = prepare_for_war
-				id = FROM
-				value = -1000
-			}
-			FROM = { 
-				add_ai_strategy = {
-					type = prepare_for_war
-					id = ROOT
-					value = -1000
-				}
-			}
-    }
-  }
-
-  MDL_restore_karthinian_territories = {
-    icon = crossed_swords
-    cost = 25
-    cancel_trigger = {
-      OR = {
-        has_war_with = FROM
-        NOT = { country_exists = FROM }
-      }
-    }
-    targets = { FAL TAL FRN ARA SIC CYA EQC BOI JES LAK BAN MIT }
-		targets_dynamic = yes
-		target_non_existing = no
-    target_trigger = {
-			FROM = {
-				OR = {
-          original_tag = FAL
-          original_tag = TAL
-          original_tag = FRN
-          original_tag = ARA
-          original_tag = SIC
-          original_tag = CYA
-          original_tag = EQC
-          original_tag = BOI
-          original_tag = JES
-          original_tag = LAK
-          original_tag = BAN
-          original_tag = MIT
-				}
-			}
-		}
-    target_root_trigger = {
-			NOT = { has_war_with = FROM }
-		}
-		days_remove = 50
-
-    visible = {
-      has_country_flag = MDL_imperium_decisions_unlocked
-      has_country_flag = MDL_imperium_restored
-      FROM = { NOT = { is_subject_of = ROOT } }
-			country_exists = FROM
-      is_neighbor_of = FROM
-      NOT = { has_war_with = FROM }
-    }
-    complete_effect = {
-			add_ai_strategy = {
-				type = prepare_for_war
-				id = FROM
-				value = 1000
-			}
-			FROM = {
-				add_ai_strategy = {
-					type = prepare_for_war
-					id = ROOT
-					value = 1000
-				}
-			}
-    }
-    remove_effect = {
-		  declare_war_on = { type = annex_everything target = FROM }
-			add_ai_strategy = {
-				type = prepare_for_war
-				id = FROM
-				value = -1000
-			}
-			FROM = { 
-				add_ai_strategy = {
-					type = prepare_for_war
-					id = ROOT
-					value = -1000
-				}
-			}
-    }
-  }
-
-  MDL_expand_ultramar = {
 		icon = crossed_swords
-    
-    cost = 25
-
+		cost = 25
 		cancel_trigger = {
-      OR = {
-        has_war_with = FROM
-        NOT = { country_exists = FROM }
-      }
-    }
-
-    targets = { ABY MGY KLG ASS ANS MKS YMN EMR SDF SDC SDL SDS KTZ }
+			OR = {
+				has_war_with = FROM
+				NOT = { country_exists = FROM }
+			}
+		}
+		targets = { FAT VED SRS HAU NTR MNC DED HLR }
 		targets_dynamic = yes
 		target_non_existing = no
-    target_trigger = {
+		target_trigger = {
 			FROM = {
 				OR = {
-          original_tag = ABY
-					original_tag = MGY
-          original_tag = KLG
-          original_tag = ASS
-          original_tag = ANS
-          original_tag = MKS
-          original_tag = YMN
-          original_tag = EMR
-          original_tag = SDF
-          original_tag = SDC
-          original_tag = SDL
-          original_tag = SDS
-          original_tag = KTZ
+					original_tag = FAT
+					original_tag = VED
+					original_tag = SRS
+					original_tag = HAU
+					original_tag = NTR
+					original_tag = MNC
+					original_tag = DED
+					original_tag = HLR
 				}
 			}
 		}
-    target_root_trigger = {
+		target_root_trigger = {
 			NOT = { has_war_with = FROM }
 		}
 		days_remove = 50
-
-    visible = {
-      has_country_flag = MDL_imperium_decisions_unlocked
+		visible = {
+			has_country_flag = MDL_imperium_decisions_unlocked
+			has_country_flag = MDL_imperium_restored
+			FROM = { NOT = { is_subject_of = ROOT } }
 			country_exists = FROM
-      is_neighbor_of = FROM
-      NOT = { has_war_with = FROM }
-    }
-    complete_effect = {
+			OR = {
+				is_neighbor_of = FROM
+				AND = {
+					FAT = { is_subject_of = ROOT }
+					FAT = { is_neighbor_of = FROM }
+				}
+				AND = {
+					GRI = { is_subject_of = ROOT }
+					GRI = { is_neighbor_of = FROM }
+				}
+			}
+			NOT = { has_war_with = FROM }
+		}
+		complete_effect = {
 			add_ai_strategy = {
 				type = prepare_for_war
 				id = FROM
@@ -3090,9 +2504,384 @@ MDL_puppet_RIV = {
 					value = 1000
 				}
 			}
-    }
-    remove_effect = {
-		  declare_war_on = { type = annex_everything target = FROM }
+		}
+		remove_effect = {
+			declare_war_on = { type = annex_everything target = FROM }
+			add_ai_strategy = {
+				type = prepare_for_war
+				id = FROM
+				value = -1000
+			}
+			FROM = {
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ROOT
+					value = -1000
+				}
+			}
+		}
+	}
+
+	MDL_kill_GRI = {
+		icon = crossed_swords
+		cost = 25
+		cancel_trigger = {
+			OR = {
+				has_war_with = FROM
+				NOT = { country_exists = FROM }
+			}
+		}
+		targets = { GRI STW FEA BRZ ROU PYT KAT ANG YAL GRI EYR }
+		targets_dynamic = yes
+		target_non_existing = no
+		target_trigger = {
+			FROM = {
+				OR = {
+					original_tag = GRI
+					original_tag = STW
+					original_tag = FEA
+					original_tag = BRZ
+					original_tag = ROU
+					original_tag = PYT
+					original_tag = KAT
+					original_tag = ANG
+					original_tag = YAL
+					original_tag = GRI
+					original_tag = EYR
+				}
+			}
+		}
+		target_root_trigger = {
+			NOT = { has_war_with = FROM }
+		}
+		days_remove = 50
+
+		visible = {
+			has_country_flag = MDL_imperium_decisions_unlocked
+			has_country_flag = MDL_imperium_restored
+			FROM = { NOT = { is_subject_of = ROOT } }
+			country_exists = FROM
+			OR = {
+				is_neighbor_of = FROM
+				AND = {
+					GRI = { is_subject_of = ROOT }
+					GRI = { is_neighbor_of = FROM }
+				}
+				AND = {
+					JER = { is_subject_of = ROOT }
+					JER = { is_neighbor_of = FROM }
+				}
+			}
+			NOT = { has_war_with = FROM }
+		}
+		complete_effect = {
+			add_ai_strategy = {
+				type = prepare_for_war
+				id = FROM
+				value = 1000
+			}
+			FROM = {
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ROOT
+					value = 1000
+				}
+			}
+		}
+		remove_effect = {
+			declare_war_on = { type = annex_everything target = FROM }
+			add_ai_strategy = {
+				type = prepare_for_war
+				id = FROM
+				value = -1000
+			}
+			FROM = {
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ROOT
+					value = -1000
+				}
+			}
+		}
+	}
+
+	MDL_kill_MCW = {
+		icon = crossed_swords
+		cost = 25
+		cancel_trigger = {
+			OR = {
+				has_war_with = FROM
+				NOT = { country_exists = FROM }
+			}
+		}
+		targets = { MCW }
+		targets_dynamic = yes
+		target_non_existing = no
+		target_trigger = {
+			FROM = {
+				OR = { original_tag = MCW }
+			}
+		}
+		target_root_trigger = {
+			NOT = { has_war_with = FROM }
+		}
+		days_remove = 50
+
+		visible = {
+			has_country_flag = MDL_imperium_decisions_unlocked
+			has_country_flag = MDL_imperium_restored
+			FROM = { NOT = { is_subject_of = ROOT } }
+			country_exists = FROM
+			OR = {
+				is_neighbor_of = FROM
+				MIT = { is_subject_of = ROOT }
+			}
+			NOT = { has_war_with = FROM }
+		}
+		complete_effect = {
+			add_ai_strategy = {
+				type = prepare_for_war
+				id = FROM
+				value = 1000
+			}
+			FROM = {
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ROOT
+					value = 1000
+				}
+			}
+		}
+		remove_effect = {
+			declare_war_on = { type = annex_everything target = FROM }
+			add_ai_strategy = {
+				type = prepare_for_war
+				id = FROM
+				value = -1000
+			}
+			FROM = {
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ROOT
+					value = -1000
+				}
+			}
+		}
+	}
+
+	MDL_kill_NCH = {
+		icon = crossed_swords
+		cost = 25
+		cancel_trigger = {
+			OR = {
+				has_war_with = FROM
+				NOT = { country_exists = FROM }
+			}
+		}
+		targets = { NCH }
+		targets_dynamic = yes
+		target_non_existing = no
+		target_trigger = {
+			FROM = {
+				OR = { original_tag = NCH }
+			}
+		}
+		target_root_trigger = {
+			NOT = { has_war_with = FROM }
+		}
+		days_remove = 50
+
+		visible = {
+			has_country_flag = MDL_imperium_decisions_unlocked
+			has_country_flag = MDL_imperium_restored
+			FROM = { NOT = { is_subject_of = ROOT } }
+			country_exists = FROM
+			OR = {
+				is_neighbor_of = FROM
+				AND = {
+					FIR = { is_subject_of = ROOT }
+					FBK = { exists = no }
+				}
+			}
+			NOT = { has_war_with = FROM }
+		}
+		complete_effect = {
+			add_ai_strategy = {
+				type = prepare_for_war
+				id = FROM
+				value = 1000
+			}
+			FROM = {
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ROOT
+					value = 1000
+				}
+			}
+		}
+		remove_effect = {
+			declare_war_on = { type = annex_everything target = FROM }
+			add_ai_strategy = {
+				type = prepare_for_war
+				id = FROM
+				value = -1000
+			}
+			FROM = {
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ROOT
+					value = -1000
+				}
+			}
+		}
+	}
+
+	MDL_kill_FIR = {
+		icon = crossed_swords
+		cost = 25
+		cancel_trigger = {
+			OR = {
+				has_war_with = FROM
+				NOT = { country_exists = FROM }
+			}
+		}
+		targets = { FIR WAT FBK HLR DED }
+		targets_dynamic = yes
+		target_non_existing = no
+		target_trigger = {
+			FROM = {
+				OR = {
+					original_tag = FIR
+					original_tag = WAT
+					original_tag = FBK
+					original_tag = HLR
+					original_tag = DED
+				}
+			}
+		}
+		target_root_trigger = {
+			NOT = { has_war_with = FROM }
+		}
+		days_remove = 50
+
+		visible = {
+			has_country_flag = MDL_imperium_decisions_unlocked
+			has_country_flag = MDL_imperium_restored
+			FROM = { NOT = { is_subject_of = ROOT } }
+			country_exists = FROM
+			OR = {
+				is_neighbor_of = FROM
+				AND = {
+					FIR = { is_subject_of = ROOT }
+					FIR = { is_neighbor_of = FROM }
+				}
+				AND = {
+					GRI = { is_subject_of = ROOT }
+					GRI = { is_neighbor_of = FROM }
+				}
+				AND = {
+					RIV = { is_subject_of = ROOT }
+					RIV = { is_neighbor_of = FROM }
+				}
+			}
+			NOT = { has_war_with = FROM }
+		}
+		complete_effect = {
+			add_ai_strategy = {
+				type = prepare_for_war
+				id = FROM
+				value = 1000
+			}
+			FROM = {
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ROOT
+					value = 1000
+				}
+			}
+		}
+		remove_effect = {
+			declare_war_on = { type = annex_everything target = FROM }
+			add_ai_strategy = {
+				type = prepare_for_war
+				id = FROM
+				value = -1000
+			}
+			FROM = {
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ROOT
+					value = -1000
+				}
+			}
+		}
+	}
+
+	MDL_kill_JER = {
+		icon = crossed_swords
+		cost = 25
+		cancel_trigger = {
+			OR = {
+				has_war_with = FROM
+				NOT = { country_exists = FROM }
+			}
+		}
+		targets = { AVI ERI JER JEB JFT JRR VIN AET HEL FLO POM FEZ }
+		targets_dynamic = yes
+		target_non_existing = no
+		target_trigger = {
+			FROM = {
+				OR = {
+					original_tag = AVI
+					original_tag = ERI
+					original_tag = JER
+					original_tag = JEB
+					original_tag = JFT
+					original_tag = JRR
+					original_tag = VIN
+					original_tag = AET
+					original_tag = HEL
+					original_tag = FLO
+					original_tag = POM
+					original_tag = FEZ
+				}
+			}
+		}
+		target_root_trigger = {
+			NOT = { has_war_with = FROM }
+		}
+		days_remove = 50
+
+		visible = {
+			has_country_flag = MDL_imperium_decisions_unlocked
+			has_country_flag = MDL_imperium_restored
+			FROM = { NOT = { is_subject_of = ROOT } }
+			country_exists = FROM
+			OR = {
+				is_neighbor_of = FROM
+				AND = {
+					JER = { is_subject_of = ROOT }
+					JER = { is_neighbor_of = FROM }
+				}
+			}
+			NOT = { has_war_with = FROM }
+		}
+		complete_effect = {
+			add_ai_strategy = {
+				type = prepare_for_war
+				id = FROM
+				value = 1000
+			}
+			FROM = {
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ROOT
+					value = 1000
+				}
+			}
+		}
+		remove_effect = {
+			declare_war_on = { type = annex_everything target = FROM }
 			add_ai_strategy = {
 				type = prepare_for_war
 				id = FROM
@@ -3105,109 +2894,253 @@ MDL_puppet_RIV = {
 					value = -1000
 				}
 			}
-    }
-  }
+		}
+	}
 
-  MDL_establish_colonial_admin = {
-    icon = jachs_drawer
-		fire_only_once = yes
-    cost = 25
+	MDL_restore_karthinian_territories = {
+		icon = crossed_swords
+		cost = 25
+		cancel_trigger = {
+			OR = {
+				has_war_with = FROM
+				NOT = { country_exists = FROM }
+			}
+		}
+		targets = { FAL TAL FRN ARA SIC CYA EQC BOI JES LAK BAN MIT }
+		targets_dynamic = yes
+		target_non_existing = no
+		target_trigger = {
+			FROM = {
+				OR = {
+					original_tag = FAL
+					original_tag = TAL
+					original_tag = FRN
+					original_tag = ARA
+					original_tag = SIC
+					original_tag = CYA
+					original_tag = EQC
+					original_tag = BOI
+					original_tag = JES
+					original_tag = LAK
+					original_tag = BAN
+					original_tag = MIT
+				}
+			}
+		}
+		target_root_trigger = {
+			NOT = { has_war_with = FROM }
+		}
+		days_remove = 50
+
+		visible = {
+			has_country_flag = MDL_imperium_decisions_unlocked
+			has_country_flag = MDL_imperium_restored
+			FROM = { NOT = { is_subject_of = ROOT } }
+			country_exists = FROM
+			is_neighbor_of = FROM
+			NOT = { has_war_with = FROM }
+		}
+		complete_effect = {
+			add_ai_strategy = {
+				type = prepare_for_war
+				id = FROM
+				value = 1000
+			}
+			FROM = {
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ROOT
+					value = 1000
+				}
+			}
+		}
+		remove_effect = {
+			declare_war_on = { type = annex_everything target = FROM }
+			add_ai_strategy = {
+				type = prepare_for_war
+				id = FROM
+				value = -1000
+			}
+			FROM = { 
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ROOT
+					value = -1000
+				}
+			}
+		}
+	}
+
+	MDL_expand_ultramar = {
+		icon = crossed_swords
+		cost = 25
 
 		cancel_trigger = {
-      country_exists = FROM
-    }
+			OR = {
+				has_war_with = FROM
+				NOT = { country_exists = FROM }
+			}
+		}
 
-    targets = { ABY MGY ASS ANS MKS YMN }
+		targets = { ABY MGY KLG ASS ANS MKS YMN EMR SDF SDC SDL SDS KTZ }
+		targets_dynamic = yes
+		target_non_existing = no
+		target_trigger = {
+			FROM = {
+				OR = {
+					original_tag = ABY
+					original_tag = MGY
+					original_tag = KLG
+					original_tag = ASS
+					original_tag = ANS
+					original_tag = MKS
+					original_tag = YMN
+					original_tag = EMR
+					original_tag = SDF
+					original_tag = SDC
+					original_tag = SDL
+					original_tag = SDS
+					original_tag = KTZ
+				}
+			}
+		}
+		target_root_trigger = {
+			NOT = { has_war_with = FROM }
+		}
+		days_remove = 50
+		visible = {
+			has_country_flag = MDL_imperium_decisions_unlocked
+			country_exists = FROM
+			is_neighbor_of = FROM
+			NOT = { has_war_with = FROM }
+		}
+		complete_effect = {
+			add_ai_strategy = {
+				type = prepare_for_war
+				id = FROM
+				value = 1000
+			}
+			FROM = {
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ROOT
+					value = 1000
+				}
+			}
+		}
+		remove_effect = {
+			declare_war_on = { type = annex_everything target = FROM }
+			add_ai_strategy = {
+				type = prepare_for_war
+				id = FROM
+				value = -1000
+			}
+			FROM = { 
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ROOT
+					value = -1000
+				}
+			}
+		}
+	}
+
+	MDL_establish_colonial_admin = {
+		icon = jachs_drawer
+		fire_only_once = yes
+		cost = 25
+		cancel_trigger = { country_exists = FROM }
+		targets = { ABY MGY ASS ANS MKS YMN }
 		targets_dynamic = yes
 		target_non_existing = yes
-    target_trigger = {
+		target_trigger = {
 			FROM = {
 				OR = {
-          original_tag = ABY
+					original_tag = ABY
 					original_tag = MGY
-          original_tag = ASS
-          original_tag = ANS
-          original_tag = MKS
-          original_tag = YMN
+					original_tag = ASS
+					original_tag = ANS
+					original_tag = MKS
+					original_tag = YMN
 				}
 			}
 		}
 
 		days_remove = 25
-    visible = {
-      has_completed_focus = MDL_colonial_administration
-      NOT = { country_exists = FROM }
-      any_occupied_country = { tag = FROM }
-    }
-    remove_effect = {
-      every_owned_state = {
-        limit = {
-          is_core_of = FROM
-          NOT = {
-							has_dynamic_modifier = { modifier = MDL_colonial_admin }
+		visible = {
+			has_completed_focus = MDL_colonial_administration
+			NOT = { country_exists = FROM }
+			any_occupied_country = { tag = FROM }
+		}
+		remove_effect = {
+			every_owned_state = {
+				limit = {
+					is_core_of = FROM
+					NOT = {
+						has_dynamic_modifier = { modifier = MDL_colonial_admin }
 					}
-        }
-        add_compliance = 15
-        add_dynamic_modifier = { modifier = MDL_colonial_admin }
-      }
-    }
-  }
+				}
+				add_compliance = 15
+				add_dynamic_modifier = { modifier = MDL_colonial_admin }
+			}
+		}
+	}
 }
 
 CHN_protectorates = {
-  CHN_manedalusia_protectorate = {
-    ai_will_do = { factor = 100 }
-    icon = MDL_eye
-    highlight_states = {
-      highlight_state_targets = {
-        state = 741
-        state = 738
-        state = 740
-        state = 764
-      }
-      highlight_color_while_active = 3
-      highlight_color_before_active = 2
-    }
-    available = {
-      has_government = fascism
-      controls_canterlot = yes
-      has_completed_focus = unite_the_people
-      EQS = {
-        OR = {
-          is_subject_of = ROOT
-          has_capitulated = yes
-          exists = no
-        }
-      }
-      MDL = { exists = no }
-    }
-    cost = 25
-    days_remove = 5
-    modifier = { political_power_gain = -0.15 }
-    visible = {
-      MDL = { has_completed_focus = MDL_formalize_alliance }
-      has_government = fascism
-      has_completed_focus = unite_the_people
-      owns_state = 741
-    }
-    complete_effect = {
-      hidden_effect = {
-        MDL = {
-          clr_country_flag = MDL_asabiyyah_unlocked
-          set_party_name = {
-            ideology = fascism
-            long_name = MDL_CHN_PARTY_NAME_LONG
-            name = MDL_CHN_PARTY_NAME
-          }
-          load_focus_tree = { tree = generic_zebra_focus }
-          MDL_elevate_virianthrax = yes
-          set_cosmetic_tag = MDL_CHN
-        }
-      }
-      release_puppet = MDL
-    }
-    remove_effect = {
-      #
-    }
-  }
+	CHN_manedalusia_protectorate = {
+		ai_will_do = { factor = 100 }
+		icon = MDL_eye
+		highlight_states = {
+			highlight_state_targets = {
+				state = 741
+				state = 738
+				state = 740
+				state = 764
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 2
+		}
+		available = {
+			has_government = fascism
+			controls_canterlot = yes
+			has_completed_focus = unite_the_people
+			EQS = {
+				OR = {
+					is_subject_of = ROOT
+					has_capitulated = yes
+					exists = no
+				}
+			}
+			MDL = { exists = no }
+		}
+		cost = 25
+		days_remove = 5
+		modifier = { political_power_gain = -0.15 }
+		visible = {
+			MDL = { has_completed_focus = MDL_formalize_alliance }
+			has_government = fascism
+			has_completed_focus = unite_the_people
+			owns_state = 741
+		}
+		complete_effect = {
+			hidden_effect = {
+				MDL = {
+					clr_country_flag = MDL_asabiyyah_unlocked
+					set_party_name = {
+						ideology = fascism
+						long_name = MDL_CHN_PARTY_NAME_LONG
+						name = MDL_CHN_PARTY_NAME
+					}
+					load_focus_tree = { tree = generic_zebra_focus }
+					MDL_elevate_virianthrax = yes
+					set_cosmetic_tag = MDL_CHN
+				}
+			}
+			release_puppet = MDL
+		}
+		remove_effect = {
+			#
+		}
+	}
 }

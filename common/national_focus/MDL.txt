@@ -2770,6 +2770,10 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_fiqh_decisions"
 		add_stability = 0.10
 		custom_effect_tooltip = MDL_fiqh_decisions_unlocked_tt
+		add_to_variable = {
+			MDL_theology_drift_cost_var = -20
+			tooltip = MDL_theology_drift_cost_var_tt
+		}
 		hidden_effect = { set_country_flag = MDL_fiqh_decisions_unlocked }
 	}
 	search_filters = { FOCUS_FILTER_POLITICAL }
@@ -3358,7 +3362,15 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_koltaliba_commissars"
 		country_event = { id = manedalusia.29 }
-		add_ideas = MDL_koltaliba_commissars_idea
+		custom_effect_tooltip = { IDEA = MDL_asabiyyah_modifier localization_key = modify_idea_tt }
+		add_to_variable = {
+			MDL_morale_var = 0.10
+			tooltip = army_morale_factor_tt
+		}
+		add_to_variable = {
+			MDL_supply_consumption_factor = -0.10
+			tooltip = supply_consumption_factor_tt
+		}
 	}
 	search_filters = { FOCUS_FILTER_ARMY_BONUS }
 }
@@ -3375,7 +3387,27 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_special_forces_regimentation"
 		country_event = { id = manedalusia.28 }
-		add_ideas = MDL_koltaliba_regimentation
+		custom_effect_tooltip = { IDEA = MDL_asabiyyah_modifier localization_key = modify_idea_tt }
+		add_to_variable = {
+			MDL_special_forces_cap = 0.15
+			tooltip = special_forces_cap_tt
+		}
+		add_to_variable = {
+			special_forces_no_supply_grace = 72
+			tooltip = special_forces_no_supply_grace_tt
+		}
+		add_to_variable = {
+			MDL_heat_attrition_factor = -0.15
+			tooltip = heat_attrition_factor_tt
+		}
+		add_to_variable = {
+			MDL_special_forces_out_of_supply_factor = -0.15
+			tooltip = special_forces_out_of_supply_factor_tt
+		}
+		add_to_variable = {
+			MDL_special_forces_training_time_factor = 0.20
+			tooltip = special_forces_training_time_factor_tt
+		}
 	}
 	search_filters = { FOCUS_FILTER_ARMY_BONUS }
 }
@@ -3742,7 +3774,7 @@ shared_focus = {
 		add_mastery_bonus = {
 			bonus = 0.25
 			days = 240
-			folder = naval  
+			folder = naval	
 			name = GRU_naval_doctrinal_reformation
 		}
 	}
@@ -9027,6 +9059,10 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM08"
 		add_stability = 0.05
 		custom_effect_tooltip = MDL_fiqh_decisions_unlocked_tt
+		add_to_variable = {
+			MDL_theology_drift_cost_var = -20
+			tooltip = MDL_theology_drift_cost_var_tt
+		}
 		hidden_effect = { set_country_flag = MDL_fiqh_decisions_unlocked }
 	}
 }
@@ -9481,24 +9517,10 @@ shared_focus = {
 	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM24"
-		if = {
-			limit = {
-				ASS = { exists = yes }
-			}
-			create_wargoal = {
-				type = annex_everything
-				target = ASS
-			}
-		}
-		if = {
-			limit = {
-				ANS = { exists = yes }
-			}
-			create_wargoal = {
-				type = annex_everything
-				target = ANS
-			}
-		}
+		set_temp_variable = { wargoal_target = ASS }
+		expand_sphere_of_influence_to_wargoal_target = yes
+		set_temp_variable = { wargoal_target = ANS }
+		expand_sphere_of_influence_to_wargoal_target = yes
 	}
 }
 
@@ -9516,7 +9538,15 @@ shared_focus = {
 	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM25"
-		add_ideas = MDL_koltaliba_commissars_idea
+		custom_effect_tooltip = { IDEA = MDL_asabiyyah_modifier localization_key = modify_idea_tt }
+		add_to_variable = {
+			MDL_morale_var = 0.10
+			tooltip = army_morale_factor_tt
+		}
+		add_to_variable = {
+			MDL_supply_consumption_factor = -0.10
+			tooltip = supply_consumption_factor_tt
+		}
 	}
 }
 
@@ -9625,7 +9655,27 @@ shared_focus = {
 			limit = { has_completed_focus = MDL_SAM18 }
 			country_event = manedalusia.174
 		}
-		add_ideas = MDL_koltaliba_regimentation
+		custom_effect_tooltip = { IDEA = MDL_asabiyyah_modifier localization_key = modify_idea_tt }
+		add_to_variable = {
+			MDL_special_forces_cap = 0.15
+			tooltip = special_forces_cap_tt
+		}
+		add_to_variable = {
+			special_forces_no_supply_grace = 72
+			tooltip = special_forces_no_supply_grace_tt
+		}
+		add_to_variable = {
+			MDL_heat_attrition_factor = -0.15
+			tooltip = heat_attrition_factor_tt
+		}
+		add_to_variable = {
+			MDL_special_forces_out_of_supply_factor = -0.15
+			tooltip = special_forces_out_of_supply_factor_tt
+		}
+		add_to_variable = {
+			MDL_special_forces_training_time_factor = 0.20
+			tooltip = special_forces_training_time_factor_tt
+		}
 	}
 }
 
@@ -10445,10 +10495,7 @@ shared_focus = {
 			name = MDL_SAM67
 			cost_reduction = 0.75
 			uses = 1
-			category = cat_mobile_warfare
-			category = cat_superior_firepower
-			category = cat_grand_battle_plan
-			category = cat_mass_assault
+			category = land_doctrine
 		}
 		custom_effect_tooltip = { IDEA = MDL_asabiyyah_modifier localization_key = modify_idea_tt }
 		add_to_variable = {

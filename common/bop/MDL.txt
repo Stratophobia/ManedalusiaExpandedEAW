@@ -34,7 +34,7 @@ MDL_theological_bop = {
 			max = -0.22
 			modifier = {
 				army_morale_factor = 0.050
-				weekly_manpower = 50
+				weekly_manpower = 100
 			}
 			on_activate = {
 				set_power_balance_gfx = {
@@ -54,8 +54,8 @@ MDL_theological_bop = {
 			min = -1.00
 			max = -0.55
 			modifier = {
-				army_morale_factor = 0.075
-				weekly_manpower = 100
+				army_morale_factor = 0.10
+				weekly_manpower = 200
 			}
 			on_activate = {
 				set_power_balance_gfx = {
@@ -80,6 +80,7 @@ MDL_theological_bop = {
 			max = 0.55
 			modifier = {
 				research_speed_factor = 0.015
+				country_resource_crystals = 2
 			}
 			on_activate = {
 				set_power_balance_gfx = {
@@ -99,7 +100,8 @@ MDL_theological_bop = {
 			min = 0.55
 			max = 1.00
 			modifier = {
-				research_speed_factor = 0.030
+				research_speed_factor = 0.03
+				country_resource_crystals = 4
 			}
 			on_activate = {
 				set_power_balance_gfx = {

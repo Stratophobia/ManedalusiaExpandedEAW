@@ -916,10 +916,6 @@
  MDL_magical_reloading_desc:0 "By combining elements of Magitek with a clever automatic reloader, we have designed a powerful fast reloading mechanism that allows our artillery to more effectively saturate enemy lines and targets with nonstop shelling, though it has made our artillery slightly more expensive to manufacture."
  MDL_magical_engines:0 "Magically Shielded Engine Blocks"
  MDL_magical_engines_desc:0 "A simple tweaked enchantment allows us to coat a vehicle engine inside a self-repairing bubble. Not only does this make our vehicles much less prone to malfunction, the magical protection means we can afford a less sturdy material frame, making them more economical to manufacture."
- MDL_koltaliba_commissars_idea:0 "Koltāliba Commissariat"
- MDL_koltaliba_commissars_idea_desc:0 "As is traditional of their role, the Koltāliba have been integrated into our armed forces as a Commissariat, with one member of the Order assigned to all units to serve as a military advisor, commander in the case of emergency or break in the chain of command, and most importantly, as a trainer and inspector to whip the soldiers into top shape."
- MDL_koltaliba_regimentation:0 "Koltāliba Regimentation"
- MDL_koltaliba_regimentation_desc:0 "All our special forces are trained to the strict standards of the Hashm Koltāliba's conditioning; they are expected to survive and complete their mission with minimal supplies and support."
  MDL_streamlined_tank_production:0 "The Black Guard"
  MDL_streamlined_tank_production_desc:0 "In time immemorial, the Sultans of Everleaf made use of a few select Abyssinian mercenaries for their personal protection. This was the Black Guard, a body of warriors so fearsome and precise that no creature could threaten the Sultan in their presence. In honor of their service in antiquity, the Armor Corps of Manedalusia take their name, and fulfill for the army a similar purpose as the vanguard of any advancement."
  MDL_merchant_fleet_idea:0 "The Merchant Fleet"
@@ -1427,7 +1423,9 @@
  MDL_commie_tree_loaded_tt:0 "§RSunset's Focus Tree will be loaded.§!"
  MDL_velvet_tree_loaded_tt:0 "§CVelvet's Focus Tree will be loaded.§!"
  MDL_grifo_tree_loaded_tt:0 "§rGrifo's Focus Tree will be loaded.§!"
- MDL_fiqh_decisions_unlocked_tt:0 "Unlocks §GFiqh§! £decision_icon_small §Cdecisions§! to influence the §Otheological§! §Gpower balance§!."
+ MDL_fiqh_decisions_unlocked_tt:0 "Call a §GLamma Al-A'Imma§! to settle theological issues and influence the values of the §OTheological Power Balance§!."
+ MDL_fiqh_decisions_unlocked:0 "The §GLamma Al-A'Imma§! has been called."
+ MDL_theology_drift_cost_var_tt:0 "§OTheological Influence Cost§!: $RIGHT|+=0$"
  MDL_war_with_wingbardy_tt:0 "We will wage war to §Rkick Wingbardy out of Zebrica§!. If we can take their colonies and prevent them from retaking them, we will be able to force a §Gwhite peace§!."
  MDL_war_with_wingbardy_won:0 "§GWingbardy cedes its Zebrican territories.§!"
  MDL_crimson_sultanate_tt:0 "§YAl-Manedalus§! will be known as §Ythe Crimson Sultanate§!\n"
@@ -1535,7 +1533,7 @@
  decision_cost_CP_25_AXP_25_blocked:0 "£command_power §R25§! £army_experience §R25§!"
  decision_cost_CP_25_AXP_25_tooltip:0 "It costs [This.GetDecisionCostCP25AXP25] to take the decision"
 ###LEADER TRAITS###
- MDL_muftia_trait:0 "§CMuftia of Coltoba§!"
+ MDL_muftia_trait:0 "Muftia of Coltoba"
  MDL_master_of_subterfuge:0 "Master Of Subterfuge"
  MDL_samira_lady_commander:0 "§GLady Commander of Manedalusia, Stewardess of The Holy State, First Among the Servants of His Righteous Will and Protector of the Faithful§!"
  MDL_grifo_lord_regent_of_overseas:0 "§CLord-Governor Of The Overseas Dominion§!"
@@ -1587,10 +1585,9 @@
  MDL_WIP_tt:0 "§CThe Strands of Fate remain weakened along this road.§!"
 ###TNO QUOTES####
  GetTNOReference_MDL_Grifo:0 "Was it worth it? All things are worth it."
- GetTNOReference_MDL_holy_war:0 "Their faith did not falter, not even for an instant."
+ GetTNOReference_MDL_holy_war:0 "In the end, Ash-Shahid found them wanting."
 ###HIDDEN IDEAS###
  MDL_holy_war_ai_debuff:0 "CHN Holy War Debuff"
- MDL_holy_war_ai_debuff_desc:0 "AI Debuff meant for the Changeling Lands and all EQS minors, barring Southeast in the Holy War campaign for Manedalusia.\n\n§YYou feel weak... The Empress' radiance washes over you... When she speaks, you feel your muscles twitch as if they were her own to command... You feel like you must obey her...§!"
 ###WELCOME SCREEN###
  EAW_WS_MDL:0 "[Root.GetNameDefCap] - The Witnesses of Ash-Shahid"
  EAW_WS_MDL_desc:0 "\"To Be is to Perceive; and He who Perceives All holds dominion over all.\"\n- Opening Passage from the Book of Revelation\n\nSome centuries before Luna's banishment, the §YMaregyptian Kingdom§! at that time had been stretching outward, establishing colonial outposts and mercantile bases beyond the barely inhabited desert reaches of the country, nestled along critical nodes of sea travel through the Green Bay. Coltoba was one such city, built in the fairly temperate coast beyond the Kom Marebo as a border fortress and trading post between the heartland of Maregypt and the catfolk of §rAbyssinia§!. For some generations, the city remained as a fairly independent, but still ultimately integral part of Maregypt.\n\nThat would change when a horse from distant Arabia, taking the name of Al-Wallid after his father, came to the port city, emerging from his exile by his older brother. Al-Wallid II subscribed to a very particular interpretation of ancient Arabian religious traditions. He came to the city during a moment of weakness for Maregypt, when its armies could not hope to circumnavigate the desert or travel by sea with a large force to contest him; and as such, he routed the city's garrison with a small mercenary force and conquered it for himself, declaring an Emirate and, eventually, a Sultanate. So was born the ancient and venerable §YHouse of Everleaf§!.\n\nThe §GSultanate of Al-Manedalus§! remained a regional power for a little over a century, and became a near omnipresent economic juggernaut around Western and Northern Zebrica, only topped by contemporary §CKolt-Hadast§!. Unfortunately for the young nation, the last Sultan of Everleaf died heirless in battle against the city of Manephis, believing both that he could take advantage of the destabilized Maregyptian Kingdom's weakness to expand his domain, and convinced the Pharaoh was responsible for the suspicious death of his father. Following his defeat, the coast of Manedalusia was retaken by Maregyptian forces, the Sultanate declared null and void, and Manedalusia's independence extinguished for the millenium that followed.\n\nThe roughly millenium-long period of foreign rule is known to Manedalusians as the §!the Ages of Humility§!; two centuries-long periods of darkness and economic stagnation, though the ponies of Al-Manedalus did enjoy some respite during the §YGolden Age of Sailing§!, when the Kingdom of Abyssinia ruled them as a province. This period was ended when Saddle Arabia took Manedalusia and strangled its profitable trade routes.\n\nIn the wake of Arabia's political collapse and Abyssinia's introduction of slavery into the region, the future seems dire for the Manedalusians, who even after all this time hold on to their religion and culture. What the future holds for this humble city and its wider nation remains uncertain..."

@@ -1,5 +1,5 @@
 difficulty_settings = {
-  difficulty_setting = {
+	difficulty_setting = {
 		key = "custom_diff_strong_MDL"
 		modifier = diff_strong_ai_generic
 		countries = { MDL }

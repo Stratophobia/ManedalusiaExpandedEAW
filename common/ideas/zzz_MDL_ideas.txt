@@ -371,23 +371,6 @@ ideas = {
 				political_power_factor = -0.10
 			}
 		}
-		MDL_koltaliba_commissars_idea = {
-			picture = MDL_koltaliba_commissars
-			modifier = {
-				army_morale_factor = 0.10
-				supply_consumption_factor = -0.10
-			}
-		}
-		MDL_koltaliba_regimentation = {
-			picture = MDL_koltaliba_regimentation
-			modifier = {
-				special_forces_cap = 0.15
-				special_forces_no_supply_grace = 72
-				heat_attrition_factor = -0.15
-				special_forces_out_of_supply_factor = -0.15
-				special_forces_training_time_factor = 0.2
-			}
-		}
 		MDL_merchant_fleet_idea = {
 			picture = MDL_coltoba_shipyards1
 			equipment_bonus = {
