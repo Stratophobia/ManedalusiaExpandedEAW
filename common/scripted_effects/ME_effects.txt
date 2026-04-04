@@ -1168,74 +1168,68 @@ MDL_damage_asabiyyah = {
 	random_list = {
 		1 = {
 			add_to_variable = {
-				var = MDL_trade_var
-				value = -0.10
+				MDL_trade_var = -0.10
+				tooltip = trade_opinion_factor_neutral_tt
 			}
 		}
 		1 = {
 			add_to_variable = {
-				var = MDL_production_var
-				value = -0.10
+				MDL_production_var = -0.10
+				tooltip = production_factory_max_efficiency_factor_tt
 			}
 		}
 		1 = {
 			add_to_variable = {
-				var = MDL_research_var
-				value = -0.10
+				MDL_research = -0.10
+				tooltip = research_speed_factor_tt
 			}
 		}
 		1 = {
 			add_to_variable = {
-				var = MDL_org_var
-				value = -0.10
+				MDL_org_var = -0.10
+				tooltip = army_org_factor_tt
 			}
 		}
 		1 = {
 			add_to_variable = {
-				var = MDL_morale_var
-				value = -0.10
+				MDL_morale_var = -0.10
+				tooltip = army_morale_factor_tt
 			}
 		}
 		1 = {
 			add_to_variable = {
-				var = MDL_pp_var
-				value = -0.10
+				MDL_pp_var = -0.10
+				tooltip = political_power_gain_tt
 			}
 		}
 		1 = {
 			add_to_variable = {
-				var = MDL_surrender_var
-				value = -0.10
+				MDL_surrender_var = -0.10
+				tooltip = surrender_limit_tt
 			}
 		}
 		1 = {
 			add_to_variable = {
-				var = MDL_war_var
-				value = -0.10
+				MDL_war_var = -0.10
+				tooltip = war_support_factor_tt
 			}
 		}
 		1 = {
 			add_to_variable = {
-				var = MDL_consoom_var
-				value = -0.10
+				MDL_consoom_var = -0.10
+				tooltip = consumer_goods_factor_tt
 			}
 		}
 		1 = {
 			add_to_variable = {
-				var = MDL_economy_var
-				value = -0.10
+				MDL_economy_var = -0.10
+				tooltip = economy_cost_factor_tt
 			}
 		}
 		1 = {
 			add_to_variable = {
-				var = MDL_tradelaw_var
-				value = -0.10
-			}
-		}
-		1 = {
-			add_to_variable = {
-				var = MDL_mobilization_var
-				value = -0.10
+				MDL_mobilization_var = -0.10
+				tooltip = mobilization_laws_cost_factor_tt
 			}
 		}
 		1 = {

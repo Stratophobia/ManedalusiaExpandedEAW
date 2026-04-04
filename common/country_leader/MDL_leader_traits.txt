@@ -37,9 +37,9 @@ leader_traits = {
 		war_support_factor = 0.15
 		neutrality_drift = 0.01
 	}
-	MDL_subdued_senate = {
+	MDL_subdued_senate = {	
+		political_power_gain = 0.10
 		economy_cost_factor = -0.10
-		trade_laws_cost_factor = -0.10
 		mobilization_laws_cost_factor = -0.10
 		fascism_drift = 0.04
 	}
@@ -108,7 +108,7 @@ leader_traits = {
 		army_infantry_defence_factor = 0.10
 		special_forces_attack_factor = 0.10
 		special_forces_cap_flat = 12
-		army_intel_to_others = -0.35
+		army_intel_to_others = -35
 	}
 ###GRIFO EXCLUSIVES###
 	MDL_unfeathered_modernist = {

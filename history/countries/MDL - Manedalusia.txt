@@ -46,17 +46,16 @@ set_variable = { MDL_surrender_var = 0.05 }
 set_variable = { MDL_consoom_var = -0.40 }
 set_variable = { MDL_pp_var = -0.10 }
 set_variable = { MDL_economy_var = 0.30 }
-set_variable = { MDL_tradelaw_var = 0.30 }
 set_variable = { MDL_mobilization_var = 0.30 }
 set_variable = { MDL_stability_var = 0.10 }
 set_variable = { MDL_war_var = -0.05 }
 
-set_variable = { air_strategic_bomber_bombing_factor = 0 }
-set_variable = { air_accidents_factor = 0 }
-set_variable = { air_night_penalty = 0 }
-set_variable = { air_weather_penalty = 0 }
-set_variable = { air_ace_generation_chance_factor = 0 }
-set_variable = { experience_gain_air = 0 }
+set_variable = { MDL_air_strategic_bomber_bombing_factor = 0 }
+set_variable = { MDL_air_accidents_factor = 0 }
+set_variable = { MDL_air_night_penalty = 0 }
+set_variable = { MDL_air_weather_penalty = 0 }
+set_variable = { MDL_air_ace_generation_chance_factor = 0 }
+set_variable = { MDL_experience_gain_air = 0 }
 set_variable = { MDL_compliance_growth = 0 }
 set_variable = { MDL_conscription_var = 0 }
 set_variable = { MDL_production_speed_buildings_factor = 0 }

@@ -642,9 +642,14 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_asabiyyah"
 		custom_effect_tooltip = MDL_asabiyyah_tt
 
-		set_variable = { MDL_mobilization_var = 0 }
-		set_variable = { MDL_economy_var = 0 }
-		set_variable = { MDL_tradelaw_var = 0 }
+		set_variable = {
+			MDL_mobilization_var = 0
+			tooltip = mobilization_laws_cost_factor_tt
+		}
+		set_variable = {
+			MDL_economy_var = 0
+			tooltip = economy_cost_factor_tt
+		}
 	}
 	search_filters = { FOCUS_FILTER_POLITICAL }
 }
@@ -930,14 +935,14 @@ shared_focus = {
 	cost = 5
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_spread_faith_to_donkeys"
-		custom_effect_tooltip = MDL_asabiyyah_alteration_tt
+		custom_effect_tooltip = { IDEA = MDL_asabiyyah_modifier localization_key = modify_idea_tt }
 		add_to_variable = {
-			var = MDL_pp_var
-			value = 0.05
+			MDL_pp_var = 0.05
+			tooltip = political_power_gain_tt
 		}
 		add_to_variable = {
-			var = MDL_war_var
-			value = 0.10
+			MDL_war_var = 0.10
+			tooltip = war_support_factor_tt
 		}
 	}
 }
@@ -1242,18 +1247,13 @@ shared_focus = {
 	prerequisite = { focus = MDL_warplan_green }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_warplan_conscription"
-		custom_effect_tooltip = MDL_asabiyyah_alteration_tt
+		custom_effect_tooltip = { IDEA = MDL_asabiyyah_modifier localization_key = modify_idea_tt }
+		add_to_variable = {
+			MDL_mobilization_var = -0.20
+			tooltip = mobilization_laws_cost_factor_tt
+		}
 		add_manpower = 8000
 		MDL_increase_conscription = yes
-
-		add_to_variable = {
-			var = MDL_mobilization_var
-			value = -0.20
-		}
-		add_to_variable = {
-			var = MDL_tradelaw_var
-			value = 0.10
-		}
 	}
 	search_filters = { FOCUS_FILTER_MANPOWER }
 }
@@ -1268,15 +1268,15 @@ shared_focus = {
 	prerequisite = { focus = MDL_warplan_green }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_holy_zeal"
-		custom_effect_tooltip = MDL_asabiyyah_alteration_tt
+		custom_effect_tooltip = { IDEA = MDL_asabiyyah_modifier localization_key = modify_idea_tt }
 		add_ideas = MDL_holy_zeal_idea
 		add_to_variable = {
-			var = MDL_war_var
-			value = 0.05
+			MDL_war_var = 0.05
+			tooltip = war_support_factor_tt
 		}
 		add_to_variable = {
-			var = MDL_trade_var
-			value = -0.05
+			MDL_trade_var = -0.05
+			tooltip = trade_opinion_factor_neutral_tt
 		}
 	}
 	search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_ARMY_BONUS }
@@ -1706,7 +1706,6 @@ shared_focus = {
 	relative_position_id = MDL_conquer_donkeys
 	cost = 6
 	available = {
-		has_war = no
 		956 = { is_owned_and_controlled_by = ROOT }
 		790 = { is_owned_and_controlled_by = ROOT }
 		810 = { is_owned_and_controlled_by = ROOT }
@@ -1831,7 +1830,6 @@ shared_focus = {
 	relative_position_id = MDL_klugetown_economic_zone
 	cost = 6
 	available = {
-		has_war = no
 		ABY = { all_original_cores_owned_by_ROOT = yes }
 	}
 	prerequisite = { focus = MDL_klugetown_economic_zone }
@@ -1945,16 +1943,16 @@ shared_focus = {
 shared_focus = {
 	id = MDL_take_lands_in_lakes
 	icon = GFX_focus_MDL_take_lands_in_lakes
-	x = 0
-	y = 1
-	relative_position_id = MDL_annex_riseia
+	x = 2
+	y = 2
+	relative_position_id = MDL_western_zebrican_hegemony
 	cost = 3
 	available = {
 		902 = { is_owned_and_controlled_by = ROOT }
 		937 = { is_owned_and_controlled_by = ROOT }
 		943 = { is_owned_and_controlled_by = ROOT }
 	}
-	prerequisite = { focus = MDL_annex_riseia }
+	prerequisite = { focus = MDL_western_zebrican_hegemony }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_take_lands_in_lakes"
 		country_event = manedalusia.45
@@ -1995,16 +1993,16 @@ shared_focus = {
 shared_focus = {
 	id = MDL_southern_mercenaries
 	icon = GFX_focus_MDL_southern_mercenaries
-	x = 0
-	y = 1
+	x = -2
+	y = 2
 	cost = 3
-	relative_position_id = MDL_annex_bats
+	relative_position_id = MDL_western_zebrican_hegemony
 	available = {
 		999 = { is_owned_and_controlled_by = ROOT }
 		811 = { is_owned_and_controlled_by = ROOT }
 		1009 = { is_owned_and_controlled_by = ROOT }
 	}
-	prerequisite = { focus = MDL_annex_bats }
+	prerequisite = { focus = MDL_western_zebrican_hegemony }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_southern_mercenaries"
 		country_event = manedalusia.44
@@ -2020,9 +2018,11 @@ shared_focus = {
 	relative_position_id = MDL_western_zebrican_hegemony
 	cost = 4
 	available = { has_war = no }
+	prerequisite = { focus = MDL_annex_bats }
 	prerequisite = { focus = MDL_southern_mercenaries }
 	prerequisite = { focus = MDL_restore_mareakech }
 	prerequisite = { focus = MDL_take_lands_in_lakes }
+	prerequisite = { focus = MDL_annex_riseia }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_universal_caliphate"
 		effect_tooltip = { set_cosmetic_tag = MDL_caliphate }
@@ -2300,8 +2300,11 @@ shared_focus = {
 	mutually_exclusive = { focus = MDL_bomber_pilots }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_unstoppable_pilots"
-		custom_effect_tooltip = MDL_modify_asabiyyah_based_pilots_tt
-		add_to_variable = { MDL_air_night_penalty = -0.30 }
+		custom_effect_tooltip = { IDEA = MDL_asabiyyah_modifier localization_key = modify_idea_tt }
+		add_to_variable = {
+			MDL_air_night_penalty = -0.30
+			tooltip = air_night_penalty_tt
+		}
 		add_to_variable = { MDL_air_weather_penalty = -0.30 }
 
 		add_power_balance_value = {
@@ -2326,9 +2329,15 @@ shared_focus = {
 	mutually_exclusive = { focus = MDL_unstoppable_pilots }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_bomber_pilots"
-		custom_effect_tooltip = MDL_modify_asabiyyah_bomb_pilots_tt
-		add_to_variable = { MDL_air_strategic_bomber_bombing_factor = 0.2 }
-		add_to_variable = { MDL_air_accidents_factor = -0.20 }
+		custom_effect_tooltip = { IDEA = MDL_asabiyyah_modifier localization_key = modify_idea_tt }
+		add_to_variable = {
+			MDL_air_strategic_bomber_bombing_factor = 0.2
+			tooltip = air_strategic_bomber_bombing_factor_tt
+		}
+		add_to_variable = {
+			MDL_air_accidents_factor = -0.20
+			tooltip = air_accidents_factor_tt
+		}
 		add_power_balance_value = {
 			id = MDL_theological_bop
 			value = -0.05
@@ -2347,9 +2356,15 @@ shared_focus = {
 	prerequisite = { focus = MDL_naval_air }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_manedalusian_aeronautics"
-		custom_effect_tooltip = MDL_modify_asabiyyah_aeronautics_tt
-		add_to_variable = { MDL_air_ace_generation_chance_factor = 0.10 }
-		add_to_variable = { MDL_experience_gain_air = 0.10 }
+		custom_effect_tooltip = { IDEA = MDL_asabiyyah_modifier localization_key = modify_idea_tt }
+		add_to_variable = {
+			MDL_air_ace_generation_chance_factor = 0.10
+			tooltip = air_ace_generation_chance_factor_tt
+		}
+		add_to_variable = {
+			MDL_experience_gain_air = 0.10
+			tooltip = experience_gain_air_tt
+		}
 	}
 	search_filters = { FOCUS_FILTER_ARMY_BONUS }
 }
@@ -2641,7 +2656,7 @@ shared_focus = {
 	prerequisite = { focus = MDL_economy_stuff }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_fiqh_decisions"
-		add_stability = 0.05
+		add_stability = 0.10
 		custom_effect_tooltip = MDL_fiqh_decisions_unlocked_tt
 		hidden_effect = { set_country_flag = MDL_fiqh_decisions_unlocked }
 	}
@@ -2725,8 +2740,17 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_army_stuff"
 		if = {
-			limit = { NOT = { has_tech = tech_support } }
+			limit = {
+				NOT = { has_tech = tech_support }
+			}
 			set_technology = { tech_support = 1 }
+		}
+		if = {
+			limit = { has_dlc = "La Resistance" }
+			create_intelligence_agency = {
+				name = "Hashm Koltāliba"
+				icon = GFX_intelligence_agency_logo_mdl
+			}
 		}
 		army_experience = 25
 	}
@@ -2765,9 +2789,6 @@ shared_focus = {
 			category = cat_grand_battle_plan
 			category = cat_mass_assault
 		}
-
-		custom_effect_tooltip = available_political_advisor
-		show_ideas_tooltip = MDL_alneighzari
 	}
 	search_filters = { FOCUS_FILTER_RESEARCH }
 }
@@ -2801,9 +2822,6 @@ shared_focus = {
 			category = cat_mobile_warfare
 			category = cat_superior_firepower
 		}
-
-		custom_effect_tooltip = available_political_advisor
-		show_ideas_tooltip = MDL_grandmistress_samira
 	}
 	search_filters = { FOCUS_FILTER_RESEARCH }
 }
@@ -2843,6 +2861,12 @@ shared_focus = {
 	prerequisite = { focus = MDL_go_with_alneighzari focus = MDL_go_with_samira }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_bigger_cannons"
+		if = {
+			limit = {
+				NOT = { has_tech = tech_trucks }
+			}
+			set_technology = { tech_trucks = 1 }
+		}
 		if = {
 			limit = { NOT = { has_tech = gw_artillery } }
 			set_technology = { gw_artillery = 1 }
@@ -2970,10 +2994,19 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_military_industrial_council"
-		custom_effect_tooltip = MDL_modify_asabiyyah_mil_industrial_tt
-		add_to_variable = { MDL_production_speed_buildings_factor = 0.10 }
-		add_to_variable = { MDL_asabiyyah_production_factory_efficiency_gain_factor = 0.10 }
-		add_to_variable = { MDL_industrial_capacity_factory = 0.10 }
+		custom_effect_tooltip = { IDEA = MDL_asabiyyah_modifier localization_key = modify_idea_tt }
+		add_to_variable = {
+			MDL_production_speed_buildings_factor = 0.10
+			tooltip = production_speed_buildings_factor_tt
+		}
+		add_to_variable = {
+			MDL_asabiyyah_production_factory_efficiency_gain_factor = 0.10
+			tooltip = production_factory_efficiency_gain_factor_tt
+		}
+		add_to_variable = {
+			MDL_industrial_capacity_factory = 0.10
+			tooltip = industrial_capacity_factory_tt
+		}
 	}
 	search_filters = { FOCUS_FILTER_INDUSTRY }
 }
@@ -3052,10 +3085,19 @@ shared_focus = {
 			limit = { NOT = { has_tech = tech_military_police } }
 			set_technology = { tech_military_police = 1 }
 		}
-		custom_effect_tooltip = MDL_modify_asabiyyah_citizen_guard_tt
-		add_to_variable = { MDL_conscription_var = 0.015 }
-		add_to_variable = { MDL_stability_var = 0.05 }
-		add_to_variable = { MDL_compliance_growth = 0.10 }
+		custom_effect_tooltip = { IDEA = MDL_asabiyyah_modifier localization_key = modify_idea_tt }
+		add_to_variable = {
+			MDL_conscription_var = 0.01
+			tooltip = conscription_tt
+		}
+		add_to_variable = {
+			MDL_stability_var = 0.05
+			tooltip = stability_factor_tt
+		}
+		add_to_variable = {
+			MDL_compliance_growth = 0.10
+			tooltip = compliance_growth_tt
+		}
 	}
 	search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_STABILITY FOCUS_FILTER_MANPOWER}
 }
@@ -3073,11 +3115,19 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_manedalusian_rangers"
-		custom_effect_tooltip = MDL_modify_asabiyyah_rangers_tt
-		add_to_variable = { MDL_special_forces_cap = 0.15 }
-		add_to_variable = { MDL_special_forces_attack_factor = 0.10 }
-		add_to_variable = { MDL_special_forces_defence_factor = 0.10 }
-
+		custom_effect_tooltip = { IDEA = MDL_asabiyyah_modifier localization_key = modify_idea_tt }
+		add_to_variable = {
+			MDL_special_forces_cap = 0.15
+			tooltip = special_forces_cap_tt
+		}
+		add_to_variable = {
+			MDL_special_forces_attack_factor = 0.10
+			tooltip = special_forces_attack_factor_tt
+		}
+		add_to_variable = {
+			MDL_special_forces_defence_factor = 0.10
+			tooltip = special_forces_defence_factor_tt
+		}
 		if = {
 			limit = { has_dlc = "Arms Against Tyranny" }
 			add_doctrine_cost_reduction = {
@@ -3153,15 +3203,15 @@ shared_focus = {
 		MDL_grandmistress_samira = {
 			add_corps_commander_role = {
 				traits = { zebra_race_trait ambusher thorough_planner organizer MDL_koltaliba_member_trait }
-				skill=3
-				attack_skill=2
-				defense_skill=2
-				logistics_skill=3
-				planning_skill=3
+				skill = 4
+				attack_skill = 4
+				defense_skill = 2
+				logistics_skill = 2
+				planning_skill = 5
 				desc=MDL_grandmistress_samira_desc
 			}
 		}
-		custom_effect_tooltip=MDL_samira_stats_tt
+		custom_effect_tooltip = MDL_samira_stats_tt
 	}
 	search_filters = { FOCUS_FILTER_ARMY_BONUS }
 }
@@ -3268,10 +3318,19 @@ shared_focus = {
 			}
 			country_event = manedalusia.145
 		}
-		custom_effect_tooltip = MDL_modify_asabiyyah_grand_army_tt
-		add_to_variable = { MDL_max_command_power = 10 }
-		add_to_variable = { MDL_command_power_gain = 0.05 }
-		add_to_variable = { MDL_experience_gain_army = 0.01 }
+		custom_effect_tooltip = { IDEA = MDL_asabiyyah_modifier localization_key = modify_idea_tt }
+		add_to_variable = {
+			MDL_max_command_power = 10
+			tooltip = max_command_power_tt
+		}
+		add_to_variable = {
+			MDL_command_power_gain = 0.05
+			tooltip = command_power_gain_mult_tt
+		}
+		add_to_variable = {
+			MDL_experience_gain_army = 0.01
+			tooltip = experience_gain_army_tt
+		}
 		add_to_variable = { MDL_land_doctrine_cost_factor = -0.10 }
 	}
 	search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_BONUS }
@@ -3693,8 +3752,11 @@ shared_focus = {
 		custom_effect_tooltip = MDL_modify_navy_mod_coffee_trade_tt
 		add_to_variable = { MDL_navy_max_range_factor = 0.15 }
 		add_to_variable = { MDL_production_factory_max_efficiency_factor = 0.05 }
-		custom_effect_tooltip = MDL_asabiyyah_alteration_tt
-		add_to_variable = { MDL_consoom = 0.05 }
+		custom_effect_tooltip = { IDEA = MDL_asabiyyah_modifier localization_key = modify_idea_tt }
+		add_to_variable = { 
+			MDL_consoom = 0.05
+			tooltip = consumer_goods_factor_tt
+		}
 	}
 	search_filters = { FOCUS_FILTER_INDUSTRY }
 }
@@ -3731,10 +3793,10 @@ shared_focus = {
 	prerequisite = { focus = MDL_back_in_bussiness }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_reliable_traders"
-		custom_effect_tooltip = MDL_reliable_traders_tt
+		custom_effect_tooltip = { IDEA = MDL_asabiyyah_modifier localization_key = modify_idea_tt }
 		add_to_variable = {
-			var = MDL_trade_var
-			value = 0.45
+			MDL_trade_var = 0.45
+			tooltip = trade_opinion_factor_neutral_tt
 		}
 	}
 	search_filters = { FOCUS_FILTER_POLITICAL }
@@ -4211,7 +4273,10 @@ shared_focus = {
 		}
 		custom_effect_tooltip = MDL_suffrage_and_army_tt
 		set_country_flag = manpower_laws_blocked
-		set_variable = { MDL_mobilization_var = 0 }
+		set_variable = {
+			MDL_mobilization_var = 0
+			tooltip = mobilization_laws_cost_factor_tt
+		}
 	}
 }
 
@@ -4855,10 +4920,10 @@ shared_focus = {
 	prerequisite = { focus = MDL_a_new_start }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_empower_senate"
-		custom_effect_tooltip = MDL_asabiyyah_alteration_tt
+		custom_effect_tooltip = { IDEA = MDL_asabiyyah_modifier localization_key = modify_idea_tt }
 		add_to_variable = {
-			var = MDL_stability_var
-			value = 0.05
+			MDL_stability_var = 0.05
+			tooltip = stability_factor_tt
 		}
 		add_to_variable = {
 			var = MDL_org_var
@@ -4953,14 +5018,14 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_formalize_alliance"
-		custom_effect_tooltip = MDL_asabiyyah_alteration_tt
+		custom_effect_tooltip = { IDEA = MDL_asabiyyah_modifier localization_key = modify_idea_tt }
 		add_to_variable = {
-			var = MDL_war_var
-			value = 0.05
+			MDL_war_var = 0.05
+			tooltip = war_support_factor_tt
 		}
 		add_to_variable = {
-			var = MDL_trade_var
-			value = 0.05
+			MDL_trade_var = 0.05
+			tooltip = trade_opinion_factor_neutral_tt
 		}
 		EQS = { country_event = manedalusia.134 }
 	}
@@ -5049,14 +5114,14 @@ shared_focus = {
 	prerequisite = { focus = MDL_springtime_in_manedalusia }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_monument_to_aaliyah"
-		custom_effect_tooltip = MDL_asabiyyah_alteration_tt
+		custom_effect_tooltip = { IDEA = MDL_asabiyyah_modifier localization_key = modify_idea_tt }
 		add_to_variable = {
-			var = MDL_morale_var
-			value = 0.02
+			MDL_morale_var = 0.02
+			tooltip = army_morale_factor_tt
 		}
 		add_to_variable = {
-			var = MDL_surrender_var
-			value = 0.10
+			MDL_surrender_var = 0.10
+			tooltip = surrender_limit_tt
 		}
 		add_ideas = MDL_aaliyah_monument
 	}
@@ -5180,8 +5245,10 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_peace_in_our_time"
 		custom_effect_tooltip = MDL_remove_tradelaw_econ_cost_tt
 		add_ideas = free_trade
-		set_variable = { MDL_tradelaw_var = 0 }
-		set_variable = { MDL_economy_var = 0 }
+		set_variable = {
+			MDL_economy_var = 0
+			tooltip = economy_cost_factor_tt
+		}
 	}
 	search_filters = { FOCUS_FILTER_POLITICAL }
 }
@@ -5392,8 +5459,10 @@ shared_focus = {
 			}
 		}
 		hidden_effect = {
-			set_variable = { MDL_tradelaw_var = 0 }
-			set_variable = { MDL_economy_var = 0 }
+			set_variable = {
+			MDL_economy_var = 0
+			tooltip = economy_cost_factor_tt
+		}
 			if = {
 				limit = {
 					NOT = { has_country_flag = MDL_shield_doctrine_unlocked }
@@ -5444,7 +5513,10 @@ shared_focus = {
 			set_technology = { tech_spirit_warriors = 1 }
 			load_oob = "MDL_koltaliba"
 		}
-		set_variable = { MDL_mobilization_var = 0 }
+		set_variable = {
+			MDL_mobilization_var = 0
+			tooltip = mobilization_laws_cost_factor_tt
+		}
 		add_ideas = extensive_conscription
 		add_ideas = MDL_rally_the_faithful_1
 	}
@@ -8348,16 +8420,23 @@ shared_focus = {
 		set_variable = { MDL_mehmet_fight_level = 0 }#Mehmet's fight skill
 		MDL_grandmistress_samira = {
 			add_field_marshal_role = {
-				traits={ zebra_race_trait MDL_koltaliba_member_trait thorough_planner ambusher organizer }
-				skill=1
-				attack_skill=2
-				defense_skill=1
-				planning_skill=2
-				logistics_skill=2
+				traits = { zebra_race_trait MDL_koltaliba_member_trait thorough_planner ambusher organizer }
+				skill = 1
+				attack_skill = 2
+				defense_skill = 1
+				planning_skill = 2
+				logistics_skill = 2
 				desc = MDL_grandmistress_samira_desc
 			}
 		}
 		custom_effect_tooltip = MDL_samira_field_marshal_stats_tt
+		if = {
+			limit = { has_dlc = "La Resistance" }
+			create_intelligence_agency = {
+				name = "Hashm Koltāliba"
+				icon = GFX_intelligence_agency_logo_mdl
+			}
+		}
 	}
 }
 
@@ -8680,16 +8759,15 @@ shared_focus = {
 	prerequisite = { focus = MDL_SAM03 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM10"
+		custom_effect_tooltip = { IDEA = MDL_asabiyyah_modifier localization_key = modify_idea_tt }
 		add_to_variable = {
-			var = MDL_trade_var
-			value = 0.45
+			MDL_trade_var = 0.45
+			tooltip = trade_opinion_factor_neutral_tt
 		}
 		decrease_illiteracy = yes
 
 		custom_effect_tooltip = available_industrial_concern
 		show_ideas_tooltip = MDL_industrial_concern_1
-
-		custom_effect_tooltip = MDL_reliable_traders_tt
 	}
 }
 
@@ -9928,10 +10006,19 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM65"
 		add_war_support = 0.10
 		army_experience = 15
-		custom_effect_tooltip = MDL_modify_asabiyyah_grand_army_tt
-		add_to_variable = { MDL_max_command_power = 10 }
-		add_to_variable = { MDL_command_power_gain = 0.05 }
-		add_to_variable = { MDL_experience_gain_army = 0.01 }
+		custom_effect_tooltip = { IDEA = MDL_asabiyyah_modifier localization_key = modify_idea_tt }
+		add_to_variable = {
+			MDL_max_command_power = 10
+			tooltip = max_command_power_tt
+		}
+		add_to_variable = {
+			MDL_command_power_gain = 0.05
+			tooltip = command_power_gain_mult_tt
+		}
+		add_to_variable = {
+			MDL_experience_gain_army = 0.01
+			tooltip = experience_gain_army_tt
+		}
 		add_to_variable = { MDL_land_doctrine_cost_factor = -0.10 }
 	}
 }
@@ -9971,10 +10058,19 @@ shared_focus = {
 			category = cat_grand_battle_plan
 			category = cat_mass_assault
 		}
-		custom_effect_tooltip = MDL_modify_asabiyyah_grand_army_tt
-		add_to_variable = { MDL_max_command_power = 10 }
-		add_to_variable = { MDL_command_power_gain = 0.05 }
-		add_to_variable = { MDL_experience_gain_army = 0.01 }
+		custom_effect_tooltip = { IDEA = MDL_asabiyyah_modifier localization_key = modify_idea_tt }
+		add_to_variable = {
+			MDL_max_command_power = 10
+			tooltip = max_command_power_tt
+		}
+		add_to_variable = {
+			MDL_command_power_gain = 0.05
+			tooltip = command_power_gain_mult_tt
+		}
+		add_to_variable = {
+			MDL_experience_gain_army = 0.01
+			tooltip = experience_gain_army_tt
+		}
 		add_to_variable = { MDL_land_doctrine_cost_factor = -0.10 }
 	}
 }

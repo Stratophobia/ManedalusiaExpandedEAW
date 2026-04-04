@@ -312,10 +312,10 @@ ideas = {
 		MDL_humbled_sultanate = {
 			picture = MDL_humbled_sultanate
 			modifier = {
-				political_power_factor = -0.25
-				stability_factor = -0.1
-				army_morale_factor = -0.1
-				army_org_factor = -0.05
+				party_popularity_stability_factor = -0.10
+				drift_defence_factor = -0.10
+				political_power_factor = -0.10
+				stability_factor = -0.10
 			}
 		}
 		MDL_destroyed_army = {

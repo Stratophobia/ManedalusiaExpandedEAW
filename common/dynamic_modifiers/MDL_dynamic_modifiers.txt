@@ -13,7 +13,6 @@ MDL_asabiyyah_modifier = {
 	consumer_goods_factor = MDL_consoom_var
 	political_power_gain = MDL_pp_var
 	economy_cost_factor = MDL_economy_var
-	trade_laws_cost_factor = MDL_tradelaw_var
 	mobilization_laws_cost_factor = MDL_mobilization_var
 	stability_factor = MDL_stability_var
 	war_support_factor = MDL_war_var
