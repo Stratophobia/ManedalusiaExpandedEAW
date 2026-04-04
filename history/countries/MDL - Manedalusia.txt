@@ -15,6 +15,14 @@ set_technology = {
 actually_fix_weapon_techs = yes
 set_technology = { mtg_transport = 1 }
 
+if = {
+	limit = { has_dlc = "La Resistance" }
+	create_intelligence_agency = {
+		name = "Hashm Koltāliba"
+		icon = GFX_intelligence_agency_logo_mdl
+	}
+}
+
 add_ideas = {
 	pre_industrial_society
 	poor_science_base

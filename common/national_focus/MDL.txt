@@ -2865,13 +2865,6 @@ shared_focus = {
 			}
 			set_technology = { tech_support = 1 }
 		}
-		if = {
-			limit = { has_dlc = "La Resistance" }
-			create_intelligence_agency = {
-				name = "Hashm Koltāliba"
-				icon = GFX_intelligence_agency_logo_mdl
-			}
-		}
 		army_experience = 25
 	}
 	search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_RESEARCH }

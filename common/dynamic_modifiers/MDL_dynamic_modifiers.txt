@@ -100,8 +100,8 @@ MDL_golden_coast_modifier = {
 		}
 	}
 	local_resources_factor = 0.30
-	local_building_slots = 2
-	local_factory_energy_consumption = -0.2
+	local_building_slots = 3
+	local_factory_energy_consumption = -0.25
 	local_org_regain = 0.25
 	local_manpower = 0.15
 }

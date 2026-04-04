@@ -249,12 +249,10 @@ characters = {
 			slot = political_advisor
 			idea_token = MDL_alneighzari
 			allowed = { original_tag = MDL }
-			traits = { unhindered_s }
+			traits = { MDL_engineer_trait }
 		}
 		scientist = {
-			skills = {
-				specialization_air = 2 
-			}
+			skills = { specialization_air = 2  }
 			traits = { scientist_trait_electronics_specialist scientist_trait_bright }
 		}
 	}

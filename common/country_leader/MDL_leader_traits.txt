@@ -1,7 +1,7 @@
 leader_traits = {
 	MDL_muftia_trait = {
 		drift_defence_factor = 0.15
-		improve_relations_maintain_cost_factor = -0.5
+		improve_relations_maintain_cost_factor = -0.75
 		ai_focus_defense_factor = 0.75
 	}
 	MDL_council_unstable_trait = {
@@ -109,6 +109,11 @@ leader_traits = {
 		special_forces_attack_factor = 0.10
 		special_forces_cap_flat = 12
 		army_intel_to_others = -35
+	}
+	MDL_engineer_trait = {
+		research_speed_factor = 0.05
+		political_power_gain = -0.05
+		factory_energy_consumption = -0.15
 	}
 ###GRIFO EXCLUSIVES###
 	MDL_unfeathered_modernist = {
