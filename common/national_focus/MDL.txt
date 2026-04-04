@@ -94,6 +94,7 @@ shared_focus = {
 	y = 1
 	cost = 2
 	available = { always = yes }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_gather_the_council"
 		country_event = manedalusia.2
@@ -109,6 +110,7 @@ shared_focus = {
 	relative_position_id = MDL_gather_the_council
 	cost = 2
 	prerequisite = { focus = MDL_gather_the_council }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_rally_militias"
 		add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 750 producer = ABY }
@@ -127,6 +129,7 @@ shared_focus = {
 	relative_position_id = MDL_gather_the_council
 	cost = 2
 	prerequisite = { focus = MDL_gather_the_council }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_general_staff"
 		country_event = manedalusia.5
@@ -144,6 +147,7 @@ shared_focus = {
 	cost = 1
 	prerequisite = { focus = MDL_rally_militias }
 	prerequisite = { focus = MDL_general_staff }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_deal_with_the_madgriff"
 		country_event = manedalusia.3
@@ -168,6 +172,7 @@ shared_focus = {
 			}
 		}
 	}
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_lean_on_legacy"
 		add_political_power = 25
@@ -201,6 +206,7 @@ shared_focus = {
 			}
 		}
 	}
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_ash_shahid_chosen"
 		country_event = manedalusia.6
@@ -217,6 +223,7 @@ shared_focus = {
 	relative_position_id = MDL_ash_shahid_chosen
 	cost = 3
 	prerequisite = { focus = MDL_ash_shahid_chosen }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_get_generals_in_line"
 		add_popularity = { ideology = fascism popularity = 0.05 }
@@ -233,6 +240,7 @@ shared_focus = {
 	relative_position_id = MDL_ash_shahid_chosen
 	cost = 3
 	prerequisite = { focus = MDL_ash_shahid_chosen }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_religious_support"
 		add_popularity = { ideology = fascism popularity = 0.05 }
@@ -250,6 +258,7 @@ shared_focus = {
 	cost = 1
 	prerequisite = { focus = MDL_get_generals_in_line }
 	prerequisite = { focus = MDL_religious_support }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_sayf_takeover"
 		country_event = manedalusia.8
@@ -278,6 +287,7 @@ shared_focus = {
 			}
 		}
 	}
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_khaldun_gambit"
 		custom_effect_tooltip = MDL_WIP_tt
@@ -295,6 +305,7 @@ shared_focus = {
 	relative_position_id = MDL_khaldun_gambit
 	cost = 3
 	prerequisite = { focus = MDL_khaldun_gambit }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_persuade_hardliners"
 		country_event = manedalusia.10
@@ -310,6 +321,7 @@ shared_focus = {
 	relative_position_id = MDL_khaldun_gambit
 	cost = 3
 	prerequisite = { focus = MDL_khaldun_gambit }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_reach_out_to_populists"
 		country_event = manedalusia.11
@@ -326,6 +338,7 @@ shared_focus = {
 	cost = 1
 	prerequisite = { focus = MDL_persuade_hardliners }
 	prerequisite = { focus = MDL_reach_out_to_populists }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_khaldun_takeover"
 		country_event = manedalusia.12
@@ -358,6 +371,7 @@ shared_focus = {
 			}
 		}
 	}
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_senate_path"
 		add_power_balance_value = {
@@ -378,6 +392,7 @@ shared_focus = {
 	relative_position_id = MDL_senate_path
 	cost = 3
 	prerequisite = { focus = MDL_senate_path }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_grant_rural_autonomy"
 		add_political_power = -50
@@ -396,6 +411,7 @@ shared_focus = {
 	relative_position_id = MDL_senate_path
 	cost = 3
 	prerequisite = { focus = MDL_senate_path }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_senate_building"
 		add_ideas = MDL_federal_assembly_1
@@ -412,6 +428,7 @@ shared_focus = {
 	cost = 1
 	prerequisite = { focus = MDL_grant_rural_autonomy }
 	prerequisite = { focus = MDL_senate_building }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_senate_assumes_power"
 		country_event = manedalusia.50
@@ -442,6 +459,7 @@ shared_focus = {
 			}
 		}
 	}
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_try_for_harmony"
 		add_power_balance_value = {
@@ -463,6 +481,7 @@ shared_focus = {
 	relative_position_id = MDL_try_for_harmony
 	cost = 2
 	prerequisite = { focus = MDL_try_for_harmony }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_urban_deal"
 		add_popularity = { ideology = democratic popularity = 0.05 }
@@ -485,6 +504,7 @@ shared_focus = {
 	relative_position_id = MDL_urban_deal
 	cost = 2
 	prerequisite = { focus = MDL_urban_deal }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_guilds_deal"
 		add_popularity = { ideology = democratic popularity = 0.05 }
@@ -509,6 +529,7 @@ shared_focus = {
 	relative_position_id = MDL_try_for_harmony
 	cost = 2
 	prerequisite = { focus = MDL_try_for_harmony }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_rural_deal"
 		add_stability = 0.05
@@ -524,6 +545,7 @@ shared_focus = {
 	relative_position_id = MDL_rural_deal
 	cost = 2
 	prerequisite = { focus = MDL_rural_deal }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_imams_deal"
 		country_event = manedalusia.178
@@ -540,6 +562,7 @@ shared_focus = {
 	cost = 1
 	prerequisite = { focus = MDL_imams_deal }
 	prerequisite = { focus = MDL_guilds_deal }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_sultana_velvet"
 		country_event = manedalusia.51
@@ -570,6 +593,7 @@ shared_focus = {
 			}
 		}
 	}
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_try_for_socialism"
 		add_power_balance_value = {
@@ -591,6 +615,7 @@ shared_focus = {
 	relative_position_id = MDL_try_for_socialism
 	cost = 3
 	prerequisite = { focus = MDL_try_for_socialism }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_curtail_the_guilds"
 		add_popularity = { ideology = neutrality popularity = -0.20 }
@@ -606,6 +631,7 @@ shared_focus = {
 	relative_position_id = MDL_try_for_socialism
 	cost = 3
 	prerequisite = { focus = MDL_try_for_socialism }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_rural_charter"
 		add_stability = 0.05
@@ -623,6 +649,7 @@ shared_focus = {
 	relative_position_id = MDL_curtail_the_guilds
 	cost = 3
 	prerequisite = { focus = MDL_curtail_the_guilds }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_officialize_hisbas"
 		add_ideas = MDL_hisba_idea_1
@@ -638,6 +665,7 @@ shared_focus = {
 	relative_position_id = MDL_rural_charter
 	cost = 3
 	prerequisite = { focus = MDL_rural_charter }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_asabiyyah"
 		custom_effect_tooltip = MDL_asabiyyah_tt
@@ -663,6 +691,7 @@ shared_focus = {
 	cost = 1
 	prerequisite = { focus = MDL_officialize_hisbas }
 	prerequisite = { focus = MDL_asabiyyah }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_vice_and_virtue"
 		country_event = manedalusia.52
@@ -685,6 +714,7 @@ shared_focus = {
 			NOT = { has_country_flag = MDL_sunmad }
 		}
 	}
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_office_of_vice_and_virtue"
 		add_ideas = MDL_public_morality_act_idea
@@ -699,6 +729,7 @@ shared_focus = {
 	relative_position_id = MDL_office_of_vice_and_virtue
 	prerequisite = { focus = MDL_office_of_vice_and_virtue }
 	cost = 2
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_sack_hermetics_from_army"
 		add_power_balance_value = {
@@ -717,6 +748,7 @@ shared_focus = {
 	relative_position_id = MDL_office_of_vice_and_virtue
 	prerequisite = { focus = MDL_office_of_vice_and_virtue }
 	cost = 4
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_prepare_righteous_reclamation"
 		741 = {
@@ -756,6 +788,7 @@ shared_focus = {
 	relative_position_id = MDL_office_of_vice_and_virtue
 	prerequisite = { focus = MDL_office_of_vice_and_virtue }
 	cost = 4
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_a_holy_occupation_army"
 		custom_effect_tooltip = MDL_a_holy_occupation_army_tt
@@ -772,6 +805,7 @@ shared_focus = {
 	prerequisite = { focus = MDL_prepare_righteous_reclamation }
 	prerequisite = { focus = MDL_a_holy_occupation_army }
 	cost = 5
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_a_holy_occupation_army"
 		MDL_initiate_warplan_green = yes
@@ -786,6 +820,7 @@ shared_focus = {
 	relative_position_id = MDL_sack_hermetics_from_army
 	prerequisite = { focus = MDL_sack_hermetics_from_army }
 	cost = 5
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_MIRAGE_0_1"
 	}
@@ -799,6 +834,7 @@ shared_focus = {
 	relative_position_id = MDL_a_holy_occupation_army
 	prerequisite = { focus = MDL_a_holy_occupation_army }
 	cost = 5
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_MIRAGE_0_2"
 	}
@@ -823,6 +859,7 @@ shared_focus = {
 		ABY = { exists_outside_sphere_of_influence = no }
 	}
 	cost = 5
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_take_over_abyssinia"
 		set_temp_variable = { wargoal_target = ABY }
@@ -839,6 +876,7 @@ shared_focus = {
 	prerequisite = { focus = MDL_MIRAGE_0_1 }
 	prerequisite = { focus = MDL_wage_war_upon_the_infidels }
 	cost = 5
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_MIRAGE_1_2"
 	}
@@ -857,6 +895,7 @@ shared_focus = {
 		733 = { is_owned_and_controlled_by = ROOT }
 		775 = { is_owned_and_controlled_by = ROOT }
 	}
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_proclaim_holy_communion"
 		set_cosmetic_tag = MDL_grand_sultanate
@@ -872,6 +911,7 @@ shared_focus = {
 	prerequisite = { focus = MDL_wage_war_upon_the_infidels }
 	prerequisite = { focus = MDL_MIRAGE_0_2 }
 	cost = 5
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_MIRAGE_1_3"
 	}
@@ -893,6 +933,7 @@ shared_focus = {
 		KLG = { exists_outside_sphere_of_influence = no }
 	}
 	cost = 5
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_take_over_klugetown"
 		set_temp_variable = { wargoal_target = KLG }
@@ -915,6 +956,7 @@ shared_focus = {
 		}
 	}
 	cost = 5
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_spread_faith_to_donkeys"
 		set_temp_variable = { wargoal_target = ASS }
@@ -933,6 +975,7 @@ shared_focus = {
 	prerequisite = { focus = MDL_MIRAGE_1_2 }
 	prerequisite = { focus = MDL_MIRAGE_1_3 }
 	cost = 5
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_spread_faith_to_donkeys"
 		custom_effect_tooltip = { IDEA = MDL_asabiyyah_modifier localization_key = modify_idea_tt }
@@ -959,6 +1002,7 @@ shared_focus = {
 		YMN = { exists_outside_sphere_of_influence = no }
 	}
 	cost = 4
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_spread_faith_to_donkeys"
 		set_temp_variable = { wargoal_target = YMN }
@@ -974,6 +1018,7 @@ shared_focus = {
 	relative_position_id = MDL_take_over_abyssinia
 	prerequisite = { focus = MDL_take_over_abyssinia }
 	cost = 5
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_MIRAGE_3_1"
 	}
@@ -990,6 +1035,7 @@ shared_focus = {
 	available = { has_war = no }
 	mutually_exclusive = { focus = MDL_set_capital_in_klugetown }
 	cost = 2
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_set_capital_in_coltoba"
 		add_stability = 0.05
@@ -1019,6 +1065,7 @@ shared_focus = {
 	}
 	mutually_exclusive = { focus = MDL_set_capital_in_coltoba }
 	cost = 2
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_set_capital_in_klugetown"
 		build_railway = {
@@ -1051,6 +1098,7 @@ shared_focus = {
 	relative_position_id = MDL_take_over_klugetown
 	prerequisite = { focus = MDL_take_over_klugetown }
 	cost = 5
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_MIRAGE_3_4"
 	}
@@ -1065,6 +1113,7 @@ shared_focus = {
 	prerequisite = { focus = MDL_spread_faith_to_donkeys }
 	prerequisite = { focus = MDL_MIRAGE_3_1 }
 	cost = 5
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_MIRAGE_4_1"
 	}
@@ -1093,6 +1142,7 @@ shared_focus = {
 		SDL = { all_original_cores_owned_by_ROOT = yes }
 	}
 	cost = 5
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_a_prophecy_a_millenium_in_the_making"
 		MDL_invade_arabia = yes
@@ -1108,6 +1158,7 @@ shared_focus = {
 	prerequisite = { focus = MDL_spread_faith_to_yemane }
 	prerequisite = { focus = MDL_MIRAGE_3_4 }
 	cost = 5
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_MIRAGE_4_3"
 	}
@@ -1122,6 +1173,7 @@ shared_focus = {
 	relative_position_id = MDL_a_prophecy_a_millenium_in_the_making
 	prerequisite = { focus = MDL_MIRAGE_4_1 }
 	prerequisite = { focus = MDL_a_prophecy_a_millenium_in_the_making }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_MIRAGE_5_1"
 	}
@@ -1136,6 +1188,7 @@ shared_focus = {
 	relative_position_id = MDL_a_prophecy_a_millenium_in_the_making
 	prerequisite = { focus = MDL_a_prophecy_a_millenium_in_the_making }
 	prerequisite = { focus = MDL_MIRAGE_4_3 }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_MIRAGE_5_2"
 	}
@@ -1150,6 +1203,7 @@ shared_focus = {
 	relative_position_id = MDL_a_prophecy_a_millenium_in_the_making
 	prerequisite = { focus = MDL_MIRAGE_5_1 }
 	prerequisite = { focus = MDL_MIRAGE_5_2 }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_MIRAGE_6_1"
 	}
@@ -1168,6 +1222,7 @@ shared_focus = {
 			NOT = { has_country_flag = MDL_sunmad }
 		}
 	}
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_warplan_green"
 		country_event = manedalusia.15
@@ -1186,6 +1241,7 @@ shared_focus = {
 	available = {
 		741 = { is_owned_and_controlled_by = ROOT }
 	}
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_fortify_coltoba"
 		741 = {
@@ -1223,6 +1279,7 @@ shared_focus = {
 	available = {
 		741 = { is_owned_and_controlled_by = ROOT }
 	}
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_fortify_desert_pass"
 		741 = {
@@ -1245,6 +1302,7 @@ shared_focus = {
 	relative_position_id = MDL_warplan_green
 	cost = 3
 	prerequisite = { focus = MDL_warplan_green }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_warplan_conscription"
 		custom_effect_tooltip = { IDEA = MDL_asabiyyah_modifier localization_key = modify_idea_tt }
@@ -1266,6 +1324,7 @@ shared_focus = {
 	relative_position_id = MDL_warplan_green
 	cost = 3
 	prerequisite = { focus = MDL_warplan_green }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_holy_zeal"
 		custom_effect_tooltip = { IDEA = MDL_asabiyyah_modifier localization_key = modify_idea_tt }
@@ -1298,6 +1357,7 @@ shared_focus = {
 		MGY = { exists_outside_sphere_of_influence = no }
 	}
 	will_lead_to_war_with = MGY
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_attack_maregypt"
 		MDL_initiate_warplan_green = yes
@@ -1318,6 +1378,7 @@ shared_focus = {
 	cost = 2
 	prerequisite = { focus = MDL_attack_maregypt }
 	select_effect = { country_event = manedalusia.40 }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_burn_manephis"
 		MDL_conclude_warplan_green = yes
@@ -1334,6 +1395,7 @@ shared_focus = {
 	relative_position_id = MDL_attack_maregypt
 	cost = 2
 	prerequisite = { focus = MDL_attack_maregypt }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_restore_grand_vizier"
 		country_event = manedalusia.42
@@ -1350,6 +1412,7 @@ shared_focus = {
 	prerequisite = { focus = MDL_burn_manephis }
 	prerequisite = { focus = MDL_restore_grand_vizier }
 	cost = 2.90
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_righteous_fury"
 		add_power_balance_value = {
@@ -1377,6 +1440,7 @@ shared_focus = {
 		733 = { is_owned_and_controlled_by = ROOT }
 		735 = { is_owned_and_controlled_by = ROOT }
 	}
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_annex_maregypt"
 		every_owned_state = {
@@ -1400,6 +1464,7 @@ shared_focus = {
 	}
 	prerequisite = { focus = MDL_attack_maregypt }
 	cost = 5
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_neighle_infrastructure"
 		759 = {
@@ -1455,6 +1520,7 @@ shared_focus = {
 	relative_position_id = MDL_neighle_infrastructure
 	prerequisite = { focus = MDL_neighle_infrastructure }
 	prerequisite = { focus = MDL_restore_grand_vizier }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_advisory_senate"
 		add_advisor_role = {
@@ -1478,6 +1544,7 @@ shared_focus = {
 	relative_position_id = MDL_neighle_infrastructure
 	cost = 2.90
 	prerequisite = { focus = MDL_neighle_infrastructure }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_annex_ovingoland"
 		custom_effect_tooltip = MDL_annex_ovingoland_tt
@@ -1502,6 +1569,7 @@ shared_focus = {
 	prerequisite = { focus = MDL_annex_maregypt }
 	prerequisite = { focus = MDL_advisory_senate }
 	prerequisite = { focus = MDL_annex_ovingoland }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_crimson_sultanate"
 		country_event = manedalusia.39
@@ -1520,6 +1588,7 @@ shared_focus = {
 	relative_position_id = MDL_the_crimson_sultanate
 	prerequisite = { focus = MDL_the_crimson_sultanate }
 	cost = 4
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_long_road_to_mareakech"
 		build_railway = {
@@ -1544,6 +1613,7 @@ shared_focus = {
 	relative_position_id = MDL_long_road_to_mareakech
 	cost = 5
 	prerequisite = { focus = MDL_long_road_to_mareakech }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_enforce_Jizya"
 		add_ideas = MDL_jizya_idea
@@ -1559,6 +1629,7 @@ shared_focus = {
 	relative_position_id = MDL_long_road_to_mareakech
 	cost = 5
 	prerequisite = { focus = MDL_long_road_to_mareakech }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_gunpowder_empire"
 		add_ideas = MDL_gunpowder_empire_idea
@@ -1576,6 +1647,7 @@ shared_focus = {
 	prerequisite = { focus = MDL_gunpowder_empire }
 	cost = 3
 	prerequisite = { focus = MDL_enforce_Jizya }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_gunpowder_empire"
 		create_faction_from_template = faction_template_MDL_guardianship
@@ -1601,6 +1673,7 @@ shared_focus = {
 	}
 	prerequisite = { focus = MDL_the_crimson_sultanate }
 	will_lead_to_war_with = YMN
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_conquer_yemane"
 		declare_war_on = { type = annex_everything target = YMN }
@@ -1624,6 +1697,7 @@ shared_focus = {
 	prerequisite = { focus = MDL_the_crimson_sultanate }
 	will_lead_to_war_with = ASS
 	will_lead_to_war_with = ANS
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_conquer_donkeys"
 		if = {
@@ -1655,6 +1729,7 @@ shared_focus = {
 	}
 	prerequisite = { focus = MDL_conquer_yemane }
 	cost = 5
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_hold_in_arabian_sea"
 		add_war_support = 0.10
@@ -1683,6 +1758,7 @@ shared_focus = {
 		810 = { is_owned_and_controlled_by = ROOT }
 	}
 	prerequisite = { focus = MDL_conquer_donkeys }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_pacify_assur"
 		ASS = { retire_character = ASS_king_assbanipal }
@@ -1712,6 +1788,7 @@ shared_focus = {
 	}
 	prerequisite = { focus = MDL_pacify_assur }
 	prerequisite = { focus = MDL_hold_in_arabian_sea }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_annex_south"
 		ASS = { add_to_ROOT_potential_cores = yes }
@@ -1742,6 +1819,7 @@ shared_focus = {
 		}
 	}
 	will_lead_to_war_with = ABY
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_conquer_abyssinia"
 		declare_war_on = { type = annex_everything target = ABY }
@@ -1763,6 +1841,7 @@ shared_focus = {
 	bypass = { MDL_wingbardy_in_zebrica = no }
 	prerequisite = { focus = MDL_conquer_abyssinia }
 	will_lead_to_war_with = WNG
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_drive_them_back"
 		MDL_wingbardy_colonial_war_init = yes
@@ -1782,6 +1861,7 @@ shared_focus = {
 	}
 	prerequisite = { focus = MDL_the_crimson_sultanate }
 	will_lead_to_war_with = KLG
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_conquer_klugetown"
 		declare_war_on = { type = annex_everything target = KLG }
@@ -1800,6 +1880,7 @@ shared_focus = {
 		1208 = { is_owned_and_controlled_by = ROOT }
 	}
 	prerequisite = { focus = MDL_conquer_klugetown }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_klugetown_economic_zone"
 		KLG = { retire_character = KLG_verko }
@@ -1834,6 +1915,7 @@ shared_focus = {
 	}
 	prerequisite = { focus = MDL_klugetown_economic_zone }
 	prerequisite = { focus = MDL_drive_them_back }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_annex_west"
 		if = {
@@ -1875,6 +1957,7 @@ shared_focus = {
 	will_lead_to_war_with = SDF
 	will_lead_to_war_with = SDL
 	will_lead_to_war_with = SDC
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_into_arabia"
 		MDL_invade_arabia = yes
@@ -1894,6 +1977,7 @@ shared_focus = {
 		868 = { is_owned_and_controlled_by = ROOT }
 	}
 	prerequisite = { focus = MDL_into_arabia }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		country_event = { id = manedalusia.54 }
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_restore_mareakech"
@@ -1933,6 +2017,7 @@ shared_focus = {
 		OSQ = { all_original_cores_owned_by_ROOT = yes }
 		MTA = { all_original_cores_owned_by_ROOT = yes }
 	}
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_annex_riseia"
 		country_event = manedalusia.93
@@ -1953,6 +2038,7 @@ shared_focus = {
 		943 = { is_owned_and_controlled_by = ROOT }
 	}
 	prerequisite = { focus = MDL_western_zebrican_hegemony }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_take_lands_in_lakes"
 		country_event = manedalusia.45
@@ -1983,6 +2069,7 @@ shared_focus = {
 			}
 		}
 	}
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_into_the_southlands"
 		country_event = manedalusia.94
@@ -2003,6 +2090,7 @@ shared_focus = {
 		1009 = { is_owned_and_controlled_by = ROOT }
 	}
 	prerequisite = { focus = MDL_western_zebrican_hegemony }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_southern_mercenaries"
 		country_event = manedalusia.44
@@ -2023,6 +2111,7 @@ shared_focus = {
 	prerequisite = { focus = MDL_restore_mareakech }
 	prerequisite = { focus = MDL_take_lands_in_lakes }
 	prerequisite = { focus = MDL_annex_riseia }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_universal_caliphate"
 		effect_tooltip = { set_cosmetic_tag = MDL_caliphate }
@@ -2045,6 +2134,7 @@ shared_focus = {
 		}
 	}
 	available = { owns_state = 741 }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_air_stuff"
 		add_political_power = -75
@@ -2068,6 +2158,7 @@ shared_focus = {
 	relative_position_id = MDL_air_stuff
 	cost = 5
 	prerequisite = { focus = MDL_air_stuff }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_radar"
 		air_experience = 25
@@ -2093,6 +2184,7 @@ shared_focus = {
 	relative_position_id = MDL_air_stuff
 	cost = 5
 	prerequisite = { focus = MDL_air_stuff }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_air_industry"
 		add_tech_bonus = {
@@ -2135,6 +2227,7 @@ shared_focus = {
 	relative_position_id = MDL_air_industry
 	prerequisite = { focus = MDL_air_industry }
 	cost = 5
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_heavy_air"
 		add_tech_bonus = {
@@ -2158,6 +2251,7 @@ shared_focus = {
 		focus = MDL_air_industry
 		focus = MDL_radar
 	}
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_death_from_above"
 		if = {
@@ -2207,6 +2301,7 @@ shared_focus = {
 	relative_position_id = MDL_radar
 	prerequisite = { focus = MDL_radar }
 	cost = 5
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_naval_air"
 		if = {
@@ -2240,6 +2335,7 @@ shared_focus = {
 	relative_position_id = MDL_heavy_air
 	cost = 5
 	prerequisite = { focus = MDL_heavy_air }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_rocket_research"
 		add_tech_bonus = {
@@ -2264,6 +2360,7 @@ shared_focus = {
 		focus = MDL_death_from_above
 		focus = MDL_naval_air
 	}
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_an_air_doctrine"
 		add_mastery_bonus = {
@@ -2298,6 +2395,7 @@ shared_focus = {
 		focus = MDL_manedalusian_aeronautics
 	}
 	mutually_exclusive = { focus = MDL_bomber_pilots }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_unstoppable_pilots"
 		custom_effect_tooltip = { IDEA = MDL_asabiyyah_modifier localization_key = modify_idea_tt }
@@ -2327,6 +2425,7 @@ shared_focus = {
 		focus = MDL_an_air_doctrine
 	}
 	mutually_exclusive = { focus = MDL_unstoppable_pilots }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_bomber_pilots"
 		custom_effect_tooltip = { IDEA = MDL_asabiyyah_modifier localization_key = modify_idea_tt }
@@ -2354,6 +2453,7 @@ shared_focus = {
 	cost = 5
 	relative_position_id = MDL_naval_air
 	prerequisite = { focus = MDL_naval_air }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_manedalusian_aeronautics"
 		custom_effect_tooltip = { IDEA = MDL_asabiyyah_modifier localization_key = modify_idea_tt }
@@ -2381,6 +2481,7 @@ shared_focus = {
 		focus = MDL_bomber_pilots
 		focus = MDL_unstoppable_pilots
 	}
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_the_bomb"
 		add_breakthrough_progress = {
@@ -2409,6 +2510,7 @@ shared_focus = {
 			NOT = { has_country_flag = MDL_sunmad }
 		}
 	}
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_economy_stuff"
 		add_tech_bonus = {
@@ -2429,6 +2531,7 @@ shared_focus = {
 	cost = 5
 	prerequisite = { focus = MDL_economy_stuff }
 	available = { owns_state = 764 }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_kom_marebo_oil"
 		country_event = { days = 5 id = manedalusia.16 }
@@ -2450,6 +2553,7 @@ shared_focus = {
 	relative_position_id = MDL_kom_marebo_oil
 	cost = 5
 	prerequisite = { focus = MDL_kom_marebo_oil }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_refining_contractor"
 		add_tech_bonus = {
@@ -2480,6 +2584,7 @@ shared_focus = {
 	relative_position_id = MDL_economy_stuff
 	cost = 5
 	prerequisite = { focus = MDL_economy_stuff }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_basic_education"
 		custom_effect_tooltip = GRI_education_tooltip
@@ -2497,6 +2602,7 @@ shared_focus = {
 	cost = 5
 	relative_position_id = MDL_economy_stuff
 	prerequisite = { focus = MDL_economy_stuff }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_work_with_guilds"
 		add_political_power = -35
@@ -2516,6 +2622,7 @@ shared_focus = {
 	cost = 5
 	relative_position_id = MDL_work_with_guilds
 	prerequisite = { focus = MDL_work_with_guilds }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_industrial_union"
 		add_popularity = { ideology = communism popularity = 0.05 }
@@ -2534,6 +2641,7 @@ shared_focus = {
 	relative_position_id = MDL_basic_education
 	cost = 8
 	prerequisite = { focus = MDL_basic_education }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_coltoba_university"
 		country_event = { days = 5 id = manedalusia.19 }
@@ -2554,6 +2662,7 @@ shared_focus = {
 		MDL = { all_original_cores_owned_by_ROOT = yes }
 	}
 	prerequisite = { focus = MDL_economy_stuff }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_manedalusia_infrastructure"
 		build_railway = {
@@ -2603,6 +2712,7 @@ shared_focus = {
 	cost = 2
 	relative_position_id = MDL_manedalusia_infrastructure
 	prerequisite = { focus = MDL_manedalusia_infrastructure }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_tungsten_trade"
 		add_equipment_to_stockpile = { type = convoy amount = -10 }
@@ -2620,6 +2730,7 @@ shared_focus = {
 	cost = 5
 	prerequisite = { focus = MDL_industrial_union }
 	prerequisite = { focus = MDL_tungsten_trade }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_manedalusia_industrialism"
 		increase_society_development = yes
@@ -2654,6 +2765,7 @@ shared_focus = {
 	}
 	relative_position_id = MDL_economy_stuff
 	prerequisite = { focus = MDL_economy_stuff }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_fiqh_decisions"
 		add_stability = 0.10
@@ -2671,6 +2783,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = MDL_fiqh_decisions
 	prerequisite = { focus = MDL_fiqh_decisions }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_manedalusian_industriousness"
 		add_ideas = MDL_manedalusian_industrious_pride
@@ -2687,6 +2800,7 @@ shared_focus = {
 	relative_position_id = MDL_manedalusian_industriousness
 	prerequisite = { focus = MDL_manedalusian_industriousness }
 	prerequisite = { focus = MDL_refining_contractor }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_look_to_our_roots"
 		add_tech_bonus = {
@@ -2709,6 +2823,7 @@ shared_focus = {
 	prerequisite = { focus = MDL_coltoba_university }
 	prerequisite = { focus = MDL_look_to_our_roots }
 	prerequisite = { focus = MDL_manedalusia_industrialism }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		country_event = { id = manedalusia.24 }
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_place_in_the_sun"
@@ -2737,6 +2852,7 @@ shared_focus = {
 			NOT = { has_country_flag = MDL_sunmad }
 		}
 	}
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_army_stuff"
 		if = {
@@ -2766,6 +2882,7 @@ shared_focus = {
 	relative_position_id = MDL_army_stuff
 	prerequisite = { focus = MDL_army_stuff }
 	mutually_exclusive = { focus = MDL_go_with_alneighzari }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_go_with_samira"
 		add_power_balance_value = {
@@ -2802,6 +2919,7 @@ shared_focus = {
 	relative_position_id = MDL_army_stuff
 	prerequisite = { focus = MDL_army_stuff }
 	mutually_exclusive = { focus = MDL_go_with_samira }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_go_with_alneighzari"
 		add_power_balance_value = {
@@ -2839,6 +2957,7 @@ shared_focus = {
 		owns_state = 740
 	}
 	prerequisite = { focus = MDL_go_with_alneighzari focus = MDL_go_with_samira }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_coltoba_institute_military_science"
 		country_event = manedalusia.57
@@ -2859,6 +2978,7 @@ shared_focus = {
 	y = 0
 	relative_position_id = MDL_coltoba_institute_military_science
 	prerequisite = { focus = MDL_go_with_alneighzari focus = MDL_go_with_samira }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_bigger_cannons"
 		if = {
@@ -2895,6 +3015,7 @@ shared_focus = {
 	y = 0
 	relative_position_id = MDL_bigger_cannons
 	prerequisite = { focus = MDL_go_with_alneighzari focus = MDL_go_with_samira }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_sweet_ass_rides"
 		add_tech_bonus = {
@@ -2928,6 +3049,7 @@ shared_focus = {
 	available = {
 		MDL = { all_original_cores_owned_by_ROOT = yes }
 	}
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_even_sweeter_rides"
 		add_ideas = MDL_streamlined_tank_production
@@ -2949,6 +3071,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = MDL_even_sweeter_rides
 	prerequisite = { focus = MDL_even_sweeter_rides }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_alchemical_investment"
 		if = {
@@ -2992,6 +3115,7 @@ shared_focus = {
 		focus = MDL_bigger_cannons
 		focus = MDL_sweet_ass_rides
 	}
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_military_industrial_council"
 		custom_effect_tooltip = { IDEA = MDL_asabiyyah_modifier localization_key = modify_idea_tt }
@@ -3019,6 +3143,7 @@ shared_focus = {
 	y = 0
 	relative_position_id = MDL_coltoba_institute_military_science
 	prerequisite = { focus = MDL_go_with_alneighzari focus = MDL_go_with_samira }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_better_gear"
 		add_tech_bonus = {
@@ -3051,6 +3176,7 @@ shared_focus = {
 	y = 0
 	relative_position_id = MDL_better_gear
 	prerequisite = { focus = MDL_go_with_alneighzari focus = MDL_go_with_samira }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_better_guns"
 		add_tech_bonus = {
@@ -3079,6 +3205,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = MDL_better_gear
 	prerequisite = { focus = MDL_better_gear focus = MDL_better_guns }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_citizen_guard"
 		if = {
@@ -3113,6 +3240,7 @@ shared_focus = {
 	available = {
 		MDL = { all_original_cores_owned_by_ROOT = yes }
 	}
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_manedalusian_rangers"
 		custom_effect_tooltip = { IDEA = MDL_asabiyyah_modifier localization_key = modify_idea_tt }
@@ -3163,6 +3291,7 @@ shared_focus = {
 	cost = 5
 	relative_position_id = MDL_manedalusian_rangers
 	prerequisite = { focus = MDL_manedalusian_rangers }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_protect_the_skies"
 		741 = {
@@ -3198,6 +3327,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = MDL_coltoba_institute_military_science
 	prerequisite = { focus = MDL_go_with_samira }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_samira_as_general"
 		MDL_grandmistress_samira = {
@@ -3224,6 +3354,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = MDL_samira_as_general
 	prerequisite = { focus = MDL_samira_as_general }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_koltaliba_commissars"
 		country_event = { id = manedalusia.29 }
@@ -3240,6 +3371,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = MDL_samira_as_general
 	prerequisite = { focus = MDL_samira_as_general }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_special_forces_regimentation"
 		country_event = { id = manedalusia.28 }
@@ -3256,6 +3388,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = MDL_coltoba_institute_military_science
 	prerequisite = { focus = MDL_go_with_alneighzari }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_modern_army_crash_course"
 		every_character = {
@@ -3275,6 +3408,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = MDL_modern_army_crash_course
 	prerequisite = { focus = MDL_modern_army_crash_course }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_desert_drift"
 		country_event = { id = manedalusia.25 }
@@ -3291,6 +3425,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = MDL_modern_army_crash_course
 	prerequisite = { focus = MDL_modern_army_crash_course }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_fast_shell_reloading"
 		country_event = { id = manedalusia.26 }
@@ -3310,6 +3445,7 @@ shared_focus = {
 	prerequisite = { focus = MDL_special_forces_regimentation focus = MDL_desert_drift }
 	prerequisite = { focus = MDL_protect_the_skies }
 	prerequisite = { focus = MDL_alchemical_investment }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_grand_army_of_al_manedalus"
 		if = {
@@ -3351,6 +3487,7 @@ shared_focus = {
 			NOT = { has_country_flag = MDL_sunmad }
 		}
 	}
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_navy_stuff"
 		add_dynamic_modifier = { modifier = MDL_manedalusian_navy_modifier }
@@ -3376,6 +3513,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = MDL_navy_stuff
 	prerequisite = { focus = MDL_navy_stuff }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_expand_markets"
 		custom_effect_tooltip = MDL_modify_navy_mod_markets_tt
@@ -3417,6 +3555,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = MDL_expand_markets
 	prerequisite = { focus = MDL_expand_markets }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_expand_harbors"
 		741 = {
@@ -3473,6 +3612,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = MDL_expand_markets
 	prerequisite = { focus = MDL_expand_markets }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_restore_merchant_fleet"
 		add_political_power = -50
@@ -3495,6 +3635,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = MDL_restore_merchant_fleet
 	prerequisite = { focus = MDL_restore_merchant_fleet }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_coltoba_shipyards"
 		swap_ideas = {
@@ -3513,6 +3654,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = MDL_expand_harbors
 	prerequisite = { focus = MDL_expand_harbors }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_fleet_tech"
 		add_tech_bonus = {
@@ -3541,6 +3683,7 @@ shared_focus = {
 	relative_position_id = MDL_expand_markets
 	prerequisite = { focus = MDL_restore_merchant_fleet }
 	prerequisite = { focus = MDL_expand_harbors }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_golden_coast"
 		MDL_grant_golden_coast_state_mod = yes
@@ -3556,6 +3699,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = MDL_golden_coast
 	prerequisite = { focus = MDL_fleet_tech focus = MDL_coltoba_shipyards }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_grand_zoco"
 		custom_effect_tooltip = MDL_modify_navy_mod_grand_zoco_tt
@@ -3583,6 +3727,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = MDL_navy_stuff
 	prerequisite = { focus = MDL_navy_stuff }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_naval_patrols"
 		custom_effect_tooltip = MDL_modify_navy_mod_coastal_bunkers_tt
@@ -3612,6 +3757,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = MDL_naval_patrols
 	prerequisite = { focus = MDL_naval_patrols }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_grand_admiralty"
 		custom_effect_tooltip = MDL_modify_navy_mod_xp_doctrine_cost_tt
@@ -3629,6 +3775,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = MDL_grand_admiralty
 	prerequisite = { focus = MDL_grand_admiralty focus = MDL_naval_depot_network }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_capital_ships"
 		add_tech_bonus = {
@@ -3669,6 +3816,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = MDL_naval_patrols
 	prerequisite = { focus = MDL_naval_patrols }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_naval_depot_network"
 		custom_effect_tooltip = MDL_modify_navy_mod_depots_tt
@@ -3688,6 +3836,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = MDL_naval_depot_network
 	prerequisite = { focus = MDL_grand_admiralty focus = MDL_naval_depot_network }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_marine_corps"
 		custom_effect_tooltip = MDL_modify_navy_mod_marines_tt
@@ -3711,6 +3860,7 @@ shared_focus = {
 	y = 3
 	relative_position_id = MDL_naval_patrols
 	prerequisite = { focus = MDL_marine_corps focus = MDL_capital_ships }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_naval_academy"
 		add_research_slot = 1
@@ -3729,6 +3879,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = MDL_navy_stuff
 	prerequisite = { focus = MDL_navy_stuff }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_back_in_bussiness"
 		swap_ideas = {
@@ -3747,6 +3898,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = MDL_back_in_bussiness
 	prerequisite = { focus = MDL_back_in_bussiness }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_coffee_current"
 		custom_effect_tooltip = MDL_modify_navy_mod_coffee_trade_tt
@@ -3773,6 +3925,7 @@ shared_focus = {
 		has_war = no
 		CTH = { exists = yes }
 	}
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_colthaginian_deal"
 		add_political_power = -50
@@ -3791,6 +3944,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = MDL_back_in_bussiness
 	prerequisite = { focus = MDL_back_in_bussiness }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_reliable_traders"
 		custom_effect_tooltip = { IDEA = MDL_asabiyyah_modifier localization_key = modify_idea_tt }
@@ -3810,6 +3964,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = MDL_reliable_traders
 	prerequisite = { focus = MDL_reliable_traders focus = MDL_coffee_current }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_merchant_outposts"
 		custom_effect_tooltip = MDL_modify_navy_mod_merchant_outposts_tt
@@ -3830,6 +3985,7 @@ shared_focus = {
 	y = 3
 	relative_position_id = MDL_back_in_bussiness
 	prerequisite = { focus = MDL_merchant_outposts focus = MDL_colthaginian_deal }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_green_bay_masters"
 		741 = {
@@ -3857,6 +4013,7 @@ shared_focus = {
 		if = { has_country_flag = MDL_kill_them_all }
 	}
 
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_kill_them_all"
 		add_ideas = all_adults_serve
@@ -3873,6 +4030,7 @@ shared_focus = {
 	relative_position_id = MDL_kill_them_all
 	cost = 2
 	prerequisite = { focus = MDL_kill_them_all }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_get_the_militias"
 		hidden_effect = { load_oob = "MDL_militias" }
@@ -3888,6 +4046,7 @@ shared_focus = {
 	relative_position_id = MDL_kill_them_all
 	cost = 2
 	prerequisite = { focus = MDL_kill_them_all }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_get_the_militias"
 		add_equipment_to_stockpile = { type = melee_equipment_0 amount = 1500 }
@@ -3921,6 +4080,7 @@ shared_focus = {
 	}
 	prerequisite = { focus = MDL_kill_them_all }
 	cost = 2
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_loot_the_countryside"
 		add_timed_idea = {
@@ -3943,6 +4103,7 @@ shared_focus = {
 		771 = { is_controlled_by = MDL }
 		772 = { is_controlled_by = MDL }
 	}
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_begin_genocide_proper"
 		hidden_effect = {
@@ -3973,6 +4134,7 @@ shared_focus = {
 		782 = { is_controlled_by = MDL }
 		783 = { is_controlled_by = MDL }
 	}
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_sack_mountain_temples"
 		add_equipment_to_stockpile = { type = support_equipment amount = 150 producer = ABY }
@@ -4004,6 +4166,7 @@ shared_focus = {
 		778 = { is_controlled_by = MDL }
 		779 = { is_controlled_by = MDL }
 	}
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_sack_mountain_temples"
 		add_equipment_to_stockpile = { type = infantry_equipment amount = 1000 producer = ABY }
@@ -4033,6 +4196,7 @@ shared_focus = {
 		775 = { is_controlled_by = MDL }
 	}
 	cost = 1
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_get_the_king"
 		if = {
@@ -4071,6 +4235,7 @@ shared_focus = {
 	prerequisite = { focus = MDL_sack_mountain_temples }
 	prerequisite = { focus = MDL_get_the_strays }
 	prerequisite = { focus = MDL_get_the_king }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_it_is_done"
 		country_event = { id = manedalusia.62 }
@@ -4112,6 +4277,7 @@ shared_focus = {
 		}
 	}
 
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_elect_qunsul"
 		add_ideas = MDL_qunsul_idea
@@ -4126,6 +4292,7 @@ shared_focus = {
 	cost = 5
 	relative_position_id = MDL_elect_qunsul
 	prerequisite = { focus = MDL_elect_qunsul }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_all_hooves_on_deck"
 		add_manpower = 5000
@@ -4141,6 +4308,7 @@ shared_focus = {
 	cost = 5
 	relative_position_id = MDL_elect_qunsul
 	prerequisite = { focus = MDL_elect_qunsul }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_fortification_buildup"
 		741 = {
@@ -4185,6 +4353,7 @@ shared_focus = {
 		}
 	}
 	will_lead_to_war_with = MGY
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_reunify_homeland"
 		MDL_initiate_warplan_green = yes
@@ -4203,6 +4372,7 @@ shared_focus = {
 	}
 	relative_position_id = MDL_reunify_homeland
 	prerequisite = { focus = MDL_reunify_homeland }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_senate_reconcile_maregypt"
 		custom_effect_tooltip = MDL_senate_reconcile_maregypt_tt
@@ -4228,6 +4398,7 @@ shared_focus = {
 	cost = 5
 	relative_position_id = MDL_reunify_homeland
 	prerequisite = { focus = MDL_reunify_homeland }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_federal_constitution"
 		add_ideas = MDL_federal_constitution_idea
@@ -4247,6 +4418,7 @@ shared_focus = {
 		owns_state = 738
 		owns_state = 740
 	}
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_federal_assembly"
 		swap_ideas = {
@@ -4264,6 +4436,7 @@ shared_focus = {
 	cost = 5
 	relative_position_id = MDL_reunify_homeland
 	prerequisite = { focus = MDL_reunify_homeland }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_suffrage_and_army"
 		add_country_leader_trait = MDL_militarized_senate
@@ -4288,6 +4461,7 @@ shared_focus = {
 	cost = 5
 	relative_position_id = MDL_suffrage_and_army
 	prerequisite = { focus = MDL_suffrage_and_army }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_elite_army"
 		hidden_effect = {
@@ -4307,6 +4481,7 @@ shared_focus = {
 	cost = 5
 	relative_position_id = MDL_senate_reconcile_maregypt
 	prerequisite = { focus = MDL_senate_reconcile_maregypt }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_coltoba_naval_center"
 		741 = {
@@ -4330,6 +4505,7 @@ shared_focus = {
 	cost = 5
 	relative_position_id = MDL_senate_reconcile_maregypt
 	prerequisite = { focus = MDL_senate_reconcile_maregypt }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_joint_development"
 		add_ideas = MDL_federation_joint_development
@@ -4351,6 +4527,7 @@ shared_focus = {
 	prerequisite = { focus = MDL_coltoba_naval_center }
 	prerequisite = { focus = MDL_joint_development }
 	prerequisite = { focus = MDL_federal_assembly }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_dream_of_a_federation"
 		create_faction_from_template = faction_template_MDL_federation
@@ -4379,6 +4556,7 @@ shared_focus = {
 			}
 		}
 	}
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_liberate_klugetown"
 		declare_war_on = { type = annex_everything target = KLG }	
@@ -4394,6 +4572,7 @@ shared_focus = {
 	relative_position_id = MDL_liberate_klugetown
 	prerequisite = { focus = MDL_liberate_klugetown }
 	available = { owns_state = 1208 }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_integrate_klugetown"
 		country_event = manedalusia.67
@@ -4422,6 +4601,7 @@ shared_focus = {
 		ABY = { has_war_with = ROOT }
 	}
 	will_lead_to_war_with = ABY
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_liberate_abyssinia"
 		if = {
@@ -4448,6 +4628,7 @@ shared_focus = {
 	available = {
 		775 = { is_owned_and_controlled_by = MDL }
 	}
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_liberate_abyssinia"
 		country_event = manedalusia.68
@@ -4491,6 +4672,7 @@ shared_focus = {
 	}
 	bypass = { MDL_wingbardy_in_zebrica = no }
 	will_lead_to_war_with = WNG
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_liberate_purrsia"
 		MDL_wingbardy_colonial_war_init = yes
@@ -4513,6 +4695,7 @@ shared_focus = {
 		784 = { is_owned_and_controlled_by = ABY }
 		1200 = { is_owned_and_controlled_by = ABY }
 	}
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_karthinia_of_zebrica"
 		hidden_effect = {
@@ -4558,6 +4741,7 @@ shared_focus = {
 		}
 	}
 	will_lead_to_war_with = YMN
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_liberate_yemane"
 		declare_war_on = { type = annex_everything target = YMN }
@@ -4576,6 +4760,7 @@ shared_focus = {
 		owns_state = 956
 		YMN = { exists = no }
 	}
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_integrate_yemane"
 		custom_effect_tooltip = MDL_integrate_yemane_tt
@@ -4645,6 +4830,7 @@ shared_focus = {
 	}
 	will_lead_to_war_with = ASS
 	will_lead_to_war_with = ANS
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_liberate_donkeys"
 		if = {
@@ -4671,6 +4857,7 @@ shared_focus = {
 		ASS = { exists = no }
 		ANS = { exists = no }
 	}
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_integrate_donkeys"
 		custom_effect_tooltip = MDL_integrate_donkeys_tt
@@ -4765,6 +4952,7 @@ shared_focus = {
 			}
 		}
 	}
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_liberate_emirs"
 		declare_war_on = { type = annex_everything target = EMR }
@@ -4783,6 +4971,7 @@ shared_focus = {
 		EMR = { exists = no }
 		owns_state = 818
 	}
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_integrate_emirs"
 		custom_effect_tooltip = MDL_integrate_emirs_tt
@@ -4816,6 +5005,7 @@ shared_focus = {
 	prerequisite = { focus = MDL_integrate_donkeys }
 	mutually_exclusive = { focus = MDL_liberate_emirs }
 	available = { ME_arabia_is_unified = yes	}
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_our_finest_hour"
 		MDL_invade_arabia = yes
@@ -4831,6 +5021,7 @@ shared_focus = {
 	relative_position_id = MDL_our_finest_hour
 	prerequisite = { focus = MDL_our_finest_hour }
 	available = { owns_state = 868 }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_balkanize_arabia"
 		custom_effect_tooltip = MDL_balkanize_arabia_tt
@@ -4867,6 +5058,7 @@ shared_focus = {
 	prerequisite = { focus = MDL_karthinia_of_zebrica }
 	prerequisite = { focus = MDL_balkanize_arabia focus = MDL_integrate_emirs }
 	available = { has_war = no }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		 log = "[GetDateText]: [Root.GetName]: Focus MDL_triumph_of_the_federation"
 		 country_event = manedalusia.69
@@ -4888,6 +5080,7 @@ shared_focus = {
 		}
 	}
 
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_a_new_start"
 		country_event = manedalusia.143
@@ -4903,6 +5096,7 @@ shared_focus = {
 	relative_position_id = MDL_a_new_start
 	cost = 2
 	prerequisite = { focus = MDL_a_new_start }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_meet_with_crimson"
 		country_event = manedalusia.76
@@ -4918,6 +5112,7 @@ shared_focus = {
 	cost = 2
 	relative_position_id = MDL_a_new_start
 	prerequisite = { focus = MDL_a_new_start }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_empower_senate"
 		custom_effect_tooltip = { IDEA = MDL_asabiyyah_modifier localization_key = modify_idea_tt }
@@ -4951,6 +5146,7 @@ shared_focus = {
 	relative_position_id = MDL_a_new_start
 	prerequisite = { focus = MDL_meet_with_crimson }
 	prerequisite = { focus = MDL_empower_senate }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_purchase_land_maregypt"
 		custom_effect_tooltip = MDL_purchase_land_maregypt_tt
@@ -4983,6 +5179,7 @@ shared_focus = {
 			NOT = { has_government = democratic }
 		}
 	}
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_look_to_equestria"
 		country_event = manedalusia.82
@@ -5016,6 +5213,7 @@ shared_focus = {
 			NOT = { has_government = democratic }
 		}
 	}
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_formalize_alliance"
 		custom_effect_tooltip = { IDEA = MDL_asabiyyah_modifier localization_key = modify_idea_tt }
@@ -5040,6 +5238,7 @@ shared_focus = {
 	cost = 5
 	relative_position_id = MDL_purchase_land_maregypt
 	prerequisite = { focus = MDL_purchase_land_maregypt }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_expeditionary_corps"
 		add_ideas = MDL_expeditionary_corps_idea
@@ -5055,6 +5254,7 @@ shared_focus = {
 	cost = 5
 	relative_position_id = MDL_expeditionary_corps
 	prerequisite = { focus = MDL_expeditionary_corps }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_industrial_development_program"
 		741 = {
@@ -5094,6 +5294,7 @@ shared_focus = {
 		owns_state = 738
 		owns_state = 740
 	}
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_springtime_in_manedalusia"
 		add_popularity = { ideology = democratic popularity = 0.15 }
@@ -5112,6 +5313,7 @@ shared_focus = {
 	cost = 5
 	relative_position_id = MDL_springtime_in_manedalusia
 	prerequisite = { focus = MDL_springtime_in_manedalusia }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_monument_to_aaliyah"
 		custom_effect_tooltip = { IDEA = MDL_asabiyyah_modifier localization_key = modify_idea_tt }
@@ -5136,6 +5338,7 @@ shared_focus = {
 	cost = 5
 	relative_position_id = MDL_springtime_in_manedalusia
 	prerequisite = { focus = MDL_springtime_in_manedalusia }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_bulwark_of_harmony"
 		custom_effect_tooltip = MDL_bulwark_of_harmony_tt
@@ -5205,6 +5408,7 @@ shared_focus = {
 		}
 	}
 	will_lead_to_war_with = ABY
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_bring_our_ponies_home"
 		create_wargoal = {
@@ -5241,6 +5445,7 @@ shared_focus = {
 	prerequisite = { focus = MDL_bring_our_ponies_home }
 	prerequisite = { focus = MDL_formalize_alliance }
 
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_peace_in_our_time"
 		custom_effect_tooltip = MDL_remove_tradelaw_econ_cost_tt
@@ -5261,6 +5466,7 @@ shared_focus = {
 	cost = 5
 	relative_position_id = MDL_peace_in_our_time
 	prerequisite = { focus = MDL_peace_in_our_time }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_equestrian_investment"
 		add_political_power = -100
@@ -5276,6 +5482,7 @@ shared_focus = {
 	cost = 5
 	relative_position_id = MDL_equestrian_investment
 	prerequisite = { focus = MDL_equestrian_investment }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_equestrian_tourism"
 		country_event = manedalusia.107
@@ -5300,6 +5507,7 @@ shared_focus = {
 			}
 		}
 	}
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_invest_in_changeling_reconstruction"
 		add_political_power = -100
@@ -5316,6 +5524,7 @@ shared_focus = {
 	cost = 5
 	relative_position_id = MDL_invest_in_changeling_reconstruction
 	prerequisite = { focus = MDL_invest_in_changeling_reconstruction }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_navy_war_games"
 		EQS = {
@@ -5343,6 +5552,7 @@ shared_focus = {
 	bypass = {
 		GRD = { exists = no }
 	}
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		 log = "[GetDateText]: [Root.GetName]: Focus MDL_imperial_investment"
 		 GRD = { country_event = { id = manedalusia.101 days = 3 } }
@@ -5358,6 +5568,7 @@ shared_focus = {
 	cost = 5
 	relative_position_id = MDL_imperial_investment
 	prerequisite = { focus = MDL_imperial_investment }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_surf_and_rock_and_roll"
 		add_timed_idea = {
@@ -5381,6 +5592,7 @@ shared_focus = {
 	prerequisite = { focus = MDL_equestrian_tourism }
 	prerequisite = { focus = MDL_navy_war_games }
 	prerequisite = { focus = MDL_surf_and_rock_and_roll }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_manedalusian_century"
 		country_event = manedalusia.100
@@ -5404,6 +5616,7 @@ shared_focus = {
 	}
 
 	cost = 10
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_sun_madness"
 	}
@@ -5423,6 +5636,7 @@ shared_focus = {
 		}
 	}
 
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_our_purpose_made_clear"
 		add_country_leader_trait = MDL_samira_lady_commander
@@ -5488,6 +5702,7 @@ shared_focus = {
 		NOT = { has_completed_focus = MDL_CES_victory }
 	}
 
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_all_is_not_lost"
 		custom_effect_tooltip = MDL_all_is_not_lost_tt
@@ -5504,6 +5719,7 @@ shared_focus = {
 	cost = 5
 	relative_position_id = MDL_our_purpose_made_clear
 	prerequisite = { focus = MDL_our_purpose_made_clear }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_rally_the_faithful"
 
@@ -5531,6 +5747,7 @@ shared_focus = {
 	cost = 5
 	relative_position_id = MDL_our_purpose_made_clear
 	prerequisite = { focus = MDL_our_purpose_made_clear }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_fortress_manedalusia"
 		741 = {
@@ -5607,6 +5824,7 @@ shared_focus = {
 	prerequisite = { focus = MDL_rally_the_faithful }
 	prerequisite = { focus = MDL_fortress_manedalusia }
 	will_lead_to_war_with = BAT
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_strike_thralls_of_darkness"
 		MDL_holy_war_gimp_the_republic = yes
@@ -5631,6 +5849,7 @@ shared_focus = {
 	}
 
 	prerequisite = { focus = MDL_our_purpose_made_clear }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_holy_mandates"
 		MDL_holy_war_gimp_the_republic = yes
@@ -5673,6 +5892,7 @@ shared_focus = {
 			}
 		}
 	}
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_secure_klugetown"
 		if = {
@@ -5703,6 +5923,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = MDL_holy_mandates
 	prerequisite = { focus = MDL_holy_mandates }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_speartip_of_harmony"
 		MDL_holy_war_gimp_the_republic = yes
@@ -5731,6 +5952,7 @@ shared_focus = {
 	available = {
 		1208 = { is_owned_and_controlled_by = ROOT }
 	}
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_forges_of_klugetown"
 		MDL_holy_war_gimp_the_republic = yes
@@ -5775,6 +5997,7 @@ shared_focus = {
 	}
 	prerequisite = { focus = MDL_fortress_manedalusia }
 	prerequisite = { focus = MDL_speartip_of_harmony }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_secure_starry_sea_islands"
 		MDL_holy_war_gimp_the_republic = yes
@@ -5845,6 +6068,7 @@ shared_focus = {
 		}
 	}
 	prerequisite = { focus = MDL_strike_thralls_of_darkness }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_ask_HIP_for_help"
 		HIP = { country_event = { id = manedalusia.133 days = 2 } }
@@ -5864,6 +6088,7 @@ shared_focus = {
 		BAT = { is_subject_of = ROOT }
 	}
 	prerequisite = { focus = MDL_strike_thralls_of_darkness }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_holy_mandate_BAT"
 		MDL_holy_war_gimp_the_republic = yes
@@ -5894,6 +6119,7 @@ shared_focus = {
 	prerequisite = { focus = MDL_rally_the_faithful }
 	prerequisite = { focus = MDL_forges_of_klugetown }
 
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_expand_junnah_doctrine"
 		MDL_holy_war_gimp_the_republic = yes
@@ -5933,6 +6159,7 @@ shared_focus = {
 	available = {
 		ABY = { is_subject_of = ROOT }
 	}
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		 log = "[GetDateText]: [Root.GetName]: Focus MDL_abyssinian_auxilliaries"
 		 add_manpower = 15000
@@ -5962,6 +6189,7 @@ shared_focus = {
 		1208 = { is_owned_and_controlled_by = ROOT }
 	}
 
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_leverage_klugetown_airfield"
 		add_ideas = MDL_klugepilled
@@ -6022,6 +6250,7 @@ shared_focus = {
 		7 = { is_owned_and_controlled_by = ROOT }
 	}
 
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_starry_sea_corridor"
 		add_ideas = MDL_starry_sea_corridor_idea
@@ -6045,6 +6274,7 @@ shared_focus = {
 		}
 	}
 
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_dragon_assault_corps"
 		custom_effect_tooltip = MDL_dragon_assault_corps_tt
@@ -6119,6 +6349,7 @@ shared_focus = {
 		ABY = { is_subject_of = ROOT }
 		MGY = { is_subject_of = ROOT }
 	}
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_CES_victory"
 		hidden_effect = { set_country_flag = MDL_holy_war_won }
@@ -6147,6 +6378,7 @@ shared_focus = {
 	relative_position_id = MDL_CES_victory
 	prerequisite = { focus = MDL_CES_victory }
 	cost = 5
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_holy_war_demobilize"
 		add_ideas = volunteer_only
@@ -6164,6 +6396,7 @@ shared_focus = {
 	relative_position_id = MDL_CES_victory
 	cost = 5
 	prerequisite = { focus = MDL_CES_victory }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_holy_war_stabilize_west_zebrica"
 		
@@ -6193,6 +6426,7 @@ shared_focus = {
 	relative_position_id = MDL_CES_victory
 	prerequisite = { focus = MDL_holy_war_stabilize_west_zebrica }
 	prerequisite = { focus = MDL_holy_war_demobilize }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_CES_victory_end"
 		remove_ideas = MDL_holy_zeal_2
@@ -6225,6 +6459,7 @@ shared_focus = {
 		7 = { is_owned_and_controlled_by = ROOT }
 	}
 
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_warplan_dragon"
 		country_event = manedalusia.140
@@ -6260,6 +6495,7 @@ shared_focus = {
 			JUN = { exists = no }		
 		}
 	}
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_secure_southeast"
 		if = {
@@ -6290,6 +6526,7 @@ shared_focus = {
 	cost = 5
 	relative_position_id = MDL_warplan_dragon
 	prerequisite = { focus = MDL_warplan_dragon }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_militarize_EQS"
 		DRG = {
@@ -6309,6 +6546,7 @@ shared_focus = {
 	relative_position_id = MDL_warplan_dragon
 	prerequisite = { focus = MDL_militarize_EQS }
 	prerequisite = { focus = MDL_secure_southeast }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_kill_the_djinn"
 		if = {
@@ -6373,6 +6611,7 @@ shared_focus = {
 		}
 	}
 
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_thus_spoke_ash_shahid"
 		add_power_balance_value = {
@@ -6390,6 +6629,7 @@ shared_focus = {
 	x = 10
 	y = 0
 	cost = 2
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_overseas_dominion"
 		country_event = manedalusia.99
@@ -6404,6 +6644,7 @@ shared_focus = {
 	cost = 3
 	relative_position_id = MDL_overseas_dominion
 	prerequisite = { focus = MDL_overseas_dominion }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_get_some_gear"
 		add_equipment_to_stockpile = { type = infantry_equipment amount = 2000 producer = GRI }
@@ -6429,6 +6670,7 @@ shared_focus = {
 	cost = 3
 	relative_position_id = MDL_overseas_dominion
 	prerequisite = { focus = MDL_overseas_dominion }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_get_some_muscle"
 		country_event = manedalusia.96
@@ -6444,6 +6686,7 @@ shared_focus = {
 	relative_position_id = MDL_overseas_dominion
 	prerequisite = { focus = MDL_get_some_gear }
 	prerequisite = { focus = MDL_get_some_muscle }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_crush_the_koltaliba"
 		country_event = manedalusia.98
@@ -6458,6 +6701,7 @@ shared_focus = {
 	cost = 3
 	relative_position_id = MDL_get_some_muscle
 	prerequisite = { focus = MDL_get_some_muscle }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_crack_down_on_coltoba"
 		add_popularity = { ideology = fascism popularity = 0.10 }
@@ -6475,6 +6719,7 @@ shared_focus = {
 	available = {
 		741 = { is_owned_and_controlled_by = ROOT }
 	}
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_harbor_fortification"
 		741 = {
@@ -6508,6 +6753,7 @@ shared_focus = {
 	relative_position_id = MDL_crack_down_on_coltoba
 	prerequisite = { focus = MDL_crush_the_koltaliba }
 	prerequisite = { focus = MDL_crack_down_on_coltoba }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_clean_loose_ends"
 		custom_effect_tooltip = MDL_clean_loose_ends_tt
@@ -6533,6 +6779,7 @@ shared_focus = {
 	relative_position_id = MDL_harbor_fortification
 	prerequisite = { focus = MDL_crush_the_koltaliba }
 	prerequisite = { focus = MDL_harbor_fortification }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_burn_the_courthouse"
 		retire_character = MDL_qadi_of_coltoba
@@ -6549,6 +6796,7 @@ shared_focus = {
 	relative_position_id = MDL_crush_the_koltaliba
 	prerequisite = { focus = MDL_burn_the_courthouse }
 	prerequisite = { focus = MDL_clean_loose_ends }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_lord_of_ultramar"
 		country_event = manedalusia.97
@@ -6561,6 +6809,7 @@ shared_focus = {
 	x = 15
 	y = 0
 	cost = 10
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_restoring_the_light"
 		country_event = manedalusia.117
@@ -6583,6 +6832,7 @@ shared_focus = {
 	relative_position_id = MDL_restoring_the_light
 	prerequisite = { focus = MDL_restoring_the_light }
 	cost = 10
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_expand_new_karthin_industrial_base"
 		741 = {
@@ -6614,6 +6864,7 @@ shared_focus = {
 	relative_position_id = MDL_restoring_the_light
 	prerequisite = { focus = MDL_restoring_the_light }
 	cost = 10
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_colonial_arms_production"
 		add_ideas = MDL_colonial_arms_production_idea
@@ -6639,6 +6890,7 @@ shared_focus = {
 	prerequisite = { focus = MDL_expand_new_karthin_industrial_base }
 	prerequisite = { focus = MDL_colonial_arms_production }
 	cost = 10
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_colonial_troops"
 		set_technology = { tech_military_police = 1 }
@@ -6657,6 +6909,7 @@ shared_focus = {
 	relative_position_id = MDL_expand_new_karthin_industrial_base
 	prerequisite = { focus = MDL_expand_new_karthin_industrial_base }
 	cost = 10
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_imperial_shipyards"
 		add_ideas = MDL_imperial_shipyards_idea
@@ -6675,6 +6928,7 @@ shared_focus = {
 	relative_position_id = MDL_colonial_arms_production
 	prerequisite = { focus = MDL_colonial_arms_production }
 	cost = 10
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_griffon_tech"
 		set_technology = { tech_knights = 1 }
@@ -6698,6 +6952,7 @@ shared_focus = {
 	relative_position_id = MDL_colonial_arms_production
 	prerequisite = { focus = MDL_colonial_arms_production }
 	cost = 10
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_colonial_university"
 		add_research_slot = 1
@@ -6717,6 +6972,7 @@ shared_focus = {
 	relative_position_id = MDL_imperial_shipyards
 	prerequisite = { focus = MDL_maregypt_infrastructure_expansion }
 	cost = 10
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_colonial_industry"
 		741 = {
@@ -6758,6 +7014,7 @@ shared_focus = {
 	relative_position_id = MDL_imperial_shipyards
 	prerequisite = { focus = MDL_imperial_shipyards }
 	cost = 10
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_pony_imperials"
 		add_ideas = MDL_pony_imperials_idea
@@ -6780,6 +7037,7 @@ shared_focus = {
 	prerequisite = { focus = MDL_colonial_troops }
 	prerequisite = { focus = MDL_griffon_tech }
 	cost = 10
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_colonial_administration"
 		custom_effect_tooltip = MDL_colonial_administration_tt
@@ -6795,6 +7053,7 @@ shared_focus = {
 	relative_position_id = MDL_griffon_tech
 	prerequisite = { focus = MDL_pony_synthesis }
 	cost = 10
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_imperial_education"
 		custom_effect_tooltip = GRI_education_tooltip
@@ -6818,6 +7077,7 @@ shared_focus = {
 		741 = { is_owned_and_controlled_by = ROOT }
 	}
 	cost = 10
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_imperial_autarky"
 		add_ideas = MDL_imperial_autarky_idea
@@ -6834,6 +7094,7 @@ shared_focus = {
 	relative_position_id = MDL_griffon_tech
 	prerequisite = { focus = MDL_griffon_tech }
 	cost = 10
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_total_war"
 		custom_effect_tooltip = GRI_war_economy_tp
@@ -6865,6 +7126,7 @@ shared_focus = {
 		KLG = { exists = no }
 	}
 	cost = 10
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_grand_colonial_railway"
 		build_railway = {
@@ -6887,6 +7149,7 @@ shared_focus = {
 	prerequisite = { focus = MDL_imperial_education }
 	prerequisite = { focus = MDL_core_klugetown }
 	cost = 10
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_veteran_army"
 		country_event = manedalusia.111
@@ -6913,6 +7176,7 @@ shared_focus = {
 	available = {
 		733 = { is_owned_and_controlled_by = ROOT }
 	}
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_maregypt_infrastructure_expansion"
 		every_owned_state = {
@@ -6975,6 +7239,7 @@ shared_focus = {
 		ABY = { exists = no }
 		775 = { is_owned_and_controlled_by = ROOT }
 	}
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_pony_synthesis"
 		country_event = manedalusia.112
@@ -6997,6 +7262,7 @@ shared_focus = {
 		1208 = { is_owned_and_controlled_by = ROOT }
 		KLG = { exists = no }
 	}
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_core_klugetown"
 		add_state_core = 1208
@@ -7029,6 +7295,7 @@ shared_focus = {
 		has_completed_focus = MDL_colonial_administration
 		SDL = { all_original_cores_owned_by_ROOT = yes }
 	}
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_king_of_arabia"
 		add_ideas = MDL_maxed_dominion
@@ -7068,6 +7335,7 @@ shared_focus = {
 		371 = { is_owned_and_controlled_by = ROOT }
 	}
 	will_lead_to_war_with = WNG
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_i_see_maar_fall_like_lightning"
 		if = {
@@ -7101,6 +7369,7 @@ shared_focus = {
 	cost = 10
 	relative_position_id = MDL_restoring_the_light
 	prerequisite = { focus = MDL_restoring_the_light }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_imperial_navy"
 		add_doctrine_cost_reduction = {
@@ -7132,6 +7401,7 @@ shared_focus = {
 		740 = { is_owned_and_controlled_by = ROOT }
 		738 = { is_owned_and_controlled_by = ROOT }
 	}
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_new_karthin_dockyards"
 		740 = {
@@ -7170,6 +7440,7 @@ shared_focus = {
 		772 = { is_owned_and_controlled_by = ROOT }
 		774 = { is_owned_and_controlled_by = ROOT }
 	}
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_abyssinian_mines"
 		771 = {
@@ -7202,6 +7473,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = MDL_imperial_navy
 	prerequisite = { focus = MDL_imperial_navy }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_subs_tech"
 		add_tech_bonus = {
@@ -7225,6 +7497,7 @@ shared_focus = {
 		focus = MDL_subs_tech
 		focus = MDL_new_karthin_dockyards
 	}
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_imperial_admiralty"
 		navy_experience = 25
@@ -7264,6 +7537,7 @@ shared_focus = {
 		772 = { is_owned_and_controlled_by = ROOT }
 		774 = { is_owned_and_controlled_by = ROOT }
 	}
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_core_coast"
 		country_event = manedalusia.116
@@ -7285,6 +7559,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = MDL_core_coast
 	prerequisite = { focus = MDL_core_coast }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_imperial_naval_projection"
 		add_ideas = MDL_naval_projection_idea
@@ -7300,6 +7575,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = MDL_core_coast
 	prerequisite = { focus = MDL_core_coast }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_imperial_battleships"
 		add_tech_bonus = {
@@ -7327,6 +7603,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = MDL_imperial_naval_projection
 	prerequisite = { focus = MDL_imperial_naval_projection }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_imperial_carriers"
 		add_tech_bonus = {
@@ -7351,6 +7628,7 @@ shared_focus = {
 	}
 	prerequisite = { focus = MDL_imperial_battleships }
 	prerequisite = { focus = MDL_imperial_naval_projection }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_mega_based_navy"
 		add_ideas = MDL_grand_imperial_navy
@@ -7373,6 +7651,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = MDL_imperial_battleships
 	prerequisite = { focus = MDL_imperial_battleships }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_imperial_naval_bombers"
 		add_tech_bonus = {
@@ -7393,6 +7672,7 @@ shared_focus = {
 	cost = 10
 	relative_position_id = MDL_restoring_the_light
 	prerequisite = { focus = MDL_restoring_the_light }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_imperial_electronics"
 		add_tech_bonus = {
@@ -7417,6 +7697,7 @@ shared_focus = {
 	cost = 10
 	relative_position_id = MDL_restoring_the_light
 	prerequisite = { focus = MDL_restoring_the_light }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_imperial_synthetics"
 		764 = {
@@ -7452,6 +7733,7 @@ shared_focus = {
 	relative_position_id = MDL_imperial_electronics
 	prerequisite = { focus = MDL_imperial_electronics }
 	prerequisite = { focus = MDL_imperial_synthetics }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_imperial_magic"
 		set_technology = { tech_synthetic_crystal_refinery = 1 }
@@ -7481,6 +7763,7 @@ shared_focus = {
 		790 = { is_owned_and_controlled_by = ROOT }
 		810 = { is_owned_and_controlled_by = ROOT }
 	}
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_imperial_agriculture"
 		custom_effect_tooltip = MDL_imperial_agriculture_tt
@@ -7514,6 +7797,7 @@ shared_focus = {
 	cost = 10
 	relative_position_id = MDL_restoring_the_light
 	prerequisite = { focus = MDL_restoring_the_light }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_imperial_corporativism"
 		add_popularity = { ideology = fascism popularity = 0.05 }
@@ -7542,6 +7826,7 @@ shared_focus = {
 	relative_position_id = MDL_imperial_agriculture
 	prerequisite = { focus = MDL_imperial_corporativism }
 	prerequisite = { focus = MDL_imperial_agriculture }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_imperial_diplo_corps"
 		add_research_slot = 1
@@ -7559,6 +7844,7 @@ shared_focus = {
 	cost = 10
 	relative_position_id = MDL_restoring_the_light
 	prerequisite = { focus = MDL_restoring_the_light }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_imperial_support_tech"
 		add_tech_bonus = {
@@ -7592,6 +7878,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = MDL_imperial_support_tech
 	prerequisite = { focus = MDL_imperial_support_tech }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_imperial_fighters"
 		if = {
@@ -7640,6 +7927,7 @@ shared_focus = {
 		focus = MDL_imperial_spec_ops
 		focus = MDL_imperial_fighters
 	}
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_imperial_plane_tech"
 		add_tech_bonus = {
@@ -7668,6 +7956,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = MDL_imperial_support_tech
 	prerequisite = { focus = MDL_imperial_support_tech }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_imperial_spec_ops"
 		add_tech_bonus = {
@@ -7692,6 +7981,7 @@ shared_focus = {
 		focus = MDL_imperial_spec_ops
 		focus = MDL_imperial_fighters
 	}
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_imperial_armor"
 		add_tech_bonus = {
@@ -7718,6 +8008,7 @@ shared_focus = {
 		focus = MDL_imperial_armor
 		focus = MDL_imperial_plane_tech
 	}
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_nonstop_barrage"
 		add_ideas = MDL_imperial_artillery_barrage
@@ -7739,6 +8030,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = MDL_nonstop_barrage
 	prerequisite = { focus = MDL_nonstop_barrage }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_imperial_heavy_fighters"
 		if = {
@@ -7776,6 +8068,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = MDL_nonstop_barrage
 	prerequisite = { focus = MDL_nonstop_barrage }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_imperial_heavy_tanks"
 		add_tech_bonus = {
@@ -7796,6 +8089,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = MDL_imperial_heavy_fighters
 	prerequisite = { focus = MDL_imperial_heavy_fighters }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_imperial_pilots"
 		add_ideas = MDL_imperial_pilots_idea
@@ -7815,6 +8109,7 @@ shared_focus = {
 	available = {
 		has_idea = modern_society
 	}
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_project_excelsior"
 		add_breakthrough_progress = {
@@ -7839,6 +8134,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = MDL_imperial_heavy_tanks
 	prerequisite = { focus = MDL_imperial_heavy_tanks }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_imperial_air_doctrine"
 		add_doctrine_cost_reduction = {
@@ -7863,6 +8159,7 @@ shared_focus = {
 		WNG = { exists = no }
 	}
 	prerequisite = { focus = MDL_i_see_maar_fall_like_lightning }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_integrate_karthin"
 		create_faction_from_template = faction_template_MDL_imperium
@@ -7887,6 +8184,7 @@ shared_focus = {
 		389 = { is_owned_and_controlled_by = ROOT }
 		383 = { is_owned_and_controlled_by = ROOT }
 	}
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_core_eastern_empire"
 		SIC = { add_to_ROOT_potential_cores = yes }
@@ -7911,6 +8209,7 @@ shared_focus = {
 		487 = { is_owned_and_controlled_by = ROOT }
 		366 = { is_owned_and_controlled_by = ROOT }
 	}
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_core_western_empire"
 		FAL = { add_to_ROOT_potential_cores = yes }
@@ -7934,6 +8233,7 @@ shared_focus = {
 		focus = MDL_core_eastern_empire
 	}
 	cost = 10
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_industry_of_karthin"
 		increase_society_development = yes
@@ -7953,6 +8253,7 @@ shared_focus = {
 		focus = MDL_core_eastern_empire
 	}
 	cost = 10
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_reinstate_south_griffonia_society"
 		add_ideas = MDL_southern_griffonian_society
@@ -7971,6 +8272,7 @@ shared_focus = {
 		focus = MDL_reinstate_south_griffonia_society
 		focus = MDL_industry_of_karthin
 	}
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_karthin_legions"
 		add_ideas = MDL_karthin_legions_idea
@@ -7989,6 +8291,7 @@ shared_focus = {
 		MCW = { is_subject_of = ROOT }
 	}
 	prerequisite = { focus = MDL_i_see_maar_fall_like_lightning }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_integrate_macawia"
 		MCW = { add_ideas = MDL_MCW_carrier }
@@ -8004,6 +8307,7 @@ shared_focus = {
 	relative_position_id = MDL_integrate_macawia
 	cost = 10
 	prerequisite = { focus = MDL_integrate_macawia }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_imperial_trade_network"
 		add_ideas = MDL_southern_griffonian_imperial_company
@@ -8022,6 +8326,7 @@ shared_focus = {
 		NCH = { is_subject_of = ROOT }
 	}
 	prerequisite = { focus = MDL_i_see_maar_fall_like_lightning }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_integrate_greneclyf"
 		add_tech_bonus = {
@@ -8043,6 +8348,7 @@ shared_focus = {
 	relative_position_id = MDL_integrate_greneclyf
 	cost = 10
 	prerequisite = { focus = MDL_integrate_greneclyf }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_native_affairs"
 		custom_effect_tooltip = MDL_native_affairs_tt
@@ -8069,6 +8375,7 @@ shared_focus = {
 	}
 	relative_position_id = MDL_i_see_maar_fall_like_lightning
 	prerequisite = { focus = MDL_i_see_maar_fall_like_lightning }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_integrate_new_mareland"
 		add_ideas = MDL_imperial_parliament_1
@@ -8087,6 +8394,7 @@ shared_focus = {
 	}
 	relative_position_id = MDL_integrate_new_mareland
 	prerequisite = { focus = MDL_integrate_new_mareland }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_integrate_aquileia"
 		swap_ideas = {
@@ -8108,6 +8416,7 @@ shared_focus = {
 	}
 	relative_position_id = MDL_integrate_new_mareland
 	prerequisite = { focus = MDL_integrate_new_mareland }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_integrate_empire"
 		country_event = manedalusia.113
@@ -8127,6 +8436,7 @@ shared_focus = {
 	relative_position_id = MDL_integrate_aquileia
 	prerequisite = { focus = MDL_integrate_empire }
 	prerequisite = { focus = MDL_integrate_aquileia }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_integrate_north"
 		swap_ideas = {
@@ -8148,6 +8458,7 @@ shared_focus = {
 		MIT = { is_subject_of = ROOT }
 	}
 	cost = 10
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_integrate_asterion"
 		add_ideas = MDL_imperial_soul_1
@@ -8166,6 +8477,7 @@ shared_focus = {
 	}
 	relative_position_id = MDL_integrate_asterion
 	prerequisite = { focus = MDL_integrate_asterion }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_integrate_southeast"
 		swap_ideas = {
@@ -8187,6 +8499,7 @@ shared_focus = {
 	}
 	relative_position_id = MDL_integrate_asterion
 	prerequisite = { focus = MDL_integrate_asterion }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_integrate_riverpones"
 		add_stability = 0.10
@@ -8207,6 +8520,7 @@ shared_focus = {
 	relative_position_id = MDL_integrate_riverpones
 	prerequisite = { focus = MDL_integrate_riverpones }
 	prerequisite = { focus = MDL_integrate_southeast }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_integrate_riverpones"
 		swap_ideas = {
@@ -8232,6 +8546,7 @@ shared_focus = {
 	prerequisite = { focus = MDL_karthin_legions }
 	prerequisite = { focus = MDL_imperial_trade_network }
 	prerequisite = { focus = MDL_integrate_hillpones }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_pax_in_excelsior"
 		country_event = manedalusia.114
@@ -8249,6 +8564,7 @@ shared_focus = {
 	allow_branch = {
 		if = { has_country_flag = MDL_US_start }
 	}
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_US_start_1_1"
 		MDL_assign_general_staff_init = yes
@@ -8263,6 +8579,7 @@ shared_focus = {
 	cost = 2
 	relative_position_id = MDL_US_start_1_1
 	prerequisite = { focus = MDL_US_start_1_1 }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_US_start_2_1"
 		add_equipment_to_stockpile = { type = infantry_equipment amount = 750 producer = ABY }
@@ -8278,6 +8595,7 @@ shared_focus = {
 	relative_position_id = MDL_US_start_1_1
 	prerequisite = { focus = MDL_US_start_1_1 }
 	mutually_exclusive = { focus = MDL_US_start_2_3 }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_US_start_2_2"
 		add_timed_idea = {
@@ -8296,6 +8614,7 @@ shared_focus = {
 	relative_position_id = MDL_US_start_1_1
 	prerequisite = { focus = MDL_US_start_1_1 }
 	mutually_exclusive = { focus = MDL_US_start_2_2 }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_US_start_2_3"
 		add_timed_idea = {
@@ -8316,6 +8635,7 @@ shared_focus = {
 		741 = { is_controlled_by = ROOT }
 	}
 	prerequisite = { focus = MDL_US_start_1_1 }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_US_start_2_4"
 		741 = {
@@ -8345,6 +8665,7 @@ shared_focus = {
 		771 = { is_controlled_by = ROOT }
 	}
 	prerequisite = { focus = MDL_US_start_2_1 }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_US_start_2_2"
 		add_stability = 0.10
@@ -8363,6 +8684,7 @@ shared_focus = {
 		focus = MDL_US_start_2_2
 		focus = MDL_US_start_2_3
 	}
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_US_start_3_2"
 		add_manpower = 7500
@@ -8378,6 +8700,7 @@ shared_focus = {
 	cost = 2
 	relative_position_id = MDL_US_start_2_4
 	prerequisite = { focus = MDL_US_start_2_4 }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_US_start_3_3"
 		add_political_power = 100
@@ -8399,6 +8722,7 @@ shared_focus = {
 	prerequisite = { focus = MDL_US_start_3_1 }
 	prerequisite = { focus = MDL_US_start_3_2 }
 	prerequisite = { focus = MDL_US_start_3_3 }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_US_start_4_1"
 		custom_effect_tooltip = MDL_WIP_tt
@@ -8413,6 +8737,7 @@ shared_focus = {
 	x = 15
 	y = 0
 	cost = 6
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_charting_new_course"
 		country_event = manedalusia.147
@@ -8449,6 +8774,7 @@ shared_focus = {
 	relative_position_id = MDL_charting_new_course
 	available = { has_government = neutrality }
 	prerequisite = { focus = MDL_charting_new_course }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_restore_the_asabiyyah"
 		hidden_effect = { set_country_flag = MDL_asabiyyah_unlocked }
@@ -8465,6 +8791,7 @@ shared_focus = {
 	relative_position_id = MDL_charting_new_course
 	prerequisite = { focus = MDL_charting_new_course }
 	available = { has_government = neutrality }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_get_the_spymasters"
 		country_event = manedalusia.148
@@ -8490,6 +8817,7 @@ shared_focus = {
 	available = { has_government = fascism }
 	relative_position_id = MDL_charting_new_course
 	prerequisite = { focus = MDL_charting_new_course }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM01"
 		add_manpower = 25000
@@ -8505,6 +8833,7 @@ shared_focus = {
 	cost = 6
 	relative_position_id = MDL_charting_new_course
 	prerequisite = { focus = MDL_charting_new_course }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM02"
 		MDL_iron_muhtal = {
@@ -8548,6 +8877,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = MDL_charting_new_course
 	prerequisite = { focus = MDL_charting_new_course }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM03"
 		add_dynamic_modifier = { modifier = MDL_manedalusian_navy_modifier }
@@ -8574,6 +8904,7 @@ shared_focus = {
 	}
 	relative_position_id = MDL_SAM02
 	prerequisite = { focus = MDL_SAM02 }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM04"
 		add_ideas = MDL_magical_reloading
@@ -8591,6 +8922,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = MDL_SAM02
 	prerequisite = { focus = MDL_SAM02 }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		if = {
 			limit = { has_completed_focus = MDL_SAM04 }
@@ -8622,6 +8954,7 @@ shared_focus = {
 	available = { has_government = fascism }
 	relative_position_id = MDL_SAM01
 	prerequisite = { focus = MDL_SAM01 }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM06"
 		741 = {
@@ -8654,6 +8987,7 @@ shared_focus = {
 	relative_position_id = MDL_SAM01
 	available = { has_government = neutrality }
 	prerequisite = { focus = MDL_SAM01 }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM07"
 		add_stability = 0.10
@@ -8688,6 +9022,7 @@ shared_focus = {
 	}
 	relative_position_id = MDL_restore_the_asabiyyah
 	prerequisite = { focus = MDL_restore_the_asabiyyah }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM08"
 		add_stability = 0.05
@@ -8709,6 +9044,7 @@ shared_focus = {
 		740 = { is_owned_and_controlled_by = ROOT }
 		738 = { is_owned_and_controlled_by = ROOT }
 	}
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM09"
 		build_railway = {
@@ -8757,6 +9093,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = MDL_SAM03
 	prerequisite = { focus = MDL_SAM03 }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM10"
 		custom_effect_tooltip = { IDEA = MDL_asabiyyah_modifier localization_key = modify_idea_tt }
@@ -8780,6 +9117,7 @@ shared_focus = {
 	relative_position_id = MDL_SAM03
 	available = { has_government = neutrality }
 	prerequisite = { focus = MDL_SAM03 }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM11"
 		add_tech_bonus = {
@@ -8807,6 +9145,7 @@ shared_focus = {
 		741 = { is_owned_and_controlled_by = ROOT }
 	}
 	prerequisite = { focus = MDL_get_the_spymasters }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM12"
 		741 = {
@@ -8841,6 +9180,7 @@ shared_focus = {
 	relative_position_id = MDL_get_the_spymasters
 	available = { has_government = neutrality }
 	prerequisite = { focus = MDL_get_the_spymasters }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM13"
 		country_event = manedalusia.74
@@ -8866,6 +9206,7 @@ shared_focus = {
 		has_government = neutrality
 		741 = { is_owned_and_controlled_by = ROOT }
 	}
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM14"
 		add_tech_bonus = {
@@ -8894,6 +9235,7 @@ shared_focus = {
 	available = { has_government = fascism }
 	relative_position_id = MDL_charting_new_course
 	prerequisite = { focus = MDL_charting_new_course }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM15"
 		add_ideas = MDL_national_census
@@ -8922,6 +9264,7 @@ shared_focus = {
 		has_government = fascism
 	}
 	prerequisite = { focus = MDL_charting_new_course }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM16"
 		add_research_slot = 1
@@ -8943,6 +9286,7 @@ shared_focus = {
 	relative_position_id = MDL_charting_new_course
 	prerequisite = { focus = MDL_charting_new_course }
 	available = { has_government = neutrality }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM17"
 		add_political_power = -10
@@ -8966,6 +9310,7 @@ shared_focus = {
 	}
 	prerequisite = { focus = MDL_SAM08 }
 	prerequisite = { focus = MDL_SAM09 }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM18"
 		custom_effect_tooltip = MDL_samira_stress_resolved_tt
@@ -8994,6 +9339,7 @@ shared_focus = {
 		775 = { is_owned_and_controlled_by = ROOT }
 		has_government = neutrality
 	}
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM19"
 		country_event = manedalusia.149
@@ -9014,6 +9360,7 @@ shared_focus = {
 	}
 	prerequisite = { focus = MDL_SAM04 }
 	prerequisite = { focus = MDL_SAM05 }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM20"
 		country_event = manedalusia.175
@@ -9041,6 +9388,7 @@ shared_focus = {
 	prerequisite = { focus = MDL_SAM06 }
 	prerequisite = { focus = MDL_SAM07 }
 	will_lead_to_war_with = MGY
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM21"
 		if = {
@@ -9076,6 +9424,7 @@ shared_focus = {
 		}
 	}
 	will_lead_to_war_with = ABY
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM22"
 		if = {
@@ -9101,6 +9450,7 @@ shared_focus = {
 		YMN = { exists = no }
 	}
 	prerequisite = { focus = MDL_SAM19 }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM23"
 		if = {
@@ -9128,6 +9478,7 @@ shared_focus = {
 	}
 	relative_position_id = MDL_SAM19
 	prerequisite = { focus = MDL_SAM19 }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM24"
 		if = {
@@ -9162,6 +9513,7 @@ shared_focus = {
 		focus = MDL_SAM23
 		focus = MDL_SAM23
 	}
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM25"
 		add_ideas = MDL_koltaliba_commissars_idea
@@ -9179,6 +9531,7 @@ shared_focus = {
 		focus = MDL_SAM23
 		focus = MDL_SAM24
 	}
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM26"
 		add_ideas = MDL_magical_engines
@@ -9205,6 +9558,7 @@ shared_focus = {
 		766 = { is_owned_and_controlled_by = ROOT }
 	}
 	prerequisite = { focus = MDL_SAM20 }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM27"
 		custom_effect_tooltip = MDL_annex_ovingoland_tt
@@ -9229,6 +9583,7 @@ shared_focus = {
 	}
 	relative_position_id = MDL_SAM20
 	prerequisite = { focus = MDL_SAM20 }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM28"
 		add_doctrine_cost_reduction = {
@@ -9263,6 +9618,7 @@ shared_focus = {
 		focus = MDL_SAM27
 		focus = MDL_SAM28
 	}
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM29"
 		if = {
@@ -9284,6 +9640,7 @@ shared_focus = {
 		focus = MDL_SAM27
 		focus = MDL_SAM28
 	}
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM30"
 		add_tech_bonus = {
@@ -9303,6 +9660,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = MDL_SAM26
 	prerequisite = { focus = MDL_SAM26 }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM31"
 		add_ideas = MDL_streamlined_tank_production
@@ -9334,6 +9692,7 @@ shared_focus = {
 		focus = MDL_SAM25
 		focus = MDL_SAM26
 	}
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM32"
 		if = {
@@ -9373,6 +9732,7 @@ shared_focus = {
 		790 = { is_owned_and_controlled_by = ROOT }
 	}
 	prerequisite = { focus = MDL_SAM25 }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM33"
 		add_tech_bonus = {
@@ -9407,6 +9767,7 @@ shared_focus = {
 	available = { has_completed_focus = MDL_SAM32 }
 	relative_position_id = MDL_SAM29
 	prerequisite = { focus = MDL_SAM29 }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM34"
 		decrease_illiteracy = yes
@@ -9425,6 +9786,7 @@ shared_focus = {
 		focus = MDL_SAM29
 		focus = MDL_SAM30
 	}
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM35"
 		set_cosmetic_tag = MDL_grand_sultanate
@@ -9443,6 +9805,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = MDL_SAM30
 	prerequisite = { focus = MDL_SAM30 }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM36"
 		add_tech_bonus = {
@@ -9472,6 +9835,7 @@ shared_focus = {
 		focus = MDL_SAM31
 		focus = MDL_SAM32
 	}
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM37"
 		add_ideas = MDL_manedalusian_industrious_pride
@@ -9489,6 +9853,7 @@ shared_focus = {
 		focus = MDL_SAM32
 		focus = MDL_SAM33
 	}
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM38"
 		increase_society_development = yes
@@ -9506,6 +9871,7 @@ shared_focus = {
 		focus = MDL_SAM34
 		focus = MDL_SAM35
 	}
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM39"
 		add_research_slot = 1
@@ -9525,6 +9891,7 @@ shared_focus = {
 		focus = MDL_SAM36
 	}
 	available = { has_completed_focus = MDL_SAM03 }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM40"
 		custom_effect_tooltip = MDL_modify_navy_mod_xp_doctrine_cost_tt
@@ -9541,6 +9908,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = MDL_SAM33
 	prerequisite = { focus = MDL_SAM33 }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM41"
 		MDL_fortify_arabian_border = yes
@@ -9567,6 +9935,7 @@ shared_focus = {
 		}
 	}
 	will_lead_to_war_with = BAT
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM42"
 		create_wargoal = {
@@ -9587,6 +9956,7 @@ shared_focus = {
 	available = {
 		has_government = neutrality
 	}
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM43"
 		custom_effect_tooltip = MDL_zahid_power_mission_nullified_tt
@@ -9613,6 +9983,7 @@ shared_focus = {
 	}
 	bypass = { MDL_wingbardy_in_zebrica = no }
 	will_lead_to_war_with = WNG
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM44"
 		MDL_wingbardy_colonial_war_init = yes
@@ -9627,6 +9998,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = MDL_SAM37
 	prerequisite = { focus = MDL_SAM37 }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM45"
 		if = {
@@ -9645,6 +10017,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = MDL_SAM37
 	prerequisite = { focus = MDL_SAM37 }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM46"
 		custom_effect_tooltip = MDL_modify_navy_mod_grand_zoco_tt
@@ -9675,6 +10048,7 @@ shared_focus = {
 	bypass = {
 		868 = { is_owned_and_controlled_by = ROOT }
 	}
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM47"
 		868 = {
@@ -9699,6 +10073,7 @@ shared_focus = {
 	will_lead_to_war_with = SDL
 	will_lead_to_war_with = SDC
 	will_lead_to_war_with = EMR
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM48"
 		MDL_invade_arabia = yes
@@ -9716,6 +10091,7 @@ shared_focus = {
 	available = {
 		712 = { is_owned_and_controlled_by = ROOT }
 	}
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM51"
 		add_political_power = 100
@@ -9748,6 +10124,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = MDL_SAM42
 	prerequisite = { focus = MDL_SAM42 }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM52"
 		if = {
@@ -9770,6 +10147,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = MDL_SAM40
 	prerequisite = { focus = MDL_SAM40 }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM53"
 		add_ideas = MDL_naval_academy_idea
@@ -9784,6 +10162,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = MDL_SAM40
 	prerequisite = { focus = MDL_SAM40 }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM54"
 		custom_effect_tooltip = MDL_modify_navy_mod_depots_tt
@@ -9806,6 +10185,7 @@ shared_focus = {
 	}
 	prerequisite = { focus = MDL_SAM07 }
 	prerequisite = { focus = MDL_SAM18 }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM55"
 		increase_society_development = yes
@@ -9830,6 +10210,7 @@ shared_focus = {
 	relative_position_id = MDL_SAM12
 	prerequisite = { focus = MDL_SAM18 }
 	prerequisite = { focus = MDL_SAM12 }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM56"
 		add_research_slot = 1
@@ -9858,6 +10239,7 @@ shared_focus = {
 	}
 	prerequisite = { focus = MDL_SAM55 }
 	prerequisite = { focus = MDL_SAM56 }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM57"
 		custom_effect_tooltip = MDL_SAM57_tt
@@ -9875,6 +10257,7 @@ shared_focus = {
 	allow_branch={
 		if = { has_country_flag = MDL_samira_no_hope }
 	}
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM58"
 		country_event = manedalusia.160
@@ -9891,6 +10274,7 @@ shared_focus = {
 	allow_branch={
 		if = { has_country_flag = MDL_samira_medium_hope }
 	}
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM59"
 		add_ideas = MDL_place_in_the_sun_idea
@@ -9907,6 +10291,7 @@ shared_focus = {
 	allow_branch = {
 		if = { has_country_flag = MDL_samira_high_hope }
 	}
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM60"
 		country_event = manedalusia.163
@@ -9922,6 +10307,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = MDL_SAM58
 	prerequisite = { focus = MDL_SAM58 }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM61"
 		add_political_power = 50
@@ -9937,6 +10323,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = MDL_SAM58
 	prerequisite = { focus = MDL_SAM58 }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM62"
 		if = {
@@ -9967,6 +10354,7 @@ shared_focus = {
 	relative_position_id = MDL_SAM58
 	prerequisite = { focus = MDL_SAM61 }
 	prerequisite = { focus = MDL_SAM62 }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM63"
 		country_event = manedalusia.161
@@ -9981,6 +10369,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = MDL_SAM59
 	prerequisite = { focus = MDL_SAM59 }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM64"
 		add_political_power = 100
@@ -10002,6 +10391,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = MDL_SAM59
 	prerequisite = { focus = MDL_SAM59 }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM65"
 		add_war_support = 0.10
@@ -10032,6 +10422,7 @@ shared_focus = {
 	relative_position_id = MDL_SAM59
 	prerequisite = { focus = MDL_SAM64 }
 	prerequisite = { focus = MDL_SAM65 }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM66"
 		country_event = manedalusia.162
@@ -10046,6 +10437,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = MDL_SAM60
 	prerequisite = { focus = MDL_SAM60 }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM67"
 		army_experience = 50
@@ -10083,6 +10475,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = MDL_SAM60
 	prerequisite = { focus = MDL_SAM60 }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM68"
 		add_political_power = 150
@@ -10112,6 +10505,7 @@ shared_focus = {
 	relative_position_id = MDL_SAM60
 	prerequisite = { focus = MDL_SAM67 }
 	prerequisite = { focus = MDL_SAM68 }
+	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_SAM69"
 		country_event = manedalusia.165
