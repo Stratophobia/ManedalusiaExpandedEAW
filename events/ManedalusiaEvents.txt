@@ -167,7 +167,7 @@ country_event = {#The Council Gathers
 	}
 }
 
-country_event = {#The Madgriff in the Harbor
+country_event = {#
 	id = manedalusia.3
 	title = manedalusia.3.t
 	desc = manedalusia.3.d
@@ -175,50 +175,10 @@ country_event = {#The Madgriff in the Harbor
 
 	option = {
 		name = manedalusia.3.a
-		ai_chance = {
-			base = 95
-			modifier = {
-				factor = 0
-				OR = {
-					has_country_flag = MDL_AI_SAMIRA
-					has_country_flag = MDL_AI_ULTRAMAR
-					has_game_rule = {
-						rule = MDL_ai_behavior
-						option = MDL_ULTRAMAR
-					}
-					has_game_rule = {
-						rule = MDL_ai_behavior
-						option = MDL_SAMIRA
-					}
-				}
-			}
-		}
 		add_political_power = -50
 		hidden_effect = {
 			country_event = { id = manedalusia.4 }
 		}
-	}
-	option = {
-		name = manedalusia.3.b
-		ai_chance = {
-			base = 5
-			modifier = {
-				OR = {
-					has_country_flag = MDL_AI_SAMIRA
-					has_country_flag = MDL_AI_ULTRAMAR
-					has_game_rule = {
-						rule = MDL_ai_behavior
-						option = MDL_ULTRAMAR
-					}
-					has_game_rule = {
-						rule = MDL_ai_behavior
-						option = MDL_SAMIRA
-					}
-				}
-				add = 95
-			}
-		}
-		hidden_effect = { country_event = manedalusia.90 }
 	}
 }
 
@@ -232,37 +192,9 @@ country_event = {#Grifo's Fleet is Ambushed
 		name = manedalusia.4.a
 		add_manpower = -40
 		retire_character = MDL_fernao_grifo
-		hidden_effect = {
-			retire_character = MDL_rosa_branca
-			retire_character = MDL_alexandre_de_aguilar
-			retire_character = MDL_antonio_aviario
-		}
 		custom_effect_tooltip = MDL_grifo_fleet_taken_tt
-		set_party_name = {
-			ideology = fascism
-			long_name = MDL_SAYF_PARTY_1_LONG
-			name = MDL_SAYF_PARTY_1
-		}
-		hidden_effect = {
-			if = {
-				limit = { NOT = { has_dlc = "Man the Guns" } }
-				load_oob = "MDL_grifo_fleet_legacy"
-			}
-			if = {
-				limit = { has_dlc = "Man the Guns" }
-				load_oob = "MDL_grifo_fleet"
-			}
-			add_country_leader_role = {
-				character = MDL_crimson_sayf
-				country_leader = {
-					desc = MDL_crimson_sayf_desc
-					expire = "1965.1.1"
-					ideology = stratocracy
-				}
-				promote_leader = yes
-			}
-		}
 		add_popularity = { ideology = fascism popularity = 0.10 }
+		hidden_effect = { load_oob = "MDL_grifo_fleet" }
 	}
 }
 

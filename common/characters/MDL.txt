@@ -72,13 +72,6 @@ characters = {
 			}
 		}
 		gender=male
-		country_leader={
-			desc=MDL_fernao_grifo_desc
-			ideology=esotericism
-			expire="1965.1.1.1"
-			id=-1
-		}
-		gender=male
 	}
 	MDL_armil_khaldun={
 		name=MDL_armil_khaldun
@@ -105,6 +98,11 @@ characters = {
 			}
 		}
 		gender=male
+		country_leader={
+			desc = MDL_crimson_sayf_desc
+			expire = "1965.1.1"
+			ideology = stratocracy
+		}
 	}
 	MDL_canterto_maneossa = {
 		name=MDL_canterto_maneossa
