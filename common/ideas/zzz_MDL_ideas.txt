@@ -474,18 +474,6 @@ ideas = {
 			picture = RIZ_council_adaptation
 			modifier = { research_speed_factor = -0.10 }
 		}
-		MDL_looting_abyssinia = {
-			picture = generic_purge
-			modifier = { supply_consumption_factor = -0.50 }
-		}
-		MDL_abyssinian_genocide = {
-			picture = generic_purge
-			modifier = {
-				stability_factor = -0.15
-				non_core_manpower = -3.0
-				fascism_drift = 0.03
-			}
-		}
 ###SENATE IDEAS###
 		MDL_federal_assembly_1 = {
 			picture = MDL_federal_assembly
