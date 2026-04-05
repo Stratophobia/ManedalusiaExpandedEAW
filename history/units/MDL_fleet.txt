@@ -1,0 +1,13 @@
+units = {
+	fleet = {
+		name = "Al-Bahriyyah Al-Manedalusiyyah"
+		naval_base = 12234
+		task_force = {
+			name = "Al-Bahriyyah Al-Manedalusiyyah"
+			location = 12234
+			ship = { name = "Al-Wallid" pride_of_the_fleet = yes definition = battleship equipment = { ship_hull_heavy_1 = { amount = 1 owner = FEA version_name = "Arcturius Class" } } }
+			ship = { name = "Hurriyyah" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = FEA version_name = "Romau Class"} } }
+			ship = { name = "Al-Qadar" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = FEA version_name = "Romau Class"} } }
+		}
+	}
+}

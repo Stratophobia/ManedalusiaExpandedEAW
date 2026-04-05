@@ -182,7 +182,7 @@ country_event = {#
 	}
 }
 
-country_event = {#Grifo's Fleet is Ambushed
+country_event = {#Fleet is gained
 	id = manedalusia.4
 	title = manedalusia.4.t
 	desc = manedalusia.4.d
@@ -190,11 +190,9 @@ country_event = {#Grifo's Fleet is Ambushed
 
 	option = {
 		name = manedalusia.4.a
-		add_manpower = -40
-		retire_character = MDL_fernao_grifo
-		custom_effect_tooltip = MDL_grifo_fleet_taken_tt
+		custom_effect_tooltip = MDL_fleet_gained_tt
 		add_popularity = { ideology = fascism popularity = 0.10 }
-		hidden_effect = { load_oob = "MDL_grifo_fleet" }
+		hidden_effect = { load_oob = "MDL_fleet" }
 	}
 }
 
@@ -1655,18 +1653,6 @@ country_event = {#the gang escapes
 					long_name = MDL_SAYF_PARTY_1_LONG
 					name = MDL_SAYF_PARTY_1
 				}
-				retire_character = MDL_fernao_grifo
-				retire_character = MDL_rosa_branca
-				retire_character = MDL_alexandre_de_aguilar
-				add_country_leader_role = {
-					character = MDL_crimson_sayf
-					country_leader = {
-						desc = MDL_crimson_sayf_desc
-						expire = "1965.1.1"
-						ideology = stratocracy
-					}
-					promote_leader = yes
-				}
 				set_country_flag = MDL_US_start
 				load_focus_tree = {
 					tree = manedalusia_US_start
@@ -1689,7 +1675,7 @@ country_event = {#sayf leaves - senate path
 			character = MDL_almanezor
 			country_leader = {
 				expire = "1965.1.1"
-				ideology = stratocracy
+				ideology = rexism
 			}
 			promote_leader = yes
 		}

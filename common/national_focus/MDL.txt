@@ -98,7 +98,7 @@ shared_focus = {
 }
 
 shared_focus = {
-	id = MDL_deal_with_the_madgriff
+	id = MDL_a_strange_benefactor
 	icon = GFX_focus_MDL_madgriff_in_the_harbor
 	x = 0
 	y = 2
@@ -108,7 +108,7 @@ shared_focus = {
 	prerequisite = { focus = MDL_general_staff }
 	ai_will_do = { base = 40 }
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus MDL_deal_with_the_madgriff"
+		log = "[GetDateText]: [Root.GetName]: Focus MDL_a_strange_benefactor"
 		country_event = manedalusia.3
 	}
 	search_filters = { FOCUS_FILTER_POLITICAL }
@@ -119,9 +119,9 @@ shared_focus = {
 	icon = GFX_focus_MDL_lean_on_legacy
 	x = 0
 	y = 1
-	relative_position_id = MDL_deal_with_the_madgriff
+	relative_position_id = MDL_a_strange_benefactor
 	cost = 1
-	prerequisite = { focus = MDL_deal_with_the_madgriff }
+	prerequisite = { focus = MDL_a_strange_benefactor }
 	mutually_exclusive = { focus = MDL_try_for_harmony focus = MDL_try_for_socialism }
 	allow_branch={
 		NOT = {
@@ -406,9 +406,9 @@ shared_focus = {
 		y = 0
 		trigger = { has_completed_focus = MDL_try_for_harmony }
 	}
-	relative_position_id = MDL_deal_with_the_madgriff
+	relative_position_id = MDL_a_strange_benefactor
 	cost = 1
-	prerequisite = { focus = MDL_deal_with_the_madgriff }
+	prerequisite = { focus = MDL_a_strange_benefactor }
 	mutually_exclusive = { focus = MDL_lean_on_legacy focus = MDL_try_for_socialism }
 	allow_branch={
 		NOT = {
@@ -540,9 +540,9 @@ shared_focus = {
 		y = 0
 		trigger = { has_completed_focus = MDL_try_for_socialism }
 	}
-	relative_position_id = MDL_deal_with_the_madgriff
+	relative_position_id = MDL_a_strange_benefactor
 	cost = 1
-	prerequisite = { focus = MDL_deal_with_the_madgriff }
+	prerequisite = { focus = MDL_a_strange_benefactor }
 	mutually_exclusive = { focus = MDL_lean_on_legacy focus = MDL_try_for_harmony }
 	allow_branch = {
 		NOT = {
