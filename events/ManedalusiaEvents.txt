@@ -156,7 +156,7 @@ country_event = {# The Manedalusia Coup
 	}
 
 	option = {#independent Manedalusia
-		name = manedalusia.1.c
+		name = manedalusia.1.b
 		custom_effect_tooltip = ABY_disable_bingus
 		set_variable = { ABY_noble_loyalties^15 = 0 }
 		ai_chance = {
@@ -173,7 +173,7 @@ country_event = {# The Manedalusia Coup
 	}
 
 	option = {#play as Manedalusia
-		name = manedalusia.1.dd
+		name = manedalusia.1.c
 		trigger = { is_ai = no }
 		custom_effect_tooltip = ABY_disable_bingus
 		set_variable = { ABY_noble_loyalties^15 = 0 }
