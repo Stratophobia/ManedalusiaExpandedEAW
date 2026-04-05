@@ -12,7 +12,6 @@ ideas = {
 			available = {
 				OR = {
 					has_completed_focus = MDL_bigger_cannons
-					has_completed_focus = MDL_SAM04
 				}
 			}
 			research_bonus = { artillery = 0.15 }
@@ -31,31 +30,10 @@ ideas = {
 				NOT = { has_country_flag = MDL_grifo_takeover }
 			}
 			traits = { infantry_equipment_manufacturer }
-			available = {
-				OR = {
-					has_completed_focus = MDL_go_with_samira
-					has_completed_focus = MDL_charting_new_course
-				}
-			}
 			equipment_bonus = {
 				infantry_equipment = {
 					breakthrough = 0.05
 					soft_attack = 0.05
-					instant = yes
-				}
-			}
-		}
-		MDL_imperial_arms = {
-			picture = MDL_imperial_arms
-			allowed = { original_tag = MDL }
-			visible = { has_country_flag = MDL_grifo_takeover }
-			available = { has_completed_focus = MDL_colonial_arms_production }
-			research_bonus = { infantry_weapons = 0.1 }
-			traits = { infantry_equipment_manufacturer }
-			equipment_bonus = {
-				infantry_equipment = {
-					soft_attack = 0.05
-					build_cost_ic = -0.05
 					instant = yes
 				}
 			}
@@ -92,7 +70,6 @@ ideas = {
 			available = {
 				OR = {
 					has_completed_focus = MDL_sweet_ass_rides
-					has_completed_focus = MDL_SAM26
 				}
 			}
 			equipment_bonus = {
@@ -107,66 +84,12 @@ ideas = {
 	industrial_concern = {
 		designer = yes
 
-		MDL_imperial_railway = {
-			picture = MDL_imperial_railway
-
-			allowed = { original_tag = MDL }
-			visible = { has_country_flag = MDL_grifo_takeover }
-			research_bonus = {
-				industry = 0.08
-				train_tech = 0.1
-			}
-			traits = { railway_company }
-		}
-
-		MDL_imperial_construction = {
-			name=MDL_imperial_construction
-			picture = MDL_imperial_construction
-			allowed = { original_tag = MDL }
-			visible = { has_country_flag = MDL_grifo_takeover }
-			available = { has_completed_focus = MDL_colonial_industry }
-
-			research_bonus = {
-				industry = 0.20
-			}
-			traits = { industrial_concern }
-			modifier = {
-				production_speed_industrial_complex_factor = 0.1
-			}
-		}
-
-		MDL_imperial_agri = {
-			picture = MDL_imperial_agri
-			allowed = { original_tag = MDL }
-			visible = { has_country_flag = MDL_grifo_takeover }
-			available = { has_completed_focus = MDL_imperial_agriculture }
-
-			research_bonus = { industry = 0.20 }
-			traits = { agricultural_concern }
-			modifier = {
-				stability_factor = 0.05
-				political_power_gain = 0.05
-			}
-		}
-
-		MDL_imperial_electrics = {
-			picture = MDL_imperial_electrics
-			allowed = { original_tag = MDL }
-			visible = { has_country_flag = MDL_grifo_takeover }
-			available = { has_completed_focus = MDL_imperial_electronics }
-
-			research_bonus = { electronics = 0.25 }
-			modifier = { consumer_goods_factor = -0.10 }
-			traits = { electronics_concern }
-		}
-
 		MDL_industrial_concern_1 = {
 			picture = MDL_industrial_concern_1
 			allowed = { original_tag = MDL }
 			available = {
 				OR = {
 					has_completed_focus = MDL_industrial_union
-					has_completed_focus = MDL_SAM10
 				}
 			}
 			research_bonus = { industry = 0.15 }
@@ -183,7 +106,6 @@ ideas = {
 			available = {
 				OR = {
 					has_completed_focus = MDL_refining_contractor
-					has_completed_focus = MDL_SAM33
 				}
 			}
 				traits = { refinery_concern }
@@ -238,14 +160,6 @@ ideas = {
 				research_bonus = { air_equipment = 0.15 }
 				traits = { CAS_manufacturer }
 			}
-			MDL_imperial_planes = {
-				picture = MDL_imperial_planes
-				allowed = { original_tag = MDL }
-				visible = { has_country_flag = MDL_grifo_takeover }
-				available = { has_completed_focus = MDL_imperial_plane_tech }
-				research_bonus = { air_equipment = 0.15 }
-				traits = { light_aircraft_manufacturer }
-			}
 		}
 
 		tank_manufacturer = {
@@ -258,14 +172,6 @@ ideas = {
 				equipment_bonus = {
 					mechanized_equipment = { build_cost_ic = -0.15 }
 				}
-				research_bonus = { armor = 0.15 }
-				traits = { heavy_tank_manufacturer }
-			}
-			MDL_imperial_tanks = {
-				picture = MDL_imperial_tanks
-				allowed = { original_tag = MDL }
-				visible = { has_country_flag = MDL_grifo_takeover }
-				available = { has_completed_focus = MDL_imperial_armor }
 				research_bonus = { armor = 0.15 }
 				traits = { heavy_tank_manufacturer }
 			}
@@ -297,14 +203,6 @@ ideas = {
 					}
 				}
 			}
-			MDL_imperial_ships = {
-				picture = MDL_imperial_ships
-				allowed = { original_tag = MDL }
-				visible = { has_country_flag = MDL_grifo_takeover }
-				available = { has_completed_focus = MDL_imperial_shipyards }
-				research_bonus = { naval_equipment = 0.08 }
-				traits = { naval_manufacturer }
-			}
 		}
 
 ###MANEDALUSIAN IDEAS###
@@ -325,13 +223,6 @@ ideas = {
 				army_defence_factor = -0.75
 				army_morale_factor = -0.85
 				surrender_limit = -0.35
-			}
-		}
-		MDL_madgriff_in_the_harbor = {
-			picture = MDL_madgriff_in_the_harbor
-			modifier = {
-				stability_factor = -0.05
-				fascism_drift = 0.10
 			}
 		}
 		MDL_holy_zeal_idea = {
@@ -443,20 +334,6 @@ ideas = {
 					soft_attack = 0.05
 					instant = yes
 				}
-			}
-		}
-		MDL_moonstriker_vizier = {
-			picture = MDL_vizier_moonstriker
-			modifier = {
-				stability_factor = 0.05
-				research_speed_factor = 0.015
-			}
-		}
-		MDL_qadi_vizier = {
-			picture = MDL_vizier_qadi
-			modifier = {
-				stability_factor = 0.05
-				consumer_goods_factor = -0.05
 			}
 		}
 		MDL_KAR_shahdom = {
@@ -699,51 +576,6 @@ ideas = {
 				surrender_limit = -0.35
 			}
 		}
-		MDL_koltaliba_rule_1 = {
-			picture = MDL_koltaliba_rule
-			modifier = {
-				compliance_growth = 0.15
-				stability_factor = -0.05
-				war_support_factor = -0.05
-				special_forces_cap = 0.50
-				special_forces_attack_factor = 0.05
-				special_forces_defence_factor = 0.05
-				conscription_factor = -0.75
-			}
-		}
-		MDL_koltaliba_rule_2 = {
-			picture = MDL_koltaliba_rule
-			modifier = {
-				compliance_growth = 0.15
-				special_forces_cap = 0.75
-				special_forces_attack_factor = 0.1
-				special_forces_defence_factor = 0.1
-				conscription_factor = -0.50
-			}
-		}
-		MDL_koltaliba_rule_3 = {
-			picture = MDL_koltaliba_rule
-			modifier = {
-				compliance_growth = 0.15
-				special_forces_cap = 1.0
-				special_forces_attack_factor = 0.15
-				special_forces_defence_factor = 0.15
-				conscription_factor = -0.50
-				non_core_manpower = 0.02
-				political_power_gain = 0.05
-			}
-		}
-		MDL_koltaliba_rule_4 = {
-			picture = MDL_koltaliba_rule
-			modifier = {
-				compliance_growth = 0.15
-				special_forces_cap = 1.0
-				special_forces_attack_factor = 0.20
-				special_forces_defence_factor = 0.20
-				conscription_factor = -0.50
-				political_power_gain = 0.05
-			}
-		}
 ###HOLY WAR IDEAS###
 		MDL_sunmad_0 = {
 			picture = FRA_scw_intervention_republicans_focus
@@ -912,267 +744,6 @@ ideas = {
 			picture = generic_purge
 			modifier = {
 				army_core_defence_factor = 0.05
-			}
-		}
-###ULTRAMAR IDEAS###
-		MDL_ash_shuhud_resistance = {
-			picture = MDL_native_resistance
-			modifier = {
-				industrial_capacity_factory = -1
-				stability_factor = -0.2
-			}
-		}
-		MDL_colonial_troops_idea = {
-			picture = MEX_politicised_army
-			modifier = {
-				non_core_manpower = 0.04
-				weekly_manpower = 200
-				training_time_factor = -0.05
-			}
-		}
-		MDL_southern_griffonian_society = {
-			picture = generic_disjointed_gov
-			modifier = {
-				stability_factor = 0.05
-				fascism_drift = 0.02
-				research_speed_factor = 0.05			
-				drift_defence_factor = 0.25
-			}
-		}
-		MDL_colonial_arms_production_idea = {
-			picture = generic_license_production
-			equipment_bonus = {
-				infantry_equipment = { build_cost_ic = -0.20 instant = yes }
-			}
-		}
-		MDL_pony_synthesis_idea = {
-			picture = MDL_pony_synthesis
-			modifier = {
-				conscription = 0.02			
-				fascism_drift = 0.03
-			}
-		}
-		MDL_pony_imperials_idea = {
-			picture = MDL_place_in_the_sun_idea
-			modifier = {
-				political_power_factor = 0.05
-				stability_factor = 0.05
-				war_support_factor = 0.05
-			}
-		}
-		MDL_maxed_dominion = {
-			picture = MDL_dominion_of_ultramar
-			modifier = {
-				political_power_factor = 0.05
-				MONTHLY_POPULATION = 0.20
-				industrial_capacity_factory = 0.10
-				industrial_capacity_dockyard = 0.10
-			}
-		}
-		MDL_veteran_colonial_army = {
-			picture = generic_war_preparation
-			modifier = {
-				experience_loss_factor = -0.10
-				army_defence_factor = 0.05
-				army_speed_factor = 0.05
-			}
-		}
-		MDL_imperial_admiralty_idea = {
-			picture = MDL_grand_admiralty
-			modifier = {
-				experience_gain_navy = 0.05
-				naval_doctrine_cost_factor = -0.10
-			}
-		}
-		MDL_naval_projection_idea = {
-			picture = shipwaves
-			modifier = {
-				navy_max_range_factor = 0.15
-				max_fuel_factor = 0.15
-			}
-		}
-		MDL_imperial_parliament_1 = {
-			picture = triumphant_will
-			modifier = {
-				fascism_drift = 0.01
-				drift_defence_factor = 0.25
-			}
-		}
-		MDL_imperial_parliament_2 = {
-			picture = triumphant_will
-			modifier = {
-				fascism_drift = 0.01
-				drift_defence_factor = 0.25
-				political_power_factor = 0.05
-				stability_factor = 0.05
-				political_advisor_cost_factor = -0.10
-				trade_laws_cost_factor = -0.10
-				mobilization_laws_cost_factor = -0.10
-				economy_cost_factor = -0.10
-			}
-		}
-		MDL_imperial_parliament_3 = {
-			picture = triumphant_will
-			modifier = {
-				fascism_drift = 0.01
-				drift_defence_factor = 0.25
-				political_power_factor = 0.05
-				stability_factor = 0.05
-				political_advisor_cost_factor = -0.10
-				trade_laws_cost_factor = -0.10
-				mobilization_laws_cost_factor = -0.10
-				economy_cost_factor = -0.10
-				army_morale_factor = 0.05
-				army_org_factor = 0.05
-			}
-		}
-		MDL_imperial_soul_1 = {
-			picture = BRF_everyman_a_knight
-			modifier = {
-				army_defence_factor = 0.05
-				conscription_factor = 0.05
-			}
-		}
-		MDL_imperial_soul_2 = {
-			picture = BRF_everyman_a_knight
-			modifier = {
-				army_defence_factor = 0.05
-				army_morale_factor = 0.05
-				conscription_factor = 0.05
-			}
-		}
-		MDL_imperial_soul_3 = {
-			picture = BRF_everyman_a_knight
-			modifier = {
-				army_defence_factor = 0.05
-				army_morale_factor = 0.05
-				conscription_factor = 0.05
-				industrial_capacity_factory = 0.05
-				drift_defence_factor = 0.05
-			}
-		}
-		MDL_grand_imperial_navy = {
-			picture = generic_navy_bonus
-			modifier = {
-				refit_speed = 0.15
-				repair_speed_factor = 0.15
-				naval_coordination = 0.15
-				experience_gain_navy_factor = 0.10
-			}
-		}
-		MDL_karthin_legions_idea = {
-			picture = WNG_B_legion
-			modifier = {
-				army_attack_factor = 0.10
-				max_planning = 0.1
-				coordination_bonus = 0.05
-			}
-		}
-		MDL_imperial_pilots_idea = {
-			picture = strategic_bombing_focus
-			modifier = {
-				air_ace_generation_chance_factor = 0.25
-				ace_effectiveness_factor = 0.25
-				air_accidents_factor = -0.1
-			}
-		}
-		MDL_imperial_diplo_corps_idea = {
-			picture = YUG_federal_defense_council
-			modifier = {
-				trade_opinion_factor = 0.10
-				consumer_goods_factor = -0.05
-			}
-		}
-		MDL_imperial_autarky_idea = {
-			picture = gre_schachtplan
-			modifier = {
-				production_factory_max_efficiency_factor = 0.10
-				production_factory_efficiency_gain_factor = 0.10
-			}
-		}
-		MDL_spec_ops_idea = {
-			picture = MDL_spec_ops
-			modifier = {
-				special_forces_cap = 0.10
-				special_forces_attack_factor = 0.10
-				special_forces_defence_factor = 0.10
-			}
-		}
-		MDL_corporativism_idea = {
-			picture = generic_archonism_idea
-			modifier = {
-				production_speed_buildings_factor = 0.1
-				consumer_goods_factor = -0.1
-			}
-		}
-		MDL_imperial_logistical_corps = {
-			picture = general_staff
-			modifier = {
-				attrition = -0.05
-				supply_consumption_factor = -0.05
-				out_of_supply_factor = -0.10
-				no_supply_grace = 24
-			}
-		}
-		MDL_imperial_artillery_barrage = {
-			picture = MDL_nonstop_barrage
-			equipment_bonus = {
-				artillery_equipment = {
-					soft_attack = 0.15
-					hard_attack = 0.05
-					instant = yes
-				}
-			}
-		}
-		MDL_imperial_shipyards_idea = {
-			picture = MDL_coltoba_shipyards1
-			modifier = {
-				refit_speed = 0.20
-				repair_speed_factor = 0.25
-			}
-			equipment_bonus = {
-				ship_hull_light = {
-					build_cost_ic = -0.35
-					instant = yes
-				}
-				ship_hull_cruiser = {
-					build_cost_ic = -0.35
-					instant = yes
-				}
-				ship_hull_submarine = {
-					build_cost_ic = -0.35
-					instant = yes
-				}
-			}
-		}
-		MDL_shadowweavers = {
-			picture = CHN_political_divisions
-			modifier = {
-				crypto_strength = 1
-				encryption_factor = 0.15
-			}
-		}
-		MDL_native_affairs_idea = {
-			picture = generic_constitutional_guarantee
-			modifier = {
-				stability_factor = 0.15
-				autonomy_gain = -1
-			}
-		}
-		MDL_MCW_carrier = {
-			picture = shipwaves
-			modifier = {
-				industrial_capacity_dockyard = 0.15
-				navy_max_range_factor = 0.10
-				max_fuel_factor = 0.05
-			}
-		}
-		MDL_southern_griffonian_imperial_company = {
-			picture = can_wartime_prices_and_trade_board
-			modifier = {
-				trade_opinion_factor = 0.10
-				research_speed_factor = 0.05
-				production_factory_efficiency_gain_factor = 0.10
 			}
 		}
 ###EQUIPMENT BONUS IDEAS###

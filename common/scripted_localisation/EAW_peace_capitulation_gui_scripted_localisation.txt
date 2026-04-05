@@ -2626,22 +2626,10 @@ defined_text = {
 		trigger = {
 			var:losing_country^peace_gui_index = {
 				original_tag = MDL
-				NOT = {
-					has_country_flag = MDL_grifo_takeover
-					has_country_flag = MDL_holy_war_active
-				}
+				NOT = { has_country_flag = MDL_holy_war_active }
 			}
 		}
 		localization_key = EaW_PeaceCap_Desc_MDL
-	}
-	text = {
-		trigger = {
-			var:losing_country^peace_gui_index = {
-				original_tag = MDL
-				has_country_flag = MDL_grifo_takeover
-			}
-		}
-		localization_key = GetTNOReference_MDL_Grifo
 	}
 	text = {
 		trigger = {

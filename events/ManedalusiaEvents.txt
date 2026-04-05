@@ -1,36 +1,3 @@
-#SAMIRA HOPE EVENTS - DOCUMENTATION
-#
-#LIGHT SHINING IN DARKNESS:(1 Hope)
-#Freebie. Comes in chain on "Charting The New Course" focus.
-#
-#ZAHID DUEL CHAIN: (1 Hope)
-#In "Reform the Order" focus.
-#Required:
-#  - Mehmet fight level 1
-#
-#SAMIRA DUELS: (3 Hope in total)
-#On Chargers 3 and 6 of "Improve Koltaliba methods of warfare". Require level 2 and 3 fight level respectively.
-#
-#Spymaster Zahid (1 Hope):
-#"Masters of the Shadows" focus.
-#
-#ABYSSINIAN NOBLES (1 Hope):
-#"Deal With Abyssinian Nobility" focus.
-#
-#MEHMET BECOMES A TRUE LEADER (1 Hope):
-#"Unify the Railway System" focus, AFTER taking "A Truly Modern State"
-#
-#ON THE BREVITY OF LIFE (1 Hope):
-#Pick option "It is not that life is short. Rather, much of it is wasted."
-#
-#JEFFERSON REFERENCE (1 Hope)
-#Take "The Golden Coast" focus with at least hope level 8 and the best ending not locked (no tick of either "The Grandmistress' Burden" or "The Lingering Shadow")
-#
-#  MEHMET FIGHT LEVEL
-#  1: Freebie. "Assemble The Warrior Hosts"
-#  2: "New Methods of Warfare". Must be picked AFTER "Collaborate with Al-Neighzari"
-#  3: "Only The Toughest Among Us". Must be picked AFTER "A New Sun In West Zebrica".
-
 add_namespace = manedalusia
 add_namespace = manedalusia_news
 
@@ -264,7 +231,6 @@ country_event = {#Grifo's Fleet is Ambushed
 	option = {
 		name = manedalusia.4.a
 		add_manpower = -40
-		remove_ideas = MDL_madgriff_in_the_harbor
 		retire_character = MDL_fernao_grifo
 		hidden_effect = {
 			retire_character = MDL_rosa_branca
@@ -1219,18 +1185,44 @@ country_event = {#Sayf chooses a grand vizier
 
 	option = {#qadi
 		name = manedalusia.42.a
-		add_ideas = MDL_qadi_vizier
+		set_country_flag = MDL_has_grand_vizier
 		add_power_balance_value = {
 			id = MDL_theological_bop
 			value = -0.10
 		}
+		hidden_effect = {
+			remove_advisor_role = {
+				character = MDL_qadi_of_coltoba
+				slot = political_advisor
+			}
+		}
+		add_advisor_role = {
+			character = MDL_qadi_of_coltoba
+			activate = yes
+			advisor = {
+				slot = political_advisor
+				cost = 50
+				idea_token = MDL_qadi_of_coltoba
+				traits = { MDL_grand_vizier_trait }
+			}
+		}
 	}
 	option = {#moonstriker
 		name = manedalusia.42.b
-		add_ideas = MDL_moonstriker_vizier
+		set_country_flag = MDL_has_grand_vizier
 		add_power_balance_value = {
 			id = MDL_theological_bop
 			value = 0.15
+		}
+		add_advisor_role = {
+			character = MDL_moonstriker_laylah
+			activate = yes
+			advisor = {
+				slot = political_advisor
+				cost = 50
+				idea_token = MDL_moonstriker_laylah
+				traits = { MDL_grand_vizier_trait }
+			}
 		}
 	}
 }
@@ -1744,7 +1736,6 @@ country_event = {#the gang escapes
 					promote_leader = yes
 				}
 				set_country_flag = MDL_US_start
-				remove_ideas = MDL_madgriff_in_the_harbor
 				load_focus_tree = {
 					tree = manedalusia_US_start
 				}
@@ -1896,7 +1887,7 @@ country_event = {#In Search Of Something
 	}
 }
 
-country_event = {#Sayf kills catrina
+country_event = {#FREE
 	id = manedalusia.73
 	title = manedalusia.73.t
 	desc = manedalusia.73.d
@@ -1904,11 +1895,10 @@ country_event = {#Sayf kills catrina
 
 	option = {
 		name = manedalusia.73.a
-		ABY = { retire_character = ABY_catrina_catwe }
 	}
 }
 
-country_event = {#mehmet fight level-up 1
+country_event = {#FREE
 	id = manedalusia.74
 	title = manedalusia.74.t
 	desc = manedalusia.74.d
@@ -1916,7 +1906,6 @@ country_event = {#mehmet fight level-up 1
 
 	option = {
 		name = manedalusia.74.a
-		MDL_level_up_mehmet_fight_level = yes
 	}
 }
 
@@ -2162,7 +2151,7 @@ country_event = {#koltaliba restore order
 	}
 }
 
-country_event = {#laylah meets the mufti
+country_event = {#laylah meets the muftia
 	id = manedalusia.85
 	title = manedalusia.85.t
 	desc = manedalusia.85.d
@@ -2265,7 +2254,7 @@ country_event = {#ASH SHAHID WILLS IT
 	}
 }
 
-country_event = {#Grifo takes over
+country_event = {#FREE
 	id = manedalusia.90
 	title = manedalusia.90.t
 	desc = manedalusia.90.d
@@ -2273,40 +2262,6 @@ country_event = {#Grifo takes over
 
 	option = {
 		name = manedalusia.90.a
-		add_political_power = -300
-		clr_country_flag = trade_laws_blocked
-		retire_character = MDL_armil_khaldun
-		retire_character = MDL_crimson_sayf
-		retire_character = MDL_moonstriker_laylah
-		retire_character = MDL_almanezor
-		retire_character = MDL_clover_breeze
-
-		set_politics = { ruling_party = fascism }
-		remove_ideas = MDL_madgriff_in_the_harbor
-		swap_ideas = {
-			remove_idea = MDL_humbled_sultanate
-			add_idea = MDL_ash_shuhud_resistance
-		}
-		remove_power_balance = { id = MDL_theological_bop }
-		custom_effect_tooltip = MDL_batshit_insane_tree_loaded_tt
-		custom_effect_tooltip = MDL_grifo_tree_loaded_tt
-		hidden_effect = {
-			set_country_flag = MDL_grifo_takeover
-			set_country_flag = MDL_laylah_absent
-			MDL_grant_init_ship_templates = yes
-			load_oob = "MDL_grifo_fleet"
-		}
-		hidden_effect = {
-			clr_country_flag = MDL_asabiyyah_unlocked
-			set_party_name = {
-				ideology = neutrality
-				long_name = MDL_NA_VELVET_MIRAGE_LONG
-				name = MDL_NA_VELVET_MIRAGE
-			}
-			load_focus_tree = {
-				tree = manedalusia_ultramar_1
-			}
-		}
 	}
 }
 
@@ -2360,7 +2315,7 @@ country_event = {#Abyssinian slavers decision
 	}
 }
 
-country_event = {#Samira kills Grifo
+country_event = {#FREE
 	id = manedalusia.92
 	title = manedalusia.92.t
 	desc = manedalusia.92.d
@@ -2368,62 +2323,6 @@ country_event = {#Samira kills Grifo
 
 	option = {
 		name = manedalusia.92.a
-
-		retire_character = MDL_fernao_grifo
-		retire_character = MDL_rosa_branca
-		retire_character = MDL_alexandre_de_aguilar
-		retire_character = MDL_antonio_aviario
-
-		swap_ideas = {
-			remove_idea = MDL_ash_shuhud_resistance
-			add_idea = MDL_humbled_sultanate
-		}
-
-		set_power_balance = {
-			id = MDL_theological_bop
-			set_value = 0
-		}
-
-		hidden_effect = {
-			clr_country_flag = MDL_grifo_takeover
-			set_country_flag = MDL_samira_country_leader
-			set_country_flag = MDL_samira_path
-		}
-
-		add_country_leader_role = {
-			character = MDL_grandmistress_samira
-			country_leader = {
-				desc = MDL_grandmistress_samira_desc
-				expire = "1965.1.1"
-				ideology = holy_order_n
-			}
-			promote_leader = yes
-		}
-		set_politics = { ruling_party = neutrality }
-		add_country_leader_role = {
-			character = MDL_zahid
-			country_leader = {
-				expire = "1965.1.1"
-				ideology = surveillance_state
-			}
-			promote_leader = yes
-		}
-		set_party_name = {
-			ideology = neutrality
-			long_name = MDL_SAMIRA_PARTY_NAME_LONG
-			name = MDL_SAMIRA_PARTY_NAME
-		}
-		set_party_name = {
-			ideology = fascism
-			long_name = MDL_ZAHID_PARTY_NAME_LONG
-			name = MDL_ZAHID_PARTY_NAME
-		}
-		custom_effect_tooltip = MDL_samira_tree_loaded_tt
-		hidden_effect = {
-			load_focus_tree = {
-				tree = manedalusia_samira
-			}
-		}
 	}
 }
 
@@ -2511,7 +2410,7 @@ country_event = {#establish BAT puppet state
 	}
 }
 
-country_event = {#Grifo Kills Samira
+country_event = {#FREE
 	id = manedalusia.95
 	title = manedalusia.95.t
 	desc = manedalusia.95.d
@@ -2519,11 +2418,10 @@ country_event = {#Grifo Kills Samira
 
 	option = {
 		name = manedalusia.95.a
-		retire_character = MDL_grandmistress_samira
 	}
 }
 
-country_event = {#Grifo gets generals
+country_event = {#FREE
 	id = manedalusia.96
 	title = manedalusia.96.t
 	desc = manedalusia.96.d
@@ -2531,43 +2429,10 @@ country_event = {#Grifo gets generals
 
 	option = {
 		name = manedalusia.96.a
-		MDL_rosa_branca = {
-			add_corps_commander_role = {
-				traits={ pony_race_trait harsh_leader }
-				skill=2
-				attack_skill=1
-				defense_skill=3
-				planning_skill=2
-				logistics_skill=1
-			}
-		}
-		custom_effect_tooltip = MDL_rosa_branca_stats_tt
-		MDL_alexandre_de_aguilar = {
-			add_corps_commander_role = {
-				traits={ minotaur_race_trait engineer_officer air_force_commander }
-				skill=1
-				attack_skill=1
-				defense_skill=1
-				planning_skill=1
-				logistics_skill=1
-			}
-		}
-		custom_effect_tooltip = MDL_alexandre_de_aguilar_stats_tt
-		MDL_antonio_aviario = {
-			add_corps_commander_role = {
-				traits={ harpy_race_trait trait_reckless inspirational_leader }
-				skill=2
-				attack_skill=2
-				defense_skill=2
-				planning_skill=1
-				logistics_skill=2
-			}
-		}
-		custom_effect_tooltip = MDL_antonio_aviario_stats_tt
 	}
 }
 
-country_event = {#Lord Regent of the Overseas
+country_event = {#FREE
 	id = manedalusia.97
 	title = manedalusia.97.t
 	desc = manedalusia.97.d
@@ -2575,27 +2440,10 @@ country_event = {#Lord Regent of the Overseas
 
 	option = {
 		name = manedalusia.97.a
-		741 = { set_state_name = "MDL_state_new_karthin" }
-		remove_state_core = 738
-		remove_state_core = 740
-		set_cosmetic_tag = MDL_ultramar
-		set_party_name = {
-			ideology = fascism
-			long_name = MDL_GRIFO_PARTY_NAME_LONG
-			name = MDL_GRIFO_PARTY_NAME
-		}
-		custom_effect_tooltip = MDL_imperium_decisions_unlocked_tt
-		hidden_effect = {
-			set_country_flag = MDL_imperium_decisions_unlocked
-			set_province_name = { id = 12234 name = "MDL_state_new_karthin"}
-			load_focus_tree = {
-				tree = manedalusia_ultramar_2
-			}
-		}
 	}
 }
 
-country_event = {#Grifo confronts the Koltaliba
+country_event = {#FREE
 	id = manedalusia.98
 	title = manedalusia.98.t
 	desc = manedalusia.98.d
@@ -2603,61 +2451,10 @@ country_event = {#Grifo confronts the Koltaliba
 
 	option = {
 		name = manedalusia.98.a
-		ai_chance = {
-			base = 10
-			modifier = {
-				add = 90
-				OR = {
-					has_country_flag = MDL_AI_ULTRAMAR
-					has_game_rule = {
-						rule = MDL_ai_behavior
-						option = MDL_ULTRAMAR
-					}
-				}
-			}
-			modifier = {
-				factor = 0
-				OR = {
-					has_country_flag = MDL_AI_SAMIRA
-					has_game_rule = {
-						rule = MDL_ai_behavior
-						option = MDL_SAMIRA
-					}
-				}
-			}
-		}
-		country_event = manedalusia.95
-	}
-	option = {
-		name = manedalusia.98.b
-		ai_chance = {
-			base = 90
-			modifier = {
-				factor = 0
-				OR = {
-					has_country_flag = MDL_AI_ULTRAMAR
-					has_game_rule = {
-						rule = MDL_ai_behavior
-						option = MDL_ULTRAMAR
-					}
-				}
-			}
-			modifier = {
-				add = 10
-				OR = {
-					has_country_flag = MDL_AI_SAMIRA
-					has_game_rule = {
-						rule = MDL_ai_behavior
-						option = MDL_SAMIRA
-					}
-				}
-			}
-		}
-		country_event = manedalusia.92
 	}
 }
 
-country_event = {#Grifo as field marshal
+country_event = {#FREE
 	id = manedalusia.99
 	title = manedalusia.99.t
 	desc = manedalusia.99.d
@@ -2665,18 +2462,6 @@ country_event = {#Grifo as field marshal
 
 	option = {
 		name = manedalusia.99.a
-		MDL_fernao_grifo = {
-			add_field_marshal_role = {
-traits = { griffon_race_trait substance_abuser armchair_general promising_general }
-				skill=1
-				attack_skill=1
-				defense_skill=1
-				planning_skill=1
-				logistics_skill=1
-				desc = MDL_fernao_grifo_desc
-			}
-		}
-		custom_effect_tooltip = MDL_grifo_stats_tt
 	}
 }
 
@@ -2854,7 +2639,7 @@ country_event = {#manedalusians get woke on tritheism 2
 	}
 }
 
-country_event = {#battle hardened Grifo
+country_event = {#FREE
 	id = manedalusia.111
 	title = manedalusia.111.t
 	desc = manedalusia.111.d
@@ -2862,17 +2647,10 @@ country_event = {#battle hardened Grifo
 
 	option = {
 		name = manedalusia.111.a
-		MDL_fernao_grifo = {
-			remove_unit_leader_trait = substance_abuser
-			add_attack = 1
-			add_defense = 1
-			add_planning = 1
-			add_logistics = 1
-		}
 	}
 }
 
-country_event = {#antonio gives a speech in coltoba
+country_event = {#FREE
 	id = manedalusia.112
 	title = manedalusia.112.t
 	desc = manedalusia.112.d
@@ -2880,22 +2658,13 @@ country_event = {#antonio gives a speech in coltoba
 
 	option = {
 		name = manedalusia.112.a
-		add_stability = 0.05
-		add_war_support = 0.05
 	}
 }
 
-country_event = {#grover brought over
+country_event = {#FREE
 	id = manedalusia.113
 	title = manedalusia.113.t
-	desc = {
-		text = manedalusia.113.d
-		trigger = { NOT = { has_global_flag = GRI_grover_vi_dead } }
-	}
-	desc = {
-		text = manedalusia.113.d_dead
-		trigger = { has_country_flag = GRI_grover_vi_dead }
-	}
+	desc = manedalusia.113.d
 	is_triggered_only = yes
 
 	option = {
@@ -2903,7 +2672,7 @@ country_event = {#grover brought over
 	}
 }
 
-country_event = {#pax in excelsior
+country_event = {#FREE
 	id = manedalusia.114
 	title = manedalusia.114.t
 	desc = manedalusia.114.d
@@ -2911,37 +2680,10 @@ country_event = {#pax in excelsior
 
 	option = {
 		name = manedalusia.114.a
-		MDL_grifo_dismiss_heteronyms = yes
-		country_event = { id = manedalusia.115 days = 3 }
-		hidden_effect = {
-			generate_character = {
-				token_base = MDL_emperor
-				name = MDL_emperor
-			}
-			set_portraits = {
-				character = MDL_emperor
-				civilian = {
-					large = "gfx/leaders/MDL/MDL_emperor.tga"
-				}
-			}
-		}
-		add_country_leader_role = {
-			character = MDL_emperor
-			country_leader = {
-				expire = "1965.1.1"
-				ideology = esotericism
-			}
-			promote_leader = yes
-		}
-		set_party_name = {
-			ideology = fascism
-			long_name = MDL_GRIFO_PARTY_3_NAME_LONG
-			name = MDL_GRIFO_PARTY_3_NAME
-		}
 	}
 }
 
-country_event = {#grifo's ending
+country_event = {#FREE
 	id = manedalusia.115
 	title = manedalusia.115.t
 	desc = manedalusia.115.d
@@ -2949,11 +2691,10 @@ country_event = {#grifo's ending
 
 	option = {
 		name = manedalusia.115.a
-		custom_effect_tooltip = MDL_game_end_tt
 	}
 }
 
-country_event = {#settlers from Griffonia
+country_event = {#FREE
 	id = manedalusia.116
 	title = manedalusia.116.t
 	desc = manedalusia.116.d
@@ -2961,13 +2702,10 @@ country_event = {#settlers from Griffonia
 
 	option = {
 		name = manedalusia.116.a
-		771 = { add_manpower = 250000 }
-		772 = { add_manpower = 250000 }
-		774 = { add_manpower = 250000 }
 	}
 }
 
-country_event = {#the many faces of fernao grifo
+country_event = {#FREE
 	id = manedalusia.117
 	title = manedalusia.117.t
 	desc = manedalusia.117.d
@@ -2975,30 +2713,17 @@ country_event = {#the many faces of fernao grifo
 
 	option = {
 		name = manedalusia.117.a
-		custom_effect_tooltip = MDL_heteronyms_tt
-		MDL_grifo_setup_heteronym = yes
-
-		hidden_effect = {
-			set_country_flag = MDL_heteronyms_active
-			country_event = { id = manedalusia.118 days = 200 }
-		}
 	}
 }
 
-country_event = {#heteronym shuffle
+country_event = {#FREE
 	id = manedalusia.118
 	title = manedalusia.118.t
 	desc = manedalusia.118.d
 	is_triggered_only = yes
-	trigger = { has_country_flag = MDL_heteronyms_active }
 
 	option = {
 		name = manedalusia.118.a
-		MDL_shuffle_grifo_heteronym = yes
-		if = {
-			limit = { has_country_flag = MDL_heteronyms_active }
-			hidden_effect = { country_event = { id = manedalusia.118 days = 200 } }
-		}
 	}
 }
 
@@ -3498,7 +3223,7 @@ country_event = {#United Sultanate start event
 	}
 }
 
-country_event = {#all that remains
+country_event = {#FREE
 	id = manedalusia.147
 	title = manedalusia.147.t
 	desc = manedalusia.147.d
@@ -3506,15 +3231,10 @@ country_event = {#all that remains
 
 	option = {
 		name = manedalusia.147.a
-		hidden_effect = {
-			country_event = { id = manedalusia.167 days = 2 }
-		}
-		custom_effect_tooltip = MDL_samira_start_tt
-		add_ideas = MDL_koltaliba_rule_1
 	}
 }
 
-country_event = {#spymaster zahid
+country_event = {#FREE
 	id = manedalusia.148
 	title = manedalusia.148.t
 	desc = manedalusia.148.d
@@ -3522,22 +3242,10 @@ country_event = {#spymaster zahid
 
 	option = {
 		name = manedalusia.148.a
-		MDL_increase_samira_happiness = yes
-		add_advisor_role = {
-			character = MDL_zahid
-			advisor = {
-				slot = high_command
-				idea_token = MDL_zahid
-				cost = 150
-				can_be_fired = no
-				traits = { MDL_master_of_subterfuge }
-			}
-		}
-		hidden_effect = { add_ideas = MDL_zahid }
 	}
 }
 
-country_event = {#samira deals with abyssinian nobles 1
+country_event = {#FREE
 	id = manedalusia.149
 	title = manedalusia.149.t
 	desc = manedalusia.149.d
@@ -3545,12 +3253,10 @@ country_event = {#samira deals with abyssinian nobles 1
 
 	option = {
 		name = manedalusia.149.a
-		MDL_increase_samira_happiness = yes
-		add_ideas = MDL_never_slaves_again_idea_2
 	}
 }
 
-country_event = {#Mehmet is a true leader
+country_event = {#FREE
 	id = manedalusia.150
 	title = manedalusia.150.t
 	desc = manedalusia.150.d
@@ -3558,140 +3264,20 @@ country_event = {#Mehmet is a true leader
 
 	option = {
 		name = manedalusia.150.a
-		MDL_increase_samira_happiness = yes
-		MDL_mehmet = {
-			add_unit_leader_trait = war_hero
-			add_planning = 1
-			add_logistics = 1
-		}
 	}
 }
 
-country_event = {#samira's final decree
+country_event = {#FREE
 	id = manedalusia.151
 	title = manedalusia.151.t
-	desc = {
-		text = manedalusia.151.d1
-		trigger = {
-			check_variable = { MDL_samira_happiness_score < 5 }
-		}
-	}
-	desc = {
-		text = manedalusia.151.d2
-		trigger = {
-			OR = {
-				AND = {
-					check_variable = { MDL_samira_happiness_score > 4 }
-					check_variable = { MDL_samira_happiness_score < 9 }
-					NOT = { has_country_flag = MDL_max_hope_locked }
-				}
-				AND = {
-					check_variable = { MDL_samira_happiness_score > 8 }
-					has_country_flag = MDL_max_hope_locked
-				}
-			}
-		}
-	}
-	desc = {
-		text = manedalusia.151.d3
-		trigger = {
-			check_variable = { MDL_samira_happiness_score > 8 }
-			NOT = { has_country_flag = MDL_max_hope_locked }
-		}
-	}
+	desc = manedalusia.151.d
 	is_triggered_only = yes
-
-	option = {
-		name = manedalusia.151.a1
-		trigger = {
-			check_variable = { MDL_samira_happiness_score < 5 }
-		}
-		if = {
-			limit = { NOT = { has_government = fascism } }
-			set_politics = { ruling_party = fascism }
-		}
-		custom_effect_tooltip = MDL_samira_conclusion_branch_tt
-		hidden_effect = {
-			set_country_flag = MDL_samira_no_hope
-			load_focus_tree = {
-				tree = manedalusia_samira
-				keep_completed = yes
-			}
-			mark_focus_tree_layout_dirty = yes
-		}
-	}
-	option = {
-		name = manedalusia.151.a2
-		trigger = {
-			OR = {
-				AND = {
-					check_variable = { MDL_samira_happiness_score > 4 }
-					check_variable = { MDL_samira_happiness_score < 9 }
-					NOT = { has_country_flag = MDL_max_hope_locked }
-				}
-				AND = {
-					check_variable = { MDL_samira_happiness_score > 8 }
-					has_country_flag = MDL_max_hope_locked
-				}
-			}
-		}
-		if = {
-			limit = { NOT = { has_government = neutrality } }
-			set_politics = { ruling_party = neutrality }
-		}
-
-		custom_effect_tooltip = MDL_samira_conclusion_branch_tt
-		hidden_effect = {
-			set_country_leader_description = {
-				ideology = neutrality
-				desc = MDL_grandmistress_samira_sultana_desc
-			}
-			MDL_grandmistress_samira = {
-				set_character_name = MDL_grandmistress_samira_sultana
-				set_leader_description = MDL_grandmistress_samira_sultana_desc
-				set_portraits = {
-					army = {
-						large="gfx/leaders/MDL/grandmistress_samira_sultana.tga"
-					}
-					civilian={
-						large="gfx/leaders/MDL/grandmistress_samira_sultana.tga"
-					}
-				}
-			}
-			set_country_flag = MDL_samira_medium_hope
-			load_focus_tree = {
-				tree = manedalusia_samira
-				keep_completed = yes
-			}
-			mark_focus_tree_layout_dirty = yes
-		}
-	}
-	option = {
-		name = manedalusia.151.a3
-		trigger = {
-			check_variable = { MDL_samira_happiness_score > 8 }
-			NOT = { has_country_flag = MDL_max_hope_locked }
-		}
-		if = {
-			limit = { NOT = { has_government = neutrality } }
-			set_politics = { ruling_party = neutrality }
-		}
-
-		custom_effect_tooltip = MDL_samira_conclusion_branch_tt
-		hidden_effect = {
-			country_event = { id = manedalusia.164 days = 3 }
-			
-			set_country_flag = MDL_samira_high_hope
-			load_focus_tree = {
-				tree = manedalusia_samira
-				keep_completed = yes
-			}
-			mark_focus_tree_layout_dirty = yes
-		}
+	desc = {
+		text = manedalusia.151.a
 	}
 }
 
-country_event = {#zahid mehmet duel 1
+country_event = {#FREE
 	id = manedalusia.152
 	title = manedalusia.152.t
 	desc = manedalusia.152.d
@@ -3701,12 +3287,9 @@ country_event = {#zahid mehmet duel 1
 		name = manedalusia.152.a
 		country_event = manedalusia.157
 	}
-	option = {
-		name = manedalusia.152.b
-	}
 }
 
-country_event = {#samira arabia peace event
+country_event = {#FREE
 	id = manedalusia.153
 	title = manedalusia.153.t
 	desc = manedalusia.153.d
@@ -3714,38 +3297,10 @@ country_event = {#samira arabia peace event
 
 	option = {
 		name = manedalusia.153.a
-		ai_chance = {
-			base = 50
-			modifier = {
-				factor = 0
-				OR = {
-					has_government = fascism
-					has_government = communism
-				}
-			}
-		}
-		diplomatic_relation = {
-			country = MDL
-			relation = non_aggression_pact
-		}
-	}
-	option = {
-		name = manedalusia.153.b
-		MDL = { country_event = manedalusia.170 }
-		ai_chance = {
-			base = 50
-			modifier = {
-				add = 50
-				OR = {
-					has_government = fascism
-					has_government = communism
-				}
-			}
-		}
 	}
 }
 
-country_event = {#the head and the heart 1
+country_event = {#FREE
 	id = manedalusia.154
 	title = manedalusia.154.t
 	desc = manedalusia.154.d
@@ -3753,14 +3308,10 @@ country_event = {#the head and the heart 1
 
 	option = {
 		name = manedalusia.154.a
-		country_event = manedalusia.155
-	}
-	option = {
-		name = manedalusia.154.b
 	}
 }
 
-country_event = {#the head and the heart 2
+country_event = {#FREE
 	id = manedalusia.155
 	title = manedalusia.155.t
 	desc = manedalusia.155.d
@@ -3768,11 +3319,10 @@ country_event = {#the head and the heart 2
 
 	option = {
 		name = manedalusia.155.a
-		hidden_effect = { country_event = manedalusia.156 }
 	}
 }
 
-country_event = {#the head and the heart 3
+country_event = {#FREE
 	id = manedalusia.156
 	title = manedalusia.156.t
 	desc = manedalusia.156.d
@@ -3780,11 +3330,10 @@ country_event = {#the head and the heart 3
 
 	option = {
 		name = manedalusia.156.a
-		MDL_increase_samira_happiness = yes
 	}
 }
 
-country_event = {#zahid mehmet duel 2
+country_event = {#FREE
 	id = manedalusia.157
 	title = manedalusia.157.t
 	desc = manedalusia.157.d
@@ -3793,16 +3342,9 @@ country_event = {#zahid mehmet duel 2
 	option = {
 		name = manedalusia.157.a
 	}
-	option = {
-		name = manedalusia.157.b
-		trigger = {
-			check_variable = { MDL_mehmet_fight_level > 0 }
-		}
-		country_event = manedalusia.158
-	}
 }
 
-country_event = {#zahid mehmet duel automatic success
+country_event = {#FREE
 	id = manedalusia.158
 	title = manedalusia.158.t
 	desc = manedalusia.158.d
@@ -3810,11 +3352,10 @@ country_event = {#zahid mehmet duel automatic success
 
 	option = {
 		name = manedalusia.158.a
-		hidden_effect = { country_event = manedalusia.159 }
 	}
 }
 
-country_event = {#zahid mehmet duel good resolution
+country_event = {#FREE
 	id = manedalusia.159
 	title = manedalusia.159.t
 	desc = manedalusia.159.d
@@ -3822,11 +3363,10 @@ country_event = {#zahid mehmet duel good resolution
 
 	option = {
 		name = manedalusia.159.a
-		MDL_increase_samira_happiness = yes
 	}
 }
 
-country_event = {#zahid install the qadi
+country_event = {#FREE
 	id = manedalusia.160
 	title = manedalusia.160.t
 	desc = manedalusia.160.d
@@ -3834,19 +3374,10 @@ country_event = {#zahid install the qadi
 
 	option = {
 		name = manedalusia.160.a
-		add_country_leader_role = {
-			character = MDL_qadi_of_coltoba
-			country_leader = {
-				desc = MDL_qadi_of_coltoba_desc
-				expire = "1965.1.1"
-				ideology = surveillance_state
-			}
-			promote_leader = yes
-		}
 	}
 }
 
-country_event = {#sad samira final event
+country_event = {#FREE
 	id = manedalusia.161
 	title = manedalusia.161.t
 	desc = manedalusia.161.d
@@ -3854,11 +3385,10 @@ country_event = {#sad samira final event
 
 	option = {
 		name = manedalusia.161.a
-		custom_effect_tooltip = MDL_game_end_tt
 	}
 }
 
-country_event = {#medium hope samira final event
+country_event = {#FREE
 	id = manedalusia.162
 	title = manedalusia.162.t
 	desc = manedalusia.162.d
@@ -3869,7 +3399,7 @@ country_event = {#medium hope samira final event
 	}
 }
 
-country_event = {#samira happy ending coronation
+country_event = {#FREE
 	id = manedalusia.163
 	title = manedalusia.163.t
 	desc = manedalusia.163.d
@@ -3877,28 +3407,10 @@ country_event = {#samira happy ending coronation
 
 	option = {
 		name = manedalusia.163.a
-		hidden_effect = {
-			set_country_leader_description = {
-				ideology = neutrality
-				desc = MDL_grandmistress_samira_sultana_happy_desc
-			}
-			MDL_grandmistress_samira = {
-				set_character_name = MDL_grandmistress_samira_sultana
-				set_leader_description = MDL_grandmistress_samira_sultana_happy_desc
-				set_portraits = {
-					army = {
-						large="gfx/leaders/MDL/grandmistress_samira_sultana_happy.tga"
-					}
-					civilian={
-						large="gfx/leaders/MDL/grandmistress_samira_sultana_happy.tga"
-					}
-				}
-			}
-		}
 	}
 }
 
-country_event = {#samira confesses feelings
+country_event = {#FREE
 	id = manedalusia.164
 	title = manedalusia.164.t
 	desc = manedalusia.164.d
@@ -3909,7 +3421,7 @@ country_event = {#samira confesses feelings
 	}
 }
 
-country_event = {#samira good ending
+country_event = {#FREE
 	id = manedalusia.165
 	title = manedalusia.165.t
 	desc = manedalusia.165.d
@@ -3917,11 +3429,10 @@ country_event = {#samira good ending
 
 	option = {
 		name = manedalusia.165.a
-		country_event = { id = manedalusia.166 days = 2 }
 	}
 }
 
-country_event = {#samira good ending last event
+country_event = {#FREE
 	id = manedalusia.166
 	title = manedalusia.166.t
 	desc = manedalusia.166.d
@@ -3929,11 +3440,10 @@ country_event = {#samira good ending last event
 
 	option = {
 		name = manedalusia.166.a
-		custom_effect_tooltip = MDL_game_end_tt
 	}
 }
 
-country_event = {#mehmet comforts samira
+country_event = {#FREE
 	id = manedalusia.167
 	title = manedalusia.167.t
 	desc = manedalusia.167.d
@@ -3941,24 +3451,10 @@ country_event = {#mehmet comforts samira
 
 	option = {
 		name = manedalusia.167.a
-		MDL_increase_samira_happiness = yes
-
-		MDL_mehmet = {
-			set_character_name = MDL_mehmet_major
-			add_corps_commander_role = {
-				traits = { pony_race_trait artillery_officer }
-				skill=2
-				attack_skill=3
-				defense_skill=1
-				logistics_skill=2
-				planning_skill=1
-			}
-		}
-		custom_effect_tooltip = MDL_mehmet_stats_tt
 	}
 }
 
-country_event = {#first mehmet samira fight 1
+country_event = {#FREE
 	id = manedalusia.168
 	title = manedalusia.168.t
 	desc = manedalusia.168.d
@@ -3967,16 +3463,9 @@ country_event = {#first mehmet samira fight 1
 	option = {
 		name = manedalusia.168.a
 	}
-	option = {
-		name = manedalusia.168.b
-		trigger = {
-			check_variable = { MDL_mehmet_fight_level > 1 }
-		}
-		country_event = manedalusia.169
-	}
 }
 
-country_event = {#first mehmet samira fight 2
+country_event = {#FREE
 	id = manedalusia.169
 	title = manedalusia.169.t
 	desc = manedalusia.169.d
@@ -3984,12 +3473,10 @@ country_event = {#first mehmet samira fight 2
 
 	option = {
 		name = manedalusia.169.a
-		MDL_increase_samira_happiness = yes
-		hidden_effect = { set_country_flag = MDL_mehmet_won_first_duel }
 	}
 }
 
-country_event = {#arabians fuck around and find out
+country_event = {#FREE
 	id = manedalusia.170
 	title = manedalusia.170.t
 	desc = manedalusia.170.d
@@ -3997,41 +3484,21 @@ country_event = {#arabians fuck around and find out
 
 	option = {
 		name = manedalusia.170.a
-		create_wargoal = {
-			type = annex_everything
-			target = 868.owner
-		}
 	}
 }
 
-country_event = {#second mehmet samira duel 1
+country_event = {#FREE
 	id = manedalusia.171
 	title = manedalusia.171.t
-	desc = {
-		text = manedalusia.171.d_first_duel_win
-		trigger = { has_country_flag = MDL_mehmet_won_first_duel }
-	}
-	desc = {
-		text = manedalusia.171.d_first_duel_loss
-		trigger = {
-			NOT = { has_country_flag = MDL_mehmet_won_first_duel }
-		}
-	}
+	desc = manedalusia.171.d
 	is_triggered_only = yes
 
 	option = {
 		name = manedalusia.171.a
 	}
-	option = {
-		name = manedalusia.171.b
-		trigger = {
-			check_variable = { MDL_mehmet_fight_level > 2 }
-		}
-		country_event = manedalusia.172
-	}
 }
 
-country_event = {#second mehmet samira duel 2
+country_event = {#FREE
 	id = manedalusia.172
 	title = manedalusia.172.t
 	desc = manedalusia.172.d
@@ -4039,24 +3506,21 @@ country_event = {#second mehmet samira duel 2
 
 	option = {
 		name = manedalusia.172.a
-		MDL_increase_samira_happiness = yes
-		hidden_effect = { MDL_increase_samira_happiness = yes }#samira finds it really hot if you can beat her
 	}
 }
 
-country_event = {#Al-Neighzari hypes Mehmet up
+country_event = {#FREE
 	id = manedalusia.173
 	title = manedalusia.173.t
 	desc = manedalusia.173.d
 	is_triggered_only = yes
 
 	option = {
-		name = manedalusia.173.a
-		 MDL_level_up_mehmet_fight_level = yes		
+		name = manedalusia.173.a		
 	}
 }
 
-country_event = {#mehmet crosses the desert
+country_event = {#FREE
 	id = manedalusia.174
 	title = manedalusia.174.t
 	desc = manedalusia.174.d
@@ -4064,11 +3528,11 @@ country_event = {#mehmet crosses the desert
 
 	option = {
 		name = manedalusia.174.a
-		 MDL_level_up_mehmet_fight_level = yes		
+
 	}
 }
 
-country_event = {#on the brevity of life 1
+country_event = {#FREE
 	id = manedalusia.175
 	title = manedalusia.175.t
 	desc = manedalusia.175.d
@@ -4077,16 +3541,9 @@ country_event = {#on the brevity of life 1
 	option = {
 		name = manedalusia.175.a
 	}
-	option = {
-		name = manedalusia.175.b
-		hidden_effect = { country_event = manedalusia.176 }
-	}
-	option = {
-		name = manedalusia.175.c
-	}
 }
 
-country_event = {#on the brevity of life 2
+country_event = {#FREE
 	id = manedalusia.176
 	title = manedalusia.176.t
 	desc = manedalusia.176.d
@@ -4094,11 +3551,10 @@ country_event = {#on the brevity of life 2
 
 	option = {
 		name = manedalusia.176.a
-		MDL_increase_samira_happiness = yes
 	}
 }
 
-country_event = {#velvet reassures samira
+country_event = {#FREE
 	id = manedalusia.177
 	title = manedalusia.177.t
 	desc = manedalusia.177.d
@@ -4106,7 +3562,6 @@ country_event = {#velvet reassures samira
 
 	option = {
 		name = manedalusia.177.a
-		MDL_increase_samira_happiness = yes
 	}
 }
 

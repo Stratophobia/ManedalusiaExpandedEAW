@@ -26,24 +26,6 @@ MDL_black_guard_steelworks_mio = {
 	}
 }
 
-MDL_imperial_tanks_mio = {
-	name = MDL_imperial_tanks
-	icon = GFX_idea_MDL_imperial_tanks
-
-	include = generic_heavy_tank_organization
-
-	allowed = {
-		original_tag = MDL
-		has_dlc = "Arms Against Tyranny"
-	}
-	visible = {
-		owner = { has_country_flag = MDL_grifo_takeover }
-	}
-	available = {
-		owner = { has_completed_focus = MDL_imperial_armor }
-	}
-}
-
  ######  ##			## #### ########	 ######  
 ##		## ##			##	##	##		 ## ##		## 
 ##			 ##			##	##	##		 ## ##			 
@@ -76,24 +58,6 @@ MDL_mercantile_league_mio = {
 			defense = -0.03
 			naval_speed = 0.15
 		}
-	}
-}
-
-MDL_imperial_ships_mio = {
-	name = MDL_imperial_ships
-	icon = GFX_idea_MDL_imperial_ships
-
-	include = generic_battle_line_ship_organization
-
-	allowed = {
-		original_tag = MDL
-		has_dlc = "Arms Against Tyranny"
-	}
-	available = {
-		owner = { any_controlled_state_is_coastal = yes }
-	}
-	visible = {
-		owner = { has_country_flag = MDL_grifo_takeover }
 	}
 }
 
@@ -147,7 +111,6 @@ MDL_sundrinker_airwings_mio = {
 		owner = {
 			OR = {
 				has_completed_focus = MDL_air_industry
-				has_completed_focus = MDL_charting_new_course
 			}
 		}
 	}
@@ -175,30 +138,8 @@ MDL_tailspin_shipping_mio = {
 		owner = {
 			OR = {
 				has_completed_focus = MDL_air_industry
-				has_completed_focus = MDL_charting_new_course
 			}
 		}
-	}
-}
-
-MDL_imperial_planes_mio = {
-	name = MDL_imperial_planes
-	icon = GFX_idea_MDL_imperial_planes
-
-	include = generic_heavy_aircraft_organization
-
-	research_bonus = 0.15
-	task_capacity = 999
-
-	allowed = {
-		original_tag = MDL
-		has_dlc = "Arms Against Tyranny"
-	}
-	visible = {
-		owner = { has_country_flag = MDL_grifo_takeover }
-	}
-	available = {
-		owner = { has_completed_focus = MDL_imperial_plane_tech }
 	}
 }
 
@@ -322,7 +263,6 @@ MDL_motorized_concern_mio = {
 		owner = {
 			OR = {
 				has_completed_focus = MDL_sweet_ass_rides
-				has_completed_focus = MDL_SAM26
 			}
 		}
 	}
@@ -334,30 +274,3 @@ MDL_motorized_concern_mio = {
 	}
 }
 
-MDL_imperial_arms_mio = {
-	name = MDL_imperial_arms
-	icon = GFX_idea_MDL_imperial_arms
-
-	research_bonus = 0.05
-	task_capacity = 999
-
-	include = generic_infantry_equipment_organization
-
-	allowed = {
-		original_tag = MDL
-		has_dlc = "Arms Against Tyranny"
-	}
-	visible = {
-		owner = { has_country_flag = MDL_grifo_takeover }
-	}
-	available = {
-		owner = { has_completed_focus = MDL_colonial_arms_production }
-	}
-	initial_trait = {
-		limit_to_equipment_type = { infantry_equipment }
-		equipment_bonus = {
-			soft_attack = 0.05
-			build_cost_ic = -0.05
-		}
-	}
-}

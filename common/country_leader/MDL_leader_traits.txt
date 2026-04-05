@@ -88,11 +88,17 @@ leader_traits = {
 		political_power_gain = 0.05
 		drift_defence_factor = 0.20
 	}
+	MDL_grand_vizier_trait = {
+		stability_factor = 0.10
+		political_power_gain = 0.15
+		drift_defence_factor = 0.25
+		defensive_war_stability_factor = 0.50
+	}
 	MDL_alchemist_trait = {
 		attrition = -0.10
 		supply_consumption_factor = -0.10
 		command_cap_increase = 30
-    equipment_bonus = {
+		equipment_bonus = {
 			magical_equipment = {
 				instant = yes
 				ap_attack = 0.05

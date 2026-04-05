@@ -116,38 +116,6 @@ spriteTypes = {
 		textureFile = "gfx/interface/ideas/MDL/MDL_humbled_sultanate.tga"
 	}
 	SpriteType = {
-		name = "GFX_idea_MDL_imperial_agri"
-		textureFile = "gfx/interface/ideas/MDL/MDL_imperial_agri.tga"
-	}
-	SpriteType = {
-		name = "GFX_idea_MDL_imperial_arms"
-		textureFile = "gfx/interface/ideas/MDL/MDL_imperial_arms.tga"
-	}
-	SpriteType = {
-		name = "GFX_idea_MDL_imperial_construction"
-		textureFile = "gfx/interface/ideas/MDL/MDL_imperial_construction.tga"
-	}
-	SpriteType = {
-		name = "GFX_idea_MDL_imperial_electrics"
-		textureFile = "gfx/interface/ideas/MDL/MDL_imperial_electrics.tga"
-	}
-	SpriteType = {
-		name = "GFX_idea_MDL_imperial_planes"
-		textureFile = "gfx/interface/ideas/MDL/MDL_imperial_planes.tga"
-	}
-	SpriteType = {
-		name = "GFX_idea_MDL_imperial_railway"
-		textureFile = "gfx/interface/ideas/MDL/MDL_imperial_railway.tga"
-	}
-	SpriteType = {
-		name = "GFX_idea_MDL_imperial_ships"
-		textureFile = "gfx/interface/ideas/MDL/MDL_imperial_ships.tga"
-	}
-	SpriteType = {
-		name = "GFX_idea_MDL_imperial_tanks"
-		textureFile = "gfx/interface/ideas/MDL/MDL_imperial_tanks.tga"
-	}
-	SpriteType = {
 		name = "GFX_idea_MDL_industrial_concern_1"
 		textureFile = "gfx/interface/ideas/MDL/MDL_industrial_concern_1.tga"
 	}
@@ -162,14 +130,6 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_idea_MDL_klugepilled"
 		textureFile = "gfx/interface/ideas/MDL/MDL_klugepilled.tga"
-	}
-	SpriteType = {
-		name = "GFX_idea_MDL_koltaliba_rule"
-		textureFile = "gfx/interface/ideas/MDL/MDL_koltaliba_rule.tga"
-	}
-	SpriteType = {
-		name = "GFX_idea_MDL_madgriff_in_the_harbor"
-		textureFile = "gfx/interface/ideas/MDL/MDL_madgriff_in_the_harbor.tga"
 	}
 	SpriteType = {
 		name = "GFX_idea_MDL_magical_engines"
@@ -212,20 +172,12 @@ spriteTypes = {
 		textureFile = "gfx/interface/ideas/MDL/MDL_moonstriker_labs.tga"
 	}
 	SpriteType = {
-		name = "GFX_idea_MDL_moonstriker_vizier"
-		textureFile = "gfx/interface/ideas/MDL/MDL_moonstriker_vizier.tga"
-	}
-	SpriteType = {
 		name = "GFX_idea_MDL_motorized_concern"
 		textureFile = "gfx/interface/ideas/MDL/MDL_motorized_concern.tga"
 	}
 	SpriteType = {
 		name = "GFX_idea_MDL_national_census"
 		textureFile = "gfx/interface/ideas/MDL/MDL_national_census.tga"
-	}
-	SpriteType = {
-		name = "GFX_idea_MDL_native_resistance"
-		textureFile = "gfx/interface/ideas/MDL/MDL_native_resistance.tga"
 	}
 	SpriteType = {
 		name = "GFX_idea_MDL_naval_academy"
@@ -238,10 +190,6 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_idea_MDL_never_slaves_again"
 		textureFile = "gfx/interface/ideas/MDL/MDL_never_slaves_again.tga"
-	}
-	SpriteType = {
-		name = "GFX_idea_MDL_nonstop_barrage"
-		textureFile = "gfx/interface/ideas/MDL/MDL_nonstop_barrage.tga"
 	}
 	SpriteType = {
 		name = "GFX_idea_MDL_office_of_artillery"
