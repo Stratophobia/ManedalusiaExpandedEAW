@@ -865,6 +865,7 @@ MDL_republican_war_decisions_tab = {
 
 MDL_crimson_war_tab = {
 	MDL_crimson_war_zar_puppet = {
+		icon = GFX_decision_MDL_shield_puppet_ZAR
 		visible = {
 			ZAR = { exists = no }
 			owns_state = 755
@@ -946,8 +947,8 @@ MDL_crimson_war_tab = {
 						is_in_array = { state_original_cores = HAY }
 					}
 				}
-				transfer_state_to = var:MDL_great_lakes_protectorate_tag
-				add_core_of = var:MDL_great_lakes_protectorate_tag
+				transfer_state_to = MDL.great_lakes_protectorate_tag
+				add_core_of = MDL.great_lakes_protectorate_tag
 			}
 		}
 	}
@@ -1153,6 +1154,25 @@ MDL_fiqh_decisions_tab = {
 		fire_only_once = yes
 		complete_effect = {
 			country_event = manedalusia.34
+		}
+	}
+}
+
+military_training_category = {
+	MDL_repeatable_naval_tech_research = {
+		icon = GFX_decision_MDL_shield_puppet_ZAR#REPLACE
+		allowed = { original_tag = MDL }
+		days_re_enable = 85
+		days_remove = 25
+		cost = 25
+		visible = { has_country_flag = MDL_unlocked_repeatable_naval_tech }
+		remove_effect = {
+			add_tech_bonus = {
+				name = MDL_repeatable_naval_tech_research
+				bonus = 0.50
+				uses = 1
+				category = naval_equipment
+			}		
 		}
 	}
 }

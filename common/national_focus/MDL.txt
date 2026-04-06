@@ -69,6 +69,9 @@ shared_focus = {
 	relative_position_id = MDL_gather_the_council
 	cost = 2
 	prerequisite = { focus = MDL_gather_the_council }
+	select_effect = {
+		country_event = { id = manedalusia.3 days = 7 }
+	}
 	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_rally_militias"
@@ -3858,14 +3861,15 @@ shared_focus = {
 	x = 0
 	y = 3
 	relative_position_id = MDL_naval_patrols
+	available = { has_country_flag = MDL_has_restored_university }
 	prerequisite = { focus = MDL_marine_corps focus = MDL_capital_ships }
 	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_naval_academy"
+		unlock_decision_tooltip = MDL_repeatable_naval_tech_research
 		add_research_slot = 1
-		add_ideas = MDL_naval_academy_idea
-
 		increase_science_base = yes
+		hidden_effect = { set_country_flag = MDL_unlocked_repeatable_naval_tech }
 	}
 	search_filters = { FOCUS_FILTER_RESEARCH }
 }

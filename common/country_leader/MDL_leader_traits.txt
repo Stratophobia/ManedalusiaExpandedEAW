@@ -23,12 +23,6 @@ leader_traits = {
 		special_forces_attack_factor = 0.10
 		army_attack_factor = 0.05
 	}
-	MDL_sayf_spirit_of_vengeance = {
-		targeted_modifier = {
-			tag = ABY
-			army_attack_factor = 0.10
-		}
-	}
 	MDL_sayf_completely_numb = {
 		political_power_gain = -2.0
 	}
@@ -56,16 +50,6 @@ leader_traits = {
 		superior_firepower_mastery_gain_factor = 0.1
 		grand_battleplan_mastery_gain_factor = 0.1
 		mass_assault_mastery_gain_factor = 0.1
-	}
-	MDL_grifo_lord_regent_of_overseas = {
-		political_power_gain = 0.05
-		compliance_growth = 0.10
-		fascism_drift = 0.01
-	}
-	MDL_grifo_imperial_regent = {
-		political_power_gain = 0.05
-		stability_weekly = 0.003
-		fascism_drift = 0.02
 	}
 	MDL_breaker_of_chains = {
 		stability_factor = 0.10

@@ -1,42 +1,6 @@
 add_namespace = manedalusia
 add_namespace = manedalusia_news
 
-###NEWS###
-news_event = {#army of divine retribution
-	id = manedalusia_news.1
-	title = manedalusia_news.1.t
-	desc = manedalusia_news.1.d
-	picture = GFX_news_pony_griffon_war
-	major = yes
-	is_triggered_only = yes
-
-	option = {
-		trigger = { tag = MDL }
-		name = manedalusia_news.1.a
-	}
-	option = {
-		trigger = { has_government = democratic }
-		name = manedalusia_news.1.b
-		add_opinion_modifier = {
-			target = FROM
-			modifier = MDL_GENOCIDE_OPINION_MOD
-		}
-	}
-	option = {
-		name = manedalusia_news.1.c
-		trigger = {
-			OR = {
-				has_government = communism
-				has_government = neutrality
-				AND = {
-					has_government = fascism
-					NOT = { tag = MDL }
-				}
-			}
-		}
-	}
-}
-
 news_event = {#surf festival
 	id = manedalusia_news.2
 	title = manedalusia_news.2.t
@@ -167,7 +131,7 @@ country_event = {#The Council Gathers
 	}
 }
 
-country_event = {#FREE
+country_event = {#Iron Muhtal General
 	id = manedalusia.3
 	title = manedalusia.3.t
 	desc = manedalusia.3.d
@@ -175,6 +139,17 @@ country_event = {#FREE
 
 	option = {
 		name = manedalusia.3.a
+		MDL_iron_muhtal = {
+			add_corps_commander_role = {
+				traits = { pony_race_trait supply_raider scavenger }
+				skill = 1
+				attack_skill = 1
+				defense_skill = 3
+				planning_skill =1
+				logistics_skill =2
+				desc = MDL_iron_muhtal_desc
+			}
+		} custom_effect_tooltip  = MDL_muhtal_stats_tt
 	}
 }
 
@@ -1207,7 +1182,7 @@ country_event = {#establish great lakes dominion
 
 	option = {
 		name = manedalusia.45.a
-		var:MDL_great_lakes_protectorate_tag = {
+		MDL.var:great_lakes_protectorate_tag = {
 			set_politics = { ruling_party = fascism }
 			add_ideas = MDL_MAZ_vassal
 		}
@@ -2454,7 +2429,7 @@ country_event = {#laylah rizzes a tourist
 	}
 }
 
-country_event = {#restore capital to karthin/holy empire declaration
+country_event = {#FREE
 	id = manedalusia.108
 	title = manedalusia.108.t
 	desc = manedalusia.108.d
@@ -2462,20 +2437,6 @@ country_event = {#restore capital to karthin/holy empire declaration
 
 	option = {
 		name = manedalusia.108.a
-		371 = { set_state_name = "MDL_state_karthin" }
-		hidden_effect = {
-			set_province_name = { id = 3144 name = "MDL_state_karthin"}
-		}
-		set_cosmetic_tag = MDL_sacro_imperio
-		swap_ruler_traits = {
-			remove = MDL_grifo_lord_regent_of_overseas
-			add = MDL_grifo_imperial_regent
-		}
-		set_party_name = {
-			ideology = fascism
-			long_name = MDL_GRIFO_PARTY_2_NAME_LONG
-			name = MDL_GRIFO_PARTY_2_NAME
-		}
 	}
 }
 

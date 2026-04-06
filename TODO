@@ -1,9 +1,12 @@
 ###TODO###
 - Expand upon the theological BoP (more decisions, granular buffs, etc)
 - Fuse Asabiyyah with the Navy dynmod
-- Replace manedalusian naval research idea with a repeatable decision to stack naval research bonuses.
+- Transfer Sayf puppets to decision cat and add buffs to the focuses instead
+- University of Coltoba rebuilding category
+
+MDL_manedalusian_industriousness -> wrap into Asabiyyah
 
 ###ICONS###
 MDL_humbled_sultanate
 MDL_golden_coast_modifier
-
+MDL_repeatable_naval_tech_research

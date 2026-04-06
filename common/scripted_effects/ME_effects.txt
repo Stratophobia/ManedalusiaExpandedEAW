@@ -219,7 +219,7 @@ MDL_create_dynamic_KAR = {
 			every_controlled_state = {
 				limit = {
 					OR = {
-						is_in_array = { state_original_cores = MKS }
+						is_in_array = { state_original_cores = KAR }
 					}
 				}
 				transfer_state_to = PREV.PREV
@@ -278,70 +278,70 @@ MDL_create_dynamic_great_lakes = {
 		limit = {
 			any_occupied_country = { tag = ALO }
 		}
-		set_variable = { MDL_great_lakes_protectorate_tag = ALO }
+		set_variable = { MDL.great_lakes_protectorate_tag = ALO }
 	}
 	else_if = {
 		limit = {
 			any_occupied_country = { tag = TIM }
 		}
-		set_variable = { MDL_great_lakes_protectorate_tag = ALO }
+		set_variable = { MDL.great_lakes_protectorate_tag = TIM }
 	}
 	else_if = {
 		limit = {
 			any_occupied_country = { tag = REE }
 		}
-		set_variable = { MDL_great_lakes_protectorate_tag = MSH }
+		set_variable = { MDL.great_lakes_protectorate_tag = REE }
 	}
 	else_if = {
 		limit = {
 			any_occupied_country = { tag = MSH }
 		}
-		set_variable = { MDL_great_lakes_protectorate_tag = MSH }
+		set_variable = { MDL.great_lakes_protectorate_tag = MSH }
 	}
 	else_if = {
 		limit = {
 			any_occupied_country = { tag = SON }
 		}
-		set_variable = { MDL_great_lakes_protectorate_tag = SON }
+		set_variable = { MDL.great_lakes_protectorate_tag = SON }
 	}
 	else_if = {
 		limit = {
 			any_occupied_country = { tag = MAZ }
 		}
-		set_variable = { MDL_great_lakes_protectorate_tag = MAZ }
+		set_variable = { MDL.great_lakes_protectorate_tag = MAZ }
 	}
 	else_if = {
 		limit = {
 			any_occupied_country = { tag = ZWA }
 		}
-		set_variable = { MDL_great_lakes_protectorate_tag = ZWA }
+		set_variable = { MDL.great_lakes_protectorate_tag = ZWA }
 	}
 	else_if = {
 		limit = {
 			any_occupied_country = { tag = ZUG }
 		}
-		set_variable = { MDL_great_lakes_protectorate_tag = ZUG }
+		set_variable = { MDL.great_lakes_protectorate_tag = ZUG }
 	}
 	else_if = {
 		limit = {
 			any_occupied_country = { tag = ZEL }
 		}
-		set_variable = { MDL_great_lakes_protectorate_tag = ZEL }
+		set_variable = { MDL.great_lakes_protectorate_tag = ZEL }
 	}
 	else_if = {
 		limit = {
 			any_occupied_country = { tag = HAY }
 		}
-		set_variable = { MDL_great_lakes_protectorate_tag = HAY }
+		set_variable = { MDL.great_lakes_protectorate_tag = HAY }
 	}
 	else_if = {
 		limit = {
 			any_occupied_country = { tag = MSS }
 		}
-		set_variable = { MDL_great_lakes_protectorate_tag = MSS }
+		set_variable = { MDL.great_lakes_protectorate_tag = MSS }
 	}
 	create_dynamic_country = {
-		original_tag = var:MDL_great_lakes_protectorate_tag
+		original_tag = var:great_lakes_protectorate_tag
 		PREV = {
 			every_controlled_state = {
 				limit = {
@@ -408,7 +408,7 @@ MDL_create_dynamic_great_lakes = {
 			better_science_base
 			civilian_economy
 		}
-		MDL = { var:MDL_great_lakes_protectorate_tag = { transfer_technology = yes } }
+		MDL = { var:great_lakes_protectorate_tag = { transfer_technology = yes } }
 		set_AI_strategies_on_every_possible_country_delayed = yes
 	}
 }
