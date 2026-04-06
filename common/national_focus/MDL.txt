@@ -635,11 +635,11 @@ shared_focus = {
 		custom_effect_tooltip = MDL_asabiyyah_tt
 
 		set_variable = {
-			MDL_mobilization_var = 0
+			MDL_mobilization_laws_cost_factor = 0
 			tooltip = mobilization_laws_cost_factor_tt
 		}
 		set_variable = {
-			MDL_economy_var = 0
+			MDL_economy_cost_factor = 0
 			tooltip = economy_cost_factor_tt
 		}
 	}
@@ -944,11 +944,11 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_spread_faith_to_donkeys"
 		custom_effect_tooltip = { IDEA = MDL_asabiyyah_modifier localization_key = modify_idea_tt }
 		add_to_variable = {
-			MDL_pp_var = 0.05
+			MDL_political_power_gain = 0.05
 			tooltip = political_power_gain_tt
 		}
 		add_to_variable = {
-			MDL_war_var = 0.10
+			MDL_war_support_factor = 0.10
 			tooltip = war_support_factor_tt
 		}
 	}
@@ -1271,7 +1271,7 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_warplan_conscription"
 		custom_effect_tooltip = { IDEA = MDL_asabiyyah_modifier localization_key = modify_idea_tt }
 		add_to_variable = {
-			MDL_mobilization_var = -0.20
+			MDL_mobilization_laws_cost_factor = -0.20
 			tooltip = mobilization_laws_cost_factor_tt
 		}
 		add_manpower = 8000
@@ -1294,11 +1294,11 @@ shared_focus = {
 		custom_effect_tooltip = { IDEA = MDL_asabiyyah_modifier localization_key = modify_idea_tt }
 		add_ideas = MDL_holy_zeal_idea
 		add_to_variable = {
-			MDL_war_var = 0.05
+			MDL_war_support_factor = 0.05
 			tooltip = war_support_factor_tt
 		}
 		add_to_variable = {
-			MDL_trade_var = -0.05
+			MDL_trade_opinion_factor = -0.05
 			tooltip = trade_opinion_factor_neutral_tt
 		}
 	}
@@ -1582,7 +1582,7 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_enforce_Jizya"
 		custom_effect_tooltip = { IDEA = MDL_asabiyyah_modifier localization_key = modify_idea_tt }
 		add_to_variable = {
-			MDL_pp_var = 0.05
+			MDL_political_power_gain = 0.05
 			tooltip = political_power_gain_tt
 		}
 		add_to_variable = {
@@ -2011,7 +2011,7 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_take_lands_in_lakes"
 		custom_effect_tooltip = { IDEA = MDL_asabiyyah_modifier localization_key = modify_idea_tt }
 		add_to_variable = {
-			MDL_trade_var = 0.05
+			MDL_trade_opinion_factor = 0.05
 			tooltip = trade_opinion_factor_neutral_tt
 		}
 		add_to_variable = {
@@ -3192,7 +3192,7 @@ shared_focus = {
 			tooltip = conscription_tt
 		}
 		add_to_variable = {
-			MDL_stability_var = 0.05
+			MDL_stability_factor = 0.05
 			tooltip = stability_factor_tt
 		}
 		add_to_variable = {
@@ -3334,7 +3334,7 @@ shared_focus = {
 		country_event = { id = manedalusia.29 }
 		custom_effect_tooltip = { IDEA = MDL_asabiyyah_modifier localization_key = modify_idea_tt }
 		add_to_variable = {
-			MDL_morale_var = 0.10
+			MDL_army_morale_factor = 0.10
 			tooltip = army_morale_factor_tt
 		}
 		add_to_variable = {
@@ -3492,7 +3492,11 @@ shared_focus = {
 	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_navy_stuff"
-		add_dynamic_modifier = { modifier = MDL_manedalusian_navy_modifier }
+		custom_effect_tooltip = { IDEA = MDL_asabiyyah_modifier localization_key = modify_idea_tt }
+		add_to_variable = {
+			MDL_experience_gain_navy = 0.1
+			tooltip = experience_gain_navy_tt
+		}
 		navy_experience = 25
 		741 = {
 			add_extra_state_shared_building_slots = 1
@@ -3518,8 +3522,11 @@ shared_focus = {
 	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_expand_markets"
-		custom_effect_tooltip = MDL_modify_navy_mod_markets_tt
-		add_to_variable = { MDL_trade_opinion_factor = 0.10 }
+		custom_effect_tooltip = { IDEA = MDL_asabiyyah_modifier localization_key = modify_idea_tt }
+		add_to_variable = {
+			MDL_trade_opinion_factor = 0.10
+			tooltip = trade_opinion_factor_neutral_tt
+		}
 		country_event = { days = 5 id = manedalusia.27 }
 		741 = {
 			add_extra_state_shared_building_slots = 1
@@ -3704,10 +3711,19 @@ shared_focus = {
 	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_grand_zoco"
-		custom_effect_tooltip = MDL_modify_navy_mod_grand_zoco_tt
-		add_to_variable = { MDL_trade_opinion_factor = 0.10 }
-		add_to_variable = { MDL_research_speed_factor = 0.05 }
-		add_to_variable = { MDL_production_factory_efficiency_gain_factor = 0.10 }
+		custom_effect_tooltip = { IDEA = MDL_asabiyyah_modifier localization_key = modify_idea_tt }
+		add_to_variable = {
+			MDL_trade_opinion_factor = 0.10
+			tooltip = trade_opinion_factor_neutral_tt
+		}
+		add_to_variable = {
+			MDL_research_speed_factor = 0.05
+			tooltip = research_speed_factor_tt
+		}
+		add_to_variable = {
+			MDL_asabiyyah_production_factory_efficiency_gain_factor = 0.10
+			tooltip = production_factory_efficiency_gain_factor_tt
+		}
 		741 = {
 			add_extra_state_shared_building_slots = 2
 			add_building_construction = {
@@ -3732,9 +3748,11 @@ shared_focus = {
 	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_naval_patrols"
-		custom_effect_tooltip = MDL_modify_navy_mod_coastal_bunkers_tt
-
-		add_to_variable = { MDL_production_speed_coastal_bunker_factor = 0.50 }
+		custom_effect_tooltip = { IDEA = MDL_asabiyyah_modifier localization_key = modify_idea_tt }
+		add_to_variable = {
+			MDL_production_speed_coastal_bunker_factor = 0.50
+			tooltip = production_speed_coastal_bunker_factor_tt
+		}
 		add_doctrine_cost_reduction = {
 			name = MDL_naval_patrols
 			cost_reduction = 0.5
@@ -3762,9 +3780,14 @@ shared_focus = {
 	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_grand_admiralty"
-		custom_effect_tooltip = MDL_modify_navy_mod_xp_doctrine_cost_tt
-		add_to_variable = { MDL_experience_gain_navy = 0.10 }
-		add_to_variable = { MDL_naval_doctrine_cost_factor = -0.10 }
+		add_to_variable = {
+			MDL_experience_gain_navy = 0.1
+			tooltip = experience_gain_navy_tt
+		}
+		add_to_variable = {
+			MDL_naval_doctrine_cost_factor = -0.10
+			tooltip = naval_doctrine_cost_factor_tt
+		}
 	}
 	search_filters = { FOCUS_FILTER_NAVY_BONUS }
 }
@@ -3821,11 +3844,23 @@ shared_focus = {
 	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_naval_depot_network"
-		custom_effect_tooltip = MDL_modify_navy_mod_depots_tt
-		add_to_variable = { MDL_naval_coordination = 0.05 }
-		add_to_variable = { MDL_navy_max_range_factor = 0.10 }
-		add_to_variable = { MDL_industrial_capacity_dockyard = 0.05 }
-		add_to_variable = { MDL_production_speed_dockyard_factor = 0.10 }
+		custom_effect_tooltip = { IDEA = MDL_asabiyyah_modifier localization_key = modify_idea_tt }
+		add_to_variable = {
+			MDL_naval_coordination = 0.10
+			tooltip = naval_coordination_tt
+		}
+		add_to_variable = {
+			MDL_navy_max_range_factor = 0.10
+			tooltip = navy_max_range_factor_tt
+		}
+		add_to_variable = {
+			MDL_industrial_capacity_dockyard = 0.05
+			tooltip = industrial_capacity_dockyard_tt
+		}
+		add_to_variable = {
+			MDL_production_speed_dockyard_factor = 0.10
+			tooltip = state_production_speed_dockyard_factor_tt
+		}
 	}
 	search_filters = { FOCUS_FILTER_NAVY_BONUS }
 }
@@ -3837,13 +3872,22 @@ shared_focus = {
 	x = 0
 	y = 1
 	relative_position_id = MDL_naval_depot_network
-	prerequisite = { focus = MDL_grand_admiralty focus = MDL_naval_depot_network }
+	prerequisite = {
+		focus = MDL_grand_admiralty
+		focus = MDL_naval_depot_network
+	}
 	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_marine_corps"
-		custom_effect_tooltip = MDL_modify_navy_mod_marines_tt
-		add_to_variable = { MDL_amphibious_invasion = 0.25 }
-		add_to_variable = { MDL_naval_invasion_capacity = 5 }
+		custom_effect_tooltip = { IDEA = MDL_asabiyyah_modifier localization_key = modify_idea_tt }
+		add_to_variable = {
+			MDL_amphibious_invasion = 0.25
+			tooltip = amphibious_invasion_tt
+		}
+		add_to_variable = {
+			MDL_naval_invasion_capacity = 5
+			#TODO: add tooltip
+		}
 		add_tech_bonus = {
 			name = MDL_marine_corps
 			bonus = 2.0
@@ -3904,10 +3948,15 @@ shared_focus = {
 	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_coffee_current"
-		custom_effect_tooltip = MDL_modify_navy_mod_coffee_trade_tt
-		add_to_variable = { MDL_navy_max_range_factor = 0.15 }
-		add_to_variable = { MDL_production_factory_max_efficiency_factor = 0.05 }
 		custom_effect_tooltip = { IDEA = MDL_asabiyyah_modifier localization_key = modify_idea_tt }
+		add_to_variable = {
+			MDL_navy_max_range_factor = 0.15
+			tooltip = navy_max_range_factor_tt
+		}
+		add_to_variable = {
+			MDL_production_factory_max_efficiency_factor = 0.05
+			tooltip = production_factory_max_efficiency_factor_tt
+		}
 		add_to_variable = { 
 			MDL_consoom = 0.05
 			tooltip = consumer_goods_factor_tt
@@ -3954,7 +4003,7 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_reliable_traders"
 		custom_effect_tooltip = { IDEA = MDL_asabiyyah_modifier localization_key = modify_idea_tt }
 		add_to_variable = {
-			MDL_trade_var = 0.45
+			MDL_trade_opinion_factor = 0.45
 			tooltip = trade_opinion_factor_neutral_tt
 		}
 	}
@@ -3972,9 +4021,15 @@ shared_focus = {
 	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_merchant_outposts"
-		custom_effect_tooltip = MDL_modify_navy_mod_merchant_outposts_tt
-		add_to_variable = { MDL_trade_opinion_factor = 0.05 }
-		add_to_variable = { MDL_production_factory_efficiency_gain_factor = 0.05 }
+		custom_effect_tooltip = { IDEA = MDL_asabiyyah_modifier localization_key = modify_idea_tt }
+		add_to_variable = {
+			MDL_trade_opinion_factor = 0.05
+			tooltip = trade_opinion_factor_neutral_tt
+		}
+		add_to_variable = {
+			MDL_asabiyyah_production_factory_efficiency_gain_factor = 0.05
+			tooltip = production_factory_efficiency_gain_factor_tt
+		}
 		add_offsite_building = { type = industrial_complex level = 3 }
 		add_offsite_building = { type = arms_factory level = 1 }
 		add_offsite_building = { type = dockyard level = 1 }
@@ -4191,7 +4246,7 @@ shared_focus = {
 		custom_effect_tooltip = MDL_suffrage_and_army_tt
 		set_country_flag = manpower_laws_blocked
 		set_variable = {
-			MDL_mobilization_var = 0
+			MDL_mobilization_laws_cost_factor = 0
 			tooltip = mobilization_laws_cost_factor_tt
 		}
 	}
@@ -4861,11 +4916,11 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_empower_senate"
 		custom_effect_tooltip = { IDEA = MDL_asabiyyah_modifier localization_key = modify_idea_tt }
 		add_to_variable = {
-			MDL_stability_var = 0.05
+			MDL_stability_factor = 0.05
 			tooltip = stability_factor_tt
 		}
 		add_to_variable = {
-			var = MDL_org_var
+			var = MDL_army_org_factor
 			value = 0.02
 		}
 		add_advisor_role = {
@@ -4962,11 +5017,11 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_formalize_alliance"
 		custom_effect_tooltip = { IDEA = MDL_asabiyyah_modifier localization_key = modify_idea_tt }
 		add_to_variable = {
-			MDL_war_var = 0.05
+			MDL_war_support_factor = 0.05
 			tooltip = war_support_factor_tt
 		}
 		add_to_variable = {
-			MDL_trade_var = 0.05
+			MDL_trade_opinion_factor = 0.05
 			tooltip = trade_opinion_factor_neutral_tt
 		}
 		EQS = { country_event = manedalusia.134 }
@@ -5062,11 +5117,11 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_monument_to_aaliyah"
 		custom_effect_tooltip = { IDEA = MDL_asabiyyah_modifier localization_key = modify_idea_tt }
 		add_to_variable = {
-			MDL_morale_var = 0.02
+			MDL_army_morale_factor = 0.02
 			tooltip = army_morale_factor_tt
 		}
 		add_to_variable = {
-			MDL_surrender_var = 0.10
+			MDL_surrender_limit = 0.10
 			tooltip = surrender_limit_tt
 		}
 		add_ideas = MDL_aaliyah_monument
@@ -5195,7 +5250,7 @@ shared_focus = {
 		custom_effect_tooltip = MDL_remove_tradelaw_econ_cost_tt
 		add_ideas = free_trade
 		set_variable = {
-			MDL_economy_var = 0
+			MDL_economy_cost_factor = 0
 			tooltip = economy_cost_factor_tt
 		}
 	}
@@ -5418,7 +5473,7 @@ shared_focus = {
 		}
 		hidden_effect = {
 			set_variable = {
-			MDL_economy_var = 0
+			MDL_economy_cost_factor = 0
 			tooltip = economy_cost_factor_tt
 		}
 			if = {
@@ -5474,7 +5529,7 @@ shared_focus = {
 			load_oob = "MDL_koltaliba"
 		}
 		set_variable = {
-			MDL_mobilization_var = 0
+			MDL_mobilization_laws_cost_factor = 0
 			tooltip = mobilization_laws_cost_factor_tt
 		}
 		add_ideas = extensive_conscription

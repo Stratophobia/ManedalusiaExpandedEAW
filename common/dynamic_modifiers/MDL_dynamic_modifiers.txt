@@ -4,19 +4,19 @@ MDL_asabiyyah_modifier = {
 	remove_trigger = {
 		NOT = { has_country_flag = MDL_asabiyyah_unlocked }
 	}
-	trade_opinion_factor = MDL_trade_var
-	production_factory_max_efficiency_factor = MDL_production_var
-	research_speed_factor = MDL_research_var
-	army_org_factor = MDL_org_var
-	army_morale_factor = MDL_morale_var
+	trade_opinion_factor = MDL_trade_opinion_factor
+	production_factory_max_efficiency_factor = MDL_production_factory_max_efficiency_factor
+	research_speed_factor = MDL_research_speed_factor
+	army_org_factor = MDL_army_org_factor
+	army_morale_factor = MDL_army_morale_factor
 	supply_consumption_factor = MDL_supply_consumption_factor
-	surrender_limit = MDL_surrender_var
-	consumer_goods_factor = MDL_consoom_var
-	political_power_gain = MDL_pp_var
-	economy_cost_factor = MDL_economy_var
-	mobilization_laws_cost_factor = MDL_mobilization_var
-	stability_factor = MDL_stability_var
-	war_support_factor = MDL_war_var
+	surrender_limit = MDL_surrender_limit
+	consumer_goods_factor = MDL_consumer_goods_factor
+	political_power_gain = MDL_political_power_gain
+	economy_cost_factor = MDL_economy_cost_factor
+	mobilization_laws_cost_factor = MDL_mobilization_laws_cost_factor
+	stability_factor = MDL_stability_factor
+	war_support_factor = MDL_war_support_factor
 	special_forces_no_supply_grace = MDL_special_forces_no_supply_grace
 	heat_attrition_factor = MDL_heat_attrition_factor
 	special_forces_out_of_supply_factor = MDL_special_forces_out_of_supply_factor
@@ -40,25 +40,15 @@ MDL_asabiyyah_modifier = {
 	command_power_gain = MDL_command_power_gain
 	experience_gain_army = MDL_experience_gain_army
 	land_doctrine_cost_factor = MDL_land_doctrine_cost_factor
-}
-
-MDL_manedalusian_navy_modifier = {
-	icon = GFX_idea_MDL_manedalusian_navy_modifier
-	enable = { always = yes }
-
 	experience_gain_navy = MDL_experience_gain_navy
 	naval_doctrine_cost_factor = MDL_naval_doctrine_cost_factor
+	industrial_capacity_dockyard = MDL_industrial_capacity_dockyard
 	naval_coordination = MDL_naval_coordination
 	navy_max_range_factor = MDL_navy_max_range_factor
-	industrial_capacity_dockyard = MDL_industrial_capacity_dockyard
 	production_speed_dockyard_factor = MDL_production_speed_dockyard_factor
-	production_factory_max_efficiency_factor = MDL_production_factory_max_efficiency_factor
-	trade_opinion_factor = MDL_trade_opinion_factor
-	research_speed_factor = MDL_research_speed_factor
-	production_factory_efficiency_gain_factor = MDL_production_factory_efficiency_gain_factor
-	production_speed_coastal_bunker_factor = MDL_production_speed_coastal_bunker_factor
-	amphibious_invasion = MDL_amphibious_invasion
 	naval_invasion_capacity = MDL_naval_invasion_capacity
+	amphibious_invasion = MDL_amphibious_invasion
+	production_speed_coastal_bunker_factor = MDL_production_speed_coastal_bunker_factor
 }
 
 MDL_federal_army_modifier = {
