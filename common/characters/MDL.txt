@@ -35,6 +35,7 @@ characters = {
 			idea_token = MDL_velvet_qamar
 			available = {
 				NOT = {
+					has_government = fascism
 					has_country_leader = {
 						character = MDL_velvet_qamar
 						ruling_only = yes
@@ -60,18 +61,23 @@ characters = {
 			id=-1
 		}
 	}
-	MDL_fernao_grifo={
-		name=MDL_fernao_grifo
-		portraits={
-			civilian={
-				large="gfx/leaders/MDL/fernao_grifo.tga"
-				small="gfx/interface/ideas/Advisors/MDL/MDL_fernao_grifo.tga"
+	MDL_fernao_grifo = {
+		name = MDL_fernao_grifo
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MDL/fernao_grifo.tga"
+				small = "gfx/interface/ideas/Advisors/MDL/MDL_fernao_grifo.tga"
 			}
-			army={
-				large="gfx/leaders/MDL/fernao_grifo.tga"
+			army = {
+				large = "gfx/leaders/MDL/fernao_grifo.tga"
 			}
 		}
-		gender=male
+		gender = male
+		advisor = {
+			slot = political_advisor
+			idea_token = MDL_fernao_grifo
+			traits = { MDL_tortured_poet_trait }
+		}
 	}
 	MDL_armil_khaldun={
 		name=MDL_armil_khaldun

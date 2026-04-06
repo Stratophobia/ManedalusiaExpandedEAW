@@ -309,14 +309,6 @@ ideas = {
 				production_factory_efficiency_gain_factor = 0.05
 			}
 		}
-		MDL_jizya_idea = {
-			picture = MDL_jizya
-			modifier = {
-				political_power_gain = 0.05
-				conscription_factor = 0.10
-				MONTHLY_POPULATION = -0.20
-			}
-		}
 		MDL_naval_academy_idea = {
 			picture = MDL_naval_academy_idea
 			research_bonus = { naval_equipment = 0.10 }
@@ -537,43 +529,6 @@ ideas = {
 			targeted_modifier = {
 				tag = ABY
 				defense_bonus_against = 0.05
-			}
-		}
-###SAMIRA IDEAS###
-		MDL_national_census = {
-			picture = MDL_national_census
-			modifier = { conscription = 0.01 }
-		}
-		MDL_meritocratic_sultanate_idea = {
-			picture = MDL_meritocratic_sultanate
-			modifier = {
-				political_power_gain = 0.05
-				stability_weekly = 0.001
-				political_advisor_cost_factor = -0.05
-				war_support_factor = 0.10
-			}
-		}
-		MDL_spymasters_rule = {
-			picture = MDL_spymasters
-			cancel = {
-				NOT = { has_government = fascism }
-			}
-			modifier = {
-				encryption_factor = 0.30
-				decryption_factor = 0.30
-			}
-		}
-		MDL_sabotaged_supply = {
-			picture = MDL_sabotage
-			cancel = {
-				OR = {
-					NOT = { has_war_with = MDL }
-				}
-			}
-			modifier = {
-				army_speed_factor = -0.05
-				army_morale_factor = -0.15
-				surrender_limit = -0.35
 			}
 		}
 ###HOLY WAR IDEAS###

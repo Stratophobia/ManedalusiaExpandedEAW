@@ -167,7 +167,7 @@ country_event = {#The Council Gathers
 	}
 }
 
-country_event = {#
+country_event = {#FREE
 	id = manedalusia.3
 	title = manedalusia.3.t
 	desc = manedalusia.3.d
@@ -175,10 +175,6 @@ country_event = {#
 
 	option = {
 		name = manedalusia.3.a
-		add_political_power = -50
-		hidden_effect = {
-			country_event = { id = manedalusia.4 }
-		}
 	}
 }
 
@@ -963,7 +959,7 @@ country_event = {#colthage deal
 
 	option = {
 		name = manedalusia.35.a
-		ai_chance = { factor = 100 }
+		ai_chance = { base = 100 }
 		add_ideas = MDL_colthage_treaty
 		hidden_effect = {
 			MDL = {
@@ -974,7 +970,7 @@ country_event = {#colthage deal
 
 	option = {
 		name = manedalusia.35.b
-		ai_chance = { factor = 0 }
+		ai_chance = { base = 0 }
 		hidden_effect = {
 			MDL = {
 				country_event = { id = manedalusia.37 }
@@ -1211,47 +1207,8 @@ country_event = {#establish great lakes dominion
 
 	option = {
 		name = manedalusia.45.a
-		hidden_effect = {
-			MDL_create_dynamic_MAZ = yes
-			MAZ = {
-				for_each_scope_loop = {
-					array = MSS.original_cores
-					add_core_of = PREV
-				}
-				for_each_scope_loop = {
-					array = SON.original_cores
-					add_core_of = PREV
-				}
-				for_each_scope_loop = {
-					array = MSH.original_cores
-					add_core_of = PREV
-				}
-				for_each_scope_loop = {
-					array = ZWA.original_cores
-					add_core_of = PREV
-				}
-				for_each_scope_loop = {
-					array = ZUG.original_cores
-					add_core_of = PREV
-				}
-				for_each_scope_loop = {
-					array = ZEL.original_cores
-					add_core_of = PREV
-				}
-				for_each_scope_loop = {
-					array = HAY.original_cores
-					add_core_of = PREV
-				}
-				for_each_scope_loop = {
-					array = REE.original_cores
-					add_core_of = PREV
-				}
-			}
-			release_puppet = MAZ
-		}
-		MAZ = {
+		var:MDL_great_lakes_protectorate_tag = {
 			set_politics = { ruling_party = fascism }
-			set_cosmetic_tag = MAZ_VASSAL
 			add_ideas = MDL_MAZ_vassal
 		}
 	}
@@ -2402,13 +2359,13 @@ country_event = {#consulate in the empire
 	is_triggered_only = yes
 
 	option = {
-		ai_chance = { factor = 90 }
+		ai_chance = { base = 90 }
 		name = manedalusia.101.a
 		add_opinion_modifier = { target = MDL modifier = MDL_consulate }
 		MDL = { country_event = { id = manedalusia.102 } }
 	}
 	option = {
-		ai_chance = { factor = 10 }
+		ai_chance = { base = 10 }
 		name = manedalusia.101.b
 		MDL = { country_event = { id = manedalusia.103 } }
 	}
@@ -2444,7 +2401,7 @@ country_event = {#post war loan
 	is_triggered_only = yes
 
 	option = {
-		ai_chance = { factor = 100 }
+		ai_chance = { base = 100 }
 		name = manedalusia.104.a
 		add_timed_idea = {
 			idea = MDL_post_war_investment
@@ -2453,7 +2410,7 @@ country_event = {#post war loan
 		hidden_effect = { MDL = { country_event = { id = manedalusia.105 days = 3 } } }
 	}
 	option = {
-		ai_chance = { factor = 0 }
+		ai_chance = { base = 0 }
 		name = manedalusia.104.b
 		hidden_effect = { MDL = { country_event = { id = manedalusia.106 days = 3 } } }
 	}
@@ -3190,8 +3147,8 @@ country_event = {#FREE
 	title = manedalusia.151.t
 	desc = manedalusia.151.d
 	is_triggered_only = yes
-	desc = {
-		text = manedalusia.151.a
+	option = {
+		name = manedalusia.151.a
 	}
 }
 

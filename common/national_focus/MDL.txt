@@ -109,7 +109,7 @@ shared_focus = {
 	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_a_strange_benefactor"
-		country_event = manedalusia.3
+		country_event = manedalusia.4
 	}
 	search_filters = { FOCUS_FILTER_POLITICAL }
 }
@@ -544,6 +544,7 @@ shared_focus = {
 	cost = 1
 	prerequisite = { focus = MDL_a_strange_benefactor }
 	mutually_exclusive = { focus = MDL_lean_on_legacy focus = MDL_try_for_harmony }
+	available = { always = no }#WIP
 	allow_branch = {
 		NOT = {
 			OR = {
@@ -555,6 +556,7 @@ shared_focus = {
 	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_try_for_socialism"
+		custom_effect_tooltip = MDL_WIP_tt
 		add_power_balance_value = {
 			id = MDL_theological_bop
 			value = -0.05
@@ -1406,7 +1408,7 @@ shared_focus = {
 			limit = {
 				is_in_array = { state_original_cores = MGY }
 			}
-			add_core_of = ROOT
+			add_dynamic_modifier = { modifier = MDL_sultanate_province }
 		}
 	}
 	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER }
@@ -1506,12 +1508,12 @@ shared_focus = {
 	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_annex_ovingoland"
-		custom_effect_tooltip = MDL_annex_ovingoland_tt
-		hidden_effect = {
-			for_each_scope_loop = {
-				array = MKS.original_cores
-				add_core_of = MDL
+		add_manpower = 35000
+		every_owned_state = {
+			limit = {
+				is_in_array = { state_original_cores = MKS }
 			}
+			add_dynamic_modifier = { modifier = MDL_sultanate_province }
 		}
 	}
 	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER }
@@ -1575,7 +1577,19 @@ shared_focus = {
 	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_enforce_Jizya"
-		add_ideas = MDL_jizya_idea
+		custom_effect_tooltip = { IDEA = MDL_asabiyyah_modifier localization_key = modify_idea_tt }
+		add_to_variable = {
+			MDL_pp_var = 0.05
+			tooltip = political_power_gain_tt
+		}
+		add_to_variable = {
+			MDL_conscription_factor = 0.10
+			tooltip = conscription_factor_tt
+		}
+		add_to_variable = {
+			MDL_compliance_growth = 0.10
+			tooltip = compliance_growth_tt
+		}
 	}
 	search_filters = { FOCUS_FILTER_POLITICAL }
 }
@@ -1610,11 +1624,11 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_gunpowder_empire"
 		create_faction_from_template = faction_template_MDL_guardianship
-		custom_effect_tooltip = MDL_western_zebrican_hegemony_tt
 		add_power_balance_value = {
 			id = MDL_theological_bop
 			value = -0.10
 		}
+		unlock_decision_category_tooltip = MDL_crimson_war_tab
 		hidden_effect = { set_country_flag = MDL_crimson_war_decisions_unlocked }
 	}
 	search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1635,7 +1649,8 @@ shared_focus = {
 	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_conquer_yemane"
-		declare_war_on = { type = annex_everything target = YMN }
+		set_temp_variable = { wargoal_target = YMN }
+		immediate_war_declare_on_wargoal_target = yes
 	}
 	search_filters = { FOCUS_FILTER_ANNEXATION }
 }
@@ -1659,20 +1674,10 @@ shared_focus = {
 	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_conquer_donkeys"
-		if = {
-			limit = { ASS = { exists = yes } }
-			declare_war_on = {
-				type = annex_everything
-				target = ASS
-			}
-		}
-		if = {
-			limit = { ANS = { exists = yes } }
-			declare_war_on = {
-				type = annex_everything
-				target = ANS
-			}
-		}
+		set_temp_variable = { wargoal_target = ASS }
+		immediate_war_declare_on_wargoal_target = yes
+		set_temp_variable = { wargoal_target = ANS }
+		immediate_war_declare_on_wargoal_target = yes
 	}
 	search_filters = { FOCUS_FILTER_ANNEXATION }
 }
@@ -1684,7 +1689,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = MDL_conquer_yemane
 	available = {
-		956 = { is_owned_and_controlled_by = ROOT }
+		YMN = { all_original_cores_owned_by_ROOT = yes }
 	}
 	prerequisite = { focus = MDL_conquer_yemane }
 	cost = 5
@@ -1741,18 +1746,25 @@ shared_focus = {
 	relative_position_id = MDL_conquer_donkeys
 	cost = 6
 	available = {
-		956 = { is_owned_and_controlled_by = ROOT }
-		790 = { is_owned_and_controlled_by = ROOT }
-		810 = { is_owned_and_controlled_by = ROOT }
+		ASS = { all_original_cores_owned_by_ROOT = yes }
+		ANS = { all_original_cores_owned_by_ROOT = yes }
+		YMN = { all_original_cores_owned_by_ROOT = yes }
 	}
 	prerequisite = { focus = MDL_pacify_assur }
 	prerequisite = { focus = MDL_hold_in_arabian_sea }
 	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_annex_south"
-		ASS = { add_to_ROOT_potential_cores = yes }
-		ANS = { add_to_ROOT_potential_cores = yes }
-		YMN = { add_to_ROOT_potential_cores = yes }
+		every_owned_state = {
+			limit = {
+				OR = {
+					is_in_array = { state_original_cores = ASS }
+					is_in_array = { state_original_cores = ANS }
+					is_in_array = { state_original_cores = YMN }
+				}
+			}
+			add_dynamic_modifier = { modifier = MDL_sultanate_province }
+		}
 	}
 	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER }
 }
@@ -1765,23 +1777,15 @@ shared_focus = {
 	relative_position_id = MDL_the_crimson_sultanate
 	cost = 3
 	prerequisite = { focus = MDL_the_crimson_sultanate }
-	available = {
-		ABY = {
-			has_civil_war = no
-			exists_outside_sphere_of_influence = yes
-		}
-	}
 	bypass = {
-		ABY = {
-			has_civil_war = no
-			exists_outside_sphere_of_influence = no
-		}
+		ABY = { exists_outside_sphere_of_influence = no }
 	}
 	will_lead_to_war_with = ABY
 	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_conquer_abyssinia"
-		declare_war_on = { type = annex_everything target = ABY }
+		set_temp_variable = { wargoal_target = ABY }
+		immediate_war_declare_on_wargoal_target = yes
 	}
 	search_filters = { FOCUS_FILTER_ANNEXATION }
 }
@@ -1823,7 +1827,8 @@ shared_focus = {
 	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_conquer_klugetown"
-		declare_war_on = { type = annex_everything target = KLG }
+		set_temp_variable = { wargoal_target = KLG }
+		immediate_war_declare_on_wargoal_target = yes
 	}
 	search_filters = { FOCUS_FILTER_ANNEXATION }
 }
@@ -1889,7 +1894,12 @@ shared_focus = {
 			country_event = manedalusia.53
 		}
 		else = { country_event = manedalusia.71 }
-		ABY = { add_to_ROOT_potential_cores = yes }
+		every_owned_state = {
+			limit = {
+				is_in_array = { state_original_cores = ABY }
+			}
+			add_dynamic_modifier = { modifier = MDL_sultanate_province }
+		}
 		hidden_effect = {
 			if = {
 				limit = { has_country_flag = MDL_war_with_wingbardy }
@@ -1940,16 +1950,11 @@ shared_focus = {
 	completion_reward = {
 		country_event = { id = manedalusia.54 }
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_restore_mareakech"
-		custom_effect_tooltip = MDL_every_SDL_state_tt
-		effect_tooltip = {
-			add_dynamic_modifier = { modifier = MDL_sultanate_province } 
-		}
-		for_each_scope_loop = {
-			array = SDL.original_cores
-			if = {
-				limit = { is_owned_and_controlled_by = ROOT }
-				add_dynamic_modifier = { modifier = MDL_sultanate_province }
+		every_owned_state = {
+			limit = {
+				is_in_array = { state_original_cores = SDL }
 			}
+			add_dynamic_modifier = { modifier = MDL_sultanate_province }
 		}
 		866 = {
 			add_extra_state_shared_building_slots = 3
@@ -1990,19 +1995,26 @@ shared_focus = {
 	x = 2
 	y = 2
 	relative_position_id = MDL_western_zebrican_hegemony
-	cost = 3
+	cost = 2
 	available = {
-		902 = { is_owned_and_controlled_by = ROOT }
-		937 = { is_owned_and_controlled_by = ROOT }
-		943 = { is_owned_and_controlled_by = ROOT }
+		has_country_flag = MDL_has_great_lakes_protectorate
+		943 = {
+			owner = { is_subject_of = ROOT }
+		}
 	}
 	prerequisite = { focus = MDL_western_zebrican_hegemony }
 	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_take_lands_in_lakes"
-		country_event = manedalusia.45
-		ALO = { add_to_ROOT_potential_cores = yes }
-		TIM = { add_to_ROOT_potential_cores = yes }
+		custom_effect_tooltip = { IDEA = MDL_asabiyyah_modifier localization_key = modify_idea_tt }
+		add_to_variable = {
+			MDL_trade_var = 0.05
+			tooltip = trade_opinion_factor_neutral_tt
+		}
+		add_to_variable = {
+			MDL_compliance_growth = 0.05
+			tooltip = compliance_growth_tt
+		}
 	}
 	search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_POLITICAL }
 }
@@ -2010,7 +2022,7 @@ shared_focus = {
 shared_focus = {
 	id = MDL_annex_bats
 	icon = GFX_focus_MDL_annex_bats
-	cost = 3
+	cost = 2
 	x = -3
 	y = 1
 	relative_position_id = MDL_western_zebrican_hegemony
@@ -2065,11 +2077,15 @@ shared_focus = {
 	relative_position_id = MDL_western_zebrican_hegemony
 	cost = 4
 	available = { has_war = no }
-	prerequisite = { focus = MDL_annex_bats }
-	prerequisite = { focus = MDL_southern_mercenaries }
+	prerequisite = {
+		focus = MDL_annex_bats
+		focus = MDL_southern_mercenaries
+	}
 	prerequisite = { focus = MDL_restore_mareakech }
-	prerequisite = { focus = MDL_take_lands_in_lakes }
-	prerequisite = { focus = MDL_annex_riseia }
+	prerequisite = {
+		focus = MDL_take_lands_in_lakes
+		focus = MDL_annex_riseia
+	}
 	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_universal_caliphate"
@@ -2909,8 +2925,7 @@ shared_focus = {
 	relative_position_id = MDL_army_stuff
 	available = {
 		has_completed_focus = MDL_coltoba_university
-		owns_state = 738
-		owns_state = 740
+		MDL = { all_original_cores_owned_by_ROOT = yes }
 	}
 	prerequisite = { focus = MDL_go_with_alneighzari focus = MDL_go_with_samira }
 	ai_will_do = { base = 40 }
@@ -3913,8 +3928,10 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_colthaginian_deal"
 		add_political_power = -50
-		CTH = { country_event = { days = 5 id = manedalusia.35 }}
-		custom_effect_tooltip = MDL_colthaginian_deal_tt
+		CTH = {
+			country_event = { days = 5 id = manedalusia.35 }
+		}
+		unlock_decision_tooltip = MDL_colthage_treaty_decision
 		hidden_effect = { set_country_flag = MDL_cant_prompt_CTH }
 	}
 	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL }

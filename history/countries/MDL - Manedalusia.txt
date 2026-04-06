@@ -71,6 +71,7 @@ set_variable = { MDL_air_ace_generation_chance_factor = 0 }
 set_variable = { MDL_experience_gain_air = 0 }
 set_variable = { MDL_compliance_growth = 0 }
 set_variable = { MDL_conscription_var = 0 }
+set_variable = { MDL_MDL_conscription_factor = 0 }
 set_variable = { MDL_production_speed_buildings_factor = 0 }
 set_variable = { MDL_asabiyyah_production_factory_efficiency_gain_factor = 0 }
 set_variable = { MDL_industrial_capacity_factory = 0 }

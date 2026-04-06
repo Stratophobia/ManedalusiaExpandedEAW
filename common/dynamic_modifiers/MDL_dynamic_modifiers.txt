@@ -29,6 +29,7 @@ MDL_asabiyyah_modifier = {
 	experience_gain_air = MDL_experience_gain_air
 	compliance_growth = MDL_compliance_growth
 	conscription = MDL_conscription_var
+	conscription_factor = MDL_conscription_factor
 	production_speed_buildings_factor = MDL_production_speed_buildings_factor
 	production_factory_efficiency_gain_factor = MDL_asabiyyah_production_factory_efficiency_gain_factor
 	industrial_capacity_factory = MDL_industrial_capacity_factory
@@ -114,12 +115,12 @@ MDL_sultanate_province = {
 			NOT = { original_tag = MDL }
 		}
 	}
-	compliance_growth = 0.25
-	resistance_growth = -0.25
-	resistance_target = -0.25
+	compliance_growth = 0.35
+	resistance_growth = -0.30
+	resistance_target = -0.30
 	resistance_decay = 0.25
-	state_resources_factor = 0.10
-	local_factories = 0.20
+	state_resources_factor = 0.15
+	local_factories = 0.25
 }
 
 MDL_colonial_admin = {

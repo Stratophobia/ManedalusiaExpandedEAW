@@ -7,10 +7,6 @@ MDL_debug_tab_general = {
 		visible = { is_debug = yes }
 		complete_effect = { load_focus_tree = manedalusia_main }
 	}
-	MDL_debug_samira_tree = {
-		visible = { is_debug = yes }
-		complete_effect = { load_focus_tree = manedalusia_samira }
-	}
 }
 
 foreign_politics = {
@@ -868,6 +864,93 @@ MDL_republican_war_decisions_tab = {
 }
 
 MDL_crimson_war_tab = {
+	MDL_crimson_war_zar_puppet = {
+		visible = {
+			ZAR = { exists = no }
+			owns_state = 755
+		}
+		cost = 25
+		fire_only_once = yes
+		days_remove = 10
+		remove_effect = {
+			hidden_effect = {
+				ZAR = {
+					load_focus_tree = { tree = generic_zebra_focus }
+				}
+			}
+			ZAR = { set_cosmetic_tag = ZAR_crimson_vassal }
+			release_puppet = ZAR
+		}
+	}
+	MDL_crimson_puppet_great_lakes = {
+		icon = GFX_decision_infiltrate_state
+		visible = {
+			any_occupied_country = {
+				OR = {
+					tag = ALO
+					tag = TIM
+					tag = MSH
+					tag = SON
+					tag = MSS
+					tag = MAZ
+					tag = HAY
+					tag = ZUG
+					tag = ZWA
+					tag = ZEL
+					tag = REE
+				}
+			}
+		}
+		fire_only_once = yes
+		cost = 25
+		complete_effect = {
+			hidden_effect = { MDL_create_dynamic_great_lakes = yes }
+			country_event = manedalusia.45
+		}
+	}
+	MDL_crimson_transfer_to_great_lakes = {
+		icon = GFX_decision_infiltrate_state
+		cost = 0
+		visible = {
+			has_country_flag = MDL_has_great_lakes_protectorate
+			any_occupied_country = {
+				OR = {
+					tag = ALO
+					tag = TIM
+					tag = MSH
+					tag = SON
+					tag = MSS
+					tag = MAZ
+					tag = HAY
+					tag = ZUG
+					tag = ZWA
+					tag = ZEL
+					tag = REE
+				}
+			}
+		}
+		complete_effect = {
+			every_owned_state = {
+				limit = {
+					OR = {
+						is_in_array = { state_original_cores = ALO }
+						is_in_array = { state_original_cores = TIM }
+						is_in_array = { state_original_cores = MSH }
+						is_in_array = { state_original_cores = SON }
+						is_in_array = { state_original_cores = ZUG }
+						is_in_array = { state_original_cores = ZWA }
+						is_in_array = { state_original_cores = ZEL }
+						is_in_array = { state_original_cores = REE }
+						is_in_array = { state_original_cores = MSS }
+						is_in_array = { state_original_cores = MAZ }
+						is_in_array = { state_original_cores = HAY }
+					}
+				}
+				transfer_state_to = var:MDL_great_lakes_protectorate_tag
+				add_core_of = var:MDL_great_lakes_protectorate_tag
+			}
+		}
+	}
 	MDL_crimson_war_riseia = {
 		icon = GFX_decision_infiltrate_state
 		available = { 956 = { is_owned_and_controlled_by = ROOT } }
@@ -875,18 +958,12 @@ MDL_crimson_war_tab = {
 		cost = 25
 		days_remove = 30
 		remove_effect = {
-			if = {
-				limit = { HMR = { exists = yes } }
-				declare_war_on = { type = annex_everything target = HMR }
-			}
-			if = {
-				limit = { MTA = { exists = yes } }
-				declare_war_on = { type = annex_everything target = MTA }
-			}
-			if = {
-				limit = { OSQ = { exists = yes } }
-				declare_war_on = { type = annex_everything target = OSQ }
-			}
+			set_temp_variable = { wargoal_target = HMR }
+			immediate_war_declare_on_wargoal_target = yes
+			set_temp_variable = { wargoal_target = MTA }
+			immediate_war_declare_on_wargoal_target = yes
+			set_temp_variable = { wargoal_target = OSQ }
+			immediate_war_declare_on_wargoal_target = yes
 		}
 	}
 	MDL_crimson_war_great_lakes = {
@@ -895,50 +972,28 @@ MDL_crimson_war_tab = {
 		cost = 25
 		days_remove = 30
 		remove_effect = {
-			if = {
-				limit = { ALO = { exists = yes } }
-				declare_war_on = { type = annex_everything target = ALO }
-			}
-			if = {
-				limit = { TIM = { exists = yes } }
-				declare_war_on = { type = annex_everything target = TIM }
-			}
-			if = {
-				limit = { REE = { exists = yes } }
-				declare_war_on = { type = annex_everything target = REE }
-			}
-			if = {
-				limit = { MSH = { exists = yes } }
-				declare_war_on = { type = annex_everything target = MSH }
-			}
-			if = {
-				limit = { SON = { exists = yes } }
-				declare_war_on = { type = annex_everything target = SON }
-			}
-			if = {
-				limit = { MAZ = { exists = yes } }
-				declare_war_on = { type = annex_everything target = MAZ }
-			}
-			if = {
-				limit = { ZWA = { exists = yes } }
-				declare_war_on = { type = annex_everything target = ZWA }
-			}
-			if = {
-				limit = { ZUG = { exists = yes } }
-				declare_war_on = { type = annex_everything target = ZUG }
-			}
-			if = {
-				limit = { ZEL = { exists = yes } }
-				declare_war_on = { type = annex_everything target = ZEL }
-			}
-			if = {
-				limit = { HAY = { exists = yes } }
-				declare_war_on = { type = annex_everything target = HAY }
-			}
-			if = {
-				limit = { MSS = { exists = yes } }
-				declare_war_on = { type = annex_everything target = MSS }
-			}
+			set_temp_variable = { wargoal_target = ALO }
+			immediate_war_declare_on_wargoal_target = yes
+			set_temp_variable = { wargoal_target = TIM }
+			immediate_war_declare_on_wargoal_target = yes
+			set_temp_variable = { wargoal_target = REE }
+			immediate_war_declare_on_wargoal_target = yes
+			set_temp_variable = { wargoal_target = MSH }
+			immediate_war_declare_on_wargoal_target = yes
+			set_temp_variable = { wargoal_target = SON }
+			immediate_war_declare_on_wargoal_target = yes
+			set_temp_variable = { wargoal_target = MAZ }
+			immediate_war_declare_on_wargoal_target = yes
+			set_temp_variable = { wargoal_target = ZWA }
+			immediate_war_declare_on_wargoal_target = yes
+			set_temp_variable = { wargoal_target = ZUG }
+			immediate_war_declare_on_wargoal_target = yes
+			set_temp_variable = { wargoal_target = ZEL }
+			immediate_war_declare_on_wargoal_target = yes
+			set_temp_variable = { wargoal_target = HAY }
+			immediate_war_declare_on_wargoal_target = yes
+			set_temp_variable = { wargoal_target = MSS }
+			immediate_war_declare_on_wargoal_target = yes
 		}
 	}
 	MDL_crimson_war_bats = {
@@ -954,30 +1009,11 @@ MDL_crimson_war_tab = {
 		cost = 25
 		days_remove = 30
 		remove_effect = {
-			if = {
-				limit = { BAT = { exists = yes } }
-				declare_war_on = { type = annex_everything target = BAT }
-			}
+			set_temp_variable = { wargoal_target = BAT }
+			immediate_war_declare_on_wargoal_target = yes
 		}
 	}
-	MDL_crimson_war_zar_puppet = {
-		visible = {
-			ZAR = { exists = no }
-			owns_state = 755
-		}
-		cost = 25
-		fire_only_once = yes
-		days_remove = 10
-		remove_effect = {
-			hidden_effect = {
-				ZAR = {
-					load_focus_tree = { tree = generic_zebra_focus }
-				}
-			}
-			ZAR = { set_cosmetic_tag = ZAR_VASSAL }
-			release_puppet = ZAR
-		}
-	}
+
 	MDL_crimson_war_hestraya = {
 		icon = GFX_decision_infiltrate_state
 		available = {
@@ -987,18 +1023,12 @@ MDL_crimson_war_tab = {
 		cost = 25
 		days_remove = 30
 		remove_effect = {
-			if = {
-				limit = { KAR = { exists = yes } }
-				declare_war_on = { type = annex_everything target = KAR }
-			}
-			if = {
-				limit = { AES = { exists = yes } }
-				declare_war_on = { type = annex_everything target = AES }
-			}
-			if = {
-				limit = { MTO = { exists = yes } }
-				declare_war_on = { type = annex_everything target = MTO }
-			}
+			set_temp_variable = { wargoal_target = KAR }
+			immediate_war_declare_on_wargoal_target = yes
+			set_temp_variable = { wargoal_target = MTO }
+			immediate_war_declare_on_wargoal_target = yes
+			set_temp_variable = { wargoal_target = AES }
+			immediate_war_declare_on_wargoal_target = yes
 		}
 	}
 }

@@ -33,8 +33,8 @@ MDL_theological_bop = {
 			min = -0.55
 			max = -0.22
 			modifier = {
-				army_morale_factor = 0.050
-				weekly_manpower = 100
+				army_morale_factor = 0.025
+				weekly_manpower = 200
 			}
 			on_activate = {
 				set_power_balance_gfx = {
@@ -54,8 +54,8 @@ MDL_theological_bop = {
 			min = -1.00
 			max = -0.55
 			modifier = {
-				army_morale_factor = 0.10
-				weekly_manpower = 200
+				army_morale_factor = 0.05
+				weekly_manpower = 400
 			}
 			on_activate = {
 				set_power_balance_gfx = {
