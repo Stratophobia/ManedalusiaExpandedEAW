@@ -2114,14 +2114,19 @@ shared_focus = {
 	cost = 3
 	prerequisite = { focus = MDL_western_zebrican_hegemony }
 	available = {
-		HMR = { all_original_cores_owned_by_ROOT = yes }
-		OSQ = { all_original_cores_owned_by_ROOT = yes }
-		MTA = { all_original_cores_owned_by_ROOT = yes }
+		MTA = { is_core_of = ROOT }
 	}
 	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_annex_riseia"
-		country_event = manedalusia.93
+		add_to_variable = {
+			MDL_heat_attrition_factor = 0.10
+			tooltip = heat_attrition_factor_tt
+		}
+		add_to_variable = {
+			MDL_land_night_attack = 0.35
+			tooltip = land_night_attack_tt
+		}
 	}
 	search_filters = { FOCUS_FILTER_ANNEXATION }
 }
@@ -2170,7 +2175,19 @@ shared_focus = {
 	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_into_the_southlands"
-
+		custom_effect_tooltip = { IDEA = MDL_asabiyyah_modifier localization_key = modify_idea_tt }
+		add_to_variable = {
+			MDL_political_power_gain = 0.05
+			tooltip = political_power_gain_tt
+		}
+		add_to_variable = {
+			MDL_stability_factor = 0.05
+			tooltip = stability_factor_tt
+		}
+		add_to_variable = {
+			MDL_war_support_factor = 0.05
+			tooltip = war_support_factor_tt
+		}
 	}
 	search_filters = { FOCUS_FILTER_ANNEXATION }
 }

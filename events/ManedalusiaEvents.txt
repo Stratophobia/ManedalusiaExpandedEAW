@@ -2170,13 +2170,6 @@ country_event = {#Laylah takes over in Riseia
 			id = MDL_theological_bop
 			value = 0.05
 		}
-		RIZ = {
-			set_party_name = {
-				ideology = fascism
-				long_name = RIZ_LAYLAH_PARTY_NAME_LONG
-				name = RIZ_LAYLAH_PARTY_NAME
-			}
-		}
 		hidden_effect = {
 			MDL_moonstriker_laylah = {
 				set_portraits = {
@@ -2189,26 +2182,8 @@ country_event = {#Laylah takes over in Riseia
 					}
 				}
 			}
-			for_each_scope_loop = {
-				array = MTA.original_cores
-				add_core_of = RIZ
-			}
-			for_each_scope_loop = {
-				array = OSQ.original_cores
-				add_core_of = RIZ
-			}
-			for_each_scope_loop = {
-				array = HMR.original_cores
-				add_core_of = RIZ
-			}
-			RIZ = { load_focus_tree = generic_zebra_focus }
-			MDL = { RIZ = { transfer_technology = yes } }
 		}
-		release_puppet = RIZ
-		RIZ = {
-			set_politics = { ruling_party = fascism }
-			add_ideas = RIZ_council_adaptation
-		}
+		MTA = { add_ideas = RIZ_council_adaptation }
 	}
 }
 

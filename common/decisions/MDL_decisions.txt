@@ -98,7 +98,7 @@ MDL_shield_doctrine_tab = {
 	}
 	MDL_shield_puppet_MGY = {
 		icon = GFX_decision_MDL_shield_puppet_MGY
-		ai_will_do = { factor = 300 }
+		ai_will_do = { base = 300 }
 		visible = {
 			has_country_flag = MDL_shield_doctrine_unlocked
 			MGY = { exists = no }
@@ -124,7 +124,7 @@ MDL_shield_doctrine_tab = {
 	MDL_shield_puppet_BAT = {
 		icon = GFX_decision_MDL_shield_puppet_BAT
 		available = { has_war = no }
-		ai_will_do = { factor = 300 }
+		ai_will_do = { base = 300 }
 		visible = {
 			has_country_flag = MDL_shield_doctrine_unlocked
 			BAT = { exists = no }
@@ -152,7 +152,7 @@ MDL_shield_doctrine_tab = {
 	}
 	MDL_shield_puppet_ABY = {
 		icon = GFX_decision_MDL_shield_puppet_ABY
-		ai_will_do = { factor = 300 }
+		ai_will_do = { base = 300 }
 		visible = {
 			 has_country_flag = MDL_shield_doctrine_unlocked
 			ABY = { exists = no }
@@ -882,11 +882,24 @@ MDL_crimson_war_tab = {
 			release_puppet = ZAR
 		}
 	}
+	MDL_crimson_puppet_MTA = {
+		icon = GFX_decision_infiltrate_state
+		ai_will_do = { base = 300 }
+		visible = {
+			any_occupied_country = { tag = MTA }
+			MTA = { exists = no }
+		}
+		cost = 25
+		complete_effect = {
+			country_event = manedalusia.93
+			hidden_effect = { MDL_create_dynamic_MTA = yes}
+			MTA = { set_cosmetic_tag = BAT_crimson_vassal }
+		}
+	}
 	MDL_crimson_puppet_BAT = {
 		icon = GFX_decision_MDL_shield_puppet_BAT
-		ai_will_do = { factor = 300 }
+		ai_will_do = { base = 300 }
 		visible = {
-			has_country_flag = MDL_shield_doctrine_unlocked
 			any_occupied_country = { tag = BAT }
 			BAT = { exists = no }
 		}
@@ -895,6 +908,29 @@ MDL_crimson_war_tab = {
 			country_event = manedalusia.94
 			hidden_effect = { MDL_create_dynamic_BAT = yes}
 			BAT = { set_cosmetic_tag = BAT_crimson_vassal }
+		}
+	}
+	MDL_crimson_transfer_to_riseia = {
+		icon = GFX_decision_infiltrate_state
+		visible = {
+			MTA = { is_subject_of = ROOT }
+			any_occupied_country = {
+				OR = {
+					tag = MTA
+					tag = HMR
+					tag = OSQ
+				}
+			}
+		}
+		complete_effect = {
+			every_owned_state = {
+				limit = {
+					is_in_array = { state_original_cores = MTA }
+					is_in_array = { state_original_cores = HMR }
+					is_in_array = { state_original_cores = OSQ }
+				}
+				transfer_state_to = MTA
+			}
 		}
 	}
 	MDL_crimson_puppet_karkad = {
@@ -1330,7 +1366,7 @@ military_training_category = {
 
 CHN_protectorates = {
 	CHN_manedalusia_protectorate = {
-		ai_will_do = { factor = 100 }
+		ai_will_do = { base = 100 }
 		icon = MDL_eye
 		highlight_states = {
 			highlight_state_targets = {
