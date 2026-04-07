@@ -1182,10 +1182,7 @@ country_event = {#establish great lakes dominion
 
 	option = {
 		name = manedalusia.45.a
-		MDL.var:great_lakes_protectorate_tag = {
-			set_politics = { ruling_party = fascism }
-			add_ideas = MDL_MAZ_vassal
-		}
+		var:great_lakes_protectorate_tag = { add_ideas = MDL_MAZ_vassal }
 	}
 }
 
@@ -1431,7 +1428,7 @@ country_event = {#FREE
 	id = manedalusia.55
 	title = manedalusia.55.t
 	desc = manedalusia.55.d
-	is_triggered_only = yes#on_action
+	is_triggered_only = yes
 
 	option = {
 		name = manedalusia.55.a
@@ -3447,12 +3444,6 @@ country_event = {#literacy event 1
 	option = {
 		name = manedalusia.181.a
 		decrease_illiteracy = yes
-		hidden_effect = {
-			country_event = {
-				id = manedalusia.182
-				days = 120
-			}
-		}
 	}
 }
 
@@ -3464,6 +3455,5 @@ country_event = {#literacy event 2
 
 	option = {
 		name = manedalusia.182.a
-		decrease_illiteracy = yes
 	}
 }

@@ -54,6 +54,7 @@ buildings = {
 			enable_for_controllers = { MDL }
 			modifiers = {	
 				political_advisor_cost_factor = -0.10
+				research_speed_factor = 0.05
 			}
 		}
 	}

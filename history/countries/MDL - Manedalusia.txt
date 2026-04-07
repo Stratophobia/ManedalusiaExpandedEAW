@@ -38,6 +38,7 @@ set_power_balance = {
   set_value = 0
 }
 set_variable = { MDL_theology_drift_cost_var = 50 }
+set_variable = { MDL_university_progress = 0 }
 
 set_country_flag = trade_laws_blocked
 set_country_flag = has_custom_advisors
@@ -58,6 +59,8 @@ set_variable = { MDL_mobilization_laws_cost_factor = 0.30 }
 set_variable = { MDL_stability_factor = 0.10 }
 set_variable = { MDL_war_support_factor = -0.05 }
 
+set_variable = { MDL_faction_trade_opinion_factor = 0 }
+set_variable = { MDL_opinion_gain_monthly = 0 }
 set_variable = { MDL_special_forces_training_time_factor = 0 }
 set_variable = { MDL_special_forces_out_of_supply_factor = 0 }
 set_variable = { MDL_heat_attrition_factor = 0 }
@@ -84,12 +87,12 @@ set_variable = { MDL_naval_coordination = 0 }
 set_variable = { MDL_navy_max_range_factor = 0 }
 set_variable = { MDL_industrial_capacity_dockyard = 0 }
 set_variable = { MDL_production_speed_dockyard_factor = 0 }
-
-###Navy Modifier Variables###
-
 set_variable = { MDL_production_speed_coastal_bunker_factor = 0 }
 set_variable = { MDL_amphibious_invasion = 0 }
 set_variable = { MDL_naval_invasion_capacity = 0 }
+set_variable = { MDL_naval_accidents_chance = 0 }
+set_variable = { MDL_factory_energy_consumption = 0 }
+set_variable = { MDL_navy_leader_start_level = 0 }
 
 #Federal Army variables on Game Start
 set_variable = { MDL_FA_special_forces_var = 0.25 }
@@ -110,7 +113,6 @@ recruit_character = MDL_transitional_military_council
 recruit_character = MDL_velvet_qamar
 recruit_character = MDL_sunset_mirage
 recruit_character = MDL_fernao_grifo
-
 recruit_character = MDL_senate
 recruit_character = MDL_armil_khaldun
 recruit_character = MDL_crimson_sayf

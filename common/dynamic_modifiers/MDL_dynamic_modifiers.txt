@@ -4,7 +4,10 @@ MDL_asabiyyah_modifier = {
 	remove_trigger = {
 		NOT = { has_country_flag = MDL_asabiyyah_unlocked }
 	}
+
+	opinion_gain_monthly = MDL_opinion_gain_monthly
 	trade_opinion_factor = MDL_trade_opinion_factor
+	faction_trade_opinion_factor = MDL_faction_trade_opinion_factor
 	production_factory_max_efficiency_factor = MDL_production_factory_max_efficiency_factor
 	research_speed_factor = MDL_research_speed_factor
 	army_org_factor = MDL_army_org_factor
@@ -49,6 +52,10 @@ MDL_asabiyyah_modifier = {
 	naval_invasion_capacity = MDL_naval_invasion_capacity
 	amphibious_invasion = MDL_amphibious_invasion
 	production_speed_coastal_bunker_factor = MDL_production_speed_coastal_bunker_factor
+	naval_accidents_chance = MDL_naval_accidents_chance
+	factory_energy_consumption = MDL_factory_energy_consumption
+	navy_leader_start_level = MDL_navy_leader_start_level
+
 }
 
 MDL_federal_army_modifier = {

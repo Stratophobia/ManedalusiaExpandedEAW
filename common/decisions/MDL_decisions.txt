@@ -872,7 +872,6 @@ MDL_crimson_war_tab = {
 		}
 		cost = 25
 		fire_only_once = yes
-		days_remove = 10
 		remove_effect = {
 			hidden_effect = {
 				ZAR = {
@@ -953,7 +952,7 @@ MDL_crimson_war_tab = {
 		}
 	}
 	MDL_crimson_war_riseia = {
-		icon = GFX_decision_infiltrate_state
+		icon = crossed_swords
 		available = { 956 = { is_owned_and_controlled_by = ROOT } }
 		fire_only_once = yes
 		cost = 25
@@ -968,7 +967,7 @@ MDL_crimson_war_tab = {
 		}
 	}
 	MDL_crimson_war_great_lakes = {
-		icon = GFX_decision_infiltrate_state
+		icon = crossed_swords
 		fire_only_once = yes
 		cost = 25
 		days_remove = 30
@@ -998,7 +997,7 @@ MDL_crimson_war_tab = {
 		}
 	}
 	MDL_crimson_war_bats = {
-		icon = GFX_decision_infiltrate_state
+		icon = crossed_swords
 		visible = {
 			BAT = {
 				exists = yes
@@ -1016,7 +1015,7 @@ MDL_crimson_war_tab = {
 	}
 
 	MDL_crimson_war_hestraya = {
-		icon = GFX_decision_infiltrate_state
+		icon = crossed_swords
 		available = {
 			868 = { is_owned_and_controlled_by = ROOT }
 		}
@@ -1030,6 +1029,104 @@ MDL_crimson_war_tab = {
 			immediate_war_declare_on_wargoal_target = yes
 			set_temp_variable = { wargoal_target = AES }
 			immediate_war_declare_on_wargoal_target = yes
+		}
+	}
+}
+
+MDL_coltoba_university_tab = {
+	MDL_university_finish = {
+		icon = GFX_decision_MDL_fiqh_1#REPLACE
+		cost = 25
+		available = {
+			hidden_trigger = {
+				check_variable = {
+					var = MDL_university_progress
+					value = 4
+					compare = greater_than_or_equals
+				}
+			}
+		}
+		days_remove = 25 
+		remove_effect = {
+			741 = {
+				add_building_construction = {
+					type = landmark_university_of_coltoba
+					level = 1
+					province = 12234
+				}
+			}
+		}
+	}
+	MDL_university_military = {
+		icon = GFX_decision_MDL_fiqh_1#REPLACE
+		available = { has_idea = MDL_cims }
+		cost = 50
+		days_remove = 50
+		remove_effect = {
+			custom_effect_tooltip = { IDEA = MDL_asabiyyah_modifier localization_key = modify_idea_tt }
+			add_to_variable = {
+				MDL_industrial_capacity_factory = 0.10
+				tooltip = industrial_capacity_factory_tt
+			}
+			add_to_variable = { MDL_university_progress = 1 }
+		}
+	}
+	MDL_university_civilian = {
+		icon = GFX_decision_MDL_fiqh_1#REPLACE
+		available = {	
+			num_of_civilian_factories > 10
+		}
+		cost = 50
+		days_remove = 50
+		remove_effect = {
+			country_event = manedalusia.182
+			custom_effect_tooltip = { IDEA = MDL_asabiyyah_modifier localization_key = modify_idea_tt }
+			add_to_variable = {
+				MDL_factory_energy_consumption = -0.10
+				tooltip = factory_energy_consumption_tt
+			}
+			decrease_illiteracy = yes
+			add_to_variable = { MDL_university_progress = 1 }
+		}
+	}
+	MDL_university_dockyard = {
+		icon = GFX_decision_MDL_fiqh_1#REPLACE
+		available = {
+			num_of_available_naval_factories > 10
+		}
+		cost = 50
+		days_remove = 50
+		remove_effect = {
+			custom_effect_tooltip = { IDEA = MDL_asabiyyah_modifier localization_key = modify_idea_tt }
+			add_to_variable = {
+				MDL_navy_leader_start_level = 2
+				tooltip = MODIFIER_NAVY_LEADER_START_LEVEL
+			}
+			add_to_variable = {
+				MDL_naval_accidents_chance = -0.3
+				tooltip = naval_accidents_chance_tt
+			}
+			add_to_variable = { MDL_university_progress = 1 }
+		}
+	}
+	MDL_university_international = {
+		icon = GFX_decision_MDL_fiqh_1#REPLACE
+		available = {
+			MDL = { all_original_cores_owned_by_ROOT = yes }
+		}
+		cost = 50
+		days_remove = 50
+		remove_effect = {
+			country_event = manedalusia.19
+			add_to_variable = {
+				MDL_opinion_gain_monthly = 5
+				#TODO: add tooltip
+			}
+			add_to_variable = {
+				MDL_faction_trade_opinion_factor = 0.5
+				#TODO: add tooltip
+			}
+			add_to_variable = { MDL_university_progress = 1 }
 		}
 	}
 }
