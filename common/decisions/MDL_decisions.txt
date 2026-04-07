@@ -882,6 +882,60 @@ MDL_crimson_war_tab = {
 			release_puppet = ZAR
 		}
 	}
+	MDL_crimson_puppet_BAT = {
+		icon = GFX_decision_MDL_shield_puppet_BAT
+		ai_will_do = { factor = 300 }
+		visible = {
+			has_country_flag = MDL_shield_doctrine_unlocked
+			any_occupied_country = { tag = BAT }
+			BAT = { exists = no }
+		}
+		cost = 25
+		complete_effect = {
+			country_event = manedalusia.94
+			hidden_effect = { MDL_create_dynamic_BAT = yes}
+			BAT = { set_cosmetic_tag = BAT_crimson_vassal }
+		}
+	}
+	MDL_crimson_puppet_karkad = {
+		icon = GFX_decision_infiltrate_state
+		visible = {
+			NOT = { country_exists = KAR }
+			any_occupied_country = { tag = KAR }
+		}
+		cost = 25
+		fire_only_once = yes
+		complete_effect = {
+			hidden_effect = {
+				MDL_create_dynamic_KAR = yes
+				KAR = { set_cosmetic_tag = KAR_VASSAL }
+			}
+			country_event = manedalusia.44
+		}
+	}
+	MDL_crimson_transfer_to_karkad = {
+		icon = GFX_decision_infiltrate_state
+		visible = {
+			KAR = { is_subject_of = ROOT }
+			any_occupied_country = {
+				OR = {
+					tag = KAR
+					tag = AES
+					tag = MTO
+				}
+			}
+		}
+		complete_effect = {
+			every_owned_state = {
+				limit = {
+					is_in_array = { state_original_cores = KAR }
+					is_in_array = { state_original_cores = MTO }
+					is_in_array = { state_original_cores = AES }
+				}
+				transfer_state_to = KAR
+			}
+		}
+	}
 	MDL_crimson_puppet_great_lakes = {
 		icon = GFX_decision_infiltrate_state
 		visible = {

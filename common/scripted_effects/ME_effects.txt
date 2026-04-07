@@ -162,6 +162,8 @@ MDL_create_dynamic_KAR = {
 				limit = {
 					OR = {
 						is_in_array = { state_original_cores = KAR }
+						is_in_array = { state_original_cores = AES }
+						is_in_array = { state_original_cores = MTO }
 					}
 				}
 				transfer_state_to = PREV.PREV
@@ -176,7 +178,7 @@ MDL_create_dynamic_KAR = {
 		}
 		set_party_name = {
 			ideology = fascism
-			long_name = kAR_VASSAL_PARTY_NAME_LONG
+			long_name = KAR_VASSAL_PARTY_NAME_LONG
 			name = KAR_VASSAL_PARTY_NAME
 		}
 		generate_character = {

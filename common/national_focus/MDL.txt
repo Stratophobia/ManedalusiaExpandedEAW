@@ -2165,22 +2165,12 @@ shared_focus = {
 	relative_position_id = MDL_western_zebrican_hegemony
 	prerequisite = { focus = MDL_western_zebrican_hegemony }
 	available = {
-		712 = { is_owned_and_controlled_by = ROOT }
-		BAT = { exists = no }
-	}
-	bypass = {
-		BAT = {
-			OR = {
-				is_in_faction_with = HIP
-				is_in_faction_with = NLR
-				is_in_faction_with = CTH
-			}
-		}
+		BAT = { is_subject_of = ROOT }
 	}
 	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_into_the_southlands"
-		country_event = manedalusia.94
+
 	}
 	search_filters = { FOCUS_FILTER_ANNEXATION }
 }
@@ -2193,15 +2183,21 @@ shared_focus = {
 	cost = 3
 	relative_position_id = MDL_western_zebrican_hegemony
 	available = {
-		999 = { is_owned_and_controlled_by = ROOT }
-		811 = { is_owned_and_controlled_by = ROOT }
-		1009 = { is_owned_and_controlled_by = ROOT }
+		KAR = { is_subject_of = ROOT }
 	}
 	prerequisite = { focus = MDL_western_zebrican_hegemony }
 	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_southern_mercenaries"
-		country_event = manedalusia.44
+		custom_effect_tooltip = { IDEA = MDL_asabiyyah_modifier localization_key = modify_idea_tt }
+		add_to_variable = {
+			MDL_winter_attrition = -0.5
+			tooltip = winter_attrition_factor_tt
+		}
+		add_to_variable = {
+			MDL_acclimatization_cold_climate_gain_factor = 0.30
+			tooltip = acclimatization_cold_climate_gain_factor_tt
+		}
 	}
 	search_filters = { FOCUS_FILTER_POLITICAL }
 }

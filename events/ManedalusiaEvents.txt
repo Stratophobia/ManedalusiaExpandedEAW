@@ -1153,24 +1153,8 @@ country_event = {#sayf cucks the Shahanshah
 
 	option = {
 		name = manedalusia.44.a
-		custom_effect_tooltip = MDL_shahanshah_cucked_tt
-		hidden_effect = {
-			MDL_create_dynamic_KAR = yes
-			for_each_scope_loop = {
-				array = MTO.original_cores
-				add_core_of = KAR
-			}
-			for_each_scope_loop = {
-				array = AES.original_cores
-				add_core_of = KAR
-			}
-			release_puppet = KAR
-		}
-		KAR = {
-			set_politics = { ruling_party = fascism }
-			set_cosmetic_tag = KAR_VASSAL
-			add_ideas = MDL_KAR_shahdom
-		}
+		custom_effect_tooltip = MDL_new_puppet_tt
+		KAR = { add_ideas = MDL_KAR_shahdom }
 	}
 }
 
@@ -2181,7 +2165,7 @@ country_event = {#Laylah takes over in Riseia
 
 	option = {
 		name = manedalusia.93.a
-		custom_effect_tooltip = MDL_shahanshah_cucked_tt
+		custom_effect_tooltip = MDL_new_puppet_tt
 		add_power_balance_value = {
 			id = MDL_theological_bop
 			value = 0.05
@@ -2236,24 +2220,7 @@ country_event = {#establish BAT puppet state
 
 	option = {
 		name = manedalusia.94.a
-		custom_effect_tooltip = MDL_shahanshah_cucked_tt
-
-		hidden_effect = {
-			MDL_create_dynamic_BAT = yes
-			for_each_scope_loop = {
-				array = WAR.original_cores
-				add_core_of = BAT
-			}
-			for_each_scope_loop = {
-				array = TBK.original_cores
-				add_core_of = BAT
-			}
-			release_puppet = BAT
-		}
-		BAT = {
-			set_politics = { ruling_party = fascism }
-			set_cosmetic_tag = BAT_crimson_vassal
-		}
+		custom_effect_tooltip = MDL_new_puppet_tt
 	}
 }
 
