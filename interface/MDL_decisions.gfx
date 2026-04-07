@@ -60,7 +60,7 @@ spriteTypes = {
     texturefile="gfx/interface/decisions/MDL/cat/MDL_eye.tga"
   }
   SpriteType = {
-    name = GFX_decision_category_MDL_crimson_war
+    name = "GFX_decision_category_MDL_crimson_war"
     texturefile = "gfx/interface/decisions/MDL/cat/MDL_crimson_war.tga"
   }
 ###FIQH###

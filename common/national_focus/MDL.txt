@@ -1724,7 +1724,6 @@ shared_focus = {
 	x = 0
 	y = 2
 	relative_position_id = MDL_long_road_to_mareakech
-	available = { has_war = no }
 	prerequisite = { focus = MDL_gunpowder_empire }
 	cost = 3
 	prerequisite = { focus = MDL_enforce_Jizya }
@@ -2114,7 +2113,7 @@ shared_focus = {
 	cost = 3
 	prerequisite = { focus = MDL_western_zebrican_hegemony }
 	available = {
-		MTA = { is_core_of = ROOT }
+		MTA = { is_subject_of = ROOT }
 	}
 	ai_will_do = { base = 40 }
 	completion_reward = {
@@ -2974,6 +2973,10 @@ shared_focus = {
 	x = 0
 	y = 1
 	relative_position_id = MDL_coltoba_university
+	available = {
+		has_country_flag = MDL_has_restored_university
+		MDL = { all_original_cores_owned_by_ROOT = yes }
+	}
 	prerequisite = { focus = MDL_coltoba_university }
 	prerequisite = { focus = MDL_look_to_our_roots }
 	prerequisite = { focus = MDL_manedalusia_industrialism }
@@ -4110,6 +4113,8 @@ shared_focus = {
 	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_back_in_bussiness"
+		unlock_decision_tooltip = MDL_buff_ally_economy
+		unlock_decision_tooltip = MDL_attack_enemy_economy
 		swap_ideas = {
 			remove_idea = closed_economy
 			add_idea = MDL_mercantilism_idea

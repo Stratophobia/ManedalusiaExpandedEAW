@@ -409,20 +409,6 @@ characters = {
 			traits = { ideological_crusader }
 		}
 	}
-	MDL_stratophobia = {
-		name=MDL_stratophobia
-		portraits={
-			civilian = {
-				small="gfx/interface/ideas/Advisors/MDL/MDL_stratophobia.tga"
-			}
-		}
-		advisor = {
-			slot=political_advisor
-			idea_token=MDL_stratophobia
-			available = { always = yes }
-			traits = { silent_workhorse }
-		}
-	}
 	MDL_talespin = {
 		name=MDL_talespin
 		portraits={

@@ -893,7 +893,7 @@ MDL_crimson_war_tab = {
 		complete_effect = {
 			country_event = manedalusia.93
 			hidden_effect = { MDL_create_dynamic_MTA = yes}
-			MTA = { set_cosmetic_tag = BAT_crimson_vassal }
+			MTA = { set_cosmetic_tag = MTA_crimson_vassal }
 		}
 	}
 	MDL_crimson_puppet_BAT = {
@@ -1148,7 +1148,7 @@ MDL_coltoba_university_tab = {
 		}
 	}
 	MDL_university_military = {
-		icon = GFX_decision_MDL_fiqh_1#REPLACE
+		icon = GFX_decision_gre_faction_management
 		available = { has_idea = MDL_cims }
 		cost = 50
 		days_remove = 50
@@ -1162,7 +1162,7 @@ MDL_coltoba_university_tab = {
 		}
 	}
 	MDL_university_civilian = {
-		icon = GFX_decision_MDL_fiqh_1#REPLACE
+		icon = GFX_decision_generic_factory
 		available = {	
 			num_of_civilian_factories > 10
 		}
@@ -1180,7 +1180,7 @@ MDL_coltoba_university_tab = {
 		}
 	}
 	MDL_university_dockyard = {
-		icon = GFX_decision_MDL_fiqh_1#REPLACE
+		icon = GFX_decision_generic_coastal_fortification
 		available = {
 			num_of_available_naval_factories > 10
 		}
@@ -1200,7 +1200,7 @@ MDL_coltoba_university_tab = {
 		}
 	}
 	MDL_university_international = {
-		icon = GFX_decision_MDL_fiqh_1#REPLACE
+		icon = GFX_decision_SOV_place_hq
 		available = {
 			MDL = { all_original_cores_owned_by_ROOT = yes }
 		}
@@ -1360,6 +1360,60 @@ military_training_category = {
 				uses = 1
 				category = naval_equipment
 			}		
+		}
+	}
+	MDL_buff_ally_economy = {
+		icon = GFX_decision_gre_paying_ifc_debt
+		allowed = { original_tag = MDL }
+		ai_will_do = { base = 150 }
+		cost = 10
+		target_root_trigger = { has_idea = MDL_mercantilism_idea }
+		target_trigger = {
+			FROM = {
+				any_controlled_state_is_coastal = yes
+				NOT = {
+					has_idea = MDL_ally_economy_idea
+					has_idea = closed_economy
+				}
+				OR = {
+					is_in_faction_with = MDL
+					is_subject_of = MDL
+					MDL = { is_subject_of = PREV }
+				}
+			}
+		}
+		targets_dynamic = yes
+		complete_effect = {
+			FROM = { add_ideas = MDL_ally_economy_idea }
+		}
+	}
+	MDL_attack_enemy_economy = {
+		icon = GFX_decision_generic_human_torpedo
+		allowed = { original_tag = MDL }
+		visible = { has_idea = MDL_mercantilism_idea }
+		ai_will_do = { base = 150 }
+		cost = 10
+		target_root_trigger = { has_idea = MDL_mercantilism_idea }
+		target_trigger = {
+			FROM = {
+				any_controlled_state_is_coastal = yes
+				NOT = {
+					has_idea = MDL_sieged_economy_idea
+					has_idea = closed_economy
+				}
+				OR = {
+					has_war_with = MDL
+					any_enemy_country = {
+						is_in_faction_with = MDL
+						is_subject_of = MDL
+						MDL = { is_subject_of = PREV }
+					}
+				}
+			}
+		}
+		targets_dynamic = yes
+		complete_effect = {
+			FROM = { add_ideas = MDL_sieged_economy_idea }
 		}
 	}
 }

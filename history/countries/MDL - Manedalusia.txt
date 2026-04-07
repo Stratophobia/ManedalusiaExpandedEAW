@@ -130,7 +130,6 @@ recruit_character = MDL_jean_claude_of_aquileia
 recruit_character = MDL_qadi_of_coltoba
 recruit_character = MDL_emerald_bargain
 recruit_character = MDL_ink_al_shieri
-recruit_character = MDL_stratophobia
 recruit_character = MDL_talespin
 recruit_character = MDL_pacific_sunset
 recruit_character = MDL_clover_breeze

@@ -34,6 +34,10 @@ BAT_MDL_admin = {
 	color = rgb { 5 143 5 }
 	color_ui = rgb { 5 143 5 }
 }
+MTA_crimson_vassal = {
+	color = rgb { 130 30 30 }
+	color_ui = rgb { 130 30 30 }
+}
 BAT_crimson_vassal = {
 	color = rgb { 130 30 30 }
 	color_ui = rgb { 130 30 30 }
@@ -45,54 +49,6 @@ ABY_FEDERATION = {
 MGY_FEDERATION = {
 	color = rgb { 255 220 104 }
 	color_ui = rgb { 255 220 104 }
-}
-MDL_ultramar = {
-	color = rgb { 40 40 110 }
-	color_ui = rgb { 40 40 110 }
-}
-MDL_sacro_imperio = {
-	color =  rgb { 124 0 163 }
-	color_ui = rgb { 124 0 163 }
-}
-FAT_sacro_imperio = {
-	color =  rgb { 124 0 163 }
-	color_ui = rgb { 124 0 163 }
-}
-NCH_sacro_imperio = {
-	color =  rgb { 124 0 163 }
-	color_ui = rgb { 124 0 163 }
-}
-RIV_sacro_imperio = {
-	color =  rgb { 124 0 163 }
-	color_ui = rgb { 124 0 163 }
-}
-GRI_sacro_imperio = {
-	color =  rgb { 124 0 163 }
-	color_ui = rgb { 124 0 163 }
-}
-FIR_sacro_imperio = {
-	color =  rgb { 124 0 163 }
-	color_ui = rgb { 124 0 163 }
-}
-GRU_sacro_imperio = {
-	color =  rgb { 124 0 163 }
-	color_ui = rgb { 124 0 163 }
-}
-JER_sacro_imperio = {
-	color =  rgb { 124 0 163 }
-	color_ui = rgb { 124 0 163 }
-}
-MCW_sacro_imperio = {
-	color =  rgb { 124 0 163 }
-	color_ui = rgb { 124 0 163 }
-}
-MIT_sacro_imperio = {
-	color =  rgb { 124 0 163 }
-	color_ui = rgb { 124 0 163 }
-}
-EQC_sacro_imperio = {
-	color =  rgb { 124 0 163 }
-	color_ui = rgb { 124 0 163 }
 }
 MDL_caliphate = {
 	color = rgb { 130 30 30 }

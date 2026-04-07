@@ -218,6 +218,7 @@ ideas = {
 		}
 		MDL_destroyed_army = {
 			picture = MDL_destroyed_army
+			available = { has_war_with = MDL }
 			modifier = {
 				army_attack_factor = -0.75
 				army_defence_factor = -0.75
@@ -341,6 +342,46 @@ ideas = {
 		RIZ_council_adaptation = {
 			picture = RIZ_council_adaptation
 			modifier = { research_speed_factor = -0.10 }
+		}
+		MDL_ally_economy_idea = {
+			picture = generic_purge#REPLACE
+			available = {
+				any_controlled_state_is_coastal = yes
+				OR = {
+					is_in_faction_with = MDL
+					is_subject_of = MDL
+					MDL = { is_subject_of = PREV }
+				}
+				NOT = { has_idea = closed_economy }
+			}
+			modifier = {
+				industrial_capacity_dockyard = 0.15
+				industrial_capacity_factory = 0.15
+				supply_factor = 0.15
+				industry_repair_factor = 0.35
+			}
+			targeted_modifier = {
+				tag = MDL
+				extra_trade_to_target_factor = 0.05
+				cic_to_target_factor = 0.05
+			}
+		}
+		MDL_sieged_economy_idea = {
+			picture = generic_purge#REPLACE
+			available = {
+				any_controlled_state_is_coastal = yes
+				OR = {
+					has_war_with = MDL
+					any_enemy_country = { has_war_with = MDL }
+				}
+				NOT = { has_idea = closed_economy }
+			}
+			modifier = {
+				consumer_goods_factor = 0.5
+				supply_factor = -0.35
+				attrition = 0.25
+				industry_repair_factor = -0.35
+			}
 		}
 ###SENATE IDEAS###
 		MDL_federal_assembly_1 = {

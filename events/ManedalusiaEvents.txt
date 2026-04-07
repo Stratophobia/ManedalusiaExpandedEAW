@@ -481,7 +481,6 @@ country_event = {#A Deals A Deal
 
 	option = {
 		name = manedalusia.20.a
-		custom_effect_tooltip = { IDEA = MDL_asabiyyah_modifier localization_key = modify_idea_tt }
 		add_political_power = -50
 		740 = {
 			add_resource = {
@@ -489,6 +488,7 @@ country_event = {#A Deals A Deal
 				amount = 5
 			}
 		}
+		custom_effect_tooltip = { IDEA = MDL_asabiyyah_modifier localization_key = modify_idea_tt }
 		add_to_variable = {
 			MDL_trade_opinion_factor = 0.15
 			tooltip = trade_opinion_factor_neutral_tt
@@ -496,7 +496,6 @@ country_event = {#A Deals A Deal
 	}
 	option = {
 		name = manedalusia.20.b
-		custom_effect_tooltip = { IDEA = MDL_asabiyyah_modifier localization_key = modify_idea_tt }
 		add_political_power = -25
 		740 = {
 			add_resource = {
@@ -504,6 +503,7 @@ country_event = {#A Deals A Deal
 				amount = 10
 			}
 		}
+		custom_effect_tooltip = { IDEA = MDL_asabiyyah_modifier localization_key = modify_idea_tt }
 		add_to_variable = {
 			MDL_trade_opinion_factor = -0.15
 			tooltip = trade_opinion_factor_neutral_tt
@@ -1270,16 +1270,11 @@ country_event = {#Warplan Green - proc MGY debuff
 		text = manedalusia.49.d_commie
 		trigger = { has_government = communism }
 	}
-	is_triggered_only = yes#on_action
+	is_triggered_only = yes
 
 	option = {
 		name = manedalusia.49.a
-		MGY = {
-			add_timed_idea = {
-				idea = MDL_destroyed_army
-				days = 360
-			}
-		}
+		MGY = { add_ideas = MDL_destroyed_army }
 		MDL_conclude_warplan_green = yes
 	}
 }

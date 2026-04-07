@@ -118,6 +118,10 @@
  CHN_manedalusia_protectorate:0 "Form the Manedalusian Protectorate"
  MDL_colthage_treaty_decision:0 "Restore Our Partnership With Colthage"
  MDL_repeatable_naval_tech_research:0 "Innovate Naval Technology"
+ MDL_buff_ally_economy:0 "Support Our Allies"
+ MDL_buff_ally_economy_desc:0 "We can seek to support our allies against their enemies by giving preferential treatment to their ports in our mercantile charters - this will provide them with a stronger logistical base."
+ MDL_attack_enemy_economy:0 "Initiate A Blockade"
+ MDL_attack_enemy_economy_desc:0 "We can punch well above our weight by making use of the mercantile charters to leverage international commerce against our enemies. We'll see how good they are in the frontline without food in their stomachs or bullets for their rifles."
  MDL_shield_doctrine_tab:0 "The §GJunnah§! Doctrine"
  MDL_shield_puppet_MGY:0 "Establish The Maregyptian Protectorate"
  MDL_shield_puppet_ABY:0 "Establish The Abyssinian Protectorate"
@@ -596,6 +600,10 @@
 ###MANEDALUSIA IDEAS###
  #TRADELAW
  MDL_mercantilism_idea:0 "Manedalusian Mercantilism"
+ MDL_sieged_economy_idea:0 "Commercial Blockade"
+ MDL_sieged_economy_idea_desc:0 "The damned Manedalusians have leveraged international trade against us, and it's straining our supply lines immensely."
+ MDL_ally_economy_idea:0 "Commercial Preference"
+ MDL_ally_economy_idea_desc:0 "Manedalusian freighting gives preferential treatment to our goods and ports, which is a great boon for the war economy."
  MDL_federal_army_modifier:0 "The Federal Army"
  MDL_federal_army_modifier_desc:0 "The basis of all morality is duty, a concept with the same relation to the group that self-interest has to the individual; for the Republican State of Manedalusia, duty to the continued existence of the Republic is tied to cizizenship, and given the small nation's relatively tiny population, this has encouraged the creation of a small but elite military force."
  MDL_humbled_sultanate:0 "The Ages of Humility"
@@ -809,7 +817,6 @@
  MDL_qadi_of_coltoba_desc:0 "One of the premier traditional positions of authority among the ash-shuhūd, the Qadi of Coltoba is the only one whose office has been stable and always occupied in Manedalusia over the course of the centuries. Tasked with interpreting and applying the Fiqh, it's said that in ancient times, when the Sultans of Everleaf ruled over Al-Manedalus, the Qadi was among their most trusted and reliable advisors. The current Qadi, Cloudgazer Aamir, has held the position for nearly twenty years, and there's hardly a pony in all of Manedalusia that has a more detailed knowledge of the Fiqh, its precedents, history and application than himself."
  MDL_emerald_bargain:0 "Emerald Bargain"
  MDL_ink_al_shieri:0 "Ink Al-Shieri"
- MDL_stratophobia:0 "Tale Flair"
  MDL_talespin:0 "Tailspin"
  MDL_pacific_sunset:0 "Serene Eventide"
  MDL_pacific_sunset_desc:0 "Some say that he's psychic."
@@ -861,9 +868,9 @@
  MDL_great_lakes_crimson_vassal:0 "Siyādat Al-Bihayrāt Al-Kubrā"
  MDL_great_lakes_crimson_vassal_DEF:0 "Al-Siyādat Al-Bihayrāt Al-Kubrā"
  MDL_great_lakes_crimson_vassal_ADJ:0 "Koltāliba"
- RIZ:0 "Amārat Rīziyyah Al-Munawarah"
- RIZ_DEF:0 "Al-Amārat Rīziyyah Al-Munawarah"
- RIZ_ADJ:0 "Riseian"
+ MTA_crimson_vassal:0 "Amārat Rīziyyah Al-Munawarah"
+ MTA_crimson_vassal_DEF:0 "Al-Amārat Rīziyyah Al-Munawarah"
+ MTA_crimson_vassal_ADJ:0 "Riseian"
  DRG_EKS_war:0 "Dawlat Al-Ikwestriyyah"
  DRG_EKS_war_DEF:0 "Al-Dawlat Al-Ikwestriyyah"
  DRG_EKS_war_ADJ:0 "Equestrian"
@@ -1107,15 +1114,15 @@
 ###TNO QUOTES####
  GetTNOReference_MDL_holy_war:0 "In the end, Ash-Shahid found them wanting."
 ###HIDDEN IDEAS###
- MDL_holy_war_ai_debuff:0 "CHN Holy War Debuff"
+ MDL_holy_war_ai_debuff:0 "Holy War Debuff"
 ###WELCOME SCREEN###
  EAW_WS_MDL:0 "[Root.GetNameDefCap] - The Witnesses of Ash-Shahid"
- EAW_WS_MDL_desc:0 "\"To Be is to Perceive; and He who Perceives All holds dominion over all.\"\n- Opening Passage from the Book of Revelation\n\nSome centuries before Luna's banishment, the §YMaregyptian Kingdom§! at that time had been stretching outward, establishing colonial outposts and mercantile bases beyond the barely inhabited desert reaches of the country, nestled along critical nodes of sea travel through the Green Bay. Coltoba was one such city, built in the fairly temperate coast beyond the Kom Marebo as a border fortress and trading post between the heartland of Maregypt and the catfolk of §rAbyssinia§!. For some generations, the city remained as a fairly independent, but still ultimately integral part of Maregypt.\n\n"
+ EAW_WS_MDL_desc:0 "\"To Be is to Perceive; and He who Perceives All holds dominion over All.\"\n- Opening Passage from the Book of Revelation\n\nSome centuries before Princess Luna's banishment, the §YMaregyptian Kingdom§! at that time had been stretching outward, establishing colonial outposts and mercantile bases beyond the barely inhabited desert reaches of the country, nestled along critical nodes of sea travel through the Green Bay. Coltoba was one such city, built in the fairly temperate coast beyond the Kom Marebo as a border fortress and trading post between the heartland of Maregypt and the catfolk of §rAbyssinia§!. For some generations, the city remained as a fairly independent, but still ultimately integral part of Maregypt.\n\nOur fate would forever change when a horse from distant Arabia arrived on this humble shore - Al-Wallid, chosen Herald of Ash-Shahid, exiled from his homeland, came to the Coltoba harbor in a moment of weakness for the centralized Maregyptian state. Guided by Divine Providence, he proved himself divinely chosen when he liberated the city and ousted the Maregyptian garrison to be scattered across the Kom Marebo, and proselytized to us the true path towards divinity and truth - so was born the §GManedalusian Sultanate§!, under the guidance of the honorable §YHouse of Everleaf§!.\n\nEven after the death of the last ruling Sultan and Al-Manedalus' subjugation by the Maregyptians, it has been this convenant, which binds those of us who've bore witness to the Universal Creative Spirit, that has driven our resistance against our occupiers. The Pharaohs of Maregypt, the despots of Panthera, the Spiritseers that govern the ancient home of the faithful in Arabia, and even the Yeti warlords: Manedalusia has survived all of them by the grace of our patron and protector. From the loss our sovereignty to the sale of our foals and fillies into bondage, there is hardly any humiliation that the world has not suffered upon the faithful; still, we stood our trials and bid our time, as was foretold by the prophecy revealed to Al-Wallid at the end of his life.\n\nThe time to wait is over, and the moment of our final trial stands upon us: the dawn of the new millenium brings with it a whole new world of challenges and innovation, of renewed conflicts abroad and whose echoes reach the Golden Coast. We can hardly expect Ash-Shahid to do all the work: we emerge from our subjugation scarred but undefeated. The time has come to prove our devotion and tenacity, and restore the guiding light of Ash-Shahid to this world."
 ###COLTOBA LORE###
  state_lore_text_container_state_name_short_741:0 "Coltoba"
  state_lore_text_container_state_name_741:0 "The City of §YSunlight§!"
- state_lore_text_container_state_description_741:0 "Coltoba was established as a merchant post by §YMaregyptians§! in the distant past. Though initially an unremarkable trading outpost, its fate would forever change when the Arabian horse Al-Wallid II seized it, declaring a fiefdom that would grow to become §GAl-Manedalus§!.\n\nColtoba itself has always been a mercantile and cosmopolitan place, whose position in the Green Bay and ties to sailing have made it a node for seafaring commerce across all of Western Zebrica; this trading influence would reach its zenith even after the Sultanate was extinguished, as the §rAbyssinian§! Queen Pawkuno delegated provincial authority to the Majlis Ash-Shūrā, a vestigial institution from the Sultan's authority. Through this arrangement, even as a provincial possession, Manedalusia achieved great prosperity and influence; it's for this reason that Saddle Arabia's conquest of the Manedalusian coast, and Manedalusia's subsequent subjugation through the introduction of slavery by Abyssinia has so deeply scarred its inhabitants.\n\nThe city has two beating hearts: its central harbor, and the University. Even as it fell into disuse over the centuries, the Coltoba harbor still remains the central node of activity in the city, operating as a large market for independent captains and local manufacturers, while the §GUniversity of Coltoba§! gathers visitors of the more intellectual persuasion to peruse its open archives. In the rocky mountainous outskirts of the city, the §GNeighdinat Al-Zahra§!, traditional ruling seat of the ancient §YEverleaf Sultans§!, looms large over Coltoba.\n\nHaving been mostly empoverished by the time the §CStorm King§! began his rampage, Coltoba was mercifully spared his wrath, as the Yeti chose instead to pillage the Abyssinian treasury and saw little to take from Coltoba. However, even at its most dire and desolate, Coltoba always possessed one thing that its conquerors could not take away: its natural beauty is nearly unmatched, and the whole of the §YGolden Coast§!, both temperate and always blessed by pleasant sunshine, brings solace to its inhabitants in their darkest hour; the ponies of Al-Manedalus are convinced that even after all this time, the All and Ever-Witnessing watches over them."
 ###OCCUPATION LAW###
+ state_lore_text_container_state_description_741:0 "Coltoba was established as a merchant post by §YMaregyptians§! in the distant past. Though initially an unremarkable trading outpost, its fate would forever change when the Arabian horse Al-Wallid seized it, declaring a fiefdom that would grow to become §GAl-Manedalus§!.\n\nColtoba itself has always been a mercantile and cosmopolitan place, whose position in the Green Bay and ties to sailing have made it a node for seafaring commerce across all of Western Zebrica; this trading influence would reach its zenith long after the Sultanate was extinguished, as the §rAbyssinian§! Queen Pawkuno delegated provincial authority to the Majlis Ash-Shūrā, a vestigial institution from the Sultan's authority. Through this arrangement, even as a provincial possession, Manedalusia achieved great prosperity and influence; it's for this reason that Saddle Arabia's conquest of the Manedalusian coast, and Manedalusia's subsequent subjugation through the introduction of slavery by Abyssinia has so deeply scarred its inhabitants.\n\nThe city has two beating hearts: its central harbor, and the University. Even as it fell into disuse over the centuries, the Coltoba harbor still remains the central node of activity in the city, operating as a large market for independent captains and local manufacturers, while the §GUniversity of Coltoba§! gathers visitors of the more intellectual persuasion to peruse its open archives. In the rocky mountainous outskirts of the city, the §GNeighdinat Al-Zahra§!, traditional ruling seat of the ancient §YEverleaf Sultans§!, looms large over Coltoba.\n\nHaving been mostly empoverished by the time the §CStorm King§! began his rampage, Coltoba was spared his wrath, as the Yeti chose instead to pillage the Abyssinian treasury and saw little to take from Coltoba. However, even at its most dire and desolate, Coltoba always possessed one thing that its conquerors could not take away: its natural beauty is nearly unmatched, and the whole of the §YGolden Coast§!, both temperate and always blessed by pleasant sunshine, brings solace to its inhabitants in their darkest hour; the ponies of Manedalusia are convinced that even after all this time, the All and Ever-Witnessing watches over them."
  MDL_proselytizing_army:0 "proselytizing Army"
 ###############################
 ###LOCALIZATION FOR GEARPORN###
