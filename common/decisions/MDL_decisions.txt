@@ -1125,7 +1125,7 @@ MDL_crimson_war_tab = {
 
 MDL_coltoba_university_tab = {
 	MDL_university_finish = {
-		icon = GFX_decision_MDL_fiqh_1#REPLACE
+		icon = GFX_decision_kirin_scroll
 		cost = 25
 		available = {
 			hidden_trigger = {
@@ -1347,7 +1347,7 @@ MDL_fiqh_decisions_tab = {
 
 military_training_category = {
 	MDL_repeatable_naval_tech_research = {
-		icon = GFX_decision_MDL_shield_puppet_ZAR#REPLACE
+		icon = GFX_decision_convoy_ship
 		allowed = { original_tag = MDL }
 		days_re_enable = 85
 		days_remove = 25

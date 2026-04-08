@@ -59,6 +59,7 @@ set_variable = { MDL_mobilization_laws_cost_factor = 0.30 }
 set_variable = { MDL_stability_factor = 0.10 }
 set_variable = { MDL_war_support_factor = -0.05 }
 
+set_variable = { MDL_line_change_production_efficiency_factor = 0 }
 set_variable = { MDL_land_night_attack = 0 }
 set_variable = { MDL_faction_trade_opinion_factor = 0 }
 set_variable = { MDL_opinion_gain_monthly = 0 }

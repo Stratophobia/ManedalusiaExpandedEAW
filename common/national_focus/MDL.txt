@@ -2939,7 +2939,15 @@ shared_focus = {
 	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_manedalusian_industriousness"
-		add_ideas = MDL_manedalusian_industrious_pride
+		custom_effect_tooltip = { IDEA = MDL_asabiyyah_modifier localization_key = modify_idea_tt }
+		add_to_variable = {
+			MDL_production_factory_max_efficiency_factor = 0.10
+			tooltip = production_factory_max_efficiency_factor_tt
+		}
+		add_to_variable = {
+			MDL_line_change_production_efficiency_factor = 0.15
+			tooltip = line_change_production_efficiency_factor_tt
+		}
 	}
 	search_filters = { FOCUS_FILTER_INDUSTRY }
 }
@@ -5336,7 +5344,14 @@ shared_focus = {
 			MDL_surrender_limit = 0.10
 			tooltip = surrender_limit_tt
 		}
-		add_ideas = MDL_aaliyah_monument
+		add_to_variable = {
+			MDL_consumer_goods_factor = -0.05
+			tooltip = consumer_goods_factor_tt
+		}
+		add_to_variable = {
+			MDL_production_speed_buildings_factor = 0.10
+			tooltip = MODIFIER_STATE_PRODUCTION_SPEED_BUILDINGS_FACTOR_tt
+		}
 	}
 	search_filters = { FOCUS_FILTER_INDUSTRY }
 }

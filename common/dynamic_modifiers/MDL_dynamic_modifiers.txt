@@ -19,6 +19,7 @@ MDL_asabiyyah_modifier = {
 	economy_cost_factor = MDL_economy_cost_factor
 	mobilization_laws_cost_factor = MDL_mobilization_laws_cost_factor
 	stability_factor = MDL_stability_factor
+	line_change_production_efficiency_factor = MDL_line_change_production_efficiency_factor
 	war_support_factor = MDL_war_support_factor
 	special_forces_no_supply_grace = MDL_special_forces_no_supply_grace
 	heat_attrition_factor = MDL_heat_attrition_factor

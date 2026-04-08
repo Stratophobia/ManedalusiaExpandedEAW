@@ -470,19 +470,12 @@ ideas = {
 				consumer_goods_factor = -0.25
 			}
 		}
-		MDL_aaliyah_monument = {
-			picture = MDL_aaliyah_monument
-			modifier = {
-				consumer_goods_factor = -0.05
-				production_speed_buildings_factor = 0.10
-			}
-		}
 		MDL_bulwark_of_harmony_idea = {
 			picture = MDL_bulwark_of_harmony_idea
 			modifier = {
 				war_support_factor = 0.10
-				army_core_attack_factor = 0.15
-				army_core_defence_factor = 0.15
+				army_core_attack_factor = 0.10
+				army_core_defence_factor = 0.10
 			}
 		}
 		MDL_expeditionary_corps_idea = {
@@ -742,13 +735,6 @@ ideas = {
 			}
 		}
 ###EQUIPMENT BONUS IDEAS###
-		MDL_manedalusian_industrious_pride = {
-			picture = MDL_industrious_pride
-			equipment_bonus = {
-				artillery_equipment = { build_cost_ic = -0.05 instant = yes }
-				infantry_equipment = { build_cost_ic = -0.1 instant = yes }
-			}
-		}
 		MDL_magical_reloading = {
 			picture = MDL_magical_reloading
 			modifier = { army_artillery_attack_factor = 0.15 }
@@ -792,7 +778,6 @@ ideas = {
 		MDL_holy_war_ai_debuff = {
 			cancel = { is_ai = no }
 			removal_cost = -1
-
 			modifier = {
 				training_time_army_factor = 0.75
 				industrial_capacity_factory = -0.90
