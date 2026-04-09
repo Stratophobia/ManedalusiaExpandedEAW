@@ -1127,6 +1127,7 @@ MDL_coltoba_university_tab = {
 	MDL_university_finish = {
 		icon = GFX_decision_kirin_scroll
 		cost = 25
+		fire_only_once = yes
 		available = {
 			hidden_trigger = {
 				check_variable = {
@@ -1151,6 +1152,7 @@ MDL_coltoba_university_tab = {
 		icon = GFX_decision_gre_faction_management
 		available = { has_idea = MDL_cims }
 		cost = 50
+		fire_only_once = yes
 		days_remove = 50
 		remove_effect = {
 			custom_effect_tooltip = { IDEA = MDL_asabiyyah_modifier localization_key = modify_idea_tt }
@@ -1167,6 +1169,7 @@ MDL_coltoba_university_tab = {
 			num_of_civilian_factories > 10
 		}
 		cost = 50
+		fire_only_once = yes
 		days_remove = 50
 		remove_effect = {
 			country_event = manedalusia.182
@@ -1185,12 +1188,13 @@ MDL_coltoba_university_tab = {
 			num_of_available_naval_factories > 10
 		}
 		cost = 50
+		fire_only_once = yes
 		days_remove = 50
 		remove_effect = {
 			custom_effect_tooltip = { IDEA = MDL_asabiyyah_modifier localization_key = modify_idea_tt }
 			add_to_variable = {
 				MDL_navy_leader_start_level = 2
-				tooltip = MODIFIER_NAVY_LEADER_START_LEVEL
+				#TODO: add tooltip
 			}
 			add_to_variable = {
 				MDL_naval_accidents_chance = -0.3
@@ -1205,6 +1209,7 @@ MDL_coltoba_university_tab = {
 			MDL = { all_original_cores_owned_by_ROOT = yes }
 		}
 		cost = 50
+		fire_only_once = yes
 		days_remove = 50
 		remove_effect = {
 			country_event = manedalusia.19

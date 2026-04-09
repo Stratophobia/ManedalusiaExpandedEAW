@@ -161,7 +161,7 @@ shared_focus = {
 
 shared_focus = {
 	id = MDL_a_strange_benefactor
-	icon = GFX_focus_MDL_madgriff_in_the_harbor
+	icon = GFX_focus_MDL_a_strange_benefactor
 	x = 0
 	y = 2
 	relative_position_id = MDL_gather_the_council
@@ -184,7 +184,10 @@ shared_focus = {
 	relative_position_id = MDL_a_strange_benefactor
 	cost = 1
 	prerequisite = { focus = MDL_a_strange_benefactor }
-	mutually_exclusive = { focus = MDL_try_for_harmony focus = MDL_try_for_socialism }
+	mutually_exclusive = {
+		focus = MDL_try_for_harmony
+		focus = MDL_try_for_socialism
+	}
 	allow_branch={
 		NOT = {
 			OR = {
@@ -216,7 +219,10 @@ shared_focus = {
 	}
 	relative_position_id = MDL_lean_on_legacy
 	prerequisite = { focus = MDL_lean_on_legacy }
-	mutually_exclusive = { focus = MDL_khaldun_gambit focus = MDL_senate_path }
+	mutually_exclusive = {
+		focus = MDL_khaldun_gambit
+		focus = MDL_senate_path
+	}
 	allow_branch = {
 		NOT = {
 			OR = {
@@ -296,7 +302,10 @@ shared_focus = {
 	relative_position_id = MDL_lean_on_legacy
 	cost = 1
 	prerequisite = { focus = MDL_lean_on_legacy }
-	mutually_exclusive = { focus = MDL_ash_shahid_chosen focus = MDL_senate_path }
+	mutually_exclusive = {
+		focus = MDL_ash_shahid_chosen
+		focus = MDL_senate_path
+	}
 	available = { always = no }#WIP
 	allow_branch = {
 		NOT = {
@@ -381,7 +390,10 @@ shared_focus = {
 	relative_position_id = MDL_lean_on_legacy
 	cost = 1
 	prerequisite = { focus = MDL_lean_on_legacy }
-	mutually_exclusive = { focus = MDL_ash_shahid_chosen focus = MDL_khaldun_gambit }
+	mutually_exclusive = {
+		focus = MDL_ash_shahid_chosen
+		focus = MDL_khaldun_gambit
+	}
 	allow_branch = {
 		NOT = {
 			OR = {
@@ -471,7 +483,10 @@ shared_focus = {
 	relative_position_id = MDL_a_strange_benefactor
 	cost = 1
 	prerequisite = { focus = MDL_a_strange_benefactor }
-	mutually_exclusive = { focus = MDL_lean_on_legacy focus = MDL_try_for_socialism }
+	mutually_exclusive = {
+		focus = MDL_lean_on_legacy
+		focus = MDL_try_for_socialism
+	}
 	allow_branch={
 		NOT = {
 			OR = {
@@ -605,7 +620,10 @@ shared_focus = {
 	relative_position_id = MDL_a_strange_benefactor
 	cost = 1
 	prerequisite = { focus = MDL_a_strange_benefactor }
-	mutually_exclusive = { focus = MDL_lean_on_legacy focus = MDL_try_for_harmony }
+	mutually_exclusive = {
+		focus = MDL_lean_on_legacy
+		focus = MDL_try_for_harmony
+	}
 	available = { always = no }#WIP
 	allow_branch = {
 		NOT = {
@@ -691,8 +709,7 @@ shared_focus = {
 	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_asabiyyah"
-		custom_effect_tooltip = MDL_asabiyyah_tt
-
+		custom_effect_tooltip = { IDEA = MDL_asabiyyah_modifier localization_key = modify_idea_tt }
 		set_variable = {
 			MDL_mobilization_laws_cost_factor = 0
 			tooltip = mobilization_laws_cost_factor_tt
@@ -2118,6 +2135,7 @@ shared_focus = {
 	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_annex_riseia"
+		custom_effect_tooltip = { IDEA = MDL_asabiyyah_modifier localization_key = modify_idea_tt }
 		add_to_variable = {
 			MDL_heat_attrition_factor = 0.10
 			tooltip = heat_attrition_factor_tt
@@ -2755,9 +2773,6 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_work_with_guilds"
 		add_political_power = -35
 		add_offsite_building = { type = industrial_complex level = 3 }
-
-		custom_effect_tooltip = available_political_advisor
-		show_ideas_tooltip = MDL_emerald_bargain
 	}
 	search_filters = { FOCUS_FILTER_INDUSTRY }
 }
@@ -3057,13 +3072,6 @@ shared_focus = {
 			folder = land
 			name = MDL_go_with_samira
 		}
-		add_doctrine_cost_reduction = {
-			name = MDL_go_with_samira
-			cost_reduction = 0.75
-			uses = 1
-			category = cat_grand_battle_plan
-			category = cat_mass_assault
-		}
 	}
 	search_filters = { FOCUS_FILTER_RESEARCH }
 }
@@ -3090,13 +3098,6 @@ shared_focus = {
 			days = 150
 			folder = land
 			name = MDL_go_with_alneighzari
-		}
-		add_doctrine_cost_reduction = {
-			name = MDL_go_with_alneighzari
-			cost_reduction = 0.75
-			uses = 1
-			category = cat_mobile_warfare
-			category = cat_superior_firepower
 		}
 	}
 	search_filters = { FOCUS_FILTER_RESEARCH }
@@ -3626,8 +3627,14 @@ shared_focus = {
 	y = 3
 	cost = 5
 	relative_position_id = MDL_coltoba_institute_military_science
-	prerequisite = { focus = MDL_koltaliba_commissars focus = MDL_fast_shell_reloading }
-	prerequisite = { focus = MDL_special_forces_regimentation focus = MDL_desert_drift }
+	prerequisite = {
+		focus = MDL_koltaliba_commissars
+		focus = MDL_fast_shell_reloading
+	}
+	prerequisite = {
+		focus = MDL_special_forces_regimentation
+		focus = MDL_desert_drift
+	}
 	prerequisite = { focus = MDL_protect_the_skies }
 	prerequisite = { focus = MDL_alchemical_investment }
 	ai_will_do = { base = 40 }
@@ -3705,12 +3712,12 @@ shared_focus = {
 	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_expand_markets"
+		country_event = { days = 5 id = manedalusia.27 }
 		custom_effect_tooltip = { IDEA = MDL_asabiyyah_modifier localization_key = modify_idea_tt }
 		add_to_variable = {
 			MDL_trade_opinion_factor = 0.10
 			tooltip = trade_opinion_factor_neutral_tt
 		}
-		country_event = { days = 5 id = manedalusia.27 }
 		741 = {
 			add_extra_state_shared_building_slots = 1
 			add_building_construction = {
@@ -3814,7 +3821,8 @@ shared_focus = {
 			uses = 2
 			category = dd_tech
 		}
-		add_ideas = MDL_merchant_fleet_idea
+		custom_effect_tooltip = available_political_advisor
+		show_ideas_tooltip = MDL_emerald_bargain
 	}
 	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_NAVY_BONUS }
 }
@@ -3830,9 +3838,14 @@ shared_focus = {
 	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_coltoba_shipyards"
-		swap_ideas = {
-			remove_idea = MDL_merchant_fleet_idea
-			add_idea = MDL_coltoba_shipyards_improved
+		custom_effect_tooltip = { IDEA = MDL_asabiyyah_modifier localization_key = modify_idea_tt }
+		add_to_variable = {
+			MDL_industrial_capacity_dockyard = 0.10
+			tooltip = industrial_capacity_dockyard_tt
+		}
+		add_to_variable = {
+			MDL_naval_coordination = 0.10
+			tooltip = naval_coordination_tt
 		}
 	}
 	search_filters = { FOCUS_FILTER_NAVY_BONUS }
@@ -3899,7 +3912,10 @@ shared_focus = {
 	x = 0
 	y = 1
 	relative_position_id = MDL_golden_coast
-	prerequisite = { focus = MDL_fleet_tech focus = MDL_coltoba_shipyards }
+	prerequisite = {
+		focus = MDL_fleet_tech
+		focus = MDL_coltoba_shipyards
+	}
 	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_grand_zoco"
@@ -3972,6 +3988,7 @@ shared_focus = {
 	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_grand_admiralty"
+		custom_effect_tooltip = { IDEA = MDL_asabiyyah_modifier localization_key = modify_idea_tt }
 		add_to_variable = {
 			MDL_experience_gain_navy = 0.1
 			tooltip = experience_gain_navy_tt
@@ -3991,7 +4008,10 @@ shared_focus = {
 	x = 0
 	y = 1
 	relative_position_id = MDL_grand_admiralty
-	prerequisite = { focus = MDL_grand_admiralty focus = MDL_naval_depot_network }
+	prerequisite = {
+		focus = MDL_grand_admiralty
+		focus = MDL_naval_depot_network
+	}
 	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_capital_ships"
@@ -4098,7 +4118,10 @@ shared_focus = {
 	y = 3
 	relative_position_id = MDL_naval_patrols
 	available = { has_country_flag = MDL_has_restored_university }
-	prerequisite = { focus = MDL_marine_corps focus = MDL_capital_ships }
+	prerequisite = {
+		focus = MDL_marine_corps
+		focus = MDL_capital_ships
+	}
 	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_naval_academy"
@@ -4166,7 +4189,10 @@ shared_focus = {
 	x = 0
 	y = 1
 	relative_position_id = MDL_coffee_current
-	prerequisite = { focus = MDL_coffee_current focus = MDL_reliable_traders }
+	prerequisite = {
+		focus = MDL_coffee_current
+		focus = MDL_reliable_traders
+	}
 	available = {
 		has_war = no
 		CTH = { exists = yes }
@@ -4211,7 +4237,10 @@ shared_focus = {
 	x = 0
 	y = 1
 	relative_position_id = MDL_reliable_traders
-	prerequisite = { focus = MDL_reliable_traders focus = MDL_coffee_current }
+	prerequisite = {
+		focus = MDL_reliable_traders
+		focus = MDL_coffee_current
+	}
 	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_merchant_outposts"
@@ -4238,7 +4267,10 @@ shared_focus = {
 	x = 0
 	y = 3
 	relative_position_id = MDL_back_in_bussiness
-	prerequisite = { focus = MDL_merchant_outposts focus = MDL_colthaginian_deal }
+	prerequisite = {
+		focus = MDL_merchant_outposts
+		focus = MDL_colthaginian_deal
+	}
 	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_green_bay_masters"
@@ -5075,7 +5107,10 @@ shared_focus = {
 	cost = 2
 	relative_position_id = MDL_dream_of_a_federation
 	prerequisite = { focus = MDL_karthinia_of_zebrica }
-	prerequisite = { focus = MDL_balkanize_arabia focus = MDL_integrate_emirs }
+	prerequisite = {
+		focus = MDL_balkanize_arabia
+		focus = MDL_integrate_emirs
+	}
 	available = { has_war = no }
 	ai_will_do = { base = 40 }
 	completion_reward = {

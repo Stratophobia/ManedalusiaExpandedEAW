@@ -76,6 +76,10 @@ spriteTypes = {
 		textureFile = "gfx/interface/goals/MDL/MDL_ask_HIP_for_help.tga"
 	}
 	SpriteType = {
+		name = "GFX_focus_MDL_a_strange_benefactor"
+		textureFile = "gfx/interface/goals/MDL/MDL_a_strange_benefactor.tga"
+	}
+	SpriteType = {
 		name = "GFX_focus_MDL_attack_maregypt"
 		textureFile = "gfx/interface/goals/MDL/MDL_attack_maregypt.tga"
 	}
@@ -486,10 +490,6 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_focus_MDL_look_to_our_roots"
 		textureFile = "gfx/interface/goals/MDL/MDL_look_to_our_roots.tga"
-	}
-	SpriteType = {
-		name = "GFX_focus_MDL_madgriff_in_the_harbor"
-		textureFile = "gfx/interface/goals/MDL/MDL_madgriff_in_the_harbor.tga"
 	}
 	SpriteType = {
 		name = "GFX_focus_MDL_magical_engines"

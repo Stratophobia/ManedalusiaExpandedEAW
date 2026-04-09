@@ -94,7 +94,7 @@ MDL_military_governorate = {
 }
 
 MDL_golden_coast_modifier = {
-	icon = GFX_modifiers_MDL_sultanate_province
+	icon = GFX_modifiers_MDL_golden_coast_modifier
 	enable = { always = yes }
 	remove_trigger = {
 		owner = {

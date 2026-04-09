@@ -460,7 +460,7 @@ country_event = {#Matters of Higher Learning
 		name = manedalusia.19.a
 		custom_effect_tooltip = { IDEA = MDL_asabiyyah_modifier localization_key = modify_idea_tt }
 		add_to_variable = {
-			MDL_research_speed_factor = 0.025
+			MDL_research_speed_factor = 0.005
 			tooltip = research_speed_factor_tt
 		}
 		add_to_variable = {
@@ -543,7 +543,12 @@ country_event = {#The Grandmistress
 	is_triggered_only = yes
 
 	option = {
-		name = manedalusia.22.a
+		name = manedalusia.22.a	
+		set_grand_doctrine = mass_assault
+	}
+	option = {
+		name = manedalusia.22.b
+		set_grand_doctrine = grand_battleplan
 	}
 }
 
@@ -555,6 +560,11 @@ country_event = {#The Engineer
 
 	option = {
 		name = manedalusia.23.a
+		set_grand_doctrine = new_mobile_warfare
+	}
+	option = {
+		name = manedalusia.23.b
+		set_grand_doctrine = superior_firepower
 	}
 }
 

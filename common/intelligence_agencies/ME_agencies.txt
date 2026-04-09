@@ -1,0 +1,6 @@
+intelligence_agency = {
+	picture = GFX_intelligence_agency_logo_mdl
+	names = { "Hashm Koltāliba" }
+	default = { tag = MDL }
+	available = { original_tag = MDL }
+}

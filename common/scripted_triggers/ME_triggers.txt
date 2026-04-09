@@ -14,14 +14,6 @@ MDL_has_set_path_rules = {
 				rule = MDL_ai_behavior
 				option = MDL_SENATE
 			}
-			has_game_rule = {
-				rule = MDL_ai_behavior
-				option = MDL_ULTRAMAR
-			}
-			has_game_rule = {
-				rule = MDL_ai_behavior
-				option = MDL_SAMIRA
-			}
 		}
 	}
 }

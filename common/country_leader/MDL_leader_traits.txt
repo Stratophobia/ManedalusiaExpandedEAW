@@ -111,4 +111,12 @@ leader_traits = {
 		party_popularity_stability_factor = 0.15
 		navy_max_range_factor = 0.15
 	}
+	MDL_harbormaster_trait = {
+		experience_gain_navy_unit_factor = 0.35
+		equipment_bonus = {
+			ship_hull_light = { build_cost_ic = -0.35 instant = yes }
+			ship_hull_cruiser = { build_cost_ic = -0.35 instant = yes }
+			ship_hull_submarine = { build_cost_ic = -0.35 instant = yes }
+		}
+	}
 }

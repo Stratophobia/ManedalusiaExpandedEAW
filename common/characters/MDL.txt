@@ -384,10 +384,8 @@ characters = {
 		advisor = {
 			slot=political_advisor
 			idea_token=MDL_emerald_bargain
-			available = {
-				has_completed_focus = MDL_work_with_guilds
-			}
-			traits = { smooth_talking_charmer }
+			available = { has_completed_focus = MDL_restore_merchant_fleet }
+			traits = { MDL_harbormaster_trait }
 		}
 	}
 	MDL_ink_al_shieri = {
