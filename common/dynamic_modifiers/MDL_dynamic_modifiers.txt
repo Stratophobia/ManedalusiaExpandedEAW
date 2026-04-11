@@ -59,7 +59,7 @@ MDL_asabiyyah_modifier = {
 	naval_accidents_chance = MDL_naval_accidents_chance
 	factory_energy_consumption = MDL_factory_energy_consumption
 	navy_leader_start_level = MDL_navy_leader_start_level
-
+	refit_speed = MDL_refit_speed
 }
 
 MDL_federal_army_modifier = {

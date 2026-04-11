@@ -3,7 +3,7 @@ leader_traits = {
     type = land
     trait_type = personality_trait
 
-    modifier = { supply_consumption_factor = -0.15 }
+    modifier = { attrition = -0.1 }
     enable_ability = extra_suplies
 
     new_commander_weight = { factor = 0 }
@@ -16,7 +16,7 @@ leader_traits = {
 
     modifier = {
       special_forces_attack_factor = 0.05
-      attrition = -0.1
+			supply_consumption_factor = -0.15
     }
 
     new_commander_weight = { factor = 0 }

@@ -1529,12 +1529,7 @@ shared_focus = {
 	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_annex_maregypt"
-		every_owned_state = {
-			limit = {
-				is_in_array = { state_original_cores = MGY }
-			}
-			add_dynamic_modifier = { modifier = MDL_sultanate_province }
-		}
+		MGY = { add_to_ROOT_potential_cores = yes }
 	}
 	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER }
 }
@@ -1638,7 +1633,7 @@ shared_focus = {
 			limit = {
 				is_in_array = { state_original_cores = MKS }
 			}
-			add_dynamic_modifier = { modifier = MDL_sultanate_province }
+			add_core_of = ROOT
 		}
 	}
 	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER }
@@ -2279,7 +2274,7 @@ shared_focus = {
 	ai_will_do = { base = 40 }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_air_stuff"
-		add_political_power = -75
+		add_political_power = -25
 		custom_effect_tooltip = MDL_provide_starting_airforce_tt
 		hidden_effect = {
 			if = {
@@ -2984,7 +2979,6 @@ shared_focus = {
 			uses = 3
 			category = race_tech
 		}
-		country_event = { days = 10 id = manedalusia.21 }
 	}
 	search_filters = { FOCUS_FILTER_RESEARCH }
 }
@@ -2997,6 +2991,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = MDL_coltoba_university
 	available = {
+		has_idea = MDL_mercantilism_idea
 		has_country_flag = MDL_has_restored_university
 		MDL = { all_original_cores_owned_by_ROOT = yes }
 	}
@@ -3844,8 +3839,8 @@ shared_focus = {
 			tooltip = industrial_capacity_dockyard_tt
 		}
 		add_to_variable = {
-			MDL_naval_coordination = 0.10
-			tooltip = naval_coordination_tt
+			MDL_refit_speed = 0.50
+			tooltip = refit_speed_tt
 		}
 	}
 	search_filters = { FOCUS_FILTER_NAVY_BONUS }
