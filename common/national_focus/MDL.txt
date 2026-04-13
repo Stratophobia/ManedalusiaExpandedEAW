@@ -1920,7 +1920,9 @@ shared_focus = {
 		WNG = { has_civil_war = no }
 		has_war = no
 	}
-	bypass = { MDL_wingbardy_in_zebrica = no }
+	bypass = {
+		hidden_trigger = { MDL_winbardy_in_zebrica = no }
+	}
 	prerequisite = { focus = MDL_conquer_abyssinia }
 	will_lead_to_war_with = WNG
 	ai_will_do = { base = 40 }
@@ -4461,15 +4463,14 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_suffrage_and_army"
 		add_country_leader_trait = MDL_militarized_senate
 		if = {
-			limit = { NOT = { has_idea = volunteer_only } }
+			limit = {
+				NOT = { has_idea = volunteer_only }
+			}
 			add_ideas = volunteer_only
 		}
 		custom_effect_tooltip = MDL_suffrage_and_army_tt
 		set_country_flag = manpower_laws_blocked
-		set_variable = {
-			MDL_mobilization_laws_cost_factor = 0
-			tooltip = mobilization_laws_cost_factor_tt
-		}
+		set_variable = { MDL_mobilization_laws_cost_factor = 0 }
 	}
 }
 
@@ -4690,7 +4691,9 @@ shared_focus = {
 		WNG = { has_civil_war = no }
 		ABY = { is_in_faction_with = MDL }
 	}
-	bypass = { MDL_wingbardy_in_zebrica = no }
+	bypass = {
+		hidden_trigger = { MDL_winbardy_in_zebrica = no }
+	}
 	will_lead_to_war_with = WNG
 	ai_will_do = { base = 40 }
 	completion_reward = {

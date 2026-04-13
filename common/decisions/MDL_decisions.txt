@@ -1016,6 +1016,10 @@ MDL_crimson_war_tab = {
 					tag = ZWA
 					tag = ZEL
 					tag = REE
+					tag = STM
+					tag = SLC
+					tag = GYZ
+					tag = THU
 				}
 			}
 		}
@@ -1034,6 +1038,10 @@ MDL_crimson_war_tab = {
 						is_in_array = { state_original_cores = MSS }
 						is_in_array = { state_original_cores = MAZ }
 						is_in_array = { state_original_cores = HAY }
+						is_in_array = { state_original_cores = STM }
+						is_in_array = { state_original_cores = SLC }
+						is_in_array = { state_original_cores = THU }
+						is_in_array = { state_original_cores = GYZ }
 					}
 				}
 				transfer_state_to = MDL.great_lakes_protectorate_tag
