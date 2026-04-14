@@ -511,28 +511,14 @@ country_event = {#A Deals A Deal
 	}
 }
 
-country_event = {#racism against zebras
+country_event = {#FREE
 	id = manedalusia.21
 	title = manedalusia.21.t
 	desc = manedalusia.21.d
 	is_triggered_only = yes
 
 	option = {
-		name = manedalusia.21.a
-		custom_effect_tooltip = { IDEA = MDL_asabiyyah_modifier localization_key = modify_idea_tt }
-		add_political_power = -20
-		add_timed_idea = {
-			idea = MDL_qadi_away
-			days = 100
-		}
-	}
-	option = {
 		name = manedalusia.21.b
-		custom_effect_tooltip = { IDEA = MDL_asabiyyah_modifier localization_key = modify_idea_tt }
-		add_to_variable = {
-			MDL_stability_factor = -0.05
-			tooltip = stability_factor_tt
-		}
 	}
 }
 
@@ -571,7 +557,22 @@ country_event = {#The Engineer
 country_event = {#Coltoba Light Restored
 	id = manedalusia.24
 	title = manedalusia.24.t
-	desc = manedalusia.24.d
+	desc = {
+		text = manedalusia.24.d_d
+		trigger = { has_government = democratic }
+	}
+	desc = {
+		text = manedalusia.24.d_n
+		trigger = { has_government = neutrality }
+	}
+	desc = {
+		text = manedalusia.24.d_c
+		trigger = { has_government = communism }
+	}
+	desc = {
+		text = manedalusia.24.d_f
+		trigger = { has_government = fascism }
+	}
 	is_triggered_only = yes
 
 	option = {

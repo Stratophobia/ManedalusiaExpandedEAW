@@ -25,10 +25,7 @@ MDL_wingbardy_in_zebrica = {
 			owner = {
 				OR = {
 					original_tag = WNG
-					AND = {
-						original_tag = ABY
-						is_in_faction_with = WNG
-					}
+					is_in_faction_with = WNG
 				}
 			}
 		}

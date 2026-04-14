@@ -96,6 +96,7 @@ set_variable = { MDL_navy_leader_start_level = 0 }
 set_variable = { MDL_acclimatization_cold_climate_gain_factor = 0 }
 
 #Federal Army variables on Game Start
+set_variable = { MDL_FA_recruitment_value = 0 }
 set_variable = { MDL_FA_special_forces_var = 0.25 }
 set_variable = { MDL_FA_attack_var = 0.05 }
 set_variable = { MDL_FA_defence_var = 0.05 }

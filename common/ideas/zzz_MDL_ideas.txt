@@ -256,13 +256,6 @@ ideas = {
 				drift_defence_factor = 0.30
 			}
 		}
-		MDL_qadi_away = {
-			picture = MDL_coltoba_city
-			modifier = {
-				stability_factor = -0.10
-				political_power_factor = -0.10
-			}
-		}
 
 		MDL_colthage_treaty = {
 			picture = MDL_colthage_treaty1
@@ -320,8 +313,8 @@ ideas = {
 				NOT = { has_idea = closed_economy }
 			}
 			modifier = {
-				industrial_capacity_dockyard = 0.15
-				industrial_capacity_factory = 0.15
+				industrial_capacity_dockyard = 0.05
+				industrial_capacity_factory = 0.05
 				supply_factor = 0.15
 				industry_repair_factor = 0.35
 			}
@@ -342,6 +335,7 @@ ideas = {
 				NOT = { has_idea = closed_economy }
 			}
 			modifier = {
+				trade_law_cost_factor = 5.0
 				consumer_goods_factor = 0.5
 				supply_factor = -0.35
 				attrition = 0.25
@@ -353,15 +347,15 @@ ideas = {
 			picture = MDL_federal_assembly
 			modifier = {
 				economy_cost_factor = -0.05
-				trade_laws_cost_factor = -0.05
+				global_building_slots = 2
 			}
 		}
 		MDL_federal_assembly_2 = {
 			picture = MDL_federal_assembly
 			modifier = {
 				economy_cost_factor = -0.10
-				trade_laws_cost_factor = -0.10
 				high_command_cost_factor = -0.10
+				global_building_slots = 4
 			}
 		}
 		MDL_federal_constitution_idea = {
@@ -397,6 +391,7 @@ ideas = {
 			picture = MDL_federation_member
 			modifier = {
 				drift_defence_factor = 0.10
+				faction_trade_opinion_factor = 0.50
 				MONTHLY_POPULATION = 0.10
 				min_export = 0.05
 			}

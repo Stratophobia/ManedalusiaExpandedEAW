@@ -228,6 +228,7 @@ MDL_create_dynamic_KAR = {
 						is_in_array = { state_original_cores = KAR }
 						is_in_array = { state_original_cores = AES }
 						is_in_array = { state_original_cores = MTO }
+						is_in_array = { state_original_cores = IDT }
 					}
 				}
 				transfer_state_to = PREV.PREV

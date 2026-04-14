@@ -1921,7 +1921,7 @@ shared_focus = {
 		has_war = no
 	}
 	bypass = {
-		hidden_trigger = { MDL_winbardy_in_zebrica = no }
+		hidden_trigger = { MDL_wingbardy_in_zebrica = no }
 	}
 	prerequisite = { focus = MDL_conquer_abyssinia }
 	will_lead_to_war_with = WNG
@@ -2240,7 +2240,10 @@ shared_focus = {
 	y = 3
 	relative_position_id = MDL_western_zebrican_hegemony
 	cost = 4
-	available = { has_war = no }
+	available = {
+		NOT = { has_idea = MDL_humbled_sultanate }
+		has_war = no
+	}
 	prerequisite = {
 		focus = MDL_annex_bats
 		focus = MDL_southern_mercenaries
@@ -3958,17 +3961,17 @@ shared_focus = {
 			MDL_production_speed_coastal_bunker_factor = 0.50
 			tooltip = production_speed_coastal_bunker_factor_tt
 		}
-		add_doctrine_cost_reduction = {
-			name = MDL_naval_patrols
-			cost_reduction = 0.5
-			uses = 3
-			category = cat_trade_interdiction
+		if = {
+			limit = {
+				NOT = { has_grand_doctrine = new_convoy_raiding }
+			}
+			set_grand_doctrine = new_convoy_raiding
 		}
 		add_mastery_bonus = {
 			bonus = 0.25
 			days = 240
 			folder = naval	
-			name = GRU_naval_doctrinal_reformation
+			name = MDL_naval_patrols
 		}
 	}
 	search_filters = { FOCUS_FILTER_RESEARCH }
@@ -4487,7 +4490,7 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_elite_army"
 		hidden_effect = {
 			set_country_flag = MDL_federal_army_unlocked
-			set_country_flag = MDL_FA_recruit_1
+			set_variable = { MDL_FA_recruitment_value = 3000 }
 		}
 		custom_effect_tooltip = MDL_elite_army_tt
 		add_dynamic_modifier = { modifier = MDL_federal_army_modifier }
@@ -4553,10 +4556,9 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_dream_of_a_federation"
 		create_faction_from_template = faction_template_MDL_federation
 		country_event = { id = manedalusia.56 }
-		custom_effect_tooltip = MDL_FA_recruit_2_tt
-		hidden_effect = {
-			clr_country_flag = MDL_FA_recruit_1
-			set_country_flag = MDL_FA_recruit_2
+		add_to_variable = {
+			MDL_FA_recruitment_value = 750
+			tooltip = MDL_FA_recruitment_value_tt
 		}
 	}
 }
@@ -4654,13 +4656,12 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus MDL_liberate_abyssinia"
 		country_event = manedalusia.68
 		custom_effect_tooltip = MDL_integrate_abyssinia_tt
-		custom_effect_tooltip = MDL_FA_recruit_3_tt
-
+		add_to_variable = {
+			MDL_FA_recruitment_value = 750
+			tooltip = MDL_FA_recruitment_value_tt
+		}
 		hidden_effect = {
-			clr_country_flag = MDL_FA_recruit_2
-			set_country_flag = MDL_FA_recruit_3
 			MDL_create_dynamic_ABY = yes
-			release_puppet = ABY
 			ABY = {
 				set_politics = { ruling_party = neutrality }
 				remove_state_core = 1208
@@ -4692,7 +4693,7 @@ shared_focus = {
 		ABY = { is_in_faction_with = MDL }
 	}
 	bypass = {
-		hidden_trigger = { MDL_winbardy_in_zebrica = no }
+		hidden_trigger = { MDL_wingbardy_in_zebrica = no }
 	}
 	will_lead_to_war_with = WNG
 	ai_will_do = { base = 40 }
@@ -5104,6 +5105,9 @@ shared_focus = {
 	y = 5
 	cost = 2
 	relative_position_id = MDL_dream_of_a_federation
+	available = {
+		NOT = { has_idea = MDL_humbled_sultanate }
+	}
 	prerequisite = { focus = MDL_karthinia_of_zebrica }
 	prerequisite = {
 		focus = MDL_balkanize_arabia
@@ -5648,6 +5652,9 @@ shared_focus = {
 	y = 1
 	cost = 2
 	relative_position_id = MDL_navy_war_games
+	available = {
+		NOT = { has_idea = MDL_humbled_sultanate }
+	}
 	prerequisite = { focus = MDL_equestrian_tourism }
 	prerequisite = { focus = MDL_navy_war_games }
 	prerequisite = { focus = MDL_surf_and_rock_and_roll }
